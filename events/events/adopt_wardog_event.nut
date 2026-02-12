@@ -6,17 +6,17 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.adopt_wardog";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You noticed the mutt a few miles back, and a few miles forward he\'s still there, bobbing and slinking in and out of sight.\n\nA mongrel such as he doesn\'t follow a band of dangerous men for no reason - maybe someone is feeding it?",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Zauważyłeś kundla kilka mil temu i kilka mil dalej wciąż tam jest, pojawia się i znika w zasięgu wzroku.\n\nTaki kundel nie podąża za bandą niebezpiecznych ludzi bez powodu - może ktoś go karmi?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Chase that mongrel away!",
+					Text = "Przegonić kundla!",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Better to put it down now before it steals any of our supplies later.",
+					Text = "Lepiej go teraz uśpić, zanim później ukradnie nasze zapasy.",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -41,7 +41,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "The company needs a mascot. Take it in.",
+					Text = "Kompanii przyda się maskotka. Przyjmijmy go.",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -63,7 +63,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Houndmaster != null)
 				{
 					this.Options.push({
-						Text = "%houndmaster%, you\'re trained to handle dogs, right?",
+						Text = "%houndmaster%, jesteś szkolony do pracy z psami, prawda?",
 						function getResult( _event )
 						{
 							return "G";
@@ -76,13 +76,13 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_75.png[/img]This is no place for a pup to be. The next time the dog appears, you crack it between the eyes with a well-placed stone. Yelping, the dog retreats. It pauses, perhaps thinking that there was some sort of mistake here, but you quickly correct the foul thing with another rock. The dog leaves and is not seen again.",
+			Text = "[img]gfx/ui/events/event_75.png[/img]To nie miejsce dla szczeniaka. Gdy pies pojawia się następnym razem, trafiasz go w czoło dobrze rzuconym kamieniem. Pies z wyciem ucieka. Zatrzymuje się, jakby myśląc, że to pomyłka, ale szybko poprawiasz to obrzydliwe stworzenie kolejnym kamieniem. Pies odchodzi i już go nie widać.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And stay away!",
+					Text = "I trzymaj się z dala!",
 					function getResult( _event )
 					{
 						return 0;
@@ -97,13 +97,13 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_75.png[/img]You take a bow and nock an arrow. A few of the brothers watch as you take aim. The shot goes wide, but the dog gets the message and quickly scampers off.",
+			Text = "[img]gfx/ui/events/event_75.png[/img]Bierzesz łuk i zakładasz strzałę. Kilku braci patrzy, jak celujesz. Strzał idzie w bok, ale pies rozumie przekaz i szybko ucieka.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I meant to scare it off.",
+					Text = "Chciałem go tylko spłoszyć.",
 					function getResult( _event )
 					{
 						return 0;
@@ -118,13 +118,13 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You take a bow and nock an arrow. A few of the brothers watch as you take aim. The wind comes, goes, and comes again. You wait patiently before drawing the string and closing one eye to put the dog into focus. It sits down and stares at you between long-tongued pants.\n\nYou release the shot. The arrow zips through the air and the dog yelps. It keels back on its hind legs and falls over, its feet kicking and scraping on the ground until it stops. You put the bow back into its holding and get the company back on the road.",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Bierzesz łuk i zakładasz strzałę. Kilku braci patrzy, jak celujesz. Wiatr przychodzi, odchodzi i wraca. Czekasz cierpliwie, po czym naciągasz cięciwę i przymykasz jedno oko, by złapać psa w celownik. Siada i patrzy na ciebie, dysząc z długim jęzorem.\n\nWypuszczasz strzałę. Przelatuje przez powietrze, a pies skomle. Cofa się na tylnych łapach i upada, kopiąc i skrobiąc po ziemi, aż w końcu nieruchomieje. Odkładasz łuk i ruszasz z kompanią dalej.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Poor thing.",
+					Text = "Biedactwo.",
 					function getResult( _event )
 					{
 						return 0;
@@ -139,13 +139,13 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You decide to take a chunk of meat and approach the dog. It is skittish at first, backing away on your approach, but the aroma you have in hand is an alluring one to be sure. The mongrel slinks back toward you, pausing here and there, eyes flicking in search of an ambush.\n\nYou can see a barrel of ribs on the dog, many days on the road having given the pup a gaunt frame. Its ears are stitched up and its tail bolted with signs of battle. This here animal knows how to fight and that\'s just what it\'ll be doing for you from now on.",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Postanawiasz wziąć kawał mięsa i podejść do psa. Na początku jest płochliwy i cofa się, gdy się zbliżasz, ale zapach w twojej dłoni jest bez wątpienia kuszący. Kundel skrada się z powrotem, przystaje tu i ówdzie, a jego oczy nerwowo szukają zasadzki.\n\nWidzisz wyraźnie wystające żebra - wiele dni na drodze zrobiło z niego wychudzonego psa. Uszy ma zszyte, a ogon poszarpany, z wyraźnymi śladami walk. To zwierzę umie walczyć i właśnie to będzie od teraz robić dla ciebie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the company.",
+					Text = "Witaj w kompanii.",
 					function getResult( _event )
 					{
 						return 0;
@@ -156,25 +156,25 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				local item = this.new("scripts/items/accessory/wardog_item");
-				item.m.Name = "Battle Brother";
+				item.m.Name = "Brat Bitewny";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_37.png[/img]A rugged dog such as he would make for a great mascot. The little mutt could definitely boost morale. You order %bro% to feed it some food in the hopes that it\'ll tag along. He goes out with a scrap of leftovers and crouches down.%SPEECH_ON%Good dog.%SPEECH_OFF%The mongrel sniffs the food, then chomps down on it - and the mercenary\'s hand along with it. The brother jumps back, nestling his arm into his chest as though he might lose it otherwise. The dog, on the other hand, swallows the scrap and then runs off.",
+			Text = "[img]gfx/ui/events/event_37.png[/img]Szorstki pies taki jak ten byłby świetną maskotką. Taki mały kundel mógłby wyraźnie podnieść morale. Polecasz %bro% nakarmić go w nadziei, że się przyłączy. Wychodzi ze skrawkiem resztek i kuca.%SPEECH_ON%Dobry pies.%SPEECH_OFF%Kundel wącha jedzenie, po czym kłapie zębami - razem z dłonią najemnika. Brat odskakuje, przyciskając ramię do piersi, jakby miał je stracić. Pies natomiast połyka resztkę i ucieka.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn, he really would have fit in.",
+					Text = "Cholera, naprawdę by tu pasował.",
 					function getResult( _event )
 					{
 						return 0;
@@ -190,7 +190,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Bro.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Bro.getName() + " doznaje: " + injury.getNameOnly()
 					}
 				];
 			}
@@ -198,13 +198,13 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You ask %houndmaster% the houndmaster if he can try and \'woo\' this dog. He nods and steps toward it. The wild mongrel\'s ears go from pinned to pointed. Crouched, the houndmaster slowly edges his way toward the beast. He keeps his hand out with a piece of meat in the palm. Hunger overcomes heedfulness and the dog sniffs its way ever closer to the houndmaster\'s hand. The dog tongues it out of his palm and chows down. The dog trainer feeds him another bite. He scruffs him up and finds the sweet spot behind his ears. Looking back, %houndmaster% nods.%SPEECH_ON%Aye, it\'s an agreeable beast and will be easily trained.%SPEECH_OFF%That\'s great. You ask if it can fight. The houndmaster purses his lips.%SPEECH_ON%A dog is akin to a man. If it can breathe, it can fight.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Pytasz %houndmaster% - opiekuna psów - czy może spróbować \'przekonać\' tego psa. Kiwa głową i podchodzi. Uszy dzikiego kundla z przyciśniętych stają się nastawione. Kucając, opiekun powoli zbliża się do bestii. Wyciąga dłoń z kawałkiem mięsa na środku. Głód zwycięża ostrożność i pies coraz bliżej obwąchuje dłoń opiekuna. Zlizuje kąsek z jego dłoni i połyka. Trener podaje mu kolejny kęs. Drapiąc go, znajduje czułe miejsce za uszami. Oglądając się, %houndmaster% kiwa głową.%SPEECH_ON%Ano, to ułożona bestia i łatwo ją wyszkolić.%SPEECH_OFF%To świetnie. Pytasz, czy potrafi walczyć. Opiekun zaciska usta.%SPEECH_ON%Pies jest jak człowiek. Jeśli oddycha, potrafi walczyć.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice.",
+					Text = "Świetnie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -216,12 +216,12 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Houndmaster.getImagePath());
 				local item = this.new("scripts/items/accessory/wardog_item");
-				item.m.Name = "Battle Brother";
+				item.m.Name = "Brat Bitewny";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

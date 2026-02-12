@@ -5,17 +5,17 @@ this.aging_swordmaster_paycut_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.aging_swordmaster_paycut";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_17.png[/img]%swordmaster% enters your tent. You wave him to the chair across your table. He sits so slowly and feebly that you fear him standing back up will take twice as long. The man clasps his hands together and elbows his arms onto the table, grunting and shifting, finding little comfort even in doing nothing at all. His lips are dry, his face withered. Liver spots mottle his head and even the hairs about his nose and ears are grey.\n\n You always have time for %swordmaster% so you ask what it is he wishes to speak about.%SPEECH_ON%This might sound peculiar coming from a blade for hire, but I think it needs saying anyway, and it\'d make me sleep better at night. I\'ll be forward with you: I am not the man you hired so long ago. You know that. I know that. Some of the men know it, but they\'re respectful as good men are.%SPEECH_OFF%You agree, but don\'t nod. Instead, you ask what the man is getting at.%SPEECH_ON%I wish to lower my wage. Now don\'t be saying no, you don\'t have to bullshit me. I\'ll take a cut. Money\'s never been an issue anyhow. Those crowns could be used to help arm the men or even pay them better. God knows a young man could always use an extra crown or two.%SPEECH_OFF%Before you say another word, the man springs to his feet with surprising speed. He nods and grins playfully before yelling loudly.%SPEECH_ON%I agree with your decision, good sir. I could use a paycut!%SPEECH_OFF%You laugh as the man leaves your tent almost as soon as he\'d come in.",
+			Text = "[img]gfx/ui/events/event_17.png[/img]%swordmaster% wchodzi do twojego namiotu. Wskazujesz mu krzesło po drugiej stronie stołu. Siada tak powoli i słabo, że obawiasz się, iż podniesienie się zajmie mu dwa razy dłużej. Mężczyzna splata dłonie i opiera łokcie na stole, mrucząc i poruszając się, nie znajdując wygody nawet w bezruchu. Ma suche usta, twarz pomarszczoną. Plamy starcze pokrywają jego głowę, a nawet włosy wokół nosa i uszu są siwe.\n\n Zawsze masz czas dla %swordmaster%, więc pytasz, o czym chce porozmawiać.%SPEECH_ON%To może brzmieć dziwnie z ust najemnego ostrza, ale i tak trzeba to powiedzieć, a mnie pozwoliłoby lepiej spać. Powiem wprost: nie jestem już tym człowiekiem, którego zatrudniłeś dawno temu. Ty to wiesz. Ja to wiem. Niektórzy z ludzi też to wiedzą, ale szanują to, jak dobrzy ludzie potrafią.%SPEECH_OFF%Zgadzasz się, ale nie kiwasz głową. Zamiast tego pytasz, do czego zmierza.%SPEECH_ON%Chcę obniżyć swoją płacę. Nie mów od razu nie, nie musisz mnie oszukiwać. Wezmę cięcie. Pieniądze i tak nigdy nie były problemem. Te korony mogą pomóc uzbroić ludzi albo nawet lepiej im płacić. Bóg wie, że młodym zawsze przyda się dodatkowa korona czy dwie.%SPEECH_OFF%Zanim powiesz kolejne słowo, mężczyzna zrywa się na nogi z zaskakującą szybkością. Kiwa głową i uśmiecha się figlarnie, po czym głośno woła.%SPEECH_ON%Zgadzam się z twoją decyzją, dobry panie. Przyda mi się obniżka!%SPEECH_OFF%Śmiejesz się, gdy mężczyzna wychodzi z namiotu niemal tak szybko, jak do niego wszedł.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "An honorable man if there ever was one.",
+					Text = "Honorowy człowiek, jeśli kiedykolwiek taki istniał.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.aging_swordmaster_paycut_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_daily_money.png",
-					text = _event.m.Swordmaster.getName() + " is now paid " + _event.m.Swordmaster.getDailyCost() + " crowns a day"
+					text = _event.m.Swordmaster.getName() + " otrzymuje teraz " + _event.m.Swordmaster.getDailyCost() + " koron dziennie"
 				});
 				_event.m.Swordmaster.getFlags().add("aging_paycut");
 			}

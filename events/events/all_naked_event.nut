@@ -3,16 +3,16 @@ this.all_naked_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.all_naked";
-		this.m.Title = "Along the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_16.png[/img]Marching along, you spot a fellow traveler who leans forward and then back and then forward again, all the while his hand knowing not whether to shield the sun or peel away to let himself be blinded. He shakes his head and spits.%SPEECH_ON%I\'d heard word of you folks. Buncha trouserless men in a land of evil, like some devil\'s little joke sprung to life. The hell are you?%SPEECH_OFF%You shrug and tell the man that, so far, you\'ve no issue with taking on your troubles sans leather or plate or cloth of loin. Again, the traveler shakes his head and spits.%SPEECH_ON%Farkin\' hell. A man in battle with nothing on him is more naked than the day he\'d done been born! I s\'pose the irony is that if we - and I mean anybody-we - come find ya dead in the fields, then we\'ll probably dress ya better for the grave than you dress yourself now. Which shan\'t be hard, seeing as how you\'ve dressed yourself none at all.%SPEECH_OFF%With a bit of a wave, you thank the traveler for his kind words before continuing your merry march.",
+			Text = "[img]gfx/ui/events/event_16.png[/img]Maszerując, dostrzegasz podróżnego, który pochyla się do przodu, potem do tyłu i znów do przodu, a przy tym jego dłoń nie wie, czy zasłonić słońce, czy odsunąć się, by oślepnąć. Kręci głową i spluwa.%SPEECH_ON%Słyszałem o was, ludkowie. Banda bezspodniaków w krainie zła, jakby diabelski żart ożył. Kim wy do diabła jesteście?%SPEECH_OFF%Wzruszasz ramionami i mówisz, że jak dotąd nie masz problemu z mierzeniem się z kłopotami bez skóry, płyty czy choćby przepaski. Podróżny znów kręci głową i spluwa.%SPEECH_ON%Cholera jasna. Człowiek w bitwie bez niczego na sobie jest bardziej nagi niż w dniu, w którym się urodził! Ironia chyba polega na tym, że jeśli my - i mówię tu o kimkolwiek - znajdziemy was martwych na polach, to pewnie ubierzemy was do grobu lepiej, niż wy ubieracie się teraz. A to nie będzie trudne, skoro nie ubieracie się wcale.%SPEECH_OFF%Z lekkim skinieniem dziękujesz podróżnemu za jego miłe słowa i ruszasz dalej w wesołym marszu.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "What a beautiful day!",
+					Text = "Jaki piękny dzień!",
 					function getResult( _event )
 					{
 						return 0;

@@ -8,16 +8,16 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ball_on_roof";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 140.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]The company comes across a small boy who has climbed up a tree and out to the edge of a branch. He\'s reaching for a ball that\'s gotten stuck on the roof of his home. There\'s not a parent in sight to help him. When he sees you, he asks if you can help get the ball. Seems simple enough.",
+			Text = "[img]gfx/ui/events/event_97.png[/img]Kompania natrafia na małego chłopca, który wspiął się na drzewo i doszedł do skraju gałęzi. Sięga po piłkę, która utknęła na dachu jego domu. W pobliżu nie ma żadnego rodzica, który mógłby mu pomóc. Gdy cię widzi, pyta, czy możesz pomóc odzyskać piłkę. Wydaje się to dość proste.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "I guess we can help him.",
+					Text = "Chyba możemy mu pomóc.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 70)
@@ -37,7 +37,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Surefooted != null)
 				{
 					this.Options.push({
-						Text = "%surefooted%, you\'re sure-footed. Give him a hand.",
+						Text = "%surefooted%, masz pewny krok. Pomóż mu.",
 						function getResult( _event )
 						{
 							return "Surefooted";
@@ -47,7 +47,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "We have no time for this.",
+					Text = "Nie mamy na to czasu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -59,13 +59,13 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Good",
-			Text = "[img]gfx/ui/events/event_97.png[/img]You send %otherbrother% to try and retrieve the ball. Using %otherother% as a stepstool, he launches himself onto the roof and gets the toy. The boy is ecstatic and the smile on his face warms even the most cynical of your mercenaries.",
+			Text = "[img]gfx/ui/events/event_97.png[/img]Wysyłasz %otherbrother% po piłkę. Korzystając z %otherother% jako stopnia, wspina się na dach i sięga po zabawkę. Chłopiec jest zachwycony, a jego uśmiech rozgrzewa nawet najbardziej cynicznych z twoich najemników.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What a good sword sellin\' samaritan.",
+					Text = "Jaki z ciebie dobry samarytanin na żołdzie.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(1);
@@ -77,7 +77,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.improveMood(1.0, "Helped a little boy");
+				_event.m.Other.improveMood(1.0, "Pomógł małemu chłopcu");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -92,13 +92,13 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Bad",
-			Text = "[img]gfx/ui/events/event_97.png[/img]You send %otherbrother% to try and retrieve the ball. He climbs the tree and jumps across a branch to land atop the roof. Mission complete, he tosses the ball to the kid. Unfortunately, the boy lets go of the tree branch to try and catch it. He slips off the branch and falls a good fifteen feet to the earth. The wallop of his landing has the whole company cringing. When you check on him he isn\'t moving and his back has taken a new shape. %otherother% yells at the idiot still standing in shock on the roof.%SPEECH_ON%What the hell were you thinking? Holy shit, man!%SPEECH_OFF%The mercenary climbs down off the roof. He looks at the kid and then nervously looks around.%SPEECH_ON%Well he, uh, he\'s got the ball. Let\'s get the hell out of here. Our... our work here is done.%SPEECH_OFF%What a goatfuck of a situation. You and the company quickly leave the scene before the parents get back.",
+			Text = "[img]gfx/ui/events/event_97.png[/img]Wysyłasz %otherbrother% po piłkę. Wspina się na drzewo i przeskakuje przez gałąź, lądując na dachu. Misja wykonana, rzuca piłkę chłopcu. Niestety, ten puszcza gałąź, próbując ją złapać. Zsuwa się i spada z dobrych piętnastu stóp na ziemię. Huk lądowania sprawia, że cała kompania krzywi się z bólu. Gdy go sprawdzasz, nie rusza się, a jego plecy przybrały nowy kształt. %otherother% krzyczy na idiotę, który wciąż stoi osłupiały na dachu.%SPEECH_ON%Co ty sobie, do diabła, myślałeś? Cholera, człowieku!%SPEECH_OFF%Najemnik schodzi z dachu. Patrzy na chłopca, potem nerwowo rozgląda się dookoła.%SPEECH_ON%Cóż, yyy, ma piłkę. Spadajmy stąd. Nasza... nasza robota tutaj skończona.%SPEECH_OFF%Co za przeklęta sytuacja. Ty i kompania szybko oddalacie się, zanim rodzice wrócą.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nobody saw nothing.",
+					Text = "Nikt nic nie widział.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(-1);
@@ -111,7 +111,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
 				this.Characters.push(_event.m.OtherOther.getImagePath());
-				_event.m.Other.worsenMood(1.5, "Accidentally crippled a little boy");
+				_event.m.Other.worsenMood(1.5, "Przypadkowo okaleczył małego chłopca");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -126,13 +126,13 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Surefooted",
-			Text = "[img]gfx/ui/events/event_97.png[/img]%surefooted% clears his throat and steps forward.%SPEECH_ON%I\'ll be your hero, kid.%SPEECH_OFF%He opens his arms and the kid jumps down into them. The boy is set aside and the sellsword points a finger to the earth.%SPEECH_ON%Stay down here.%SPEECH_OFF%The surefooted mercenary easily clambers up the tree and jumps over to the roof. He picks the ball up and spins it on a finger before he pirouettes off the eave like a tornado, landing right on his toes with rather feminine grace. The boy claps excitedly and takes the toy and even the most cynical of men in the company are warmed by his happiness.",
+			Text = "[img]gfx/ui/events/event_97.png[/img]%surefooted% odchrząkuje i wychodzi do przodu.%SPEECH_ON%Będę twoim bohaterem, dzieciaku.%SPEECH_OFF%Rozkłada ramiona, a chłopiec w nie wskakuje. Odkłada chłopca na bok, a najemnik wskazuje palcem ziemię.%SPEECH_ON%Zostań tutaj na dole.%SPEECH_OFF%Pewnonogi najemnik bez trudu wspina się na drzewo i przeskakuje na dach. Podnosi piłkę i kręci nią na palcu, po czym wykonuje piruet z okapu niczym tornado, lądując na palcach z dość kobiecą gracją. Chłopiec klaszcze z ekscytacją i bierze zabawkę, a nawet najbardziej cynicznych ludzi w kompanii rozgrzewa jego radość.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Show off.",
+					Text = "Popisówka.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(1);
@@ -144,7 +144,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Surefooted.getImagePath());
-				_event.m.Surefooted.improveMood(1.5, "Impressed everyone with his talents");
+				_event.m.Surefooted.improveMood(1.5, "Zaimponował wszystkim swoimi umiejętnościami");
 
 				if (_event.m.Surefooted.getMoodState() >= this.Const.MoodState.Neutral)
 				{

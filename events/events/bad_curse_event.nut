@@ -12,13 +12,13 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%superstitious% enters your tent with hat in hand. The rim of it turns round and round in his fingers as though he were plucking feathers from it. Even though you haven\'t said a word the man\'s head nods furiously and his eyes jet around as if looking for the words to say.\n\nYou put your quill pen down and ask what the issue is. Licking his lips, he nods again and begins to explain his predicament. The words come fast, but the general gist of it seems to be that a local witch has cursed the man to be incapable of some sexual export, as it were.\n\nYou shake your head and ask what it is the witch wants and %superstitious% says %payment% crowns, lest the curse be on him for life.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%superstitious% wchodzi do twojego namiotu z kapeluszem w dłoni. Obrzeże obraca mu się w palcach, jakby skubał z niego pióra. Choć nie powiedziałeś ani słowa, mężczyzna gwałtownie kiwa głową, a oczy biegają mu, jakby szukał słów.\n\nOdkładasz pióro i pytasz, o co chodzi. Oblizuje wargi, znów kiwa głową i zaczyna tłumaczyć swoje położenie. Słowa padają szybko, ale ogólny sens jest taki, że miejscowa wiedźma przeklęła go, by nie był zdolny do pewnej cielesnej sprawności.\n\nKręcisz głową i pytasz, czego chce wiedźma, a %superstitious% mówi, że %payment% koron, inaczej klątwa zostanie z nim na całe życie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "If it must be... go take care of it. Here are the crowns.",
+					Text = "Skoro musi... idź i to załatw. Oto korony.",
 					function getResult( _event )
 					{
 						return "B";
@@ -26,7 +26,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This isn\'t going to happen.",
+					Text = "Nie ma takiej opcji.",
 					function getResult( _event )
 					{
 						return "C";
@@ -39,7 +39,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Monk != null)
 				{
 					this.Options.push({
-						Text = "Have %monk% the monk take a look instead.",
+						Text = "Niech %monk% mnich się temu przyjrzy.",
 						function getResult( _event )
 						{
 							return "D";
@@ -51,7 +51,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Sorcerer != null)
 				{
 					this.Options.push({
-						Text = "Have %sorcerer% the sorcerer take a look instead.",
+						Text = "Niech %sorcerer% czarnoksiężnik się temu przyjrzy.",
 						function getResult( _event )
 						{
 							return "E";
@@ -66,13 +66,13 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]Thumb and finger pinching your eyes shut, you wonder if maybe this wasn\'t the life for you. Killing\'s easy, but this? Whatever. You throw your hands up and get out of your chair to retrieve a satchel of crowns. The superstitious man totters up on the tips of his toes.%SPEECH_ON%Please count it out! It mustn\'t be a crown short!%SPEECH_OFF%You begrudgingly set the satchel on the table and begin counting. Once the appropriate number is had, you shuffle it into a purse and toss it to %superstitious%. He bows, thanking you and your mercy. You wave the man off to quickly get him out of your tent.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Ściskając palcami powieki, zastanawiasz się, czy to na pewno życie dla ciebie. Zabijanie jest łatwe, ale to? Cóż. Wzdychasz, wstajesz i sięgasz po sakiewkę z koronami. Zabobonny mężczyzna chwieje się na czubkach palców.%SPEECH_ON%Proszę, niech pan to odliczy! Nie może brakować ani jednej korony!%SPEECH_OFF%Niechętnie kładziesz sakiewkę na stole i zaczynasz liczyć. Gdy liczba się zgadza, przekładasz monety do mieszka i rzucasz go %superstitious%. Kłania się, dziękując za twoją litość. Dajesz mu znak, by zniknął z namiotu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The things I put up with...",
+					Text = "Co ja muszę znosić...",
 					function getResult( _event )
 					{
 						return 0;
@@ -93,20 +93,20 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]" + 400 + "[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + 400 + "[/color] koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You further muddy %superstitious%\'s poor countenance with some bad news: you\'re not paying any witch anything.%SPEECH_ON%A few farcical words from some strange woman in the woods is no basis for an exchange of business. What you\'ve heard is a tramp\'s attempt to get at you, mercenary. You cannot listen to such tripe, especially a tramp\'s tripe for a tramp\'s tripe is always in pursuit of one\'s coin.%SPEECH_OFF%None of these words help %superstitious% for he quickly runs out of the tent, perhaps in pursuit of another mercenary who will give him a loan.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Dolewasz %superstitious% goryczy kolejną złą wiadomością: nie zapłacisz żadnej wiedźmie ani grosza.%SPEECH_ON%Kilka farsowych słów jakiejś dziwnej kobiety z lasu to żadna podstawa do interesów. To, co słyszałeś, to próba naciągnięcia cię, najemniku. Nie możesz słuchać takich bzdur, zwłaszcza że bzdury włóczęgi zawsze idą za cudzymi monetami.%SPEECH_OFF%Te słowa nie pomagają %superstitious%, bo szybko wybiega z namiotu, być może szukać innego najemnika, który pożyczy mu pieniądze.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Some people can\'t be helped.",
+					Text = "Niektórym nie da się pomóc.",
 					function getResult( _event )
 					{
 						return 0;
@@ -123,7 +123,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = effect.getIcon(),
-						text = _event.m.Cursed.getName() + " is afraid"
+						text = _event.m.Cursed.getName() + " jest przerażony"
 					}
 				];
 				_event.m.Cursed.worsenMood(2.0, "Felt let down by you");
@@ -137,13 +137,13 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]Wondering if maybe %monk% the monk could help, you go and fetch the holy man.\n\nHe says he can indeed lend a hand for the old gods are always at war with the evils of witchcraft and other sorcery. Before he goes off on a long monologue about this old god or that one, you dip away and send him %superstitious%. For a few minutes, there is peace and quiet in your tent. But you know it can\'t last, for you are like a man beneath a rockslide, awaiting the tumbling stone with his name on it.\n\n However, %superstitious% doesn\'t return. After a few minutes more you realize he still hasn\'t made a disruptive entrance. In fact, his absence altogether has you on edge, as though silence itself might be haranguing. You leave the tent to find the monk and so-called cursed man deep in religious talks. Smiling, you return to your tent. If there\'s one thing the holy men are best at, it\'s maintaining a sense of tranquility.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Zastanawiając się, czy %monk% mnich mógłby pomóc, idziesz po świętego człowieka.\n\nMówi, że rzeczywiście może pomóc, bo starzy bogowie zawsze walczą ze złem czarów i wszelkiej magii. Zanim zacznie długą przemowę o tym czy tamtym bóstwie, wymykasz się i wysyłasz do niego %superstitious%. Przez kilka minut w namiocie panuje spokój i cisza. Ale wiesz, że to nie potrwa, bo jesteś jak człowiek pod osuwiskiem, czekający na kamień z własnym imieniem.\n\n Jednak %superstitious% nie wraca. Po kilku kolejnych minutach zdajesz sobie sprawę, że nadal nie zrobił hałaśliwego wejścia. Właściwie jego nieobecność sama w sobie wyprowadza cię z równowagi, jakby cisza była natarczywa. Wychodzisz z namiotu i znajdujesz mnicha oraz rzekomo przeklętego człowieka pogrążonych w religijnych rozmowach. Uśmiechnięty wracasz do namiotu. Jeśli w czymś święci są najlepsi, to w podtrzymywaniu spokoju ducha.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That should put an end to this.",
+					Text = "To powinno zakończyć sprawę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -164,7 +164,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Cursed.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+						text = _event.m.Cursed.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinację"
 					});
 				}
 
@@ -176,7 +176,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Monk.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+						text = _event.m.Monk.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinację"
 					});
 				}
 			}
@@ -184,13 +184,13 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You snap your fingers, suddenly remembering %sorcerer%, the so-called sorcerer. Wanting to not spend another minute being a part of this bizarre affair, you refer %superstitious% to the sorcerer. He is quick to leave, but unfortunately returns a few minutes later, explaining that %sorcerer% has set him free from his curse.%SPEECH_ON%All I had to do was...%SPEECH_OFF%You hold your hand up, stopping the man\'s story right where it be. He asks if you want to hear the rest of it and you give a firm no.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Pstrykasz palcami, przypominając sobie nagle o %sorcerer%, tak zwanym czarnoksiężniku. Nie chcąc spędzić tu ani chwili dłużej w tej dziwnej sprawie, odsyłasz %superstitious% do czarnoksiężnika. Szybko odchodzi, ale niestety po kilku minutach wraca, wyjaśniając, że %sorcerer% zdjął z niego klątwę.%SPEECH_ON%Wystarczyło, że...%SPEECH_OFF%Podnosisz dłoń, uciszasz go i ucinasz opowieść. Pyta, czy chcesz usłyszeć resztę, a ty stanowczo odmawiasz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That should put an end to this.",
+					Text = "To powinno zakończyć sprawę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -202,7 +202,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Cursed.getImagePath());
 				this.Characters.push(_event.m.Sorcerer.getImagePath());
-				_event.m.Cursed.improveMood(3.0, "Was cured of a curse");
+				_event.m.Cursed.improveMood(3.0, "Został uwolniony od klątwy");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cursed.getMoodState()],

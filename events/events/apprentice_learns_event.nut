@@ -6,17 +6,17 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.apprentice_learns";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]The apprentice %apprentice% has apparently become a ward to %teacher%. While the swordmaster is long in the tooth, he seems quite eager to help the young man become a better fighter. The apprentice uses a real sword, the swordmaster but a wooden one. It is in this rather large difference of chosen weaponry that the swordmaster displays the usefulness of positioning, finding openings, and getting out of the way of danger.\n\nEven in his old age the man twirls and whirls, becoming impossible for the apprentice to hit. In one particularly brilliant trick, the swordmaster senses that he is about to be struck so he closes distance with the apprentice and steps on his foot. When the apprentice tilts back to give himself space, his foot does not go with him. The sudden imbalance brings the trainee tumbling to the ground wherein he looks up to find a wooden sword prodding his neck.\n\nYou find the man patting the dirt off himself pretty often, but he is at least getting up for more. Let\'s just say he is improving one splinter at a time.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Czeladnik %apprentice% najwyraźniej stał się podopiecznym %teacher%. Choć mistrz miecza ma już swoje lata, wydaje się gorliwie pomagać młodemu stać się lepszym wojownikiem. Czeladnik używa prawdziwego miecza, mistrz tylko drewnianego. To właśnie w tej sporej różnicy doboru broni mistrz pokazuje, jak ważne jest ustawienie, wyszukiwanie luk i unikanie zagrożeń.\n\nNawet w podeszłym wieku mężczyzna kręci się i wiruje, stając się dla czeladnika niemożliwym do trafienia. W jednym szczególnie błyskotliwym triku mistrz wyczuwa, że ma zostać trafiony, więc skraca dystans i staje czeladnikowi na stopie. Gdy ten odchyla się, by zyskać przestrzeń, stopa nie idzie z nim. Nagła utrata równowagi przewraca ucznia na ziemię, gdzie widzi drewniany miecz przyłożony do szyi.\n\nCzęsto widzisz, jak otrzepuje z siebie ziemię, ale przynajmniej wstaje po więcej. Powiedzmy, że poprawia się drzazga po drzazdze.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done!",
+					Text = "Dobra robota!",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,18 +34,18 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().MeleeDefense += meleeDefense;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.0, "Learned from " + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.5, "Has taught " + _event.m.Apprentice.getName() + " something");
+				_event.m.Apprentice.improveMood(1.0, "Nauczył się od " + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.5, "Nauczył " + _event.m.Apprentice.getName() + " czegoś");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Umiejętności w walce wręcz"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/melee_defense.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color] Melee Defense"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color] Obronę w walce wręcz"
 					}
 				];
 
@@ -62,13 +62,13 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%teacher% the unretired soldier has taking a liking to %apprentice%. You find the two practicing their craft whenever possible. The old grunt believes in the value of the offensive, showing the apprentice how to turn a blade, axe, or mace in such a manner that it inflicts the most damage. Unfortunately, they are using the company dining equipment to set up little dolls to beat up. The young lad has certainly made a mess of those pots and pans in his continuous pursuit of being a better fighter.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%teacher%, emerytowany żołnierz, polubił %apprentice%. Widzisz ich ćwiczących, kiedy tylko mogą. Stary żołnierz wierzy w wartość ofensywy i pokazuje czeladnikowi, jak prowadzić miecz, topór lub buzdygan tak, by zadawał jak największe obrażenia. Niestety, używają obozowych naczyń do ustawiania kukiełek do okładania. Młody chłopak na pewno narobił bałaganu w garnkach i patelniach w swoim nieustannym dążeniu do bycia lepszym wojownikiem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done!",
+					Text = "Dobra robota!",
 					function getResult( _event )
 					{
 						return 0;
@@ -86,18 +86,18 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Bravery += resolve;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.0, "Learned from " + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.25, "Has taught " + _event.m.Apprentice.getName() + " something");
+				_event.m.Apprentice.improveMood(1.0, "Nauczył się od " + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.25, "Nauczył " + _event.m.Apprentice.getName() + " czegoś");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Umiejętności w walce wręcz"
 					},
 					{
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Resolve"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Determinację"
 					}
 				];
 
@@ -114,13 +114,13 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]It appears as though %teacher% the ol\' sellsword has a little bird following him around: young %apprentice%. Now in the company of mercenaries, the apprentice must want to learn from those with plenty of experience on the road earning blood money. While they train, you notice that the sellsword puts most of his emphasis on exercising one\'s body. Being faster than your opponent and outlasting him are just as important as putting a blade through his brainbox. The earnest lad seems increasingly sturdy, earning some sense of vigor you did not notice before.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Wygląda na to, że %teacher%, stary najemnik, ma za sobą małą ptaszynę: młodego %apprentice%. Teraz, w kompanii najemników, czeladnik chce uczyć się od tych, którzy mają doświadczenie na drodze i w zarabianiu krwawych pieniędzy. Podczas treningu zauważasz, że najemnik kładzie nacisk na ćwiczenie ciała. Bycie szybszym od przeciwnika i przetrwanie go są równie ważne jak wbicie mu ostrza w głowę. Sumienny chłopak wydaje się coraz bardziej wytrzymały, zyskując krzepę, której wcześniej nie zauważałeś.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done!",
+					Text = "Dobra robota!",
 					function getResult( _event )
 					{
 						return 0;
@@ -140,23 +140,23 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Stamina += stamina;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.0, "Learned from " + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.25, "Has taught " + _event.m.Apprentice.getName() + " something");
+				_event.m.Apprentice.improveMood(1.0, "Nauczył się od " + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.25, "Nauczył " + _event.m.Apprentice.getName() + " czegoś");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Umiejętności w walce wręcz"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/initiative.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] Initiative"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] Inicjatywę"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Max Fatigue"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Maksymalne zmęczenie"
 					}
 				];
 
@@ -173,13 +173,13 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]A couple of times now you\'ve caught %apprentice% watching %teacher% from a distance. The young apprentice seems rather enraptured by the hedge knight\'s brute violence. After a few days, the knight relents, asking the lad to come and have a chat. You know not what they say, but now you\'ve noticed they have been training together. The hedge knight is not a kind trainer, either. He beats the boy frequently, toughening him up. At first, the apprentice flinches before every strike, but now you see that he is showing a little more resolve in the face of such towering adversity. The hedge knight is also showing the man how to kill fast and efficiently. Little mind is paid to defense in these talks you overhear, but who needs to defend themselves from a dead opponent?",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Kilka razy przyłapałeś %apprentice%, jak z oddali obserwuje %teacher%. Młody czeladnik wydaje się zafascynowany brutalną przemocą rycerza wędrownego. Po kilku dniach rycerz odpuszcza i prosi chłopaka, by przyszedł porozmawiać. Nie wiesz, o czym mówią, ale teraz widzisz, że trenują razem. Rycerz wędrowny nie jest łagodnym nauczycielem. Często bije chłopca, hartując go. Na początku czeladnik wzdrygał się przed każdym ciosem, lecz teraz widać, że okazuje nieco więcej determinacji wobec tak wielkich przeciwności. Rycerz uczy go też, jak zabijać szybko i skutecznie. W tych rozmowach, które podsłuchujesz, niewiele miejsca poświęca się obronie, ale kto musi się bronić przed martwym przeciwnikiem?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done!",
+					Text = "Dobra robota!",
 					function getResult( _event )
 					{
 						return 0;
@@ -199,23 +199,23 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Stamina += stamina;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.0, "Learned from " + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.25, "Has taught " + _event.m.Apprentice.getName() + " something");
+				_event.m.Apprentice.improveMood(1.0, "Nauczył się od " + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.25, "Nauczył " + _event.m.Apprentice.getName() + " czegoś");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Umiejętności w walce wręcz"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/health.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] Hitpoints"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] Punkty życia"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Max Fatigue"
+						text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Maksymalne zmęczenie"
 					}
 				];
 
