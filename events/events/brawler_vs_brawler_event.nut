@@ -6,17 +6,17 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.brawler_vs_brawler";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]As you sit with the men around the fire, a discussion across the flames starts to get a little loud. %brawler% the brawler stands up and points at his own chest with a hearty laugh.%SPEECH_ON%You? You think you could take me?%SPEECH_OFF%The other brawler, %brawler2%, jumps to his feet.%SPEECH_ON%Take you? I could put ya under the ground ya farkin\' pillowfisted fool!%SPEECH_OFF%The slightest suggestion that %brawler%\'s fists weren\'t made of jaw-demolishing bricks kicks off a brutal fight. The brawlers grab one another and swing their free hands in looping undercuts. Each punch lands with cracking ferocity. Surely no man could take so much damage and stay on his feet, but here you\'re witnessing two fellas doing just that. You order the company to break up the fight.\n\n%brawler% pinches a nostril and shoots blood out of the other. He shrugs.%SPEECH_ON%Just havin\' a bit o\' a scrap, sir.%SPEECH_OFF%Popping a shoulder back into socket, %brawler2% nods.%SPEECH_ON%Aye, no harm no foul.%SPEECH_OFF%You watch as the two men shake hands and clap one another on the shoulder, each congratulating the other on how nasty their punches were.",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Gdy siedzisz z ludźmi przy ognisku, rozmowa po drugiej stronie płomieni robi się nieco głośniejsza. %brawler% zabijaka wstaje i ze szczerym śmiechem wskazuje na własną pierś.%SPEECH_ON%Ty? Myślisz, że dasz mi radę?%SPEECH_OFF%Drugi zabijaka, %brawler2%, podrywa się na nogi.%SPEECH_ON%Tobie? Wpakowałbym cię pod ziemię, ty cholerny miękkopięściu!%SPEECH_OFF%Najmniejsza sugestia, że pięści %brawler% nie są zrobione z kruszących szczęki cegieł, rozpoczyna brutalną bijatykę. Zabijaki chwytają się nawzajem i wymachują wolnymi rękami, zadając półkoliste podcięcia. Każdy cios ląduje z trzaskającą furią. Żaden człowiek nie powinien znieść tylu obrażeń i stać na nogach, ale właśnie widzisz dwóch gości, którzy to robią. Każesz kompanii rozdzielić bójkę.\n\n%brawler% ściska jedno nozdrze i wypuszcza krew z drugiego. Wzrusza ramionami.%SPEECH_ON%Tylko mała sprzeczka, panie.%SPEECH_OFF%Wskakując barkiem z powrotem na miejsce, %brawler2% kiwa głową.%SPEECH_ON%Ano, bez szkody, bez urazy.%SPEECH_OFF%Patrzysz, jak obaj mężczyźni ściskają sobie dłonie i klepią się po ramionach, każdy gratulując drugiemu, jak potworne były jego ciosy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s one way to come together.",
+					Text = "To jeden ze sposobów na zgranie się.",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,7 +35,7 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury1.getIcon(),
-						text = _event.m.Brawler1.getName() + " suffers " + injury1.getNameOnly()
+						text = _event.m.Brawler1.getName() + " doznaje " + injury1.getNameOnly()
 					});
 				}
 				else
@@ -44,11 +44,11 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Brawler1.getName() + " suffers light wounds"
+						text = _event.m.Brawler1.getName() + " doznaje lekkich ran"
 					});
 				}
 
-				_event.m.Brawler1.improveMood(2.0, "Bonded with " + _event.m.Brawler2.getName());
+				_event.m.Brawler1.improveMood(2.0, "Zacieśnił więź z " + _event.m.Brawler2.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Brawler1.getMoodState()],
@@ -61,7 +61,7 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury2.getIcon(),
-						text = _event.m.Brawler2.getName() + " suffers " + injury2.getNameOnly()
+						text = _event.m.Brawler2.getName() + " doznaje " + injury2.getNameOnly()
 					});
 				}
 				else
@@ -70,11 +70,11 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Brawler2.getName() + " suffers light wounds"
+						text = _event.m.Brawler2.getName() + " doznaje lekkich ran"
 					});
 				}
 
-				_event.m.Brawler2.improveMood(2.0, "Bonded with " + _event.m.Brawler1.getName());
+				_event.m.Brawler2.improveMood(2.0, "Zacieśnił więź z " + _event.m.Brawler1.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Brawler2.getMoodState()],

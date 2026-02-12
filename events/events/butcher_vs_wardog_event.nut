@@ -5,17 +5,17 @@ this.butcher_vs_wardog_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.butcher_vs_wardog";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You hear a yelp and quickly rush to the noise. When you get there, you\'re not sure whether it was man or dog that produced it. %butcher% the butcher is holding a cleaver up and a wardog is rearing beneath him, both sides ready to lunge. The man sees you and quickly sweeps the weapon behind his back. The hound takes a squat and throws some puppy eyes your way. Raising an eyebrow, you try not to make sense of the scene.%SPEECH_ON%Play nice now.%SPEECH_OFF%The butcher scoffs.%SPEECH_ON%Oy\', me and the bitch were just having a talk that\'s all.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Słyszysz skowyt i szybko biegniesz w stronę hałasu. Gdy docierasz na miejsce, nie jesteś pewien, czy wydał go człowiek czy pies. %butcher% rzeźnik trzyma tasak w górze, a pies bojowy staje dęba przed nim, obie strony gotowe do skoku. Mężczyzna widzi cię i szybko chowa broń za plecami. Ogár siada i posyła ci błagalne spojrzenie. Unosząc brew, starasz się nie doszukiwać sensu w tej scenie.%SPEECH_ON%Grzecznie teraz.%SPEECH_OFF%Rzeźnik prycha.%SPEECH_ON%Oj, ja i ta suka tylko pogadaliśmy, nic więcej.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Uh, right.",
+					Text = "Aha, jasne.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.butcher_vs_wardog_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Butcher.getImagePath());
-				_event.m.Butcher.worsenMood(0.5, "Didn\'t get along with the company\'s wardogs");
+				_event.m.Butcher.worsenMood(0.5, "Nie dogadywał się z psami bojowymi kompanii");
 
 				if (_event.m.Butcher.getMoodState() >= this.Const.MoodState.Neutral)
 				{

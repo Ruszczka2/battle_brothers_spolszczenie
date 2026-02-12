@@ -6,17 +6,17 @@ this.bright_vs_dumb_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.bright_vs_dumb";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_15.png[/img]%dumb% is perhaps one of the dumbest individuals you\'ve ever met but, for a brief moment, it does appear that %bright% gets through and teaches him a thing or two about critical thinking and memorization. You watch as the two sit together and look over some scrolls. You\'re not sure where the smart man got such papers, but the unlearning oaf is certainly paying a lot of attention to them.\n\nAs you watch, %dumb% is asking rather deep, profound questions. Questions about the land and its relationship to people, and the sky and its relationship to the birds. You slowly realize the idiot is merely glancing around and describing what he\'s seeing in the sort of \'inquisitive\' language %bright% has taught him - namely by attaching a smarmily-intoned question to the end of every sentence. When the two finish up, %bright% comes to you with a grin.%SPEECH_ON%I think we\'re really getting somewhere with him. He\'s learning, you know? With students like that, all you gotta do is be patient and take your time.%SPEECH_OFF%A little ways away, %dumb% is pounding ants with a rock. You simply nod and let %bright% live out every teacher\'s biggest fantasy.",
+			Text = "[img]gfx/ui/events/event_15.png[/img]%dumb% jest chyba jedną z najgłupszych osób, jakie spotkałeś, ale przez krótką chwilę wydaje się, że %bright% naprawdę do niego dociera i uczy go czegoś o krytycznym myśleniu i zapamiętywaniu. Patrzysz, jak obaj siedzą razem i przeglądają zwoje. Nie wiesz, skąd mądry człowiek wziął te papiery, ale niewykształcony osiłek z pewnością uważnie im się przygląda.\n\nGdy obserwujesz, %dumb% zadaje dość głębokie, poważne pytania. Pytania o ziemię i jej związek z ludźmi oraz o niebo i jego związek z ptakami. Powoli uświadamiasz sobie, że idiota po prostu rozgląda się i opisuje to, co widzi, używając \'dociekliwego\' języka, którego nauczył go %bright% - a dokładnie dodając do końca każdego zdania pytanie wypowiedziane z mędrkującą intonacją. Kiedy kończą, %bright% podchodzi do ciebie z uśmiechem.%SPEECH_ON%Myślę, że naprawdę coś z nim robimy. Uczy się, wiesz? Z takimi uczniami wystarczy cierpliwość i czas.%SPEECH_OFF%Nieopodal %dumb% tłucze mrówki kamieniem. Po prostu kiwasz głową i pozwalasz %bright% spełniać największą fantazję każdego nauczyciela.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You finally reached him.",
+					Text = "W końcu do niego dotarłeś.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,13 +28,13 @@ this.bright_vs_dumb_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Bright.getImagePath());
 				this.Characters.push(_event.m.Dumb.getImagePath());
-				_event.m.Bright.improveMood(1.0, "Taught " + _event.m.Dumb.getName() + " something");
+				_event.m.Bright.improveMood(1.0, "Nauczył " + _event.m.Dumb.getName() + " czegoś");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Bright.getMoodState()],
 					text = _event.m.Bright.getName() + this.Const.MoodStateEvent[_event.m.Bright.getMoodState()]
 				});
-				_event.m.Dumb.improveMood(1.0, "Bonded with " + _event.m.Bright.getName());
+				_event.m.Dumb.improveMood(1.0, "Zacieśnił więź z " + _event.m.Bright.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Dumb.getMoodState()],

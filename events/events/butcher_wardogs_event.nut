@@ -5,17 +5,17 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.butcher_wardogs";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You open a crate of food to find the last of your reserves. An apple rolls across the bottom, sounding not unlike the grumble of an empty stomach as it totters about. A few loaves of bread give it some company and there is a piece of meat wrapped in a thick leaf. That\'s it.\n\nWhen you close the lid and turn around, %butcher% the butcher is standing there.%SPEECH_ON%Hey there boss. I see we got a problem. So how about I... fix it?%SPEECH_OFF%Just then, he thumbs over his shoulder, right in the direction of two war dogs chained up to a stake.",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Otwierasz skrzynię z jedzeniem i znajdujesz ostatnie zapasy. Jabłko turla się po dnie, wydając dźwięk podobny do burczenia pustego żołądka. Kilka bochenków chleba towarzyszy mu, a obok leży kawałek mięsa owinięty w gruby liść. To wszystko.\n\nGdy zamykasz wieko i się odwracasz, stoi tam %butcher% rzeźnik.%SPEECH_ON%No hej, szefie. Widzę, że mamy problem. Może ja go... rozwiążę?%SPEECH_OFF%Wskazuje kciukiem za siebie, w kierunku dwóch psów bojowych przywiązanych do palika.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Do what is necessary.",
+					Text = "Zrób, co konieczne.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I will not have our trusty hounds be butchered and eaten.",
+					Text = "Nie pozwolę, by nasze wierne psy zostały zarżnięte i zjedzone.",
 					function getResult( _event )
 					{
 						return "C";
@@ -39,13 +39,13 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_14.png[/img]The dogs are sitting rather studiously, panting and looking pretty content, so durable is their sense of happiness. But you\'ve mouths to feed and battles to fight. You give %butcher% the go ahead to do what is right for the company.\n\nThe butcher meanders his way toward the mutts, holding out one hand to pet them as the other clutches a knife behind his back. You do not stick around to watch what happens next, but a short yelp quickly followed by another turns your already empty stomach.",
+			Text = "[img]gfx/ui/events/event_14.png[/img]Psy siedzą dość grzecznie, dyszą i wyglądają na zadowolone - ich poczucie szczęścia jest trwałe. Ale masz gęby do wykarmienia i bitwy do stoczenia. Dajesz %butcher% zgodę, by zrobił to, co słuszne dla kompanii.\n\nRzeźnik podchodzi do kundli, wyciągając jedną rękę, by je pogłaskać, a drugą trzymając za plecami nóż. Nie zostajesz, by patrzeć, co stanie się dalej, ale krótki skowyt, po którym szybko następuje drugi, przewraca twój i tak pusty żołądek.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "At least the men won\'t go hungry tonight.",
+					Text = "Przynajmniej ludzie nie będą dziś głodni.",
 					function getResult( _event )
 					{
 						return 0;
@@ -68,7 +68,7 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 
 						if (numWardogsToSlaughter == 0)
@@ -93,7 +93,7 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = "ui/items/" + item.getIcon(),
-								text = "You lose " + item.getName()
+								text = "Tracisz " + item.getName()
 							});
 
 							if (numWardogsToSlaughter == 0)
@@ -111,25 +111,25 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You shake your head no.%SPEECH_ON%Absolutely not. They are as part of the company as any man, and certainly some men would rather starve than eat their own.%SPEECH_OFF%The butcher shrugs.%SPEECH_ON%They\'re just dogs, sir. Mutts. Mongrels. Ain\'t nothing but a beast that knows its name and little else. There are plenty of pups to find when we need them.%SPEECH_OFF%Again, you shake your head.%SPEECH_ON%We\'re not killing the dogs, %butcher%. And don\'t think I don\'t see the glint in your eye. There\'s more to slaughtering them animals than just feeding a few mouths.%SPEECH_OFF%%butcher% can only shrug again.%SPEECH_ON%I can\'t pick and choose what gives me pleasure, sir, but I\'ll follow yer orders.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Kręcisz głową.%SPEECH_ON%Absolutnie nie. Są częścią kompanii jak każdy człowiek, a niektórzy woleliby głodować, niż jeść swoich.%SPEECH_OFF%Rzeźnik wzrusza ramionami.%SPEECH_ON%To tylko psy, panie. Kundelki. Mieszańce. To nic więcej jak bestia, która zna swoje imię i niewiele poza tym. Gdy będziemy potrzebować, znajdziemy więcej szczeniąt.%SPEECH_OFF%Znowu kręcisz głową.%SPEECH_ON%Nie zabijemy psów, %butcher%. I nie myśl, że nie widzę błysku w twoim oku. W zarzynaniu tych zwierząt chodzi o coś więcej niż tylko o nakarmienie kilku gąb.%SPEECH_OFF%%butcher% tylko wzrusza ramionami.%SPEECH_ON%Nie mogę wybierać, co sprawia mi przyjemność, panie, ale wykonam rozkazy.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll find something else.",
+					Text = "Znajdziemy coś innego.",
 					function getResult( _event )
 					{
 						return 0;
@@ -140,7 +140,7 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Butcher.getImagePath());
-				_event.m.Butcher.worsenMood(1.0, "Was denied a request");
+				_event.m.Butcher.worsenMood(1.0, "Odmówiono mu prośby");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Butcher.getMoodState()],

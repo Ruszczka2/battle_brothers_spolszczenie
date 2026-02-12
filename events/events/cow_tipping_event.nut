@@ -7,18 +7,18 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cow_tipping";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_72.png[/img]While on the march, you come across a lone cow standing in a field. Not much to it: it\'s just a cow.\n\n But then %randombrother% sidles up next to you. He\'s gnawing on some broomstraw and twists it around as he talks.%SPEECH_ON%So who do you think can do it?%SPEECH_OFF%You ask \'do what.\' He smiles.%SPEECH_ON%Aw, sorry cap\'. Didn\'t realize you hadn\'t heard. We\'re gonna see if someone can knock that cow over! Say, seeing as how we can only knock it over once, how about you choose which of us has a go?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Podczas marszu natrafiasz na samotną krowę stojącą na polu. Niewiele w tym: to po prostu krowa.\n\nAle wtedy %randombrother% podchodzi do ciebie. Gryzie źdźbło słomy i kręci je w palcach, gdy mówi.%SPEECH_ON%No i kto twoim zdaniem da radę?%SPEECH_OFF%Pytasz: \"da radę z czym?\" Uśmiecha się.%SPEECH_ON%Oj, sorry, kap\'. Nie wiedziałem, że nie słyszałeś. Sprawdzamy, czy ktoś potrafi przewrócić tę krowę! Skoro da się to zrobić tylko raz, co powiesz na to, żebyś wybrał, kto spróbuje?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [],
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Pick whoever you think is best.",
+					Text = "Wybierz, kogo uważasz za najlepszego.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -29,7 +29,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Strong != null)
 				{
 					this.Options.push({
-						Text = "I bet %strong% is strong enough to do it.",
+						Text = "Założę się, że %strong% jest wystarczająco silny.",
 						function getResult( _event )
 						{
 							return "Strong";
@@ -41,7 +41,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Cocky != null)
 				{
 					this.Options.push({
-						Text = "That cocky bastard %cocky% looks itching to have a go.",
+						Text = "Ten pyszałek %cocky% aż się pali, by spróbować.",
 						function getResult( _event )
 						{
 							return "Cocky";
@@ -51,7 +51,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Leave that cow alone.",
+					Text = "Zostawcie tę krowę w spokoju.",
 					function getResult( _event )
 					{
 						return 0;
@@ -63,13 +63,13 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_72.png[/img]You tell the men to sort it out themselves. They quickly choose %cowtipper% who, after some badgering, agrees to give it a go.\n\n The sellsword carefully steps across the field, trying his best to avoid the cow patties. The cow itself nonchalantly looks over. It moos once before returning its short bovine attention to the grass. Snickering, the men shoo %cowtipper% onward, mouthing \'do it!\' and \'what are you waiting for?\' Finally, standing a few feet from the cow, %cowtipper% charges.%SPEECH_ON%Yaaahh!%SPEECH_OFF%He storms into the cow\'s side and he might as well have run into a house: his feet slip out from beneath him and he goes skidding beneath the animal, a glide well-oiled by fresh shit. The company bursts out laughing.%SPEECH_ON%You can\'t tip a cow ya fool! They\'re too goddam heavy!%SPEECH_OFF% %cowtipper% no doubt has a new beef with these jokers, but his \'sacrifice\' was worth the easy entertainment.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Mówisz ludziom, żeby sami to rozstrzygnęli. Szybko wybierają %cowtipper%, który po pewnym namawianiu zgadza się spróbować.\n\nNajemnik ostrożnie przechodzi przez pole, starając się omijać krowie placki. Sama krowa obojętnie zerka. Muczy raz, po czym wraca do krótkiej, bydlecej uwagi na trawie. Z chichotem ludzie popychają %cowtipper% do przodu, mamrocząc \"dawaj!\" i \"na co czekasz?\" W końcu, stojąc kilka kroków od krowy, %cowtipper% rusza z szarżą.%SPEECH_ON%Jaaahh!%SPEECH_OFF%Wpada w bok krowy i równie dobrze mógłby wpaść w dom: nogi wysuwają mu się spod niego i ślizga się pod zwierzęciem, a poślizg doskonale smaruje świeże gówno. Kompania wybucha śmiechem.%SPEECH_ON%Nie da się przewrócić krowy, głupku! Są cholernie ciężkie!%SPEECH_OFF%%cowtipper% na pewno ma teraz nową urazę do tych dowcipnisiów, ale jego \"poświęcenie\" było warte łatwej rozrywki.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What a show!",
+					Text = "Ale przedstawienie!",
 					function getResult( _event )
 					{
 						return 0;
@@ -80,7 +80,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.worsenMood(0.5, "Humiliated himself in front of the company");
+				_event.m.Other.worsenMood(0.5, "Upokorzył się przed kompanią");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -102,7 +102,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.5, "Entertained by " + _event.m.Other.getName() + "\'s attempt to tip over a cow");
+						bro.improveMood(0.5, "Bawił się próbą przewrócenia krowy przez " + _event.m.Other.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -119,13 +119,13 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_72.png[/img]You tell the men to sort it out themselves. They quickly choose %cowtipper%. The sellsword carefully steps across the field, trying his best to avoid the cow patties. The cow itself nonchalantly looks over and moos once before returning its attention to the grass. Snickering, the men shoo %cowtipper% onward, mouthing \'do it!\' and \'hurry now!\'. Finally, standing a few feet from the cow, %cowtipper% charges forward.%SPEECH_ON%Yaaahh!%SPEECH_OFF%The scream spooks the cow. She dips her withers and kicks, catching %cowtipper% with a bit of hooved heel. He violently spins on his feet and twists right into the grass. The men laugh for a moment, then realize it\'s serious. As the cow moos and trots away, the sellsword is \'rescued.\' Though badly hurt, he\'ll survive this near-bovine homicide.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Mówisz ludziom, żeby sami to rozstrzygnęli. Szybko wybierają %cowtipper%. Najemnik ostrożnie przechodzi przez pole, starając się omijać krowie placki. Sama krowa obojętnie zerka i muczy raz, po czym wraca do trawy. Z chichotem ludzie popychają %cowtipper% do przodu, mamrocząc \"dawaj!\" i \"szybciej!\". W końcu, stojąc kilka kroków od krowy, %cowtipper% rusza.%SPEECH_ON%Jaaahh!%SPEECH_OFF%Krzyk płoszy krowę. Opuszcza kłąb i kopie, trafiając %cowtipper% kopytem. Ten gwałtownie obraca się i wpada prosto w trawę. Ludzie śmieją się chwilę, po czym orientują się, że to poważna sprawa. Krowa muczy i odchodzi truchtem, a najemnik zostaje \"uratowany\". Choć jest mocno poobijany, przeżyje tę niemal krowią zbrodnię.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fun\'s over.",
+					Text = "Koniec zabawy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -140,9 +140,9 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Other.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Other.getName() + " doznaje " + injury.getNameOnly()
 				});
-				_event.m.Other.worsenMood(0.5, "Humiliated himself in front of the company");
+				_event.m.Other.worsenMood(0.5, "Upokorzył się przed kompanią");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -157,13 +157,13 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Strong",
-			Text = "[img]gfx/ui/events/event_72.png[/img]You figure the strong and burly %strong% could give the cow a good tipping. Your awkward wording alone has the men laughing, but %strong% respectfully bows.%SPEECH_ON%I am honored, sir.%SPEECH_OFF%He rolls up his sleeves and strolls across the field, striding over cow patties like a merchant stepping over the homeless. The cow looks over, raising a curious eyebrow. %strong% nods.%SPEECH_ON%That\'s right, I\'m coming.%SPEECH_OFF%More phrasing issues abound. Despite the laughter of the company, %strong% charges the cow. At first, he simply presses against its side, muscled and heaving with breath. The men laugh as his efforts get him nowhere, but they quickly quiet down when the cow slides across the mud and grass. With a mighty roar, %strong% surges forward and the cow goes falling sideways with a confused moo.\n\n %otherbrother% stands there, slackjawed.%SPEECH_ON%It was a joke... I didn\'t think it was actually possible...%SPEECH_OFF%The company erupts in cheers for the strong man\'s incredible feat!",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Uznajesz, że silny i barczysty %strong% mógłby przewrócić krowę. Samo twoje niezręczne sformułowanie wywołuje śmiech, ale %strong% z szacunkiem się kłania.%SPEECH_ON%To dla mnie zaszczyt, panie.%SPEECH_OFF%Podwija rękawy i rusza przez pole, omijając krowie placki jak kupiec omija bezdomnych. Krowa spogląda, unosząc ciekawie brew. %strong% kiwa głową.%SPEECH_ON%Tak, idę po ciebie.%SPEECH_OFF%Kolejne niefortunne słowa. Mimo śmiechu kompanii %strong% rusza na krowę. Na początku tylko napiera na jej bok, naprężając mięśnie i ciężko oddychając. Ludzie śmieją się, bo nic z tego nie wychodzi, ale szybko milkną, gdy krowa zaczyna się przesuwać po błocie i trawie. Z potężnym rykiem %strong% napiera, a krowa przewraca się na bok, zdezorientowanie mucząc.\n\n%otherbrother% stoi z rozdziawioną gębą.%SPEECH_ON%To był żart... nie sądziłem, że to w ogóle możliwe...%SPEECH_OFF%Kompania wybucha okrzykami na cześć niesamowitego wyczynu siłacza!",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done!",
+					Text = "Brawo!",
 					function getResult( _event )
 					{
 						return 0;
@@ -179,9 +179,9 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Strong.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Max Fatigue"
+					text = _event.m.Strong.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] maks. zmęczenie"
 				});
-				_event.m.Strong.improveMood(0.5, "Has shown off of his physical prowess");
+				_event.m.Strong.improveMood(0.5, "Popisał się swoją siłą fizyczną");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -203,7 +203,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "Witnessed " + _event.m.Strong.getName() + "\'s incredible feat");
+						bro.improveMood(0.5, "Widział niesamowity wyczyn " + _event.m.Strong.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -220,13 +220,13 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Cocky",
-			Text = "[img]gfx/ui/events/event_72.png[/img]Before you can even finish your sentence, %cocky% beats his chest and steps forward.%SPEECH_ON%I will fell that petty cow!%SPEECH_OFF%You remind him that the company has no beef with the bovine creature and that this is all for fun and games. He stands there, arms tent-poled with his fists at his hips.%SPEECH_ON%Nonsense. The company laughs and thinks this an impossibility, but I\'m here to show them all just how wrong they are!%SPEECH_OFF%The cocksure sellsword steps into the field and immediately cuts his boot across a cow patty. He sidewinders forward, arms flailing for balance, but it\'s all for naught as he slams to the ground. The men burst into laughter. The cow glances over before simply walking off. %cocky% cleans himself up.%SPEECH_ON%A minor misstep. But look! The cowardly cattle wants no part of me!%SPEECH_OFF%%otherbrother% laughs and points at the sellsword\'s stained garb.%SPEECH_ON%Maybe, but it looks like you got a little part of her.%SPEECH_OFF%The cocky sellsword quickly swipes the shite off his shirt. Despite the failure, he is undeterred and the men are almost passing out they\'re laughing so hard.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Zanim zdążysz dokończyć zdanie, %cocky% bije się w pierś i wychodzi do przodu.%SPEECH_ON%Powalę tę marną krowę!%SPEECH_OFF%Przypominasz mu, że kompania nie ma nic do bydła i że to tylko zabawa. Stoi z rękami jak namiot, pięści na biodrach.%SPEECH_ON%Bzdura. Kompania się śmieje i uważa to za niemożliwe, ale ja pokażę im, jak bardzo się mylą!%SPEECH_OFF%Pyszałek wchodzi na pole i od razu rozmazuje butem krowi placek. Sunie bokiem, machając rękami dla równowagi, ale na nic się to zdaje, bo wali na ziemię. Ludzie wybuchają śmiechem. Krowa zerka i po prostu odchodzi. %cocky% otrzepuje się.%SPEECH_ON%Drobna wpadka. Ale spójrzcie! Tchórzliwa krowa nie chce mieć ze mną nic wspólnego!%SPEECH_OFF%%otherbrother% śmieje się i wskazuje na zabrudzone ubranie najemnika.%SPEECH_ON%Może, ale wygląda na to, że kawałek jej jednak masz.%SPEECH_OFF%Pyszałek szybko ściera gówno z koszuli. Mimo porażki nie zniechęca się, a ludzie niemal mdleją ze śmiechu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You did well enough.",
+					Text = "Wystarczyło.",
 					function getResult( _event )
 					{
 						return 0;
@@ -242,7 +242,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Cocky.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Cocky.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinację"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -255,7 +255,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "Witnessed " + _event.m.Cocky.getName() + "\'s entertaining failure");
+						bro.improveMood(0.5, "Widział zabawną porażkę " + _event.m.Cocky.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

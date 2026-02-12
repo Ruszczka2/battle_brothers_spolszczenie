@@ -6,17 +6,17 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.brawler_teaches";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]A shadow crosses over you from behind. When you look back, %brawler% is standing there with a rather distant look in his eyes. He cracks his knuckles in one long staccato before asking if he can train up %noncom%. You ask why. The brawler looks down at you.%SPEECH_ON%Because he is weak.%SPEECH_OFF%Hmmm, good enough.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Cień przesuwa się za tobą. Gdy się odwracasz, %brawler% stoi tam z dość nieobecnym spojrzeniem. Trzaska kostkami w długiej serii, po czym pyta, czy może wyszkolić %noncom%. Pytasz, dlaczego. Zabijaka patrzy na ciebie z góry.%SPEECH_ON%Bo jest słaby.%SPEECH_OFF%Hmm, wystarczy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "See how long you can keep him going.",
+					Text = "Sprawdź, jak długo wytrzyma.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Toughen him up, will you?",
+					Text = "Uhartuj go, dobrze?",
 					function getResult( _event )
 					{
 						return "C";
@@ -32,7 +32,7 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Show him how to brawl.",
+					Text = "Pokaż mu, jak się bije.",
 					function getResult( _event )
 					{
 						return "D";
@@ -46,19 +46,19 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Student.getImagePath());
 				_event.m.Brawler.getFlags().add("brawler_teaches");
 				_event.m.Student.getFlags().add("brawler_teaches");
-				_event.m.Brawler.improveMood(0.25, "Has toughened up " + _event.m.Student.getName());
+				_event.m.Brawler.improveMood(0.25, "Uhartował " + _event.m.Student.getName());
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_06.png[/img]%brawler% and %noncom% are found in a mudpit with their hands wrapped in cloth and leaves, padding for the knuckles and to keep them from cutting one another with every punch. The brawler has his trainee bouncing counter-clockwise along the ring of the fighting circle, punching the air as he goes, and with his trainer hitting or kicking him every time he passes by. The men glisten with sweat as they work. When %noncom% begins to slow, %brawler% hits him as though a jockey would a sluggish horse.\n\n After an hour of this, %brawler% steps back and invites his trainee to attack him. Predictably, the assault is aimless and pitiful. Long, looping punches are thrown with no energy behind them. The brawler ducks and weaves out of the way, punching every attempted strike with a counter-punch of his own.%SPEECH_ON%See what happens when you are tired? This is why we must train. Even the most able and deadly are worth nothing without air in their lungs and fresh legs beneath them.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_06.png[/img]%brawler% i %noncom% są w błotnym dole, z rękami owiniętymi w szmaty i liście, by osłonić kostki i nie kaleczyć się przy każdym ciosie. Zabijaka każe uczniowi odbijać się przeciwnie do ruchu wskazówek zegara po kręgu, bić powietrze, a sam uderza lub kopie go przy każdym przejściu. Mężczyźni lśnią potem podczas pracy. Gdy %noncom% zaczyna zwalniać, %brawler% uderza go jak dżokej ospałego konia.\n\n Po godzinie tego treningu %brawler% odsuwa się i zachęca ucznia do ataku. Jak można się spodziewać, atak jest bezładny i żałosny. Długie, szerokie ciosy padają bez energii. Zabijaka schyla się i uskakuje, kontrowując każdą próbę uderzenia własnym ciosem.%SPEECH_ON%Widzisz, co się dzieje, gdy jesteś zmęczony? Dlatego musimy trenować. Nawet najsilniejsi i najgroźniejsi są nic niewarci bez powietrza w płucach i świeżych nóg pod sobą.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'m getting tired just watching this.",
+					Text = "Męczę się już od samego patrzenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -76,20 +76,20 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Student.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + skill + "[/color] Max Fatigue"
+					text = _event.m.Student.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + skill + "[/color] maks. zmęczenie"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_06.png[/img]The brawler has %noncom% stand completely still. He circles about the man, cracking his knuckles as he sizes him up. Finally, he lets his intentions be known.%SPEECH_ON%I am going to beat you until you break.%SPEECH_OFF%A moment is given to the trainee to acknowledge what is about to happen. He sucks in a great gulp of breath and then nods. %brawler% wastes no time wheeling a bola punch right into the man\'s chest. He bowls over at which point he is kicked in the shoulder repeatedly until he stands back up.\n\nThere the brawler continues to circle and deliver blows. Not every strike is thrown with conviction: most are meant to inflict pain, but not what could be called irreversible damage. The brawler, if he wanted to, could kill this man with his bare fists, but that is not the purpose of this training. You realize that this mode of \'toughening up\' probably happened to the brawler himself at some point or another.",
+			Text = "[img]gfx/ui/events/event_06.png[/img]Zabijaka każe %noncom% stać zupełnie nieruchomo. Krąży wokół niego, trzaskając kostkami, gdy go mierzy. W końcu ujawnia swoje zamiary.%SPEECH_ON%Będę cię bił, aż pękniesz.%SPEECH_OFF%Uczeń dostaje chwilę, by przyjąć to, co ma się stać. Wciąga głęboko powietrze i kiwa głową. %brawler% nie traci czasu, pakując okrężny cios prosto w klatkę piersiową mężczyzny. Ten pada, po czym jest wielokrotnie kopany w ramię, aż znów wstaje.\n\nDalej zabijaka krąży i zadaje ciosy. Nie każdy cios jest pełny: większość ma sprawić ból, ale nie to, co można by nazwać nieodwracalnymi obrażeniami. Zabijaka, gdyby chciał, mógłby zabić tego człowieka gołymi pięściami, ale to nie jest cel treningu. Uświadamiasz sobie, że taki sposób \'hartowania\' spotkał kiedyś i samego zabijakę.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What doesn\'t kill you makes you stronger?",
+					Text = "Co cię nie zabije, to cię wzmocni?",
 					function getResult( _event )
 					{
 						return 0;
@@ -107,26 +107,26 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Student.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + skill + "[/color] Hitpoints"
+					text = _event.m.Student.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + skill + "[/color] punkty zdrowia"
 				});
 				_event.m.Student.addLightInjury();
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Student.getName() + " suffers light wounds"
+					text = _event.m.Student.getName() + " doznaje lekkich ran"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_06.png[/img]%brawler% the heavy-handed-rough-and-tumble brawler is found leaning over, his arms fenced out before himself in a defensive posture, and %noncom% is standing adjacent, trying to mimic the stance. The brawler drops his body low and shoots in under %noncom%\'s arms, there wrapping both hands around the man\'s waist and lifting him up in the air before dumping him on his back. %brawler% steps away, cracking his knuckles and telling %noncom% to get up.%SPEECH_ON%You need to be ready for two things: me coming in low, and me coming in high.%SPEECH_OFF%%noncom% dusts himself off then complains a little.%SPEECH_ON%How can I possibly do both?%SPEECH_OFF%The brawler ignores the question and simply asks the man to attack him. %noncom% obliges, coming in high with a hurled fist. %brawler% deflects the blow with a shoulder-roll before throwing a cross-counter that has %noncom% spinning on his feet. The fist-fighter cracks his knuckles again and spits.%SPEECH_ON%Practice. That\'s how. Now get back up and let\'s go again.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_06.png[/img]%brawler%, ciężkoręki zabijaka, stoi pochylony, z rękami wysuniętymi w obronnej postawie, a %noncom% stoi obok, próbując naśladować pozycję. Zabijaka obniża ciało i wchodzi pod ramiona %noncom%, oplatając jego pas obiema rękami i unosząc go w górę, po czym zrzuca na plecy. %brawler% odchodzi, trzaskając kostkami i każe %noncom% wstać.%SPEECH_ON%Musisz być gotów na dwie rzeczy: na moje wejście nisko i na moje wejście wysoko.%SPEECH_OFF%%noncom% otrzepuje się i trochę narzeka.%SPEECH_ON%Jak mam możliwie robić jedno i drugie?%SPEECH_OFF%Zabijaka ignoruje pytanie i po prostu prosi, by mężczyzna go zaatakował. %noncom% spełnia prośbę, idąc wysoko i zamachując się pięścią. %brawler% zbija cios barkowym zejściem, po czym kontruje krzyżowym, który obraca %noncom% na nogach. Pięściarz znów trzaska kostkami i spluwa.%SPEECH_ON%Praktyka. Tak. A teraz wstawaj i jeszcze raz.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Maybe he\'ll shape up to be a real mercenary after all.",
+					Text = "Może jednak wyrośnie z niego prawdziwy najemnik.",
 					function getResult( _event )
 					{
 						return 0;
@@ -146,12 +146,12 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Student.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack + "[/color] Melee Skill"
+					text = _event.m.Student.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack + "[/color] Umiejętność walki wręcz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.Student.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + defense + "[/color] Melee Defense"
+					text = _event.m.Student.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + defense + "[/color] Obronę wręcz"
 				});
 			}
 

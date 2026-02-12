@@ -6,17 +6,17 @@ this.cocky_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cocky_vs_iron_lungs";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]As you roll up some maps and put them back in their panniers, a commotion draws you outside your tent. The men are dragging %cocky% across the ground. His clothes are sopping wet and his face one shade short of death. The men give him some good slaps on the cheeks. Eventually, he wakes up, eyes wild, mouth gargling water like a broken fountain. He looks around and asks what you, too, wish to know.%SPEECH_ON%What happened?%SPEECH_OFF%%ironlungs% walks over, a similarly wet visage, but with a far more colorful complexion.%SPEECH_ON%You cocky cunt dared to see which of us could hold their breath the longest. You lost because they don\'t call these the iron lungs for nuttin\'.%SPEECH_OFF%The men have a laugh as %ironlungs% boastfully pounds his chest. %cocky%, still wobbly, gets to his feet. Mere moments after being completely unconscious, he\'s already back to his prideful ways.%SPEECH_ON%Yeah yeah, you bested me this day, but I shall be the best, just you wait!%SPEECH_OFF%Another sellsword whimsically points out that the cocksure fella has a huge string of snot dangling from his nose. He confidently wipes it away despite the roaring laughter of the company.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Gdy zwijasz mapy i odkładasz je do juków, hałas wyciąga cię z namiotu. Ludzie ciągną %cocky% po ziemi. Jego ubranie jest przemoczone, a twarz bliska śmierci. Mężczyźni dają mu kilka mocnych policzków. W końcu się budzi, oczy ma dzikie, a usta bulgoczą wodą niczym zepsuta fontanna. Rozgląda się i pyta o to, co i ty chciałbyś wiedzieć.%SPEECH_ON%Co się stało?%SPEECH_OFF%%ironlungs% podchodzi, równie mokry, ale o znacznie bardziej rumianej twarzy.%SPEECH_ON%Ty, pyszałek, chciałeś sprawdzić, kto z nas najdłużej wstrzyma oddech. Przegrałeś, bo nie bez powodu nazywają mnie żelaznymi płucami.%SPEECH_OFF%Ludzie śmieją się, gdy %ironlungs% z dumą bije się w pierś. %cocky%, wciąż chwiejny, podnosi się. Zaledwie chwilę po tym, jak był nieprzytomny, znów wraca do swojej dumy.%SPEECH_ON%Tak, tak, dziś mnie pokonałeś, ale ja będę najlepszy, zobaczysz!%SPEECH_OFF%Inny najemnik żartobliwie zauważa, że pyszałek ma z nosa długi glut. Pewnie wyciera go, mimo ryku śmiechu kompanii.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Ah, the always safe measurement of manliness.",
+					Text = "Ach, zawsze bezpieczny pomiar męskości.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,15 +32,15 @@ this.cocky_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Cocky.getName() + " suffers light wounds"
+					text = _event.m.Cocky.getName() + " doznaje lekkich ran"
 				});
-				_event.m.Cocky.worsenMood(1.0, "Was humiliated in front of the company");
+				_event.m.Cocky.worsenMood(1.0, "Został upokorzony przed kompanią");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cocky.getMoodState()],
 					text = _event.m.Cocky.getName() + this.Const.MoodStateEvent[_event.m.Cocky.getMoodState()]
 				});
-				_event.m.IronLungs.improveMood(1.0, "Beat " + _event.m.Cocky.getName() + " in a contest of strength");
+				_event.m.IronLungs.improveMood(1.0, "Pokonał " + _event.m.Cocky.getName() + " w próbie siły");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.IronLungs.getMoodState()],
@@ -52,7 +52,7 @@ this.cocky_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() != _event.m.Cocky.getID() && bro.getID() != _event.m.IronLungs.getID() && this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.5, "Felt entertained by " + _event.m.Cocky.getNameOnly());
+						bro.improveMood(0.5, "Bawił się widokiem " + _event.m.Cocky.getNameOnly());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

@@ -7,17 +7,17 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.bastard_assassin";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "Intro",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Under the cover of night, a man slips into your tent beneath the folds wafting just over the ground. He\'s masked with a black cloak and noble pauldrons. You arm yourself, but he holds a hand out.%SPEECH_ON%Don\'t bother, sellsword, for I am not here for you.%SPEECH_OFF%That\'s not good enough for you. The second the man takes another step, you charge and plant him on your table and with your free arm put a dagger to his neck. He grins.%SPEECH_ON%I already told you that I am not here for you. I am here for %bastard%.%SPEECH_OFF%The bastard nobleman? You ask what the stranger wants with him.%SPEECH_ON%Well, that depends, are you willing to talk?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Pod osłoną nocy do twojego namiotu wsuwa się mężczyzna, chowając się pod fałdami płótna, które falują tuż nad ziemią. Ma czarny płaszcz i szlacheckie naramienniki. Sięgasz po broń, ale on unosi dłoń.%SPEECH_ON%Nie fatyguj się, najemniku, nie przyszedłem po ciebie.%SPEECH_OFF%To ci nie wystarcza. Gdy tylko robi krok do przodu, rzucasz się na niego, kładziesz go na stole i wolną ręką przykładasz mu sztylet do gardła. Uśmiecha się.%SPEECH_ON%Już mówiłem, nie przyszedłem po ciebie. Przyszedłem po %bastard%.%SPEECH_OFF%Po bękarta ze szlachty? Pytasz, czego obcy od niego chce.%SPEECH_ON%Cóż, to zależy, czy chcesz rozmawiać?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, talk.",
+					Text = "Dobrze, mów.",
 					function getResult( _event )
 					{
 						return "A";
@@ -25,7 +25,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No talking. You just die.",
+					Text = "Żadnych rozmów. Zginiesz.",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -60,13 +60,13 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You lift the dagger from his neck. He straightens up on the table and glances at the map.%SPEECH_ON%I see the %companyname% has marched far and wide. %bastard% chose wisely to fit himself into its ranks.%SPEECH_OFF%When a drop of blood spatters the paper, he pauses to scratch a small nick you left on his neck, pursing his lips as though he had done it to himself in a morning shave.%SPEECH_ON%Anyway, let\'s get down to business. My benefactors want %bastard% dead. Seeing as how I\'ve been paid a large sum of coin, I am obligated to see this ambition to its end. Or... maybe not.%SPEECH_OFF%When he raises a playful eyebrow, you tell him to spill what he\'s thinking. He stiltwalks a sexton across the map as he talks.%SPEECH_ON%%bastard% has an army waiting for him if he so chooses. That\'s why the nobles want him dead, because he stands as a real and viable threat to the status quo and this he does not yet know. I suppose he doesn\'t have to, either, but it\'d be a nice send off, no? You get to see to it that his place in this world is justified and that he isn\'t some accident gliding through a world he believes to hate him. But what about me, a grossly talented assassin with a perfect streak of kills, hm? What about me? Well, I don\'t want this life anymore. So here\'s my offer: I take his place. He goes home, I go with you. He goes and conquers, my benefactors are nonethewiser and for all they know, I simply disappeared. Sounds good, no?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Odsuwasz sztylet od jego gardła. Prostuje się na stole i zerka na mapę.%SPEECH_ON%Widzę, że %companyname% maszerowała daleko i szeroko. %bastard% mądrze wybrał, dołączając do jej szeregów.%SPEECH_OFF%Gdy kropla krwi plami papier, zatrzymuje się, by podrapać małą rankę, którą zostawiłeś mu na szyi, marszcząc usta tak, jakby sam zrobił to podczas porannego golenia.%SPEECH_ON%W każdym razie, przejdźmy do interesów. Moi zleceniodawcy chcą śmierci %bastard%. Ponieważ zapłacono mi sporą sumę, jestem zobowiązany doprowadzić to do końca. Albo... może jednak nie.%SPEECH_OFF%Gdy unosi figlarnie brew, mówisz, by wyłożył, o co mu chodzi. Przechadza się nad mapą, jakby stąpał po kładce.%SPEECH_ON%%bastard% ma armię, która czeka na niego, jeśli zechce. Dlatego szlachta chce jego śmierci, bo jest realnym i poważnym zagrożeniem dla status quo, a on sam jeszcze o tym nie wie. Pewnie wcale nie musi wiedzieć, ale byłoby to godne pożegnanie, nie? Dopilnujesz, by jego miejsce w tym świecie miało sens i by nie był tylko przypadkiem sunącym przez świat, który – jak sądzi – go nienawidzi. A co ze mną, wyjątkowo utalentowanym skrytobójcą z idealną passą zabójstw, hm? Co ze mną? Cóż, nie chcę już takiego życia. Oto moja propozycja: zajmuję jego miejsce. On idzie do domu, ja idę z tobą. On idzie i podbija, moi zleceniodawcy niczego nie podejrzewają, a dla nich po prostu znikam. Brzmi dobrze, nie?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We have a deal.",
+					Text = "Mamy umowę.",
 					function getResult( _event )
 					{
 						return "B";
@@ -74,7 +74,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "How much are you paid for this?",
+					Text = "Ile ci za to zapłacili?",
 					function getResult( _event )
 					{
 						return "C";
@@ -82,7 +82,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Or I\'ll just kill you.",
+					Text = "Albo po prostu cię zabiję.",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -112,13 +112,13 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_33.png[/img]%bastard% deserves better. Not that the %companyname% is beneath him, but he is a man who has spent his whole life seeing himself as an outsider, a blight upon his own family name, a threat to those he love merely because they carry a finer bloodline than he. You agree to the assassin\'s demand and send for the bastard to enter your tent. When he does, you quickly explain the situation. He asks for proof that an army is awaiting him and the hired killer quickly complies, producing a stamped scroll with a sigil and signature only the bastard could recognize. %bastard% reads it carefully. He lowers and looks to you.%SPEECH_ON%And you are alright with this? The destiny is mine to take, but you have my sword and allegiance for as long as you want.%SPEECH_OFF%You clap the man on the shoulder and tell him to go forge his path. The assassin tells him if he is to do it then he should do it quickly. A little tearful, and not at all trying to hide it, %bastard% thanks you for at the very least believing in him even if only for the short time he was with the %companyname%. And then he leaves. Turning around, you find the assassin bowing.%SPEECH_ON%And just like that, you have my sword, captain.%SPEECH_OFF%This will take some explaining to the other men, but they\'ll be sure to trust your intuition here.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]%bastard% zasługuje na coś lepszego. Nie chodzi o to, że %companyname% jest poniżej niego, ale to człowiek, który całe życie widział w sobie outsidera, skazę na własnym nazwisku i zagrożenie dla tych, których kocha, tylko dlatego, że mają szlachetniejszą krew. Zgadzasz się na żądanie skrytobójcy i wzywasz bękarta do namiotu. Gdy wchodzi, szybko wyjaśniasz sytuację. Pyta o dowód, że czeka na niego armia, a najemny morderca natychmiast go przedstawia, pokazując zapieczętowany zwój z sygnetem i podpisem, które rozpozna tylko bękart. %bastard% czyta go uważnie. Spogląda w dół, potem na ciebie.%SPEECH_ON%I ty się na to zgadzasz? Los należy do mnie, ale masz mój miecz i lojalność tak długo, jak zechcesz.%SPEECH_OFF%Klepiesz go po ramieniu i każesz mu wykuć własną ścieżkę. Skrytobójca mówi mu, że jeśli ma to zrobić, to powinien to zrobić szybko. Z lekko zaszklonymi oczami, wcale tego nie kryjąc, %bastard% dziękuje, że przynajmniej w niego uwierzyłeś, nawet jeśli tylko na krótki czas, kiedy był z %companyname%. A potem odchodzi. Odwracasz się i widzisz, jak skrytobójca się kłania.%SPEECH_ON%I tak oto masz mój miecz, kapitanie.%SPEECH_OFF%To będzie wymagało wyjaśnień pozostałym ludziom, ale na pewno zaufają twojej intuicji.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Take care you bastard.",
+					Text = "Trzymaj się, bękarcie.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Assassin);
@@ -140,27 +140,27 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Bastard.getName() + " leaves the " + this.World.Assets.getName()
+					text = _event.m.Bastard.getName() + " odchodzi z " + this.World.Assets.getName()
 				});
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/special.png",
-					text = _event.m.Assassin.getName() + " joins the " + this.World.Assets.getName()
+					text = _event.m.Assassin.getName() + " dołącza do " + this.World.Assets.getName()
 				});
-				_event.m.Assassin.getBackground().m.RawDescription = "%name% joined the company in exchange for " + _event.m.Bastard.getName() + "\'s life. Little is known about the assassin and most remain wary of him. With a dagger in hand, the killer\'s sword-hand swerves and sways more akin to a snake than a man.";
+				_event.m.Assassin.getBackground().m.RawDescription = "%name% dołączył do kompanii w zamian za życie " + _event.m.Bastard.getName() + ". Niewiele wiadomo o skrytobójcy, a większość wciąż mu nie ufa. Z sztyletem w dłoni ręka zabójcy porusza się i faluje bardziej jak u węża niż u człowieka.";
 				_event.m.Assassin.getBackground().buildDescription(true);
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Before you decide anything, you ask the assassin how much was offered to slay the bastard. He weighs the numbers by tilting his head side to side.%SPEECH_ON%Well, it was... and then, deducting travel time, equipment costs, the time it took to find the damn sod, and the time it took scouting your encampment and figuring out whether you\'d be open to dialogue I\'d say... five-thousand crowns. If you\'re thinking of matching that, it\'s going to be a bit more. About one-thousand more, so that\'d be six-thousand crowns on your bill. You still up for that sort of \'discussion\', hm?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Zanim o czymkolwiek zdecydujesz, pytasz skrytobójcę, ile zaoferowano mu za zabicie bękarta. Waży liczby, przechylając głowę w jedną i drugą stronę.%SPEECH_ON%Cóż, to było... a potem, odejmując czas podróży, koszty wyposażenia, czas potrzebny na znalezienie tego cholernika oraz czas na rekonesans twojego obozu i sprawdzenie, czy w ogóle jesteś skłonny rozmawiać, powiedziałbym... pięć tysięcy koron. Jeśli chcesz to przebić, będzie trochę więcej. O jakieś tysiąc więcej, więc na twoim rachunku będzie sześć tysięcy koron. Nadal masz ochotę na taką \'dyskusję\', hm?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I agree to your offer. %bastard% will go, and you will take his place.",
+					Text = "Zgadzam się na twoją propozycję. %bastard% odejdzie, a ty zajmiesz jego miejsce.",
 					function getResult( _event )
 					{
 						return "B";
@@ -168,7 +168,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I will pay you those 6,000 crowns, and both %bastard% and you will stay.",
+					Text = "Zapłacę ci te 6 000 koron i zarówno %bastard%, jak i ty zostaniecie.",
 					function getResult( _event )
 					{
 						return "D";
@@ -176,7 +176,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I think I\'ll just kill you.",
+					Text = "Chyba po prostu cię zabiję.",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -206,13 +206,13 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_33.png[/img]While the %companyname% is doing well, it could be doing the best in the world and six-thousand crowns would still be a lot to ask for. But... you agree. The assassin hears your words and sits there for a moment.%SPEECH_ON%You agree? You\'ll pay six-thousand crowns, really?%SPEECH_OFF%You nod. He mulls the words over for another moment, a slight break in an otherwise stalwart presentation he has been putting on.%SPEECH_ON%Gotta be honest, didn\'t think you\'d do that. But a deal is a deal, and I am not one to playfully waste words.%SPEECH_OFF%He jets his hand out and you take it with a firm shake - just in case it is a ruse. He bows gracefully, no doubt something he learned in the halls of the noblemen that had sent him here in the first place.%SPEECH_ON%Captain of the %companyname%, you have my blade!%SPEECH_OFF%It\'ll take some explaining as to how a random man slipped into the company overnight, but the men have enough faith in your command that you could have recruited a sword-wielding goat and they would go along with it.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Choć %companyname% radzi sobie dobrze, nawet gdyby była najlepsza na świecie, sześć tysięcy koron to wciąż dużo. Ale... zgadzasz się. Skrytobójca słyszy twoje słowa i przez chwilę siedzi w milczeniu.%SPEECH_ON%Zgadzasz się? Naprawdę zapłacisz sześć tysięcy koron?%SPEECH_OFF%Kiwasz głową. Przetrawia to jeszcze przez moment, z ledwie widocznym pęknięciem w twardej postawie, którą dotąd prezentował.%SPEECH_ON%Szczerze mówiąc, nie sądziłem, że to zrobisz. Ale umowa to umowa, a ja nie jestem od tego, by lekko rzucać słowa.%SPEECH_OFF%Wyciąga dłoń, a ty ściskasz ją mocno - na wypadek podstępu. Kłania się z gracją, zapewne czego nauczył się w salach szlachty, która go tu przysłała.%SPEECH_ON%Kapitanie %companyname%, masz mój miecz!%SPEECH_OFF%Będzie trzeba wyjaśnić, jak to się stało, że przypadkowy człowiek wślizgnął się do kompanii w środku nocy, ale ludzie mają dość wiary w twoje dowództwo, że mógłbyś zwerbować kozę dzierżącą miecz, a i tak by to łyknęli.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome aboard, assassin.",
+					Text = "Witaj na pokładzie, skrytobójco.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Assassin);
@@ -226,31 +226,31 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Assassin.getImagePath());
-				_event.m.Assassin.getBackground().m.RawDescription = "An assassin tired of the killing life, %name% offered to join your company at a large price which you were quick to match. He is extremely skilled with a short-blade, twirling daggers around with more dexterity and control than some men have over their own fingers.";
+				_event.m.Assassin.getBackground().m.RawDescription = "Skrytobójca zmęczony życiem zabójcy, %name% zaproponował dołączenie do twojej kompanii za dużą cenę, którą szybko zgodziłeś się zapłacić. Jest niezwykle biegły w krótkich ostrzach, kręcąc sztyletami z większą zręcznością i kontrolą, niż niektórzy ludzie mają nad własnymi palcami.";
 				_event.m.Assassin.getBackground().buildDescription(true);
 				this.World.Assets.addMoney(-6000);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]6,000[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]6,000[/color] koron"
 				});
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/special.png",
-					text = _event.m.Assassin.getName() + " joins the " + this.World.Assets.getName()
+					text = _event.m.Assassin.getName() + " dołącza do " + this.World.Assets.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Decline1",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You refuse the assassin\'s offer. He nods.%SPEECH_ON%Alright.%SPEECH_OFF%The dagger comes quick, faster than you thought it would have. Your hand rises to deflect, but it\'s a moment too slow. A knife\'s edge clips your cheek and draws blood. By the time you draw your sword, the assassin has already leapt out of the tent. You hear a commotion outside and rush to it. %bastard% the bastard is laying on the ground, a few other brothers beside him. %otherbrother% comes over to ask if you\'re okay. He says a man in black tried to kill the bastard.%SPEECH_ON%I think we mortally wounded him, but I don\'t know where he went. Farker slashed the lot of us. Sir, you\'re bleeding.%SPEECH_OFF%You tell him you know and that the priority right now is to take care of the bastard and the rest of the men.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Odrzucasz ofertę skrytobójcy. Kiwa głową.%SPEECH_ON%Dobrze.%SPEECH_OFF%Sztylet nadchodzi szybko, szybciej, niż się spodziewałeś. Unosisz rękę, by się zasłonić, ale jesteś o ułamek sekundy za późno. Ostrze muska twój policzek i pojawia się krew. Gdy dobywasz miecza, skrytobójca już wyskoczył z namiotu. Słyszysz hałas na zewnątrz i pędzisz tam. %bastard% bękart leży na ziemi, a obok niego kilku innych braci. %otherbrother% podchodzi i pyta, czy wszystko w porządku. Mówi, że człowiek w czerni próbował zabić bękarta.%SPEECH_ON%Myślę, że zadaliśmy mu śmiertelne rany, ale nie wiem, dokąd uciekł. Drań pociął nas wszystkich. Panie, krwawisz.%SPEECH_OFF%Mówisz, że wiesz i że teraz najważniejsze jest zadbać o bękarta i resztę ludzi.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, at least no one was killed.",
+					Text = "Cóż, przynajmniej nikt nie zginął.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -266,26 +266,26 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Bastard.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Bastard.getName() + " doznaje " + injury.getNameOnly()
 				});
 				injury = _event.m.Bastard.addInjury(this.Const.Injury.PiercingBody);
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Bastard.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Bastard.getName() + " doznaje " + injury.getNameOnly()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Decline2",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You put a hand to the pommel of your sword and decline the assassin\'s request. He claps his hands.%SPEECH_ON%Alright, sellsword. Fair enough. And don\'t bother with the theatrics there.%SPEECH_OFF%He nods to your sword-hand.%SPEECH_ON%If I really wanted the bastard dead, do you think I\'d be standing here? I came to talk, and talk we did. The killing life has left me and with it, apparently, so too did my poker face. You called my bluff and I suppose that\'s that. Good evening, mercenary.%SPEECH_OFF%Before you can say another word, the assassin ducks out of the tent. You rush to see where he\'d gone to, but all you find is the dark of night. %bastard% the bastard spies you peering around and asks what you\'re up to. You smile and tell him to get some rest for he truly deserves it. Confused, the man shrugs.%SPEECH_ON%Well, uh, I guess so. Thanks, captain.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Kładziesz dłoń na głowicy miecza i odmawiasz skrytobójcy. Ten klaszcze w dłonie.%SPEECH_ON%Dobrze, najemniku. W porządku. I nie baw się tu w teatr.%SPEECH_OFF%Kiwa w stronę twojej ręki na mieczu.%SPEECH_ON%Gdybym naprawdę chciał śmierci bękarta, myślisz, że stałbym tu teraz? Przyszedłem porozmawiać i porozmawialiśmy. Życie zabójcy zostawiłem za sobą, a wraz z nim, jak widać, także pokerową twarz. Wytknąłeś blef i to tyle. Dobranoc, najemniku.%SPEECH_OFF%Zanim zdążysz powiedzieć cokolwiek więcej, skrytobójca wysuwa się z namiotu. Pędzisz sprawdzić, gdzie poszedł, ale znajdujesz tylko mrok nocy. %bastard% bękart widzi, jak się rozglądasz, i pyta, co robisz. Uśmiechasz się i każesz mu odpocząć, bo naprawdę na to zasługuje. Zdezorientowany wzrusza ramionami.%SPEECH_ON%Cóż, yyy, chyba tak. Dzięki, kapitanie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I guess that was that.",
+					Text = "No to po sprawie.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -302,13 +302,13 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Decline3",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You refuse the assassin\'s offer. He nods, coursing a hand over a candle.%SPEECH_ON%Well then. I guess our talk has come to an end and so something else must begin.%SPEECH_OFF%His face turns to you. He winks.\n\n The dagger comes quick, its sheen flashing as it slashes just before your face. You reach for your blade but the man kicks your hand, slamming the sword back into its scabbard. A second dagger comes - this one yours, unsheathed from behind your back and launched forward with murderous intentions. The assassin\'s dagger pops open into a trident into which your blade gets caught. He twists his hand, disarming you in an instant, then twists his hand back around, closing the dagger into one blade again. Sonuvabitch...\n\n The man goes for a stab, but you catch his arm. He shushes you with his free hand before retrieving another blade which you\'ve no means to stop. He whispers with disturbing calmness.%SPEECH_ON%Die with grace, captain.%SPEECH_OFF%As his hand goes backward, it suddenly disappears in a glint of metal. All that remains is a nub spewing crimson. The assassin looks at the stump and screams. %bastard% is standing there, weapon in hand. Another flash of metal and the assassin\'s head rolls off his shoulders. A gush of blood pours out of the hole as his torso slams into your table and back against the ground. The bastard hurriedly asks.%SPEECH_ON%Are you alright? Who in the fark was that?%SPEECH_OFF%More sellswords enter the tent to see what the commotion was. You let them know an assassin had come for the bastard, but you weren\'t going to give him over that easy. The men applaud your defense of the mercenary.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Odrzucasz ofertę skrytobójcy. Kiwa głową, przeciągając dłonią nad świecą.%SPEECH_ON%Cóż. Wygląda na to, że nasza rozmowa dobiegła końca, więc musi zacząć się coś innego.%SPEECH_OFF%Odwraca twarz ku tobie. Mruga.\n\n Sztylet nadchodzi szybko, jego połysk miga, gdy tnie tuż przed twoją twarzą. Sięgasz po broń, ale mężczyzna kopie cię w rękę, wbijając miecz z powrotem do pochwy. Nadchodzi drugi sztylet - tym razem twój, dobyty zza pleców i wypchnięty z morderczym zamiarem. Sztylet skrytobójcy rozkłada się w trójząb, w który wpada twoje ostrze. Przekręca dłoń, rozbraja cię w jednej chwili, po czym znowu obraca dłoń, zamykając sztylet w jedno ostrze. Skur...\n\n Mężczyzna zadaje pchnięcie, ale łapiesz go za ramię. Drugą ręką ucisza cię, sięgając po kolejne ostrze, którego nie masz jak powstrzymać. Szepcze z niepokojącym spokojem.%SPEECH_ON%Umrzyj z godnością, kapitanie.%SPEECH_OFF%Gdy jego ręka cofa się do pchnięcia, nagle znika w błysku metalu. Zostaje tylko kikut tryskający czerwienią. Skrytobójca patrzy na kikut i krzyczy. %bastard% stoi obok z bronią w dłoni. Kolejny błysk metalu i głowa skrytobójcy spada z ramion. Z rany tryska krew, gdy jego tułów wali się na twój stół i spada na ziemię. Bękart pospiesznie pyta.%SPEECH_ON%Czy wszystko w porządku? Kto to, do diabła, był?%SPEECH_OFF%Do namiotu wchodzi więcej najemników, by sprawdzić, co za zamieszanie. Informujesz ich, że skrytobójca przyszedł po bękarta, ale nie zamierzałeś go tak łatwo oddać. Ludzie biją brawo twojej obronie towarzysza.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You owe me, you bastard.",
+					Text = "Jesteś mi winien, bękarcie.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -328,11 +328,11 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = loyal.getIcon(),
-						text = _event.m.Bastard.getName() + " is now loyal"
+						text = _event.m.Bastard.getName() + " jest teraz lojalny"
 					});
 				}
 
-				_event.m.Bastard.improveMood(2.0, "You risked your life for him");
+				_event.m.Bastard.improveMood(2.0, "Zaryzykowałeś dla niego życie");
 
 				if (_event.m.Bastard.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -354,7 +354,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "You risked your life for the men");
+						bro.improveMood(0.5, "Zaryzykowałeś życie dla ludzi");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

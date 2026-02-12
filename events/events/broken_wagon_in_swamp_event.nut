@@ -5,16 +5,16 @@ this.broken_wagon_in_swamp_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.broken_wagon_in_swamp";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_09.png[/img]Swamps are no safe place for a man\'s travels. Judging by the neverending smog and the way the trees bend, there\'s little doubt that it\'s a bubbling domicile for all things demonic. At least that\'s what the druids of these parts like to say. All you find is a couple of dead horses drowned in the mire and a wagon crushed by the mud which has seeped over its wheels and bed. %randombrother% rifles through the remains and manages to recover some items.%SPEECH_ON%Well, it\'s something. Whoever left this here left a short while ago. Probably spooked by whatever the hell lives out here in the day-to-day.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_09.png[/img]Bagna nie są bezpiecznym miejscem na podróże. Sądząc po niekończącym się smogu i po tym, jak wyginają się drzewa, nie ma wątpliwości, że to bulgoczące siedlisko wszelkich demonów. Przynajmniej tak mówią druidzi z tych stron. Znajdujesz tylko parę martwych koni utopionych w bagnie i wóz zmiażdżony przez błoto, które wlało się na koła i skrzynię. %randombrother% grzebie w resztkach i udaje mu się odzyskać kilka przedmiotów.%SPEECH_ON%Cóż, zawsze coś. Kto to tu zostawił, odszedł niedawno. Pewnie wystraszył się tego, co tu na co dzień mieszka.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Still useful.",
+					Text = "Nadal się przyda.",
 					function getResult( _event )
 					{
 						if (_event.m.Butcher != null)
@@ -36,20 +36,20 @@ this.broken_wagon_in_swamp_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Tools and Supplies."
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] narzędzia i zapasy."
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Butcher",
-			Text = "[img]gfx/ui/events/event_14.png[/img]%SPEECH_ON%Sir, wait.%SPEECH_OFF%The former butcher, %butcher%, says. He moves on ahead and starts hacking at the corpse of a horse. He cuts out a series of chunks, wraps them in large leaves, dries them with a bit of dirt and salt, and hands them over.%SPEECH_ON%No reason in leaving behind what can be used.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_14.png[/img]%SPEECH_ON%Panie, chwila.%SPEECH_OFF%Mówi były rzeźnik, %butcher%. Wychodzi do przodu i zaczyna rąbać ciało konia. Wycina kilka kawałków, owija je w duże liście, suszy odrobiną ziemi i soli, po czym podaje ci je.%SPEECH_ON%Nie ma sensu zostawiać tego, co można wykorzystać.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And you\'re sure this is edible still?",
+					Text = "I jesteś pewien, że to wciąż jest jadalne?",
 					function getResult( _event )
 					{
 						return 0;
@@ -67,7 +67,7 @@ this.broken_wagon_in_swamp_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

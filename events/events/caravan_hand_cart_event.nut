@@ -5,17 +5,17 @@ this.caravan_hand_cart_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.caravan_hand_cart";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_55.png[/img]You come across the once-caravan hand, %caravanhand%, finicking with the company wagon. He\'s nailing a slat of board to the bed and using pins to put it on a roller. The board can then drop down into the belly of the wagon with a little bit of a pull and switch. Rather ingenious. This will allow you to load more onto the wagon.",
+			Text = "[img]gfx/ui/events/event_55.png[/img]Natrafiasz na byłego przewoźnika, %caravanhand%, który majstruje przy wozie kompanii. Przybija listwę do podłogi i używa kołków, by osadzić ją na rolce. Deska może potem opaść do wnętrza wozu po lekkim pociągnięciu i przełączeniu. Całkiem pomysłowe. Pozwoli to załadować więcej na wóz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nicely done.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,9 +30,9 @@ this.caravan_hand_cart_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "You gain inventory space"
+					text = "Zyskujesz miejsce w ekwipunku"
 				});
-				_event.m.CaravanHand.improveMood(1.0, "Improved the company\'s cart");
+				_event.m.CaravanHand.improveMood(1.0, "Ulepszył wóz kompanii");
 
 				if (_event.m.CaravanHand.getMoodState() >= this.Const.MoodState.Neutral)
 				{
