@@ -6,17 +6,17 @@ this.cultist_vs_old_gods_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cultist_vs_old_gods";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_06.png[/img]While enjoying a slice of bacon, you hear wind of a quarrel going on. You ignore it for a time, but the shouts only get louder, quickly rising over your ability to enjoy a good meal. Angered, you stand up and head toward the disturbance. You find %cultist% and %oldgods% facing off, the cultist and follower of the gods having apparently discovered some differences.",
+			Text = "[img]gfx/ui/events/event_06.png[/img]Zajadając kawałek boczku, słyszysz, że gdzieś wybuchła kłótnia. Przez chwilę to ignorujesz, ale krzyki tylko narastają, szybko zagłuszając twoją przyjemność z posiłku. Poirytowany wstajesz i ruszasz w stronę zamieszania. Zastajesz %cultist% i %oldgods% naprzeciw siebie, kultystę i wyznawcę starych bogów, którzy najwyraźniej odkryli pewne różnice.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get godly with the goriest!",
+					Text = "Niech bogowie zajmą się najkrwawszym!",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.cultist_vs_old_gods_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Stop this nonsense.",
+					Text = "Dość tych bzdur.",
 					function getResult( _event )
 					{
 						return "C";
@@ -41,13 +41,13 @@ this.cultist_vs_old_gods_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_06.png[/img] You step off to the side, letting the men hash out their differences as men with great differences do. Fists for arguments, the follower of the old gods makes his case, battering the cultist again and again. But the man with the scarred head only grins in return. His eyes are puffing up, the lids purpled and puckering over his eyesight. Yet, still, he grins, and there is bloody laughter spewing out of his reddened mouth.%SPEECH_ON%Such darkness! Davkul is most pleased!%SPEECH_OFF%With an anxious look, %oldgods% steps off %cultist% and backs away. He\'s rubbing his bloodied knuckles, realizing he may have broken a few in the seemingly one-sided scuffle. But it\'s the cultist\'s words that hurt him most of all.%SPEECH_ON%Man isn\'t tempted by the darkness, he is called to it! Lost without it! Gleeful in its return!%SPEECH_OFF%Almost afraid to look back, %oldgods% hurries away as the cultist remains behind, laughing and chuckling on the grass, nobody daring to get near him.",
+			Text = "[img]gfx/ui/events/event_06.png[/img] Odsuwasz się na bok, pozwalając ludziom rozstrzygnąć spór tak, jak to robią mężczyźni o wielkich różnicach. Pięści jako argumenty, wyznawca starych bogów przedstawia swoją rację, okładając kultystę raz po raz. Lecz człowiek z bliznami na głowie tylko się uśmiecha. Jego oczy puchną, powieki sinieją i zaciskają się na wzroku. A jednak wciąż się szczerzy, a z zaczerwienionych ust tryska krwawy śmiech.%SPEECH_ON%Taka ciemność! Davkul jest wielce zadowolony!%SPEECH_OFF%Z niespokojnym spojrzeniem %oldgods% schodzi z %cultist% i cofa się. Pociera zakrwawione kostki, uświadamiając sobie, że w tej pozornie jednostronnej bójce mógł kilka złamać. Ale to słowa kultysty ranią go najbardziej.%SPEECH_ON%Człowiek nie ulega pokusie ciemności, on jest do niej wzywany! Zgubiony bez niej! Uradowany jej powrotem!%SPEECH_OFF%Niemal bojąc się obejrzeć, %oldgods% pospiesznie odchodzi, a kultysta zostaje, śmiejąc się i chichocząc na trawie, podczas gdy nikt nie odważa się do niego zbliżyć.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I didn\'t know %oldgods% had it in him.",
+					Text = "Nie wiedziałem, że %oldgods% ma to w sobie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -70,33 +70,33 @@ this.cultist_vs_old_gods_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.OldGods.getName() + " loses [color=" + this.Const.UI.Color.NegativeEventValue + "]-1[/color] Resolve"
+					text = _event.m.OldGods.getName() + " traci [color=" + this.Const.UI.Color.NegativeEventValue + "]-1[/color] Determinacji"
 				});
 				local injury = _event.m.Cultist.addInjury(this.Const.Injury.Brawl);
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Cultist.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Cultist.getName() + " doznaje " + injury.getNameOnly()
 				});
 				_event.m.Cultist.getBaseProperties().Bravery += 2;
 				_event.m.Cultist.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Cultist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Cultist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_03.png[/img] The way things are going, you\'ve hardly a man to spare. Just as fists are about to start flying, you step in between the two men and put an end to it. You tell %oldgods% he is better than this, and you tell %cultist% nothing, for the cultist is almost bowled over in fits of laughter. He points, grinning madly.%SPEECH_ON%The light steps in, but darkness is patient. Davkul awaits you all.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_03.png[/img] Przy takiej sytuacji ledwo masz człowieka do oszczędzenia. Gdy pięści mają już pójść w ruch, wchodzisz między nich i kończysz sprawę. Mówisz %oldgods%, że stać go na więcej, a %cultist% nie mówisz nic, bo kultysta niemal zanosi się śmiechem. Wskazuje palcem, szczerząc się obłąkańczo.%SPEECH_ON%Światło wkracza, ale ciemność jest cierpliwa. Davkul na was czeka.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And work is waiting for you, get moving.",
+					Text = "A praca na ciebie czeka, ruszaj.",
 					function getResult( _event )
 					{
 						return 0;

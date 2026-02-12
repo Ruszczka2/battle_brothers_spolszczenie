@@ -5,17 +5,17 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.disowned_noble_reminisces";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]You find %disowned% sitting by himself outside the camp. As the jeers and cheers of the men around the campfire crackle behind you, you approach the man and ask what he\'s sulking for. He shrugs.%SPEECH_ON%Not sulking, sir, just thinking. Though I suppose one could be easily mistaken for the other.%SPEECH_OFF%Chuckling, he offers a bit of his drink, which you take. Settling down beside him, you ask what it is he is \'thinking\' about. The disowned nobleman shrugs again.%SPEECH_ON%Ahh, nothing really. Just thinking about home. I\'m a long ways away from it now, and the last I remember of it isn\'t exactly the best, yet I still find myself wishing to be there now and again. Homesick for a land that thinks me a sort of noble sickness, go figure.%SPEECH_OFF%You hand him back to his drink as he probably needs it more than you. While you\'re still clearheaded, you try and speak your mind...",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Zastajesz %disowned% siedzącego samotnie poza obozem. Gdy za tobą trzaskają drwiny i okrzyki ludzi przy ognisku, podchodzisz do niego i pytasz, czemu się dąsa. Wzrusza ramionami.%SPEECH_ON%Nie dąsam się, panie, tylko myślę. Choć przyznam, łatwo pomylić jedno z drugim.%SPEECH_OFF%Chichocząc, podaje ci trochę swojego trunku, który przyjmujesz. Siadasz obok i pytasz, o czym tak \"myśli\". Wydziedziczony szlachcic znów wzrusza ramionami.%SPEECH_ON%Ach, tak naprawdę o niczym. Tylko o domu. Jestem teraz daleko od niego, a ostatnie wspomnienia nie są najlepsze, a jednak co jakiś czas życzę sobie tam wrócić. Tęsknota za krainą, która uważa mnie za swego rodzaju szlachetną chorobę, wyobraź sobie.%SPEECH_OFF%Oddajesz mu trunek, bo zapewne potrzebuje go bardziej niż ty. Póki masz jeszcze jasną głowę, próbujesz powiedzieć, co myślisz...",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fark the old home, you\'re with us now.",
+					Text = "Pieprzyć stary dom, teraz jesteś z nami.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s alright to think of home now and again.",
+					Text = "Dobrze jest czasem pomyśleć o domu.",
 					function getResult( _event )
 					{
 						return "C";
@@ -40,13 +40,13 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_26.png[/img]You speak.%SPEECH_ON%Where you\'re from is a house, not a home. You yearn for a different place in a different time, when you\'re in this place, right here, right now. The %companyname% looks after you, and you it, and only together will we persevere.%SPEECH_OFF%The man stares into his drink for a time. He chuckles, sips, and wipes the froth away.%SPEECH_ON%Yeah, I suppose that\'s one way to look at it. Thank you, captain.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Mówisz.%SPEECH_ON%To, skąd pochodzisz, to dom, nie ojczyzna. Tęsknisz za innym miejscem w innym czasie, kiedy jesteś tu, właśnie tutaj, teraz. %companyname% dba o ciebie, a ty o nich, i tylko razem przetrwamy.%SPEECH_OFF%Mężczyzna przez chwilę wpatruje się w swój trunek. Chichocze, pije łyk i wyciera pianę.%SPEECH_ON%Tak, chyba można na to tak spojrzeć. Dziękuję, kapitanie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Anytime.",
+					Text = "Kiedy chcesz.",
 					function getResult( _event )
 					{
 						return 0;
@@ -62,7 +62,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Disowned.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Resolve"
+					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Determinacji"
 				});
 				_event.m.Disowned.improveMood(1.0, "Had a good talk with you");
 
@@ -79,13 +79,13 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_26.png[/img]You clap the man on his shoulder and speak.%SPEECH_ON%Hey, thinking of the old is good for the soul, even if it\'s through a thicket of shit and cruelty and evil and all else that makes any man stay up at night. But it\'s only good for a time. You look at the past, you acknowledge it, and then you move on. You have to be sure to only visit the past, not dwell in it. Everyone here has a past, %disowned%, and in that respect you will never be alone.%SPEECH_OFF%The disowned nobleman stares at the ground for a time. He slowly starts to nod.%SPEECH_ON%Yeah, yeah, that\'s right. I guess a part of me was worried that I was genuinely wanting to return there. I was picturing it with the hearth alight, smoke out of the chimney, soft candlelight beyond the windows, and my family there awaiting me. I was ignoring the locked door, the guard dogs squatting outside, and those I love telling me to never come back lest it\'s in a box to bury far beneath the earth. I wasn\'t thinking of my past so much as dreaming of it, and I think you\'ve helped me realize that, captain. Thank you. I know that, one day, I shan\'t have to dream about the %companyname%, but instead remember it clearly and fondly.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Klepiąc go po ramieniu, mówisz.%SPEECH_ON%Hej, myślenie o dawnych czasach jest dobre dla duszy, nawet jeśli prowadzi przez gąszcz gówna, okrucieństwa, zła i wszystkiego, co trzyma człowieka po nocach. Ale tylko przez chwilę. Spoglądasz w przeszłość, uznajesz ją, a potem idziesz dalej. Musisz pamiętać, by przeszłość tylko odwiedzać, nie mieszkać w niej. Każdy tutaj ma swoją przeszłość, %disowned%, i pod tym względem nigdy nie będziesz sam.%SPEECH_OFF%Wydziedziczony szlachcic przez chwilę wpatruje się w ziemię. Powoli zaczyna kiwać głową.%SPEECH_ON%Tak, tak, masz rację. Chyba część mnie martwiła się, że naprawdę chcę tam wrócić. Wyobrażałem to sobie z rozpalonym paleniskiem, dymem z komina, miękkim światłem świec za oknami i moją rodziną, czekającą na mnie. Ignorowałem zamknięte drzwi, psy strażnicze kucające na zewnątrz i tych, których kocham, mówiących mi, żebym nigdy nie wracał, chyba że w skrzyni do pochówku głęboko pod ziemią. Nie tyle myślałem o przeszłości, co o niej marzyłem, i myślę, że pomogłeś mi to zrozumieć, kapitanie. Dziękuję. Wiem, że pewnego dnia nie będę musiał marzyć o %companyname%, tylko wspominać ją wyraźnie i z czułością.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The company appreciates it.",
+					Text = "Kompania to docenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -101,7 +101,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Disowned.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Resolve"
+					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Determinacji"
 				});
 				_event.m.Disowned.improveMood(1.0, "Had a good talk with you");
 

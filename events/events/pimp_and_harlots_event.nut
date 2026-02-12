@@ -5,16 +5,16 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.pimp_and_harlots";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_85.png[/img]While on the march, you come across a woman standing off the side of the road. She\'s standing at the head of a donkey-pulled wagon. Seeing you, she claps her hands and yells out some order. Within moments, wenches pour out the back of the wagon and line up before you. They\'re poorly dressed and, if this is some act, poorly rehearsed. Most look like they\'d rather be somewhere else which is ordinary of any womanfolk stuck out in the sticks. You ask the \'leader\' of this group what she\'s doing. She grins ear to ear.%SPEECH_ON%I am a merchant of flesh, a profiteer of good poundings. These, here, are my wares.%SPEECH_OFF%She swings her arms to the prostitutes. They straighten up, or loosen up, and feign interest in you and your men. The pimp nods.%SPEECH_ON%So, what say we help take the edge off, hm? Been a long day, no? For that many men, I\'d wager it\'d cost you a low %cost% crowns.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_85.png[/img]Podczas marszu natrafiasz na kobietę stojącą z boku drogi. Stoi na przedzie wozu ciągniętego przez osła. Widząc cię, klaszcze w dłonie i wydaje jakiś rozkaz. Po chwili z tyłu wozu wylewają się dziewczyny i ustawiają się przed tobą. Są źle ubrane i, jeśli to przedstawienie, to kiepsko wyreżyserowane. Większość wygląda, jakby wolała być gdzie indziej, co u kobiet na odludziu jest dość zwyczajne. Pytasz \"przywódczynię\" tej grupy, co robi. Uśmiecha się od ucha do ucha.%SPEECH_ON%Jestem handlarką ciałem, zarabiam na porządnym bzykaniu. Te tutaj to mój towar.%SPEECH_OFF%Wykonuje gest w stronę prostytutek. One prostują się, albo rozluźniają, i udają zainteresowanie tobą oraz twoimi ludźmi. Stręczycielka kiwa głową.%SPEECH_ON%No i co, pomożemy spuścić z was ciśnienie, hm? Długi dzień, co? Przy tylu chłopach postawiłabym, że to będzie niskie %cost% koron.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "You got a deal!",
+					Text = "Masz układ!",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 60)
@@ -29,7 +29,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "How about you just hand over your valuables instead?",
+					Text = "A może po prostu oddasz kosztowności?",
 					function getResult( _event )
 					{
 						return "G";
@@ -37,7 +37,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, thanks.",
+					Text = "Nie, dzięki.",
 					function getResult( _event )
 					{
 						return "B";
@@ -52,13 +52,13 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_64.png[/img]Despite the protests of some of your men, you decline the pimp\'s offer. She shrugs.%SPEECH_ON%Damn, I knew I should have invested in little boys. Well, suit yerself.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_64.png[/img]Mimo protestów części ludzi odmawiasz oferty stręczycielki. Wzrusza ramionami.%SPEECH_ON%Cholera, wiedziałam, że powinnam była zainwestować w inny towar. No cóż, jak sobie chcesz.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "There\'ll be entertainment in the next town.",
+					Text = "W następnym mieście będzie rozrywka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -74,7 +74,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.worsenMood(0.75, "You refused to pay for harlots");
+						bro.worsenMood(0.75, "Odmówiłeś zapłaty za ladacznice");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -91,13 +91,13 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_85.png[/img]The womenfolk press forward, some winking lazily, some with lazy eyes winking wonkily. It\'s a sorry lot of wenches, but the men could use a bit of reprieve. You accept the pimp\'s price and the men sort out the rest, ducking into bushes and a variety of other cover. While they get some action, the pimp sidles up next to you.%SPEECH_ON%Thanks for not robbing us.%SPEECH_OFF%You shrug and say that\'s still on the table. She shrugs, too.%SPEECH_ON%I know, but I don\'t think you will. Me and you, we are a lot alike. You fight for food, we fuck for it.%SPEECH_OFF%Curious, you ask if she still \'fucks\' for her food. She laughs.%SPEECH_ON%Only when I need to. This \'leadership\' role is a pretty nice gig. Do you still \'fight\' for yours?%SPEECH_OFF%You just give her the truth.%SPEECH_ON%I\'ve killed many, many people.%SPEECH_OFF%She sidles up real close now and goes low with a hand.%SPEECH_ON%Well then.%SPEECH_OFF%Well then indeed.",
+			Text = "[img]gfx/ui/events/event_85.png[/img]Kobiety podchodzą bliżej, jedne leniwie mrugając, inne mrugając krzywo z ospałymi oczami. To marna gromada dziewek, ale ludziom przyda się odrobina ulgi. Zgadzasz się na cenę stręczycielki, a ludzie załatwiają resztę, znikając w krzakach i innych osłonach. Gdy się zabawiają, stręczycielka podchodzi do ciebie.%SPEECH_ON%Dzięki, że nas nie okradłeś.%SPEECH_OFF%Wzruszasz ramionami i mówisz, że to wciąż możliwe. Ona też wzrusza ramionami.%SPEECH_ON%Wiem, ale nie sądzę, że to zrobisz. Ty i ja jesteśmy do siebie podobni. Ty walczysz o jedzenie, my rżniemy się o jedzenie.%SPEECH_OFF%Ciekawy, pytasz, czy nadal \"rżnie\" się o jedzenie. Śmieje się.%SPEECH_ON%Tylko gdy muszę. Ta \"rola przywódczyni\" to całkiem niezła fucha. A ty nadal \"walczysz\" o swoje?%SPEECH_OFF%Dajesz jej po prostu prawdę.%SPEECH_ON%Zabiłem bardzo, bardzo wielu ludzi.%SPEECH_OFF%Teraz podchodzi naprawdę blisko i zjeżdża dłonią w dół.%SPEECH_ON%No proszę.%SPEECH_OFF%No proszę, doprawdy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Worth it.",
+					Text = "Warto było.",
 					function getResult( _event )
 					{
 						return 0;
@@ -111,13 +111,13 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Payment + "[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Payment + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.0, "Enjoyed himself with harlots");
+					bro.improveMood(1.0, "Zabawiał się z ladacznicami");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -133,12 +133,12 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_07.png[/img]You agree to the offer. The pimp and her harlots come forward, swarming into your ranks like a bunch of salacious snakes. Mere moments after most of your men have their pants down, a group of bandits step out of the bushes. You grab your sword, the actual bladed one, and naked-leggedly remove a thief\'s head from his shoulder and stab another through the chest. More robbers come forward, weapons out ready for combat, but the pimp jumps between everyone.%SPEECH_ON%Whoa! No one else needs to die here!%SPEECH_OFF%Some of your men still don\'t even realize what the hell is going on which is as good a sign as any that this wench has gotten the drop on you. That said, the %companyname% is still a force of nature, pants or no pants, and the pimp recognizes this. She scolds the hired hands.%SPEECH_ON%I thought I told you morons to not attack if the Johns appear dangerous. Don\'t they look farkin\' dangerous? Goddam. Look, sellsword. I\'ll take double the offer and leave you be. Just double the offer and we\'ll go.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_07.png[/img]Zgadzasz się na ofertę. Stręczycielka i jej ladacznice podchodzą, wlewając się w wasze szeregi jak stado lubieżnych węży. Zaledwie chwilę po tym, jak większość ludzi ma już spuszczone gacie, z krzaków wychodzi grupa bandytów. Chwytasz miecz, ten z ostrzem, i gołonogi odcinasz złodziejowi głowę od barku, a drugiego przebijasz przez pierś. Pojawiają się kolejni rzezimieszkowie z bronią gotową do walki, ale stręczycielka wskakuje między wszystkich.%SPEECH_ON%Hej! Nie trzeba tu więcej śmierci!%SPEECH_OFF%Część twoich ludzi nadal nie zdaje sobie sprawy, co się dzieje, co jest najlepszym znakiem, że ta baba cię zaskoczyła. Mimo to %companyname% nadal jest siłą natury, w spodniach czy bez, i stręczycielka to rozpoznaje. Łaje najemników.%SPEECH_ON%Myślałam, że mówiłam wam, durnie, żeby nie atakować, jeśli klienci wyglądają groźnie. Nie wyglądają na cholernie groźnych? Do diabła. Słuchaj, najemniku. Wezmę podwójną stawkę i dam wam spokój. Podwójna stawka i idziemy.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Alright, deal.",
+					Text = "Dobra, zgoda.",
 					function getResult( _event )
 					{
 						return "E";
@@ -146,7 +146,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No deal.",
+					Text = "Nie ma mowy.",
 					function getResult( _event )
 					{
 						return "F";
@@ -161,12 +161,12 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_07.png[/img]You\'re not going to risk your men and agree to her terms. Taking the money, she nods.%SPEECH_ON%Most men would have let their pride take over there, but you know how to keep your men safe. A smart sellsword is rare these days and your men should be happy to have you as their leader.%SPEECH_OFF%As the robbers and harlots leave, %randombrother% walks up groaning.%SPEECH_ON%Well shit. I\'m so warmed up I could split a wench in half.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_07.png[/img]Nie chcesz ryzykować ludzi, więc zgadzasz się na jej warunki. Zabiera pieniądze i kiwa głową.%SPEECH_ON%Większość facetów dałaby się ponieść dumie, ale ty wiesz, jak dbać o bezpieczeństwo ludzi. Sprytny najemnik to dziś rzadkość, a twoi ludzie powinni się cieszyć, że mają cię za przywódcę.%SPEECH_OFF%Gdy zbóje i ladacznice odchodzą, %randombrother% podchodzi, jęcząc.%SPEECH_ON%No cholera. Jestem tak rozgrzany, że mógłbym rozłupać dziewkę na pół.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Didn\'t need to know that.",
+					Text = "Nie musiałem tego wiedzieć.",
 					function getResult( _event )
 					{
 						return 0;
@@ -180,19 +180,19 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Payment * 2 + "[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Payment * 2 + "[/color] koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_06.png[/img]You don\'t say no deal so much as show it. Sword still in hand, you swing it back up and slash the pimp\'s face. As she stares at you in disbelief, you reverse the sword swing and cleave her head clean off. The men, trousers down, grab their gear and start to fight. A few harlots brandish daggers and get some stabs in, but they are quickly killed off. Most of the prostitutes are harmless, but get butchered in the confusion and chaos.\n\nThe robbers, who probably weren\'t expecting actual combat, say farewell to their short, shitty lives. When it\'s all said and done, there\'s a good twenty bodies spread over the field and most mercenaries did not come out the other side unharmed. You try and salvage what you can from the field.",
+			Text = "[img]gfx/ui/events/event_06.png[/img]Nie tyle mówisz \"nie\", co to pokazujesz. Z mieczem w dłoni wymierzasz cios i rozcinasz twarz stręczycielki. Gdy patrzy na ciebie z niedowierzaniem, odwracasz cięcie i odrąbujesz jej głowę. Ludzie, z opuszczonymi spodniami, chwytają swój sprzęt i ruszają do walki. Kilka ladacznic wymachuje sztyletami i zadaje parę pchnięć, ale szybko giną. Większość prostytutek jest bezbronna, lecz w zamieszaniu i chaosie zostaje zarżnięta.\n\nRabusie, którzy pewnie nie spodziewali się prawdziwej walki, żegnają swoje krótkie, gówniane życia. Gdy wszystko się kończy, na polu leży dobrych dwadzieścia trupów, a większość najemników nie wychodzi z tego bez szwanku. Próbujesz uratować z pola, co się da.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Probably should avoid fighting with our pants down.",
+					Text = "Chyba nie powinniśmy walczyć z opuszczonymi spodniami.",
 					function getResult( _event )
 					{
 						return 0;
@@ -207,28 +207,28 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/weapons/dagger");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/weapons/bludgeon");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.Math.rand(100, 300);
 				this.World.Assets.addMoney(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -240,7 +240,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = injury.getIcon(),
-							text = bro.getName() + " suffers " + injury.getNameOnly()
+							text = bro.getName() + " doznaje " + injury.getNameOnly()
 						});
 					}
 					else
@@ -249,7 +249,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = injury.getIcon(),
-							text = bro.getName() + " suffers " + injury.getNameOnly()
+							text = bro.getName() + " doznaje " + injury.getNameOnly()
 						});
 					}
 				}
@@ -258,12 +258,12 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_07.png[/img]You think the offer over, then realize these are just a bunch of women out in the middle of nowhere. With a solid back hand, you send the pimp to the ground. She rubs her cheek and says roughhousing will cost extra. You nod.%SPEECH_ON%Yeah, it\'ll cost you everything you got. Men, take it all.%SPEECH_OFF%The pimp asks if this is a robbery and you nod. The second you make your intentions clear, a group of armed men step out of some nearby bushes. The pimp gets up and rubs her cheek.%SPEECH_ON%I\'m still willing to part on neutral terms here, sellsword. A good slap ain\'t no problem in this business. It\'s expected, even, but so are robbers and murderers and rapists. Now, if you wish to keep on doing what you want, I\'m gonna sic those men on you to do what I need, which is keep me and mine safe.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_07.png[/img]Rozważasz ofertę, po czym uświadamiasz sobie, że to tylko gromada kobiet na odludziu. Mocnym uderzeniem z grzbietu dłoni posyłasz stręczycielkę na ziemię. Pociera policzek i mówi, że takie przepychanki kosztują ekstra. Kiwasz głową.%SPEECH_ON%Tak, kosztuje was wszystko, co macie. Ludzie, bierzcie wszystko.%SPEECH_OFF%Stręczycielka pyta, czy to napad, a ty kiwasz głową. Gdy tylko dajesz jasno do zrozumienia swoje zamiary, z pobliskich krzaków wychodzi grupa uzbrojonych mężczyzn. Stręczycielka wstaje i pociera policzek.%SPEECH_ON%Wciąż jestem skłonna rozstać się tu na neutralnych warunkach, najemniku. Solidny policzek nie stanowi w tym fachu problemu. Nawet się tego spodziewa, ale tak samo jak rabusiów, morderców i gwałcicieli. Jeśli chcesz dalej robić swoje, to naszczuję na ciebie tych ludzi, żeby zrobić to, co muszę, czyli zadbać o bezpieczeństwo moje i moich.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Alright, we\'ll step off.",
+					Text = "Dobra, odpuścimy.",
 					function getResult( _event )
 					{
 						return "H";
@@ -271,7 +271,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Those guards are pathetic. Attack!",
+					Text = "Ci strażnicy są żałośni. Atak!",
 					function getResult( _event )
 					{
 						return "I";
@@ -286,12 +286,12 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_64.png[/img]Looking at the guards, and at your men who you don\'t wish to lose over this bullshit, you nod.%SPEECH_ON%Smart lady. Alright. There\'s no need for bloodshed.%SPEECH_OFF%The pimp sighs in relief.%SPEECH_ON%Glad we could come to an agreement. I\'m afraid my previous offer is off the table. I\'m sure you understand.%SPEECH_OFF%Sheathing your sword, you say that you do. A couple of the brothers spit and shake their heads. They think they missed out on a good lay because of your aggression here.",
+			Text = "[img]gfx/ui/events/event_64.png[/img]Patrząc na strażników i na swoich ludzi, których nie chcesz stracić przez tę bzdurę, kiwasz głową.%SPEECH_ON%Mądra kobieta. Dobra. Nie ma potrzeby rozlewu krwi.%SPEECH_OFF%Stręczycielka wzdycha z ulgą.%SPEECH_ON%Cieszę się, że doszliśmy do porozumienia. Obawiam się, że moja poprzednia oferta jest nieaktualna. Jestem pewna, że rozumiesz.%SPEECH_OFF%Chowając miecz, mówisz, że tak. Kilku braci spluwa i kręci głowami. Uważają, że przez twoją agresję przegapili niezłą zabawę.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Can\'t you tell they were going to rob us anyway?",
+					Text = "Nie widać, że i tak chcieli nas obrabować?",
 					function getResult( _event )
 					{
 						return 0;
@@ -307,7 +307,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(1.0, "Missed out on a good lay because of you");
+						bro.worsenMood(1.0, "Przez ciebie przegapił niezłą zabawę");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -324,12 +324,12 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_60.png[/img]These \'guards\' ain\'t shit. You order your men to attack. The fight is a brief flurry of action. The harlot\'s hired hands act as though they didn\'t expect to see actual combat.\n\n With the combat over, you see that the wagon\'s still here, but the pimp and her prostitutes are gone. They must have made their leave during the fight. They even took the donkey, that lucky ass.\n\n Your men raid the wagon. While taking anything that\'s not nailed down, %randombrother% hears a knocking noise. He searches the bottom of the cart and pulls on a cord, dropping a slat of wood down which rolls a man completely covered in black leather. You pull back the mask covering his face. He sucks in a breath.%SPEECH_ON%Th-thank you! By the old gods, I thought they\'d have me in there forever!%SPEECH_OFF%You ask who he is. He spits the leather scraps out of his mouth.%SPEECH_ON%Gimp.%SPEECH_OFF%Just \'Gimp\'? He nods.%SPEECH_ON%Yessir. Hey, those are some nice weapons you got there. Sleek armor, too. Hm. My master is gone, so...%SPEECH_OFF%You shake your head.%SPEECH_ON%Go to the closest town and get yourself cleaned up, stranger.%SPEECH_OFF%He nods.%SPEECH_ON%As you wish, master.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_60.png[/img]Ci \"strażnicy\" są nic nie warci. Każesz ludziom atakować. Walka to krótki zryw akcji. Najęci pachołkowie ladacznic zachowują się tak, jakby nie spodziewali się prawdziwej walki.\n\n Gdy walka się kończy, widzisz, że wóz wciąż tu jest, ale stręczycielka i jej prostytutki zniknęły. Musiały zwinąć się podczas walki. Zabrały nawet osła, szczęściarz.\n\n Twoi ludzie plądrują wóz. Gdy biorą wszystko, co nie jest przybite, %randombrother% słyszy stukanie. Sprawdza spód wozu i pociąga za sznur, opuszczając listwę drewna, z której wypada mężczyzna całkowicie okryty czarną skórą. Odsuwasz maskę z jego twarzy. Wciąga powietrze.%SPEECH_ON%D-dziękuję! Na starych bogów, myślałem, że będą mnie tam trzymać na zawsze!%SPEECH_OFF%Pytasz, kim jest. Wypluwa skórzane strzępy z ust.%SPEECH_ON%Gimp.%SPEECH_OFF%Po prostu \"Gimp\"? Kiwie głową.%SPEECH_ON%Tak, panie. Hej, ładna broń. Zgrabna zbroja też. Hm. Mój pan zniknął, więc...%SPEECH_OFF%Kręcisz głową.%SPEECH_ON%Idź do najbliższego miasta i doprowadź się do porządku, przybyszu.%SPEECH_OFF%Kiwa głową.%SPEECH_ON%Jak sobie życzysz, panie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Yes, yes. Go.",
+					Text = "Tak, tak. Idź.",
 					function getResult( _event )
 					{
 						return 0;
@@ -344,28 +344,28 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/weapons/dagger");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/weapons/bludgeon");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.Math.rand(100, 300);
 				this.World.Assets.addMoney(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -379,7 +379,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = injury.getIcon(),
-								text = bro.getName() + " suffers " + injury.getNameOnly()
+								text = bro.getName() + " doznaje " + injury.getNameOnly()
 							});
 						}
 						else
@@ -388,7 +388,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = "ui/icons/days_wounded.png",
-								text = bro.getName() + " suffers light wounds"
+								text = bro.getName() + " doznaje lekkich ran"
 							});
 						}
 					}

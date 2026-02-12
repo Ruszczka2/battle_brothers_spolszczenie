@@ -6,17 +6,17 @@ this.mason_vs_thief_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.mason_vs_thief";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]%mason% the mason is stoking the campfire with %thief% standing nearby. The thief is mulling a question over.%SPEECH_ON%Hmm, what was the hardest to break into? Well, vaults were the easiest, let\'s get that out of the way first. I once stole so much from a vault that they tried to hang the locksmith for being so easily defeated by a common thief. They couldn\'t find the locksmith, for you see I\'m no common thief, for the locksmith was me. Ha-ha! To answer your question, a tower is the hardest to break into, especially a tower standing alone.%SPEECH_OFF%Sitting back on his laurels, the mason nods.%SPEECH_ON%Aye, thought you might say so. Towers be built for prisoners of import or items of peculiar fancy. Little more than cages in the sky for creatures with no wings. But one time, a prisoner, some notorious fish thief, did manage an escape. He spent years upon years pulling out strands of his own hair and tying them together until the \'rope\' was long enough for him to throw it out and climb down. They caught him a day later, unfortunately. He did the same trick again a few years later, but that time he roped it half-as-long and simply hanged himself instead.%SPEECH_OFF%%thief% laughs.%SPEECH_ON%That\'s interesting and all, but I\'m a true thief, mason, not a mere robber of fishmongers. My question is how do I get -into- the tower.%SPEECH_OFF%The mason nods.%SPEECH_ON%Simple. Commit a... herring offense.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]%mason% murarz podsyca ognisko obozowe, a obok stoi %thief%. Złodziej rozważa pewne pytanie.%SPEECH_ON%Hmm, co było najtrudniejsze do okradzenia? Cóż, skarbce były najłatwiejsze, zacznijmy od tego. Raz ukradłem ze skarbca tyle, że chcieli powiesić ślusarza za to, że dał się tak łatwo pokonać zwykłemu złodziejowi. Nie znaleźli ślusarza, bo widzisz, nie jestem zwykłym złodziejem, a ślusarzem byłem ja. Ha-ha! Odpowiadając na twoje pytanie, najtrudniej jest dostać się do wieży, szczególnie takiej, która stoi samotnie.%SPEECH_OFF%Murarz, zadowolony z siebie, kiwa głową.%SPEECH_ON%Aye, myślałem, że tak powiesz. Wieże buduje się dla ważnych więźniów lub przedmiotów o szczególnej wartości. Niewiele więcej niż klatki na niebie dla stworzeń bez skrzydeł. Ale raz pewien więzień, znany złodziej ryb, zdołał uciec. Przez lata wyrywał własne włosy i wiązał je razem, aż \"lina\" była wystarczająco długa, by ją wyrzucić i zejść. Złapali go dzień później, niestety. Kilka lat później zrobił to samo, ale wtedy uplotł linę o połowę krótszą i po prostu się powiesił.%SPEECH_OFF%%thief% się śmieje.%SPEECH_ON%To wszystko ciekawe, ale jestem prawdziwym złodziejem, murarzu, nie zwykłym okradaczem rybaków. Moje pytanie brzmi, jak dostać się -do- wieży.%SPEECH_OFF%Murarz kiwa głową.%SPEECH_ON%Proste. Popełnij... śledziowe przewinienie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What a harangue.",
+					Text = "Ależ przemowa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,13 +28,13 @@ this.mason_vs_thief_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Mason.getImagePath());
 				this.Characters.push(_event.m.Thief.getImagePath());
-				_event.m.Mason.improveMood(1.0, "Bonded with " + _event.m.Thief.getName());
+				_event.m.Mason.improveMood(1.0, "Zbliżył się z " + _event.m.Thief.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Mason.getMoodState()],
 					text = _event.m.Mason.getName() + this.Const.MoodStateEvent[_event.m.Mason.getMoodState()]
 				});
-				_event.m.Thief.improveMood(1.0, "Bonded with " + _event.m.Mason.getName());
+				_event.m.Thief.improveMood(1.0, "Zbliżył się z " + _event.m.Mason.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Thief.getMoodState()],

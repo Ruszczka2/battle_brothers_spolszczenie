@@ -3,17 +3,17 @@ this.no_food_variety_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.no_food_variety";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_52.png[/img]{You find the mercenaries circled around a campfire, except they\'ve no real food to put over the flames. One throws his bowl of soup down. It is such a sludge that it barely moves to spill which is, honestly, quite disgusting. %randombrother% looks at you.%SPEECH_ON%Sir, please, let us get some meat! Or something beyond this shite!%SPEECH_OFF%A bit of variety wouldn\'t hurt, you agree. | %randombrother% comes to you and slams a spoon on your desk. There\'s something on the spoon, but what exactly you can\'t tell. The mercenary leans back, thumbs jacked into his beltline, his chest growing with breath. Then he sighs, for he knows not to behave in such ill-manner in your presence. But he does explain himself.%SPEECH_ON%Sir, the men are complaining about the food. I think it\'d be great for company morale if perhaps we picked up some meats and other goods in the next town. Only a suggestion, of course.%SPEECH_OFF%He quickly leaves. You pick up the spoon and look at whatever is in the scoop of it. That... that can\'t really be what they\'re eating out there, can it? Perhaps some variety wouldn\'t hurt... | %randombrother% approaches with a bowl in hand. He tilts it forward, showing the contents which are colorless and slide ever so slowly down the rim of the bowl. The mercenary shakes his head.%SPEECH_ON%The men are unhappy sir, and myself too, about the dinners we\'ve been eating. A man can only eat the same contents day after day for so long, especially when he knows he can afford so much more. It is only a suggestion, sir, from myself and from all the men, that perhaps we liven up our food stocks so that not every meal is... well, this.%SPEECH_OFF%He sets the bowl down and walks off. | A few of your mercenaries are complaining around a campfire. You stay within earshot, carefully listening as they might say things they wouldn\'t in your presence. Thankfully, it\'s not a mutiny in motion, but instead a series of cooking criticisms. There simply is not enough variety in the company\'s food stocks. They\'re tired of eating the same thing over and over. Perhaps this could be remedied in the next town the %companyname% visits?}",
+			Text = "[img]gfx/ui/events/event_52.png[/img]{Zastajesz najemników zebranych wokół ogniska, ale nie mają prawdziwego jedzenia do położenia nad płomieniami. Jeden rzuca miskę zupy na ziemię. To taka breja, że ledwie się rozlewa, co, szczerze mówiąc, jest obrzydliwe. %randombrother% patrzy na ciebie.%SPEECH_ON%Panie, prosimy, pozwól nam zdobyć trochę mięsa! Albo cokolwiek ponad to gówno!%SPEECH_OFF%Zgadzasz się, że trochę różnorodności by nie zaszkodziło. | %randombrother% podchodzi do ciebie i uderza łyżką w twój stół. Na łyżce coś jest, ale nie potrafisz stwierdzić, co dokładnie. Najemnik odchyla się, wtyka kciuki za pas, pierś unosi mu się wraz z oddechem. Potem wzdycha, bo wie, że nie powinien zachowywać się tak niegrzecznie w twojej obecności. Ale wyjaśnia się.%SPEECH_ON%Panie, ludzie narzekają na jedzenie. Myślę, że byłoby dobrze dla morale, gdybyśmy w następnym mieście kupili trochę mięsa i innych rzeczy. To tylko sugestia, oczywiście.%SPEECH_OFF%Szybko odchodzi. Podnosisz łyżkę i patrzysz na to, co w niej jest. To... to naprawdę nie może być to, co oni tam jedzą, prawda? Może trochę różnorodności nie zaszkodzi... | %randombrother% podchodzi z miską w dłoniach. Przechyla ją, pokazując zawartość, która jest bezbarwna i bardzo powoli spływa po krawędzi. Najemnik kręci głową.%SPEECH_ON%Ludzie są niezadowoleni, panie, i ja również, z obiadów, które jemy. Człowiek może jeść to samo dzień po dniu tylko przez jakiś czas, zwłaszcza gdy wie, że stać go na coś więcej. To tylko sugestia, panie, ode mnie i od wszystkich ludzi, żebyśmy ożywili zapasy, by nie każdy posiłek był... no, taki.%SPEECH_OFF%Stawia miskę i odchodzi. | Kilku twoich najemników narzeka przy ognisku. Trzymasz się w pobliżu, uważnie słuchając, bo mogą mówić rzeczy, których nie powiedzieliby w twojej obecności. Na szczęście to nie bunt, lecz seria kulinarnych uwag. W zapasach brakuje różnorodności. Są zmęczeni jedzeniem w kółko tego samego. Może da się to naprawić w następnym mieście, które odwiedzi %companyname%?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, they ain\'t getting cake.",
+					Text = "Cóż, ciasta nie dostaną.",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,11 +34,11 @@ this.no_food_variety_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.gluttonous"))
 					{
-						bro.worsenMood(1.0, "Has eaten nothing but ground grains for days");
+						bro.worsenMood(1.0, "Jadł przez wiele dni tylko zmielone ziarna");
 					}
 					else
 					{
-						bro.worsenMood(0.5, "Has eaten nothing but ground grains for days");
+						bro.worsenMood(0.5, "Jadł przez wiele dni tylko zmielone ziarna");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

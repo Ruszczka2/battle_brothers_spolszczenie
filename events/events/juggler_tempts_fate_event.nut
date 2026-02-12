@@ -6,17 +6,17 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.juggler_tempts_fate";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%juggler% the light-footed, swift-handed juggler is going around asking the brothers to throw him some knives. It appears that he is looking to show off his act.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%juggler%, lekki na nogach i szybkoręki kuglarz, chodzi po obozie i prosi braci, by rzucali mu noże. Wygląda na to, że chce popisać się swoim numerem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s see what you can do!",
+					Text = "Pokaż, co potrafisz!",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 70 ? "C" : "Fail1";
@@ -24,7 +24,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "That\'s not what I\'m paying you for.",
+					Text = "Nie za to ci płacę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -41,13 +41,13 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Fail1",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%nonjuggler% throws a knife across the campground. The blade turns in the sun and you see a strobe of reflected light beam across the juggler\'s eyes. He blinks just long enough for the weapon to sheathe itself in his shoulder. He blinks again, just long enough for the pain to start kicking in. Within a moment, %juggler% is bowled over, clutching his wound in howling pain. A few men tend to him while others can only laugh.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%nonjuggler% rzuca nożem przez obóz. Ostrze obraca się w słońcu i widzisz błysk odbitego światła przecinający oczy kuglarza. Mruga na tyle długo, że broń wbija się w jego bark. Mruga ponownie, wystarczająco długo, by ból zaczął go dopadać. Po chwili %juggler% pada na ziemię, ściskając ranę i wyjąc z bólu. Kilku ludzi mu pomaga, a inni mogą się tylko śmiać.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s got to hurt!",
+					Text = "To musiało boleć!",
 					function getResult( _event )
 					{
 						return 0;
@@ -69,10 +69,10 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Juggler.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Juggler.getName() + " doznaje " + injury.getNameOnly()
 					}
 				];
-				_event.m.Juggler.worsenMood(1.0, "Failed his act and injured himself");
+				_event.m.Juggler.worsenMood(1.0, "Nie udał mu się numer i zranił się");
 
 				if (_event.m.Juggler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -87,13 +87,13 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Fail2",
-			Text = "[img]gfx/ui/events/event_05.png[/img]The axe %juggler% asked for is picked up and heaved toward him. It spins at an awkward angle as if the man who threw it intentionally sent it wobbling in indeterminate ways. Not expecting this, the juggler adjusts to try and catch the haywire axe handle, but the weapon smashes into one of the daggers and cuts across his shoulder. He falls to the ground in an instant, a shower of knives falling all around him. While some men tend to his wounds, other can\'t help but be delighted in his suffering.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Topór, o który prosił %juggler%, zostaje podniesiony i rzucony w jego stronę. Obraca się pod dziwnym kątem, jakby rzucający celowo wprawił go w nieokreślone kołysanie. Nie spodziewając się tego, kuglarz poprawia chwyt, by złapać rozchwiany trzonek, ale broń uderza w jeden z sztyletów i rozcina mu ramię. Pada na ziemię w jednej chwili, a deszcz noży spada wokół niego. Gdy jedni opatrują jego rany, inni nie potrafią ukryć radości z jego cierpienia.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Is he alright?",
+					Text = "Wszystko z nim w porządku?",
 					function getResult( _event )
 					{
 						return 0;
@@ -109,7 +109,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Juggler.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Juggler.getName() + " doznaje " + injury.getNameOnly()
 					}
 				];
 			}
@@ -117,13 +117,13 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Fail3",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%nonjuggler% picks up the requested flail and, after a moment\'s hesitation, lofts it toward %juggler%. Mid-flight, the chain of the weapon wraps around the handle. The juggler seems to adjust himself for it, but at the last moment the chain unfurls, whipping back around with deadly intent. You see the man\'s eyes flare open as he sees a calamity he can\'t stop from coming. The flail crashes through his maelstrom of metal and clips him in the face. Knocked out cold, he spins on his feet and collapses to the ground. A falling dagger penetrates his leg and the axe cuts tumbles right into his hip. The men gasp in horror and soon every one of them gets up and rushes to his aid.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%nonjuggler% podnosi żądany cep i po chwili wahania ciska go w stronę %juggler%. W locie łańcuch owija się wokół trzonka. Kuglarz wydaje się do tego dopasowywać, ale w ostatniej chwili łańcuch się rozwija i smaga z zabójczym impetem. Widzisz, jak oczy mężczyzny rozszerzają się, gdy dostrzega katastrofę, której nie potrafi powstrzymać. Cep rozbija jego metalowy wir i zahacza go w twarz. Pada nieprzytomny, obraca się na piętach i osuwa na ziemię. Spadający sztylet przebija mu nogę, a topór wpada prosto w biodro. Ludzie z przerażeniem wzdychają i wkrótce każdy z nich zrywa się, by udzielić mu pomocy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Is he alive?",
+					Text = "Czy on żyje?",
 					function getResult( _event )
 					{
 						return 0;
@@ -139,7 +139,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Juggler.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Juggler.getName() + " doznaje " + injury.getNameOnly()
 					}
 				];
 			}
@@ -147,13 +147,13 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You sit down and let the men throw %juggler% a few knives and daggers. They come in and at all shapes and sizes, and from all angles, but he catches them with ease and starts tossing them up into the air, their revolutions glinting and sparkling in the sunlight. Being that each weapon carries a different weight, you\'re impressed by how able he is to keep them all going in seamless unison.\n\n Of course, that couldn\'t just be the end of it. With one hand alternately waving the men on in between juggles, he asks for someone to throw him an axe.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Siadasz i pozwalasz ludziom rzucać %juggler% kilka noży i sztyletów. Nadlatują z każdej strony, w różnych kształtach i rozmiarach, ale on łapie je bez trudu i zaczyna podrzucać w powietrze, a ich obroty błyszczą i migoczą w słońcu. Ponieważ każda broń ma inną wagę, imponuje ci, jak potrafi utrzymać je wszystkie w płynnym rytmie.\n\n Oczywiście nie mogło się na tym skończyć. Jedną ręką, między kolejnymi podrzutami, przywołuje ludzi i prosi, by ktoś rzucił mu topór.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This should be interesting!",
+					Text = "To powinno być ciekawe!",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 60 ? "D" : "Fail2";
@@ -161,7 +161,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "That\'s enough.",
+					Text = "Wystarczy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -178,7 +178,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 10)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Czuł się rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -195,13 +195,13 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%nonjuggler% gets up and heaves an axe into the orbit of %juggler%\'s incredible act. The juggler\'s ring of dangerous weaponry seems to eat the axe in an instant, the weapon simply joining the rest of the knives and daggers in a seamless transition. The men clap and cheer, though a few are seen grinning as though they are waiting for this deck of incredibly sharp cards to come crashing down.\n\n But this isn\'t the end of the act, apparently. This time not waving anybody on, but simply focusing on the swooshing, swishing weaponry swirling about him, the juggler asks for a flail. Someone stands up.%SPEECH_ON%Did he say a flail?%SPEECH_OFF%The juggler stamps his foot.%SPEECH_ON%Yes, a flail! Throw me a flail!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%nonjuggler% wstaje i ciska topór w orbitę niesamowitego numeru %juggler%. Krąg niebezpiecznej broni zdaje się pożerać topór w mgnieniu oka, a broń po prostu dołącza do reszty noży i sztyletów w płynnym przejściu. Ludzie klaszczą i wiwatują, choć kilku widać z uśmiechami, jakby czekali, aż ta talia niezwykle ostrych kart w końcu runie.\n\n Ale to najwyraźniej nie koniec występu. Tym razem, nie przywołując nikogo, a skupiając się na świszczącej broni krążącej wokół niego, kuglarz prosi o cep. Ktoś wstaje.%SPEECH_ON%Czy on powiedział: cep?%SPEECH_OFF%Kuglarz tupie nogą.%SPEECH_ON%Tak, cep! Rzućcie mi cep!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Impossible and yet... I want to see it!",
+					Text = "Niemożliwe, a jednak... chcę to zobaczyć!",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "E" : "Fail3";
@@ -209,7 +209,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "That\'s it. End this now.",
+					Text = "Dość. Kończ to.",
 					function getResult( _event )
 					{
 						return 0;
@@ -226,12 +226,12 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Juggler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Juggler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Juggler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Melee Skill"
+					text = _event.m.Juggler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejętności walki wręcz"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -239,7 +239,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Czuł się rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -256,13 +256,13 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]A flail is retrieved and lobbed toward %juggler%. Everyone grimaces as the flail snakes and twirls and undulates toward the spinning storm of weaponry the juggler calls his \'act.\' But, just like the axe, it is quickly absorbed into the maelstrom of metal. Louder than ever, the men get to their feet to cheer and clap. A few sigh in relief, wiping sweat from their brow, while others can only grin and clap, being rather disappointed that nothing spectacularly awful didn\'t happen, but impressed nonetheless.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Wyciąga się cep i ciska w stronę %juggler%. Wszyscy krzywią się, gdy cep wije się, kręci i faluje ku wirującej burzy broni, którą kuglarz nazywa swoim \"numerem\". Ale, tak jak topór, szybko zostaje wchłonięty przez metalowy wir. Głośniej niż kiedykolwiek ludzie podrywają się, by wiwatować i klaskać. Kilku wzdycha z ulgą, wycierając pot z czoła, inni mogą się tylko uśmiechać i klaskać, rozczarowani, że nie stało się nic spektakularnie strasznego, ale mimo to pod wrażeniem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Bravo!",
+					Text = "Brawo!",
 					function getResult( _event )
 					{
 						return 0;
@@ -279,12 +279,12 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Juggler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Juggler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_defense.png",
-					text = _event.m.Juggler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Ranged Defense"
+					text = _event.m.Juggler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Obrony dystansowej"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -292,7 +292,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 30)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Czuł się rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

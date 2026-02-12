@@ -5,17 +5,17 @@ this.mountain_running_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.mountain_running";
-		this.m.Title = "In the mountains...";
+		this.m.Title = "W górach...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_42.png[/img]Climbing and barreling through the ups and downs of the mountain range has tested the men as well as any foe. While the company is a little worse for the wear, they have been made better by the rigors and trials of the harsh landscape - %dude% most of all.",
+			Text = "[img]gfx/ui/events/event_42.png[/img]Wspinaczka i przedzieranie się przez wzloty i upadki górskiego pasma wystawiły ludzi na próbę równie mocno jak każdy wróg. Choć kompania jest nieco poobijana, trudy surowego krajobrazu uczyniły ich lepszymi - a najbardziej %dude%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s all worth it.",
+					Text = "To wszystko jest tego warte.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,7 +33,7 @@ this.mountain_running_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/fatigue.png",
-					text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Max Fatigue"
+					text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Maks. zmęczenia"
 				});
 			}
 

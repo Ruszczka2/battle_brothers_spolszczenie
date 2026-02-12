@@ -6,17 +6,17 @@ this.squire_vs_hedge_knight_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.squire_vs_hedge_knight";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_82.png[/img]%squire% the young squire is eyeing %hedgeknight% from a safe distance. The hedge knight is sharpening his blades, running a whetstone over the edges and stropping the metals to give \'em a good sheen. Catching the squire staring, %hedgeknight% lowers his equipment.%SPEECH_ON%So you want to be a knight, is that it?%SPEECH_OFF%%squire% nods and answers proudly.%SPEECH_ON%It is my dream, yes, and one day it will happen.%SPEECH_OFF%The hedge knight stands and walks over, coming to tower over the youth.%SPEECH_ON%What is it you think a knight does? Saves damsels? Rules fiefs to be loved by the peasants? Owes allegiance to his lord? Well let me tell you, that\'s all bullshit. Dainty farks like yourself are nothing but mealworm. You want to be a knight you gotta learn to kill.%SPEECH_OFF%The squire straightens up and pulls his shoulders back.%SPEECH_ON%I\'ve no issue killing.%SPEECH_OFF%The hedge knight pushes the man back with only a single finger.%SPEECH_ON%Is that so? And have you gutted a man and murdered his family while he bled out on the ground? What of crushing a child\'s head in your hands because your liege gave the order? Would you gouge out a woman\'s eyes because your lord believed that was due punishment for stealing a loaf of bread? Who do you think I am, squire? Do you think I was born big, mean, and savage? No, little squire, you will have to kill, and who you kill first is none other than yourself. That is how you become a knight in these lands, in these times.%SPEECH_OFF%The hedge knight returns to his work. The squire is visibly shaken, but seems to be earnestly thinking over what he\'d just heard.",
+			Text = "[img]gfx/ui/events/event_82.png[/img]%squire%, młody giermek, obserwuje %hedgeknight% z bezpiecznej odległości. Wolny rycerz ostrzy ostrza, przeciągając osełkę po krawędziach i polerując metal, by nadać mu blask. Kiedy zauważa wpatrzonego giermka, %hedgeknight% opuszcza narzędzia.%SPEECH_ON%Więc chcesz być rycerzem, tak?%SPEECH_OFF%%squire% kiwa głową i odpowiada dumnie.%SPEECH_ON%To moje marzenie, tak, i pewnego dnia się spełni.%SPEECH_OFF%Wolny rycerz wstaje i podchodzi, górując nad młodzieńcem.%SPEECH_ON%Jak myślisz, co robi rycerz? Ratuje damy? Rządzi lennami, by być kochanym przez chłopów? Ślubuje wierność swemu panu? Cóż, powiem ci, to wszystko bzdury. Delikatniacy tacy jak ty to nic więcej niż larwy mącznika. Chcesz być rycerzem, musisz nauczyć się zabijać.%SPEECH_OFF%Giermek prostuje się i odciąga ramiona.%SPEECH_ON%Nie mam problemu z zabijaniem.%SPEECH_OFF%Wolny rycerz odpycha go jednym palcem.%SPEECH_ON%Doprawdy? A czy rozciąłeś człowieka i zamordowałeś jego rodzinę, kiedy wykrwawiał się na ziemi? Co z roztrzaskaniem głowy dziecka w twoich rękach, bo twój senior tak rozkazał? Wyłupiłbyś kobiecie oczy, bo twój pan uznał to za należytą karę za kradzież bochenka chleba? Za kogo mnie masz, giermku? Myślisz, że urodziłem się wielki, zły i dziki? Nie, mały giermku, będziesz musiał zabijać, a pierwszym, kogo zabijesz, będziesz ty sam. Tak zostaje się rycerzem w tych ziemiach, w tych czasach.%SPEECH_OFF%Wolny rycerz wraca do pracy. Giermek jest wyraźnie wstrząśnięty, ale zdaje się szczerze rozważać to, co właśnie usłyszał.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Life\'s not a knight\'s tale.",
+					Text = "Życie to nie rycerska opowieść.",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,9 +35,9 @@ this.squire_vs_hedge_knight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Squire.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Resolve"
+					text = _event.m.Squire.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] determinacji"
 				});
-				_event.m.Squire.worsenMood(1.5, "Has been shaken in his beliefs");
+				_event.m.Squire.worsenMood(1.5, "Zachwiano jego przekonaniami");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Squire.getMoodState()],

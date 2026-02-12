@@ -3,17 +3,17 @@ this.renown_tutorial_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.renown_tutorial";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_82.png[/img]While the company takes a short rest, you sit down to examine the wound where an arrow punctured your side not long ago. It\'s been healing slowly and still aches if you move too quickly, but things are getting better. %bro1% joins you, seizing this opportunity to talk to his captain.%SPEECH_ON%So the way I see it, nobody knows about the %companyname% yet. We don\'t want to hunt rag-tag bands of brigands through the woods forever, but we\'ll have to make a name for ourselves first as reliable swords-for-hire that can get things done before the noble houses take notice. They\'ll want to use the company for far better paying tasks, I\'m sure.%SPEECH_OFF%He adjusts his weapon belt and continues.%SPEECH_ON%Just we keep in mind that the high lords are playing a dangerous game and we don\'t want to get on their bad side. There\'s enough stories of people who crossed them only to end up quartered and fed to the pigs, and they have the means to squish even a company of sellswords.%SPEECH_OFF%He pauses a short moment and then adds another thought.%SPEECH_ON%The guildmasters and councilmen running the villages and towns, too, have a good memory. We depend on them to hire the company for now, but having some influential friends may also help us get better deals with the merchants.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_82.png[/img]Gdy kompania robi krótki postój, siadasz, by obejrzeć ranę po strzale, który niedawno przebił ci bok. Gojenie idzie powoli i wciąż boli, gdy poruszasz się zbyt szybko, ale sytuacja się poprawia. %bro1% siada obok, korzystając z okazji, by porozmawiać z kapitanem.%SPEECH_ON%Jak ja to widzę, nikt jeszcze nie zna %companyname%. Nie chcemy wiecznie ścigać po lasach byle jakich band zbójów, ale najpierw musimy wyrobić sobie nazwę jako rzetelne miecze do wynajęcia, które potrafią doprowadzać sprawy do końca, zanim zauważą nas rody szlacheckie. Wtedy będą chcieli wykorzystywać kompanię do o wiele lepiej płatnych zleceń, jestem pewien.%SPEECH_OFF%Poprawia pas z bronią i kontynuuje.%SPEECH_ON%Pamiętajmy też, że wielcy panowie grają w niebezpieczną grę i nie chcemy wejść im w drogę. Jest dość historii o ludziach, którzy im podpadli, a skończyli poćwiartowani i nakarmieni świniom, a oni mają środki, by zmiażdżyć nawet kompanię najemników.%SPEECH_OFF%Na chwilę milknie, po czym dodaje jeszcze jedną myśl.%SPEECH_ON%Mistrzowie cechów i rajcy rządzący wioskami oraz miastami też mają dobrą pamięć. Na razie polegamy na nich, by zatrudniali kompanię, ale posiadanie wpływowych przyjaciół może też pomóc nam w uzyskaniu lepszych układów z kupcami.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'ll keep it in mind.",
+					Text = "Będę o tym pamiętać.",
 					function getResult( _event )
 					{
 						return 0;

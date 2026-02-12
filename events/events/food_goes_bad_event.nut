@@ -5,7 +5,7 @@ this.food_goes_bad_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.food_goes_bad";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -14,7 +14,7 @@ this.food_goes_bad_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "We could have used this...",
+					Text = "Przydałoby się to...",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,30 +30,30 @@ this.food_goes_bad_event <- this.inherit("scripts/events/event", {
 
 				if (food.getID() == "supplies.bread")
 				{
-					this.Text = "[img]gfx/ui/events/event_52.png[/img]{While pulling inventory duty, %randombrother% alerts you to a bit of dire news: a good sum of food has gone bad. Simple and to the point, you nod and thank him for telling you quickly. | %randombrother% comes to you rubbing his jaw. He says he almost broke his teeth on a bit of bread. Apparently he found the piece at the bottom of a food crate and it appears to have been sitting there for some time. You take a sword to the loaf, chopping it in two as a few brothers cheer with sarcastic bravado. Taking up the halved bread, you show the men the insides: a dark core of black. That\'s what your stomach will look like if you eat this, you say before throwing the bread into the bushes where you can hear it tumbling like a heavy stone.}";
+					this.Text = "[img]gfx/ui/events/event_52.png[/img]{Podczas inwentaryzacji %randombrother% przekazuje ci przykrą wiadomość: spora część jedzenia się zepsuła. Krótko i na temat, kiwasz głową i dziękujesz mu za szybkie ostrzeżenie. | %randombrother% podchodzi do ciebie, pocierając szczękę. Mówi, że prawie połamał sobie zęby na kawałku chleba. Podobno znalazł go na dnie skrzyni z jedzeniem i wygląda na to, że leżał tam od dawna. Bierzesz miecz i przecinasz bochenek na pół, a kilku braci wiwatuje z ironiczną odwagą. Podnosisz połówki chleba i pokazujesz ludziom wnętrze: ciemny, czarny rdzeń. Tak będzie wyglądał wasz żołądek, jeśli to zjecie, mówisz, po czym wyrzucasz chleb w krzaki, gdzie słychać, jak turla się niczym ciężki kamień.}";
 				}
 				else if (food.getID() == "supplies.dried_fish")
 				{
-					this.Text = "[img]gfx/ui/events/event_52.png[/img]{While pulling inventory duty, %randombrother% alerts you to a bit of dire news: a good sum of food has gone bad. Simple and to the point, you nod and thank him for telling you quickly. | %randombrother% yelps and leaps up off the log he was sitting on. You walk over to see he\'s thrown a fish by the wayside and he can\'t stop pointing at it. While he warns you to not go near it, you decide to go near it. Apparently a water-spider had birthed a clutch of eggs inside the fish\'s abdomen. You now stare at the little spiderlings bubbling forth in a cloud of scuttling legs and bodies.\n\nThrowing the entire lot into a fire, you ask the brother to check the rest of the fish. Unfortunately, they are all in a similar state and nobody is willing to replace fish-food for spider-food.}";
+					this.Text = "[img]gfx/ui/events/event_52.png[/img]{Podczas inwentaryzacji %randombrother% przekazuje ci przykrą wiadomość: spora część jedzenia się zepsuła. Krótko i na temat, kiwasz głową i dziękujesz mu za szybkie ostrzeżenie. | %randombrother% wrzeszczy i zrywa się z kłody, na której siedział. Podchodzisz i widzisz, że odrzucił na bok rybę i nie może przestać na nią wskazywać. Ostrzega cię, byś się do niej nie zbliżał, ale ty postanawiasz podejść. Okazuje się, że wodny pająk złożył w brzuchu ryby kokon jaj. Teraz patrzysz, jak małe pajączki bulgoczą na zewnątrz w chmurze ruchliwych nóg i ciał.\n\nWrzucając całość do ognia, prosisz brata, by sprawdził resztę ryb. Niestety, wszystkie są w podobnym stanie i nikt nie chce zastąpić rybnego jedzenia pajączym.}";
 				}
 				else if (food.getID() == "supplies.dried_fruits")
 				{
-					this.Text = "[img]gfx/ui/events/event_52.png[/img]{While pulling inventory duty, %randombrother% alerts you to a bit of dire news: a good sum of food has gone bad. Simple and to the point, you nod and thank him for telling you quickly. | You sift through a few crates of foodstuffs to find an entire carton of apples covered in what looks like grey fur. %randombrother% has a word for it, but you\'ve never heard it before. Regardless, none of it can be salvaged and you toss the rotten fruit away.}";
+					this.Text = "[img]gfx/ui/events/event_52.png[/img]{Podczas inwentaryzacji %randombrother% przekazuje ci przykrą wiadomość: spora część jedzenia się zepsuła. Krótko i na temat, kiwasz głową i dziękujesz mu za szybkie ostrzeżenie. | Przeglądasz kilka skrzyń z żywnością i znajdujesz całe pudło jabłek pokrytych czymś, co wygląda jak szare futro. %randombrother% ma na to słowo, ale nigdy go nie słyszałeś. Tak czy inaczej, nic z tego nie da się uratować i wyrzucasz zgniłe owoce.}";
 				}
 				else if (food.getID() == "supplies.smoked_ham" || food.getID() == "supplies.cured_venison")
 				{
-					this.Text = "[img]gfx/ui/events/event_52.png[/img]{While pulling inventory duty, %randombrother% alerts you to a bit of dire news: a good sum of food has gone bad. Simple and to the point, you nod and thank him for telling you quickly. | Maggots wriggle about a few chunks of meat. Your men stare at the food, some looking as though they\'re willing to risk a bit of illness to have a bite. You tell everyone off and get rid of the meat personally before someone does something stupid.}";
+					this.Text = "[img]gfx/ui/events/event_52.png[/img]{Podczas inwentaryzacji %randombrother% przekazuje ci przykrą wiadomość: spora część jedzenia się zepsuła. Krótko i na temat, kiwasz głową i dziękujesz mu za szybkie ostrzeżenie. | Larwy wiją się na kilku kawałkach mięsa. Ludzie wpatrują się w jedzenie, a niektórzy wyglądają, jakby byli gotowi zaryzykować chorobę, byle tylko ugryźć kawałek. Karcisz wszystkich i sam pozbywasz się mięsa, zanim ktoś zrobi coś głupiego.}";
 				}
 				else
 				{
-					this.Text = "{[img]gfx/ui/events/event_52.png[/img]While pulling inventory duty, %randombrother% alerts you to a bit of dire news: a good sum of food has gone bad. Simple and to the point, you nod and thank him for telling you quickly. | [img]gfx/ui/events/event_36.png[/img]Childish giggling wakes you from a nap. You rise up to see that some of the food is gone and the only evidence as to where it departed is a field of still moving tall grass. Thinking fast, you take up a sword and follow its trail. Unfortunately, it isn\'t long before you are lost in the midst of enormous stalks of green that pedal against your face with every rush of wind. The giggling doesn\'t stop, however, and you hear the pitter-patter of footsteps cross behind you and then in front. A voice speaks, sounding like a child deep in a well.%SPEECH_ON%Chase us! Over here! Chase us! Chase us... CHASE US. CHASE US NOW!%SPEECH_OFF%You suddenly feel no urge to retrieve the grain. You slowly put your sword back in its sheath and back out of the field. As you stare into the tall grass, it begins to part, slowly, like a piece of leather being torn at the seams. You hear horrible cries as each stem cracks in half.\n\n%randombrother% startles you when he asks what it is you\'re doing. You turn to look at him, then turn back to the field which sways gently to a breeze. Instead of answering, you just tell him to get ready as you\'ll be marching again very soon. Thankfully, the mercenary does not inquire about the missing food.}";
+					this.Text = "{[img]gfx/ui/events/event_52.png[/img]Podczas inwentaryzacji %randombrother% przekazuje ci przykrą wiadomość: spora część jedzenia się zepsuła. Krótko i na temat, kiwasz głową i dziękujesz mu za szybkie ostrzeżenie. | [img]gfx/ui/events/event_36.png[/img]Dziecięcy chichot budzi cię z drzemki. Podnosisz się i widzisz, że część jedzenia zniknęła, a jedyną wskazówką jest pole wciąż poruszającej się wysokiej trawy. Myśląc szybko, chwytasz miecz i podążasz śladem. Niestety, niedługo później gubisz się pośród ogromnych, zielonych źdźbeł, które uderzają w twoją twarz przy każdym podmuchu wiatru. Chichot jednak nie ustaje, słyszysz też tupot kroków przebiegających za tobą, a potem przed tobą. Odzywa się głos, brzmiący jak dziecko głęboko w studni.%SPEECH_ON%Gonić nas! Tutaj! Gonić nas! Gonić nas... GONIĆ NAS. GONIĆ NAS TERAZ!%SPEECH_OFF%Nagle nie masz ochoty odzyskiwać ziarna. Powoli wsuwasz miecz do pochwy i wycofujesz się z pola. Gdy wpatrujesz się w wysoką trawę, zaczyna się ona rozsuwać, powoli, jak kawałek skóry rozrywany na szwach. Słyszysz okropne trzaski, gdy każde źdźbło pęka na pół.\n\n%randombrother% wystrasza cię, gdy pyta, co robisz. Odwracasz się do niego, po czym znów patrzysz na pole, które łagodnie faluje na wietrze. Zamiast odpowiadać, mówisz mu tylko, by był gotów, bo wkrótce znów ruszacie. Na szczęście najemnik nie dopytuje o zniknięte jedzenie.}";
 				}
 
 				this.List = [
 					{
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "You lose " + food.getName()
+						text = "Tracisz " + food.getName()
 					}
 				];
 			}

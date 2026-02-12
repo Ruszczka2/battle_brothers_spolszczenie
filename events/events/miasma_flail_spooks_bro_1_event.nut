@@ -5,17 +5,17 @@ this.miasma_flail_spooks_bro_1_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.miasma_flail_spooks_bro_1";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{%hauntedbrother% spills into your tent yelling that you did terrible things to him while he was sleeping. You stand and draw your sword, for the details of his accusations are certainly worth killing another man over, but as you both pause to breathe, you realize %hauntedbrother% has the Grand Diviner\'s flail firmly grasped in a whiteknuckled hand. The green mist swirling in its center brims bright, then fades as you both look at it. The sellsword throws it to the ground.%SPEECH_ON%Godsdammit, captain. We should get rid of this farking thing!%SPEECH_OFF%}",
+			Text = "%terrainImage%{%hauntedbrother% wpada do twojego namiotu, krzycząc, że zrobiłeś mu straszne rzeczy, gdy spał. Wstajesz i dobywasz miecza, bo szczegóły jego oskarżeń są z pewnością warte zabicia drugiego człowieka, ale gdy obaj przystajecie, by złapać oddech, dostrzegasz, że %hauntedbrother% ściska cep Wielkiego Wróżbity, aż bieleją mu knykcie. Zielona mgła wirująca w jego środku jarzy się jasno, po czym gaśnie, gdy obaj na nią patrzycie. Najemnik rzuca broń na ziemię.%SPEECH_ON%Do kroćset, kapitanie. Powinniśmy pozbyć się tego cholerstwa!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "But it took so much to get it...",
+					Text = "Ale tyle kosztowało, by go zdobyć...",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.miasma_flail_spooks_bro_1_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Dude.worsenMood(1.0, "Had terrible nightmares");
+				_event.m.Dude.worsenMood(1.0, "Miał straszne koszmary");
 
 				if (_event.m.Dude.getMoodState() < this.Const.MoodState.Neutral)
 				{

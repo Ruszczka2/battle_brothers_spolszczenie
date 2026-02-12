@@ -5,17 +5,17 @@ this.ratcatcher_crafts_net_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ratcatcher_crafts_net";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You come across %ratcatcher% sitting with his hands full of rope. He\'s got the cords looping so ferociously - as ropes can be looped - that you worry to not put your foot close to it. Curious, you ask the man what he\'s up to. As though he were expecting just that question, he quickly raises his project into the air and announces he\'s fashioned himself a net. Ah! You put your hands to your hips.%SPEECH_ON%That shall be great on the battlefield!%SPEECH_OFF%The ratcatcher purses his lips. He slowly lowers the net.%SPEECH_ON%Oh, I meant... to use it... to snag me some rat...%SPEECH_OFF%He pauses, then throws his head up, a cheeky if not cheesy smile adorned across it.%SPEECH_ON%But I shall use it on the field of battle! No rat, man or furry or that which scurries, shall escape me!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Natrafiasz na %ratcatcher% siedzącego z rękami pełnymi liny. Tak zaciekle ją zapętla - jak tylko linę da się zapętlać - że boisz się postawić stopę zbyt blisko. Ciekawy pytasz go, co robi. Jakby właśnie na to pytanie czekał, szybko unosi swoje dzieło i ogłasza, że zrobił sieć. Ach! Kładziesz dłonie na biodrach.%SPEECH_ON%To będzie świetne na polu bitwy!%SPEECH_OFF%Szczurołap zaciska usta. Powoli opuszcza sieć.%SPEECH_ON%Och, miałem na myśli... żeby jej użyć... do złapania szczura...%SPEECH_OFF%Zawiesza głos, po czym zadziera głowę, a na twarzy pojawia się figlarny, jeśli nie kiczowaty uśmiech.%SPEECH_ON%Ale użyję jej na polu bitwy! Żaden szczur, człowiek, futrzak ani to, co się skrada, nie wymknie mi się!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Very good.",
+					Text = "Bardzo dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.ratcatcher_crafts_net_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

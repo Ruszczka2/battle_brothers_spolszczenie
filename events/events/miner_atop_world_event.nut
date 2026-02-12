@@ -5,17 +5,17 @@ this.miner_atop_world_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.miner_atop_world";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_42.png[/img]The company marches into the mountains, or what %randombrother% poetically referred to as the \'realm\'s tits\'. Clouds start passing at eye-level and the air gets so thin it\'s like you\'re breathing through a straw. Snow crunches underfoot and harsh winds threaten to your eyes into ice cubes. Despite the steep escarpments and dangerous crevasses to cross, %miner% the miner seems rather happy to be this far up.%SPEECH_ON%It\'s like we\'re on top of the world! Isn\'t this wonderful?%SPEECH_OFF%He can hardly breathe for shit, but the miner is too happy to care. Years of digging deep into the earth has made this reversal of perspective all the more wonderful.",
+			Text = "[img]gfx/ui/events/event_42.png[/img]Kompania maszeruje w góry, albo jak to poetycko określił %randombrother%, \"cycki królestwa\". Chmury zaczynają przesuwać się na wysokości oczu, a powietrze robi się tak rzadkie, jakbyś oddychał przez słomkę. Śnieg chrzęści pod stopami, a ostre wiatry grożą, że zamienią ci oczy w kostki lodu. Mimo stromych urwisk i niebezpiecznych szczelin do pokonania, %miner% górnik wydaje się całkiem szczęśliwy, że zaszedł tak wysoko.%SPEECH_ON%To jakbyśmy byli na szczycie świata! Czy to nie wspaniałe?%SPEECH_OFF%Ledwo może oddychać, ale górnik jest zbyt szczęśliwy, by się tym przejmować. Lata kopania głęboko w ziemi sprawiły, że ta zmiana perspektywy jest tym bardziej cudowna.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, at least someone is enjoying themselves.",
+					Text = "Cóż, przynajmniej ktoś się dobrze bawi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.miner_atop_world_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Miner.getImagePath());
-				_event.m.Miner.improveMood(2.0, "Enjoyed the view from atop a mountain");
+				_event.m.Miner.improveMood(2.0, "Cieszył się widokiem ze szczytu góry");
 
 				if (_event.m.Miner.getMoodState() >= this.Const.MoodState.Neutral)
 				{

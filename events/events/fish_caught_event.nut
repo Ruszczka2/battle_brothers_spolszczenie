@@ -5,17 +5,17 @@ this.fish_caught_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.hunt_food";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_52.png[/img]{While stopped near a river of water, it appears %fisherman% went out to practice his old trade and netted a few fish! | You\'ve come to a body of water and stopped to talk to a few locals about the surrounding land. %fisherman% the once-fisherman took that opportunity to go catch a few salmon and other river-running critters. | While marching near a river, %fisherman% the once-fisherman managed to run along the banks and collect a bucketful of crawdads! Boiled in a pot, they make for some good eats.}",
+			Text = "[img]gfx/ui/events/event_52.png[/img]{Gdy zatrzymaliście się przy rzece, wygląda na to, że %fisherman% poszedł praktykować swój dawny fach i złowił kilka ryb! | Dotarliście do zbiornika wodnego i zatrzymaliście się, by porozmawiać z kilkoma miejscowymi o okolicznych terenach. %fisherman%, dawniej rybak, skorzystał z okazji, by złowić kilka łososi i innych rzecznych stworzeń. | Podczas marszu wzdłuż rzeki %fisherman%, dawniej rybak, zdołał pobiec brzegiem i nazbierać wiadro raków! Ugotowane w garnku są całkiem niezłe do jedzenia.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s fish tonight!",
+					Text = "Dziś na kolację ryby!",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,7 +32,7 @@ this.fish_caught_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] Fish"
+						text = "Otrzymujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] Ryb"
 					}
 				];
 				_event.m.Fisherman.improveMood(0.5, "Has caught some fish");

@@ -7,17 +7,17 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.sellsword_gets_better_deal";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]While counting inventory, %sellsword% joins your side, mindlessly picking at this sword or that shield. You set your quill pen down and ask him what\'s up for he sure as shit isn\'t here to count anything. He explains that another company wishes to use his swordhand - and they\'re willing to pay more. You ask how much and he holds up his hands to count.%SPEECH_ON%They\'re talking %newpay% crowns a day.%SPEECH_OFF%He\'s earning %pay% crowns a day with you.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Podczas liczenia zapasów %sellsword% staje obok, bezmyślnie grzebiąc przy tym mieczu czy tarczy. Odkładasz pióro i pytasz, o co chodzi, bo na pewno nie przyszedł niczego liczyć. Wyjaśnia, że inna kompania chce jego ręki do miecza - i są gotowi płacić więcej. Pytasz ile, a on unosi dłonie, by policzyć.%SPEECH_ON%Mówią o %newpay% koron dziennie.%SPEECH_OFF%U ciebie zarabia %pay% koron dziennie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I see, time to part ways then.",
+					Text = "Rozumiem, czas się rozstać.",
 					function getResult( _event )
 					{
 						_event.m.Sellsword.getSkills().onDeath(this.Const.FatalityType.None);
@@ -27,7 +27,7 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "There must be a way I can talk you out of this.",
+					Text = "Musi być jakiś sposób, by cię od tego odwieść.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= _event.m.Sellsword.getLevel() * 10 ? "B" : "C";
@@ -35,7 +35,7 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Then I shall match their offer.",
+					Text = "W takim razie wyrównam ich ofertę.",
 					function getResult( _event )
 					{
 						return "D";
@@ -51,13 +51,13 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img] You turn around, crossing your arms and jacking a boot against a crate. Staring out across the land, you tell %sellsword% that the company has been through a lot together and everyone, yourself especially, would hate to see him go. He has a second family here with the the %companyname% and that\'s a rare treat in the mercenary world. Where he\'s going there is no guarantee of what he may find. You know, because you\'ve been there. You\'ve been in his very shoes, and you took those shoes and walked. And regretted it.\n\nThe sellsword looks at the ground, thinking your words over. Finally he nods and agrees to stay. You tell him he\'s made the right choice. The man turns and taps a quiver of arrows as he walks away.%SPEECH_ON%Might want to refill that.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img] Obracasz się, krzyżujesz ręce i opierasz but o skrzynię. Patrząc w dal, mówisz %sellsword%, że kompania wiele razem przeszła i wszyscy, a szczególnie ty, nie chcieliby go stracić. Ma tu drugą rodzinę w %companyname%, a to rzadkość w świecie najemników. Tam, dokąd idzie, nie ma żadnej gwarancji tego, co znajdzie. Wiesz, bo sam tam byłeś. Byłeś na jego miejscu, wziąłeś te buty i odszedłeś. I tego żałowałeś.\n\nNajemnik patrzy w ziemię, rozważając twoje słowa. W końcu kiwa głową i zgadza się zostać. Mówisz mu, że podjął właściwą decyzję. Odwraca się i stukając w kołczan strzał odchodzi.%SPEECH_ON%Może byś je uzupełnił.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad you\'re staying with us.",
+					Text = "Cieszę się, że z nami zostajesz.",
 					function getResult( _event )
 					{
 						return 0;
@@ -74,13 +74,13 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_16.png[/img] You turn around, crossing your arms and jacking a boot against a crate. Staring out across the land, you tell %sellsword% that the company has been through a lot together and everyone, yourself especially, would hate to see him go. He has a second family here with the %companyname% and that\'s a rare treat in the mercenary world. Where he\'s going there is no guarantee of what he may find. You know, because you\'ve been there. You\'ve been in his very shoes, and you took those shoes and walked. And regretted it.\n\n The sellsword looks at the ground, thinking your words over. Finally he shakes his head and purses his lips with a look of \'sorry\'. You tell him he\'s making the wrong choice, but he\'s having none of it. The man turns and taps a quiver of arrows as he walks away.%SPEECH_ON%Might want to refill that.%SPEECH_OFF%The arrows are a little low, but all you can think about is figuring out how to replace a good swordhand such as he.",
+			Text = "[img]gfx/ui/events/event_16.png[/img] Obracasz się, krzyżujesz ręce i opierasz but o skrzynię. Patrząc w dal, mówisz %sellsword%, że kompania wiele razem przeszła i wszyscy, a szczególnie ty, nie chcieliby go stracić. Ma tu drugą rodzinę w %companyname%, a to rzadkość w świecie najemników. Tam, dokąd idzie, nie ma żadnej gwarancji tego, co znajdzie. Wiesz, bo sam tam byłeś. Byłeś na jego miejscu, wziąłeś te buty i odszedłeś. I tego żałowałeś.\n\n Najemnik patrzy w ziemię, rozważając twoje słowa. W końcu kręci głową i zaciska usta z wyrazem \"przepraszam\". Mówisz mu, że podejmuje złą decyzję, ale on nie chce o tym słyszeć. Odwraca się i stukając w kołczan strzał odchodzi.%SPEECH_ON%Może byś je uzupełnił.%SPEECH_OFF%Strzał jest trochę mało, ale jedyne, o czym myślisz, to jak zastąpić tak dobrego miecznika.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A damn shame.",
+					Text = "Cholerna szkoda.",
 					function getResult( _event )
 					{
 						return 0;
@@ -93,7 +93,7 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Sellsword.getName() + " leaves the " + this.World.Assets.getName()
+					text = _event.m.Sellsword.getName() + " odchodzi z " + this.World.Assets.getName()
 				});
 				_event.m.Sellsword.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.Sellsword.getSkills().onDeath(this.Const.FatalityType.None);
@@ -103,13 +103,13 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_04.png[/img] You sigh. The man nods and starts to leave, but you stop him. You\'ll pay the amount so he can stay. The %companyname% simply cannot afford to lose a man like him.",
+			Text = "[img]gfx/ui/events/event_04.png[/img] Wzdychasz. Mężczyzna kiwa głową i rusza, by odejść, ale go zatrzymujesz. Zapłacisz tyle, by został. %companyname% po prostu nie może sobie pozwolić na utratę takiego człowieka.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A good man doesn\'t come cheap.",
+					Text = "Dobry człowiek nie jest tani.",
 					function getResult( _event )
 					{
 						return 0;
@@ -125,7 +125,7 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_daily_money.png",
-					text = _event.m.Sellsword.getName() + " is now paid " + _event.m.Sellsword.getDailyCost() + " crowns a day"
+					text = _event.m.Sellsword.getName() + " otrzymuje teraz " + _event.m.Sellsword.getDailyCost() + " koron dziennie"
 				});
 			}
 

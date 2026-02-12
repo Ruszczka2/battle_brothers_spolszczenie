@@ -3,17 +3,17 @@ this.good_food_variety_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.good_food_variety";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_61.png[/img]{You watch as the men chow down on plates about as colorful as the men\'s personalities. Supplying the company with such a diverse stock of food has raised their spirits as good as any victory! | A hot meal is what any man needs, but a hot meal, with a couple of sides and entrees? Well, that\'s something else entirely! Your purchases of diverse foods has the men gleefully chowing down and feeling good about life. | Food as diverse as any nobleman\'s - or close enough, anyway. That\'s what you have supplied the company and the men are supremely appreciative as they chow down.}",
+			Text = "[img]gfx/ui/events/event_61.png[/img]{Patrzysz, jak ludzie wcinają posiłki tak kolorowe, jak ich osobowości. Zaopatrzenie kompanii w tak różnorodne jedzenie poprawiło im nastroje równie skutecznie co zwycięstwo! | Gorący posiłek to coś, czego potrzebuje każdy człowiek, ale gorący posiłek z dodatkami i daniami? To już zupełnie inna sprawa! Zakupy różnorodnego jedzenia sprawiają, że ludzie radośnie jedzą i czują się dobrze. | Jedzenie tak różnorodne, jak u każdego szlachcica - albo prawie. Tym właśnie zaopatrzyłeś kompanię, a ludzie są ogromnie wdzięczni, gdy jedzą.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Enjoy.",
+					Text = "Smacznego.",
 					function getResult( _event )
 					{
 						return 0;

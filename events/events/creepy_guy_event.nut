@@ -9,16 +9,16 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.creepy_guy";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_43.png[/img]While walking the streets of %townname%, you come upon a crowd standing around a hanged man. He must have been of some notoriety: the folks are muscling one another to try and get a turn to cut a toe or finger off as a sort of hanging-heirloom. An old man is quickly elbowed out of the mob. He turns to you, voice raspy, his bony fingers tented like sickly ribs.%SPEECH_ON%Ahh, sellsword are ye? O\'course, I can smell your business, the purchases ye have made. Say, would you do a bit of work for me? I need a number of that dead man\'s fingers and toes. It\'s for m\'work, ye shall see. I\'ll give you five hundred crowns in return for it.%SPEECH_OFF%You ask why he needs that particular man\'s appendages. The crooning, shoulder-cowed man laughs, a heckle if there ever was one.%SPEECH_ON%Aye, good question. The man earned his walk to the hangman\'s noose with a penchant for violence and an unerring strength to see his desires through. The toes and fingers of a simpleton won\'t do. I need a man of uncinched cruelty, and the only one I see right now is swinging by that there rope. So, what say ye? Five hundred crowns, remember?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Spacerując ulicami %townname%, natykasz się na tłum zgromadzony wokół wisielca. Musiał być dość znany: ludzie przepychają się, byle tylko dostać się na moment i odciąć palec u stopy albo u ręki jako osobliwą pamiątkę po stryczku. Stary mężczyzna zostaje szybko wypchnięty z tłumu łokciami. Odwraca się do ciebie, głos ma chrapliwy, a kostniste palce składa jak chorowite żebra.%SPEECH_ON%Ach, jesteś najemnikiem? Oczywiście, czuję twój fach, te zakupy, które zrobiłeś. Powiedz, zrobiłbyś dla mnie drobną przysługę? Potrzebuję kilku palców u rąk i nóg tego trupa. To do mojej pracy, zobaczysz. Dam ci w zamian pięćset koron.%SPEECH_OFF%Pytasz, po co mu akurat te części ciała. Ten zawodzący, przygarbiony człowiek śmieje się, szyderczo, jeśli kiedykolwiek słyszałeś coś takiego.%SPEECH_ON%Tak, dobre pytanie. Ten człowiek zasłużył na spacer pod stryczek skłonnością do przemocy i niezawodną siłą, by doprowadzać swoje pragnienia do końca. Palce jakiegoś prostaka się nie nadają. Potrzebuję człowieka bez zaciśniętego sumienia, a jedynego, jakiego teraz widzę, kołysze tamta lina. No i co powiesz? Pięćset koron, pamiętaj.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Alright, I\'ll go and find them.",
+					Text = "Dobrze, pójdę ich poszukać.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 30 || this.World.Assets.getMoney() <= 1000)
@@ -38,7 +38,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Thief != null)
 				{
 					this.Options.push({
-						Text = "Our thief, %thief%, seems to have an idea.",
+						Text = "Nasz złodziej, %thief%, chyba ma pomysł.",
 						function getResult( _event )
 						{
 							return "Thief";
@@ -50,7 +50,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Minstrel != null)
 				{
 					this.Options.push({
-						Text = "%minstrel% is grinning ear to ear...",
+						Text = "%minstrel% uśmiecha się od ucha do ucha...",
 						function getResult( _event )
 						{
 							return "Minstrel";
@@ -62,7 +62,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Butcher != null)
 				{
 					this.Options.push({
-						Text = "It seems that %butcher% wants to give you a hand.",
+						Text = "Wygląda na to, że %butcher% chce ci pomóc.",
 						function getResult( _event )
 						{
 							return "Butcher";
@@ -72,7 +72,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "We\'d rather not get involved.",
+					Text = "Wolelibyśmy się w to nie mieszać.",
 					function getResult( _event )
 					{
 						return 0;
@@ -84,13 +84,13 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Good",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You muscle your way into the crowd, looking for fingers and toes or bloodied pockets. One man\'s got a good, lumpy sag in his pocket. You drive him into a corner and shake him down with a dagger to his throat.\n\n After him, you see a woman with a sickly grin on her face prancing along the cobbled stones. That\'s a scornful wench if you\'ve ever seen one. Pulling her aside, you quickly find the a finger and a toe in the linens of her frock. She lies and says they\'re just cooking ingredients. You tell her if that\'s the case then you\'ll report her to the guards for cannibalism. She gives them up.\n\n Returning the grossly extremities to the old man, you are promptly paid the five hundred crowns. He hardly even thanks you for your \'work\' before rushing away. He never did explain what, exactly, such things were for. You don\'t care. Five hundred crowns is five hundred crowns.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Przepychasz się przez tłum, wypatrując palców i palców u stóp albo zakrwawionych kieszeni. Jeden mężczyzna ma wyraźne, bulwiaste wybrzuszenie w kieszeni. Zaganiasz go w kąt i przyciskasz sztylet do gardła.\n\n Za nim widzisz kobietę z chorobliwym uśmiechem na twarzy, podskakującą po bruku. Jeśli kiedykolwiek widziałeś wzgardliwą ladacznicę, to właśnie ją. Odsuwając ją na bok, szybko znajdujesz palec i palec u stopy w fałdach jej sukni. Kłamie, mówiąc, że to tylko składniki do gotowania. Mówisz jej, że jeśli tak, to zgłosisz ją strażnikom za kanibalizm. Oddaje je.\n\n Oddając odrażające kończyny starcowi, natychmiast dostajesz pięćset koron. Ledwie ci dziękuje za twoją \"pracę\", zanim pospiesznie odchodzi. Nigdy nie wyjaśnił, do czego dokładnie takie rzeczy są potrzebne. Nie obchodzi cię to. Pięćset koron to pięćset koron.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Easy as it gets.",
+					Text = "Łatwizna.",
 					function getResult( _event )
 					{
 						return 0;
@@ -113,13 +113,13 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Bad",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You agree to the creepy old man\'s task and start going through the crowd, keeping a careful eye out for toes and fingers being where they shouldn\'t be, or lumpy pockets freshly and redly wet. It doesn\'t take long: a woman prances down the road, the front of her frock bubbling rather curiously with whatever she\'s got in the pocket. You pull her into an alleyway, drawing a dagger to keep her quiet. A finger and toe are found. As you go to take them, a man suddenly tackles you from behind. Crowns from your purse and the appendages go skittering across the cobblestones. A child takes one, a rat the other, where either runs off to is quickly obscured by a frenzy of peasants going after your coins. The man who tackled you loads up a punch.%SPEECH_ON%Sumbitch, you want her you gotta pay!%SPEECH_OFF%You cross your arms, block the strike, and twist your body to put him on the ground. He\'s about to say something else, but you momentarily replace his teeth with your knuckles and he goes quiet. Unfortunately, you won\'t be able to finish what you started and you\'ve lost a few coins in the process.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Zgadzasz się na zadanie obrzydliwego starca i zaczynasz przeczesywać tłum, uważnie wypatrując palców i palców u stóp tam, gdzie nie powinny być, albo świeżo, czerwono mokrych, wybrzuszonych kieszeni. Nie trwa to długo: kobieta kroczy drogą, a przód jej sukni dziwnie faluje od tego, co ma w kieszeni. Wciągasz ją w zaułek, dobywając sztyletu, by ją uciszyć. Znajdujesz palec i palec u stopy. Gdy chcesz je zabrać, ktoś nagle rzuca się na ciebie od tyłu. Korony z twojej sakiewki i te części ciała rozbiegają się po bruku. Dziecko chwyta jedno, szczur drugie, a gdzie uciekają, szybko ginie w zamieszaniu chłopów pędzących za twoimi monetami. Ten, który cię powalił, zamierza się do ciosu.%SPEECH_ON%Sukinsynu, chcesz ją, to płać!%SPEECH_OFF%Krzyżujesz ramiona, blokujesz uderzenie i skrętem ciała kładziesz go na ziemi. Ma coś jeszcze powiedzieć, ale na moment zastępujesz jego zęby swoimi kostkami i zapada cisza. Niestety, nie będziesz w stanie dokończyć tego, co zacząłeś, i straciłeś przy tym kilka monet.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn it!",
+					Text = "Cholera!",
 					function getResult( _event )
 					{
 						return 0;
@@ -143,13 +143,13 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Thief",
-			Text = "[img]gfx/ui/events/event_43.png[/img]%thief% laughs.%SPEECH_ON%Hell, this\'ll be easy.%SPEECH_OFF%He goes off to the crowd and you lose sight of him in an instant. The old man chews on his gums for awhile before raising his voice.%SPEECH_ON%This feller, he is one to trust?%SPEECH_OFF%Before you can answer, %thief% emerges from behind the old man\'s shoulder and drops a bloody bandage into his palms. The creepy man unwraps the linens to discover freshly strewn extremities. The thief smugly smiles.%SPEECH_ON%Any thief worth his salt learns to pickpocket before anything else. I usually go after keys instead of toes, but a job is a job. Also \'picked\' some other things of interest here and there. Take a look.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_43.png[/img]%thief% śmieje się.%SPEECH_ON%Cholera, to będzie łatwe.%SPEECH_OFF%Odchodzi do tłumu i tracisz go z oczu w mgnieniu oka. Starzec przez chwilę memle dziąsła, po czym podnosi głos.%SPEECH_ON%Temu jegomościowi można ufać?%SPEECH_OFF%Zanim zdążysz odpowiedzieć, %thief% wyłania się zza ramienia starca i wrzuca mu w dłonie zakrwawiony bandaż. Dziwny człowiek rozwija płótno i odkrywa świeżo pozyskane kończyny. Złodziej uśmiecha się z satysfakcją.%SPEECH_ON%Każdy złodziej wart swojej soli najpierw uczy się kieszonkowstwa. Zwykle biorę klucze, nie palce u stóp, ale robota to robota. Przy okazji \"podniosłem\" też parę innych ciekawostek tu i tam. Rzuć okiem.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(1);
@@ -192,13 +192,13 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Minstrel",
-			Text = "[img]gfx/ui/events/event_92.png[/img]%minstrel% the minstrel grabs the old man by his shoulders.%SPEECH_ON%Say, what mighty muscles you seem to have, my burly friend. I shan\'t ask why you need the toes and fingers of that dead man...%SPEECH_OFF%The old man nods and says he\'d never tell anyway. The minstrel continues.%SPEECH_ON%...but if you want a good, strong, and violent man, then am I not looking at it? It\'s you, old man! Take yer own fingers and toes and go with them to complete the task - ahem, whatever weird shite that might be, ahem - and you\'ll find the \'reward\' you\'re after. You are the hero of this story, can\'t you see?%SPEECH_OFF%The old man spits and shakes his head.%SPEECH_ON%You take me for a fool, don\'t ya? Our business here is through! Get out of my way you sorry sellswords.%SPEECH_OFF%The old man leaves. You ask the minstrel what the hell he\'s doing. He shrugs and holds up a purse of crowns.%SPEECH_ON%Sleight of hand.%SPEECH_OFF%Nicely done. But you ask where your own purse is. %minstrel% raises another sack.%SPEECH_ON%Really, really good sleight of hand.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_92.png[/img]%minstrel%, minstrel, chwyta starca za ramiona.%SPEECH_ON%Powiedz, jakie potężne mięśnie masz, mój krzepki przyjacielu. Nie będę pytał, po co ci palce u rąk i nóg tego wisielca...%SPEECH_OFF%Starzec kiwa głową i mówi, że i tak by nie powiedział. Minstrel ciągnie dalej.%SPEECH_ON%...ale jeśli chcesz dobrego, silnego i brutalnego mężczyzny, to czy nie patrzę właśnie na niego? To ty, starcze! Weź własne palce u rąk i nóg i idź z nimi dokończyć zadanie - echem, jakkolwiek dziwacznego gówna by to nie było, echem - a znajdziesz \"nagrodę\", której szukasz. Jesteś bohaterem tej historii, nie widzisz?%SPEECH_OFF%Starzec spluwa i kręci głową.%SPEECH_ON%Bierzesz mnie za głupca, co? Nasz interes tutaj dobiegł końca! Zejdź mi z drogi, żałosny najemniku.%SPEECH_OFF%Starzec odchodzi. Pytasz minstrela, co on do diabła wyprawia. Wzrusza ramionami i unosi sakiewkę z koronami.%SPEECH_ON%Zręczność dłoni.%SPEECH_OFF%Nieźle. Ale pytasz, gdzie jest twoja sakiewka. %minstrel% unosi drugi worek.%SPEECH_ON%Naprawdę, naprawdę niezła zręczność dłoni.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Very funny. Now hand it back.",
+					Text = "Bardzo śmieszne. A teraz oddawaj.",
 					function getResult( _event )
 					{
 						return 0;
@@ -243,13 +243,13 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Butcher",
-			Text = "[img]gfx/ui/events/event_19.png[/img]%butcher% the butcher spits and says he\'ll do it. You tell him that he\'s not exactly the thieving sort. He shakes his head.%SPEECH_ON%Naw. I mean I\'ll give him a finger. Just one, but it\'ll be a doozy and worth its weight in gold as far as this old fart\'s concerned. As far as you\'re concerned, captain, I want half the reward.%SPEECH_OFF%The creepy stranger nods as a smile crackles his dried, flaky skin.%SPEECH_ON%Yes... yes! A man who would do this would certainly fit the profile of the ingredients I need. Do it. Do it!%SPEECH_OFF%Before you can even agree to this, the butcher grabs a tong hanging off a nearby wall, leverages it atop an anvil, wedges a finger between the pincers, and presses his knee to the handle, promptly severing a finger all in one go. He wraps the hand before giving up the extremity to the stranger.%SPEECH_ON%There you have it: one especially cruel man\'s finger.%SPEECH_OFF%The stranger grabs it as though it were the key to the world. \'Marvelous!\', you think he says, but it\'s hard to hear as he hurriedly gives you some crowns and runs off. It\'s actually more than you originally agreed to. The butcher has certainly \'earned\' his half and you hand it over.",
+			Text = "[img]gfx/ui/events/event_19.png[/img]%butcher%, rzeźnik, spluwa i mówi, że to zrobi. Mówisz mu, że raczej nie jest typem złodzieja. Kręci głową.%SPEECH_ON%Nie. Chodzi o to, że dam mu palec. Tylko jeden, ale porządny i warty tyle co złoto w oczach tego starego pierdziela. A jeśli o ciebie chodzi, kapitanie, chcę połowę nagrody.%SPEECH_OFF%Dziwny obcy kiwa głową, a na jego wyschniętej, łuszczącej się skórze pojawia się uśmiech.%SPEECH_ON%Tak... tak! Człowiek, który by to zrobił, idealnie pasuje do profilu składników, których potrzebuję. Zrób to. Zrób to!%SPEECH_OFF%Zanim zdążysz się nawet zgodzić, rzeźnik chwyta kleszcze wiszące na pobliskiej ścianie, opiera je na kowadle, wkłada palec między szczęki i przyciska kolanem uchwyt, odcinając palec jednym ruchem. Opatruje dłoń, po czym oddaje kończynę nieznajomemu.%SPEECH_ON%Oto proszę: palec wyjątkowo okrutnego człowieka.%SPEECH_OFF%Obcy chwyta go tak, jakby był kluczem do świata. \"Cudowne!\" - jak sądzisz, mówi, ale trudno to usłyszeć, bo pośpiesznie wręcza ci trochę koron i ucieka. To w rzeczywistości więcej, niż pierwotnie ustaliliście. Rzeźnik z pewnością \"zarobił\" swoją połowę, więc mu ją przekazujesz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Insane.",
+					Text = "Obłęd.",
 					function getResult( _event )
 					{
 						return 0;

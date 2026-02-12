@@ -6,17 +6,17 @@ this.swordmaster_teaches_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.swordmaster_teaches";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_17.png[/img]An old man\'s voice is heard quietly issuing orders.%SPEECH_ON%The foot leads, the body follows. Again.%SPEECH_OFF%You find %swordmaster% the swordmaster and %swordstudent% practicing in a field. The elder shakes his head at the most recent display of swordsmanship.%SPEECH_ON%The foot leads, the body follows. Again!%SPEECH_OFF%The student practices what he is taught. Nodding, the swordmaster barks another order.%SPEECH_ON%Now do it in reverse. The foot retreats, the body follows. Do not retreat with your mind. Let your feet do the thinking for you. Instinct is survival! Thinking is death! Move as though the world demanded it. If a wind blows are you faster than the leaves which hear its call? I see. Good... you are learning. Now... again.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_17.png[/img]Słychać spokojny głos starego mężczyzny wydającego rozkazy.%SPEECH_ON%Stopa prowadzi, ciało podąża. Jeszcze raz.%SPEECH_OFF%Znajdujesz mistrza miecza %swordmaster% i %swordstudent% ćwiczących na polu. Starszy kręci głową na widok ostatniego popisu fechtunku.%SPEECH_ON%Stopa prowadzi, ciało podąża. Jeszcze raz!%SPEECH_OFF%Uczeń ćwiczy to, czego go uczą. Mistrz miecza kiwa głową i wydaje kolejne polecenie.%SPEECH_ON%Teraz na odwrót. Stopa się cofa, ciało podąża. Nie cofaj się umysłem. Niech twoje stopy myślą za ciebie. Instynkt to przetrwanie! Myślenie to śmierć! Ruszaj się, jakby świat tego żądał. Gdy wieje wiatr, czy jesteś szybszy niż liście, które słyszą jego zew? Widzę. Dobrze... uczysz się. A teraz... jeszcze raz.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Now put it to good use.",
+					Text = "Teraz wykorzystaj to w praktyce.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,13 +32,13 @@ this.swordmaster_teaches_event <- this.inherit("scripts/events/event", {
 				_event.m.Student.getBaseProperties().MeleeDefense += meleeDefense;
 				_event.m.Student.getSkills().update();
 				_event.m.Student.getFlags().add("taughtBySwordmaster");
-				_event.m.Student.improveMood(0.5, "Learned from " + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(1.0, "Has taught " + _event.m.Student.getName() + " something");
+				_event.m.Student.improveMood(0.5, "Nauczył się od " + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(1.0, "Nauczył " + _event.m.Student.getName() + " czegoś");
 				this.List = [
 					{
 						id = 17,
 						icon = "ui/icons/melee_defense.png",
-						text = _event.m.Student.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color] Melee Defense"
+						text = _event.m.Student.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color] obrony w zwarciu"
 					}
 				];
 

@@ -5,17 +5,17 @@ this.historian_records_adventures_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.historian_records_adventures";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_15.png[/img]Carrying a leathered tome in hand, %historian% shuffles into your tent. Without a word spoken he lays the book on the table and takes a step back. You set your quill pen down and ask what it is. He says to open it. Sighing, you open the book and come to find pages littered with names and events you know well. It is a history of the company and its adventures. You flip through the pages, seeing old tales that warm the heart and some that break it. You close the book and push it back across the table. The historian asks if it is alright, and you nod. You say give it to the men to read around camp for it will surely lift their spirits.",
+			Text = "[img]gfx/ui/events/event_15.png[/img]Niosąc w dłoniach oprawiony w skórę tom, %historian% wsuwa się do twojego namiotu. Bez słowa kładzie książkę na stole i cofa się o krok. Odkładasz pióro i pytasz, co to jest. Mówi, żebyś ją otworzył. Wzdychając, otwierasz księgę i widzisz strony pełne imion oraz wydarzeń, które dobrze znasz. To historia kompanii i jej przygód. Przerzucasz kartki, widząc dawne opowieści, które grzeją serce, i takie, które je łamią. Zamykasz książkę i przesuwasz ją z powrotem przez stół. Historyk pyta, czy wszystko w porządku, a ty kiwasz głową. Mówisz, by dać ją ludziom do czytania przy ogniskach, bo na pewno podniesie ich na duchu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The deeds of the %companyname% shan\'t be forgotten.",
+					Text = "Czyny %companyname% nie zostaną zapomniane.",
 					function getResult( _event )
 					{
 						return 0;

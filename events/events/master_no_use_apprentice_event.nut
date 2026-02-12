@@ -6,17 +6,17 @@ this.master_no_use_apprentice_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.master_no_use_apprentice";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%townImage%While walking about %townname%, you run into an old man dragging a youthful man by the ear.%SPEECH_ON%You want to be a master, it takes time! Blood! Sweat! Tears if yer of the cryin\' sort and there\'s no shame in that if ya are. Here, look! A sellsword! If you want to fight so bad, why not go to him?%SPEECH_OFF%You hold your hands out and ask for an explanation before getting offloaded some annoying git. The elderly man calms himself and lets the kid\'s ear go.%SPEECH_ON%Aye, I suppose you are owed more of an explanation. I\'m the fencing master of this town, but I teach discipline and patience before anyone so much can touch a sword! And this damned student of mine has neither! So I told him, if you want to fight so bad, get the hell out!%SPEECH_OFF%You look at the kid. He\'s got a fresh face, but there is in fact some impatient eagerness in his eyes. You ask him if what the swordmaster says is true. The kid nods.%SPEECH_ON%Yessir. And I\'d be more than happy to fight for you, too.%SPEECH_OFF%",
+			Text = "%townImage%Spacerując po %townname%, natykasz się na starca, który ciągnie młodzieńca za ucho.%SPEECH_ON%Chcesz być mistrzem, to wymaga czasu! Krwi! Potu! Łez, jeśli jesteś z płaczących, i nie ma w tym wstydu, jeśli jesteś. O, patrz! Najemnik! Jak tak chcesz walczyć, to czemu nie pójdziesz do niego?%SPEECH_OFF%Wyciągasz ręce i prosisz o wyjaśnienie, zanim zrzuci na ciebie jakiegoś irytującego gnoja. Starszy mężczyzna uspokaja się i puszcza ucho chłopaka.%SPEECH_ON%Aye, pewnie należy ci się wyjaśnienie. Jestem mistrzem fechtunku w tym mieście, ale uczę dyscypliny i cierpliwości, zanim ktokolwiek w ogóle dotknie miecza! A ten mój przeklęty uczeń nie ma ani jednego, ani drugiego! Więc powiedziałem mu: jak tak chcesz walczyć, to wynocha!%SPEECH_OFF%Patrzysz na chłopaka. Ma świeżą twarz, ale w oczach widać niecierpliwą gorliwość. Pytasz go, czy to, co mówi mistrz miecza, jest prawdą. Chłopak kiwa głową.%SPEECH_ON%Tak, panie. I chętnie będę walczył także dla ciebie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, we\'ll take him.",
+					Text = "Dobrze, weźmiemy go.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -27,7 +27,7 @@ this.master_no_use_apprentice_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, thanks. He\'s all yours.",
+					Text = "Nie, dzięki. Zostaje z tobą.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -43,7 +43,7 @@ this.master_no_use_apprentice_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"apprentice_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "An impatient student of a fencing and swordmaster, %name% didn\'t have the mental aptitude to stick with the trials and tribulations of becoming a master of the blade himself. But what he lacks in mental fortitude he more than makes up for in effort. You \'hired\' him simply by taking him off the old man\'s hands.";
+				_event.m.Dude.getBackground().m.RawDescription = "%name% to niecierpliwy uczeń mistrza fechtunku i miecza, któremu zabrakło hartu ducha, by przejść próby i trudy stawania się mistrzem ostrza. Ale to, czego brakuje mu w wytrwałości, nadrabia wysiłkiem. \'Zatrudniłeś\' go, po prostu zdejmując go z barków starego człowieka.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}

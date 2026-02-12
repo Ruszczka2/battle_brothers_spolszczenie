@@ -6,17 +6,17 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.warriors_death";
-		this.m.Title = "After the battle...";
+		this.m.Title = "Po bitwie...";
 		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_87.png[/img]The battle over, you look around at the destruction it had wrought. %deadbrother% is on his back, staring blankly at the skies with glazed eyes. Other brothers litter the battleground. They are ill-shaped, ragged, fractured and fragmented and soon fermented. It is a collectively cruel end. And now the flies are gathering, dotting the dead like skittering moles. They copulate on cold skin with shameless abandon and set about burrowing the next brood in the still-warm gore. %randombrother% walks up and asks what it is you wish to do with the bodies.",
+			Text = "[img]gfx/ui/events/event_87.png[/img]Bitwa skończona, rozglądasz się po zniszczeniu, jakie pozostawiła. %deadbrother% leży na plecach, wpatrując się bezmyślnie w niebo szklistymi oczami. Inni bracia leżą na polu bitwy. Są zdeformowani, poszarpani, połamani i rozerwani, wkrótce zaczną gnić. To wspólnie okrutny koniec. A teraz zlatują się muchy, znacząc martwych jak wiercące się krety. Kopulują na zimnej skórze bezwstydnie i zaczynają drążyć nowe gniazda w wciąż ciepłej rzezi. %randombrother% podchodzi i pyta, co chcesz zrobić z ciałami.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Just leave them there.",
+					Text = "Zostawcie ich tam.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let us honor the dead!",
+					Text = "Uczcijmy zmarłych!",
 					function getResult( _event )
 					{
 						return "D";
@@ -37,7 +37,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Gravedigger != null)
 				{
 					this.Options.push({
-						Text = "Let %gravedigger% the gravedigger handle it.",
+						Text = "Niech %gravedigger% grabarz się tym zajmie.",
 						function getResult( _event )
 						{
 							return "E";
@@ -50,13 +50,13 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_87.png[/img]You take a look up at the skies. Crows and archcrows circle overhead. They squall and sqwuak and bicker amongst one another as they await your departure. Sheathing your sword, you nod at the battleground.%SPEECH_ON%Loot the bodies. Leave the dead to the birds.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_87.png[/img]Zerkasz w niebo. Kruki i arkikruki krążą nad głową. Skrzeczą i kłócą się, czekając na twoje odejście. Chowając miecz, skinieniem wskazujesz pole bitwy.%SPEECH_ON%Splądrujcie ciała. Zostawcie martwych ptakom.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Tis a hungry world, after all.",
+					Text = "To w końcu głodny świat.",
 					function getResult( _event )
 					{
 						return 0;
@@ -91,7 +91,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(0.5, "Dismayed that fallen comrades were left to rot on the battlefield");
+					bro.worsenMood(0.5, "Przygnębiony tym, że polegli towarzysze zostali na polu bitwy");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -107,13 +107,13 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_28.png[/img]You nod toward the dead.%SPEECH_ON%Those were some fine men and fine men get a fine burial. We\'ll honor them just as we should: a good hole to sleep in, crowns which they can spend in the next world, and a feast to celebrate. I\'d expect the same to be done for me!%SPEECH_OFF%The surviving men cheer and begin preparations.",
+			Text = "[img]gfx/ui/events/event_28.png[/img]Wskazujesz na zmarłych.%SPEECH_ON%To byli dobrzy ludzie, a dobrzy ludzie zasługują na godny pochówek. Uczcimy ich tak, jak należy: porządną jamą do snu, koronami, które wydadzą w następnym świecie, i ucztą na cześć. Tego samego oczekiwałbym dla siebie!%SPEECH_OFF%Ci, którzy przeżyli, wiwatują i zaczynają przygotowania.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Now we can leave them to find their final rest.",
+					Text = "Teraz możemy zostawić ich w ich ostatecznym spoczynku.",
 					function getResult( _event )
 					{
 						return 0;
@@ -135,7 +135,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.improveMood(0.5, "Glad to see fallen comrades receive a fine farewell");
+					bro.improveMood(0.5, "Cieszy się, że polegli towarzysze dostali godne pożegnanie");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -151,20 +151,20 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]60[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]60[/color] koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_28.png[/img]You assign the duty of burials to %gravedigger%, a man well-practiced for this particular trade. It doesn\'t take him long to shovel perfectly squared holes into the ground. He wraps the bodies in linens before carefully placing them into their final rests. When it\'s all said and done, the graves lay across the ground as though they were an earthly fenceline knocked astray. Each mound of dirt has a stake before it with the dead brother\'s name carved into the wood. %gravedigger% stands his shovel and tents his hands on the handle. He nods at his work.%SPEECH_ON%They\'re in deep.%SPEECH_OFF%The man spits.%SPEECH_ON%Only thing after \'em now be the worms. Hope that don\'t bother ya - but anywhere a man goes once he\'s dead there be a mouth in need of new feed. Lest you burn the bodies, I s\'pose, but they say even then the spirits have their licks. Snortin\' smoke is a spirit\'s spice or some such thing.%SPEECH_OFF%Picking up his shovel, the gravedigger turns and leaves as though both his work and words were but dreams upon dreams.",
+			Text = "[img]gfx/ui/events/event_28.png[/img]Powierzasz obowiązek pochówku %gravedigger%, człowiekowi zaprawionemu w tym rzemiośle. Nie zajmuje mu długo wykopanie równych, kwadratowych dołów w ziemi. Owija ciała w płótno, nim ostrożnie ułoży je w ich ostatecznym spoczynku. Gdy wszystko się kończy, groby leżą w ziemi jakby były zbitą, rozrzuconą linią płotu. Każdy kopiec ma przed sobą palik z imieniem poległego brata wyrytym w drewnie. %gravedigger% opiera łopatę i kładzie na niej dłonie. Kiwając głową na swoją pracę, mówi:%SPEECH_ON%Są głęboko.%SPEECH_OFF%Mężczyzna spluwa.%SPEECH_ON%Teraz tylko robaki po nich będą. Mam nadzieję, że ci to nie przeszkadza - ale gdziekolwiek człowiek trafia po śmierci, tam jest paszcza potrzebująca nowej strawy. Chyba że spalisz ciała, co? Ale mówią, że nawet wtedy duchy mają swoje kąski. Wdychanie dymu to przyprawa ducha czy coś takiego.%SPEECH_OFF%Podnosząc łopatę, grabarz odwraca się i odchodzi, jakby jego praca i słowa były tylko snem we śnie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well... may they rest in peace.",
+					Text = "Cóż... niech spoczywają w pokoju.",
 					function getResult( _event )
 					{
 						return 0;
@@ -187,7 +187,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.improveMood(0.5, "Glad to see fallen comrades receive a fine farewell");
+					bro.improveMood(0.5, "Cieszy się, że polegli towarzysze dostali godne pożegnanie");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

@@ -6,16 +6,16 @@ this.hedge_knight_vs_raider_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.hedge_knight_vs_raider";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]%raider% is sitting out beside the campfire, his eyes set deep into the flames. A few moments ago, a couple of the men were heard yelling at him. A past as a raider isn\'t winning the man many friends. The hedge knight, %hedgeknight%, walks over and stands there beside him. As the two exchange glances, you\'re suddenly worried a fight you can\'t stop is going to break out. Instead, the hedge knight takes a seat. He speaks calmly, though his deep voice is still soundly scary.%SPEECH_ON%You raided coasts, yes? Killed women and children? Stole from the clergy?%SPEECH_OFF%The raider nods.%SPEECH_ON%Aye, and worse.%SPEECH_OFF%%hedgeknight% picks up a chunk of smoldering wood from the fire. He crushes it in his hand, the flames hissing into ash and smoke. He lets it crumble out of a calloused palm.%SPEECH_ON%You shouldn\'t mind what others say, raider. This is a nasty, hungry world, and you mind its teeth well. Let the weak cry out and die. We can only armor ourselves by our very being, wreathed in the envy of the dead who would gladly crush an infant\'s skull for a mere sip of the breath our lungs draw.%SPEECH_OFF%The raider grabs his own chunk of firewood and grinds it up. They shake hands and say nothing more.",
+			Text = "[img]gfx/ui/events/event_26.png[/img]%raider% siedzi przy ognisku, wpatrzony głęboko w płomienie. Przed chwilą słychać było, jak kilku ludzi na niego krzyczało. Przeszłość jako rabuś nie przynosi mu wielu przyjaciół. Rycerz z żywopłotu, %hedgeknight%, podchodzi i staje obok niego. Gdy wymieniają spojrzenia, nagle obawiasz się, że wybuchnie bójka, której nie zdołasz powstrzymać. Zamiast tego rycerz siada. Mówi spokojnie, choć jego głęboki głos wciąż brzmi złowieszczo.%SPEECH_ON%Napadałeś na wybrzeża, tak? Zabijałeś kobiety i dzieci? Okradałeś duchownych?%SPEECH_OFF%Rabuś kiwa głową.%SPEECH_ON%Tak, i gorzej.%SPEECH_OFF%%hedgeknight% podnosi z ognia kawałek tlącego drewna. Miażdży go w dłoni, płomienie syczą, zamieniając się w popiół i dym. Pozwala mu się rozsypać z zrogowaciałej dłoni.%SPEECH_ON%Nie powinieneś przejmować się tym, co mówią inni, rabusiu. To paskudny, głodny świat i dobrze znasz jego zęby. Niech słabi krzyczą i giną. Możemy tylko opancerzyć się samym istnieniem, opleceni zazdrością umarłych, którzy chętnie zmiażdżyliby czaszkę niemowlęcia za sam łyk oddechu, który niosą nasze płuca.%SPEECH_OFF%Rabuś chwyta własny kawałek drewna i rozciera go w dłoniach. Ściskają dłonie i nie mówią już nic więcej.",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This world favors the strong.",
+					Text = "Ten świat sprzyja silnym.",
 					function getResult( _event )
 					{
 						return 0;

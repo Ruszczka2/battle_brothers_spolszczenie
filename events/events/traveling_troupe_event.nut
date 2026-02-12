@@ -7,16 +7,16 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.traveling_troupe";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Przy drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_92.png[/img]While camping beside the road, a colorful wagon trundles on up with a sort of clanking, jingling musical immodesty. You didn\'t think it a particularly big cart, but about fifteen men and women inexplicably pour out of its back. Painted faces, musical instruments, juggling balls, longswords for swallowing, wine jugs for firebreathing, the troupe of entertainers fan out and demonstrate mini-talent shows as though you\'d already paid for their services. When they finish, they clap, stomp their feet, and freeze before you, hands out, smiles across their faces. A white-faced mime ironically speaks.%SPEECH_ON%What say you, travelers, care for a show? A mere %payment% crowns to entertain you all evening!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_92.png[/img]Podczas obozu przy drodze z turkotem podjeżdża kolorowy wóz, brzęcząc i dzwoniąc muzyczną bezwstydnością. Nie wydawał się szczególnie duży, ale z jego tyłu wylewa się około piętnastu mężczyzn i kobiet. Pomalowane twarze, instrumenty, piłki do żonglerki, miecze do połykania, dzbany wina do zionęcia ogniem - trupa artystów rozchodzi się i prezentuje mini‑pokazy talentów, jakbyś już zapłacił za ich usługi. Gdy kończą, klaszczą, tupią i zamierają przed tobą z wyciągniętymi dłońmi i uśmiechami na twarzach. Białolicy mim ironicznie przemawia.%SPEECH_ON%Cóż powiesz, podróżniku, chcesz przedstawienia? Zaledwie %payment% koron, by zabawiać was przez cały wieczór!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Sure, we\'ll pay for a show.",
+					Text = "Jasne, zapłacimy za przedstawienie.",
 					function getResult( _event )
 					{
 						return "Regular";
@@ -29,7 +29,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Entertainer != null)
 				{
 					this.Options.push({
-						Text = "%entertainerfull%, what say you?",
+						Text = "%entertainerfull%, co powiesz?",
 						function getResult( _event )
 						{
 							return "Entertainer";
@@ -41,7 +41,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Noble != null)
 				{
 					this.Options.push({
-						Text = "You look like you have something on your mind, %noblefull%.",
+						Text = "Wyglądasz, jakbyś miał coś na głowie, %noblefull%.",
 						function getResult( _event )
 						{
 							return "Noble";
@@ -51,7 +51,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "How about you just hand over your valuables?",
+					Text = "A może po prostu oddacie kosztowności?",
 					function getResult( _event )
 					{
 						return "Robbing";
@@ -59,7 +59,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 
 				});
 				this.Options.push({
-					Text = "We\'re good, thanks.",
+					Text = "Jest dobrze, dzięki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -71,13 +71,13 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Entertainer",
-			Text = "[img]gfx/ui/events/event_26.png[/img]%entertainer% steps forward and picks up some of the troupe\'s tools of trade. He tests them out, impressing the entertainers with how well he\'s able to use their own equipment. The mime asks if perhaps they could play a couple of tunes with him. He nods and joins the entertainers, putting on a show that\'s for the ages. When it\'s all over, the troupe is so impressed that they try and recruit the man. You tell them that ain\'t happening and %entertainer% nods.%SPEECH_ON%My time is with the %companyname% now, but I appreciate the compliment.%SPEECH_OFF%You ask how much for the show, but the troupe leader shakes his head.%SPEECH_ON%No need. It was a pleasure playing with him. We\'ve not put on a show like that in some time and the practice will do us well.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]%entertainer% wychodzi naprzód i podnosi kilka narzędzi z rzemiosła trupy. Testuje je, imponując artystom tym, jak dobrze potrafi używać ich własnego sprzętu. Mim pyta, czy mogliby zagrać z nim kilka melodii. Ten kiwa głową i dołącza do artystów, dając pokaz na miarę legend. Gdy wszystko się kończy, trupa jest tak zachwycona, że próbuje zwerbować mężczyznę. Mówisz im, że nic z tego, a %entertainer% przytakuje.%SPEECH_ON%Mój czas należy teraz do %companyname%, ale dziękuję za komplement.%SPEECH_OFF%Pytasz, ile kosztuje pokaz, lecz lider trupy kręci głową.%SPEECH_ON%Nie ma potrzeby. To była przyjemność z nim grać. Nie wystawialiśmy takiego pokazu od dawna i taka praktyka dobrze nam zrobi.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Bye.",
+					Text = "Bywajcie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -92,7 +92,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.0, "Entertained by a traveling troupe");
+					bro.improveMood(1.0, "Zabawiony przez wędrowną trupę");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -108,13 +108,13 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Noble",
-			Text = "[img]gfx/ui/events/event_26.png[/img]Before the troupe can start, %nobleman% the nobleman gets up and asks if they know of a particular song from his days in the court.%SPEECH_ON%They used to sing it when I was a little lad. It\'s been years since I\'ve heard it.%SPEECH_OFF%The mime, again breaking character, grins and loudly proclaims that they know it. He snaps his fingers and the musicians of the group pick up their instruments. When they start, the tune is instantly catchy. It\'s a stringed and horn orchestration, played alongside a large woman singing from both heart and belly. She is a tempest of a singer, bringing both the quiet and ferocity of a large storm\'s coming and going, and her lyrics are that of incredible heroism of yore.\n\n After the troupe finishes, you ask how much you owe them. The mime shakes his head.%SPEECH_ON%No, sir, payment is not necessary. It\'s been awhile since that got requested and it was a pleasure to play it for you.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Zanim trupa zacznie, %nobleman% szlachcic wstaje i pyta, czy znają pewną pieśń z czasów jego pobytu na dworze.%SPEECH_ON%Śpiewali ją, gdy byłem małym chłopcem. Minęły lata, odkąd ją słyszałem.%SPEECH_OFF%Mim, znów łamiąc rolę, uśmiecha się i głośno ogłasza, że ją znają. Pstryka palcami, a muzycy chwytają instrumenty. Gdy zaczynają, melodia od razu wpada w ucho. To orkiestracja strun i rogów, której towarzyszy wielka kobieta śpiewająca z serca i brzucha. Jest jak burza w głosie, niosąc zarazem ciszę i gwałtowność wielkiej nawałnicy, a jej słowa mówią o niezwykłym bohaterstwie dawnych dni.\n\n Gdy trupa kończy, pytasz, ile im winien. Mim kręci głową.%SPEECH_ON%Nie, panie, zapłata nie jest potrzebna. Dawno nikt o to nie prosił i było nam miło zagrać to dla was.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Beautiful.",
+					Text = "Piękne.",
 					function getResult( _event )
 					{
 						return 0;
@@ -129,7 +129,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.0, "Entertained by a traveling troupe");
+					bro.improveMood(1.0, "Zabawiony przez wędrowną trupę");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -145,12 +145,12 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Robbing",
-			Text = "[img]gfx/ui/events/event_60.png[/img]You order the troupe raided. The mime, this time actually in character, holds up his hands and mouths \'what?\'. But the playfulness is wiped away when %randombrother% walks up and plants a punch right on his chin. The mime goes down with a catlike cry, mewling in the mud as he nurses his jaw.\n\nThe rest of the company knocks the troupe around while raiding their wagon for goods. A juggler gets kicked right in the balls and a singer has her throat chopped by %randombrother2%\'s hand. The sword swallower tries to hide his sword the only place he knows where, but a mercenary retrieves it with a rather painful unsheathing. The firebreather drinks the entirety of his jug then asks if you want to take that, too. You have him gut-punched for his snark.\n\n When it\'s all said and done, there really isn\'t much to take as beating up jesters isn\'t the most profitable business. At least with a busted mouth maybe the mime will do his job better.",
+			Text = "[img]gfx/ui/events/event_60.png[/img]Rozkazujesz obrabować trupę. Mim, tym razem faktycznie w roli, unosi dłonie i bezgłośnie pyta: \'co?\'. Ale zabawa kończy się, gdy %randombrother% podchodzi i sadzi mu pięść prosto w brodę. Mim pada z kocim jękiem, miaucząc w błocie, gdy trzyma się za szczękę.\n\nReszta kompanii obija trupę, przeszukując ich wóz w poszukiwaniu towarów. Żongler dostaje kopa prosto w jaja, a śpiewaczka ma gardło ściśnięte przez dłoń %randombrother2%. Połykacz mieczy próbuje ukryć swój miecz w jedynym miejscu, które zna, ale najemnik wyciąga go, boleśnie rozszarpując. Zioniący ogniem wypija cały dzban, po czym pyta, czy chcesz zabrać i to. Dostaje cios w brzuch za zuchwałość.\n\n Gdy wszystko się kończy, nie ma wiele do zabrania, bo bicie błaznów nie jest najbardziej dochodowym interesem. Przynajmniej z rozbitą gębą mim może lepiej wykonywać swoją pracę.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Learn to mime, you creepy prick.",
+					Text = "Naucz się mimu, ty obleśny draniu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -166,21 +166,21 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/weapons/lute");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.Math.rand(50, 200);
 				this.World.Assets.addMoney(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -188,7 +188,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getBackground().getID() == "background.raider")
 					{
-						bro.improveMood(1.0, "Enjoyed beating up a traveling troupe");
+						bro.improveMood(1.0, "Cieszył się z obicia wędrownej trupy");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -205,12 +205,12 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Regular",
-			Text = "[img]gfx/ui/events/event_26.png[/img]You pay for a show which the troupe puts on quite well. The jesters crack out some jokes, the jugglers juggle which is sorta old-hat but whatever, singers sing, swords get swallowed, fire \'breathed\', and the mime, well, he\'s godawful and you actually hope he dies.\n\n When it\'s all said and done, you do feel like you got your money\'s worth and the men are happy.",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Płacisz za przedstawienie, które trupa wystawia całkiem dobrze. Błaźni rzucają żartami, żonglerzy żonglują, co jest już trochę oklepane, ale trudno, śpiewacy śpiewają, miecze są połykane, ogniem się \'zionie\', a mim, cóż, jest okropny i naprawdę masz nadzieję, że zginie.\n\n Gdy wszystko się kończy, czujesz, że dostałeś warte swojej ceny przedstawienie, a ludzie są zadowoleni.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Thanks.",
+					Text = "Dzięki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -224,13 +224,13 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Payment + "[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Payment + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.0, "Entertained by a traveling troupe");
+					bro.improveMood(1.0, "Zabawiony przez wędrowną trupę");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

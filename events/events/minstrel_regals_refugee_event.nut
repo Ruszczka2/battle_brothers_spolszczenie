@@ -6,17 +6,17 @@ this.minstrel_regals_refugee_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.minstrel_regals_refugee";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img] The company sits around a fire when %minstrel% the minstrel notices the refugee, %refugee%, sitting solemnly by himself. Within but a moment, the minstrel is on his feet, standing high on a stump, and waving his arms wide.%SPEECH_ON%Lo\', the town of %refugee% was small, its place quaint, and its food, well, a little on the \'eh\' side. But ho\'! Were its people big! For here sits amongst our company one of its kin, the world after his spirit, death on his heels, yet here he be, and we\'ve but only thanks - and crowns! - to offer him! Such is the price of his company, and such we are willing to give.%SPEECH_OFF%The minstrel sits back down and bows to the refugee. All of the %companyname% stands up and cheers, bringing a rare smile to %refugee%\'s face.",
+			Text = "[img]gfx/ui/events/event_26.png[/img] Kompania siedzi przy ognisku, gdy %minstrel% minstrela zauważa uchodźcę, %refugee%, siedzącego samotnie i posępnie. Po chwili minstrela jest już na nogach, stoi wysoko na pniu i szeroko rozkłada ramiona.%SPEECH_ON%Oto miasto %refugee% było małe, miejsce urocze, a jedzenie, cóż, tak sobie. Lecz hoj! Lud jego był wielki! Bo oto pośród naszej kompanii siedzi jeden z nich, świat depcze mu po piętach, śmierć u jego stóp, a jednak tu jest, a my mamy mu do zaoferowania tylko wdzięczność - i korony! - to cena jego towarzystwa, a taką jesteśmy gotowi zapłacić.%SPEECH_OFF%Minstrela siada z powrotem i kłania się uchodźcy. Cała %companyname% wstaje i wiwatuje, wywołując rzadki uśmiech na twarzy %refugee%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Bravo!",
+					Text = "Brawo!",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,7 +28,7 @@ this.minstrel_regals_refugee_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Minstrel.getImagePath());
 				this.Characters.push(_event.m.Refugee.getImagePath());
-				_event.m.Refugee.improveMood(1.0, "Was regaled by " + _event.m.Minstrel.getName());
+				_event.m.Refugee.improveMood(1.0, "Został uraczony przez " + _event.m.Minstrel.getName());
 
 				if (_event.m.Refugee.getMoodState() >= this.Const.MoodState.Neutral)
 				{

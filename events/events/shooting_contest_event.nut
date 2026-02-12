@@ -6,17 +6,17 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.shooting_contest";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img] A hint of murmuring grows louder and louder until you can no longer focus. You put your quill pen down with the sort of energy the ink bottle can take without breaking and step out of your tent. %archer1% and %archer2% are standing there bickering over who is the better shot. Seeing you, they waste little time asking if they can hold a shooting contest to decide who is right.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Szmer rozmów narasta, aż nie możesz się już skupić. Odkładasz pióro z taką energią, jaką kałamarz jest w stanie znieść bez rozbicia, i wychodzisz z namiotu. %archer1% i %archer2% stoją i kłócą się o to, kto lepiej strzela. Gdy cię widzą, niewiele czasu mija, zanim pytają, czy mogą urządzić konkurs strzelecki, by rozstrzygnąć, kto ma rację.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, fine.",
+					Text = "Dobrze, niech będzie.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -24,7 +24,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We can\'t afford to waste the arrows.",
+					Text = "Nie stać nas na marnowanie strzał.",
 					function getResult( _event )
 					{
 						return "D";
@@ -41,13 +41,13 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_10.png[/img] You throw your hands up and tell the men to do what they must before retiring back to your tent. Outside comes the twang of released arrows quickly followed by the thwap of them finding their targets. Again and again. The din of men grows louder as what you can only assume what is a throng of observers grows. Finally, the contest is at some sort of end - indicated by a refreshing silence - and you get back to work.",
+			Text = "[img]gfx/ui/events/event_10.png[/img]Rozkładasz ręce i mówisz ludziom, by robili, co muszą, a potem wracasz do namiotu. Na zewnątrz słychać świst wypuszczanych strzał, zaraz potem głuche uderzenia w cel. Raz po raz. Gwar mężczyzn narasta, bo najwyraźniej zbiera się tłum obserwatorów. W końcu konkurs jakoś dobiega końca - o czym świadczy kojąca cisza - i wracasz do pracy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Peace and quiet at last.",
+					Text = "Wreszcie spokój i cisza.",
 					function getResult( _event )
 					{
 						return 0;
@@ -66,7 +66,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_ammo.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-30[/color] Ammunition"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-30[/color] amunicji"
 					}
 				];
 				_event.m.Archer1.getBaseProperties().RangedSkill += 1;
@@ -74,27 +74,27 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_skill.png",
-					text = _event.m.Archer1.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Ranged Skill"
+					text = _event.m.Archer1.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] umiejętności dystansowej"
 				});
 				_event.m.Archer2.getBaseProperties().RangedSkill += 1;
 				_event.m.Archer2.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_skill.png",
-					text = _event.m.Archer2.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Ranged Skill"
+					text = _event.m.Archer2.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] umiejętności dystansowej"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_10.png[/img]Feeling as though their arguments will never end, you give them the go-ahead to have their little competition before retiring back to your tent. Soon thereafter you hear the arrows nocking, releasing, and finding targets. Things which go \'thwang\' soon go \'thwap\' and the air is slowly filled with the din of a watching crowd. As you try to focus, you notice that the men have been shooting fervently for quite some time now. You step back out of your tent to find the two archers bickering some more, each one pointing a finger at the other before picking up an arrow and angrily launching it downrange. Their targets aren\'t even targets anymore, but small bushes of arrow shafts upon which break every other shot that lands upon them.\n\nShaking your head, you order the two men to stop at once before they use up every last arrow the company has.",
+			Text = "[img]gfx/ui/events/event_10.png[/img]Czując, że ich kłótnia nigdy się nie skończy, pozwalasz im na mały konkurs, zanim wracasz do namiotu. Wkrótce słychać zakładanie strzał, ich wypuszczanie i trafianie w cele. Dźwięki \'thwang\' szybko zmieniają się w \'thwap\', a powietrze powoli wypełnia gwar widowni. Gdy próbujesz się skupić, zauważasz, że mężczyźni strzelają zawzięcie już od dłuższego czasu. Wychodzisz z namiotu i widzisz, jak dwóch łuczników znowu się kłóci, każdy wskazuje palcem na drugiego, po czym chwyta strzałę i z wściekłością posyła ją w dół strzelnicy. Ich cele nie są już nawet celami, tylko małymi krzakami z drzewców strzał, na których co drugie trafienie się łamie.\n\nKręcisz głową i każesz im natychmiast przestać, zanim zużyją ostatnią strzałę kompanii.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Can\'t leave you men alone for two seconds!",
+					Text = "Nie można was zostawić na dwie sekundy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -113,7 +113,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_ammo.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-60[/color] Ammunition"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-60[/color] amunicji"
 					}
 				];
 				_event.m.Archer1.getBaseProperties().Bravery += 1;
@@ -121,27 +121,27 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Archer1.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Archer1.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] determinacji"
 				});
 				_event.m.Archer2.getBaseProperties().Bravery += 1;
 				_event.m.Archer2.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Archer2.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Archer2.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] determinacji"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "You shake your head no for supplies are far too low to enage in such behavior. The men sigh and walk away, continuing to argue with one another long and loud into the distance.",
+			Text = "Kręcisz głową, bo zapasy są zbyt małe, by bawić się w takie rzeczy. Mężczyźni wzdychają i odchodzą, dalej kłócąc się głośno w oddali.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "There are more important things to do.",
+					Text = "Są ważniejsze rzeczy do zrobienia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -153,7 +153,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Archer1.getImagePath());
 				this.Characters.push(_event.m.Archer2.getImagePath());
-				_event.m.Archer1.worsenMood(1.0, "Was denied a request");
+				_event.m.Archer1.worsenMood(1.0, "Odmówiono mu prośby");
 
 				if (_event.m.Archer1.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -164,7 +164,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Archer2.worsenMood(1.0, "Was denied a request");
+				_event.m.Archer2.worsenMood(1.0, "Odmówiono mu prośby");
 
 				if (_event.m.Archer2.getMoodState() < this.Const.MoodState.Neutral)
 				{

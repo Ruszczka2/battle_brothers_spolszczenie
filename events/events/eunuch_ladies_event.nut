@@ -6,17 +6,17 @@ this.eunuch_ladies_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.eunuch_ladies";
-		this.m.Title = "At %town%";
+		this.m.Title = "W %town%";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_85.png[/img]Word is spreading about %eunuch% the eunuch. Apparently, him and some brothers visited the town brothel. The whores and brothers alike initially made fun of the eunuch, but he demanded only five minutes with the most experienced of the ladies. She came back out after two minutes and the rumors about %eunuch%\'s bedroom prowess has only exploded from there.\n\nNow, half the town, more precisely its women, speak highly of the %companyname% and would love to see it visit again. %eunuch% himself gives you a wink and a smile. You notice that he\'s rather warty around the lips.",
+			Text = "[img]gfx/ui/events/event_85.png[/img]W mieście krąży wieść o eunuchu %eunuch%. Podobno on i kilku braci odwiedzili miejscowy burdel. Zarówno dziwki, jak i bracia początkowo kpili z eunucha, ale on zażądał zaledwie pięciu minut z najbardziej doświadczoną z pań. Wyszła po dwóch minutach, a plotki o łóżkowych umiejętnościach %eunuch% tylko od tego wybuchły.\n\nTeraz połowa miasta, a dokładniej jego kobiety, mówi dobrze o %companyname% i chętnie widziałaby was ponownie. Sam %eunuch% posyła ci mrugnięcie i uśmiech. Zauważasz, że ma dość brodawkowate usta.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A hidden talent.",
+					Text = "Ukryty talent.",
 					function getResult( _event )
 					{
 						return 0;

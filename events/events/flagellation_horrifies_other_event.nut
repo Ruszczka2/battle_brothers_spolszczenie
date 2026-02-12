@@ -6,17 +6,17 @@ this.flagellation_horrifies_other_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.flagellation_horrifies_other";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_38.png[/img]Flesh torn asunder. Parts of man rendered unfamiliar. A copper stench in the air. These are the things you find when beckoned by a brother\'s call.\n\n %flagellant% the flagellant stooped over on a stump, his whole body unmoving save for his arm which flicks a glass and thorn-peppered whip against his own back. A gargling belch draws your eyes to %weakbro% who is bent over in the tall grass losing his lunch. Sensing that he is disturbing the others, %flagellant% cracks something of a smile that doesn\'t falter an inch to the horror he\'s committing to his own hide.%SPEECH_ON%Fear not the reaper, %weakbro%, I shall bleed even more in favor of saving your soul.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_38.png[/img]Ciało rozdarte. Części człowieka stają się obce. W powietrzu metaliczny zapach. To właśnie zastajesz, gdy wzywa cię brat.\n\n %flagellant%, biczownik, pochylony nad pniakiem, całym ciałem nieruchomy, poza ramieniem, które smaga szklano-cierniastym biczem własne plecy. Bulgoczące odbicie przyciąga twój wzrok do %weakbro%, który zgina się w wysokiej trawie, tracąc obiad. Czując, że przeszkadza innym, %flagellant% uśmiecha się w sposób, którego nie mąci ani odrobina grozy, jaką zadaje własnej skórze.%SPEECH_ON%Nie lękaj się żniwiarza, %weakbro%, będę krwawić jeszcze bardziej, aby ocalić twoją duszę.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "{A strange custom. | This can\'t be healthy.}",
+					Text = "{Dziwny zwyczaj. | To nie może być zdrowe.}",
 					function getResult( _event )
 					{
 						return 0;
@@ -56,7 +56,7 @@ this.flagellation_horrifies_other_event <- this.inherit("scripts/events/event", 
 					this.List.push({
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Flagellant.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Flagellant.getName() + " doznaje " + injury.getNameOnly()
 					});
 				}
 				else
@@ -65,7 +65,7 @@ this.flagellation_horrifies_other_event <- this.inherit("scripts/events/event", 
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Flagellant.getName() + " suffers light wounds"
+						text = _event.m.Flagellant.getName() + " doznaje lekkich ran"
 					});
 				}
 			}

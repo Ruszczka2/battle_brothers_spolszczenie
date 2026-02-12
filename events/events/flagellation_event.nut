@@ -6,17 +6,17 @@ this.flagellation_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.flagellation";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%otherguy% approaches with a pained look on his face. His helmet is in hand as he wipes his brow.%SPEECH_ON%Sir, uh, you should come and see this.%SPEECH_OFF%You inquire as to what it is you are going to see.%SPEECH_ON%I don\'t have the words for it. You\'d best come and see with your own eyes.%SPEECH_OFF%You look down at your work - plotting the march for the coming days - but, judging by the look on the brother\'s face, it can wait.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%otherguy% podchodzi z bolesnym wyrazem twarzy. Trzyma hełm w dłoni, ocierając czoło.%SPEECH_ON%Panie, eee, powinieneś to zobaczyć.%SPEECH_OFF%Pytasz, co takiego masz zobaczyć.%SPEECH_ON%Nie mam na to słów. Najlepiej zobaczysz na własne oczy.%SPEECH_OFF%Spoglądasz na swoją pracę - planowanie marszu na nadchodzące dni - ale sądząc po wyrazie twarzy brata, to może poczekać.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Show me, then.",
+					Text = "W takim razie pokaż.",
 					function getResult( _event )
 					{
 						return "B";
@@ -32,13 +32,13 @@ this.flagellation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_38.png[/img]You get up and have him lead you to whatever it is that\'s causing an issue. You come across a throng of brothers circled around something or someone. Breaking your way through the crowd, the company quiets as you come into the clearing to find %flagellant_short% the flagellant unconscious on the ground.\n\nHis back is stripped raw and you think you can even see a rib or two. Thorns have broken off his brutish whip, embedding themselves in his flesh, and his skin hangs in strands where it hangs at all. It is good he has passed out. Not because he would be horrible in pain, but because you think he might not otherwise have stopped. You order the men to clean him up, dress his wounds, and hide his tools of misery.",
+			Text = "[img]gfx/ui/events/event_38.png[/img]Wstajesz i pozwalasz mu zaprowadzić się do tego, co wywołuje problem. Natrafiasz na tłum braci otaczających coś lub kogoś. Przepychając się przez nich, wchodzisz na polanę, a kompania cichnie, gdy znajdujesz %flagellant_short% biczownika nieprzytomnego na ziemi.\n\nJego plecy są zdarte do żywego i wydaje ci się, że widzisz nawet jedno czy dwa żebra. Z jego brutalnego bicza odłamały się ciernie, wbijając się w ciało, a skóra zwisa pasmami tam, gdzie w ogóle jeszcze się trzyma. Dobrze, że zemdlał. Nie dlatego, że cierpiałby straszliwy ból, ale dlatego, że inaczej pewnie by się nie zatrzymał. Rozkazujesz ludziom oczyścić go, opatrzyć rany i ukryć jego narzędzia cierpienia.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "At least he didn\'t kill himself.",
+					Text = "Przynajmniej się nie zabił.",
 					function getResult( _event )
 					{
 						return 0;
@@ -58,7 +58,7 @@ this.flagellation_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = injury.getIcon(),
-							text = _event.m.Flagellant.getName() + " suffers " + injury.getNameOnly()
+							text = _event.m.Flagellant.getName() + " doznaje " + injury.getNameOnly()
 						}
 					];
 				}
@@ -69,7 +69,7 @@ this.flagellation_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = _event.m.Flagellant.getName() + " suffers light wounds"
+							text = _event.m.Flagellant.getName() + " doznaje lekkich ran"
 						}
 					];
 				}

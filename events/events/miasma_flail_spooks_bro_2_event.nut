@@ -5,17 +5,17 @@ this.miasma_flail_spooks_bro_2_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.miasma_flail_spooks_bro_2";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{You find %hauntedbrother% staring into the Grand Diviner\'s flail. The glassy bulb is filled with mist, and the sellsword is raking his tongue to suck up the condensation. Hand to your sword, you ask what he\'s doing, and the man freezes, and his eyes open and he jerks back like a man snorting awake knowing he\'s late for work.%SPEECH_ON%Augh! What the fark? How did... I was sleeping, when... what the fark!%SPEECH_OFF%Some of the men have said the weapon has been murmuring when nobody\'s looking, and it seems every so often it does capture someone\'s ear...}",
+			Text = "%terrainImage%{Zastajesz %hauntedbrother% wpatrującego się w cep Wielkiego Wróżbity. Szklana bańka wypełniona jest mgłą, a najemnik przesuwa językiem, by zlizać skropliny. Z ręką na mieczu pytasz, co robi, a mężczyzna zastyga, otwiera szeroko oczy i odskakuje, jak człowiek gwałtownie wybudzony ze snu i spóźniony do pracy.%SPEECH_ON%Ugh! Co do cholery? Jak... ja spałem, kiedy... co do cholery!%SPEECH_OFF%Niektórzy mówią, że broń szemrze, gdy nikt nie patrzy, i wygląda na to, że co jakiś czas przykuwa czyjąś uwagę...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s only a weapon, you fools.",
+					Text = "To tylko broń, głupcy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.miasma_flail_spooks_bro_2_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Dude.worsenMood(1.0, "Was ensorcelled by the Grand Diviner\'s Flail");
+				_event.m.Dude.worsenMood(1.0, "Został oczarowany cepem Wielkiego Wróżbity");
 
 				if (_event.m.Dude.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -41,7 +41,7 @@ this.miasma_flail_spooks_bro_2_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Dude.getName() + " suffers light wounds"
+					text = _event.m.Dude.getName() + " doznaje lekkich ran"
 				});
 			}
 

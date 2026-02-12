@@ -5,17 +5,17 @@ this.optimist_lost_battle_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.optimist_lost_battle";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_88.png[/img]Despite a recent defeat, %optimist% still sees a bright future for the %companyname%.%SPEECH_ON%Not all of life can be spent standin\', fellas. Sometimes it\'s gotta be spent getting\' back up. But we\'ll never spend it layin\' down forever, I know that much! This company\'s too good for that lollygaggin\' shite.%SPEECH_OFF%The ever optimistic sellsword\'s relentless positivity rubs off on some of the men, raising their spirits and leaving them ready for the tomorrows to come.",
+			Text = "[img]gfx/ui/events/event_88.png[/img]Mimo niedawnej porażki %optimist% wciąż widzi świetlaną przyszłość dla %companyname%.%SPEECH_ON%Nie całe życie można spędzić na nogach, chłopaki. Czasem trzeba je spędzić, podnosząc się. Ale nie spędzimy go na leżeniu na zawsze, to wiem na pewno! Ta kompania jest za dobra na takie obijanie się.%SPEECH_OFF%Nieustanna pozytywność wiecznie optymistycznego najemnika udziela się części ludzi, podnosząc ich na duchu i sprawiając, że są gotowi na to, co przyniesie jutro.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A man to go down fighting with.",
+					Text = "Człowiek, z którym warto zginąć w walce.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.optimist_lost_battle_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Optimist.getImagePath());
-				_event.m.Optimist.improveMood(0.5, "Is optimistic despite a recent setback");
+				_event.m.Optimist.improveMood(0.5, "Jest optymistą mimo niedawnej porażki");
 
 				if (_event.m.Optimist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -48,7 +48,7 @@ this.optimist_lost_battle_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50 && !bro.getSkills().hasSkill("trait.pessimist"))
 					{
-						bro.improveMood(0.5, "Rallied by " + _event.m.Optimist.getName() + "\'s optimism");
+						bro.improveMood(0.5, "Podniesiony na duchu przez optymizm " + _event.m.Optimist.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

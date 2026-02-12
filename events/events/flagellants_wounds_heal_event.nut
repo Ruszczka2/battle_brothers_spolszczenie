@@ -5,17 +5,17 @@ this.flagellants_wounds_heal_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.flagellants_wounds_heal";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_39.png[/img]%flagellant% the flagellant is found sitting cross-legged before a campfire. He\'s all alone save the millmoths fluttering dangerously close to the flames. Sensing your presence, he calls you over. You take a seat beside him and he smiles at you.%SPEECH_ON%I\'ve become a better man since joining this company.%SPEECH_OFF%You nod as he surely has. He continues.%SPEECH_ON%I\'ve bled for the gods a great deal, but my wounds... they are but scars now. I feel stronger than ever.%SPEECH_OFF%Again you nod, but then quickly ask if he is going to stop hurting himself. The man\'s eyes stare into the red-brimming embers. He shakes his head no.%SPEECH_ON%I will bleed for the gods until they say no more.%SPEECH_OFF%Wondering aloud, you ask if the gods have spoken to him at all. Without a pause the man shakes his head no again.%SPEECH_ON%They have not and so I shall bleed until their silence is broken or until I join them in the forever quiet.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_39.png[/img]%flagellant%, biczownik, siedzi po turecku przy ognisku. Jest sam, poza ćmami, które niebezpiecznie trzepoczą blisko płomieni. Czując twoją obecność, woła cię. Siadasz obok, a on uśmiecha się do ciebie.%SPEECH_ON%Stałem się lepszym człowiekiem, odkąd dołączyłem do tej kompanii.%SPEECH_OFF%Kiwając głową, przyznajesz mu rację. On kontynuuje.%SPEECH_ON%Wiele krwi oddałem bogom, lecz moje rany... to już tylko blizny. Czuję się silniejszy niż kiedykolwiek.%SPEECH_OFF%Znów kiwasz głową, ale szybko pytasz, czy przestanie się ranić. Mężczyzna wpatruje się w czerwone żary. Kręci głową.%SPEECH_ON%Będę krwawić dla bogów, aż każą mi przestać.%SPEECH_OFF%Na głos zastanawiasz się, czy bogowie w ogóle do niego przemówili. Bez chwili wahania znów kręci głową.%SPEECH_ON%Nie przemówili, więc będę krwawić, aż ich milczenie zostanie przerwane albo aż dołączę do nich w wiecznej ciszy.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "So time does heal all wounds, then.",
+					Text = "Czyli czas jednak leczy wszystkie rany.",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,7 +34,7 @@ this.flagellants_wounds_heal_event <- this.inherit("scripts/events/event", {
 					{
 						id = 17,
 						icon = "ui/icons/health.png",
-						text = _event.m.Flagellant.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] Hitpoints"
+						text = _event.m.Flagellant.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] Punktów Życia"
 					}
 				];
 			}

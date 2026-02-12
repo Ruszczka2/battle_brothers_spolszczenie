@@ -7,17 +7,17 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.wildman_testing_money";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_04.png[/img]You find %wildman% the wildman stacking his crowns into towers. He leans back from his moneyed manifestations with a wide grin, but then suddenly launches forward, knocking the towers over like a child would their blocks. He laughs maniacally as the coins scatter. The man playing with his money is a curious sight. Perhaps the wildman has no real conception of what crowns are good for? If so, maybe... maybe you could take them back?",
+			Text = "[img]gfx/ui/events/event_04.png[/img]Zastajesz %wildman% dzikusa, który układa swoje korony w wieże. Odchyla się od tych pieniężnych tworów z szerokim uśmiechem, po czym nagle rzuca się do przodu i przewraca wieże jak dziecko swoje klocki. Śmieje się maniakalnie, gdy monety się rozsypują. Widok człowieka bawiącego się pieniędzmi jest osobliwy. Może dzikus nie ma pojęcia, do czego służą korony? Jeśli tak, to może... może mógłbyś je odzyskać?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s see if he\'ll trade it all away for something else.",
+					Text = "Sprawdźmy, czy odda to wszystko za coś innego.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -32,7 +32,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Better to leave the man and his crowns alone.",
+					Text = "Lepiej zostawić człowieka i jego korony w spokoju.",
 					function getResult( _event )
 					{
 						return 0;
@@ -49,13 +49,13 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_04.png[/img]You crouch down.%SPEECH_ON%Hey there %wildman%. Mind if I take one of these?%SPEECH_OFF%Carefully, you pick up a coin and measure the wildman\'s reaction. He shrugs and grunts as if to say \'it\'s yours\'. You take another crown. And then another. The wildman glares at you, but you slowly produce a stick with a frilly bow tied to the top. Its whirly nature captures the wildman\'s eye. When he reaches out for it, you draw it back and shake your head. You then point at the crowns, and then at the stick.%SPEECH_ON%One for the other, yes?%SPEECH_OFF%The wildman looks at his crowns, mulling them over like an accountant, but you know his thoughts are far more chaotic than that. Suddenly, he growls and pushes his crowns forward and takes the stick away from you. Looks like the trade is done.",
+			Text = "[img]gfx/ui/events/event_04.png[/img]Kucasz.%SPEECH_ON%Hej, %wildman%. Mogę wziąć jedną z tych?%SPEECH_OFF%Ostrożnie podnosisz monetę i mierzysz reakcję dzikusa. Wzrusza ramionami i mruczy, jakby mówił \'twoja\'. Bierzesz kolejną koronę. I jeszcze jedną. Dzikus patrzy na ciebie złowrogo, ale ty powoli wyciągasz patyk z przywiązaną do końca ozdobną kokardką. Jego wirujący wygląd przyciąga wzrok dzikusa. Gdy wyciąga po niego rękę, cofasz patyk i kręcisz głową. Potem wskazujesz na korony, a następnie na patyk.%SPEECH_ON%Jedno za drugie, tak?%SPEECH_OFF%Dzikus spogląda na swoje korony, rozważając je jak księgowy, choć wiesz, że jego myśli są znacznie bardziej chaotyczne. Nagle warczy, popycha korony do przodu i zabiera patyk. Wygląda na to, że wymiana doszła do skutku.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That went well.",
+					Text = "To poszło dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -72,7 +72,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 					}
 				];
 			}
@@ -80,13 +80,13 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_06.png[/img]You crouch down and look at the mess of crowns.%SPEECH_ON%Those are real shiny, huh?%SPEECH_OFF%The wildman grunts and tries to shoo you away. Resisting, you pick up a crown. His hands drop and he jerks his head up, glaring at you. Slowly, you put the coin down and then produce a stick with a string wrapped around its top. His stare slackens, the sturdy stick a slick treat to the unkempt wildman. You motion that you\'ll give it to him in exchange for the crowns. He takes the stick. You take the crowns.\n\n But when the wildman plays with the string, it falls off and blows away in the wind. He cries out, then stares murderously at you, yourself standing there with both arms barreled to try and hold all the crowns. The wildman screams. You drop the crowns and run as fast as you can. There is all manner of chaos going on behind you - tools and weapons being broke, brothers running for their lives, and the absolute bedlam of a bunch of confused men beset by a wildman - but you dare not look.",
+			Text = "[img]gfx/ui/events/event_06.png[/img]Kucasz i patrzysz na bałagan z koronami.%SPEECH_ON%Ależ one błyszczą, co?%SPEECH_OFF%Dzikus mruczy i próbuje cię przegonić. Nie ustępujesz, podnosisz koronę. Jego ręce opadają, a on zrywa głowę, patrząc na ciebie spode łba. Powoli odkładasz monetę i wyciągasz patyk z owiniętym na końcu sznurkiem. Jego spojrzenie mięknie, mocny patyk to kuszący smakołyk dla zaniedbanego dzikusa. Dajesz znak, że oddasz mu patyk w zamian za korony. On bierze patyk. Ty bierzesz korony.\n\n Ale gdy dzikus bawi się sznurkiem, ten odpada i odlatuje z wiatrem. Dzikus krzyczy, po czym wpatruje się w ciebie morderczo, gdy stoisz z obiema rękami zajętymi próbą utrzymania wszystkich koron. Dzikus wrzeszczy. Upuszczasz korony i biegniesz ile sił. Za tobą dzieje się chaos - narzędzia i broń są łamane, bracia uciekają, a całkowite pandemonium zdezorientowanych ludzi atakowanych przez dzikusa - ale nie śmiesz się odwrócić.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Probably should not have done that.",
+					Text = "Pewnie nie powinienem był tego robić.",
 					function getResult( _event )
 					{
 						return 0;
@@ -97,7 +97,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Wildman.getImagePath());
-				_event.m.Wildman.worsenMood(1.0, "Did a bad trade");
+				_event.m.Wildman.worsenMood(1.0, "Zrobił zły interes");
 
 				if (_event.m.Wildman.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -112,7 +112,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.OtherGuy.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.OtherGuy.getName() + " doznaje " + injury.getNameOnly()
 				});
 
 				if (_event.m.Item != null)
@@ -121,7 +121,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + _event.m.Item.getIcon(),
-						text = "You lose " + this.Const.Strings.getArticle(_event.m.Item.getName()) + _event.m.Item.getName()
+						text = "Tracisz " + this.Const.Strings.getArticle(_event.m.Item.getName()) + _event.m.Item.getName()
 					});
 				}
 			}

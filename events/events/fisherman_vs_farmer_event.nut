@@ -37,18 +37,18 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 					text = _event.m.Fisherman.getName() + this.Const.MoodStateEvent[_event.m.Fisherman.getMoodState()]
 				});
 				_event.m.Farmer.improveMood(1.0, "Bonded with " + _event.m.Fisherman.getName());
-				this.List.push({
+				this.m.Title = "W obozie...";
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Farmer.getMoodState()],
 					text = _event.m.Farmer.getName() + this.Const.MoodStateEvent[_event.m.Farmer.getMoodState()]
-				});
+					Text = "[img]gfx/ui/events/event_26.png[/img]%farmhand% i %fisherman% urządzili sobie pojedynek na rękę. To tylko zabawa, która najwyraźniej zrodziła się z kłótni o to, czy rybacy czy rolnicy są ważniejsi i czyje jedzenie jest lepsze - to, co chodzi po lądzie, czy to, co pływa w oceanach. Po długim, słonym beknięciu i pieśniach pochwalnych dla jakiegoś dawno utraconego wieloryba, rybak wkłada w pojedynek ostatki sił i przygniata ramię %farmhand%. Obaj wstają i klepią się po ramionach.",
 
 				if (_event.m.Fisherman.getTitle() == "")
 				{
 					local titles = [
 						"the Strong",
 						"the Proud",
-						"the Fisherman",
+							Text = "Nikt z nas nie rodzi się najemnikiem.",
 						"the Armwrestler",
 						"Fishes"
 					];
@@ -88,7 +88,7 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Fisherman.getMoodState()],
-					text = _event.m.Fisherman.getName() + this.Const.MoodStateEvent[_event.m.Fisherman.getMoodState()]
+								text = _event.m.Fisherman.getNameOnly() + " jest teraz znany jako " + _event.m.Fisherman.getName()
 				});
 				_event.m.Farmer.improveMood(1.0, "Bonded with " + _event.m.Fisherman.getName());
 				this.List.push({
@@ -96,14 +96,14 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 					icon = this.Const.MoodStateIcon[_event.m.Farmer.getMoodState()],
 					text = _event.m.Farmer.getName() + this.Const.MoodStateEvent[_event.m.Farmer.getMoodState()]
 				});
-
+					Text = "[img]gfx/ui/events/event_26.png[/img]%farmhand% i %fisherman% urządzili sobie pojedynek na rękę. To tylko zabawa, która najwyraźniej zrodziła się z kłótni o to, czy rybacy czy rolnicy są ważniejsi i czyje jedzenie jest lepsze, lub coś w tym rodzaju. Po długim opowiadaniu historii o przodkach uprawiających ziemię, %farmhand% wkłada w pojedynek ostatki sił i przygniata ramię %fisherman%. Obaj wstają i klepią się po ramionach.",
 				if (_event.m.Farmer.getTitle() == "")
 				{
 					local titles = [
 						"the Strong",
 						"the Proud",
 						"the Farmhand",
-						"the Armwrestler",
+							Text = "Nikt z nas nie rodzi się najemnikiem.",
 						"Weeds"
 					];
 					_event.m.Farmer.setTitle(titles[this.Math.rand(0, titles.len() - 1)]);
@@ -143,7 +143,7 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 		}
 
 		if (fisherman_candidates.len() == 0)
-		{
+								text = _event.m.Farmer.getNameOnly() + " jest teraz znany jako " + _event.m.Farmer.getName()
 			return;
 		}
 

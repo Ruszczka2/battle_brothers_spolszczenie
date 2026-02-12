@@ -3,17 +3,17 @@ this.dead_lumberjack_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dead_lumberjack";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]The forest is home to many curiosities and dead bodies, really, aren\'t even the most curious of those. So when you stumble upon a litter of dead lumberjacks the only thing that piques your interest is the lump of a direwolf slain beside them. %randombrother% eyes the tracks going back and forth across a cutting field so abruptly interrupted that some axes were left hewn into tree trunks. He spits and nods.%SPEECH_ON%Poor fellas. Looks like some direwolves bushwhacked them something fierce.%SPEECH_OFF%You have the men collect what\'s left to be recovered and make your leave.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Las jest domem wielu osobliwości, a martwe ciała w gruncie rzeczy nie są nawet najdziwniejsze. Gdy więc natykasz się na gromadę martwych drwali, jedyne, co przykuwa twoją uwagę, to zwłoki wilkołaka zabitego obok nich. %randombrother% przygląda się śladom biegnącym tam i z powrotem przez polanę wyrębu, przerwaną tak nagle, że niektóre topory zostały wbite w pnie drzew. Spluwa i kiwa głową.%SPEECH_ON%Biedacy. Wygląda na to, że wilkołaki urządziły im porządną zasadzkę.%SPEECH_OFF%Każesz ludziom zebrać to, co da się odzyskać, i ruszacie dalej.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest in peace.",
+					Text = "Spoczywaj w pokoju.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,14 +38,14 @@ this.dead_lumberjack_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Otrzymujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/misc/werewolf_pelt_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Otrzymujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

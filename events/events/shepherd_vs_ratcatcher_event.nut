@@ -6,17 +6,17 @@ this.shepherd_vs_ratcatcher_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.shepherd_vs_ratcatcher";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]%ratcatcher% and %shepherd% are sitting beside the campfire. As their conversation carries on, the ratcatcher becomes a bit confused.%SPEECH_ON%Lemme, lemme, lemme get this straight. Y-you use a stick, and so they follow because you have the stick? It\'s all about the stick?%SPEECH_OFF%Nodding, the shepherd explains.%SPEECH_ON%I prefer to call it a staff, but yes. Sheep are simple creatures and all that they demand is a leader. The staff is an itemization of my role. I wield the staff, therefore I am the leader. At least in a little sheep\'s eyes. An obedient dog helps a lot, too. Truthfully, a dog would be the true leader did they not have the loyalty and honor we wished we had ourselves.%SPEECH_OFF%%ratcatcher% nods.%SPEECH_ON%I\'ll have to try the stick, I mean staff, with my rats. And get a dog, too.%SPEECH_OFF%The shepherd smiles.%SPEECH_ON%Or a cat. What? I\'m joking, friend, just joking.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]%ratcatcher% i %shepherd% siedzą przy ognisku. W trakcie rozmowy łapacz szczurów robi się nieco skonfundowany.%SPEECH_ON%Niech, niech, niech to dobrze pojmę. T-ty używasz kija i dlatego idą za tobą, bo masz kij? Chodzi o ten kij?%SPEECH_OFF%Pasterz, kiwając głową, wyjaśnia.%SPEECH_ON%Wolę nazywać to laską pasterską, ale tak. Owce to proste stworzenia i wszystko, czego potrzebują, to przywódca. Laska jest znakiem mojej roli. Dzierżę laskę, więc jestem przywódcą. Przynajmniej w oczach małej owcy. Posłuszny pies również bardzo pomaga. Prawdę mówiąc, to pies byłby prawdziwym przywódcą, gdyby nie miał lojalności i honoru, których sami chcielibyśmy mieć.%SPEECH_OFF%%ratcatcher% kiwa głową.%SPEECH_ON%Będę musiał spróbować kija, znaczy laski, ze swoimi szczurami. I też zdobyć psa.%SPEECH_OFF%Pasterz uśmiecha się.%SPEECH_ON%Albo kota. Co? Żartuję, przyjacielu, tylko żartuję.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Like peas in a pod. Or pigs in a pen?",
+					Text = "Jak dwa groszki w strąku. Albo świnie w chlewie?",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,13 +28,13 @@ this.shepherd_vs_ratcatcher_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Shepherd.getImagePath());
 				this.Characters.push(_event.m.Ratcatcher.getImagePath());
-				_event.m.Shepherd.improveMood(1.0, "Bonded with " + _event.m.Ratcatcher.getName());
+				_event.m.Shepherd.improveMood(1.0, "Zbliżył się do " + _event.m.Ratcatcher.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Shepherd.getMoodState()],
 					text = _event.m.Shepherd.getName() + this.Const.MoodStateEvent[_event.m.Shepherd.getMoodState()]
 				});
-				_event.m.Ratcatcher.improveMood(1.0, "Bonded with " + _event.m.Shepherd.getName());
+				_event.m.Ratcatcher.improveMood(1.0, "Zbliżył się do " + _event.m.Shepherd.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Ratcatcher.getMoodState()],

@@ -6,17 +6,17 @@ this.refugee_vs_raider_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.refugee_vs_raider";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_06.png[/img]%refugee%, a man who once forced onto the roads as a refugee, stares blankly at %raider%. The raider, sensing he\'s being stared at, lowers his plate of food.%SPEECH_ON%Whatcha farkin\' looking at, huh?%SPEECH_OFF%The refugee points a dripping spoon.%SPEECH_ON%Yer a raider, right?%SPEECH_OFF%%raider% nods.%SPEECH_ON%Was. Might be again someday. What\'s it to you?%SPEECH_OFF%Standing up, %refugee% points.%SPEECH_ON%It were men like you who forced good people out of their homes. Good people to drag their whole lives onto the damned road.%SPEECH_OFF%Laughing, %raider% gets to his feet.%SPEECH_ON%Oh, is that right? And what made them so good? That they couldn\'t swing a sword or protect themselves? Do you believe for one moment that were the boot on the other foot they wouldn\'t do the same to me? Or to you, too? Folk are only as good as their options.%SPEECH_OFF%The spate\'s getting wild and some of the other mercenaries get to their feet. Nobody can stop the initial scuffle, the two men exchanging blows and curses as good as any tavern brawl you\'ve seen. Thankfully, nothing too serious comes of the fight.",
+			Text = "[img]gfx/ui/events/event_06.png[/img]%refugee%, człowiek niegdyś zepchnięty na drogi jako uchodźca, beznamiętnie wpatruje się w %raider%. Raider, czując spojrzenie, opuszcza talerz z jedzeniem.%SPEECH_ON%Na co się gapisz, co?%SPEECH_OFF%Uchodźca wskazuje łyżką, z której kapie.%SPEECH_ON%Jesteś rajderem, tak?%SPEECH_OFF%%raider% kiwa głową.%SPEECH_ON%Byłem. Może kiedyś znów będę. Co ci do tego?%SPEECH_OFF%Wstając, %refugee% wskazuje palcem.%SPEECH_ON%To tacy jak ty wypędzili dobrych ludzi z domów. Dobrych ludzi, którzy musieli ciągnąć całe swoje życie po tej cholernej drodze.%SPEECH_OFF%Śmiejąc się, %raider% też wstaje.%SPEECH_ON%A, tak? I co czyniło ich tak dobrymi? To, że nie potrafili machać mieczem ani się bronić? Wierzysz choć przez chwilę, że gdyby role się odwróciły, nie zrobiliby mi tego samego? Albo tobie? Ludzie są tylko tak dobrzy, jak ich możliwości.%SPEECH_OFF%Sprzeczka się zaostrza i kilku innych najemników wstaje. Nikt nie jest w stanie powstrzymać pierwszej szamotaniny, dwóch mężczyzn wymienia ciosy i przekleństwa, jak w każdej karczemnej bójce, jaką widziałeś. Na szczęście nic zbyt poważnego z tego nie wynika.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Take it easy now.",
+					Text = "Spokojnie, już.",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,7 +35,7 @@ this.refugee_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury1.getIcon(),
-						text = _event.m.Refugee.getName() + " suffers " + injury1.getNameOnly()
+						text = _event.m.Refugee.getName() + " doznaje " + injury1.getNameOnly()
 					});
 				}
 				else
@@ -44,11 +44,11 @@ this.refugee_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Refugee.getName() + " suffers light wounds"
+						text = _event.m.Refugee.getName() + " doznaje lekkich ran"
 					});
 				}
 
-				_event.m.Refugee.worsenMood(1.0, "Got in a brawl with " + _event.m.Raider.getName());
+				_event.m.Refugee.worsenMood(1.0, "Wdał się w bójkę z " + _event.m.Raider.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Refugee.getMoodState()],
@@ -61,7 +61,7 @@ this.refugee_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury2.getIcon(),
-						text = _event.m.Raider.getName() + " suffers " + injury2.getNameOnly()
+						text = _event.m.Raider.getName() + " doznaje " + injury2.getNameOnly()
 					});
 				}
 				else
@@ -70,7 +70,7 @@ this.refugee_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Raider.getName() + " suffers light wounds"
+						text = _event.m.Raider.getName() + " doznaje lekkich ran"
 					});
 				}
 			}

@@ -6,17 +6,17 @@ this.wildman_offers_mushrooms_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.wildman_offers_mushrooms";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]You take a rest at the base of an enormous tree. Somehow, the sun manages to sear a path through the forest canopy and blind your eyes. Getting up to move, you run into %wildman% the wildman. He\'s offering you a handful of various questionables: mushrooms, flower petals, berries. With a grunt, he ushers them toward your face.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Odpoczywasz u stóp ogromnego drzewa. Jakimś cudem słońce wypala sobie drogę przez sklepienie lasu i oślepia cię. Gdy wstajesz, wpadasz na %wildman% dzikusa. Wyciąga do ciebie garść rozmaitych podejrzanych rzeczy: grzybów, płatków kwiatów, jagód. Z pomrukiem podsuwają je pod twoją twarz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Sure, %wildman%, I\'ll take some of those.",
+					Text = "Jasne, %wildman%, wezmę trochę.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.wildman_offers_mushrooms_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Umm, no thanks.",
+					Text = "Eee, nie, dzięki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -40,13 +40,13 @@ this.wildman_offers_mushrooms_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_25.png[/img]Surprisingly, the bits of forest foods are actually quite good. Sweet, but not too sweet, and with a hint of oak. You thank teh weeldman fore his gift. He rises hyyy into the skies, the skies of all things, shaking what are noww braanches you had earlier mistakenly assumed were human arms of humane purposes. Cats rain from his mouth as he speaks. His tongue is a leenguage of marbled letters, floating before his lips innn.. innn... in great sighs for sentences. Feeling good about his graces, you give him a weave, a wave of yer hand, but find yer fingers are also hands, something you had not noticed in the befores. A shock to your beliefs, yer memories of childhood flooded with fleeting feet rocking yer crib, yer domain, yer castle. All lies. All of it! Blackness comes. The darkness smiles.\n\nYou awake on the ground, %otherguy% gently dabbing a rag of water over your forehead.%SPEECH_ON%He\'s back! You alright?%SPEECH_OFF%You can\'t quite remember what happened, but your mind is desperately telling you not to ask. You simply nod in response and get the men back to marching.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Ku zaskoczeniu, leśne smakołyki są całkiem dobre. Słodkie, ale nie za słodkie, z nutą dębu. Dziękujesz teh dzikumanowi fore jego dar. Unosi się wyyysoooko w niebo, w niebo ze wszystkich rzeczy, potrząsając gałęęęziami, które wcześniej mylnie brałeś za ludzkie ramiona o ludzkich zamiarach. Z jego ust padają koty, gdy mówi. Jego język to leeengłage marmurowych liter, pływających przed wargami innn.. innn... w wielkich westchnieniach zdań. Czując się dobrze z jego łaską, dajesz mu wew, machnięcie dłonią, ale odkrywasz, że twoje palce są też dłońmi, czego wcześniej nie zauważyłeś. Szok dla twoich przekonań, wspomnienia z dzieciństwa zalewają cię, migotliwe stopy kołyszą kołyskę, twoją domenę, twój zamek. Same kłamstwa. Wszystko! Nadchodzi czerń. Ciemność się uśmiecha.\n\nBudzisz się na ziemi, %otherguy% delikatnie przykłada mokrą szmatkę do twojego czoła.%SPEECH_ON%Wrócił! Wszystko w porządku?%SPEECH_OFF%Nie bardzo pamiętasz, co się stało, ale umysł desperacko mówi ci, by nie pytać. Po prostu kiwasz głową i każesz ludziom wrócić do marszu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'ve learned something today.",
+					Text = "Dziś czegoś się nauczyłem.",
 					function getResult( _event )
 					{
 						return 0;

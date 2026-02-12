@@ -6,17 +6,17 @@ this.witch_being_burned_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.witch_being_burned";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{You stroll into %townname% just in time to see a smoldering body keel forward from the blackened stake onto which they were tied. A few citizens pass you, cheering the death of a witch. Curious as to whether or not this was true, your very own witchhunter, %witchhunter%, goes to the body and examines it. With a sigh, he looks back at you and shakes his head. | %townname% welcomes you with horrifying screams. Three of its citizens are in the town center being burned alive. The fires grow beneath them until the flames come licking their feet, then crawling up their legs, drawing them to cry out for mercy to which the crowds responds by throwing rocks.\n\nYou about draw your sword to end this injustice when %witchhunter_short% the witchhunter stays your hand. He shakes his head and points at the burnings. Soon enough, the begging stops and all three victims open their mouths, issuing forth a rumbling that silences the crowd and even the crackle of fire beneath them. They speak in a guttural, uniform voice.%SPEECH_ON%Ye who watches us perish, shall perish themselves!%SPEECH_OFF%The bodies suddenly slump forward as though instantly made dead and the cooking of their flesh resumes with a steady popping. The witchhunter orders your men to look away, which you quickly do, and behind you comes renewed screams, but this time from the townspeople themselves. You shant forget this moment anytime soon.}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{Wchodzisz do %townname% w samą porę, by zobaczyć tlące się ciało przechylające się do przodu z osmolonego pala, do którego było przywiązane. Kilku mieszkańców mija cię, wiwatując śmierć czarownicy. Ciekaw, czy to prawda, twój własny łowca czarownic, %witchhunter%, podchodzi do ciała i je bada. Wzdycha, spogląda na ciebie i kręci głową. | %townname% wita cię przerażającymi krzykami. Troje mieszkańców płonie żywcem na rynku. Ogień rośnie pod nimi, aż płomienie liżą stopy, potem wspinają się po nogach, zmuszając ich do błagania o litość, na co tłum odpowiada rzucaniem kamieni.\n\nJuż masz dobyć miecza, by zakończyć tę niesprawiedliwość, gdy %witchhunter_short% łowca czarownic powstrzymuje cię. Kręci głową i wskazuje na płonących. Wkrótce błagania ustają, a wszystkie trzy ofiary otwierają usta, wydając pomruk, który ucisza tłum i nawet trzask ognia pod nimi. Mówią gardłowym, jednolitym głosem.%SPEECH_ON%Wy, co patrzycie na naszą zagładę, sami zginiecie!%SPEECH_OFF%Ciała nagle opadają do przodu, jakby w jednej chwili umarły, a gotowanie ich ciała wznawia się równym trzaskiem. Łowca czarownic rozkazuje ludziom odwrócić wzrok, co czynisz natychmiast, i zza pleców dobiega ponowny krzyk, lecz tym razem od mieszkańców. Nie zapomnisz tej chwili przez długi czas.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What is this...?",
+					Text = "Co to jest...?",
 					function getResult( _event )
 					{
 						return 0;

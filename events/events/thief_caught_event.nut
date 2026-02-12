@@ -5,17 +5,17 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.thief_caught";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]During a short rest, your men managed to catch a man that tried to make off with some of your supplies. His clothes are but rags and he looks more skeleton than man. What are you going to do with him?",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Podczas krótkiego odpoczynku twoi ludzie złapali mężczyznę, który próbował zwiać z częścią zapasów. Jego ubrania to same łachmany, a on wygląda bardziej na szkielet niż człowieka. Co z nim zrobisz?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Give that poor guy some food and water.",
+					Text = "Daj temu biedakowi trochę jedzenia i wody.",
 					function getResult( _event )
 					{
 						return "D";
@@ -23,7 +23,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Give him a good beating.",
+					Text = "Daj mu porządną nauczkę.",
 					function getResult( _event )
 					{
 						return "C";
@@ -31,7 +31,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Put him to the sword.",
+					Text = "Poślij go pod miecz.",
 					function getResult( _event )
 					{
 						return "F";
@@ -46,13 +46,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Under the cloak of night some thief managed to nick some of your supplies. He will probably offer them back to you in the next settlement...",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Pod osłoną nocy jakiś złodziej zdołał ukraść część zapasów. Pewnie zaoferuje ci je z powrotem w następnym osiedlu...",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn thieves!",
+					Text = "Przeklęci złodzieje!",
 					function getResult( _event )
 					{
 						return 0;
@@ -73,7 +73,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/items/" + food.getIcon(),
-							text = "You lose " + food.getName()
+							text = "Tracisz " + food.getName()
 						}
 					];
 				}
@@ -85,7 +85,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_ammo.png",
-							text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Ammunition"
+							text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] amunicji"
 						}
 					];
 				}
@@ -97,7 +97,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_supplies.png",
-							text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Tools and Supplies"
+							text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] narzędzi i zapasów"
 						}
 					];
 				}
@@ -109,7 +109,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_medicine.png",
-							text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Medical Supplies"
+							text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] zapasów medycznych"
 						}
 					];
 				}
@@ -118,13 +118,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]%randombrother% gives the thief a proper beating with a short cane. The shaft lands viciously hard and you can hear the sound of the blows passing through the man\'s almost hollow frame. He wilts and turns and tries hard to get away, but the sellsword is persistent in meting out the punishment. When it\'s all said and done, you leave the beaten man behind, wimpering and clutching the dirt between his frail fingers.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]%randombrother% daje złodziejowi porządną lanie krótką laską. Kij uderza wyjątkowo mocno, a ty słyszysz dźwięk ciosów przechodzących przez niemal pusty tułów mężczyzny. Wiotczeje, obraca się i próbuje uciec, ale najemnik uparcie wymierza karę. Gdy wszystko się kończy, zostawiasz pobitego człowieka, szlochającego i ściskającego ziemię w swoich wątłych palcach.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let this be a lesson to you!",
+					Text = "Niech to będzie dla ciebie nauczką!",
 					function getResult( _event )
 					{
 						return 0;
@@ -139,13 +139,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Feeling bad for the feeble man, you decide to give him some water and food. He almost snatches the meal away from you and drives his famished face into it. The thief thanks you between every bite.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Współczując słabemu człowiekowi, postanawiasz dać mu trochę wody i jedzenia. Niemal wyrywa ci posiłek i wciska w niego wygłodniałą twarz. Złodziej dziękuje ci między każdym kęsem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Not everyone will be this lenient...",
+					Text = "Nie każdy będzie tak pobłażliwy...",
 					function getResult( _event )
 					{
 						if (this.World.getPlayerRoster().getSize() >= this.World.Assets.getBrothersMax() || this.Math.rand(1, 100) <= 25)
@@ -169,7 +169,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "You lose some " + food.getName()
+						text = "Tracisz trochę " + food.getName()
 					}
 				];
 			}
@@ -177,13 +177,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_33.png[/img] You tell the men to get back to marching. The thief wipes his mouth and stands up, wobbling as his weak legs take a few steps after you. He asks if maybe he could join the company. He\'ll give his life for you, if he must, just anything to not have to steal anymore.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Mówisz ludziom, by wrócili do marszu. Złodziej wyciera usta i wstaje, chwiejąc się na słabych nogach, gdy robi kilka kroków za tobą. Pyta, czy mógłby dołączyć do kompanii. Odda za ciebie życie, jeśli będzie trzeba, byle już nie musieć kraść.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, fine, you might as well join us.",
+					Text = "Dobrze, możesz do nas dołączyć.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -194,7 +194,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We need fighting men, not underfed thieves.",
+					Text = "Potrzebujemy wojowników, nie niedożywionych złodziei.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -214,13 +214,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_33.png[/img]As the thief cowers, you draw your sword. He begs for mercy as his mirrored face ripples over the blade\'s fuller and edges. You raise the weapon. The man screams out that he\'ll work for you, that he\'ll work for free, anything to spare his life. You hesitate, your sword still lingering in the air.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Gdy złodziej kulczy się ze strachu, dobywasz miecza. Błaga o litość, a jego odbite oblicze faluje na zbroczu i krawędziach ostrza. Unosisz broń. Mężczyzna krzyczy, że będzie dla ciebie pracował, że zrobi to za darmo, cokolwiek, byle ocalić życie. Wahasz się, a miecz wciąż wisi w powietrzu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Die with some dignity at last.",
+					Text = "Wreszcie umrzyj z odrobiną godności.",
 					function getResult( _event )
 					{
 						return "G";
@@ -228,7 +228,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Fine. I\'ll spare your life  if you work for me.",
+					Text = "Dobrze. Daruję ci życie, jeśli będziesz dla mnie pracował.",
 					function getResult( _event )
 					{
 						return "H";
@@ -243,13 +243,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_33.png[/img]%SPEECH_ON%The punishment for thievery is death.%SPEECH_OFF%You plunge the sword down, cutting off the thief\'s last words with a quick stab into his chest. He seizes up, speechless save for the scratching of his thin hands grabbing that which is killing him, and then he falls back, dead within moment. You retrieve your weapon and clean it off in the nook of your elbow. The dead man\'s head turns to a side as blood pools quietly beneath him.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]%SPEECH_ON%Kara za kradzież to śmierć.%SPEECH_OFF%Wbijasz miecz, przerywając ostatnie słowa złodzieja szybkim pchnięciem w pierś. Zastyga, niemy, poza drapaniem cienkich rąk chwytających to, co go zabija, po czym osuwa się, martwy w jednej chwili. Wyciągasz broń i czyścisz ją w zgięciu łokcia. Głowa martwego mężczyzny opada na bok, a pod nim cicho zbiera się krew.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s better this way.",
+					Text = "Tak będzie lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -271,7 +271,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 							continue;
 						}
 
-						bro.worsenMood(1.0, "Felt for a thief killed by you");
+						bro.worsenMood(1.0, "Współczuł złodziejowi zabitemu przez ciebie");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -288,13 +288,13 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You lower your weapon and the man crawls to you and hugs your legs. He kisses your feet until you draw away.\n\nTo get things straight, you give him a long list of orders and how it is to work in the company. You also give him a contract which he signs with a jagged \'x\'. A few of the brothers then spend the rest of the day teaching him the ropes and introducing him to the rest of the company. By night\'s end, it seems like he\'s already beginning to fit in. By next morning, you wake to see a great number of supplies are missing and the new man is nowhere in sight. It appears that, although you stayed the thief\'s execution, he went on ahead and stole things anyway. Let that be a lesson to you.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Opuszczasz broń, a mężczyzna podpełza i obejmuje ci nogi. Całuje cię po stopach, aż się odsuwasz.\n\nŻeby sprawę wyjaśnić, dajesz mu długą listę rozkazów i zasad pracy w kompanii. Dajesz mu też kontrakt, który podpisuje koślawym \'x\'. Kilku braci spędza potem resztę dnia, ucząc go podstaw i przedstawiając reszcie kompanii. Pod koniec nocy wygląda na to, że już zaczyna pasować. Następnego ranka budzisz się i widzisz, że brakuje sporej ilości zapasów, a nowego człowieka nigdzie nie ma. Wygląda na to, że choć darowałeś złodziejowi egzekucję, i tak ukradł rzeczy. Niech to będzie dla ciebie nauczką.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That damn scoundrel!",
+					Text = "Ten przeklęty łajdak!",
 					function getResult( _event )
 					{
 						return 0;
@@ -315,7 +315,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/items/" + food.getIcon(),
-							text = "You lose " + food.getName()
+							text = "Tracisz " + food.getName()
 						}
 					];
 				}
@@ -327,7 +327,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_ammo.png",
-							text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Ammunition"
+							text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] amunicji"
 						}
 					];
 				}
@@ -339,7 +339,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_supplies.png",
-							text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Tools and Supplies"
+							text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] narzędzi i zapasów"
 						}
 					];
 				}
@@ -351,7 +351,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_medicine.png",
-							text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Medical Supplies"
+							text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] zapasów medycznych"
 						}
 					];
 				}

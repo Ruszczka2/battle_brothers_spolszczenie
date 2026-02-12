@@ -3,17 +3,17 @@ this.miasma_flail_company_nightmare_event <- this.inherit("scripts/events/event"
 	function create()
 	{
 		this.m.ID = "event.miasma_flail_company_nightmare";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{You dream of your mother. You had not seen her face in some time, and thought you\'d forgotten it, the world having ground down most memories. She is as lovely as you\'d expect, and she draws you in, hand about your hair, threading her fingers through it, the soft hiss of her touch met by the gentlest of whispers. And a moment later she offers a breast to you, and you reel back, unsure, and when you look up the Grand Diviner is there, grinning madly.%SPEECH_ON%Wombless, I ascend, sellsword. The grand nurturer...%SPEECH_OFF%A fleshy golem wraps its red appendages over his shoulders, coiling you up in its greasy grip.%SPEECH_ON%Find in my bosom the raw power of this world, sellsword! Let me mother you into the man you should have been!%SPEECH_OFF%With a snarl, you rip out of the dream and flip off your cot and hit the ground, gasping for air and slapping your face as if whatever dreamt of came back with you. The rest of the company is in an equal state of disrepair, every sellsword having been struck by the same nightmare. You glance over to inventory to see the Grand Diviner\'s flail bristling a bright green, then it fades from your stare, the slightest chuckle following it out...}",
+			Text = "%terrainImage%{Śnisz o swojej matce. Od dawna nie widziałeś jej twarzy i sądziłeś, że już ją zapomniałeś, bo świat starł większość wspomnień. Jest tak piękna, jak byś się spodziewał, i przyciąga cię do siebie, dłonią gładząc włosy i splatając w nie palce, a miękki szept jej dotyku miesza się z najłagodniejszymi szmerami. Chwilę później oferuje ci pierś, a ty cofasz się niepewnie, i kiedy podnosisz wzrok, stoi tam Wielki Wróżbita, szczerząc szalony uśmiech.%SPEECH_ON%Bezłonny, wstępuję, najemniku. Wielka karmicielka...%SPEECH_OFF%Mięsisty golem owija czerwone wyrostki wokół jego barków, zaciskając na tobie tłusty uścisk.%SPEECH_ON%Znajdź w mym łonie surową moc tego świata, najemniku! Pozwól mi ukształtować cię w mężczyznę, którym powinieneś był być!%SPEECH_OFF%Z warknięciem wyrywasz się ze snu, zeskakujesz z pryczy i uderzasz o ziemię, łapiąc powietrze i okładając się po twarzy, jakby to, co śniłeś, wróciło z tobą. Reszta kompanii jest w podobnym stanie rozsypki, każdy najemnik doświadczył tego samego koszmaru. Zerkasz do ekwipunku i widzisz cep Wielkiego Wróżbity, który iskrzy jaskrawozielonym blaskiem, po czym znika z twojego spojrzenia, a za nim podąża ledwie słyszalny chichot...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Motherfarker.",
+					Text = "Matkojebca.",
 					function getResult( _event )
 					{
 						return 0;
@@ -27,7 +27,7 @@ this.miasma_flail_company_nightmare_event <- this.inherit("scripts/events/event"
 
 				foreach( bro in brothers )
 				{
-					bro.worsenMood(0.75, "Had a disturbing nightmare involving the Grand Diviner");
+					bro.worsenMood(0.75, "Miał niepokojący koszmar z udziałem Wielkiego Wróżbity");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{

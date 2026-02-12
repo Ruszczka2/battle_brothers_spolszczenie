@@ -6,17 +6,17 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.flagellant_vs_monk";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]The campfire shines bright, twisting the faces of men in flowing orange as though they themselves were of burning stock.\n\n It is here you find %monk% and %flagellant% talking to one another. Their discussion is, at first, an easy one. The monk pleads with the flagellant to set aside his whip. While you don\'t necessarily wish to step in, you can\'t help but agree that destroying your own body on a glorified gore-schedule is not the best way to live. But then the flagellant retorts with something that gives you both pause. It is a phrase so well crafted that to think it might justify the man\'s personal habits has you pushing the notion out of your head as fast as possible. Disturbing, too, was the ease with which he said it. That such a soothing voice could be so warmly bundled in that scarred husk of flesh. What could muster it?\n\n The monk stammers for a moment, but then puts his hands to the flagellant\'s shoulders, holding him to keep their eyes on one another. He whispers, words which tickle your ears, but don\'t pronounce themselves loud enough to have real meaning. You can only assume they are meant to, once again, persuade the flagellant to a better, less violent life.\n\n But, again, the flagellant begins to respond and so back and forth they continue to go.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Ognisko świeci jasno, skręcając twarze mężczyzn w płynącej pomarańczy, jakby sami byli z płonącego drewna.\n\n To tutaj zastajesz %monk% i %flagellant% rozmawiających ze sobą. Ich dyskusja na początku jest spokojna. Mnich błaga biczownika, by odłożył bicz. Choć niekoniecznie chcesz się wtrącać, nie możesz nie zgodzić się, że niszczenie własnego ciała według wyśrubowanego harmonogramu rzezi nie jest najlepszym sposobem na życie. Ale wtedy biczownik odpowiada czymś, co was obu zatrzymuje. To zdanie tak dobrze ułożone, że sama myśl, iż mogłoby usprawiedliwiać jego osobiste nawyki, każe ci jak najszybciej wyrzucić tę myśl z głowy. Niepokojąca była też łatwość, z jaką to powiedział. Że tak kojący głos mógł być tak ciepło uwięziony w tej pokrytej bliznami skorupie ciała. Co mogło to zrodzić?\n\n Mnich jąka się przez chwilę, po czym kładzie dłonie na ramionach biczownika, przytrzymując go, by mogli patrzeć sobie w oczy. Szepcze słowa, które łaskoczą twoje uszy, ale nie brzmią dość głośno, by miały prawdziwe znaczenie. Możesz tylko zakładać, że mają znów przekonać biczownika do lepszego, mniej brutalnego życia.\n\n Ale znów biczownik zaczyna odpowiadać i tak przerzucają się słowami dalej.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This is fascinating. Let\'s see where it goes.",
+					Text = "To fascynujące. Zobaczmy, dokąd to doprowadzi.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -24,7 +24,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Alright that\'s enough. We\'ve got actual work to do.",
+					Text = "Dobrze, dość tego. Mamy prawdziwą robotę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -41,13 +41,13 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]Deciding to let the men talk, you step away for a time. When you return, you find the flagellant sitting next to the monk. The two saw back and forth on a log, their hands clasped in prayer as whispers of heavenly words part their lips. You\'ve no urge to get closer to hear what they are saying for it is a comforting sight in and of itself. While you have no dog in what way is best to appease the gods, you can\'t help but feel a little better seeing the flagellant put down his tools of self-torture.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Postanawiasz pozwolić im rozmawiać i odchodzisz na chwilę. Gdy wracasz, zastajesz biczownika siedzącego obok mnicha. Oboje kołyszą się na kłodzie, dłonie złożone do modlitwy, a z ich ust płyną szeptane, niebiańskie słowa. Nie masz ochoty podchodzić bliżej, by słyszeć, o czym mówią, bo sam widok jest kojący. Choć nie masz zdania, jaka droga najlepiej zadowala bogów, nie możesz nie poczuć się lepiej, widząc, że biczownik odłożył swoje narzędzia samoudręki.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "May the man find his peace now.",
+					Text = "Niech teraz odnajdzie spokój.",
 					function getResult( _event )
 					{
 						return 0;
@@ -68,7 +68,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 13,
 						icon = background.getIcon(),
-						text = _event.m.Flagellant.getName() + " is now a Pacified Flagellant"
+						text = _event.m.Flagellant.getName() + " jest teraz Uspokojonym Biczownikiem"
 					}
 				];
 				_event.m.Monk.getBaseProperties().Bravery += 2;
@@ -76,20 +76,20 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Monk.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Monk.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]Deciding to let the men talk, you step away for a time.\n\nWhen you come back, the monk is naked and bent over with tears in his eyes. His shape is craven, but his face is gutting as though this is always what he wanted. With a gulp of air he straightens up and flicks his wrist over his shoulder. The flagellant\'s whip is in hand and you hear the leather slap against the monk\'s back. He pulls the tool away and the sound of glass and barbs tearing flesh causes a ringing in your ears. The flagellant himself says nothing. He has set himself down by the monk\'s side. He stares out across the land, but there is hardly a shimmer of life in his eyes, though you certainly see the blood of his life leaving his backside as he treats himself to a beating.\n\nYou step away once more, but the grass beneath your feet doesn\'t have the same crunch to it and the air carries a copper scent. Little leather snickers follow you all the way back to your tent.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Postanawiasz pozwolić im rozmawiać i odchodzisz na chwilę.\n\nKiedy wracasz, mnich jest nagi i pochylony, z łzami w oczach. Jego postawa jest tchórzliwa, ale twarz rozdzierająca, jakby tego właśnie zawsze pragnął. Z łapczywym wdechem prostuje się i przerzuca nad ramieniem nadgarstek. Biczownik trzyma bicz i słyszysz, jak skóra uderza o plecy mnicha. Odsuwa narzędzie, a dźwięk szkła i kolców rozrywających ciało dzwoni ci w uszach. Sam biczownik nic nie mówi. Siada obok mnicha. Wpatruje się w przestrzeń, ale w jego oczach ledwie tli się życie, choć wyraźnie widzisz krew życia spływającą mu po plecach, gdy funduje sobie chłostę.\n\nOdchodzisz raz jeszcze, ale trawa pod stopami nie ma już tego samego chrupnięcia, a w powietrzu czuć metaliczny zapach. Ciche uderzenia skóry podążają za tobą aż do namiotu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A man left to torture himself can find the truest of horrors.",
+					Text = "Człowiek pozostawiony sam sobie w torturach może znaleźć najprawdziwsze koszmary.",
 					function getResult( _event )
 					{
 						return 0;
@@ -110,7 +110,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 13,
 						icon = background.getIcon(),
-						text = _event.m.Monk.getName() + " is now a Monk turned Flagellant"
+						text = _event.m.Monk.getName() + " jest teraz Mnichem, który stał się Biczownikiem"
 					}
 				];
 				_event.m.Flagellant.getBaseProperties().Bravery += 2;
@@ -118,7 +118,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Flagellant.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Flagellant.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
 			}
 

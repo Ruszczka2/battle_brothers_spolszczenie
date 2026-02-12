@@ -7,20 +7,20 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.player_plays_dice";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_62.png[/img]While relaxing after the day\'s walk, %gambler% comes up to you with a pair of dice and a cup in hand. He asks if you wish to have a little game. The rules are quite simple: you roll the dice from the cup, whoever has the highest numbers wins. It\'s pure chance! The wager will be twenty-five crowns per dice roll.",
+			Text = "[img]gfx/ui/events/event_62.png[/img]Gdy odpoczywasz po całodziennym marszu, %gambler% podchodzi do ciebie z parą kości i kubkiem w dłoni. Pyta, czy chcesz zagrać w krótką grę. Zasady są proste: rzucacie kośćmi z kubka, a kto wyrzuci wyższy wynik, wygrywa. To czysty los! Stawka to dwadzieścia pięć koron za każdy rzut.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s play!",
+					Text = "Zagrajmy!",
 					function getResult( _event )
 					{
-						_event.m.Gambler.improveMood(1.0, "Has played a game of dice with you");
+						_event.m.Gambler.improveMood(1.0, "Zagrał z tobą w kości");
 						_event.m.PlayerDice = this.Math.rand(3, 18);
 						_event.m.GamblerDice = this.Math.rand(3, 18);
 
@@ -40,7 +40,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I have no time for this.",
+					Text = "Nie mam na to czasu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -56,13 +56,13 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_62.png[/img]You roll the dice, landing a total of %playerdice%.\n\n%gambler% goes next, rolling a total of %gamblerdice%.\n\n{Well, you lost. The gambler snatches the dice back up - as well as your twenty-five crowns - and aks if you wish to have another go. | The dice were not in your favor and the gambler takes his earnings. He looks up to you, grinning.%SPEECH_ON%Wish to have another go?%SPEECH_OFF% | The numbers are counted up and, alas, you have lost. The gambler asks if you wish to go again. | Lost! But maybe if you roll again... | You lose! A simple roll of the dice, and simple loss. But this one hurts a lot less than which you\'ve seen on the fields of battle. The gambler asks if you wish to have another go. | The gods have shunned you and your silly dice. Losing the game is a minor setback, but your pride costs a little more than twenty-five crowns. Should you roll again? | The odds have betrayed you for a measly twenty crowns. Maybe if you roll again you can win them back? | You watch your dice tumble, seeing for but a moment the winning numbers before it tilts and falls to another side, revealing a losing total. The gambler laughs and asks if you wish to throw again. | Your throw was perfect! How could you lose? He needed just those numbers to win! Shaking your head, you wonder if you should roll again.}",
+			Text = "[img]gfx/ui/events/event_62.png[/img]Rzucasz kośćmi, uzyskując łącznie %playerdice%.\n\n%gambler% rzuca jako następny, uzyskując łącznie %gamblerdice%.\n\n{Cóż, przegrałeś. Gracz zgarnia kości - i twoje dwadzieścia pięć koron - po czym pyta, czy chcesz spróbować jeszcze raz. | Kości nie były po twojej stronie i gracz zgarnia wygraną. Spogląda na ciebie, uśmiechając się.%SPEECH_ON%Chcesz spróbować jeszcze raz?%SPEECH_OFF% | Liczby są policzone i, niestety, przegrałeś. Gracz pyta, czy chcesz zagrać ponownie. | Przegrana! Ale może jeśli rzucisz jeszcze raz... | Przegrywasz! Prosty rzut kośćmi i prosta przegrana. Ale ta boli o wiele mniej niż to, co widziałeś na polach bitew. Gracz pyta, czy chcesz spróbować jeszcze raz. | Bogowie odwrócili się od ciebie i twoich głupich kości. Przegrana to drobna porażka, ale twoja duma kosztuje odrobinę więcej niż dwadzieścia pięć koron. Rzucasz jeszcze raz? | Los cię zdradził za marne dwadzieścia koron. Może jeśli rzucisz jeszcze raz, odzyskasz je? | Patrzysz, jak kości toczą się, przez chwilę pokazując wygrywające liczby, po czym przechylają się i odsłaniają przegrany wynik. Gracz śmieje się i pyta, czy chcesz rzucić ponownie. | Twój rzut był idealny! Jak mogłeś przegrać? On potrzebował właśnie tych liczb, żeby wygrać! Kręcisz głową, zastanawiając się, czy rzucić jeszcze raz.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s roll again!",
+					Text = "Rzucamy jeszcze raz!",
 					function getResult( _event )
 					{
 						_event.m.PlayerDice = this.Math.rand(3, 18);
@@ -84,7 +84,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ve had enough for today.",
+					Text = "Na dziś mam dość.",
 					function getResult( _event )
 					{
 						return 0;
@@ -100,7 +100,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]25[/color] Crowns"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]25[/color] koron"
 					}
 				];
 			}
@@ -108,13 +108,13 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_62.png[/img]You roll the dice, landing a total of %playerdice%.\n\n%gambler% goes next, rolling a total of %gamblerdice%.\n\n{You won! The gambler claps his hands.%SPEECH_ON%Beginner\'s luck!%SPEECH_OFF%You cross your arms.%SPEECH_ON%I thought it was all luck?%SPEECH_OFF%The gambler laughs and asks if you wish to test that theory. | The gambler leans back.%SPEECH_ON%Well I\'ll be damned. Let\'s throw again!%SPEECH_OFF% | The gambler leans back.%SPEECH_ON%{Well I\'ll be a horse\'s fartin\' arse | I\'ll be damned if the gods haven\'t turned their backs on me | Now that right there is a poor showin\' of lady luck | I\'d bedded a lady by the name of Luck, what good it\'s done me though | That right there is a misfortune, for me that is | Oy, that\'s a winning roll | I\'ll be a ragamuffin | Son of a gelded horse | Shits on a wet a pig | As damned as a nun on her back | The throw of a master I say | Yer a robber with such a throw and yeah | May %randomtown% join the orcs | And they say a blind squirrel can\'t find a nut | Tickle m\'anus with a rosebush and call me Sally Siegfried}, ya won! Let\'s roll again!%SPEECH_OFF% | You\'ve won! Laughing, you take your earnings and the gambler asks if you wish to have another throw.}",
+			Text = "[img]gfx/ui/events/event_62.png[/img]Rzucasz kośćmi, uzyskując łącznie %playerdice%.\n\n%gambler% rzuca jako następny, uzyskując łącznie %gamblerdice%.\n\n{Wygrałeś! Gracz klaszcze w dłonie.%SPEECH_ON%Szczęście nowicjusza!%SPEECH_OFF%Krzyżujesz ręce.%SPEECH_ON%Myślałem, że to sama fortuna?%SPEECH_OFF%Gracz śmieje się i pyta, czy chcesz sprawdzić tę teorię. | Gracz odchyla się.%SPEECH_ON%No to pięknie. Rzućmy jeszcze raz!%SPEECH_OFF% | Gracz odchyla się.%SPEECH_ON%{No to mnie osrał koński zad | Niech mnie diabli, jeśli bogowie się ode mnie nie odwrócili | To dopiero kiepski występ pani Fortuny | Sypiałem z panną o imieniu Fortuna, a na co mi to było | To prawdziwe nieszczęście, dla mnie przynajmniej | Oj, to zwycięski rzut | Niech mnie licho | Syn wałacha | Świnia w błocie | Przeklęty jak zakonnica na plecach | Rzut mistrza, mówię ci | Jesteś rabusiem z takim rzutem, no | Niech %randomtown% dołączy do orków | I mówią, że ślepa wiewiórka nie znajdzie orzecha | Połaskocz mi zad różanym krzakiem i mów mi Sally Siegfried}, wygrałeś! Rzucamy jeszcze raz!%SPEECH_OFF% | Wygrałeś! Śmiejąc się, zabierasz wygraną, a gracz pyta, czy chcesz rzucić ponownie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s roll again!",
+					Text = "Rzucamy jeszcze raz!",
 					function getResult( _event )
 					{
 						_event.m.PlayerDice = this.Math.rand(3, 18);
@@ -136,7 +136,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ve had enough for today.",
+					Text = "Na dziś mam dość.",
 					function getResult( _event )
 					{
 						return 0;
@@ -152,7 +152,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You win [color=" + this.Const.UI.Color.PositiveEventValue + "]25[/color] Crowns"
+						text = "Wygrywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]25[/color] koron"
 					}
 				];
 			}
@@ -160,13 +160,13 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_62.png[/img]You roll the dice, landing a total of %playerdice%.\n\n%gambler% goes next, rolling a total of %gamblerdice%.\n\nThe numbers are the same. A tie! Roll again?",
+			Text = "[img]gfx/ui/events/event_62.png[/img]Rzucasz kośćmi, uzyskując łącznie %playerdice%.\n\n%gambler% rzuca jako następny, uzyskując łącznie %gamblerdice%.\n\nLiczby są takie same. Remis! Rzucić jeszcze raz?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s roll again!",
+					Text = "Rzucamy jeszcze raz!",
 					function getResult( _event )
 					{
 						_event.m.PlayerDice = this.Math.rand(3, 18);
@@ -188,7 +188,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ve had enough for today.",
+					Text = "Na dziś mam dość.",
 					function getResult( _event )
 					{
 						return 0;

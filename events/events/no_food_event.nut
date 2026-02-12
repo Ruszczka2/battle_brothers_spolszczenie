@@ -3,17 +3,17 @@ this.no_food_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.no_food";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_52.png[/img]{Food stocks have run out! Despite the horrors of this world, the %companyname% can\'t be fielding a company of skeletons! You need to get the men food fast before they rightfully leave. | Even the most loyal of men is only as good as about five or six missed meals. After that, anyone is apt to leave and get themselves fed. Acquire food - and do it fast before the company falls apart! | You\'ve miscalculated the food reserves and placed the %companyname% into a unique danger - that of going hungry. Even the deadliest of companies would fall apart in days if it goes unfed and this company will be no different if you don\'t change things fast!}",
+			Text = "[img]gfx/ui/events/event_52.png[/img]{Zapasy żywności się skończyły! Mimo okropności tego świata, %companyname% nie może wystawić kompanii szkieletów! Musisz szybko zdobyć jedzenie, zanim słusznie odejdą. | Nawet najbardziej lojalny człowiek wytrzyma tylko jakieś pięć czy sześć opuszczonych posiłków. Potem każdy woli odejść i się najeść. Zdobądź jedzenie - i to szybko, zanim kompania się rozpadnie! | Źle obliczyłeś zapasy i wpakowałeś %companyname% w wyjątkowe niebezpieczeństwo - głód. Nawet najgroźniejsza kompania rozpadłaby się po kilku dniach bez jedzenia, a ta nie będzie inna, jeśli szybko czegoś nie zrobisz!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I need to get the men something to eat.",
+					Text = "Muszę zdobyć dla ludzi coś do jedzenia.",
 					function getResult( _event )
 					{
 						return 0;

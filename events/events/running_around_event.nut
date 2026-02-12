@@ -5,17 +5,17 @@ this.running_around_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.running_around";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{Walking, running, fighting, fucking, all good for a man\'s heart. The time spent traveling the land has improved the vitality and vigor of the men. You even caught one of the cheekier mercenaries flexing into pondwater, admiring his own reflection like some smirkin\' wench. | All this running about the land has increased the stamina of the men. One runs in place, holding a finger to his neck. He remarks that his heart rate isn\'t going up at all. Another brother remarks that the guy doesn\'t even know how to count. The running man pauses.%SPEECH_ON%Oh. That\'s right.%SPEECH_OFF%}",
+			Text = "%terrainImage%{Chodzenie, bieganie, walczenie, rżnięcie - wszystko dobre dla męskiego serca. Czas spędzony w drodze poprawił witalność i krzepę ludzi. Przyłapałeś nawet jednego z bardziej bezczelnych najemników, jak pręży się nad wodą w stawie, podziwiając swoje odbicie niczym uśmiechnięta dziewka. | To całe bieganie po świecie zwiększyło wytrzymałość ludzi. Jeden biegnie w miejscu, trzymając palec na szyi. Mówi, że tętno wcale mu nie rośnie. Inny brat zauważa, że ten gość nawet nie umie liczyć. Biegacz zatrzymuje się.%SPEECH_ON%Och. Racja.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s all worth it.",
+					Text = "To wszystko jest tego warte.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,7 +33,7 @@ this.running_around_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/fatigue.png",
-					text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Max Fatigue"
+					text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Maks. zmęczenia"
 				});
 			}
 

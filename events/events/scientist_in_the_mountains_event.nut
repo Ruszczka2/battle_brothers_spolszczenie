@@ -3,17 +3,17 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.scientist_in_the_mountains";
-		this.m.Title = "In the mountains...";
+		this.m.Title = "W górach...";
 		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_42.png[/img]You come across an unexpected sight at the top of the mountain: a man sitting in a strange and wooden contraption, tilting it toward the edge of a deadly precipice. He\'s got a scarf over his eyes, pulling it down to talk.%SPEECH_ON%Ahoy, strangers. It appears you shall record history! For men governed the common horse to run faster than it knew how, I shall govern birds to... well, we can\'t ride birds, but I can, as you can see by this machine, simulate them. The shackles of space and time shall be lifted, much like these here wooden wings will lift me into the very skies!%SPEECH_OFF%This \'contraption\' comes with pedals, wooden spokes, and tarps of very thin and hastily stitched leather.",
+			Text = "[img]gfx/ui/events/event_42.png[/img]Na szczycie góry napotykasz niespodziewany widok: mężczyznę siedzącego w dziwnej drewnianej konstrukcji, którą przechyla ku krawędzi śmiertelnego urwiska. Ma szalik na oczach, zsuwa go, by mówić.%SPEECH_ON%Ahoy, nieznajomi. Wygląda na to, że zapiszecie historię! Skoro ludzie nauczyli pospolitego konia biec szybciej, niż potrafił, ja ujarzmię ptaki, by... cóż, nie da się jeździć na ptakach, ale jak widzicie po tej maszynie, mogę je naśladować. Kajdany przestrzeni i czasu zostaną zerwane, tak jak te drewniane skrzydła uniosą mnie w samo niebo!%SPEECH_OFF%Ta \"konstrukcja\" ma pedały, drewniane szprychy i płachty bardzo cienkiej, pospiesznie zszytej skóry.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You need to stop this, you\'ll only kill yourself.",
+					Text = "Musisz to przerwać, tylko się zabijesz.",
 					function getResult( _event )
 					{
 						return "B";
@@ -21,7 +21,7 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "That\'ll be interesting to watch.",
+					Text = "To będzie ciekawe do oglądania.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "C" : "D";
@@ -36,13 +36,13 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_42.png[/img]You step forward and explain the reality of the situation.%SPEECH_ON%Good... sir. What bird takes flight from such great heights? Does not a bird simply propel itself upward with the thrust of its wings? You\'re going to throw yourself off this cliff in the hopes that your machine will work, knowing deep in your heart that it will not.%SPEECH_OFF%The haggard looking mountain scientist looks at his feet. He nods solemnly.%SPEECH_ON%It could use some tinkering, I suppose. You have an avian eye, good sir. And you also have my thanks. I shall tell people of your great wisdom!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_42.png[/img]Podchodzisz i wyjaśniasz mu realia sytuacji.%SPEECH_ON%Dobry... panie. Jaki ptak startuje z takiej wysokości? Czy ptak nie unosi się po prostu dzięki uderzeniom skrzydeł? Rzucisz się z tego urwiska z nadzieją, że maszyna zadziała, wiedząc w głębi serca, że nie zadziała.%SPEECH_OFF%Zmęczony górski uczony spogląda na swoje stopy. Kiwie uroczyście głową.%SPEECH_ON%Pewnie przydałoby się trochę poprawek. Masz ptasie oko, dobry panie. I masz też moje podziękowania. Opowiem ludziom o twojej wielkiej mądrości!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s right, I am smart.",
+					Text = "Tak, jestem mądry.",
 					function getResult( _event )
 					{
 						return 0;
@@ -57,13 +57,13 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_42.png[/img]{You step back and let the man take flight. He wraps his face in the scarf and sits into the seat of his machine. With a few long breaths, he pedals it forward. It promptly falls over the edge. The man is hurled through the leather wings like some sort of screaming bat. He spins through the device as it explodes down the rockwall in a torrent of wood and poor design. A moment later, you hear the faint din of his final landing spots. Spectacular! | The man pushes his machine off the edge, hopping into its seat at the last moment. They both tip over the precipice and there\'s a brief scream. But, against all odds, the man quickly reappears! His contraption flutters from side to side like some drunken butterfly, but he\'s in the air nonetheless.%SPEECH_ON%I did it, by the gods I did it! Look at me...%SPEECH_OFF%Suddenly, a shrieking falcon spears through one of his wings. The bird loops around for another strike, tearing apart the other wing. You wave your hands and try to scare the killer bird away.%SPEECH_ON%Hey, hey!%SPEECH_OFF%The machine totters and slowly starts to lose altitude. With the man pedaling harder to compensate, the spokes begin to break and a moment later the whole thing busts apart and you can only watch as the haggard scientist plummets to his doom. The falcon simply squats on the cliff face and watches its enemy die.}",
+			Text = "[img]gfx/ui/events/event_42.png[/img]{Cofasz się i pozwalasz mężczyźnie wzlecieć. Owija twarz szalikiem i siada w siedzisku swojej maszyny. Po kilku głębokich oddechach zaczyna pedałować do przodu. Konstrukcja natychmiast spada za krawędź. Mężczyzna zostaje wyrzucony przez skórzane skrzydła niczym krzyczący nietoperz. Wiruje w urządzeniu, gdy to rozbija się w dół skalnej ściany w potoku drewna i złego projektu. Chwilę później słyszysz słaby odgłos jego ostatecznego lądowania. Spektakularne! | Mężczyzna popycha maszynę z krawędzi, wskakując do siedziska w ostatniej chwili. Oboje przechylają się nad przepaścią i słychać krótki krzyk. Ale, wbrew wszelkim szansom, mężczyzna szybko się pojawia! Jego konstrukcja trzepocze z boku na bok jak pijany motyl, ale mimo to leci.%SPEECH_ON%Udało się, na bogów, udało się! Spójrzcie na mnie...%SPEECH_OFF%Nagle krzyczący sokół przebija jedno ze skrzydeł. Ptak zatacza krąg i uderza ponownie, rozrywając drugie skrzydło. Machasz rękami i próbujesz spłoszyć zabójczego ptaka.%SPEECH_ON%Hej, hej!%SPEECH_OFF%Maszyna chwieje się i zaczyna powoli tracić wysokość. Mężczyzna pedałuje coraz mocniej, by to zrekompensować, szprychy zaczynają pękać i chwilę później wszystko się rozpada, a ty możesz tylko patrzeć, jak zmęczony uczony spada na pewną śmierć. Sokół przysiada na skalnej ścianie i obserwuje śmierć swojego wroga.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What a show!",
+					Text = "Co za widowisko!",
 					function getResult( _event )
 					{
 						return 0;
@@ -78,13 +78,13 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_42.png[/img]{Against better judgment, you let the man fly. He bundles his face in the scarf as though that\'ll save him of the soon to come hard landing. With a deep breath, he pushes his contraption off the edge and leaps in at the last moment as though he were joining his lover in a romantic suicide. The man and machine quickly disappear. You start to laugh when suddenly the man reappears. He\'s furiously pedaling his machine, the wings flapping hard. He sails around, looping this way and that, slowly getting higher and higher.%SPEECH_ON%I did it! By the gods, I did it! Look at how high I can go!%SPEECH_OFF%He shoots upward into the clouds, the rickety din of its wooden spokes whining away.%SPEECH_ON%Ohh, ohhhhh!%SPEECH_OFF%That\'s the last you see or hear of him. | The man pushes the machine off the edge and hops into the seat just as it totters over the edge. Screaming, the man climbs back up the contraption as it falls away. He leaps off the last tip of its poorly constructed wooden frame, propelling himself back to the precipice where he hangs on for dear life. You sprint over and drag him back up. His machine smashes into the ground far below, a soft din of predetermined destruction. Brushing himself off, the man nods at you.%SPEECH_ON%Thank you sir. I had a moment of clarity. What does a bird do? It doesn\'t take off from great heights, it takes off wherever it pleases! I shall rework the project! Thank you for saving my life, sir.%SPEECH_OFF%The way you see it, that went as well as it could have. The men are mightily entertained anyway.}",
+			Text = "[img]gfx/ui/events/event_42.png[/img]{Wbrew zdrowemu rozsądkowi pozwalasz mu lecieć. Owija twarz szalikiem, jakby miało go to uchronić przed twardym lądowaniem. Z głębokim oddechem popycha konstrukcję z krawędzi i wskakuje w ostatniej chwili, jakby dołączał do kochanki w romantycznym samobójstwie. Mężczyzna i maszyna szybko znikają. Zaczynasz się śmiać, gdy nagle mężczyzna znów się pojawia. Furiośnie pedałuje, skrzydła trzepoczą mocno. Krąży, robiąc pętle, coraz wyżej i wyżej.%SPEECH_ON%Udało się! Na bogów, udało się! Patrzcie, jak wysoko mogę!%SPEECH_OFF%Wzbija się w chmury, a rzężenie drewnianych szprych cichnie.%SPEECH_ON%Och, ochhhh!%SPEECH_OFF%To ostatnie, co o nim widzisz lub słyszysz. | Mężczyzna popycha maszynę z krawędzi i wskakuje do siedziska, gdy ta przechyla się nad przepaścią. Krzycząc, wspina się z powrotem po konstrukcji, gdy ta opada. Skacze z ostatniego czubka źle zbudowanej drewnianej ramy, odpychając się z powrotem do urwiska, gdzie wisi, trzymając się kurczowo. Pędzisz i wyciągasz go na górę. Jego maszyna rozbija się daleko poniżej, cichym dźwiękiem przewidywalnego zniszczenia. Otrzepuje się i kiwa ci głową.%SPEECH_ON%Dziękuję, panie. Miałem przebłysk. Co robi ptak? Nie startuje z wielkich wysokości, startuje, skąd zechce! Przerobię projekt! Dziękuję za uratowanie życia, panie.%SPEECH_OFF%Z twojej perspektywy poszło najlepiej, jak mogło. Ludzie i tak są mocno rozbawieni.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Spectacular science.",
+					Text = "Spektakularna nauka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -100,7 +100,7 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Czuł się rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

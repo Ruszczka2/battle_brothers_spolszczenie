@@ -6,17 +6,17 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.sellsword_vs_raider";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_82.png[/img]The raider, %raider%, is sharpening his weapon beside the campfire. He tells stories of his days raiding coasts and making off with piles of loot, his crooked smile grinning in the blade\'s sharpened sheen. %sellsword% the sellsword listens for a time then gets up laughing.%SPEECH_ON%Oh, fella, them quite the stories you tell. Here\'s mine: I earned my keep killing men, whether in their homes or in battle, but men nonetheless. You run about in yer boats, waitin\' for the menfolk to be gone, then ya scamper across the beaches to kick the little lads, rape the lasses, and steal from old friars. You got nothing to boast of, raider.%SPEECH_OFF%%raider% lowers his blade.%SPEECH_ON%We islanders at least have honor amongst us, whereas you\'d stab the %companyname% in the back for an extra crown in your purse. Speak ill of my past again, sellsword, and I\'ll have that mouth of yours gnawing dirt.%SPEECH_OFF%An exchange of fightin\' words leads to just that: a fight. Blades flash and blood is spilled. The rest of the company jumps in before too much damage can be done.",
+			Text = "[img]gfx/ui/events/event_82.png[/img]Najeźdźca, %raider%, ostrzy broń przy ognisku. Opowiada historie o dniach grabieży wybrzeży i wynoszeniu stosów łupów, a jego krzywy uśmiech błyszczy w wypolerowanej stali. Najemnik %sellsword% słucha przez chwilę, po czym wstaje, śmiejąc się.%SPEECH_ON%Och, chłopie, ależ to historie opowiadasz. Posłuchaj mojej: na chleb zarabiałem, zabijając ludzi, czy to w ich domach, czy na polu bitwy, ale jednak ludzi. Wy latacie łódkami, czekacie, aż chłopy pójdą w pole, a potem pędzicie po plażach, by kopać malców, gwałcić dziewki i okradać starych mnichów. Nie masz się czym chwalić, najeźdźco.%SPEECH_OFF%%raider% opuszcza ostrze.%SPEECH_ON%My, wyspiarze, mamy przynajmniej honor między sobą, a ty wbiłbyś %companyname% nóż w plecy za dodatkową koronę w sakiewce. Powiedz jeszcze raz źle o mojej przeszłości, najemniku, a każę ci zębami gryźć ziemię.%SPEECH_OFF%Wymiana ciętych słów prowadzi do tego, co nieuniknione: walki. Ostrza błyskają, krew się leje. Reszta kompanii wkracza, zanim dojdzie do większej szkody.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I don\'t give a rat\'s ass where you came from, stop fighting.",
+					Text = "Nie obchodzi mnie, skąd pochodzicie, przestańcie się bić.",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,7 +35,7 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury1.getIcon(),
-						text = _event.m.Sellsword.getName() + " suffers " + injury1.getNameOnly()
+						text = _event.m.Sellsword.getName() + " doznaje " + injury1.getNameOnly()
 					});
 				}
 				else
@@ -44,11 +44,11 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Sellsword.getName() + " suffers light wounds"
+						text = _event.m.Sellsword.getName() + " odnosi lekkie rany"
 					});
 				}
 
-				_event.m.Sellsword.worsenMood(0.5, "Got in a fight with " + _event.m.Raider.getName());
+				_event.m.Sellsword.worsenMood(0.5, "Wdał się w bójkę z " + _event.m.Raider.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Sellsword.getMoodState()],
@@ -61,7 +61,7 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury2.getIcon(),
-						text = _event.m.Raider.getName() + " suffers " + injury2.getNameOnly()
+						text = _event.m.Raider.getName() + " doznaje " + injury2.getNameOnly()
 					});
 				}
 				else
@@ -70,11 +70,11 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Raider.getName() + " suffers light wounds"
+						text = _event.m.Raider.getName() + " odnosi lekkie rany"
 					});
 				}
 
-				_event.m.Raider.worsenMood(0.5, "Got in a fight with " + _event.m.Sellsword.getName());
+				_event.m.Raider.worsenMood(0.5, "Wdał się w bójkę z " + _event.m.Sellsword.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Raider.getMoodState()],

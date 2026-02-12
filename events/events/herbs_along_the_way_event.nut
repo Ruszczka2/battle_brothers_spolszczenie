@@ -6,16 +6,16 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.herbs_along_the_way";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%While heading toward your destination, %volunteer% runs up to you with a bundle of herbs in hand. Now you know this fool knows nothing about plants or wildlife, but he seems rather persistent in wanting to try them out. Something about \'hearing\' of magical powers to be found in the essence of herbs. This talk gets the attention of a few others in the company. Soon, a number of them are asking to try out the \'medicine\' for the good of their brothers.",
+			Text = "%terrainImage%Podczas marszu do celu %volunteer% podbiega do ciebie z pękiem ziół w dłoni. Wiesz, że ten głupiec nic nie wie o roślinach ani przyrodzie, ale uparcie chce ich spróbować. Coś o tym, że słyszał o magicznych mocach ukrytych w esencji ziół. Ta gadanina przyciąga uwagę kilku innych z kompanii. Wkrótce kilku z nich prosi, by spróbować tego lekarstwa dla dobra braci.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "They look good, any volunteer to try them?",
+					Text = "Wyglądają dobrze, jest ochotnik, by je spróbować?",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "C" : "B";
@@ -23,7 +23,7 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "{Better not try our luck. | You fools will only poison yourselves.}",
+					Text = "{Lepiej nie kuśmy losu. | Głupcy, tylko się otrujecie.}",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,12 +38,12 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%terrainImage%It appears that the herbs are not just harmless, but rather even proactive in taking care of some nagging issues with the men. %volunteer%\'s cold seems to have lifted, and the stomach pains of %otherguy% have abated. After trying some yourself, you see a splinter wiggle its way out of your thumb. Amazing!",
+			Text = "%terrainImage%Wygląda na to, że zioła są nie tylko nieszkodliwe, ale wręcz pomagają na dokuczliwe dolegliwości ludzi. Przeziębienie %volunteer% jakby ustąpiło, a bóle żołądka %otherguy% zelżały. Po tym jak sam spróbowałeś, widzisz, jak drzazga wydostaje się z twojego kciuka. Niesamowite!",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Amazing!",
+					Text = "Niesamowite!",
 					function getResult( _event )
 					{
 						return 0;
@@ -59,7 +59,7 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_medicine.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Medical Supplies"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Zapasów Medycznych"
 					}
 				];
 			}
@@ -67,12 +67,12 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_18.png[/img]From one end comes vomit and from the other shite. It appears the herbs were not worth a try after all. %volunteer% bravely elected himself ready to chow down on the mystery plants and, suffice it to say, the proportions which you are seeing come out of him are definitely mystical in that strange, \'can the body really hold that much?\', sort of way.",
+			Text = "[img]gfx/ui/events/event_18.png[/img]Z jednej strony lecą wymiociny, z drugiej gówno. Wygląda na to, że zioła jednak nie były warte próby. %volunteer% dzielnie sam zgłosił się do zjedzenia tajemniczych roślin i, krótko mówiąc, ilości, które z niego wychodzą, są zdecydowanie mistyczne w tym dziwnym sensie: czy ciało naprawdę może tyle pomieścić?",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Ewww.",
+					Text = "Fuj.",
 					function getResult( _event )
 					{
 						return 0;
@@ -88,7 +88,7 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = effect.getIcon(),
-						text = _event.m.Volunteer.getName() + " is sick"
+						text = _event.m.Volunteer.getName() + " jest chory"
 					}
 				];
 			}

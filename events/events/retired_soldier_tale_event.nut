@@ -5,17 +5,17 @@ this.retired_soldier_tale_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.retired_soldier_tale";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]%retiredsoldier% sits about the campfire telling war stories. If he\'s lying, it\'s merely an embellishment, as the scars all about his body speak unsightly truths. With each tale, the men become more engrossed, emboldened, and ready to get back out there and forge their own stories.",
+			Text = "[img]gfx/ui/events/event_26.png[/img]%retiredsoldier% siedzi przy ognisku i opowiada wojenne historie. Jeśli kłamie, to tylko podkolorowuje, bo blizny na jego ciele mówią niezbyt piękną prawdę. Z każdą opowieścią ludzie stają się bardziej wciągnięci, odważniejsi i gotowi wrócić na szlak, by kuć własne historie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Killing men does make for great bedtime stories.",
+					Text = "Zabijanie ludzi to niezłe historie na dobranoc.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.retired_soldier_tale_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Soldier.getImagePath());
-				_event.m.Soldier.improveMood(0.25, "Told one of his war stories");
+				_event.m.Soldier.improveMood(0.25, "Opowiedział jedną ze swoich wojennych historii");
 
 				if (_event.m.Soldier.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -48,7 +48,7 @@ this.retired_soldier_tale_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "Felt emboldened by " + _event.m.Soldier.getName() + "\'s war stories");
+						bro.improveMood(1.0, "Poczuł się ośmielony wojennymi historiami " + _event.m.Soldier.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

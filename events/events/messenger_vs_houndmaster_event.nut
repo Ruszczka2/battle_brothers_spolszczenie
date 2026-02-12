@@ -6,17 +6,17 @@ this.messenger_vs_houndmaster_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.messenger_vs_houndmaster";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]%messenger% and %houndmaster% share stories over a campfire. The messenger laughs.%SPEECH_ON%Lemme tell you about my first delivery. I walked up to this keep that had a nice, beautiful moat. Most dangerous thing in the waters were lily pads and fly-fattened frogs. Walked right over the drawbridge and stepped inside, letter in hand, my belly turning with excitement. I get in there and what do I hear? Roo-roo-roo-roo! Ruh-ruh-ruh! This farkin\' mongrel comes barreling out of its doghouse, teeth bared, ears pinned. I\'m like oh shite, I didn\'t sign up for this and climb a chicken coop while this furred beast tries and eats me feet. Eventually, the lord comes out and the dog sits as though it\'d done nothing at all. The nobleman laughs and takes the letter I came to deliver. He says, \'what, you didn\'t see the sign?\' I said, uh no sir, but I\'ll be going now. When I left, they drew that drawbridge back up and wouldn\'t you know it, on the underside they\'d painted this big \'Beware of Dog\' warning!%SPEECH_OFF%%houndmaster% bursts into laughter.%SPEECH_ON%For your first day on the job, that ain\'t so bad. But I\'ll have you know, no dog of the %companyname% will hurt you! I\'ll train them mutts proper!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]%messenger% i %houndmaster% dzielą się opowieściami przy ognisku. Posłaniec się śmieje.%SPEECH_ON%Posłuchaj o mojej pierwszej dostawie. Podszedłem do twierdzy z piękną fosą. Najgroźniejsze w wodzie były lilie i żaby utuczone muchami. Przeszedłem po moście zwodzonym i wszedłem do środka, list w ręku, brzuch skręcał mi się z ekscytacji. Wchodzę i co słyszę? Hau-hau-hau! Rar-rrr! Ten cholerny kundel wyskakuje z budy, zębiska na wierzchu, uszy przyklejone. Myślę: o cholera, nie na to się pisałem, i wspinam się na kurnik, a to futrzaste bydle próbuje zjeść mi stopy. W końcu wychodzi pan, a pies siada, jakby nic się nie stało. Szlachcic się śmieje i bierze list. Mówi: \"co, nie widziałeś tabliczki?\" Ja na to: eee, nie panie, ale ja już pójdę. Kiedy wychodziłem, podnieśli most zwodzony i, wyobraź sobie, od spodu mieli namalowane wielkie ostrzeżenie \"Uwaga, pies\"!%SPEECH_OFF%%houndmaster% wybucha śmiechem.%SPEECH_ON%Jak na pierwszy dzień w robocie, to nieźle. Ale wiedz, żadnen pies z %companyname% cię nie skrzywdzi! Wyszkoliłem te kundelki jak trzeba!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Woe is the mailman.",
+					Text = "Biada posłańcowi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,13 +28,13 @@ this.messenger_vs_houndmaster_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Messenger.getImagePath());
 				this.Characters.push(_event.m.Houndmaster.getImagePath());
-				_event.m.Messenger.improveMood(1.0, "Bonded with " + _event.m.Houndmaster.getName());
+				_event.m.Messenger.improveMood(1.0, "Zbliżył się z " + _event.m.Houndmaster.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Messenger.getMoodState()],
 					text = _event.m.Messenger.getName() + this.Const.MoodStateEvent[_event.m.Messenger.getMoodState()]
 				});
-				_event.m.Houndmaster.improveMood(1.0, "Bonded with " + _event.m.Messenger.getName());
+				_event.m.Houndmaster.improveMood(1.0, "Zbliżył się z " + _event.m.Messenger.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Houndmaster.getMoodState()],

@@ -6,17 +6,17 @@ this.cripple_pep_talk_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cripple_pep_talk";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_06.png[/img]%cripple% the cripple asks how %veteran% does it. The veteran raises an eyebrow.%SPEECH_ON%Do what?%SPEECH_OFF%The cripple bounces his head around as he figuratively beats around the bush.%SPEECH_ON%You know, it. Fight. Every time I get out there, I just think I\'m not up to it, as though I were dragging you fellas down.%SPEECH_OFF%%veteran% laughs.%SPEECH_ON%Aye, I get what you mean. A cripple ain\'t fit for sellswording. But is that who you are? Just a cripple? Or are ye a man? You can choose to let your wobbles and ungainliness define who you are, or you can make your own path, as crooked and hobbled it may be.%SPEECH_OFF%Nodding, %cripple%\'s face starts to glow.%SPEECH_ON%You\'re right. I\'m not all that I could be and I got the body of a dying nun, but no man will put in more effort than I!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_06.png[/img]%cripple%, kaleka, pyta, jak %veteran% to robi. Weteran unosi brew.%SPEECH_ON%Co robi?%SPEECH_OFF%Kaleka kręci głową, jakby symbolicznie krążył wokół tematu.%SPEECH_ON%No wiesz, to. Walczę. Za każdym razem, gdy wychodzę na pole, myślę, że się do tego nie nadaję, jakbym ściągał was w dół.%SPEECH_OFF%%veteran% śmieje się.%SPEECH_ON%Tak, rozumiem. Kaleka nie nadaje się na najemnika. Ale czy to naprawdę wszystko, kim jesteś? Tylko kaleką? A może jesteś mężczyzną? Możesz pozwolić, by twoje chwiejności i niezdarność cię definiowały, albo możesz wytyczyć własną drogę, choćby była kręta i ułomna.%SPEECH_OFF%Kiwnąwszy głową, twarz %cripple% zaczyna jaśnieć.%SPEECH_ON%Masz rację. Nie jestem tym, kim mógłbym być, i mam ciało jak umierająca zakonnica, ale nikt nie włoży w to więcej wysiłku niż ja!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well said.",
+					Text = "Dobrze powiedziane.",
 					function getResult( _event )
 					{
 						return 0;
@@ -39,17 +39,17 @@ this.cripple_pep_talk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Cripple.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Resolve"
+						text = _event.m.Cripple.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] Determinacji"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Cripple.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + fatigue + "[/color] Max Fatigue"
+						text = _event.m.Cripple.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + fatigue + "[/color] Maks. Zmęczenia"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/initiative.png",
-						text = _event.m.Cripple.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] Initiative"
+						text = _event.m.Cripple.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] Inicjatywy"
 					}
 				];
 				_event.m.Cripple.improveMood(2.0, "Was motivated by " + _event.m.Veteran.getName());

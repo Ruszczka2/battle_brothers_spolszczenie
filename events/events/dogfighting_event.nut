@@ -7,17 +7,17 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dogfighting";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%townImage%%doghandler% asks you to enter %wardog% into a local dog fighting circle. That sounds like an awful idea, but the man goes on to explain that a lot of money stands to be made in dogfighting. All the doghandler needs is an ante of two hundred crowns.",
+			Text = "%townImage%%doghandler% prosi, byś zgłosił %wardog% do lokalnego kręgu walk psów. Brzmi to jak okropny pomysł, ale mężczyzna wyjaśnia, że na walkach psów można zarobić sporo pieniędzy. Od ciebie potrzebny jest tylko wkład w wysokości dwustu koron.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, but I\'m going with you.",
+					Text = "Dobrze, ale idę z tobą.",
 					function getResult( _event )
 					{
 						return "B";
@@ -25,7 +25,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "That\'s not going to happen.",
+					Text = "Nie ma mowy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -41,13 +41,13 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%townImage%You take a purse of crowns and follow %doghandler% through a wind of darker and darker streets. Soon enough, there isn\'t much to see. Wet cobblestones, licked white by strobes of moonlight, lazily guide you into what depths the city hides from those who prefer the day. Suddenly, a torch flares up and a man\'s face, afloat and disembodied in the dark, speaks out to you.%SPEECH_ON%That dog here for da\'fights?%SPEECH_OFF%%doghandler% nods. The stranger tilts the torch forward.%SPEECH_ON%Alright then. Right this way, gen-teel-men. Watch yer step. All manner of piss goes downhill.%SPEECH_OFF%",
+			Text = "%townImage%Zabierasz sakiewkę koron i podążasz za %doghandler% w głąb coraz ciemniejszych ulic. Wkrótce niewiele widać. Mokry bruk, lizany bielą smug księżyca, leniwie prowadzi cię w głębiny miasta, których nie chcą widzieć ci, którzy wolą dzień. Nagle rozbłyska pochodnia, a unosząca się w ciemności, odcięta twarz mężczyzny odzywa się do ciebie.%SPEECH_ON%Ten pies na walki?%SPEECH_OFF%%doghandler% kiwa głową. Nieznajomy przechyla pochodnię do przodu.%SPEECH_ON%Dobrze. Tędy, panowie. Uważajcie na krok. Wszystkie siki spływają w dół.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s do this.",
+					Text = "Zróbmy to.",
 					function getResult( _event )
 					{
 						return "C";
@@ -55,7 +55,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ve changed my mind.",
+					Text = "Zmieniłem zdanie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -71,13 +71,13 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%townImage%Following the man\'s torch through the dark, you come to a building with a sliding portal at its door. The stranger gives the door a pattern of knocks and it pops open as if commanded by the final rap. You are ushered in, leering faces watching from the side as you enter. Immediately, you hear the unsettling din of snarling and barking. This is what you are here for, right?\n\n Stairs lead you to the pits where a crowd huddles around a makeshift arena of dirt and wobbly fenceposts. The action can\'t be seen yet, but off to the side are a pile of dead dogs and beside them sit their killers, eyes wild, blood frothing mouths agape in horrified panting. As two dogs clash in the arena, you glance at %doghandler%.",
+			Text = "%townImage%Podążając za pochodnią w ciemnościach, docierasz do budynku z przesuwną bramą. Nieznajomy wystukuje na drzwiach wzór, a te otwierają się, jakby posłuszne ostatniemu stuknięciu. Wprowadza was do środka, a z boku obserwują was drwiące twarze. Natychmiast słyszysz niepokojący zgiełk warczenia i szczekania. Właśnie po to tu jesteś, prawda?\n\n Schody prowadzą do dołów, gdzie tłum kłębi się wokół prowizorycznej areny z ziemi i chwiejących się słupków. Akcji jeszcze nie widać, ale z boku leży sterta martwych psów, a obok nich siedzą ich zabójcy, oczy dzikie, zakrwawione pyski otwarte w przerażonym dyszeniu. Gdy na arenie zderzają się dwa psy, spoglądasz na %doghandler%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Time to ante up and see what our mutt can do.",
+					Text = "Czas wyłożyć stawkę i zobaczyć, co potrafi nasz kundel.",
 					function getResult( _event )
 					{
 						return "D";
@@ -85,7 +85,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This is bad. Let\'s get out of here.",
+					Text = "To jest złe. Wynośmy się stąd.",
 					function getResult( _event )
 					{
 						return 0;
@@ -101,13 +101,13 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_47.png[/img]After paying the ante of two hundred crowns, you and %doghandler% take %wardog% inside the arena.\n\nIts eyes dart around and as its shoulder rests against your pantleg, you can feel a quickening heartbeat. Across from you stands your competition: a scummy looking doghandler and a massive beast more wolf than dog. The mutt is missing its bottom lip, displaying a jagged row of teeth that have been chiseled to be deadlier than they already are. Scabs and sores mottle its crooked body, but the musculature of its frame is apparent and %doghandler% whispers that this will be ugly.\n\n %wardog% yips and jabs forward, the mongrel bred with war in him, and with an outstretched hand you unleash your hound just as your opponent does his.",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Po opłaceniu wpisowego w wysokości dwustu koron, ty i %doghandler% wprowadzacie %wardog% na arenę.\n\nJego oczy biegają na wszystkie strony, a gdy jego bark opiera się o twoją nogawkę, czujesz przyspieszone bicie serca. Naprzeciw stoi wasza konkurencja: obleśny przewodnik psów i ogromna bestia, bardziej wilk niż pies. Kundlowi brakuje dolnej wargi, odsłaniając poszarpany rząd zębów, które zostały wyszczerbione tak, by były jeszcze groźniejsze. Strupy i rany pokrywają jego krzywe ciało, ale muskularna sylwetka jest wyraźna, a %doghandler% szepcze, że będzie brzydko.\n\n %wardog% popiskuje i szarżuje do przodu, kundel z wojną we krwi, a ty, wyciągniętą dłonią, wypuszczasz ogara dokładnie wtedy, gdy robi to twój przeciwnik.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Get him, boy!",
+					Text = "Bierz go, chłopcze!",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -135,20 +135,20 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]200[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]200[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_47.png[/img]The two dogs sprint toward one another and cover the small arena in a flash. They collide, their crude bodies wheeling away from one another before their feet plant and charge in for another shot. The opponent\'s dog ducks beneath %wardog% then rises back up, glomming onto the underside of your dog\'s neck.\n\n%doghandler%\'s hands go to his face, his eyes staring out between his fingers. You watch as %wardog% is shaken from side to side. Blood spurts from its nose as it yelps. You can hear the scratch of scissoring, helpless legs as the dog tries to kick across the dirt. The audience jeers and laughs.",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Dwa psy pędzą ku sobie i w mgnieniu oka pokrywają małą arenę. Zderzają się, ich surowe ciała wirują od siebie, po czym znów stają na łapach i rzucają się do kolejnego starcia. Pies przeciwnika nurkuje pod %wardog%, po czym wznosi się i zaciska na spodzie szyi twojego psa.\n\n%doghandler% zakrywa twarz dłońmi, a jego oczy patrzą spomiędzy palców. Widzisz, jak %wardog% jest miotany na boki. Krew tryska mu z nosa, gdy skowyczy. Słychać drapanie bezradnych, nożycujących łap, gdy pies próbuje się odpychać po ziemi. Publiczność szydzi i śmieje się.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I can\'t intervene.",
+					Text = "Nie mogę interweniować.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "H" : "I";
@@ -156,7 +156,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This needs to stop!",
+					Text = "To musi się skończyć!",
 					function getResult( _event )
 					{
 						return "J";
@@ -172,13 +172,13 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_47.png[/img]The two dogs sprint across the arena. %wardog% goes high, and its opponent low. You watch in horror as the opponent\'s mutt shoots up from its low stance and clamps its jaws under %wardog%\'s neck. They tumble across the arena and in the violent momentum %wardog%\'s throat is ripped clean out. Blood sprays so fiercely that the audience jumps back to get away. The victorious mongrel returns to its owner and drops a rag of flesh and muscle at his feet.\n\n%wardog% stumbles across the dirt. It retches for breath, its throat puckering and wheezing and gargling. %doghandler% jumps the fence and kneels beside the mutt. He tries to cover the wound, but it\'s no use. The dog stares at you as it dies.",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Dwa psy pędzą przez arenę. %wardog% idzie wysoko, a przeciwnik nisko. Z przerażeniem patrzysz, jak kundel rywala wyskakuje ze swojej niskiej pozycji i zaciska szczęki pod szyją %wardog%. Toczą się po arenie, a w brutalnym impetcie gardło %wardog% zostaje wyrwane na czysto. Krew tryska tak gwałtownie, że publiczność odskakuje do tyłu. Zwycięski kundel wraca do właściciela i rzuca mu pod nogi strzęp mięsa i mięśni.\n\n%wardog% potyka się na ziemi. Dławi się powietrzem, jego gardło drży, świszczy i bulgocze. %doghandler% przeskakuje przez płot i klęka przy kundlu. Próbuje zatamować ranę, ale to na nic. Pies patrzy na ciebie, gdy umiera.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damnit!",
+					Text = "Cholera!",
 					function getResult( _event )
 					{
 						return 0;
@@ -193,20 +193,20 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Wardog.getIcon(),
-					text = _event.m.Wardog.getName() + " dies."
+					text = _event.m.Wardog.getName() + " ginie."
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_47.png[/img]The two dogs briefly growl before charging. They collide and simultaneously glom onto each other\'s necks, spiraling and wheeling across the arena like some sort of furry and violent pinwheel.\n\n%wardog% drives its opponent into a fence post. You watch as your dog buries its jaws into its opponent\'s face, jamming its teeth through an eye in one bite, and taking a chunk of tongue in another. The defeated mutt is bitten to pieces, literally, and as it falls in defeat your dog commits to a throat-ripping execution.\n\nYour opponent cries out and tries to jump the fence, but the audience reels him back. %doghandler% pats you on the back.%SPEECH_ON%Easy money, no?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Dwa psy przez chwilę warczą, po czym ruszają do szarży. Zderzają się i jednocześnie zaciskają na swoich szyjach, wirując po arenie jak jakiś futrzany, brutalny bąk.\n\n%wardog% wciska przeciwnika w słupek ogrodzenia. Patrzysz, jak twój pies wbija szczęki w pysk rywala, przebijając mu zęby przez oko jednym kłapnięciem i wyrywając kawał języka drugim. Pokonany kundel zostaje dosłownie rozszarpany, a gdy pada, twój pies dopełnia egzekucji rozdarciem gardła.\n\nTwój przeciwnik krzyczy i próbuje przeskoczyć ogrodzenie, ale publiczność go odciąga. %doghandler% klepie cię po plecach.%SPEECH_ON%Łatwa kasa, co?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It appears the company also has the meanest and baddest dogs.",
+					Text = "Wygląda na to, że kompania ma też najgorsze i najgroźniejsze psy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -221,20 +221,20 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] Crowns"
+					text = "Otrzymujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_47.png[/img]You decide not to intervene, instead letting %wardog%\'s fight, and potential demise, go where it may. The choice is soon rewarded: you watch as your dog gets its hind paws against one of the fenceposts circling the arena. With a good kick it manages to slide itself underneath its combatant and there tear out the dangling testicles in a disgusting display of survivalism. The poor emasculated mongrel, shrieking, wheels around only to put its neck directly into the jaws of %wardog%. The fight ends quickly, and almost mercifully, from there.\n\n You go to collect your reward while %doghandler% hugs the now tail-wagging %wardog%.",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Decydujesz się nie interweniować, pozwalając, by walka %wardog% i jego możliwa śmierć potoczyły się swoim torem. Wybór szybko zostaje nagrodzony: widzisz, jak twój pies opiera tylne łapy o jeden ze słupków ogrodzenia i jednym kopnięciem wsuwa się pod przeciwnika, by w obrzydliwym pokazie instynktu przetrwania wyrwać mu zwisające jądra. Biedny, wykastrowany kundel, wrzeszcząc, obraca się tylko po to, by włożyć szyję prosto w szczęki %wardog%. Walka kończy się szybko i niemal litościwie.\n\n Idziesz odebrać nagrodę, a %doghandler% przytula już merdającego ogonem %wardog%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good boy.",
+					Text = "Dobry pies.",
 					function getResult( _event )
 					{
 						return 0;
@@ -249,20 +249,20 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] Crowns"
+					text = "Otrzymujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_47.png[/img]You don\'t intervene and even have to hold back %doghandler% as the man tries to jump the fence. The two of you can only watch in horror as the fierce mongrel\'s snapping bites tear away at %wardog%\'s face piece by piece. Soon, your dog sinks to the ground, giving up its neck. Bloody tearing follows suit and %wardog% is very quickly a dead dog. Distraught, %doghandler% can only sink to the ground and cover his face.",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Nie interweniujesz i musisz nawet powstrzymać %doghandler%, gdy mężczyzna próbuje przeskoczyć ogrodzenie. We dwóch możecie tylko patrzeć z przerażeniem, jak wściekły kundel odrywa kawałek po kawałku twarz %wardog% swoimi szczękami. Wkrótce twój pies osuwa się na ziemię, wystawiając szyję. Następuje krwawe rozdarcie i %wardog% bardzo szybko staje się martwym psem. Zrozpaczony %doghandler% może tylko osunąć się na ziemię i zakryć twarz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damnit!",
+					Text = "Cholera!",
 					function getResult( _event )
 					{
 						return 0;
@@ -277,20 +277,20 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Wardog.getIcon(),
-					text = _event.m.Wardog.getName() + " dies."
+					text = _event.m.Wardog.getName() + " ginie."
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "J",
-			Text = "[img]gfx/ui/events/event_20.png[/img]You throw your betting ticket into the dirt.%SPEECH_ON%Fark it.%SPEECH_OFF%With a quick leap you jump the fence and run into the arena. %doghandler% is right behind you. The two dogs are still at it, but a swift kick gets them separated. The houndmaster quickly grabs %wardog% and lifts him out of danger. The crowd boos and bottles and glasses start flying in. A man blows a whistle that silences them all. He steps into the arena.%SPEECH_ON%These people paid to see blood. If you are not going to give it to them, then you best find another way to pay. How about two hundred crowns crowns? That or you just go ahead and put that dog back down.%SPEECH_OFF%The crowd is cracking their knuckles and drawing out knives, chains, and other crude weaponry.",
+			Text = "[img]gfx/ui/events/event_20.png[/img]Rzucasz swój kupon w błoto.%SPEECH_ON%Pierdolę to.%SPEECH_OFF%Jednym skokiem przeskakujesz ogrodzenie i wpadasz na arenę. %doghandler% jest tuż za tobą. Dwa psy wciąż walczą, ale szybkie kopnięcie rozdziela je. Prowadzący psy szybko chwyta %wardog% i wyciąga go z niebezpieczeństwa. Tłum gwiżdże, a butelki i kufle zaczynają fruwać. Mężczyzna dmucha w gwizdek, uciszając wszystkich. Wchodzi na arenę.%SPEECH_ON%Ci ludzie zapłacili, żeby zobaczyć krew. Jeśli im jej nie dacie, to lepiej znajdźcie inny sposób zapłaty. Co powiecie na dwieście koron? Albo po prostu położycie tego psa z powrotem.%SPEECH_OFF%Tłum chrupie knykciami i wyciąga noże, łańcuchy oraz inne prymitywne bronie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Take your damn crowns, then. We\'re leaving with our dog.",
+					Text = "Bierzcie te cholerne korony. Wychodzimy z naszym psem.",
 					function getResult( _event )
 					{
 						return "K";
@@ -298,7 +298,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "The fight will continue.",
+					Text = "Walka będzie trwała.",
 					function getResult( _event )
 					{
 						return "L";
@@ -314,13 +314,13 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "K",
-			Text = "[img]gfx/ui/events/event_20.png[/img]You take out %demand% crowns and hand them over. The crowd boos, but the man in charge blows his whistle again.%SPEECH_ON%Shut it, the lot of ya! The man paid the fee so the man and his dumb dog walk.%SPEECH_OFF%The crowd pipes down. You start to leave, %doghandler% behind you with an unconscious %wardog% strung limply across his arms. A few patrons hiss and spit, but that\'s about the most they do and you\'re perfectly fine with that.",
+			Text = "[img]gfx/ui/events/event_20.png[/img]Wyciągasz %demand% koron i podajesz je. Tłum gwiżdże, ale szef znów dmucha w gwizdek.%SPEECH_ON%Zamknąć się, do cholery! Zapłacił, więc on i jego głupi pies wychodzą.%SPEECH_OFF%Tłum cichnie. Zaczynasz wychodzić, a %doghandler% idzie za tobą z nieprzytomnym %wardog% zwisającym bezwładnie na jego ramionach. Kilku bywalców syczy i spluwa, ale to wszystko, co robią, i to ci w zupełności wystarcza.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back to camp...",
+					Text = "Wracajmy do obozu...",
 					function getResult( _event )
 					{
 						return 0;
@@ -335,20 +335,20 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]200[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]200[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "L",
-			Text = "[img]gfx/ui/events/event_20.png[/img]You order %doghandler% to put the dog down. His eyes widen.%SPEECH_ON%You can\'t be serious.%SPEECH_OFF%Nodding, you say you are. %wardog%\'s barely awake, snorting between frightened alertness and deadened unconsciousness. When %doghandler% hesitates again, you grab the dog and pull it away. You nod to the crowd, and then to your opponent who unleashes his murderous hound a second time. %wardog%\'s weary, watery eyes look up at you, blink, then close. You put the dog down and your opponent\'s hound descend upon it with bestial fury. You try not to listen to the horrific demise unfolding at your feet.",
+			Text = "[img]gfx/ui/events/event_20.png[/img]Rozkazujesz %doghandler% dobić psa. Jego oczy się rozszerzają.%SPEECH_ON%Nie możesz mówić poważnie.%SPEECH_OFF%Kiwasz głową, że możesz. %wardog% ledwo przytomny, sapie między przestraszoną czujnością a otępiałą nieświadomością. Gdy %doghandler% waha się ponownie, chwytasz psa i odciągasz go. Kiwasz głową do tłumu, a potem do przeciwnika, który wypuszcza swojego morderczego ogara po raz drugi. Zmęczone, wilgotne oczy %wardog% patrzą na ciebie, mrugają, po czym zamykają się. Kładziesz psa, a ogar przeciwnika rzuca się na niego z bestialską furią. Starasz się nie słuchać przerażającej śmierci rozgrywającej się u twoich stóp.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back to camp...",
+					Text = "Wracajmy do obozu...",
 					function getResult( _event )
 					{
 						return 0;
@@ -363,7 +363,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Wardog.getIcon(),
-					text = _event.m.Wardog.getName() + " dies."
+					text = _event.m.Wardog.getName() + " ginie."
 				});
 			}
 

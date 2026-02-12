@@ -8,17 +8,17 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.graverobber_finds_item";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]The weather is nice. A fine evening, if any, for the moon to be where it is: an orange rind of it slipping in and out of the clouds - clouds that pass by on the seemingly innocuous gesture that a light breeze can have. So bright is this rim of a moon you wonder if any flowers might bloom, mistaking the evening light for its brighter cousin. You wonder if the millmoths and flies and armor-backed beetles see the moon and dance toward it as they would any candle or torch. Do they have that quiet desperation? That inescapable cruelty of realizing that, when your stock is placed against the greater whole, you have and are nothing... and the hatred that realization can bring, and the jealousy...\n\nSuddenly, %graverobber% the graverobber appears by your side, his smell skewering your thoughts with miasmic proficiency. He\'s hardly a man at all, but a golem, mudslaked and grass-peppered with two white eyes peering out. Sighing, you ask what he wants. He thumbs over one shoulder, the other occupied by a shovel.%SPEECH_ON%Went digging through a grave or three. Found somethin\' and I don\'t mean just what them graves are for. Wanna come take a look?%SPEECH_OFF%Of course you do...",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Pogoda jest piękna. Drobny wieczór, jeśli w ogóle jakiś, dla księżyca, by znajdował się tam, gdzie jest: pomarańczowa skórka przesuwająca się między chmurami - chmurami, które mijają jakby z pozornie niewinnego gestu lekkiego wiatru. Ten sierp księżyca świeci tak jasno, że zastanawiasz się, czy nie zakwitną jakieś kwiaty, biorąc wieczorne światło za jaśniejszego krewnego. Zastanawiasz się, czy ćmy, muchy i chrząszcze w pancerzach widzą księżyc i tańczą ku niemu jak do świecy czy pochodni. Czy mają tę cichą desperację? Tę nieuniknioną okrutność uświadomienia sobie, że gdy twoje życie zestawić z większą całością, to masz i jesteś niczym... oraz nienawiść, jaką to uświadomienie może zrodzić, i zazdrość...\n\nNagle obok ciebie pojawia się %graverobber%, grabarz. Jego zapach przeszywa twoje myśli mroczną skutecznością. To właściwie nie człowiek, lecz golemo-podobna postać, oblepiona błotem i trawą, z dwiema białymi oczami patrzącymi spod osadu. Wzdychasz i pytasz, czego chce. Kciukiem wskazuje za siebie, drugą ręką trzymając łopatę.%SPEECH_ON%Kopałem w jednym czy trzech grobach. Znalazłem coś, i nie mówię tylko o tym, po co są groby. Chcesz zobaczyć?%SPEECH_OFF%Oczywiście, że chcesz...",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s see...",
+					Text = "Zobaczmy...",
 					function getResult( _event )
 					{
 						return "B";
@@ -33,7 +33,7 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Historian != null)
 				{
 					this.Options.push({
-						Text = "Let\'s fetch %historian% the Historian, he\'ll know about buried treasure.",
+						Text = "Sprowadźmy %historian%, historyka, będzie wiedział o skarbach w grobach.",
 						function getResult( _event )
 						{
 							return "C";
@@ -46,13 +46,13 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_33.png[/img]%graverobber% brings you to a big hole in the ground. The top half of a skeleton is at the bottom, its arms loose over the earth as though it had bedded there for a night\'s rest. Empty eye sockets look up at you. The graverobber crouches and grabs something. He wipes the mud and worms off it and hands it over.%SPEECH_ON%I think we can use that.%SPEECH_OFF%You nod, but tell the man to quickly fill the grave before anyone sees what he\'s done.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]%graverobber% prowadzi cię do dużej dziury w ziemi. Na dnie leży górna połowa szkieletu, z ramionami luźno rozłożonymi na ziemi, jakby nocował tu na spoczynku. Puste oczodoły spoglądają w górę. Grabarz kuca i coś wyciąga. Odciera z tego błoto i robaki, po czym podaje ci przedmiot.%SPEECH_ON%Myślę, że możemy to wykorzystać.%SPEECH_OFF%Kiwasz głową, ale mówisz mu, żeby szybko zasypał grób, zanim ktoś zobaczy, co zrobił.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "He won\'t be needing that anymore.",
+					Text = "Jemu już się to nie przyda.",
 					function getResult( _event )
 					{
 						return 0;
@@ -103,20 +103,20 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Otrzymujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]While looking down at the goods, %historian% the rather astute scholar and historian sidles up next to you. He\'s rubbing his chin and a faint hum ruminates deeply within him.%SPEECH_ON%Yes, yes...%SPEECH_OFF%You turn to him to ask what he\'s going on about. He snaps his fingers and points down at what the graverobber had found. He explains that this isn\'t just any chest plate or weapon, but indeed the gear of a famous fighter, nobleman, and womanizer, %noblename%.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Gdy przyglądasz się znalezisku, %historian%, bystry uczony i historyk, podchodzi obok. Pociera brodę, a z głębi wydobywa się cichy pomruk namysłu.%SPEECH_ON%Tak, tak...%SPEECH_OFF%Odwracasz się do niego, pytając, o co chodzi. Pstryka palcami i wskazuje na to, co znalazł grabarz. Wyjaśnia, że to nie jest zwykła zbroja ani broń, lecz rzeczy słynnego wojownika, szlachcica i kobieciarza, %noblename%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fascinating.",
+					Text = "Fascynujące.",
 					function getResult( _event )
 					{
 						return 0;
@@ -169,7 +169,7 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Otrzymujesz " + item.getName()
 				});
 			}
 

@@ -8,17 +8,17 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.wardogs_fight_each_other";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_37.png[/img]A series of barks followed by muted growling interrupts your work. You leave your tent to see that the two wardogs, %randomwardog1% and %randomwardog2% are fighting. They\'ve locked their jaws onto the nape of each other\'s necks. A few brothers try to intervene, but every time they do the wardogs briefly separate and snap at the humans as if to say this fight is between them and them only.",
+			Text = "[img]gfx/ui/events/event_37.png[/img]Seria szczeknięć, po której następuje przytłumione warczenie, przerywa twoją pracę. Wychodzisz z namiotu i widzisz, że dwa psy bojowe, %randomwardog1% i %randomwardog2%, walczą. Zacisnęły szczęki na karkach siebie nawzajem. Kilku braci próbuje interweniować, ale za każdym razem psy na chwilę się rozdzielają i kłapią na ludzi, jakby mówiły, że ta walka jest między nimi i tylko nimi.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let the hounds sort it out themselves.",
+					Text = "Niech psy same to rozstrzygną.",
 					function getResult( _event )
 					{
 						return "B";
@@ -26,7 +26,7 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Someone separate the hounds!",
+					Text = "Niech ktoś rozdzieli psy!",
 					function getResult( _event )
 					{
 						return "D";
@@ -39,7 +39,7 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Houndmaster != null)
 				{
 					this.Options.push({
-						Text = "%houndmaster%, you are a houndmaster, handle this!",
+						Text = "%houndmaster%, jesteś treserem psów, zajmij się tym!",
 						function getResult( _event )
 						{
 							return "I";
@@ -52,13 +52,13 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_37.png[/img]You elect to stand back and let nature take its course. Once the dust settles, you step forward to see how everything shook out.",
+			Text = "[img]gfx/ui/events/event_37.png[/img]Postanawiasz się cofnąć i pozwolić naturze zrobić swoje. Gdy kurz opada, podchodzisz, by zobaczyć, jak się to skończyło.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well?",
+					Text = "I co?",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -86,13 +86,13 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_37.png[/img]You yell at %otherbrother% to separate the two wardogs. He takes up a long stick and lowers it into the furred and furious melee. The dogs yelp as the metal comes between them. One takes hold of the pole-handle and rips it forward, dragging the brother into the fray. Man and beast blur together as all three fight for their own survival, each taking turns at fighting off the other. As the dust settles, you take stock of who or what is still standing.",
+			Text = "[img]gfx/ui/events/event_37.png[/img]Krzyczysz na %otherbrother%, by rozdzielił dwa psy bojowe. Bierze długi kij i opuszcza go w futrzaną, wściekłą kotłowaninę. Psy piszczą, gdy metal wchodzi między nie. Jeden chwyta kij i szarpie go, wciągając brata w sam środek walki. Człowiek i bestie mieszają się, gdy cała trójka walczy o własne przetrwanie, na zmianę odpierając ataki. Gdy kurz opada, sprawdzasz, kto lub co jeszcze stoi.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well?",
+					Text = "I co?",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -125,13 +125,13 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_37.png[/img]Unfortunately, both dogs passed away. They died with bloodied fur clenched in their jaws, each one sharing a sum of both victory and defeat. You have %randombrother% bury the bodies lest their smell attract even angrier beasts.",
+			Text = "[img]gfx/ui/events/event_37.png[/img]Niestety oba psy padły. Zginęły z zakrwawionym futrem zaciśniętym w szczękach, każde dzieląc w sobie i zwycięstwo, i porażkę. Każesz %randombrother% zakopać ciała, by zapach nie przyciągnął jeszcze bardziej wściekłych bestii.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Poor beasts.",
+					Text = "Biedne bestie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -144,14 +144,14 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Wardog1.getIcon(),
-					text = "You lose " + _event.m.Wardog1.getName()
+					text = "Tracisz " + _event.m.Wardog1.getName()
 				});
 				this.World.Assets.getStash().remove(_event.m.Wardog1);
 				_event.m.Wardog1 = null;
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Wardog2.getIcon(),
-					text = "You lose " + _event.m.Wardog2.getName()
+					text = "Tracisz " + _event.m.Wardog2.getName()
 				});
 				this.World.Assets.getStash().remove(_event.m.Wardog2);
 				_event.m.Wardog2 = null;
@@ -160,13 +160,13 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_27.png[/img]The battle over, you have %randombrother% take a look at the wardogs. They growl as he approaches, but that\'s all they got to muster for the fight has been kicked out of them. He reports on a few broken teeth and they each got a bit of a limp, but they ain\'t lame. In time, they\'ll be good as new for fighting. Hopefully, just not fighting one another...",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Po bitwie każesz %randombrother% obejrzeć psy bojowe. Warczą, gdy podchodzi, ale to wszystko, na co je stać, bo walka wybiła z nich cały ogień. Zgłasza kilka wybitych zębów i to, że każdy trochę utyka, ale nie są kulawe. Z czasem będą jak nowe do walki. Oby tylko nie ze sobą...",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Such is their nature.",
+					Text = "Taka ich natura.",
 					function getResult( _event )
 					{
 						return 0;
@@ -181,13 +181,13 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_37.png[/img]One wardog limps off from the melee, leaving behind a dead mutt. That the winner did not even eat or try to eat the loser shows all you need to know about these animals\' namesake. You have %randombrother% take care of the survivor while a few other brothers bury the body of the departed.",
+			Text = "[img]gfx/ui/events/event_37.png[/img]Jeden pies bojowy odchodzi z potyczki, kulejąc i zostawiając martwego kundla. To, że zwycięzca nawet nie zjadł ani nie próbował zjeść przegranego, mówi wszystko o pochodzeniu nazwy tych zwierząt. Każesz %randombrother% zająć się ocalałym, a kilku innych braci grzebie ciało poległego.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Poor beast.",
+					Text = "Biedna bestia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -200,7 +200,7 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Wardog1.getIcon(),
-					text = "You lose " + _event.m.Wardog1.getName()
+					text = "Tracisz " + _event.m.Wardog1.getName()
 				});
 				this.World.Assets.getStash().remove(_event.m.Wardog1);
 				_event.m.Wardog1 = null;
@@ -209,13 +209,13 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_34.png[/img]%otherbrother% manages to separate the two wardogs before they kill one another. Unfortunately, he paid a price heavy with bites and scratches. He\'ll survive, but you can\'t help but notice that he\'s very skittish and wary of the dogs now.",
+			Text = "[img]gfx/ui/events/event_34.png[/img]%otherbrother% zdołał rozdzielić dwa psy bojowe, zanim się pozabijały. Niestety zapłacił za to wysoką cenę, pełną ugryzień i zadrapań. Przeżyje, ale nie sposób nie zauważyć, że teraz jest bardzo nerwowy i boi się psów.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "They\'re ferocious beasts alright.",
+					Text = "To naprawdę zaciekłe bestie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -230,20 +230,20 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Otherbrother.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Otherbrother.getName() + " doznaje " + injury.getNameOnly()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You order %houndmaster% the houndmaster to do something. He nods and steps forward, calmly walking between the two fighting dogs. They bark and snap at each other, but both pause to eye the man coming in. One growls, but does in fact sit down. The other backs up, its tail wagging furiously, but there\'s still fire in its eyes. The houndmaster crouches down and pets them both on the head. One mutt lowers itself, and the other follows suit.\n\n The man slowly brings the dogs together, practically touching noses, and then whispers to them both. Slowly, but surely, the bestial energy leaves the dogs and their softened dispositions seem more fit for watching children than fighting in a mercenary band. The houndmaster gets back up and the dogs happily follow him. He nods.%SPEECH_ON%Just a small row between dogs, heh.%SPEECH_OFF%He walks off while the rest of the company looks on slackjawed, as if they\'d just watched some kind of procession of druidic sorcery.",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Rozkazujesz %houndmaster%, treserowi psów, by coś zrobił. Kiwając głową, podchodzi spokojnie między dwa walczące psy. Szczekają i kłapią na siebie, ale oba zatrzymują się, przyglądając się nadchodzącemu mężczyźnie. Jeden warczy, ale w końcu siada. Drugi cofa się, ogon ma rozwścieczony, ale w oczach wciąż tli się ogień. Treser kuca i głaszcze oba psy po głowach. Jeden kundel kładzie się, a drugi robi to samo.\n\n Mężczyzna powoli zbliża psy do siebie, niemal dotykają się nosami, po czym szepcze coś do obu. Powoli, ale pewnie, bestialna energia opuszcza psy, a ich łagodniejsze usposobienie bardziej pasuje do pilnowania dzieci niż do walki w bandzie najemników. Treser wstaje, a psy radośnie podążają za nim. Kiwając głową, mówi:%SPEECH_ON%Tylko mała sprzeczka między psami, hehe.%SPEECH_OFF%Odchodzi, a reszta kompanii patrzy z rozdziawionymi ustami, jakby właśnie oglądali jakiś pochód druidycznej magii.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A master of his craft, indeed.",
+					Text = "Prawdziwy mistrz rzemiosła.",
 					function getResult( _event )
 					{
 						return 0;

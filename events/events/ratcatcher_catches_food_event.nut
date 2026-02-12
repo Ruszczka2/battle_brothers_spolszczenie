@@ -5,17 +5,17 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ratcatcher_catches_food";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img] With rations down to nothing, %ratcatcher% feebly enters your tent, the moans of some hungry men passing by before the flaps close behind him. He explains that he has a resolution to your food problem. You fear to ask what it is, but you\'ve little choice now. The ratchatcher swings a burlap sack onto the table. Some shape of it moves, skittering and bobbing and squealing. The man smashes it with his fist before smiling at you.%SPEECH_ON%Sorry, had a live one there!%SPEECH_OFF%He explains that rat isn\'t the most nutritious of animals, nor the healthiest, but it\'d help the company enough until they can get back to a town or farm. You reluctantly agree to keep your men from starving.",
+			Text = "[img]gfx/ui/events/event_05.png[/img] Gdy racje spadły do zera, %ratcatcher% słabo wchodzi do twojego namiotu, a za zasłoną słychać jęki głodnych ludzi, nim klapy zamkną się za nim. Wyjaśnia, że ma rozwiązanie problemu z jedzeniem. Boisz się spytać, co to takiego, ale nie masz już wielkiego wyboru. Szczurołap zrzuca na stół jutowy worek. Coś w środku się porusza, szura, podskakuje i piszczy. Mężczyzna uderza w to pięścią, po czym uśmiecha się do ciebie.%SPEECH_ON%Przepraszam, żywy się trafił!%SPEECH_OFF%Wyjaśnia, że szczur nie jest najżywniejszym ani najzdrowszym zwierzęciem, ale pomoże kompanii przetrwać, aż wrócicie do miasta lub farmy. Z niechęcią zgadzasz się, by uchronić ludzi przed głodem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We don\'t have a choice...",
+					Text = "Nie mamy wyboru...",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,7 +33,7 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] Rat Meat"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] mięsa szczura"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -47,8 +47,8 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getBackground().isNoble())
 					{
-						bro.worsenMood(1.0, "Lost confidence in your leadership");
-						bro.worsenMood(2.0, "Was served rat for dinner");
+						bro.worsenMood(1.0, "Stracił zaufanie do twojego dowodzenia");
+						bro.worsenMood(2.0, "Dostał szczura na obiad");
 						this.List.push({
 							id = 10,
 							icon = this.Const.MoodStateIcon[bro.getMoodState()],
@@ -61,7 +61,7 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 
 						if (r == 1 && !bro.getBackground().isLowborn())
 						{
-							bro.worsenMood(1.0, "Was served rat for dinner");
+							bro.worsenMood(1.0, "Dostał szczura na obiad");
 
 							if (bro.getMoodState() < this.Const.MoodState.Neutral)
 							{
@@ -79,7 +79,7 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = effect.getIcon(),
-								text = bro.getName() + " is sick"
+								text = bro.getName() + " jest chory"
 							});
 						}
 					}

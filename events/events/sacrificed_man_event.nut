@@ -7,17 +7,17 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.sacrificed_man";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%A strange sight: one dead man pinned to the earth with spears. His own blood has been used to circle his corpse and other strange ritualistic rites have been painted by way of his lifeblood. %otherbrother% starts retrieving the spears. You try and tell him to stop, but it\'s already too late. He holds one of the weapons up.%SPEECH_ON%What? These are of good quality. Why would we leave them here?%SPEECH_OFF%Well, if there was a deific protection here it\'s already been broken. You collect the spears.",
+			Text = "%terrainImage%Dziwny widok: jeden martwy mężczyzna przyszpilony do ziemi włóczniami. Jego własna krew posłużyła do obrysowania zwłok, a inne dziwne rytuały namalowano jego życiodajną posoką. %otherbrother% zaczyna zbierać włócznie. Próbujesz go powstrzymać, ale już za późno. Unosi jedną z broni.%SPEECH_ON%Co? Są dobrej jakości. Czemu mielibyśmy je tu zostawić?%SPEECH_OFF%Cóż, jeśli było tu jakieś boskie zabezpieczenie, już zostało złamane. Zbieracie włócznie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest in peace.",
+					Text = "Spoczywaj w pokoju.",
 					function getResult( _event )
 					{
 						if (_event.m.Cultist != null)
@@ -39,27 +39,27 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/weapons/militia_spear");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Cultist",
-			Text = "%terrainImage%Before you can leave, %cultist% bends low to the sacrificed man and whispers into his ear. A moment later, the dead man\'s head lurches. His eyes widen and nostrils flare. The cultist looks over to you.%SPEECH_ON%He wasn\'t dead. His blood was used to satiate Davkul. Had we needed his death, we would have burned him.%SPEECH_OFF%He pauses, turning to the man whose wounds are mysteriously healing before your eyes like mud filling in a footprint. %cultist% pets him on the cheek.%SPEECH_ON%Come, friend, and serve Davkul.%SPEECH_OFF%The un-sacrificed man jumps to his feet and instinctively turns toward you. Somehow, he already knows you\'re the captain here and bends a knee.%SPEECH_ON%If you allow it, I will fight for you and, in doing so, spread the faith of Davkul.%SPEECH_OFF%His voice is robotic, as if he\'d spent the last year practicing the oath.",
+			Text = "%terrainImage%Zanim odejdziesz, %cultist% pochyla się nad poświęconym mężczyzną i szepcze mu do ucha. Chwilę później głowa martwego mężczyzny szarpie się. Jego oczy się rozszerzają, a nozdrza drgają. Kultysta spogląda na ciebie.%SPEECH_ON%On nie był martwy. Jego krew miała nasycić Davkula. Gdybyśmy potrzebowali jego śmierci, spalilibyśmy go.%SPEECH_OFF%Robi pauzę, zwracając się do mężczyzny, którego rany tajemniczo goją się na twoich oczach jak błoto wypełniające odcisk stopy. %cultist% gładzi go po policzku.%SPEECH_ON%Chodź, przyjacielu, i służ Davkulowi.%SPEECH_OFF%Niepoświęcony mężczyzna zrywa się na nogi i instynktownie zwraca się ku tobie. Jakimś sposobem już wie, że to ty tu dowodzisz, i przyklęka.%SPEECH_ON%Jeśli pozwolisz, będę walczył dla ciebie i tym samym szerzył wiarę Davkula.%SPEECH_OFF%Jego głos brzmi jak automat, jakby przez ostatni rok ćwiczył tę przysięgę.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the %companyname% then.",
+					Text = "Witaj więc w %companyname%.",
 					function getResult( _event )
 					{
 						return "Recruit";
@@ -67,7 +67,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I really don\'t need more of this. You\'re on your own.",
+					Text = "Naprawdę mi tego nie trzeba. Jesteś zdany na siebie.",
 					function getResult( _event )
 					{
 						return "Deny";
@@ -83,8 +83,8 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"cultist_background"
 				]);
-				_event.m.Dude.setTitle("the Sacrifice");
-				_event.m.Dude.getBackground().m.RawDescription = "You found this man as a sacrifice, but he arose from his fate to be a servant of Davkul. He asked to fight for you, and you, for some reason, actually agreed.";
+				_event.m.Dude.setTitle("Poświęcony");
+				_event.m.Dude.getBackground().m.RawDescription = "Znalazłeś tego człowieka jako ofiarę, lecz powstał z przeznaczenia, by służyć Davkulowi. Poprosił, by walczyć dla ciebie, a ty z jakiegoś powodu się zgodziłeś.";
 				_event.m.Dude.getBackground().buildDescription(true);
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
@@ -108,13 +108,13 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Recruit",
-			Text = "%terrainImage%You decide to take the man in. %otherbrother% stands by the wayside, a couple of spears in hand.%SPEECH_ON%We\'re still taking these, right?%SPEECH_OFF%",
+			Text = "%terrainImage%Decydujesz się przyjąć mężczyznę. %otherbrother% stoi z boku drogi z parą włóczni w rękach.%SPEECH_ON%Bierzemy je, prawda?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Of course we are.",
+					Text = "Oczywiście, że tak.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -129,7 +129,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Cultist.improveMood(1.0, "You recruited a fellow cultist");
+				_event.m.Cultist.improveMood(1.0, "Zrekrutowałeś współwyznawcę");
 
 				if (_event.m.Cultist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -144,13 +144,13 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Deny",
-			Text = "%terrainImage%You deny the born-again cultist. He nods.%SPEECH_ON%Of course. I will find other ways to serve Davkul. Farewell, brother.%SPEECH_OFF%He bows to %cultist% before turning and leaving. %otherbrother% stands there with a couple of spears in hand.%SPEECH_ON%We\'re still taking these, right?%SPEECH_OFF%",
+			Text = "%terrainImage%Odmawiasz nawróconemu wyznawcy. Kiwie głową.%SPEECH_ON%Oczywiście. Znajdę inne sposoby, by służyć Davkulowi. Żegnaj, bracie.%SPEECH_OFF%Kłania się %cultist%, po czym odchodzi. %otherbrother% stoi z boku z parą włóczni w rękach.%SPEECH_ON%Bierzemy je, prawda?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Of course we are.",
+					Text = "Oczywiście, że tak.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -163,7 +163,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Cultist.worsenMood(1.0, "You failed to recruit a fellow cultist");
+				_event.m.Cultist.worsenMood(1.0, "Nie udało ci się zrekrutować współwyznawcy");
 
 				if (_event.m.Cultist.getMoodState() < this.Const.MoodState.Neutral)
 				{

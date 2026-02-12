@@ -6,17 +6,17 @@ this.hidden_cache_forest_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.hidden_cache_forest";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]The forest is no friend of man which is why men of ill-repute sure love to put their keepsakes there. And today you\'ve stumbled across one: a cache that %otherbrother% found by way of stubbing his toe on the edge of it. Digging out the crate and cracking it open, you find an assortment of weapons, armor, and gold. You clap the sellsword on the shoulder and thank him for his \'hard work\'. He wags his boot around.%SPEECH_ON%Yessir, I\'ve got a toe like the nose of a bloodhound.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Las nie jest przyjacielem człowieka, dlatego ludzie o złej sławie chętnie zostawiają tam swoje skarby. I dziś na jeden trafiliście: skrytkę, którą %otherbrother% znalazł, uderzając palcem u stopy o jej krawędź. Wykopujesz skrzynię i rozłupujesz ją, znajdując zestaw broni, pancerzy i złota. Klepiesz najemnika po ramieniu i dziękujesz mu za jego ciężką pracę. Macha butem w powietrzu.%SPEECH_ON%Tak jest, mam palec u stopy jak nos psa tropiącego.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Indeed you do.",
+					Text = "Rzeczywiście.",
 					function getResult( _event )
 					{
 						if (_event.m.Graverobber != null)
@@ -39,7 +39,7 @@ this.hidden_cache_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 				});
 				local r = this.Math.rand(1, 8);
 				local item;
@@ -81,7 +81,7 @@ this.hidden_cache_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				r = this.Math.rand(1, 5);
 
@@ -110,20 +110,20 @@ this.hidden_cache_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_25.png[/img]As you get ready to leave, %graverobber% the graverobber stops you.%SPEECH_ON%Wait a minute.%SPEECH_OFF%He jumps down into the pit in which the cache was buried. He starts knocking around on the dirt. Tap. Tap. Tap. Clack. His knuckle raps hard and a smile crosses his face.%SPEECH_ON%Yeah, that\'s what I thought.%SPEECH_OFF%The man digs into the earth and drags out another crate and opens it up. You\'re wowed by the sight of what\'s inside. The graverobber nods.%SPEECH_ON%If someone has something good to hide, they don\'t just hide it in the ground, they hide it with things of lesser value. That way, even if you find their treasure there\'s still a chance you\'ll get distracted from the real good stuff. Quite clever, really, but it don\'t fool me none.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Gdy szykujesz się do odejścia, %graverobber% grabarz zatrzymuje cię.%SPEECH_ON%Chwileczkę.%SPEECH_OFF%Zeskakuje do dołu, w którym zakopano skrytkę. Zaczyna opukiwać ziemię. Stuk. Stuk. Stuk. Klek. Uderza knykciami mocniej i na jego twarzy pojawia się uśmiech.%SPEECH_ON%Wiedziałem.%SPEECH_OFF%Mężczyzna kopie w ziemi, wyciąga kolejną skrzynię i otwiera ją. Jesteś pod wrażeniem tego, co jest w środku. Grabarz kiwa głową.%SPEECH_ON%Jeśli ktoś ma coś dobrego do ukrycia, nie chowa tego w ziemi samotnie, tylko z rzeczami mniej wartościowymi. Dzięki temu, nawet jeśli znajdziesz ich skarb, wciąż jest szansa, że odciągnie cię od prawdziwych fantów. Sprytne, ale mnie to nie zwiedzie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -158,7 +158,7 @@ this.hidden_cache_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

@@ -5,17 +5,17 @@ this.farmer_old_tricks_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.farmer_old_tricks";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_82.png[/img]You find %farmhand% sitting beside the company wagon. He\'s rolling some boomstraw between his teeth, gritting it here and there and spitting out the flakes. You ask what he\'s thinking about. The farmer shrugs.%SPEECH_ON%What my pa told me about baling hay. He had this method of turning the wrist at the catch and again at the release. Never could get the second part right.%SPEECH_OFF%The man takes the straw out and flicks it. You ask.%SPEECH_ON%But you could get the first part right? Where ya stab the hay and yank?%SPEECH_OFF%He nods. You tell the man that he only needs the first part of that technique to properly gut a man. You watch as his face glows with realization.%SPEECH_ON%Yeah... yeah that\'s right! Why didn\'t I think of that before? Yer a genius, sir! I\'ll try it our next go out! It\'ll just be like baling hay!%SPEECH_OFF%With a lot more screaming and bleeding, but sure.",
+			Text = "[img]gfx/ui/events/event_82.png[/img]Zastajesz %farmhand% siedzącego obok wozu kompanii. Przekłada źdźbło słomy między zębami, zgrzyta nim tu i tam, po czym wypluwa drobiny. Pytasz, o czym myśli. Rolnik wzrusza ramionami.%SPEECH_ON%O tym, co ojciec mówił mi o wiązaniu siana. Miał taki sposób: skręcał nadgarstek przy wbiciu i znowu przy wyciągnięciu. Nigdy nie umiałem tego drugiego dobrze zrobić.%SPEECH_OFF%Mężczyzna wyjmuje słomkę i strzepuje ją. Pytasz.%SPEECH_ON%Ale pierwszy etap potrafiłeś, tak? Gdy wbijasz się w siano i szarpiesz?%SPEECH_OFF%Kiwa głową. Mówisz mu, że do porządnego wypatroszenia człowieka potrzebuje tylko tej pierwszej części techniki. Widzisz, jak na jego twarzy pojawia się olśnienie.%SPEECH_ON%Tak... tak, racja! Czemu nie pomyślałem o tym wcześniej? Jest pan geniuszem! Spróbuję przy następnym wyjściu! To będzie jak wiązanie siana!%SPEECH_OFF%Tyle że z większą ilością krzyku i krwi, ale jasne.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Just don\'t try and throw them over your shoulder.",
+					Text = "Tylko nie próbuj przerzucać ich przez ramię.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.farmer_old_tricks_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Farmer.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
+					text = _event.m.Farmer.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Umiejętności Walki Wręcz"
 				});
 				_event.m.Farmer.improveMood(1.0, "Realized he has some fighting knowledge");
 

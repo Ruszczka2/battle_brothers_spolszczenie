@@ -8,16 +8,16 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.imprisoned_wildman";
-		this.m.Title = "Along the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_41.png[/img]While on the march, you come across a line of stopped wagons. You realize the wagons are cages with each serving a prison to a wild animal. Touring the line of carts, you come to face a variety of beasts. A haunched and mewling black cat launches its mankiller claws through the bars. Jumping away, you back into another cage which violently rattles with a bear\'s roaring. Thankfully, its powerful paws are too fat to fit between the bars. Another cage sizzles with the hissing of snakes.\n\n A man leans back from behind one of the wagons. He\'s got a wild look on his face as though you\'d just caught him getting one off the wrist.%SPEECH_ON%Hey! Who are you? What are you doing here?%SPEECH_OFF%You inform the stranger that you are the captain of the %companyname%. The man straightens up.%SPEECH_ON%Oh, sellswords then! And I thought my luck had up and run off on me! Look, I got a problem that my hired hands refused to help with. They didn\'t care when they didn\'t know better, but the damn cloak fell off the wagon and then they just wouldn\'t shut up about how I wasn\'t paying them enough to transport such goods!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_41.png[/img]Podczas marszu napotykasz rząd zatrzymanych wozów. Zauważasz, że wozy to klatki, a każda jest więzieniem dla dzikiego zwierzęcia. Przechodząc wzdłuż wozów, stajesz twarzą w twarz z różnymi bestiami. Zgarbiony i miauczący czarny kot wyrzuca swoje zabójcze pazury przez kraty. Odskakując, wpadasz na inną klatkę, która gwałtownie drży od ryku niedźwiedzia. Na szczęście jego potężne łapy są zbyt grube, by zmieścić się między prętami. Jeszcze inna klatka syczy od węży.\n\n Mężczyzna wychyla się zza jednego z wozów. Ma dziki wyraz twarzy, jakbyś właśnie przyłapał go na ręcznej robocie.%SPEECH_ON%Hej! Kim jesteś? Co tu robisz?%SPEECH_OFF%Informujesz nieznajomego, że jesteś kapitanem %companyname%. Mężczyzna prostuje się.%SPEECH_ON%Och, najemnicy! A już myślałem, że szczęście mnie opuściło! Słuchaj, mam problem, z którym moi najęci ludzie odmówili pomocy. Nie obchodzili się tym, gdy nie wiedzieli lepiej, ale cholerny płaszcz spadł z wozu i wtedy nie mogli przestać marudzić, że nie płacę im dość za transport takich towarów!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "What do you need help with?",
+					Text = "W czym potrzebujesz pomocy?",
 					function getResult( _event )
 					{
 						return this.World.Assets.getOrigin().getID() != "scenario.manhunters" ? "B" : "B2";
@@ -25,7 +25,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This ain\'t our problem.",
+					Text = "To nie nasz problem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -40,14 +40,14 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_100.png[/img]The animal tamer leads you to a carriage. You immediately see why his hired hands quit: a frenzied and mercurial wildman is sitting inside the cage. Raw wrists bleed against his shackles, signs of attempted escapes. Half-starved, the wildman gnaws on sticks poking out from a tumbleweed of a beard. Seeing this sad sight, you grab the stranger by his shirt and slam him against the wagon.%SPEECH_ON%Does that look like an animal to you?%SPEECH_OFF%The animal tamer grins, ivory for teeth. He explains himself.%SPEECH_ON%Cityfolk have gotten wind of the \'uncivilized\' wildmen and wish to see them up close. I am only fulfilling this new demand as any businessman would. Now, all I need help with is to get that dead body out of the cage.%SPEECH_OFF%He points toward a corpse in the corner of the cage. The wildman rears back, snarling, and goes to protectively sit on the body. The animal tamer shakes his head.%SPEECH_ON%One of my helpers got too close and, well, yeah. I can\'t go into town with that mess in there so I thought maybe you could help me fish it out. I\'ll pay plenty, of course. A pouch of 250 crowns sound good to you? Just reach on in there and yank that garbage out.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_100.png[/img]Treser zwierząt prowadzi cię do powozu. Od razu widzisz, czemu jego najęci ludzie zrezygnowali: w klatce siedzi wściekły i nieobliczalny dzikus. Surowe nadgarstki krwawią od kajdan, ślady prób ucieczki. Na wpół zagłodzony, dzikus gryzie patyki wystające z brody przypominającej kłąb chwastów. Widząc ten smutny widok, chwytasz nieznajomego za koszulę i przyciskasz do wozu.%SPEECH_ON%Czy to według ciebie zwierzę?%SPEECH_OFF%Treser uśmiecha się, zęby ma jak kość słoniową. Wyjaśnia.%SPEECH_ON%Mieszczanie usłyszeli o \"niecywilizowanych\" dzikusach i chcą zobaczyć ich z bliska. Po prostu spełniam to nowe zapotrzebowanie, jak każdy przedsiębiorca. A teraz potrzebuję tylko pomocy w wyciągnięciu tego trupa z klatki.%SPEECH_OFF%Wskazuje na zwłoki w rogu klatki. Dzikus cofa się, warczy i siada na ciele, jakby je chronił. Treser kręci głową.%SPEECH_ON%Jeden z moich pomocników podszedł za blisko i... no cóż. Nie mogę jechać do miasta z takim bałaganem w środku, więc pomyślałem, że może pomożecie mi to wyciągnąć. Oczywiście dobrze zapłacę. Sakiewka 250 koron brzmi dobrze? Po prostu sięgnij tam i wyciągnij to ścierwo.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [],
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Alright, I\'ll send a man in.",
+					Text = "Dobrze, wyślę człowieka.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 80 ? "C" : "D";
@@ -58,7 +58,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "We got our own wildman who could help.",
+						Text = "Mamy własnego dzikusa, który mógłby pomóc.",
 						function getResult( _event )
 						{
 							return "Wildman";
@@ -70,7 +70,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Monk != null)
 				{
 					this.Options.push({
-						Text = "Our monk seems a little disturbed by this.",
+						Text = "Nasz mnich wygląda na zaniepokojonego.",
 						function getResult( _event )
 						{
 							return "Monk";
@@ -80,7 +80,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "I won\'t put the life of my men at risk for this.",
+					Text = "Nie narażę życia moich ludzi na to.",
 					function getResult( _event )
 					{
 						return "E";
@@ -92,14 +92,14 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B2",
-			Text = "[img]gfx/ui/events/event_100.png[/img]The animal tamer leads you to a carriage. You immediately see why his hired hands quit: a frenzied and mercurial wildman is sitting inside the cage. Raw wrists bleed against his shackles, signs of attempted escapes. Half-starved, the wildman gnaws on sticks poking out from a tumbleweed of a beard. The animal tamer grins, ivory for teeth.%SPEECH_ON%Cityfolk have gotten wind of the \'uncivilized\' wildmen and wish to see them up close. I am only fulfilling this new demand as any businessman would. Now, all I need help with is to get that dead body out of the cage.%SPEECH_OFF%He points toward a corpse in the corner of the cage. The wildman rears back, snarling, and goes to protectively sit on the body. The animal tamer shakes his head.%SPEECH_ON%One of my helpers got too close and, well, yeah. I can\'t go into town with that mess in there so I thought maybe you could help me fish it out. I\'ll pay plenty, of course. A pouch of 250 crowns sound good to you? Just reach on in there and yank that garbage out.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_100.png[/img]Treser zwierząt prowadzi cię do powozu. Od razu widzisz, czemu jego najęci ludzie zrezygnowali: w klatce siedzi wściekły i nieobliczalny dzikus. Surowe nadgarstki krwawią od kajdan, ślady prób ucieczki. Na wpół zagłodzony, dzikus gryzie patyki wystające z brody przypominającej kłąb chwastów. Treser uśmiecha się, zęby ma jak kość słoniową.%SPEECH_ON%Mieszczanie usłyszeli o \"niecywilizowanych\" dzikusach i chcą zobaczyć ich z bliska. Po prostu spełniam to nowe zapotrzebowanie, jak każdy przedsiębiorca. A teraz potrzebuję tylko pomocy w wyciągnięciu tego trupa z klatki.%SPEECH_OFF%Wskazuje na zwłoki w rogu klatki. Dzikus cofa się, warczy i siada na ciele, jakby je chronił. Treser kręci głową.%SPEECH_ON%Jeden z moich pomocników podszedł za blisko i... no cóż. Nie mogę jechać do miasta z takim bałaganem w środku, więc pomyślałem, że może pomożecie mi to wyciągnąć. Oczywiście dobrze zapłacę. Sakiewka 250 koron brzmi dobrze? Po prostu sięgnij tam i wyciągnij to ścierwo.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [],
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Alright, I\'ll send a man in.",
+					Text = "Dobrze, wyślę człowieka.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 80 ? "C" : "D";
@@ -110,7 +110,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "We got our own wildman who could help.",
+						Text = "Mamy własnego dzikusa, który mógłby pomóc.",
 						function getResult( _event )
 						{
 							return "Wildman";
@@ -122,7 +122,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Monk != null)
 				{
 					this.Options.push({
-						Text = "Our monk seems a little disturbed by this.",
+						Text = "Nasz mnich wygląda na zaniepokojonego.",
 						function getResult( _event )
 						{
 							return "Monk";
@@ -132,7 +132,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "I won\'t put the life of my men at risk for this.",
+					Text = "Nie narażę życia moich ludzi na to.",
 					function getResult( _event )
 					{
 						return "E";
@@ -144,13 +144,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_100.png[/img]%taskedbro% is the one tasked with cleaning out the wildman\'s corpse-featured terrarium. He rolls up his sleeves and approaches the cage with both hands out.%SPEECH_ON%Whoa there, easy now. Easy!%SPEECH_OFF%The wildman gets up off the dead body and goes to the other side of its habitat. The sellsword easily grabs the boot of the corpse and drags it toward the bars. It slips through with sickening ease, already clumped up in the fashion of discarded wet clothes. Guts and limbs dribble off the edge of the wagon\'s platform. The animal tamer cheers happily.%SPEECH_ON%Thank you so much! And you made it look so easy, too!%SPEECH_OFF%%taskedbro% stares at the dead body with the realization that could have easily been him.%SPEECH_ON%Yeah. You\'re welcome.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_100.png[/img]%taskedbro% ma za zadanie opróżnić terrarium dzikusa z trupa. Zawija rękawy i podchodzi do klatki z wyciągniętymi obiema rękami.%SPEECH_ON%Spokojnie, powoli. Spokojnie!%SPEECH_OFF%Dzikus podnosi się z ciała i przechodzi na drugi koniec legowiska. Najemnik bez trudu chwyta but trupa i ciągnie go do krat. Przeciska się z odrażającą łatwością, już zlepiony jak mokre, wyrzucone ubrania. Flaki i kończyny ściekają z krawędzi platformy wozu. Treser zwierząt wiwatuje z radości.%SPEECH_ON%Dzięki wielkie! I wyglądało to takie proste!%SPEECH_OFF%%taskedbro% wpatruje się w ciało, uświadamiając sobie, że równie dobrze to on mógł tam leżeć.%SPEECH_ON%Tak. Nie ma za co.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, at least we got paid.",
+					Text = "Cóż, przynajmniej zapłacili.",
 					function getResult( _event )
 					{
 						return 0;
@@ -165,7 +165,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color] koron"
 				});
 				_event.m.Other.getBaseProperties().Initiative += 2;
 				_event.m.Other.getBaseProperties().Bravery += 1;
@@ -173,25 +173,25 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Other.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Initiative"
+					text = _event.m.Other.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Inicjatywy"
 				});
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Other.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Other.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_100.png[/img]%taskedbro% is tasked with getting the corpse out of the habitat. He approaches the cage like a harlot streetwalking a particularly pious town. When he gets close the bars, he smiles like an old friend.%SPEECH_ON%Hey there buddy. That\'s a nice corpse you got there. A great corpse, truly one of the best I\'ve ever seen. How about I just... take it... out...%SPEECH_OFF%When the mercenary reaches in, the wildman swipes out. It\'s too fast to even see. %taskedbro% slowly turns around. There\'s a black hole where one of his eyes used to be. The wildman squishes the eye between his teeth, a white goop bursting forth like a popped pustule, and it turns into a filmy paste as he chews. The animal tamer throws you a sack of crowns and runs off.%SPEECH_ON%Not liable! I am not liable!%SPEECH_OFF%%taskedbro% passes out as a few vengeful brothers stab the imprisoned wildman to death. All the caged beasts roar up as though you\'d just slain their leader. You quickly order the men away from the caravan before one of its beasts gets free and causes more damage.",
+			Text = "[img]gfx/ui/events/event_100.png[/img]%taskedbro% ma za zadanie wyciągnąć ciało z legowiska. Podchodzi do klatki jak ladacznica przechadzająca się po wyjątkowo pobożnym mieście. Gdy podchodzi do krat, uśmiecha się jak do starego przyjaciela.%SPEECH_ON%Hej, kolego. Ładny trup tam masz. Wspaniały trup, naprawdę jeden z najlepszych, jakie widziałem. Może ja tylko... wyjmę go... stąd...%SPEECH_OFF%Kiedy najemnik sięga do środka, dzikus uderza. Za szybko, by to zobaczyć. %taskedbro% powoli się odwraca. W miejscu jednego oka jest czarna dziura. Dzikus miażdży oko między zębami, biała maź tryska jak pęknięta krosta i zamienia się w kleistą papkę podczas żucia. Treser rzuca ci worek koron i ucieka.%SPEECH_ON%Nie moja wina! Nie moja wina!%SPEECH_OFF%%taskedbro% mdleje, a kilku żądnych zemsty braci zadźga uwięzionego dzikusa na śmierć. Wszystkie zwierzęta w klatkach ryczą, jakbyście właśnie zabili ich przywódcę. Szybko każesz ludziom odejść od karawany, zanim któreś ze zwierząt się uwolni i narobi większych szkód.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What the hell!",
+					Text = "Co do diabła!",
 					function getResult( _event )
 					{
 						return 0;
@@ -212,20 +212,20 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Other.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Other.getName() + " doznaje " + injury.getNameOnly()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_100.png[/img]You tell this animal tamer that his problems are his own. He shrugs.%SPEECH_ON%Yeah, I don\'t blame ya. You\'re smarter than you look, sellsword.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_100.png[/img]Mówisz treserowi zwierząt, że to jego problem. Wzrusza ramionami.%SPEECH_ON%No tak, nie winię cię. Jesteś mądrzejszy, niż wyglądasz, najemniku.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Uh, thanks.",
+					Text = "Eee, dzięki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -240,13 +240,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Wildman",
-			Text = "[img]gfx/ui/events/event_100.png[/img]If anyone in the party could help talk the caged wildman down, it\'s probably %wildman%. He goes to the cage, stares in. There\'s an exchange of hoots. Your wildman raps the bars with a knuckle, and the prisoner raps back and hoots somberly. Suddenly, %wildman% grabs the animal tamer by the head and drives him into the bars. You go to save the tamer, but the imprisoned wildman soars across the cage with atavistic terror in his eyes. Stepping back for your own safety, you can only watch as this bestial man sets upon the tamer. Both wildmen pull and drag on the man\'s face. The concussed man groggily yells.%SPEECH_ON%I thought we had an agreeeeeemeeeaahh!%SPEECH_OFF%%wildman% corks his thumbs into the man\'s eyes while the imprisoned wildman grips the tamer\'s mouth and pulls down. His head is literally ripped apart by the seams and sinews. A few men vomit as the tamer\'s brains falls out where his tongue should be, a truly awful way of speaking one\'s mind. The \'warden\' taken care of, %wildman% looks at you and at the wildman with a sort of \'can we keep him?\' gesture.",
+			Text = "[img]gfx/ui/events/event_100.png[/img]Jeśli ktoś w drużynie mógłby uspokoić uwięzionego dzikusa, to pewnie %wildman%. Podchodzi do klatki i zagląda do środka. Następuje wymiana pohukiwań. Twój dzikus stuka w kraty knykciem, a więzień odpowiada stukiem i ponurym pohukiwaniem. Nagle %wildman% chwyta tresera za głowę i wciska ją w kraty. Ruszasz mu na ratunek, ale uwięziony dzikus przelatuje przez klatkę z atawistycznym przerażeniem w oczach. Cofasz się dla własnego bezpieczeństwa i możesz tylko patrzeć, jak to bestialskie stworzenie rzuca się na tresera. Obaj dzikusi szarpią i ciągną za twarz mężczyzny. Wstrząśnięty mężczyzna bełkocze.%SPEECH_ON%Myślałem, że się dogaaadaaaalniaaaahh!%SPEECH_OFF%%wildman% wbija kciuki w oczy mężczyzny, podczas gdy uwięziony dzikus chwyta tresera za usta i ciągnie w dół. Jego głowa dosłownie rozrywa się na szwach i ścięgnach. Kilku ludzi wymiotuje, gdy mózg tresera wypada tam, gdzie powinien być język, naprawdę okropny sposób na wypowiedzenie swojego zdania. Gdy z \"nadzorcą\" jest już po wszystkim, %wildman% patrzy na ciebie i na dzikusa z gestem w stylu \"możemy go zatrzymać?\".",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Absolutely disgusting. He\'s perfect.",
+					Text = "Absolutnie obrzydliwe. Jest idealny.",
 					function getResult( _event )
 					{
 						return "Wildman1";
@@ -254,7 +254,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, he\'s clearly far too dangerous.",
+					Text = "Nie, jest wyraźnie zbyt niebezpieczny.",
 					function getResult( _event )
 					{
 						return "Wildman2";
@@ -270,13 +270,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Wildman1",
-			Text = "[img]gfx/ui/events/event_100.png[/img]An outstanding capacity for violence is well-suited to a mercenary band. You agree to take the imprisoned wildman on.",
+			Text = "[img]gfx/ui/events/event_100.png[/img]Wybitna skłonność do przemocy dobrze pasuje do bandy najemników. Zgadzasz się przyjąć uwięzionego dzikusa.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the company.",
+					Text = "Witaj w kompanii.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -295,8 +295,8 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"wildman_background"
 				]);
-				_event.m.Dude.setTitle("the Animal");
-				_event.m.Dude.getBackground().m.RawDescription = "%name% was \'saved\' by you during a confrontation with an animal tamer-turned-enslaver. A sense of gratitude and debt overcomes any language barriers: the once imprisoned wildman serves the company loyally for rescuing him.";
+				_event.m.Dude.setTitle("Zwierzę");
+				_event.m.Dude.getBackground().m.RawDescription = "%name% został przez ciebie \'uratowany\' podczas starcia z treserem zwierząt, który stał się handlarzem niewolników. Poczucie wdzięczności i długu przełamuje wszelkie bariery językowe: niegdyś uwięziony dzikus wiernie służy kompanii za ocalenie.";
 				_event.m.Dude.getBackground().buildDescription(true);
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
@@ -320,13 +320,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Wildman2",
-			Text = "[img]gfx/ui/events/event_100.png[/img]You don\'t think the imprisoned wildman would fit in with the company, but you do set him free nonetheless. He shoots out his cage like a banshee and runs for the tree line. There he stands at a distance hooting and hollering until he runs off again.",
+			Text = "[img]gfx/ui/events/event_100.png[/img]Nie sądzisz, by uwięziony dzikus pasował do kompanii, ale mimo to go wypuszczasz. Wylatuje z klatki jak banshee i pędzi w stronę linii drzew. Tam staje w oddali, pohukując i wrzeszcząc, aż znów ucieka.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I guess that\'s his way of saying thanks.",
+					Text = "Chyba tak dziękuje.",
 					function getResult( _event )
 					{
 						return "Animals";
@@ -341,13 +341,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Monk",
-			Text = "[img]gfx/ui/events/event_100.png[/img]%monk% the monk steps forth, hands clasped, head borrowed forward. The embodiment of a sermon, the posture of good morals, or misguided ones. He pulls the tamer aside.%SPEECH_ON%The old gods would frown upon what you have done here.%SPEECH_OFF%The animal tamer laughs and leans against the cage, smugly crossing his arms. He states that in the south they consider slavery a part of the natural order. The monk continues.%SPEECH_ON%True, but neither you nor this wildman are kin to their way of life. You wish to enslave him by means of his being an outsider. He does not understand the relationship which makes it especially grievous and improper. My suggestion is to have him work for you and learn from you. Make him a friend and you will have a friend for life-%SPEECH_OFF%The imprisoned wildman\'s hands dart through the bars and digs his fingers into his eyeballs. His face is ripped apart like a loaf of old bread, a couple of coathangers for a jawbone, a tongue lolling like an uprooted snake. %monk% vomits as his face is doused in blood. %otherbrother% shakes his head.%SPEECH_ON%I\'d say he\'d fit right in with the %companyname%...%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_100.png[/img]%monk% mnich wysuwa się do przodu, z dłońmi złożonymi i głową pochyloną. Uosobienie kazania, postawa dobrych obyczajów albo źle pojętych. Odciąga tresera na bok.%SPEECH_ON%Stare bóstwa nie pochwalałyby tego, co tu uczyniłeś.%SPEECH_OFF%Treser zwierząt śmieje się i opiera o klatkę, z zadowoleniem krzyżując ramiona. Stwierdza, że na południu niewolnictwo uważa się za część naturalnego porządku. Mnich ciągnie dalej.%SPEECH_ON%To prawda, ale ani ty, ani ten dzikus nie jesteście krewni ich sposobowi życia. Chcesz go zniewolić dlatego, że jest obcy. On nie rozumie tej relacji, co czyni ją szczególnie naganną i niewłaściwą. Proponuję, by dla ciebie pracował i uczył się od ciebie. Uczyń z niego przyjaciela, a przyjaciela zyskasz na całe życie-%SPEECH_OFF%Ręce uwięzionego dzikusa wylatują między kraty i wbijają palce w jego własne gałki oczne. Jego twarz rozrywa się jak bochen starego chleba, żuchwa jak z wieszaków, język zwisa jak wyrwana z korzeniami żmija. %monk% wymiotuje, gdy jego twarz obryzguje krew. %otherbrother% kręci głową.%SPEECH_ON%Powiedziałbym, że pasowałby idealnie do %companyname%...%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Absolutely disgusting. He\'s perfect.",
+					Text = "Absolutnie obrzydliwe. Jest idealny.",
 					function getResult( _event )
 					{
 						return "Wildman1";
@@ -355,7 +355,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, he\'s clearly far too dangerous.",
+					Text = "Nie, jest wyraźnie zbyt niebezpieczny.",
 					function getResult( _event )
 					{
 						return "Wildman2";
@@ -366,7 +366,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Monk.getImagePath());
-				_event.m.Monk.worsenMood(1.0, "Shaken by the violence he witnessed");
+				_event.m.Monk.worsenMood(1.0, "Wstrząśnięty przemocą, której był świadkiem");
 
 				if (_event.m.Monk.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -381,13 +381,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Animals",
-			Text = "[img]gfx/ui/events/event_47.png[/img]Well, the animal tamer is gone and with him there\'s no one left to take care of the beasts. %randombrother% comes up and asks what should be done with them.",
+			Text = "[img]gfx/ui/events/event_47.png[/img]Cóż, tresera już nie ma i wraz z nim zniknęła jedyna osoba, która zajmowała się bestiami. %randombrother% podchodzi i pyta, co z nimi zrobić.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let them out.",
+					Text = "Wypuść je.",
 					function getResult( _event )
 					{
 						return "AnimalsFreed";
@@ -395,7 +395,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Slaughter them all.",
+					Text = "Zarżnijcie je wszystkie.",
 					function getResult( _event )
 					{
 						return "AnimalsSlaughtered";
@@ -403,7 +403,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Leave them.",
+					Text = "Zostaw je.",
 					function getResult( _event )
 					{
 						return 0;
@@ -418,13 +418,13 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "AnimalsFreed",
-			Text = "[img]gfx/ui/events/event_27.png[/img]You feel it just wouldn\'t be right to leave them out here to starve to death and a caged creature no doubt has gamey meat when it comes to harvesting. You decide to let them on out of their cages. Most of these strange creatures make a beeline for the treeline, but two remain behind: a husky dog and a hooded falcon, both seemingly looking for a master.",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Czujesz, że zostawienie ich tutaj na śmierć głodową nie byłoby właściwe, a uwięzione stworzenie bez wątpienia ma łykowate mięso, gdy przychodzi do uboju. Decydujesz się wypuścić je z klatek. Większość tych dziwnych stworzeń pędzi ku linii drzew, ale dwa zostają: husky i sokół w kapturze, oboje jakby szukali pana.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'ll both fit right in.",
+					Text = "Oboje będziecie tu pasować.",
 					function getResult( _event )
 					{
 						return 0;
@@ -439,27 +439,27 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/accessory/falcon_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain a " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "AnimalsSlaughtered",
-			Text = "[img]gfx/ui/events/event_14.png[/img]It\'d be a crime to leave these animals out here to starve and rot. And it\'d also be a terrible waste of good meat. You have the creatures slaughtered. It\'s an easy, albeit brutal job, stabbing and slicing a bunch of hapless critters and beasts. The bear is the last to go, and it does not go easily. It manages to drag %hurtbro% close for a nasty swipe, but beyond that your men put it to a slow, grisly death. The rest of the wagons are turned over and looted.",
+			Text = "[img]gfx/ui/events/event_14.png[/img]Byłoby zbrodnią zostawić te zwierzęta, by tu głodowały i gniły. Byłaby to też straszna strata dobrego mięsa. Kazałeś je zarżnąć. To łatwa, choć brutalna robota, dźganie i cięcie bezradnych stworzeń i bestii. Niedźwiedź idzie na końcu i nie poddaje się łatwo. Zdołał przyciągnąć %hurtbro% blisko, by zadać paskudne cięcie, ale poza tym twoi ludzie powoli i makabrycznie go dobijają. Reszta wozów zostaje przewrócona i splądrowana.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Not a bad haul.",
+					Text = "Niezły łup.",
 					function getResult( _event )
 					{
 						return 0;
@@ -474,42 +474,42 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Other.getName() + " suffers light wounds"
+					text = _event.m.Other.getName() + " doznaje lekkich ran"
 				});
 				local money = this.Math.rand(200, 500);
 				this.World.Assets.addMoney(money);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 				});
 				item = this.new("scripts/items/supplies/cured_venison_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/supplies/smoked_ham_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/supplies/strange_meat_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/supplies/strange_meat_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

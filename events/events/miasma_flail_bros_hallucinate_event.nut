@@ -6,17 +6,17 @@ this.miasma_flail_bros_hallucinate_event <- this.inherit("scripts/events/event",
 	function create()
 	{
 		this.m.ID = "event.miasma_flail_bros_hallucinate";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{Upon hearing some sellswords yelling at each other, you reluctantly set aside your quill pen and step outside your tent. There you find %hauntedbrother1% and %hauntedbrother2% in each other\'s faces - and between them they\'re pulling at the Grand Diviner\'s flail. What is being screamed between them are obscenities of a most graphic nature, and just as you\'re about to step in the flail glows a bright green and both sellswords drop the weapon to lunge at each other. The fight is ended fast, but not without injuries.}",
+			Text = "%terrainImage%{Słysząc, jak najemnicy wrzeszczą na siebie, niechętnie odkładasz pióro i wychodzisz z namiotu. Tam znajdujesz %hauntedbrother1% i %hauntedbrother2% niemal twarzą w twarz - i pomiędzy nimi szarpany jest cep Wielkiego Wróżbity. To, co między nimi pada, to wyjątkowo dosadne obelgi, a gdy już masz wkroczyć, cep rozbłyska jasnozielonym blaskiem i obaj najemnicy puszczają broń, by rzucić się na siebie. Bijatyka kończy się szybko, ale nie bez obrażeń.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Just what did they see?",
+					Text = "Co oni właściwie zobaczyli?",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,17 +30,17 @@ this.miasma_flail_bros_hallucinate_event <- this.inherit("scripts/events/event",
 				this.Characters.push(_event.m.Bro2.getImagePath());
 				_event.m.Bro1.addLightInjury();
 				_event.m.Bro2.addLightInjury();
-				_event.m.Bro1.worsenMood(1.0, "Was ensorcelled by the Grand Diviner\'s Flail");
-				_event.m.Bro2.worsenMood(1.0, "Was ensorcelled by the Grand Diviner\'s Flail");
+				_event.m.Bro1.worsenMood(1.0, "Został oczarowany cepem Wielkiego Wróżbity");
+				_event.m.Bro2.worsenMood(1.0, "Został oczarowany cepem Wielkiego Wróżbity");
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Bro1.getName() + " suffers light wounds"
+					text = _event.m.Bro1.getName() + " doznaje lekkich ran"
 				});
 				this.List.push({
 					id = 11,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Bro2.getName() + " suffers light wounds"
+					text = _event.m.Bro2.getName() + " doznaje lekkich ran"
 				});
 
 				if (_event.m.Bro1.getMoodState() < this.Const.MoodState.Neutral)

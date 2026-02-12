@@ -5,17 +5,17 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.rookie_gets_hurt";
-		this.m.Title = "After battle...";
+		this.m.Title = "Po bitwie...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_22.png[/img]After the battle is over, you find %noncombat% on his knees, his body swaying back and forth as he nurses a wound. You hear muffled cries in between all-too-loud moans. Approaching, you ask the man if he is alright. He shakes his head and explains that this was his first taste of real, vicious combat. It was not what he expected and isn\'t sure if he can continue.",
+			Text = "[img]gfx/ui/events/event_22.png[/img]Gdy bitwa się kończy, znajdujesz %noncombat% na kolanach, a jego ciało kołysze się w przód i w tył, gdy opatruje ranę. Słyszysz stłumione szlochy między zbyt głośnymi jękami. Podchodzisz i pytasz, czy wszystko w porządku. Kręci głową i wyjaśnia, że to był jego pierwszy smak prawdziwej, brutalnej walki. To nie było to, czego się spodziewał, i nie wie, czy potrafi dalej.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Suck it up!",
+					Text = "Weź się w garść!",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 30 ? "B" : "C";
@@ -23,7 +23,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "There is not a soul out here who isn\'t scared.",
+					Text = "Nie ma tu nikogo, kto by się nie bał.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 70 ? "D" : "E";
@@ -39,13 +39,13 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_22.png[/img]You tell the mercenary to man up. When he pauses, stifling a cry, you tell him again. This time, he brings a leg out and plants a foot, steadying himself. With true grit, he manages to get himself standing again. His shirt is bloodslaked, his face covered in mud and crimson and other viscera battle makes of the living. But his eyes show a sign of resolve they did not before. He nods at you before walking back to join the rest of the men.",
+			Text = "[img]gfx/ui/events/event_22.png[/img]Mówisz najemnikowi, by się zebrał. Gdy zatrzymuje się, tłumiąc okrzyk, mówisz mu to ponownie. Tym razem wysuwa nogę i stawia stopę, stabilizując się. Z prawdziwym uporem udaje mu się stanąć na nogi. Koszula jest przesiąknięta krwią, twarz pokryta błotem, posoką i innymi wnętrznościami, jakie bitwa robi z żywych. Ale w jego oczach pojawia się oznaka determinacji, której wcześniej nie było. Kiwając ci głową, wraca do reszty ludzi.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Iron sharpens iron.",
+					Text = "Żelazo ostrzy żelazo.",
 					function getResult( _event )
 					{
 						return 0;
@@ -56,14 +56,14 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.improveMood(1.0, "Had an encouraging talk");
+				_event.m.Rookie.improveMood(1.0, "Odbył zachęcającą rozmowę");
 				_event.m.Rookie.getBaseProperties().Bravery += 3;
 				_event.m.Rookie.getSkills().update();
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Rookie.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+3[/color] Resolve"
+						text = _event.m.Rookie.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+3[/color] Determinacji"
 					}
 				];
 
@@ -80,13 +80,13 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_22.png[/img]Unfortunately, telling the man to \'suck it up\' gets him nowhere. He turns to you, face covered in the blood and gore of battle, but before any words can come out his lip quivers and keels over again. You ask the man if he wishes to be cut from the company, but he shakes his head no. He\'ll get better, he explains. You nod and walk off, but there\'s little doubt that this poor show of resolve has hurt the man\'s pride.",
+			Text = "[img]gfx/ui/events/event_22.png[/img]Niestety powiedzenie mu, by \"wziął się w garść\", nic nie daje. Odwraca się do ciebie, twarz ma pokrytą krwią i flakami bitwy, lecz zanim padną jakiekolwiek słowa, drży mu warga i znów się osuwa. Pytasz, czy chce odejść z kompanii, ale kręci głową. Będzie lepiej, tłumaczy. Kiwasz głową i odchodzisz, ale nie ma wątpliwości, że ten słaby pokaz hartu zranił jego dumę.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "He will be steeled by combat, or he will be killed by it.",
+					Text = "Zahartuje go walka albo go zabije.",
 					function getResult( _event )
 					{
 						return 0;
@@ -103,10 +103,10 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 					{
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Rookie.getName() + " loses [color=" + this.Const.UI.Color.NegativeEventValue + "]-3[/color] Resolve"
+						text = _event.m.Rookie.getName() + " traci [color=" + this.Const.UI.Color.NegativeEventValue + "]-3[/color] Determinacji"
 					}
 				];
-				_event.m.Rookie.worsenMood(1.0, "Lost confidence in himself");
+				_event.m.Rookie.worsenMood(1.0, "Stracił wiarę w siebie");
 
 				if (_event.m.Rookie.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -121,13 +121,13 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_22.png[/img]The man looks around him, at the bodies, at the land, at the sky. He nods and gets to his feet. Before heading back to camp, he thanks you for your words.%SPEECH_ON%Thankee, captain. I\'ll do a better job of hiding my fears.%SPEECH_OFF%You nod back with a terse smile before putting your fist to your chest.%SPEECH_ON%Bottle it all up right here and don\'t let anybody else see it. Half of any battle is convincing your opponent that you\'re crazier than they are. Being fearless is impossible, but faking it for a time is not.%SPEECH_OFF%The man nods again and heads back to camp with his head held a little bit higher.",
+			Text = "[img]gfx/ui/events/event_22.png[/img]Mężczyzna rozgląda się dookoła, na ciała, na ziemię, na niebo. Kiwając głową, podnosi się. Zanim wróci do obozu, dziękuje ci za słowa.%SPEECH_ON%Dzięki, kapitanie. Postaram się lepiej ukrywać swoje lęki.%SPEECH_OFF%Odwzajemniasz skinienie z krótkim uśmiechem, po czym przykładasz pięść do piersi.%SPEECH_ON%Zamknij to wszystko tutaj i nie pozwól nikomu tego zobaczyć. Połowa każdej bitwy to przekonanie przeciwnika, że jesteś bardziej szalony niż on. Być nieustraszonym jest niemożliwe, ale udawać przez jakiś czas - już nie.%SPEECH_OFF%Mężczyzna znów kiwa głową i wraca do obozu z nieco wyżej uniesioną głową.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s the spirit!",
+					Text = "To jest duch!",
 					function getResult( _event )
 					{
 						return 0;
@@ -138,14 +138,14 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.improveMood(1.0, "Had an encouraging talk");
+				_event.m.Rookie.improveMood(1.0, "Odbył zachęcającą rozmowę");
 				_event.m.Rookie.getBaseProperties().Bravery += 2;
 				_event.m.Rookie.getSkills().update();
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Rookie.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+						text = _event.m.Rookie.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 					}
 				];
 
@@ -162,13 +162,13 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_22.png[/img]The man turns to you, tears cutting through the crusts of blood on his cheeks. He shakes his head and asks how is it that he\'s the only one out here crying. You shrug and ask the man if he wishes to leave the company. He shakes his head again.%SPEECH_ON%I\'ll get better. I just.. I just need some time to do it, that\'s all.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_22.png[/img]Mężczyzna odwraca się do ciebie, a łzy przecinają strupy krwi na jego policzkach. Kręci głową i pyta, czemu jest jedynym, który tu płacze. Wzruszasz ramionami i pytasz, czy chce odejść z kompanii. Znowu kręci głową.%SPEECH_ON%Poprawię się. Po prostu... po prostu potrzebuję na to trochę czasu, tyle.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "He will be steeled by combat, or he will be killed by it.",
+					Text = "Zahartuje go walka albo go zabije.",
 					function getResult( _event )
 					{
 						return 0;
@@ -179,7 +179,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.worsenMood(1.0, "Realized what being a mercenary means");
+				_event.m.Rookie.worsenMood(1.0, "Zrozumiał, co znaczy być najemnikiem");
 
 				if (_event.m.Rookie.getMoodState() < this.Const.MoodState.Neutral)
 				{

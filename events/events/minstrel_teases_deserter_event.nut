@@ -6,17 +6,17 @@ this.minstrel_teases_deserter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.minstrel_teases_deserter";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img] As the campfire crackles, %minstrel% the minstrel gets up and stands high on his stump. He beats his chest and then points to %deserter%.%SPEECH_ON%Yo, yee man of such fleeting feet, feet that flee before you\'ve been beat! The deserter! Oh, the deserter! A dessert for the deserter! His courage he did curdle, his honor he did hurdle, his manliness he did murder! The deserter!%SPEECH_OFF%In one swift motion the minstrel claps his hands and drops back down onto his seat. He\'s only there for a moment before %deserter%\'s hands are around his neck. The company is an uproar, stuck somewhere between separating the two and succumbing to fits of manic laughter.",
+			Text = "[img]gfx/ui/events/event_26.png[/img] Gdy ognisko trzaska, %minstrel% minstrela wstaje i staje wysoko na pniu. Uderza się w pierś, po czym wskazuje %deserter%.%SPEECH_ON%Hej, człeku o uciekających stopach, stopach co uciekają, nim bitwa cię spotka! Dezerter! O, dezerter! Deser dla dezertera! Odwaga mu skwaśniała, honor się potknął, męskość on zadławił! Dezerter!%SPEECH_OFF%Jednym szybkim ruchem minstrela klaszcze w dłonie i opada z powrotem na miejsce. Siedzi tam tylko chwilę, nim dłonie %deserter% lądują mu na szyi. Kompania wrze, rozdarta między rozdzieleniem ich a wybuchem histerycznego śmiechu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "An epic for all the wrong reasons!",
+					Text = "Epopeja z najgorszych powodów!",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,7 +28,7 @@ this.minstrel_teases_deserter_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Minstrel.getImagePath());
 				this.Characters.push(_event.m.Deserter.getImagePath());
-				_event.m.Deserter.worsenMood(2.0, "Felt humiliated in front of the company");
+				_event.m.Deserter.worsenMood(2.0, "Czuł się upokorzony na oczach kompanii");
 
 				if (_event.m.Deserter.getMoodState() < this.Const.MoodState.Neutral)
 				{

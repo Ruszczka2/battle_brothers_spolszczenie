@@ -6,17 +6,17 @@ this.juggler_entertains_townsfolk_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.juggler_entertains_townsfolk";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_92.png[/img]As the men wander through %townname% looking for things to do, %juggler% the juggler takes it upon himself to provide his own entertainment. He takes a message barker\'s scroll and folds it into a paper hat with horns. Placing it upon his head, he then glides into a crowd of peasants and asks for anything with which to juggle. They toss him all manner of objects from carrots to knives and one man even offers a newborn infant before the mother slaps him for even suggesting it. Whatever is thrown up there, the juggler easily hurls through the air, his own body twisting and turning, his feet alternating between hands to kick things back into the air. It\'s dexterous poetry in motion - and a boon for the town\'s downtrodden. You get the feeling that the juggler has represented the %companyname% well this day.",
+			Text = "[img]gfx/ui/events/event_92.png[/img]Gdy ludzie błąkają się po %townname% w poszukiwaniu zajęcia, %juggler% kuglarz sam zapewnia sobie rozrywkę. Bierze zwój obwoźnego krzykacza i składa go w papierowy kapelusz z rogami. Zakładając go na głowę, wsuwa się w tłum wieśniaków i prosi o cokolwiek do żonglowania. Rzucają mu najróżniejsze przedmioty, od marchwi po noże, a jeden mężczyzna nawet oferuje noworodka, zanim matka go spoliczkuje za samą sugestię. Cokolwiek leci w górę, kuglarz z łatwością posyła to w powietrze, skręcając i obracając własne ciało, a stopy na zmianę zastępują mu dłonie, by podrzucać rzeczy z powrotem. To zręczna poezja w ruchu - i dar dla uciśnionych z miasta. Masz wrażenie, że kuglarz dobrze reprezentował dziś %companyname%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done, well done.",
+					Text = "Dobra robota, dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,14 +30,14 @@ this.juggler_entertains_townsfolk_event <- this.inherit("scripts/events/event", 
 
 				if (_event.m.Town.isSouthern())
 				{
-					_event.m.Town.getOwner().addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "One of your men entertained the masses");
+					_event.m.Town.getOwner().addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "Jeden z twoich ludzi rozbawił tłumy");
 				}
 				else
 				{
-					_event.m.Town.getFactionOfType(this.Const.FactionType.Settlement).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "One of your men entertained the townsfolk");
+					_event.m.Town.getFactionOfType(this.Const.FactionType.Settlement).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "Jeden z twoich ludzi rozbawił mieszkańców");
 				}
 
-				_event.m.Juggler.improveMood(2.0, "Entertained townsfolk with his juggling");
+				_event.m.Juggler.improveMood(2.0, "Rozbawił mieszkańców żonglerką");
 
 				if (_event.m.Juggler.getMoodState() >= this.Const.MoodState.Neutral)
 				{

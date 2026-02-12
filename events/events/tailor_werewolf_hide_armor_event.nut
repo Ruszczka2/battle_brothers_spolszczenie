@@ -5,17 +5,17 @@ this.tailor_werewolf_hide_armor_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.tailor_werewolf_hide_armor";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]While stressing over where to go and when, %tailor% the tailor walks into your tent, something dark and heavy wrapped over both his outstretched arms. You take a step back, seeing what look like claws or some such manifestation glinting in the candlelight.\n\nThe tailor explains that he\'s made a suit of armor stitched together by the hide of direwolves. He sets the armor down on the table where a few left-over claws rap against the wood with deadly weight. He unfolds the armor and shows it in whole, a ghastly thing of black and sharpened bones, a creature shorn of its insides, left to be occupied by man or some other creature seeking warmth in its emptied hide, the head of the beast tilted up to look at its soon to be wearer. Altogether fearsome, no doubt, and has you pondering when and where the tailor got such an idea in the first place.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Gdy zastanawiasz się, dokąd i kiedy ruszyć, krawiec %tailor% wchodzi do twojego namiotu, niosąc na wyciągniętych ramionach coś ciemnego i ciężkiego. Cofasz się o krok, widząc coś na kształt pazurów albo innego podobnego tworu, który błyszczy w świetle świec.\n\nKrawiec wyjaśnia, że zrobił pancerz zszyty ze skóry wilków strasznych. Kładzie go na stole, gdzie kilka pozostałych pazurów stuka o drewno z zabójczym ciężarem. Rozkłada zbroję i pokazuje ją w całości - upiorne coś z czerni i zaostrzonych kości, istota pozbawiona wnętrzności, zostawiona, by wypełnił ją człowiek lub inne stworzenie szukające ciepła w opróżnionej skórze, z głową bestii uniesioną tak, by patrzeć na przyszłego nosiciela. Całość budzi grozę, bez wątpienia, i każe ci się zastanawiać, kiedy i gdzie krawiec wpadł na ten pomysł.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A fearsome armor to behold.",
+					Text = "Straszliwy pancerz do podziwiania.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,7 +38,7 @@ this.tailor_werewolf_hide_armor_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 
 						if (numPelts >= 2)
@@ -53,7 +53,7 @@ this.tailor_werewolf_hide_armor_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

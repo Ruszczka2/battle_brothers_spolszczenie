@@ -6,16 +6,16 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.fell_down_well";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_91.png[/img]A woman jumps out of the treeline beside the path.%SPEECH_ON%Oh thank the gods, my prayers have been answered! Please, come quick! My grandpap has fallen down the well!%SPEECH_OFF%She turns and hurries away as though you\'ve already agreed to help her. %otherbrother% glances at you and shrugs.",
+			Text = "[img]gfx/ui/events/event_91.png[/img]Kobieta wyskakuje zza linii drzew przy ścieżce.%SPEECH_ON%O, dzięki bogom, moje modlitwy zostały wysłuchane! Proszę, szybko! Mój dziadek wpadł do studni!%SPEECH_OFF%Odwraca się i biegnie, jakbyś już zgodził się jej pomóc. %otherbrother% spogląda na ciebie i wzrusza ramionami.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "I guess we can help her.",
+					Text = "Chyba możemy jej pomóc.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -35,7 +35,7 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Strong != null)
 				{
 					this.Options.push({
-						Text = "%strongbrother%, you\'re strong. Give her a hand.",
+						Text = "%strongbrother%, jesteś silny. Pomóż jej.",
 						function getResult( _event )
 						{
 							return "Strong";
@@ -45,7 +45,7 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "We have no time for this.",
+					Text = "Nie mamy na to czasu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -57,13 +57,13 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Good",
-			Text = "[img]gfx/ui/events/event_91.png[/img]You decide it\'s worth your time and go and take a look. The old man was doing repairs on the wellhead, a wooden framework meant to cover its opening, when it broke apart and sent him plunging down. Staring into the well, you find the man staring back up. He gives a wave.%SPEECH_ON%Oy\' there, fellas. I\'m in a bit of a pickle. I\'m actually being pickled, now that I think about it...%SPEECH_OFF%Eh, right. %otherbrother% throws down a rope and the old man ties it around himself. You and the sellsword pull the woman\'s grandfather up and back onto dry land. He shakes your hand and thanks you cordially.%SPEECH_ON%Farkin\' hell, glad you came when you did, I was about to shit and piss like no other. Let me tell ya, this ain\'t my first time going down a well. Five years ago I\'d done it while repairing the wellhead, because the wellhead breaks often, you see. And it\'s not really a wellhead, we just call it that cause we\'re lazy. Back in my day we called it a... well, heh well, I actually done forgot. I guess a \'wellhead\' makes sense now, as I\'m not well in the head! Ho! Still got it. I was quite the charmer in my days, you see, and it\'s not often I get to put the practice in. M\'wife died ten years ago, and the one prior to her left me twenty winters ago! I say winters, because that\'s when she left me, in the winter. It was a brutal one and I had asked her to help chop the wood lest we all freeze. She said she wasn\'t doing that shit and taking care of the kids at the same time. I had kids with her as well as with the second wife. Five total. One died. Measles. Another disappeared, so he\'s probably dead. I try to be honest to myself about it, but you know, there\'s hope. If a random stranger can be found in the forest to save me in the nick of time, then maybe my son survived that battle with the greenskins. Ain\'t heard of him, though. I pray to the old gods and even that Davkul fella every now and again. Do you know of Davkul? I\'m not sure what to make of it. One time this man came by with a scar on his forehead, said he\'d show me the way of darkness. I said I see darkness everytime I nap. This scarred fella said one day I won\'t wake and I said good! Ha! So then this scarred bastard starts getting upset with me...%SPEECH_OFF%As he drones on, you look around for %otherbrother% only to find him stepping out of the woman\'s home, the lady herself carrying a bit of... obvious warmth on her face. You retrieve your sellsword and leave before the old man lops your head with the most longwinded and one-sided conversation ever.",
+			Text = "[img]gfx/ui/events/event_91.png[/img]Postanawiasz, że warto poświęcić czas i idziesz zobaczyć, co się stało. Starzec naprawiał zwieńczenie studni, drewnianą konstrukcję zakrywającą otwór, kiedy ta się rozpadła i wysłała go w dół. Wpatrując się do studni, widzisz, że on patrzy z powrotem. Macha ręką.%SPEECH_ON%O, hej tam, chłopaki. Jestem w niezłej opresji. Właściwie to się marynuję, teraz jak o tym myślę...%SPEECH_OFF%Ech, no tak. %otherbrother% rzuca mu linę, a starzec wiąże ją wokół siebie. Ty i najemnik wyciągacie dziadka kobiety na suchy ląd. Ściska ci dłoń i dziękuje uprzejmie.%SPEECH_ON%Cholera, dobrze, że przyszliście, bo już miałem robić w gacie jak nigdy. Powiem wam, to nie pierwszy raz, kiedy wpadam do studni. Pięć lat temu też tak było, gdy naprawiałem zwieńczenie, bo ono często się psuje, rozumiecie. I to w sumie nie jest żadna głowica studni, tak ją tylko nazywamy, bo jesteśmy leniwi. Za moich czasów nazywaliśmy to... no cóż, heh, właściwie zapomniałem. Chyba \"głowica studni\" pasuje, bo ja już nie jestem w głowie zdrów! Ha! Jeszcze to mam. Kiedyś byłem niezłym zawadiaką, wiecie, a nieczęsto mam okazję to przećwiczyć. Moja żona zmarła dziesięć lat temu, a ta przed nią zostawiła mnie dwadzieścia zim temu! Mówię \"zim\", bo wtedy odeszła, zimą. To była sroga zima i prosiłem ją, żeby pomogła rąbać drewno, żebyśmy nie zamarzli. Powiedziała, że nie będzie robić tego gówna i jednocześnie zajmować się dziećmi. Miałem z nią dzieci, tak jak z drugą żoną. Razem pięcioro. Jedno zmarło. Od odry. Drugie zniknęło, więc pewnie nie żyje. Staram się być ze sobą szczery, ale wiesz, jest nadzieja. Skoro przypadkowy nieznajomy mógł się trafić w lesie i uratować mnie w ostatniej chwili, to może mój syn przeżył tę bitwę z zielonoskórymi. Ale nic o nim nie słyszałem. Modlę się do starych bogów, a czasem nawet do tego Davkula. Znasz Davkula? Nie wiem, co o tym myśleć. Raz przyszedł tu facet z blizną na czole i powiedział, że pokaże mi drogę ciemności. Powiedziałem, że widzę ciemność za każdym razem, gdy zdrzemnę się. Ten bliznowaty powiedział, że kiedyś się nie obudzę, a ja na to: dobrze! Ha! No i wtedy ten bliznowaty drań zaczyna się na mnie wściekać...%SPEECH_OFF%Gdy tak ględzi, rozglądasz się za %otherbrother%, ale widzisz go wychodzącego z domu kobiety, która ma na twarzy... wyraźne ciepło. Zabierasz swojego najemnika i odchodzisz, zanim starzec urwie ci głowę najdłuższą i najbardziej jednostronną rozmową w życiu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nobody\'s ever there to save me.",
+					Text = "Nikogo nigdy nie ma, by mnie uratować.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(2);
@@ -90,13 +90,13 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Bad",
-			Text = "[img]gfx/ui/events/event_91.png[/img]The old man was doing repairs atop the wooden wellhead when it broke apart. Unfortunately, if you\'re standing atop a wellhead when it goes bust there\'s only one place to go: down. Very, very far down. As you look over the edge of the well, you can see the old man floating in a matter that is most unlively. %otherbrother% sidles up next to you and whispers, using a hand to keep his words from being heard.%SPEECH_ON%Uh, he\'s not moving.%SPEECH_OFF%An expertly observation, truly. You inform the lady of the man\'s passing. She purses her lips and asks that you remove the body anyway, explaning her reasoning rather succinctly.%SPEECH_ON%We can\'t be drinking his filth after all.%SPEECH_OFF%Fair enough. %otherbrother% manages to hook a rope-loop around the corpse and pull it up, its limbs dangling loosely like white washrags. He asks if she needs you to bury it, too. The woman wipes a tear and shakes her head.%SPEECH_ON%Nah. I\'ll bury that feller myself, weep over his grave tomorrow, and then get on with living.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_91.png[/img]Starzec naprawiał drewniane zwieńczenie studni, gdy się rozpadło. Niestety, jeśli stoisz na zwieńczeniu studni, gdy pęka, jest tylko jedno miejsce, do którego możesz trafić: w dół. Bardzo, bardzo daleko w dół. Gdy spoglądasz przez krawędź studni, widzisz starca unoszącego się w czymś, co zdecydowanie nie jest żywe. %otherbrother% podchodzi i szepcze, zasłaniając usta dłonią, by nie było słychać.%SPEECH_ON%Eee, on się nie rusza.%SPEECH_OFF%Błyskotliwa obserwacja, naprawdę. Informujesz kobietę o śmierci mężczyzny. Zaciska usta i prosi, byś mimo wszystko wydobył ciało, wyjaśniając krótko, dlaczego.%SPEECH_ON%Nie możemy przecież pić jego brudu.%SPEECH_OFF%Słusznie. %otherbrother% udaje się zahaczyć pętlę liny o zwłoki i wyciągnąć je, a kończyny bezwładnie zwisają jak białe szmaty do prania. Pyta, czy ma go też pochować. Kobieta ociera łzę i kręci głową.%SPEECH_ON%Nie. Sama pochowam tego faceta, jutro popłaczę nad jego grobem, a potem wrócę do życia.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, alright.",
+					Text = "No dobrze.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(1);
@@ -112,13 +112,13 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Strong",
-			Text = "[img]gfx/ui/events/event_91.png[/img]You decide it\'s worth your time and go and take a look. The wellhead, a wooden framework meant to cover its opening, has broken apart. Apparently, the old man was doing repairs atop it when this happened and so he plunged down into the well. He looks up at you.%SPEECH_ON%Oy\' there, fellas. I\'m in a bit of a pickle. I\'m actually being pickled now that I think about it...%SPEECH_OFF%Eh, right. %strongbrother% throws down a rope. The old man ties it around himself. You and the sellsword pull the woman\'s grandfather up and back onto dry land. He shakes your hand and thanks you cordially.%SPEECH_ON%Farkin\' hell, glad you came when you did, I was about to shit and piss like no other.%SPEECH_OFF%You talk with the old fella for a time, learning a lot about him. A while later, you realize %strongbrother% is nowhere in sight. Just as you think to start looking for him he steps out of the woman\'s home. She\'s glomming onto his muscles and being rather touchy feely.",
+			Text = "[img]gfx/ui/events/event_91.png[/img]Postanawiasz, że warto poświęcić czas i idziesz zobaczyć. Zwieńczenie studni, drewniana konstrukcja zakrywająca otwór, rozpadło się. Najwyraźniej starzec naprawiał je, gdy to się stało, więc wpadł do studni. Patrzy na ciebie z dołu.%SPEECH_ON%O, hej tam, chłopaki. Jestem w niezłej opresji. Właściwie to się marynuję, teraz jak o tym myślę...%SPEECH_OFF%Ech, no tak. %strongbrother% rzuca linę. Starzec wiąże ją wokół siebie. Ty i najemnik wyciągacie dziadka kobiety na suchy ląd. Ściska ci dłoń i dziękuje uprzejmie.%SPEECH_ON%Cholera, dobrze, że przyszliście, bo już miałem robić w gacie jak nigdy.%SPEECH_OFF%Rozmawiasz chwilę ze staruszkiem, poznając sporo o jego życiu. Po pewnym czasie uświadamiasz sobie, że %strongbrother% zniknął. Gdy już masz go szukać, wychodzi z domu kobiety. Ona trzyma się jego mięśni i zachowuje się dość obcesowo.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Gonna be some strong lads roaming these part soon, no doubt...",
+					Text = "Wkrótce będą tu biegać silne chłopaki, bez wątpienia...",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(2);

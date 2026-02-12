@@ -5,17 +5,17 @@ this.determined_delivers_peptalk_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.determined_delivers_peptalk";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_58.png[/img]You are beginning to worry that a sort of malaise has fallen upon the men. They sit about the campfire, mindlessly poking sticks into the flames. Each face shows a loss of control, a loss of governance over one\'s own destiny. If a man can\'t know if tomorrow will be better than today, then how is he to keep pushing forward? Just as you are about to address this, %determined% stands up and so despondent is the mood that even the swift motion by itself catches the company\'s attention.%SPEECH_ON%Look at you bunch of sorry sad sacks. Do you think you\'re unique? Do you think you\'re the first to feel like shit? No, of course not. You\'d not be the first to give up, either. To lay down and not rise again. That\'s the easy thing to do. That\'s what the world wants you to do. There\'s enough sonsabitches around, no need in having some sorry asses like yourselves mucking things up if you don\'t want no part and parcel in this punishment we call life.%SPEECH_OFF%Roused by this speech, you see a bit of a glint falling over the company.",
+			Text = "[img]gfx/ui/events/event_58.png[/img]Zaczynasz się martwić, że na ludzi spadło jakieś przygnębienie. Siedzą przy ognisku, bezmyślnie szturchając patykami płomienie. Każda twarz pokazuje utratę kontroli, utratę panowania nad własnym losem. Jeśli człowiek nie wie, czy jutro będzie lepsze od dziś, to jak ma iść dalej? Właśnie gdy masz to skomentować, %determined% wstaje, a nastrój jest tak przybity, że nawet szybki ruch sam w sobie zwraca uwagę kompanii.%SPEECH_ON%Popatrzcie na siebie, banda żałosnych smutasów. Myślicie, że jesteście wyjątkowi? Myślicie, że jako pierwsi czujecie się jak gówno? Nie, oczywiście, że nie. Nie bylibyście też pierwsi, którzy się poddali. Położyli się i nie wstali. To jest łatwe. Tego chce od was świat. Jest już dość skurwysynów, nie potrzeba jeszcze, żeby takie nędzne dupy jak wy wszystko psuły, jeśli nie chcecie brać udziału w tej karze, którą nazywamy życiem.%SPEECH_OFF%Poruszeni tą przemową, widzisz, jak nad kompanią pojawia się iskierka blasku.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The man is right!",
+					Text = "Ten człowiek ma rację!",
 					function getResult( _event )
 					{
 						return "B";
@@ -31,13 +31,13 @@ this.determined_delivers_peptalk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_58.png[/img]%determined% continues, almost stabbing his thumb into his chest.%SPEECH_ON%I\'m not taking the world\'s shit. I\'m gonna make the world sorry for having me here. I didn\'t ask for no invitation so I ain\'t gonna play nice to this farkin\' party. See you in the next life, men, but until then, let\'s dance in this one!%SPEECH_OFF%A cheer erupts and the men get to their feet, a sense of elation bursting forth as though the ground had them chained all along.",
+			Text = "[img]gfx/ui/events/event_58.png[/img]%determined% ciągnie dalej, niemal wbijając kciuk w swoją pierś.%SPEECH_ON%Nie będę znosił gówna, które oferuje świat. Sprawię, że świat pożałuje, że tu jestem. Nie prosiłem o zaproszenie, więc nie będę grzecznie tańczył na tej pieprzonej imprezie. Do zobaczenia w następnym życiu, chłopaki, a do tego czasu tańczmy w tym!%SPEECH_OFF%Wybucha okrzyk, a ludzie zrywają się na nogi, a euforia wybucha, jakby ziemia trzymała ich wcześniej w kajdanach.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Hear, hear!",
+					Text = "Brawo!",
 					function getResult( _event )
 					{
 						return 0;

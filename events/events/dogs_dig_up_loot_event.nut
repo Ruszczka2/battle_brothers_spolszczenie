@@ -5,17 +5,17 @@ this.dogs_dig_up_loot_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dogs_dig_up_loot";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_27.png[/img]While along the roads, your wardogs suddenly scamper off and begin digging into the earth. You\'re not sure why as you don\'t recall giving either one a bone. A few moments later and they\'re fighting over what appears to be %finding%. You interrupt the tug of war, taking the goods for yourself. The hounds whine, but a few good pets settles them down.",
+			Text = "[img]gfx/ui/events/event_27.png[/img]Podczas marszu drogą twoje psy bojowe nagle odskakują i zaczynają kopać w ziemi. Nie wiesz, dlaczego, bo nie przypominasz sobie, byś dał któremuś kość. Po chwili gryzą się o coś, co wygląda na %finding%. Przerywasz tę szarpaninę, zabierając znalezisko dla siebie. Psy skomlą, ale kilka porządnych głasków je uspokaja.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good boy.",
+					Text = "Dobry pies.",
 					function getResult( _event )
 					{
 						return 0;
@@ -29,7 +29,7 @@ this.dogs_dig_up_loot_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.FoundItem.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(_event.m.FoundItem.getName()) + _event.m.FoundItem.getName()
+					text = "Otrzymujesz " + this.Const.Strings.getArticle(_event.m.FoundItem.getName()) + _event.m.FoundItem.getName()
 				});
 			}
 

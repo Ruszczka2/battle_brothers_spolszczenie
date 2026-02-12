@@ -7,17 +7,17 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.troublemakers_bully_peasants";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%townImage%Entering %townname%, it isn\'t long until %troublemaker% is bothering the locals. He\'s slapping buckets out of their hands and kicking women into the mud. When an old man confronts him, the sellsword draws out his weapon. Other peasants beg that you put a stop to this at once.",
+			Text = "%townImage%Po wejściu do %townname% nie mija wiele czasu, a %troublemaker% zaczyna nękać miejscowych. Wybija im wiadra z rąk i kopie kobiety w błoto. Gdy stary człowiek staje mu na drodze, najemnik dobywa broni. Inni wieśniacy błagają, byś natychmiast to przerwał.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I don\'t have time for this.",
+					Text = "Nie mam na to czasu.",
 					function getResult( _event )
 					{
 						return "B";
@@ -25,7 +25,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 
 				},
 				{
-					Text = "You need to stop this, %troublemaker%. It reflects badly on the company.",
+					Text = "Musisz z tym skończyć, %troublemaker%. To źle świadczy o kompanii.",
 					function getResult( _event )
 					{
 						return "C";
@@ -33,7 +33,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 
 				},
 				{
-					Text = "Put the peasants in their place and search their homes for valuables!",
+					Text = "Ustaw chłopów do pionu i przeszukaj ich domy w poszukiwaniu kosztowności!",
 					function getResult( _event )
 					{
 						return "D";
@@ -46,7 +46,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				if (_event.m.Peacekeeper != null)
 				{
 					this.Options.push({
-						Text = "%peacekeeperfull%, see if you can calm %troublemaker% with your wisdom.",
+						Text = "%peacekeeperfull%, spróbuj uspokoić %troublemaker% swoją mądrością.",
 						function getResult( _event )
 						{
 							return this.Math.rand(1, 100) <= 70 ? "E" : "F";
@@ -64,13 +64,13 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%townImage%You shrug. %troublemaker% doesn\'t run the old man through, but he does threaten to, raising the weapon on high. When the old man cowers, the sellsword delivers a punch that knocks the elderly right out, his teeth peppering the muck like spits of white rain. This brings a few jeers from the villagers, but they know not to contest your presence any further.\n\nA few men drag the elder away while children boo and women hiss. One child even runs up to the sellsword, pointing at him as he yells \'he\'s a bad man.\' %troublemaker% shrugs as he sheathes his weapon.%SPEECH_ON%And yet the bad man still stands. Would you also like a taste of the mud, little one?%SPEECH_OFF%The kid quickly runs off.",
+			Text = "%townImage%Wzruszasz ramionami. %troublemaker% nie przebija starca, ale grozi, unosząc broń wysoko. Kiedy starzec się kuli, najemnik wymierza cios, który powala go na ziemię, a zęby rozpryskują się w błocie jak białe krople deszczu. To wywołuje kilka gwizdów ze strony mieszkańców, ale wiedzą, by nie sprzeciwiać się waszej obecności.\n\nKilku mężczyzn odciąga starca, podczas gdy dzieci buczą, a kobiety syczą. Jedno dziecko nawet podbiega do najemnika i wskazując go krzyczy: \'to zły człowiek.\' %troublemaker% wzrusza ramionami, chowając broń.%SPEECH_ON%A jednak zły człowiek wciąż stoi. Chcesz też posmakować błota, maluchu?%SPEECH_OFF%Dzieciak szybko ucieka.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Now on to things that actually matter...",
+					Text = "A teraz do rzeczy, które naprawdę się liczą...",
 					function getResult( _event )
 					{
 						return 0;
@@ -84,7 +84,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				this.World.Assets.addMoralReputation(-3);
 				local f = _event.m.Town.getFactionOfType(this.Const.FactionType.Settlement);
 				f.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "One of your men caused havoc in town");
-				_event.m.Troublemaker.improveMood(1.0, "Bullied the peasantfolk");
+				_event.m.Troublemaker.improveMood(1.0, "Gnębił wieśniaków");
 
 				if (_event.m.Troublemaker.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -99,13 +99,13 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%townImage%As %troublemaker% raises his weapon on high, you grab him by the forearm and bring it back down. He swings around, looking at you sternly. The cowering old man backs off, soon collected by caretakers that shuttle him back inside before he gets himself hurt.\n\nA few other peasants linger around, watching with keen interest. You tell the sellsword to back down. He\'s paid to fight who you deem he should fight, not a bunch of peasants who are minding their own.\n\n As %troublemaker% glances around, you realize you\'ve left him no \'out\' that will save face. In his eyes, there is a look that says he\'s about to kill you. It\'d be the end of him, but he\'d go out with his suicidal pride intact. But the look fades, and embarrassment and humiliation take its place. He sheathes his weapon, spits, and remarks that he was only having some fun.",
+			Text = "%townImage%Gdy %troublemaker% unosi broń wysoko, chwytasz go za przedramię i opuszczasz ją. Odwraca się, patrząc na ciebie surowo. Kulący się starzec cofa się, wkrótce zabierany przez opiekunów, którzy wciągają go do środka, zanim zrobi sobie krzywdę.\n\nKilku innych chłopów zostaje w pobliżu, obserwując z zaciekawieniem. Mówisz najemnikowi, by się wycofał. Dostaje żołd za to, by walczyć z tymi, z którymi ty każesz mu walczyć, a nie z garścią ludzi, którzy pilnują własnych spraw.\n\n Gdy %troublemaker% rozgląda się, uświadamiasz sobie, że nie zostawiłeś mu żadnego wyjścia, które ocaliłoby jego twarz. W jego oczach pojawia się spojrzenie, które mówi, że zaraz cię zabije. To byłby jego koniec, ale odszedłby z samobójczą dumą nienaruszoną. Jednak spojrzenie gaśnie, a na jego miejsce wchodzą zakłopotanie i upokorzenie. Chowa broń, spluwa i mówi, że tylko się bawił.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Save it for when we\'re paid to do this.",
+					Text = "Zachowaj to na czas, gdy nam za to zapłacą.",
 					function getResult( _event )
 					{
 						return 0;
@@ -116,7 +116,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Troublemaker.getImagePath());
-				_event.m.Troublemaker.worsenMood(2.0, "Was humiliated in front of the company");
+				_event.m.Troublemaker.worsenMood(2.0, "Został upokorzony na oczach kompanii");
 
 				if (_event.m.Troublemaker.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -131,13 +131,13 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_30.png[/img]You look at the peasant who hailed you down.%SPEECH_ON%Who are you, peasant, to tell me or my men what to do?%SPEECH_OFF%The man takes a step back, stammering something about \'only trying to help.\' Laughing, you tell your men to take what they want. If this village has no respect for the authority of armed men, then you will have to teach them that respect.\n\nWomen scream and bundle up their children as the order leaves your tongue. They run off and a few men join them. Other men stay behind, protecting their homes, but the %companyname% makes quick work of their modest defenses. Your mercenaries are soon pillaging each and every home, taking what they can with roaring laughter. Today is a good day.",
+			Text = "[img]gfx/ui/events/event_30.png[/img]Patrzysz na chłopa, który cię zatrzymał.%SPEECH_ON%Kim jesteś, chłopie, żeby mówić mi albo moim ludziom, co mamy robić?%SPEECH_OFF%Mężczyzna cofa się o krok, jąkając się, że \'tylko próbował pomóc\'. Śmiejąc się, każesz ludziom brać, co chcą. Skoro ta wioska nie szanuje autorytetu uzbrojonych mężczyzn, będziesz musiał nauczyć ich tego szacunku.\n\nKobiety krzyczą i chwytają dzieci, gdy rozkaz wychodzi z twoich ust. Uciekają, a kilku mężczyzn dołącza do nich. Inni zostają, broniąc swych domów, ale %companyname% szybko rozprawia się z ich skromną obroną. Twoi najemnicy wkrótce rabują każdy dom, zabierając, co się da, z ryczącym śmiechem. To dobry dzień.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'ll teach them.",
+					Text = "To ich nauczy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -156,7 +156,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -164,7 +164,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				{
 					if (bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getBackground().isCombatBackground())
 					{
-						bro.improveMood(1.0, "Enjoyed raiding and pillaging");
+						bro.improveMood(1.0, "Cieszył się z rabunku i grabieży");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -177,7 +177,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 					}
 					else if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(1.0, "Was appalled by the company\'s conduct");
+						bro.worsenMood(1.0, "Był oburzony postępowaniem kompanii");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -194,13 +194,13 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "%townImage%%peacekeeperfull% places himself between %troublemaker% and the old man. He shakes his head \'no\' in a very modest fashion, but you can\'t help but notice that his swordhand is also on the pommel of his weapon. The troublemaking sellsword briefly seems to consider cutting the man down, but then a smile snaps across his face. He laughs as he sheathes his weapon.%SPEECH_ON%Only having a bit of fun, my brother.%SPEECH_OFF%The peasants slowly start going about their business again, but they are wary and stare side-eyed at your men for the rest of your duration in %townname%.",
+			Text = "%townImage%%peacekeeperfull% staje między %troublemaker% a starym człowiekiem. W skromny sposób kręci głową na \'nie\', ale nie sposób nie zauważyć, że jego dłoń również spoczywa na głowicy broni. Kłopotliwy najemnik przez chwilę wydaje się rozważać, czy go nie ściąć, ale wtedy na jego twarzy pojawia się uśmiech. Śmieje się, chowając broń.%SPEECH_ON%Tylko się bawiłem, bracie.%SPEECH_OFF%Chłopi powoli wracają do swoich zajęć, ale są czujni i spoglądają na twoich ludzi spode łba przez cały wasz pobyt w %townname%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -217,13 +217,13 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "%townImage%%peacekeeperfull% steps in between %troublemaker% and the old man. The troublemaking sellsword laughs and sheathes his weapon. He turns back to the rest of the company, grinning and shaking his head, but you notice that this smile quickly fades. Before you can say anything, %troublemaker% wheels a fist back around and knocks %peacekeeper% out cold.\n\n Well, that\'s one way to mollify a mercenary.",
+			Text = "%townImage%%peacekeeperfull% staje między %troublemaker% a starym człowiekiem. Kłopotliwy najemnik śmieje się i chowa broń. Odwraca się do reszty kompanii, uśmiechając się i kręcąc głową, lecz zauważasz, że uśmiech szybko gaśnie. Zanim zdążysz cokolwiek powiedzieć, %troublemaker% cofa pięść i uderza %peacekeeper%, powalając go na ziemię bez przytomności.\n\n Cóż, to jeden ze sposobów na uspokojenie najemnika.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I might have to do something about discipline in this company.",
+					Text = "Chyba muszę zrobić coś z dyscypliną w tej kompanii.",
 					function getResult( _event )
 					{
 						return 0;
@@ -239,9 +239,9 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Peacekeeper.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Peacekeeper.getName() + " doznaje " + injury.getNameOnly()
 				});
-				_event.m.Peacekeeper.worsenMood(2.0, "Was humiliated in front of the company");
+				_event.m.Peacekeeper.worsenMood(2.0, "Został upokorzony na oczach kompanii");
 
 				if (_event.m.Peacekeeper.getMoodState() < this.Const.MoodState.Neutral)
 				{

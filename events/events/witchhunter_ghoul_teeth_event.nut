@@ -5,17 +5,17 @@ this.witchhunter_ghoul_teeth_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.witchhunter_ghoul_teeth";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%witchhunter% the witch hunter comes to you with a vial of unknown liquid.%SPEECH_ON%Anti-poison.%SPEECH_OFF%He explains. He pops the cork off and gives you a smell. There\'s a strong scent of piss. He nods.%SPEECH_ON%Aye, it\'s wretched, but you need the wretched to fight the wretched, and a goblin\'s poison is a real wretched matter to contend with. But this will help.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%witchhunter% łowca czarownic podchodzi do ciebie z fiolką nieznanego płynu.%SPEECH_ON%Antytoksyna.%SPEECH_OFF%Wyjaśnia. Wyciąga korek i daje ci powąchać. Czuć silny zapach szczyn. Kiwając głową, mówi:%SPEECH_ON%Ano, ohydne, ale do walki z ohydnym trzeba ohydnego, a trucizna goblinów to naprawdę ohydna sprawa. Ale to pomoże.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Useful.",
+					Text = "Przydatne.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,7 +38,7 @@ this.witchhunter_ghoul_teeth_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 
 						if (numPelts >= 1)
@@ -53,7 +53,7 @@ this.witchhunter_ghoul_teeth_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

@@ -5,17 +5,17 @@ this.fainthearted_is_shellshocked_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.fainthearted_is_shellshocked";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_12.png[/img]You find %fainthearted% leaning back and forth before the campfire. His face is speckled with dried blood and his hands are shaking. A few brothers try and talk to him, but none manage to get through. It appears the fainthearted man has been rattled by the horrors of a recent and brutal battle.",
+			Text = "[img]gfx/ui/events/event_12.png[/img]Zastajesz %fainthearted% kołyszącego się przed ogniskiem. Twarz ma usianą zaschniętą krwią, a ręce mu drżą. Kilku braci próbuje z nim rozmawiać, ale nikomu nie udaje się przebić. Wygląda na to, że lękliwy mężczyzna został wstrząśnięty okropnościami niedawnej i brutalnej bitwy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Leave him be.",
+					Text = "Zostaw go.",
 					function getResult( _event )
 					{
 						return 0;

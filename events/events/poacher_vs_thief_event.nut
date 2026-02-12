@@ -6,17 +6,17 @@ this.poacher_vs_thief_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.poacher_vs_thief";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]You walk out of your tent to see %poacher% and %thief% regaling one another with stories. You\'re not sure what a poacher and a thief would have in common, but they seem to be having a good time. Laughing, %poacher% gives another story.%SPEECH_ON%One time, I was out in this pithy nobleman\'s lands hunting this buck. Shooting the damned deer was the easy part. In the middle of field dressing it, I hear hooves beating over the earth. So run a rope up a tree, tie the carcass to it, and haul that sucker up there. No more than a minute later, badda-badda-badda, there\'s the nobleman with the constable and a retinue of lawmen.%SPEECH_OFF%%thief% raises an eyebrow.%SPEECH_ON%That\'s a tight spot, sir.%SPEECH_OFF%The poacher nods.%SPEECH_ON%Tighter than a cross-legged virgin it was. So this nobleman comes wandering just underneath me and sees all the blood. He starts barking that I come out and turn myself in. I had no intention of doing that, but unfortunately, the goddam buck starts slipping. I reach out for it and I suppose the branch couldn\'t take no more and snapped. The nobleman looks up just in time to get splattered by the belly of this deer, meanwhile I\'m falling to certain death until the damned rope snags my foot and hangs me upside down before my makers. I give a bit of a wave, \'hey fellas, don\'t mean to barge in like this.\'%SPEECH_OFF%The thief laughs, but his face is a bit concerned. %poacher% waves him off.%SPEECH_ON%Oh, they had a sense of humor about it, thank the old gods. I spent a short six months in a dark pit. Nothing too bad, really.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img]Wychodzisz z namiotu i widzisz %poacher% oraz %thief% opowiadających sobie historie. Nie wiesz, co kłusownik i złodziej mogą mieć wspólnego, ale wygląda na to, że świetnie się bawią. Śmiejąc się, %poacher% snuje kolejną opowieść.%SPEECH_ON%Raz polowałem na jelenia na ziemiach pewnego skąpego szlachcica. Zastrzelenie tego cholernego byka było najłatwiejsze. W trakcie oprawiania w polu słyszę dudnienie kopyt. Więc rzucam linę na drzewo, wiążę do niej tuszę i wciągam ją na górę. Nie mija minuta, bam-bam-bam, a tu szlachcic z żandarmem i całą świtą strażników.%SPEECH_OFF%%thief% unosi brew.%SPEECH_ON%To trudna sytuacja, panie.%SPEECH_OFF%Kłusownik kiwa głową.%SPEECH_ON%Trudniejsza niż u dziewicy z nogami na krzyż. Ten szlachcic kręci się tuż pode mną i widzi całą krew. Zaczyna ujadać, żebym wyszedł i się poddał. Nie miałem takiego zamiaru, ale niestety ten cholerny jeleń zaczął się zsuwać. Sięgam po niego i chyba gałąź nie wytrzymała, bo pękła. Szlachcic podnosi wzrok dokładnie na czas, by dostać w brzuch tego jelenia, a ja lecę na pewną śmierć, aż ta cholerna lina zahacza mi stopę i wieszam się głową w dół przed stwórcą. Macham trochę: \'hej, panowie, nie chciałem się tak wtrącać.\'%SPEECH_OFF%Złodziej śmieje się, ale wygląda na trochę zaniepokojonego. %poacher% macha na niego ręką.%SPEECH_ON%Oj, mieli poczucie humoru, dzięki starym bogom. Spędziłem tylko sześć miesięcy w ciemnym lochu. Nic strasznego, naprawdę.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Right.",
+					Text = "Jasne.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,13 +28,13 @@ this.poacher_vs_thief_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Poacher.getImagePath());
 				this.Characters.push(_event.m.Thief.getImagePath());
-				_event.m.Poacher.improveMood(1.0, "Bonded with " + _event.m.Thief.getName());
+				_event.m.Poacher.improveMood(1.0, "Zżył się z " + _event.m.Thief.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Poacher.getMoodState()],
 					text = _event.m.Poacher.getName() + this.Const.MoodStateEvent[_event.m.Poacher.getMoodState()]
 				});
-				_event.m.Thief.improveMood(1.0, "Bonded with " + _event.m.Poacher.getName());
+				_event.m.Thief.improveMood(1.0, "Zżył się z " + _event.m.Poacher.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Thief.getMoodState()],

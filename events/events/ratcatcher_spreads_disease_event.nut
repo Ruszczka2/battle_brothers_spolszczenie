@@ -5,17 +5,17 @@ this.ratcatcher_spreads_disease_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ratcatcher_spreads_disease";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_18.png[/img]%ratcatcher% the ratcatcher has earned his old vocation\'s namesake: apparently he\'s been rounding up rats as your party has been traveling about. Tonight, they all escaped. Some of the food stocks needed to be thrown away and a few men have fallen ill.",
+			Text = "[img]gfx/ui/events/event_18.png[/img]%ratcatcher% szczurołap zasłużył na swoją dawną nazwę fachu: wygląda na to, że podczas podróży wyłapywał szczury. Tej nocy wszystkie uciekły. Część zapasów żywności trzeba było wyrzucić, a kilku ludzi zachorowało.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "My throat\'s so scratchy I can barely squeak out a word!",
+					Text = "Tak mnie drapie w gardle, że ledwo mogę pisnąć!",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,7 +32,7 @@ this.ratcatcher_spreads_disease_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_food.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + food + "[/color] Provisions"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + food + "[/color] zapasów"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -74,7 +74,7 @@ this.ratcatcher_spreads_disease_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = effect.getIcon(),
-						text = bro.getName() + " is sick"
+						text = bro.getName() + " jest chory"
 					});
 				}
 
@@ -85,7 +85,7 @@ this.ratcatcher_spreads_disease_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = effect.getIcon(),
-						text = lowestBro.getName() + " is sick"
+						text = lowestBro.getName() + " jest chory"
 					});
 				}
 			}

@@ -7,16 +7,16 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.the_horseman";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Przy drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%While on the path, you come to a man being dangled upside down from a tree branch. A bunch of men are sitting around him sharing a goatskin flask, looking like they\'re at the end of a day\'s hard work. When you ask what is going on, one of them looks up and smiles.%SPEECH_ON%Whipping this fella \'til he\'s raw.%SPEECH_OFF%You ask what for. Another man answers.%SPEECH_ON%Fornicating with this fella\'s wife.%SPEECH_OFF%A man drinking spurts and chokes on his drink. He wipes his mouth.%SPEECH_ON%Hardy-farkin\'-har, very funny. No, this scumbag was caught farkin my dead horse.%SPEECH_OFF%",
+			Text = "%terrainImage%Idąc drogą, trafiasz na człowieka wiszącego głową w dół na gałęzi. Grupa mężczyzn siedzi wokół, pijąc z koźlej skórki, wyglądają jak po ciężkim dniu pracy. Kiedy pytasz, co się dzieje, jeden z nich unosi wzrok i uśmiecha się.%SPEECH_ON%Chłostamy go, aż będzie cały surowy.%SPEECH_OFF%Pytasz, za co. Inny odpowiada.%SPEECH_ON%Za bzykanie żony tego faceta.%SPEECH_OFF%Jeden z pijących prycha i dławi się trunkiem. Wyciera usta.%SPEECH_ON%No tak, bardzo śmieszne. Nie, tego szubrawca przyłapano, jak rżnął mojego martwego konia.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Let\'s talk to the dangling man.",
+					Text = "Porozmawiajmy z wiszącym.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let\'s keep going.",
+					Text = "Idźmy dalej.",
 					function getResult( _event )
 					{
 						if (_event.m.Butcher != null)
@@ -46,13 +46,13 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%terrainImage%You walk over to the dangling man. There\'s blood running down his back, streaking from a dozen slashes. He\'s got a cloth covering his eyes which you pull down. Blinking, he asks what it is you want as though you\'re interrupting his own hiding. You ask him if what they say is true. He spits and clears his throat.%SPEECH_ON%I mean, yeah, but the horse was dead, so of what matter was it? Can\'t a man have his fun?%SPEECH_OFF%The horse owner gets up, brandishing a dripping whip.%SPEECH_ON%Oy, you want us to go back at it? We got all day!%SPEECH_OFF%Sighing, the dangling man asks you a question.%SPEECH_ON%Yer a sellsword, right? Why don\'t I come and fight for ya? I\'m a strong and able bodied man, a little horse, I mean worse, for the wear, but that aside, and the, uh, dead animal thing, I\'m a man of upstanding and moral sensibilities.%SPEECH_OFF%",
+			Text = "%terrainImage%Podchodzisz do wiszącego. Krew spływa po jego plecach, z dziesiątków cięć. Ma na oczach szmatę, którą zsuwasz. Mrugając, pyta, czego chcesz, jakbyś przeszkadzał mu w własnej kryjówce. Pytasz, czy to, co mówią, to prawda. Spluwa i odchrząkuje.%SPEECH_ON%No, tak, ale koń był martwy, więc co za różnica? Czy człowiek nie może się trochę zabawić?%SPEECH_OFF%Właściciel konia wstaje, wymachując ociekającym batem.%SPEECH_ON%Ej, chcecie, żebyśmy do tego wrócili? Mamy cały dzień!%SPEECH_OFF%Wzdychając, wiszący zadaje ci pytanie.%SPEECH_ON%Jesteś najemnikiem, co? Czemu mam dla ciebie nie walczyć? Jestem silny i sprawny, trochę koń... to znaczy gorzej... nadwerężony, ale poza tym, i tym, no, martwym zwierzęciem, jestem człowiekiem prawości i moralnych zasad.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll cut you down.",
+					Text = "Odetniemy cię.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 75)
@@ -72,7 +72,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Flagellant != null)
 				{
 					this.Options.push({
-						Text = "%flagellantfull%, you look like you have something on your mind.",
+						Text = "%flagellantfull%, wygląda na to, że coś ci chodzi po głowie.",
 						function getResult( _event )
 						{
 							return "Flagellant";
@@ -82,7 +82,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Time to leave.",
+					Text = "Czas odejść.",
 					function getResult( _event )
 					{
 						if (_event.m.Butcher != null)
@@ -101,13 +101,13 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%terrainImage%You take out your blade and cut the man down. He crumples onto his shoulders and splays out, his lashed back in the dirt. The soil may as well have been salt judging by his wailing. One of the whippers stands up.%SPEECH_ON%Hey, just what do you think you\'re doing? We ain\'t finished here!%SPEECH_OFF%%randombrother% draws his weapon and the man backs off. The horse owner spits and shakes his head.%SPEECH_ON%Are you really going to defend this piece of work? Ain\'t that some fucking horseshit. I guess now I can say I\'ve seen it all which is exactly what I said when I caught this bastard porkin\' my dead horse!%SPEECH_OFF%The man catches his breath then points at the recently rescued.%SPEECH_ON%I hope you die on your first day out ya filly fiddling bastard.%SPEECH_OFF%",
+			Text = "%terrainImage%Wyciągasz ostrze i odcinasz go. Osuwa się na barki i rozkłada, plecami po chłostach w ziemi. Po jego wyciu można sądzić, że gleba była solą. Jeden z batogów wstaje.%SPEECH_ON%Hej, co ty wyprawiasz? Nie skończyliśmy!%SPEECH_OFF%%randombrother% dobywa broni, a mężczyzna się cofa. Właściciel konia spluwa i kręci głową.%SPEECH_ON%Naprawdę będziesz bronił takiego typa? Toż to pieprzona końska bzdura. Teraz mogę powiedzieć, że widziałem wszystko, dokładnie to powiedziałem, kiedy przyłapałem tego drania, jak rżnął mojego martwego konia!%SPEECH_OFF%Mężczyzna łapie oddech i wskazuje na właśnie uratowanego.%SPEECH_ON%Obyś zdechł pierwszego dnia, ty sukinsynu gmerający przy klaczkach.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome aboard, you horse whore.",
+					Text = "Witamy na pokładzie, koński rozpustniku.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -118,7 +118,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Just go. We have no place for you.",
+					Text = "Po prostu idź. Nie ma tu dla ciebie miejsca.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -134,12 +134,12 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"vagabond_background"
 				]);
-				_event.m.Dude.setTitle("the Filly Fiddler");
-				_event.m.Dude.getBackground().m.RawDescription = "You found %name% being whipped for \'involving\' himself with a dead horse. Hopefully that past is, er, behind him now.";
+				_event.m.Dude.setTitle("Gmeracz Klaczek");
+				_event.m.Dude.getBackground().m.RawDescription = "Znalazłeś %name% chłostanego za \'obcowanie\' z martwym koniem. Miejmy nadzieję, że ta przeszłość jest teraz, eee, za nim.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.setHitpoints(30);
-				_event.m.Dude.improveMood(1.0, "Satisfied his needs with a dead horse");
-				_event.m.Dude.worsenMood(1.0, "Got whipped");
+				_event.m.Dude.improveMood(1.0, "Zaspokoił potrzeby z martwym koniem");
+				_event.m.Dude.worsenMood(1.0, "Został wychłostany");
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 				{
@@ -162,13 +162,13 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "%terrainImage%You take out your blade and cut the man down. He falls right on his head and his neck breaks with a disgusting crack. The rest of his body crumples with his legs awkwardly heaved over his own chest, a position no doubt strange to this sexual deviant. The horse owner springs to his feet.%SPEECH_ON%Well shit, sir, we was just gonna whip him good. Why\'d you go and kill him for?%SPEECH_OFF%He pauses then waves a dismissive hand.%SPEECH_ON%Shit. Shit, man. Well, alright. We\'ll just all depart in our own way and say nothing of what happened here. Ain\'t that right fellas?%SPEECH_OFF%The rest of the men nod.%SPEECH_ON%\'Course. I ain\'t ruining my life over some filly fiddler. Good going, sellsword, stupid sword swingin\' sumbitch.%SPEECH_OFF%",
+			Text = "%terrainImage%Wyciągasz ostrze i odcinasz go. Spada prosto na głowę, a jego kark łamie się z obrzydliwym trzaskiem. Reszta ciała zapada się, nogi niezgrabnie przerzucone nad własną piersią, pozycja zapewne osobliwa dla takiego zboczeńca. Właściciel konia zrywa się na nogi.%SPEECH_ON%No do cholery, panie, mieliśmy go tylko porządnie wychłostać. Czemu go zabiłeś?%SPEECH_OFF%Zatrzymuje się, po czym macha ręką z rezygnacją.%SPEECH_ON%Cholera. Cholera, człowieku. No dobrze. Rozejdziemy się każdy w swoją stronę i nie powiemy nic o tym, co tu się stało. Zgadza się, chłopaki?%SPEECH_OFF%Reszta mężczyzn kiwa głowami.%SPEECH_ON%Jasne. Nie zamierzam psuć sobie życia przez jakiegoś gmeracza klaczek. Dobra robota, najemniku, głupi skurwielu machający mieczem.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Whoops.",
+					Text = "Ups.",
 					function getResult( _event )
 					{
 						return 0;
@@ -183,13 +183,13 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Flagellant",
-			Text = "%terrainImage%%flagellant% steps forward and takes the horse owner\'s whip. He bends it and runs the leather through his hands. Nodding, he calls it a \'fine tool\' for a good whipping, but that the men were going about it \'all the wrong way.\' He points at the wounds on the man\'s back.%SPEECH_ON%See these streaks? They\'re thin and barely opened. Don\'t let the amount of blood fool you, these are superficial. Here, let me show you a good hiding.%SPEECH_OFF%The flagellant drop the whip\'s strings, twirls them around for a moment, then strikes. The hanging man cries out. A wound opens and gapes from the tip of one rib clear across his back to the tip of another. You can see the muscle and fat bubbling beneath. %flagellant% strikes again, and again, and again. Blood splashes the flagellant as he works and the horse-porker has long since passed out. Eventually, one of the men gets to his feet and takes the whip back.%SPEECH_ON%Th-that\'s enough. You fellas get on and go, alright? Farkin\' hell...%SPEECH_OFF%Another man cuts the filly fiddler down and tends to his new, quite serious wounds. %flagellant% wipes his brow and admires his handiwork.%SPEECH_ON%Mmhmm, that\'s how it\'s done.%SPEECH_OFF%",
+			Text = "%terrainImage%%flagellant% podchodzi i bierze bicz właściciela konia. Zgina go i przesuwa skórę przez dłonie. Kiwając głową, nazywa go \'dobrym narzędziem\' do porządnej chłosty, ale dodaje, że mężczyźni robili to \'zupełnie źle\'. Wskazuje na rany na plecach wiszącego.%SPEECH_ON%Widzisz te pręgi? Są cienkie i ledwie rozcięte. Nie daj się zwieść ilości krwi, to powierzchowne. Chodź, pokażę wam, jak się daje porządną nauczkę.%SPEECH_OFF%Biczownik opuszcza rzemienie, przez chwilę nimi kręci, po czym uderza. Wiszący krzyczy. Rana otwiera się i rozdziera od końca jednego żebra aż po drugi. Widać mięśnie i tłuszcz bulgoczące pod spodem. %flagellant% uderza raz, drugi, trzeci. Krew rozpryskuje się na biczownika, a końcoch dawno już zemdlał. W końcu jeden z mężczyzn wstaje i odbiera bicz.%SPEECH_ON%T-to wystarczy. Ruszajcie dalej, dobrze? Do diabła...%SPEECH_OFF%Inny mężczyzna odcina gmeracza klaczek i opatruje jego nowe, całkiem poważne rany. %flagellant% ociera czoło i podziwia swoje dzieło.%SPEECH_ON%Mmhmm, tak to się robi.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Yes, yes it is.",
+					Text = "Tak, właśnie tak.",
 					function getResult( _event )
 					{
 						return 0;
@@ -205,7 +205,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				_event.m.Flagellant.getBaseProperties().MeleeSkill += meleeSkill;
 				_event.m.Flagellant.getBaseProperties().Stamina += fatigue;
 				_event.m.Flagellant.getSkills().update();
-				_event.m.Flagellant.improveMood(1.0, "Put his unique skills to good use");
+				_event.m.Flagellant.improveMood(1.0, "Wykorzystał swoje wyjątkowe umiejętności");
 
 				if (_event.m.Flagellant.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -219,25 +219,25 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Flagellant.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
+					text = _event.m.Flagellant.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] umiejętności walki wręcz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Flagellant.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + fatigue + "[/color] Max Fatigue"
+					text = _event.m.Flagellant.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + fatigue + "[/color] maks. zmęczenia"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Butcher",
-			Text = "%terrainImage%%butcher% asks if the horse is still around. Its owner nods.%SPEECH_ON%Aye, freshly dead, freshly soiled by that prick. Why?%SPEECH_OFF%The butcher asks if he can take it off his hands. The owner shrugs.%SPEECH_ON%Yours if you want it. Though you\'d best be careful cutting around the bits he touched with his own bits.%SPEECH_OFF%Before anymore can be said, %butcher% has the man take him to the horse corpse to, well, butcher it. The company gets some questionable meat to eat.",
+			Text = "%terrainImage%%butcher% pyta, czy koń wciąż tu jest. Właściciel przytakuje.%SPEECH_ON%Aye, świeżo zdechły i świeżo zbrukany przez tego palanta. Czemu?%SPEECH_OFF%Rzeźnik pyta, czy może go przejąć. Właściciel wzrusza ramionami.%SPEECH_ON%Twój, jeśli chcesz. Tylko uważaj, gdy będziesz odcinał te kawałki, których dotykał własnymi kawałkami.%SPEECH_OFF%Zanim ktoś zdąży coś powiedzieć, %butcher% każe zaprowadzić się do końskiego trupa, by go, cóż, oporządzić. Kompania dostaje trochę podejrzanego mięsa do jedzenia.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Not sure I want that in our stocks.",
+					Text = "Nie jestem pewien, czy chcę to w naszych zapasach.",
 					function getResult( _event )
 					{
 						return 0;
@@ -255,7 +255,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

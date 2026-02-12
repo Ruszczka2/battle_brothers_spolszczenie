@@ -5,17 +5,17 @@ this.fat_guy_gets_fit_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.fat_guy_gets_fit";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_75.png[/img]%fatguy%, once a lumbering lump of belly fat on two legs, has lost a considerable amount of weight since he\'s with the company. No longer does the mere notion of a sparring fight leave him without breath. In fact, he\'s got more bounce in his step and is showing a sort of agility you\'ve never seen from him before. Looks like all this walking about has done wonders.",
+			Text = "[img]gfx/ui/events/event_75.png[/img]%fatguy%, niegdyś ociężała bryła tłuszczu na dwóch nogach, znacznie schudł, odkąd jest w kompanii. Sama myśl o sparingu nie odbiera mu już tchu. W rzeczywistości ma więcej sprężystości w kroku i pokazuje zwinność, której nigdy u niego nie widziałeś. Wygląda na to, że to całe wędrowanie zdziałało cuda.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "He might make a good sellsword yet.",
+					Text = "Może jednak zrobi się z niego dobry najemnik.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.fat_guy_gets_fit_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/traits/trait_icon_10.png",
-						text = _event.m.FatGuy.getName() + " is no longer fat"
+						text = _event.m.FatGuy.getName() + " nie jest już gruby"
 					}
 				];
 			}

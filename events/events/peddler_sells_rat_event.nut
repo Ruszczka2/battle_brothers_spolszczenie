@@ -6,17 +6,17 @@ this.peddler_sells_rat_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.peddler_sells_rat";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%SPEECH_ON%For the last time, no, I won\'t buy a rat.%SPEECH_OFF%You see %ratcatcher% the ratcatcher turn a corner with the skeevy peddler %peddler% on his heels. The salesman throws another pitch.%SPEECH_ON%\'Course you won\'t buy one! You\'re a ratcatcher, why would you buy one? But what if...%SPEECH_OFF%The ratcatcher stops and turns on his heels, planting a firm finger into the peddler\'s chest.%SPEECH_ON%Pet rats don\'t go grow on trees, %peddler%! They\'re born of a different stock! If I need a rat by my side I\'ll find him myself! Now, if you got a rat you need killin\', that\'s a different matter.%SPEECH_OFF%%peddler%\'s eyes fall to the ground, thinking for a moment. Suddenly, his gaze lifts along with his spirits and a pointing finger.%SPEECH_ON%Ah, a goldfish then? Would you buy a goldfish?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%SPEECH_ON%Po raz ostatni: nie, nie kupię szczura.%SPEECH_OFF%Widzisz, jak %ratcatcher% łowca szczurów skręca za róg, a za nim podąża podejrzany przekupień %peddler%. Sprzedawca rzuca kolejną gadkę.%SPEECH_ON%No jasne, że nie kupisz! Jesteś łowcą szczurów, czemu miałbyś kupować? Ale co jeśli...%SPEECH_OFF%Łowca szczurów zatrzymuje się i odwraca na pięcie, wbijając palec w pierś przekupnia.%SPEECH_ON%Szczury domowe nie rosną na drzewach, %peddler%! Rodzą się z innego miotu! Jeśli będę potrzebował szczura u boku, znajdę go sam! A jeśli masz szczura do zabicia, to co innego.%SPEECH_OFF%Oczy %peddler% opadają ku ziemi, gdy chwilę się zastanawia. Nagle jego wzrok i nastrój unoszą się wraz z wyciągniętym palcem.%SPEECH_ON%A więc złota rybka? Kupiłbyś złotą rybkę?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Everything in order here.",
+					Text = "Wszystko w porządku.",
 					function getResult( _event )
 					{
 						return 0;

@@ -5,16 +5,16 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.kids_and_dead_merchant";
-		this.m.Title = "Along the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]You find a kid wearing a rather opulent chain around his neck. It\'s so heavy his head is bent forward, but that minor struggle doesn\'t wipe the mile wide grin off his face. %randombrother% pushes the kid down and takes the necklace.%SPEECH_ON%Where did you get this?%SPEECH_OFF%The kid cries out, trying to grab his treasure back, but he\'s about three feet and a good jump too short.%SPEECH_ON%Hey, that\'s mine! Give it back!%SPEECH_OFF%Another kid comes over flashing a ring so large it\'s pinching two fingers at once. Alright. That\'s enough. The company fans out and eventually find a dead merchant in some tall grass beside a treeline. His face is purpled and jagged with broken bones. It appears he has been stoned to death.\n\n A group of about forty or fifty youngsters appear from the treeline, each juggling a stone in hand. Their leader, a little runt with red hair and sleeves of tattoos, asks what you want. You tell him that you\'ll be taking the merchant\'s goods. The leader laughs.%SPEECH_ON%Oy is that so? I\'ll give ya ten seconds to rethink that choice, oy that I will, mister!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_97.png[/img]Znajdujesz dzieciaka z dość wystawnym łańcuchem na szyi. Jest tak ciężki, że jego głowa opada do przodu, ale ten drobny wysiłek nie ściera z twarzy uśmiechu od ucha do ucha. %randombrother% przewraca dzieciaka i zabiera naszyjnik.%SPEECH_ON%Skąd to masz?%SPEECH_OFF%Dzieciak krzyczy, próbując odzyskać skarb, ale ma jakieś metr wzrostu i jest o dobry skok za krótki.%SPEECH_ON%Ej, to moje! Oddaj!%SPEECH_OFF%Podchodzi inny dzieciak, machając pierścieniem tak dużym, że ściska naraz dwa palce. Dobrze. Wystarczy. Kompania rozchodzi się i w końcu znajduje martwego kupca w wysokiej trawie przy linii drzew. Jego twarz jest posiniaczona i poszarpana od połamanych kości. Wygląda na to, że został zakamienowany.\n\n Z linii drzew wychodzi grupa czterdziestu czy pięćdziesięciu młokosów, każdy żongluje kamieniem w dłoni. Ich przywódca, mały rudzielec z rękawami tatuaży, pyta, czego chcesz. Mówisz mu, że zabierzesz kupieckie dobra. Przywódca się śmieje.%SPEECH_ON%Oj, tak? Dam ci dziesięć sekund, żebyś się zastanowił, oj, dam ci, panie!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "We\'re taking the goods.",
+					Text = "Bierzemy towar.",
 					function getResult( _event )
 					{
 						return "B";
@@ -27,7 +27,7 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 				if (_event.m.HedgeKnight != null)
 				{
 					this.Options.push({
-						Text = "You got something to say, %hedgeknight%?",
+						Text = "Masz coś do powiedzenia, %hedgeknight%?",
 						function getResult( _event )
 						{
 							return "HedgeKnight";
@@ -37,7 +37,7 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Back off, men.",
+					Text = "Wycofać się, ludzie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -49,13 +49,13 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_97.png[/img]Despite the miniature military force arrayed before you, the goods are ordered to be taken. The little tyke in charge of this operation screams a warcry more dying cat than diving hawk.%SPEECH_ON%Take them down! Throw! Throw! Throooowww!%SPEECH_OFF%On his command, the mob of children start hurling stones from the treeline. The sellswords band together, holding shields up in a formation akin to a tortoise, and slowly move forward. It\'s a strange effort, like a shell-game artist sliding his cup over the ball, but the company manages to grab the merchant\'s goods and slide away out of the field, all the while being pelted from every which way. The little leader kid shakes his fist at you. You give him the finger and start back onto the path where you take a good look at the merchant\'s goods. %randombrother% stares at the rewards while rubbing a welt on his forehead.%SPEECH_ON%Goddam, man. I\'ve seen armies not nearly so fierce. I weep for the future men who have to cross swords with those lads and lasses.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_97.png[/img]Mimo miniaturowej armii ustawionej przed tobą, rozkazujesz zabrać dobra. Mały gówniarz dowodzący tą operacją wydziera okrzyk bojowy bardziej jak zdychający kot niż nurkujący jastrząb.%SPEECH_ON%Brać ich! Rzucać! Rzucać! Rzuuuucaaać!%SPEECH_OFF%Na jego komendę dzieciarnia zaczyna ciskać kamieniami z linii drzew. Najemnicy zbierają się razem, trzymając tarcze w formacji podobnej do żółwia, i powoli posuwają się naprzód. To dziwaczny wysiłek, jak kuglarz przesuwający kubek nad kulką, ale kompanii udaje się chwycić kupieckie dobra i zsunąć się z pola, cały czas obrzucani ze wszystkich stron. Mały przywódca dzieciak potrząsa do ciebie pięścią. Pokazujesz mu gest i wracasz na drogę, gdzie przyglądasz się zdobytym rzeczom. %randombrother% gapi się na łupy, pocierając guza na czole.%SPEECH_ON%Cholera, człowieku. Widziałem armie mniej zaciekłe. Płaczę nad przyszłymi ludźmi, którzy będą musieli krzyżować miecze z tymi chłopakami i dziewczętami.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Those little bastards really gave it to us.",
+					Text = "Te małe gnoje naprawdę dały nam popalić.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(-1);
@@ -71,14 +71,14 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.Math.rand(50, 200);
 				this.World.Assets.addMoney(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -92,7 +92,7 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = injury.getIcon(),
-								text = bro.getName() + " suffers " + injury.getNameOnly()
+								text = bro.getName() + " doznaje " + injury.getNameOnly()
 							});
 						}
 						else
@@ -101,7 +101,7 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = "ui/icons/days_wounded.png",
-								text = bro.getName() + " suffers light wounds"
+								text = bro.getName() + " doznaje lekkich ran"
 							});
 						}
 					}
@@ -111,13 +111,13 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "HedgeKnight",
-			Text = "[img]gfx/ui/events/event_35.png[/img]%hedgeknight% steps forward and heaves his weapon to the fore. He waves it at all the kids.%SPEECH_ON%Ah, so you want to be little bandits or heroes or some such shit? Well, that\'s good. That\'s fine. But I\'ll be watching to see who throws the first stone. He, or she, who does so will find out what happens when I get angry. And then after the rest of you have watched, I\'ll kill the lot of you. And I\'ll follow your little footprints all the way home, find your kin, and smash their farkin\' heads in.%SPEECH_OFF%The hedge knight pauses to glare about.%SPEECH_ON%So, which of you shall throw the first stone?%SPEECH_OFF%The tyke in charge of this miniature army raises his hand and speaks.%SPEECH_ON%Let the men go. We\'ve better things to do than quarrel with these travelers.%SPEECH_OFF%Hey, that\'s a wise move. With pride-swallowing smarts like that the red-headed bugger might someday lead a company to great fortunes. But this day is yours. You take the merchant\'s goods and make your leave.",
+			Text = "[img]gfx/ui/events/event_35.png[/img]%hedgeknight% wysuwa się do przodu i wysuwa broń. Macha nią do wszystkich dzieciaków.%SPEECH_ON%Aha, więc chcecie być małymi bandytami albo bohaterami, czy jakimś innym gównem? No dobrze. Niech będzie. Ale będę patrzył, kto rzuci pierwszy kamień. Ten, kto to zrobi, przekona się, co się dzieje, gdy się wściekam. A potem, kiedy reszta to zobaczy, pozabijam was wszystkich. A później pójdę waszymi małymi śladami aż do domu, znajdę waszych bliskich i rozwalę im te cholerne łby.%SPEECH_OFF%Rycerz-zawodowiec przystaje i rozgląda się gniewnie.%SPEECH_ON%No to który z was rzuci pierwszy kamień?%SPEECH_OFF%Mały dowódca tej miniaturowej armii podnosi rękę i mówi.%SPEECH_ON%Puśćcie tych ludzi. Mamy lepsze rzeczy do roboty niż kłócić się z tymi podróżnymi.%SPEECH_OFF%No proszę, mądre posunięcie. Z takimi, przełykającymi dumę rozumem, ten rudy gnojek może kiedyś poprowadzić kompanię do wielkich bogactw. Ale ten dzień jest twój. Zabierasz kupieckie dobra i odchodzisz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Little pricks.",
+					Text = "Małe palanty.",
 					function getResult( _event )
 					{
 						return 0;
@@ -133,14 +133,14 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.Math.rand(50, 200);
 				this.World.Assets.addMoney(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] koron"
 				});
 			}
 

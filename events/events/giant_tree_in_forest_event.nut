@@ -5,17 +5,17 @@ this.giant_tree_in_forest_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.giant_tree_in_forest";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]You pass through a wall of shrubs and find yourself stopped by quite a sight. To call it a tree would seem insulting. The trees about it are so low beneath their neighbor they appear to be bending at midtrunk, swearing fealty to that which is arboreally suzerain, a domain rippled with roots as thick as any man, and enough shade above to lose time between the days and night.\n\n You walk to the base of the enormity and run a hand along its bark, but then you stop, fearing that your flesh may have just trespassed upon holy ground like a child tumbling playfully into a church of one wholly quiet crowd. %monk% the monk comes to your side nodding and with his hands firmly behind his back.%SPEECH_ON%This is a godtree. The roots go through the earth and into the realm of the gods. It is said they once listened, but now... we are not so sure.%SPEECH_OFF%You stare at the man, and his particularly withheld posture, and ask if he fears the tree. He smiles at you and shakes his head.%SPEECH_ON%I respect it like a man would the sea, for the waters of the oceans hold many things to fear and, yet, the sailor sails anyway. Were the ocean a docile beast, would man refer to it so lovingly?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Przechodzisz przez ścianę krzewów i zatrzymujesz się przed niezwykłym widokiem. Nazwanie tego drzewem wydaje się obrazą. Drzewa wokół są tak niskie w porównaniu do sąsiada, że wyglądają, jakby zginały się w połowie pnia, przysięgając wierność temu, co drzewnym suzerenem, a ziemia falująca korzeniami grubymi jak człowiek, z dość gęstym cieniem u góry, by zgubić poczucie czasu między dniem a nocą.\n\n Podchodzisz do podstawy ogromu i przesuwasz dłonią po korze, lecz nagle się zatrzymujesz, boisz się, że twoja skóra naruszyła świętą ziemię, jak dziecko wpadające beztrosko do kościoła pełnego całkiem cichego tłumu. %monk%, mnich, staje obok ciebie, kiwając głową, z rękami mocno splecionymi za plecami.%SPEECH_ON%To drzewo bogów. Korzenie sięgają przez ziemię do krainy bogów. Mówi się, że kiedyś słuchali, ale teraz... nie jesteśmy tego pewni.%SPEECH_OFF%Patrzysz na niego, na jego powściągliwą postawę, i pytasz, czy boi się drzewa. Uśmiecha się i kręci głową.%SPEECH_ON%Szanuję je tak, jak człowiek szanuje morze, bo wody oceanów skrywają wiele rzeczy, których należy się bać, a jednak żeglarz i tak wypływa. Gdyby ocean był potulną bestią, czy człowiek mówiłby o nim z taką czułością?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fascinating.",
+					Text = "Fascynujące.",
 					function getResult( _event )
 					{
 						return 0;

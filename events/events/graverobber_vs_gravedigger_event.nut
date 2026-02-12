@@ -6,17 +6,17 @@ this.graverobber_vs_gravedigger_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.graverobber_vs_gravedigger";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_28.png[/img]After burying a dead comrade, %gravedigger% pitches his shovel into the earth and grabs %graverobber% by his tunic, driving him backward as he lifts him into the air. Before even a word or threat can be exchanged, the dangling man throws a kick into his attacker\'s groin. They both fall to the ground and immediately start tumbling about in the mud. The muck makes them indistinguishable, but their fit of anger is well heard.\n\nThe gravedigger climbs on top of the graverobber and starts piling mud into his opponent\'s face.%SPEECH_ON%What\'d I tell ya, huh? What\'d I say about thievin\' from those who can\'t see your grimy little hands comin\', huh?%SPEECH_OFF%With a nice little reversal that suggests this isn\'t his first time wrestling in the mud, the graverobber throws his assailant off and clambers atop him. He grabs great big piles of grass and grime and shoves it into the gravedigger\'s face. Bizarrely, the graverobber thinks it\'s time to make his case.%SPEECH_ON%It only be his shoes! It only be his gloves! Dead needn\'t be walkin\' or pickin\' things up, let \'em be mine I say!%SPEECH_OFF% Ah, it appears that the gravedigger and graverobber have come across a mild difference on what goes into the ground and what shant come back out. You let them work through their troubles - there is little harm to be done between the two of them and it is making good entertainment for the rest of the company, anyway.",
+			Text = "[img]gfx/ui/events/event_28.png[/img]Po pochowaniu zmarłego towarzysza %gravedigger% wbija łopatę w ziemię i chwyta %graverobber% za tunikę, odpychając go do tyłu i unosząc w powietrze. Zanim padnie choćby jedno słowo czy groźba, zwisający mężczyzna kopie napastnika w krocze. Obaj padają na ziemię i natychmiast zaczynają turlać się w błocie. W brei są nie do odróżnienia, ale ich napad wściekłości słychać wyraźnie.\n\nGrabarz wspina się na rabusia grobów i zaczyna wciskać błoto w jego twarz.%SPEECH_ON%Co ci mówiłem, co? Co mówiłem o kradzieży od tych, którzy nie widzą twoich brudnych łap, co?%SPEECH_OFF%Z ładnym zwrotem, sugerującym, że to nie jego pierwszy raz w błotnym zapasach, grabarz zrzuca napastnika i wspina się na niego. Chwyta wielkie kępy trawy i brudu i wciska je w twarz grabarza. Dziwnie, rabusiów grobów uznaje, że to dobry moment na obronę swojej sprawy.%SPEECH_ON%To tylko jego buty! To tylko jego rękawice! Umarli nie muszą chodzić ani nic podnosić, niech będą moje, mówię!%SPEECH_OFF% Wygląda na to, że grabarz i rabusiów grobów różnią się w kwestii tego, co idzie do ziemi i co z niej nie powinno wrócić. Pozwalasz im przepracować swoje spory - niewielka z tego szkoda, a poza tym to niezła rozrywka dla reszty kompanii.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Just don\'t fall into the grave.",
+					Text = "Tylko nie wpadnijcie do grobu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,7 +38,7 @@ this.graverobber_vs_gravedigger_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Graverobber.getName() + " suffers light wounds"
+						text = _event.m.Graverobber.getName() + " doznaje lekkich ran"
 					});
 				}
 
@@ -58,7 +58,7 @@ this.graverobber_vs_gravedigger_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Gravedigger.getName() + " suffers light wounds"
+						text = _event.m.Gravedigger.getName() + " doznaje lekkich ran"
 					});
 				}
 

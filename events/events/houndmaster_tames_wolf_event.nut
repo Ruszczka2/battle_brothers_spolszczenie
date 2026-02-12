@@ -5,17 +5,17 @@ this.houndmaster_tames_wolf_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.houndmaster_tames_wolf";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_143.png[/img]While traversing the snowy wastelands of the realm\'s north, %houndmaster% the houndmaster has come to befriend a creature that\'s been trailing beside the company\'s march: a wolf. The houndmaster frequently remained in the rearguard, crouched low, hands at his side, locking eyes with the lone wolf for minutes on end. But today, using a bit of leftover meat, he plied the beast right into the middle of the camp. Now he squats at its side, dwarfed by its prominent, muscled withers, its pointed and attentive ears, and a lapping maw lined with mankilling canines.\n\n The rest of the men stand behind their weapons. One yells at the houndmaster to stop what he is doing. Another says the wolf can smell fear. Yet another throws a rock at it. The wolf winces, but doesn\'t react. Laughing, the houndmaster makes a \'tssst!\' noise and points. The wolf launches forward, picking up the stone and bringing it back to the man. He rubs the beast\'s mane.%SPEECH_ON%See, easily trained, just any dog. Only bigger, faster, and stronger. Smarter, too.%SPEECH_OFF%Its eyes meet yours. The wolf lays low, almost like a man bowing. %houndmaster% laughs again.%SPEECH_ON%See? It already knows who is alpha of this pack.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_143.png[/img]Podczas wędrówki przez śnieżne pustkowia północy królestwa %houndmaster%, psiarz, zaprzyjaźnił się ze stworzeniem, które podążało za marszem kompanii: wilkiem. Psiarz często pozostawał na ariergardzie, przykucnięty nisko, z rękami przy bokach, wpatrzony w samotnego wilka przez długie minuty. Ale dziś, używając resztek mięsa, zwabił bestię prosto do środka obozu. Teraz przykuca obok niej, przytłoczony jej wyraźnym, umięśnionym kłębem, spiczastymi i czujnymi uszami oraz dyszącą paszczą pełną morderczych kłów.\n\n Reszta ludzi stoi za bronią. Jeden krzyczy na psiarza, by przestał. Drugi mówi, że wilk wyczuwa strach. Jeszcze inny rzuca w niego kamieniem. Wilk wzdryga się, ale nie reaguje. Śmiejąc się, psiarz syczy \'tssst!\' i wskazuje. Wilk rusza do przodu, podnosi kamień i przynosi go mężczyźnie. Pieszczy grzywę bestii.%SPEECH_ON%Widzicie? Łatwo się go szkoli, jak każdego psa. Tylko większy, szybszy i silniejszy. I mądrzejszy.%SPEECH_OFF%Jego oczy spotykają się z twoimi. Wilk kładzie się nisko, niemal jak człowiek składający pokłon. %houndmaster% znów się śmieje.%SPEECH_ON%Widzicie? Już wie, kto jest alfą tej watahy.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A noble beast.",
+					Text = "Szlachetne zwierzę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.houndmaster_tames_wolf_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				_event.m.Houndmaster.improveMood(2.0, "Managed to tame a wolf");
 				this.List.push({

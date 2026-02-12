@@ -6,16 +6,16 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.raid_farmstead";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_72.png[/img]%randombrother% comes to you with a report of your food stocks. He explains that there\'s not much to go around and what bread is on hand could be better used to build a house or slay a man. Most of the fruit is soft to the touch, covered in what appears to be grey fur. All that\'s left otherwise has been thrown into a great stew which the men have aptly named \'crotch broth\'. To be frank, it isn\'t looking good.\n\nHowever, by some fortuitous coincidence, a small farm stands in the distance. The brother doesn\'t come right out and say it, but it is gently suggested that maybe the company could go raid it.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]%randombrother% przychodzi z raportem o zapasach żywności. Wyjaśnia, że niewiele zostało i że chleb, który macie, lepiej nadawałby się do budowy domu lub zabicia człowieka. Większość owoców jest miękka w dotyku i pokryta czymś, co wygląda na szare futro. Resztę wrzucono do wielkiego gulaszu, który ludzie trafnie nazwali \"rosołem z krocza\". Szczerze mówiąc, nie wygląda to dobrze.\n\nJednak, przez fortunny zbieg okoliczności, w oddali stoi mała farma. Brat nie mówi tego wprost, ale delikatnie sugeruje, że kompania mogłaby ją splądrować.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "We raid it.",
+					Text = "Plądrujemy ją.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We move on.",
+					Text = "Idziemy dalej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,12 +38,12 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_72.png[/img]You head off toward the farm. A few farmhands straighten up in the fields, staring at you as you approach and exchanging glances with one another. A worker baling hay plants his pitchfork in the ground and tents his hands over it. They all watch you with nervous curiosity as you cross the plains, your men not at all trying to hide their want of the passing crops.\n\nWhen you near the homestead, a woman comes out to meet you. She wipes her brow and asks what it is that you want. A few children come out of a nearby home and stand on the porch. They eye you tentatively behind the legs of an older man, possibly the woman\'s father.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Ruszacie w stronę farmy. Kilku parobków prostuje się na polach, patrząc na was, gdy się zbliżacie, i wymieniają między sobą spojrzenia. Pracownik zwijający siano wbija widły w ziemię i opiera na nich dłonie. Wszyscy obserwują was z nerwową ciekawością, gdy przecinacie równiny, a twoi ludzie wcale nie ukrywają pożądliwych spojrzeń na mijane plony.\n\nGdy zbliżacie się do gospodarstwa, wychodzi do was kobieta. Ociera czoło i pyta, czego chcecie. Z pobliskiego domu wychodzi kilkoro dzieci i staje na ganku. Spoglądają na was niepewnie zza nóg starszego mężczyzny, być może ojca kobiety.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Take only what is needed.",
+					Text = "Weź tylko to, co potrzebne.",
 					function getResult( _event )
 					{
 						return "C";
@@ -51,7 +51,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Take everything.",
+					Text = "Weź wszystko.",
 					function getResult( _event )
 					{
 						return "D";
@@ -59,7 +59,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Take everything. Kill everyone.",
+					Text = "Weź wszystko. Zabij wszystkich.",
 					function getResult( _event )
 					{
 						return "E";
@@ -74,12 +74,12 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_72.png[/img]You explain to the woman that your men need food. She gasps, but you hold a hand up.%SPEECH_ON%We\'ll only be taking what we need, no more, no less. We don\'t want any trouble, and I know you for sure don\'t want any. Right?%SPEECH_OFF%The woman quickly nods. You turn \'round and order your men to take a few crops, while at the same time the woman raises her voice and tells the farmhands to not try anything stupid. The whole affair lasts about ten minutes before your group is back on the road.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Wyjaśniasz kobiecie, że twoi ludzie potrzebują jedzenia. Wzdryga się, ale unosisz dłoń.%SPEECH_ON%Weźmiemy tylko to, czego potrzebujemy - ani więcej, ani mniej. Nie chcemy kłopotów i wiem, że ty też ich nie chcesz. Jasne?%SPEECH_OFF%Kobieta szybko kiwa głową. Odwracasz się i każesz ludziom zebrać trochę plonów, a jednocześnie kobieta podnosi głos i mówi parobkom, by nie próbowali żadnych głupstw. Cała sprawa trwa jakieś dziesięć minut, po czym wracacie na drogę.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "It had to be done.",
+					Text = "To musiało się stać.",
 					function getResult( _event )
 					{
 						return 0;
@@ -96,14 +96,14 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/bread_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				this.World.Assets.updateFood();
 			}
@@ -111,12 +111,12 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_72.png[/img]The food here is plentiful. You turn around to your men and tell them to take everything they can. Gasping, the woman steps back and looks about ready to scream. You grab her, bringing a string of cries from the children. A few farmhands grab sickles and pitchforks in turn. You tell her to order the rest of the farmhands to put their weapons on the ground. She obeys, and the farmhands do as told, albeit somewhat reluctantly.\n\nYou hold the woman while your men take what they can. When they\'ve pillaged as much as they can carry, you let her go and order your men to move out.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Jedzenia jest tu pod dostatkiem. Odwracasz się do ludzi i każesz im wziąć wszystko, co mogą. Kobieta wzdycha, cofa się i wygląda, jakby miała krzyknąć. Chwytasz ją, wywołując serię krzyków dzieci. Kilku parobków chwyta sierpy i widły. Mówisz jej, by kazała reszcie parobków położyć broń na ziemi. Jest posłuszna, a parobkowie robią, co każe, choć dość niechętnie.\n\nTrzymasz kobietę, podczas gdy twoi ludzie zabierają, co mogą. Gdy zrabowali tyle, ile uniosą, puszczasz ją i każesz ludziom ruszać.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "We deserve as much.",
+					Text = "Na to zasługujemy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -133,28 +133,28 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/smoked_ham_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/goat_cheese_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/bread_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				this.World.Assets.updateFood();
 			}
@@ -162,12 +162,12 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_30.png[/img]There\'s plenty of food here. And too many witnesses.\n\nYou turn around and give a knowing glance at %someguy1%. He nods back and nocks an arrow. Before the woman can scream, the brother releases the shot and the old man on the porch stumbles backward into the house, followed by a retinue of screaming children. The rest of your company fans out, unsheathing their swords as they run into the fields. A few farmhands try to fight back, but your well-armed band makes short work of them. %someguy2% sprints into the homestead and inside you hear a number of cries that, one by one, disappear until there is silence. You hand the woman off to a few brothers, telling them to just make sure she is dead before you leave. A few other sellswords immediately begin cutting down crops and stealing away items from the home. Before long, you\'re back out on the roads, your stocks now almost full. A few brothers are taking red rags to their wet blades.",
+			Text = "[img]gfx/ui/events/event_30.png[/img]Jest tu mnóstwo jedzenia. I zbyt wielu świadków.\n\nOdwracasz się i rzucasz znaczące spojrzenie na %someguy1%. Kiwają głową i nakłada strzałę. Zanim kobieta zdąży krzyknąć, brat wypuszcza strzałę, a starzec na ganku cofa się do domu, za nim biegnie grupa krzyczących dzieci. Reszta kompanii rozchodzi się, dobywając mieczy i biegnąc na pola. Kilku parobków próbuje się bronić, ale twoja dobrze uzbrojona banda szybko ich eliminuje. %someguy2% wpada do gospodarstwa i wewnątrz słyszysz serię krzyków, które jeden po drugim cichną, aż zapada cisza. Oddajesz kobietę kilku braciom, mówiąc im, by upewnili się, że nie żyje, zanim odejdziecie. Kilku innych najemników od razu zaczyna ścinać plony i wynosić przedmioty z domu. Niedługo potem wracacie na drogi, a wasze zapasy są niemal pełne. Kilku braci wyciera mokre ostrza w czerwone szmaty.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "No one left to tell what happened here.",
+					Text = "Nie ma nikogo, kto opowie, co tu się stało.",
 					function getResult( _event )
 					{
 						return 0;
@@ -184,28 +184,28 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/smoked_ham_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/goat_cheese_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				food = this.new("scripts/items/supplies/bread_item");
 				this.World.Assets.getStash().add(food);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				this.World.Assets.updateFood();
 
@@ -216,17 +216,24 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + pitchfork.getIcon(),
-						text = "You gain a " + pitchfork.getName()
+						text = "Zyskujesz " + pitchfork.getName()
 					});
 				}
 
+				local item = this.Math.rand(100, 300);
+				this.World.Assets.addMoney(item);
+				this.List.push({
+					id = 10,
+					icon = "ui/icons/asset_money.png",
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + item + "[/color] koron"
+				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
 					if (bro.getSkills().hasSkill("trait.bloodthirsty"))
 					{
-						bro.improveMood(1.0, "Enjoyed raiding and pillaging");
+						bro.improveMood(1.0, "Cieszył się z napadu i grabieży");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -239,7 +246,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(1.0, "Was appalled by the company\'s conduct");
+						bro.worsenMood(1.0, "Był oburzony postępowaniem kompanii");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

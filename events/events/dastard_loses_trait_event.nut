@@ -7,17 +7,17 @@ this.dastard_loses_trait_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dastard_loses_trait";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_58.png[/img]You come across %braveman1% and %braveman2% sitting with %dastard%. The two men are pepping up the rather skittish brother, letting him know that there is nothing to fear in battle. %dastard% explains that he is fearful of a painful death. %braveman1% says he has seen many men die and by the sword, truly, is one of the fastest. %braveman2% raises his hand.%SPEECH_ON%Unless it gets you in the stomach.%SPEECH_OFF%%braveman1% nods.%SPEECH_ON%Right. But other than that, you have nothing to fear!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_58.png[/img]Zastajesz %braveman1% i %braveman2% siedzących z %dastard%. Dwaj mężczyźni podnoszą na duchu dość płochliwego brata, dając mu do zrozumienia, że w bitwie nie ma się czego bać. %dastard% wyjaśnia, że boi się bolesnej śmierci. %braveman1% mówi, że widział wielu ludzi umierających i że od miecza, naprawdę, jest jednym z najszybszych. %braveman2% unosi dłoń.%SPEECH_ON%Chyba że dostaniesz w brzuch.%SPEECH_OFF%%braveman1% kiwa głową.%SPEECH_ON%Racja. Ale poza tym nie masz się czego bać!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Growing up to become a real sellsword after all, are we?",
+					Text = "Dorośniemy jednak do prawdziwego najemnika, co?",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,7 +34,7 @@ this.dastard_loses_trait_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/traits/trait_icon_38.png",
-						text = _event.m.Dastard.getName() + " is no longer a dastard"
+						text = _event.m.Dastard.getName() + " nie jest już tchórzem"
 					}
 				];
 			}

@@ -6,17 +6,17 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.farmer_vs_butcher";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_06.png[/img]You find %farmhand% and %butcher% arguing with one another over a piece of meat. The farmhand raises his voice.%SPEECH_ON%The best meat is from the shoulder. That\'s why you cut it off first! And you cut it like this, NOT like this you idiot.%SPEECH_OFF%Also raising his voice, and clenching a fist at his side, the butcher shakes his head.%SPEECH_ON%Why do you even question me? I\'m a farkin\' butcher, yer a pithy peasant! I did this for a living, you did it because you killed a cow grabbing its udder a little too hard, no doubt mistaking it for yer father\'s cock!%SPEECH_OFF%The fighting words kick off a scuffle. Someone gets slashed, someone else\'s nose cratered. The men are separated, but not before the damage is done.",
+			Text = "[img]gfx/ui/events/event_06.png[/img]Zastajesz %farmhand% i %butcher% kłócących się o kawał mięsa. Parobek podnosi głos.%SPEECH_ON%Najlepsze mięso jest z łopatki. Dlatego odcinasz ją jako pierwszą! I kroisz tak, NIE tak, ty idioto.%SPEECH_OFF%Również podnosząc głos i zaciskając pięść przy boku, rzeźnik kręci głową.%SPEECH_ON%Czemu w ogóle mnie kwestionujesz? Jestem pieprzonym rzeźnikiem, a ty marnym chłopem! Ja robiłem to zawodowo, a ty dlatego, że zabiłeś krowę, ściskając jej wymię za mocno, pewnie myląc je z kutasem swojego ojca!%SPEECH_OFF%Słowa zapalają bójkę. Ktoś zostaje skaleczony, komuś innemu rozbija się nos. Mężczyźni zostają rozdzieleni, ale nie zanim szkody zostaną wyrządzone.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'re both mercenaries now!",
+					Text = "Obaj jesteście teraz najemnikami!",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,7 +35,7 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury1.getIcon(),
-						text = _event.m.Butcher.getName() + " suffers " + injury1.getNameOnly()
+						text = _event.m.Butcher.getName() + " doznaje " + injury1.getNameOnly()
 					});
 				}
 				else
@@ -44,7 +44,7 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Butcher.getName() + " suffers light wounds"
+						text = _event.m.Butcher.getName() + " doznaje lekkich ran"
 					});
 				}
 
@@ -61,7 +61,7 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury2.getIcon(),
-						text = _event.m.Farmer.getName() + " suffers " + injury2.getNameOnly()
+						text = _event.m.Farmer.getName() + " doznaje " + injury2.getNameOnly()
 					});
 				}
 				else
@@ -70,7 +70,7 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Farmer.getName() + " suffers light wounds"
+						text = _event.m.Farmer.getName() + " doznaje lekkich ran"
 					});
 				}
 

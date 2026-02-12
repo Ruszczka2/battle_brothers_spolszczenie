@@ -5,17 +5,17 @@ this.miasma_flail_spooks_bro_3_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.miasma_flail_spooks_bro_3";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{A voice seeps into the darkness: wherever she is... your mother knows she abandoned you... wherever I am... you know I would love you as greatly as her absence has harmed you. I will mother you to power, sellsword, I will feed you the milk of life from...\n\n You snap awake to a bright green hue and slap it out of your face. %hauntedbrother% falls to the ground and beside him the Grand Diviner\'s flail clangs. The sellsword shakes his head and his eyes widen as he looks around, confused.%SPEECH_ON%Wh-what? How did I get here?%SPEECH_OFF%You stare at the flail, watching as the viridian glow shimmers and then dims, a grotesque chuckling echoing as it fades.}",
+			Text = "%terrainImage%{Głos wsiąka w ciemność: gdziekolwiek jest... twoja matka wie, że cię porzuciła... gdziekolwiek ja jestem... wiesz, że kochałbym cię tak mocno, jak jej nieobecność cię zraniła. Umatkuję cię do potęgi, najemniku, nakarmię cię mlekiem życia z...\n\n Budzisz się przy jasnej zieleni i strzepujesz ją z twarzy. %hauntedbrother% pada na ziemię, a obok niego dźwięczy cep Wielkiego Wróżbity. Najemnik potrząsa głową i szeroko otwiera oczy, rozglądając się w osłupieniu.%SPEECH_ON%Co-co? Jak tu trafiłem?%SPEECH_OFF%Patrzysz na cep, obserwując, jak zieleń migocze, a potem przygasa, a wraz z nią niesie się groteskowy chichot.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Godsdamn nightmares.",
+					Text = "Cholerne koszmary.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.miasma_flail_spooks_bro_3_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Dude.worsenMood(1.0, "Was ensorcelled by the Grand Diviner\'s Flail");
+				_event.m.Dude.worsenMood(1.0, "Został oczarowany cepem Wielkiego Wróżbity");
 
 				if (_event.m.Dude.getMoodState() < this.Const.MoodState.Neutral)
 				{

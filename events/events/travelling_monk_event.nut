@@ -3,16 +3,16 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.travelling_monk";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Przy drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A1",
-			Text = "[img]gfx/ui/events/event_40.png[/img]You meet a monk on the roads and with him is a donkey-pulled cart, the poor draught animal carrying its head low in mute exhaustion. Broomstraw and virid moss are strung up to one side of the cart, both twisting eagerly in the very winds that dried them, and some pots and pans clatter like rustic windchimes as the modest wares come to a bumbling stop. A barrel totters on the edge of the cart\'s bed and a couple of bees sway to keep up, poking and prodding at its cracks with thirsty curiosity.\n\nThe monk lifts a wool hat up out of his face but the lip of it folds back down over his eyes. He takes it off altogether and passes a sleeve across his brow. Carrying a jolly smile, he seems not at all disturbed by the veritable living armory standing before him.%SPEECH_ON%Evening gents. Don\'t s\'pose yer the kind to march b\'neath a lord\'s banner. Y\'look like sellswords t\'me.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_40.png[/img]Spotykasz na drodze mnicha, a z nim wóz ciągnięty przez osła, biedne zwierzę pociągowe niesie głowę nisko w niemej wyczerpaniu. Z jednej strony wozu zwisa słoma i zielony mech, oba skręcają się ochoczo na wietrze, który je wysuszył, a garnki i patelnie pobrzękują niczym rustykalne dzwonki, gdy skromne towary z łoskotem stają. Na krawędzi wozu chwieje się beczka, a kilka pszczół kołysze się, by nadążyć, szturchając i zaglądając w jej szczeliny z pragnącą ciekawością.\n\nMnich unosi wełniany kapelusz z twarzy, ale jego brzeg znowu opada mu na oczy. Zdejmuje go całkiem i przeciera czoło rękawem. Z wesołym uśmiechem zdaje się zupełnie nie przejmować żywą zbrojownią stojącą przed nim.%SPEECH_ON%Dobry wieczór, panowie. Nie sądzę, byście maszerowali pod chorągwią pana. Wyglądacie mi na najemników.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "What is it you carry?",
+					Text = "Co wozisz?",
 					function getResult( _event )
 					{
 						return "A2";
@@ -27,12 +27,12 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "A2",
-			Text = "[img]gfx/ui/events/event_40.png[/img]%SPEECH_ON%Aye, I was thinkin\' you\'d ask. This here is Bessie, a cow\'s name for a donkey\'s arse. Don\'t worry, she won\'t kick ye. She\'s all hawed-out, see? What she carry, well, that\'s beer. For men yonder, so that they may drink to men above. If ye don\'t mind, or if ye don\'t mind m\'business, I\'d like to get on where I be going.%SPEECH_OFF%The monk picks up the reins of his jenny as he readies to start moving.",
+			Text = "[img]gfx/ui/events/event_40.png[/img]%SPEECH_ON%Ano, wiedziałem, że zapytasz. To Bessie, krowie imię dla oślego tyłka. Nie martw się, nie kopnie. Jest już wyjeżdżona, widzisz? A co niesie, no, to piwo. Dla ludzi stamtąd, żeby mogli pić za tych w górze. Jeśli nie masz nic przeciw, albo jeśli nie masz nic przeciw moim sprawom, chciałbym ruszyć dalej tam, dokąd idę.%SPEECH_OFF%Mnich chwyta lejce swojej oślicy, szykując się do drogi.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "How many crowns for a round of beer?",
+					Text = "Ile koron za rundę piwa?",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 70 ? "B" : "D";
@@ -40,7 +40,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We earned this by keeping the roads safe - take the beer, men!",
+					Text = "Zasłużyliśmy, pilnując dróg - bierzcie piwo, chłopcy!",
 					function getResult( _event )
 					{
 						return "E";
@@ -55,12 +55,12 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_40.png[/img]You hold your hand up, stopping the monk before he can get going again. He sighs, slowly lowering the reins out of his hand. Feeling as though he may be getting the wrong impression, you quickly ask if maybe he has beer to spare for your men. You are more than willing to pay. The monk looks back at his stock for a moment, then turns around.%SPEECH_ON%Aye. I give yer men a sip for a crown or two. Don\'t mind the bees \'round the top, they\'ll scurry when you come, but if you scurry when they scurry, they\'ll scurry after ya. Strange little gits.%SPEECH_OFF%You ask the man how much he wants.%SPEECH_ON%I\'d wager ten crowns a head will do. I\'m no business man, though, I might be takin\' advantage of m\'self here.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_40.png[/img]Podnosisz dłoń, zatrzymując mnicha, nim ruszy dalej. Wzdycha, powoli opuszczając lejce. Czując, że mógł źle zrozumieć, szybko pytasz, czy ma piwo na sprzedaż dla twoich ludzi. Chętnie zapłacisz. Mnich zerka na zapasy, po czym się odwraca.%SPEECH_ON%Ano. Dam waszym ludziom łyka za koronę lub dwie. Nie przejmuj się pszczołami na górze, rozlecą się, gdy podejdziesz, ale jeśli ty się rozbiegniesz, gdy one się rozbiegną, to one rozbiegną się za tobą. Dziwne małe gnojki.%SPEECH_OFF%Pytasz, ile chce.%SPEECH_ON%Stawiam, że dziesięć koron od głowy wystarczy. Nie jestem kupcem, więc pewnie sam siebie oskubuję.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "A round for the whole company!",
+					Text = "Runda dla całej kompanii!",
 					function getResult( _event )
 					{
 						return "C";
@@ -68,7 +68,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You ask too much.",
+					Text = "Za dużo żądasz.",
 					function getResult( _event )
 					{
 						return 0;
@@ -83,12 +83,12 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_40.png[/img]You agree to pay the man what he\'s asked for and he opens his arm in invitation. Your men pop the lid off the cask and dip their cups in. They come to sit in the shade, sipping tankards and exchanging beers. The monk bids you a good farewell and the men all lift their cups to him in a loud, increasingly slurred cheer.",
+			Text = "[img]gfx/ui/events/event_40.png[/img]Zgadzasz się zapłacić, ile zażądał, a on zaprasza gestem. Twoi ludzie zdejmują wieko z beczki i zanurzają kubki. Siadają w cieniu, sącząc kufle i podając piwo z rąk do rąk. Mnich żegna was serdecznie, a wszyscy mężczyźni wznoszą do niego kubki w głośnym, coraz bardziej bełkotliwym okrzyku.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Prost!",
+					Text = "Na zdrowie!",
 					function getResult( _event )
 					{
 						return 0;
@@ -103,7 +103,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]" + 10 * this.World.getPlayerRoster().getSize() + "[/color] Crowns"
+						text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + 10 * this.World.getPlayerRoster().getSize() + "[/color] koron"
 					}
 				];
 				this.List.extend(_event.giveTraits(90));
@@ -112,12 +112,12 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_40.png[/img]You hold your hand up, stopping the monk before he can get going again. He sighs, slowly lowering the reins out of his hand. Feeling as though he may be getting the wrong impression, you quickly ask if maybe he has beer to spare for your men. You are more than willing to pay. The monk looks back at his stock for a moment, then turns around.%SPEECH_ON%Aye. Damn it to hells if the gods wouldn\'t be happy with yer money crossin\' m\'palms. If ye fight the good fight, then I bid you to take some for free, but not all of it of course.%SPEECH_OFF%You thank the monk for his generosity and order you men to be modest with their drinking. As a few brothers circle around to the cask, the monk throws his hands up.%SPEECH_ON%Don\'t mind the bees \'round the top, they\'ll scurry when you come, but if you scurry when they scurry, they\'ll scurry after ya. Strange little gits.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_40.png[/img]Podnosisz dłoń, zatrzymując mnicha, nim ruszy dalej. Wzdycha, powoli opuszczając lejce. Czując, że mógł źle zrozumieć, szybko pytasz, czy ma piwo na sprzedaż dla twoich ludzi. Chętnie zapłacisz. Mnich zerka na zapasy, po czym się odwraca.%SPEECH_ON%Ano. Niech mnie diabli, jeśli bogowie nie ucieszą się, że twoje pieniądze przejdą przez moje dłonie. Jeśli walczycie w słusznej sprawie, pozwalam wam wziąć trochę za darmo, ale nie wszystko, rzecz jasna.%SPEECH_OFF%Dziękujesz mnichowi za hojność i każesz ludziom pić z umiarem. Gdy kilku braci krąży wokół beczki, mnich podnosi ręce.%SPEECH_ON%Nie przejmujcie się pszczołami na górze, rozlecą się, gdy podejdziecie, ale jeśli wy się rozbiegniecie, gdy one się rozbiegną, to one rozbiegną się za wami. Dziwne małe gnojki.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Prost!",
+					Text = "Na zdrowie!",
 					function getResult( _event )
 					{
 						return 0;
@@ -133,12 +133,12 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_40.png[/img]As the cart waddles by, you take the pommel of your sword and bash it against the cask of beer, popping the lid off the top and sending a number of bees into a frenzy. The monk lets go of the reins as he looks back at you.%SPEECH_ON%T\'was afraid you\'d do that.%SPEECH_OFF%The man disappears beneath a punch, his body twisting as he falls to the ground. A few brothers converge on him for some good kicks while others lift the beer and take it to some shade. You dip a mug into the cask for a drink then lift it to the monk writhing on the ground.%SPEECH_ON%Bottom\'s up lads, and let us not forget to thank our generous friend over there!%SPEECH_OFF%The monk turns over, eyes wincing as they rapidly blink. He\'s clutching his back with one hand while using the other to slowly get up. With a bent posture, he takes the reins of the donkey and starts forward. He tries to slip his hat back on but it falls away and he doesn\'t bother to go after it. The man grows small in the distance, blurred by horizon and alcohol alike, and then he is gone.\n\nThe men all lift their cups to you in a loud, increasingly slurred cheer.",
+			Text = "[img]gfx/ui/events/event_40.png[/img]Gdy wóz się toczy, chwytasz głowicę miecza i uderzasz nią w beczkę piwa, wybijając wieko i wprawiając kilka pszczół w szał. Mnich puszcza lejce, gdy na ciebie spogląda.%SPEECH_ON%Bałem się, że to zrobisz.%SPEECH_OFF%Mężczyzna znika pod ciosami, a jego ciało skręca się, gdy pada na ziemię. Kilku braci dopada go dla paru solidnych kopniaków, podczas gdy inni podnoszą piwo i niosą je w cień. Zanurzasz kufel w beczce, by się napić, po czym unosisz go w stronę wijącego się na ziemi mnicha.%SPEECH_ON%Do dna, chłopcy, i nie zapomnijmy podziękować naszemu hojnego przyjacielowi tam!%SPEECH_OFF%Mnich przewraca się, oczy mrużą się i szybko mrugają. Jedną ręką trzyma się za plecy, drugą powoli się podnosi. Zgarbiony, chwyta lejce osła i rusza naprzód. Próbuje naciągnąć kapelusz, ale ten spada i mężczyzna nawet po niego nie sięga. Postać maleje w oddali, rozmyta przez horyzont i alkohol, aż znika.\n\nWszyscy mężczyźni wznoszą do ciebie kubki w głośnym, coraz bardziej bełkotliwym okrzyku.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Prost!",
+					Text = "Na zdrowie!",
 					function getResult( _event )
 					{
 						return 0;
@@ -164,7 +164,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		{
 			if (this.Math.rand(1, 100) <= _chance)
 			{
-				bro.improveMood(1.0, "Celebrated with the company");
+					bro.improveMood(1.0, "Świętował z kompanią");
 
 				if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 				{

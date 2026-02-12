@@ -5,17 +5,17 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.lend_men_to_build";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_79.png[/img]While approaching %townname%, a local man waves you down. He\'s standing beside the skeleton of what appears to be a mill. Exasperated, he explains that his laborers didn\'t show up today and he needs to finish the mill before a local baron arrives. If he doesn\'t finish it, the baron might not ever give him another contract. You do have a few former laborers in the company. Perhaps they can be used to help the man?",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Gdy zbliżasz się do %townname%, miejscowy mężczyzna macha do ciebie. Stoi obok szkieletu czegoś, co wygląda na młyn. Rozdrażniony wyjaśnia, że jego robotnicy dziś nie przyszli, a on musi dokończyć młyn, zanim przybędzie miejscowy baron. Jeśli go nie skończy, baron może nigdy nie dać mu kolejnego zlecenia. W kompanii masz kilku byłych robotników. Może mogą mu pomóc?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You build, we kill. Find someone else.",
+					Text = "Wy budujecie, my zabijamy. Szukaj kogoś innego.",
 					function getResult( _event )
 					{
 						return 0;
@@ -23,7 +23,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Alright, I can spare a man or few.",
+					Text = "Dobrze, mogę oddelegować jednego czy dwóch.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -38,13 +38,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_79.png[/img]You agree to lend a few of the %companyname%\'s finest to the project. They fall back into their old roles like a glove, quickly bandying about to collect resources, hammering, bricking, dooring? Whatever it is to put a door in, they do it and quickly. When it\'s all said and done, the local man comes to you grinning ear-to-ear. He hands a satchel over.%SPEECH_ON%You\'ve earned this, good sir! And more, you\'ve earned my word - I shall spread your benevolence whenever I can!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Zgadzasz się oddelegować kilku najlepszych z %companyname% do pracy. Wracają do dawnych ról jak w rękawiczce, szybko krzątają się po materiały, stukają młotkami, murowaniem, montażem drzwi? Cokolwiek trzeba, by wstawić drzwi, robią to sprawnie. Gdy wszystko jest gotowe, miejscowy mężczyzna podchodzi do ciebie z uśmiechem od ucha do ucha. Podaje sakiewkę.%SPEECH_ON%Zasłużyłeś na to, dobry panie! A co więcej, zyskałeś moje słowo - będę szerzył twoją hojność, kiedy tylko będę mógł!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Don\'t get too used to this kind of work, men.",
+					Text = "Nie przyzwyczajajcie się do takiej roboty, ludzie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -54,13 +54,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "You lend some men to help build a mill");
+				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "Oddelegowałeś ludzi do budowy młyna");
 				this.World.Assets.addMoney(150);
 				this.List = [
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] koron"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -78,13 +78,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = effect.getIcon(),
-								text = bro.getName() + " is exhausted"
+								text = bro.getName() + " jest wyczerpany"
 							});
 						}
 
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.5, "Helped build a mill");
+							bro.improveMood(0.5, "Pomógł w budowie młyna");
 
 							if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 							{
@@ -102,13 +102,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_79.png[/img]You agree to help the man. Unfortunately, it appears as though he didn\'t plan things out too well. The rooftop collapses the second one of your \'laborers\' steps foot on it, sending the man through a sinkhole of shingles. Another man hammers a nail into place only for the wooden support to splinter right in two, catching him in the face with shards of wood. Loose bricks find freedom, wet mud has men slipping, and all manner of workplace hazards ends the whole project in disaster.\n\n The local man apologizes profusely in between biting his nails and wondering how he\'s going to deal with the baron. Snapping his fingers, he exclaims that he\'ll just pay him the crowns.",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Zgadzasz się pomóc mężczyźnie. Niestety wygląda na to, że nie zaplanował tego zbyt dobrze. Dach zawala się w chwili, gdy jeden z twoich \"robotników\" stawia na nim stopę, posyłając go przez zapadlisko gontów. Inny mężczyzna wbija gwóźdź, a drewniana belka pęka na pół, uderzając go w twarz drzazgami. Luźne cegły spadają, mokre błoto sprawia, że ludzie się ślizgają, a wszelkie możliwe zagrożenia kończą cały projekt katastrofą.\n\n Miejscowy człowiek przeprasza bez końca, gryząc paznokcie i zastanawiając się, jak poradzi sobie z baronem. Pstryka palcami i stwierdza, że po prostu zapłaci baronowi koronami.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Those crowns belong to us!",
+					Text = "Te korony należą do nas!",
 					function getResult( _event )
 					{
 						return "D";
@@ -116,7 +116,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Good luck with the baron, then.",
+					Text = "W takim razie powodzenia z baronem.",
 					function getResult( _event )
 					{
 						return "E";
@@ -131,13 +131,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_79.png[/img]As the man\'s mind drifts off into a satisfactory conclusion of his problem, you snap your fingers to bring him back down to cruel reality.%SPEECH_ON%Those crowns belong to us, peasant. That was the deal.%SPEECH_OFF%The man\'s jowls flip and flop as he shakes his head.%SPEECH_ON%But the mill... it\'s not even finished!%SPEECH_OFF%You shrug.%SPEECH_ON%Not our problem. Now hand it over, before I make you our problem.%SPEECH_OFF%Nodding solemnly, the man obeys and gives you his satchel of crowns.",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Gdy umysł mężczyzny odpływa ku zadowalającemu rozwiązaniu problemu, pstrykasz palcami, by sprowadzić go z powrotem do brutalnej rzeczywistości.%SPEECH_ON%Te korony należą do nas, chłopie. Taki był układ.%SPEECH_OFF%Jego policzki trzęsą się, gdy kręci głową.%SPEECH_ON%Ale młyn... nawet nie jest skończony!%SPEECH_OFF%Wzruszasz ramionami.%SPEECH_ON%To nie nasz problem. Teraz oddawaj, zanim zrobisz się naszym problemem.%SPEECH_OFF%Mężczyzna przytakuje uroczyście, posłusznie podając ci sakiewkę koron.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Better luck next time.",
+					Text = "Następnym razem więcej szczęścia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -147,13 +147,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(-this.Const.World.Assets.RelationFavor, "You pressed hard an important citizen to get paid for helping build a mill");
+				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(-this.Const.World.Assets.RelationFavor, "Mocno naciskałeś ważnego obywatela, by zapłacił za pomoc przy budowie młyna");
 				this.World.Assets.addMoney(200);
 				this.List = [
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color] koron"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -171,13 +171,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = effect.getIcon(),
-								text = bro.getName() + " is exhausted"
+								text = bro.getName() + " jest wyczerpany"
 							});
 						}
 
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.5, "Helped build a mill");
+							bro.improveMood(0.5, "Pomógł w budowie młyna");
 
 							if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 							{
@@ -195,13 +195,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_79.png[/img]For a brief moment, you see an image of yourself running the squinty-eyed man through with your sword. It\'d really wake him up to the reality of the world, but instead you give him a break. The laborers who took part in the disaster of a project aren\'t too happy. Hopefully, the lessons learned will steel them anyway.",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Przez krótką chwilę widzisz siebie, jak przebijasz tego zezowatego mężczyznę mieczem. To naprawdę obudziłoby go na realia świata, ale zamiast tego odpuszczasz. Robotnicy, którzy brali udział w katastrofie projektu, nie są zbyt szczęśliwi. Oby i tak wynieśli z tego nauczkę.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Godspeed.",
+					Text = "Powodzenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -211,7 +211,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "You lend some men to help build a mill");
+				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "Oddelegowałeś ludzi do budowy młyna");
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
@@ -227,13 +227,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = effect.getIcon(),
-								text = bro.getName() + " is exhausted"
+								text = bro.getName() + " jest wyczerpany"
 							});
 						}
 
 						if (this.Math.rand(1, 100) <= 33)
 						{
-							bro.worsenMood(1.0, "Helped build a mill without getting paid");
+							bro.worsenMood(1.0, "Pomógł w budowie młyna bez zapłaty");
 
 							if (bro.getMoodState() < this.Const.MoodState.Neutral)
 							{

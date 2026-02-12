@@ -7,16 +7,16 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.melon_thief";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You eye a large group of screaming villagers. They\'re drunkenly carrying a felled tree like a throng of ants would a beetle. There\'s a blindfolded and shackled man astride the wood. As the crowd draws near, the pungency of alcohol emanates from the mob like miasma from a particularly angry swamp.\n\n %otherbro% asks the riffraff where they\'re off to. A bearded stooge swerves forward, braking on a heel and toe tip at the same time like an unpracticed puppet.%SPEECH_ON%Oy! We off to tar and feather this, this, uh...%SPEECH_OFF%Someone yells out \'fruit philanderer!\' from the crowd. The stooge snaps his fingers.%SPEECH_ON%Right! This melon mugger is getting what\'s, er, coming... to him.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Przyglądasz się dużej grupie wrzeszczących wieśniaków. Pijani niosą ścięte drzewo jak stado mrówek niosących chrząszcza. Na pniu siedzi mężczyzna z zawiązanymi oczami i w kajdanach. Gdy tłum się zbliża, ostry zapach alkoholu bije od motłochu jak miazma z wyjątkowo wściekłego bagna.\n\n %otherbro% pyta hołotę, dokąd idą. Brodaty błazen zatacza się do przodu, hamując jednocześnie piętą i czubkiem stopy, jak niewprawna marionetka.%SPEECH_ON%Oj! Idziem go wytarować i oskubać, tego, tego, eee...%SPEECH_OFF%Ktoś z tłumu krzyczy \"owocowy bawidamek!\". Błazen pstryka palcami.%SPEECH_ON%Racja! Ten rabuś melonów dostanie to, co mu się, eee, należy...%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "A melon thief?",
+					Text = "Złodziej melonów?",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Yeah, this is very much not our business.",
+					Text = "Tak, to zdecydowanie nie nasza sprawa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -39,13 +39,13 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_43.png[/img]The stooge sways on his feet. There\'s enough beer foam in his beard to get a wench drunk. He points forward.%SPEECH_ON%Thas... that\'s right! Mugged a melon right-oh, but not just any ord\'nary thief! Naw, he corked it something fierce! We found the raw sewage of his work all about him when we\'d caught up to his doings! And by raw sewage I mean his cock\'s ill-measured spillage!%SPEECH_OFF%Hardly catching any of that, you ask the man to explain - slowly this time. He throws his hands up as though you\'re an idiot.%SPEECH_ON%What\'s all this talk? You hump a melon and thass that! Such fornications are, well, thass... thass beyond ordinary appeals to justice! Now out of our way, stranger, we\'ve feathers to collect and then to redistribute by means of a bonafide tarrin\' and a featherin\' and mayhaps a little more tarrin\' if we got us some left!%SPEECH_OFF%The crowd cheers to this.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Błazen chwieje się na nogach. W jego brodzie jest dość piany z piwa, by upić dziewkę. Wskazuje do przodu.%SPEECH_ON%To... to prawda! Skroił melona, owszem, ale to nie byle jaki złodziejaszek! Nie, on go zatyczkował, że aż strach! Znaleźliśmy surowe ścieki jego roboty wokół niego, kiedy dopadliśmy jego sprawki! A przez surowe ścieki mam na myśli źle odmierzony wyciek z jego fiuta!%SPEECH_OFF%Ledwo co z tego łapiesz, więc prosisz, by wyjaśnił - tym razem powoli. Rozkłada ręce, jakbyś był idiotą.%SPEECH_ON%O co tyle gadania? Człowiek puknie melona i już! Takie nierządy to, no, to... to poza zwykłym wołaniem o sprawiedliwość! A teraz z drogi, nieznajomy, musimy zebrać pióra, a potem je rozdać przy pomocy porządnego tarowania i oskubania, a może i jeszcze trochę tarowania, jeśli nam zostanie!%SPEECH_OFF%Tłum wiwatuje.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What say you, Melon Man?",
+					Text = "Co powiesz, Człeku od Melona?",
 					function getResult( _event )
 					{
 						return "C";
@@ -53,7 +53,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Fornicating fruit? %otherbro%, tar this fool!",
+					Text = "Owocowy nierząd? %otherbro%, wytaruj tego głupca!",
 					function getResult( _event )
 					{
 						return "H";
@@ -61,7 +61,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Okay. Not our business.",
+					Text = "Dobra. Nie nasza sprawa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -76,13 +76,13 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You ask the man atop the tree what he has to say, if anything. He shrugs and speaks.%SPEECH_ON%Look, what happens between a man and a melon is their business and their business alone. No harm, no foul.%SPEECH_OFF%The stooge cracks the man with a stick.%SPEECH_ON%Naw, you tell this fella straight, tell \'im what ya did!%SPEECH_OFF%Sighing, the melon man nods.%SPEECH_ON%Well alright then, if that\'s the end of them negotiations, and things being what they is with me up here and the smell of tar in the air, I\'ll speak truthfully to the matter at hand. I fucked that melon and I enjoyed myself.%SPEECH_OFF%The crowd hisses and boos as your men laugh amongst themselves.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Pytasz mężczyznę na pniu, czy ma coś do powiedzenia. Wzrusza ramionami i mówi.%SPEECH_ON%Słuchaj, to, co dzieje się między mężczyzną a melonem, to ich sprawa i tylko ich. Nikomu krzywdy, nikomu szkody.%SPEECH_OFF%Błazen uderza go kijem.%SPEECH_ON%Nie, powiedz temu kolesiowi wprost, powiedz, co zrobiłeś!%SPEECH_OFF%Melonowy człowiek wzdycha i kiwa głową.%SPEECH_ON%Dobra, jeśli to koniec tych negocjacji, a ja tu siedzę i czuję zapach smoły w powietrzu, to powiem prawdę. Pieprzyłem tego melona i dobrze się bawiłem.%SPEECH_OFF%Tłum syczy i buczy, a twoi ludzie śmieją się między sobą.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We can\'t let you tar this man.",
+					Text = "Nie pozwolimy wam wytarować tego człowieka.",
 					function getResult( _event )
 					{
 						return "D";
@@ -90,7 +90,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Fornicating fruit? %otherbro%, go help tar this fool!",
+					Text = "Owocowy nierząd? %otherbro%, pomóż wytarować tego głupca!",
 					function getResult( _event )
 					{
 						return "H";
@@ -98,7 +98,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Okay. Not our business.",
+					Text = "Dobra. Nie nasza sprawa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -113,13 +113,13 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You grab the stooge.%SPEECH_ON%Let this man go.%SPEECH_OFF%The man asks if you\'re really defending this fruit farker. You nod and tell him that adultery with a melon, while disgusting and confusing, is ultimately a harmless endeavor. A drunken peasant thumbs over his shoulder.%SPEECH_ON%Sss\'what? Juss last week we took ol\' Bentley behind the shed for breaking that poor duck\'s neck.%SPEECH_OFF%The man\'s face frowns and he drowns the rest of his drink. He mutters something about really missing that duck. Perhaps not making yourself clear, and tiring of these idiots\' hijinks, you draw your sword and cut the melon mugger free. You turn the sword toward the crowd and they quickly disperse in a drunken retreat, fanning out beside the road, randomly scattering to get from whence they came like a bunch of rocks skipped over a wavy lake.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Chwytasz błazna.%SPEECH_ON%Puśćcie tego człowieka.%SPEECH_OFF%Mężczyzna pyta, czy naprawdę bronisz tego owocowego chędożcy. Kiwasz głową i mówisz mu, że cudzołóstwo z melonem, choć obrzydliwe i mylące, jest ostatecznie nieszkodliwe. Pijany wieśniak wskazuje kciukiem przez ramię.%SPEECH_ON%Co? Przed tygodniem zabraliśmy starego Bentleya za szopę, bo złamał kark tej biednej kaczce.%SPEECH_OFF%Mężczyzna marszczy twarz i dopija resztę trunku. Mamrocze coś o tym, że naprawdę brakuje mu tej kaczki. Być może nie wyrażasz się dość jasno i mając dość wybryków tych idiotów, dobywasz miecza i uwalniasz melonowego rabusia. Kierujesz ostrze w stronę tłumu i szybko się rozpraszają w pijackim odwrocie, rozłażąc się przy drodze, rozbiegając się, skąd przyszli, jak kamienie odbijane po falującym jeziorze.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Git you idiots, git!",
+					Text = "Zmiatać, idioci, zmiatać!",
 					function getResult( _event )
 					{
 						return "E";
@@ -134,13 +134,13 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_43.png[/img]The \'melon mugger\' comes to you. He fixes up his drawers with a bit of rope and bindings.%SPEECH_ON%So, uh, seeing as how you spared me that awful fate, what say I try and pay you back? I\'m tired of this town anyhow.%SPEECH_OFF%You tell him that sellswording is not an enviable vocation to take up on the fly. He points a snarky finger.%SPEECH_ON%Look, if you\'re worried I\'ll pork yer produce then I promise on me mother\'s grave that I will keep my shire-borer in its pants.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_43.png[/img]\"Melonowy rabuś\" podchodzi do ciebie. Poprawia spodnie kawałkiem sznura i wiązań.%SPEECH_ON%No, eee, skoro oszczędziłeś mi tego okropnego losu, co powiesz, żebym się odwdzięczył? I tak mam dość tego miasta.%SPEECH_OFF%Mówisz mu, że bycie najemnikiem nie jest godnym pozazdroszczenia fachem, by brać się za niego z marszu. Wskazuje cię zadziornie palcem.%SPEECH_ON%Słuchaj, jeśli się boisz, że będę rżnął wasze zapasy, to przysięgam na grób matki, że mój wiejski świder zostanie w spodniach.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Very well. Welcome to the %companyname%!",
+					Text = "Dobrze. Witaj w %companyname%!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -151,7 +151,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, we\'d rather not be double-checking our food every time we take a bite.",
+					Text = "Nie, wolimy nie sprawdzać jedzenia za każdym kęsem.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -167,12 +167,12 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"thief_background"
 				]);
-				_event.m.Dude.setTitle("the Melon Mugger");
+				_event.m.Dude.setTitle("Rabuś Melonów");
 				_event.m.Dude.getSprite("head").setBrush("bust_head_03");
-				_event.m.Dude.getBackground().m.RawDescription = "%name% is just a regular melon thief - is what you tell people who ask.";
+				_event.m.Dude.getBackground().m.RawDescription = "%name% to po prostu zwykły złodziej melonów — tak mówisz tym, którzy pytają.";
 				_event.m.Dude.getBackground().buildDescription(true);
-				_event.m.Dude.improveMood(1.0, "Satisfied his needs with a melon");
-				_event.m.Dude.worsenMood(0.5, "Almost got tarred and feathered");
+				_event.m.Dude.improveMood(1.0, "Zaspokoił potrzeby z melonem");
+				_event.m.Dude.worsenMood(0.5, "O mało nie został wytarowany i oskubany");
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 				{
@@ -195,13 +195,13 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_43.png[/img]%otherbro% nods.%SPEECH_ON%With pleasure! Out of the way peasantry, let a real man get some work done here.%SPEECH_OFF%The sellsword picks up the \'pitch bucket\' and hurls it completely over the fruit fornicator. The man screams as the hot liquids sizzle and a rather potent order wisps into a smoky air. You watch as %otherbro% grabs a few naked chickens - not their feathers, just the chickens themselves - and starts beating the melon mugger with them like an angry frock swinging chained censers. The tarred man hollers out, partly in pain, partly confused. The crowd, also confused, reluctantly cheers. When he\'s finished, %otherbro% drops the chickens, which are but a slop of drooping meat and tar at this point. He wipes his forehead.%SPEECH_ON%Hell yeah, sir.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_43.png[/img]%otherbro% kiwa głową.%SPEECH_ON%Z przyjemnością! Z drogi, hołoto, niech prawdziwy mężczyzna tu popracuje.%SPEECH_OFF%Najemnik chwyta \"wiadro ze smołą\" i wylewa je na owocowego nierządnika. Mężczyzna krzyczy, gdy gorące płyny syczą, a w powietrze unosi się mocny smród. Patrzysz, jak %otherbro% łapie kilka nagich kur - bez piór, tylko same kury - i zaczyna okładać melonowego rabusia nimi jak wściekły duchowny machający kadzielnicami na łańcuchach. Wytarowany mężczyzna wrzeszczy, częściowo z bólu, częściowo zdezorientowany. Tłum, również zdezorientowany, niechętnie wiwatuje. Gdy kończy, %otherbro% upuszcza kury, które w tym momencie są już tylko breją zwisającego mięsa i smoły. Ociera czoło.%SPEECH_ON%No jasne, panie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I don\'t quite think he gets it, but that works.",
+					Text = "Nie sądzę, by zrozumiał, ale to działa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -212,7 +212,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.improveMood(0.5, "Has dealt out just punishment");
+				_event.m.Other.improveMood(0.5, "Wymierzył sprawiedliwą karę");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{

@@ -6,17 +6,17 @@ this.surefooted_saves_damsel_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.surefooted_saves_damsel";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_85.png[/img]A few brothers come back to you with the most curious of stories. Apparently %surefooted%, the ever surefooted sellsword, managed to make a bit of a name for himself in %townname%.\n\n While carousing with ladies on a tavern staircase, the bannister broke and a damsel went careening downward. With a horn of ale in one hand and a wench wrapped in the tender grip of the other, the mercenary stuck his foot out and managed to catch the falling mistress on the toe of his boot, quite literally bringing her to heel much to the roaring applause of the inebriated crowd below. You ask where he is now. The mercenaries laugh.%SPEECH_ON%Dropping trou with the easily impressed, what else?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_85.png[/img]Kilku braci wraca do ciebie z niezwykle osobliwą historią. Najwyraźniej %surefooted%, zawsze pewny nogi najemnik, zdołał wyrobić sobie nazwisko w %townname%.\n\n Podczas hulanki z damami na schodach karczmy poręcz się złamała i jedna z dziewek runęła w dół. Z rogiem piwa w jednej dłoni i dziewką objętą w drugiej, najemnik wystawił stopę i zdołał złapać spadającą pannę czubkiem buta, dosłownie sprowadzając ją do posłuszeństwa ku ryczącej aprobacie pijanej gawiedzi poniżej. Pytasz, gdzie jest teraz. Najemnicy śmieją się.%SPEECH_ON%Spuszcza portki przed łatwo zachwyconymi, a co innego?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Of course, of course.",
+					Text = "Oczywiście, oczywiście.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,10 +30,10 @@ this.surefooted_saves_damsel_event <- this.inherit("scripts/events/event", {
 
 				if (!_event.m.Town.isSouthern())
 				{
-					_event.m.Town.getFactionOfType(this.Const.FactionType.Settlement).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "One of your men got a reputation with the ladies");
+					_event.m.Town.getFactionOfType(this.Const.FactionType.Settlement).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "Jeden z twoich ludzi zyskał reputację u dam");
 				}
 
-				_event.m.Surefooted.improveMood(2.0, "Had a bit of a partie carree");
+				_event.m.Surefooted.improveMood(2.0, "Zaliczył małe partie carree");
 
 				if (_event.m.Surefooted.getMoodState() >= this.Const.MoodState.Neutral)
 				{

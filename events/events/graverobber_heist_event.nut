@@ -6,17 +6,17 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.graverobber_heist";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%graverobber% the grimy graverobber enters your tent with his hands behind his back. You don\'t wish to delay what madness has been brought before you much longer, so you go ahead and ask what the man wants.%SPEECH_ON%Sir... I\'ve... I\'ve gotten word that a local baron - a wealthy man, indeed! - has been recently put to rest in a graveyard not far from here.%SPEECH_OFF%Leaning back in your chair, you give the man a shrug. He continues.%SPEECH_ON%I... I don\'t wish to ask the other men to help, for they look at me like some sort of horrid thing. But you... you\'re different. You hired me after all.%SPEECH_OFF%You lean forward, drawing your armor taught and the chair beneath you to a groaning wooden whine.%SPEECH_ON%Let me guess: you want me to help you dig up this baron\'s grave.%SPEECH_OFF%The man grins, a pathetic sight, one that reminds you of the time you scolded a dog for stealing a biscuit.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%graverobber%, brudny grabarz, wchodzi do twojego namiotu z rękami za plecami. Nie chcesz dłużej zwlekać z szaleństwem, które przed tobą stoi, więc pytasz, czego chce.%SPEECH_ON%Panie... ja... ja usłyszałem, że lokalny baron - bogaty człowiek, bez dwóch zdań! - został niedawno pochowany na cmentarzu niedaleko stąd.%SPEECH_OFF%Odchylasz się na krześle i wzruszasz ramionami. On mówi dalej.%SPEECH_ON%Ja... nie chcę prosić innych o pomoc, bo patrzą na mnie jak na jakąś potworność. Ale ty... ty jesteś inny. W końcu mnie zatrudniłeś.%SPEECH_OFF%Pochylasz się do przodu, napinając zbroję, a krzesło pod tobą jęczy drewnianym skrzypnięciem.%SPEECH_ON%Niech zgadnę: chcesz, żebym pomógł ci wykopać grób tego barona.%SPEECH_OFF%Mężczyzna uśmiecha się żałośnie, jak pies, którego kiedyś zganiłeś za kradzież ciastka.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Uh, maybe some other time.",
+					Text = "Eee, może innym razem.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -31,7 +31,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'m not going to, and neither are you.",
+					Text = "Ja tego nie zrobię, i ty też nie.",
 					function getResult( _event )
 					{
 						return "D";
@@ -39,7 +39,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ll go get my shovel!",
+					Text = "Pójdę po łopatę!",
 					function getResult( _event )
 					{
 						return "E";
@@ -55,13 +55,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Having excused yourself from the excavating expedition, you get back to work. Time flies, millmoths arcing in rote loops about a candle that droops lower and lower, its glassy flame so easily flicked to the wingbeats of the creatures about it. Finally, %graverobber% returns, heaving a bit of a chest into the tent. He looks more mud than man.%SPEECH_ON%I got it, sir!%SPEECH_OFF%The graverobber quickly looks behind himself, then says again, his voice a bit quieter this time.%SPEECH_ON%I got it... I got all of it. Look, I\'ll split it with you. I mean, you didn\'t help me avoid the watchman, or shovel up the earth, or drag the body out, or drag the chest out, or put the coffin back in its place, or put the dirt back on the coffin, or avoid the watchman a second time, or drag the chest all the way into camp... but you did let me do it!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Usprawiedliwiając się z wyprawy, wracasz do pracy. Czas płynie, ćmy krążą w powtarzalnych pętlach wokół świecy, która opada coraz niżej, a jej szklany płomień tak łatwo drga od ruchu skrzydeł stworzeń wokół. W końcu %graverobber% wraca, wnosząc do namiotu niewielką skrzynię. Wygląda bardziej jak błoto niż człowiek.%SPEECH_ON%Mam to, panie!%SPEECH_OFF%Grabarz szybko spogląda za siebie, po czym mówi znów, tym razem nieco ciszej.%SPEECH_ON%Mam to... mam wszystko. Słuchaj, podzielę się z tobą. To znaczy, nie pomogłeś mi ominąć strażnika, ani odgarnąć ziemi, ani wyciągnąć ciała, ani wyciągnąć skrzyni, ani włożyć trumny z powrotem, ani zasypać trumny, ani ominąć strażnika drugi raz, ani zaciągnąć skrzyni do obozu... ale pozwoliłeś mi to zrobić!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s right.",
+					Text = "Właśnie tak.",
 					function getResult( _event )
 					{
 						return 0;
@@ -78,7 +78,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Otrzymujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 					}
 				];
 			}
@@ -86,13 +86,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Having excused yourself from the excavating expedition, you get back to work. Time flies, millmoths arcing in rote loops about a candle that droops lower and lower, its glassy flame so easily flicked to the wingbeats of the creatures about it. Finally, %graverobber% returns, the first sign of him the edge of your tent flap moving just so. You set your quillpen down and ask the man to enter. He does so, rather tentatively, as a man about to cross a threshold he\'d rather not. Even in the dim candlelight you can see the colors darkness is so ordinarily good at hiding: purples and blues and dark reds. He grins sheepishly.%SPEECH_ON%They, uh, caught me sir.%SPEECH_OFF%You nod.%SPEECH_ON%Yes, I can see that.%SPEECH_OFF%The man quickly raises a finger, a slop of mud flying waywardly into nowhere but a wet sound.%SPEECH_ON%But next time!%SPEECH_OFF%You stop the man with a raised hand.%SPEECH_ON%How about you go get patched up and then we\'ll talk about this \'next time\', yeah?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Usprawiedliwiając się z wyprawy, wracasz do pracy. Czas płynie, ćmy krążą w powtarzalnych pętlach wokół świecy, która opada coraz niżej, a jej szklany płomień tak łatwo drga od ruchu skrzydeł stworzeń wokół. W końcu %graverobber% wraca, a pierwszym znakiem jego obecności jest drgający brzeg klapy namiotu. Odkładasz pióro i każesz mu wejść. Wchodzi dość niepewnie, jak człowiek przekraczający próg, którego wolałby nie przekraczać. Nawet w przyćmionym świetle świecy widzisz barwy, które mrok zwykle dobrze skrywa: fiolety, błękity i ciemne czerwienie. Uśmiecha się nieśmiało.%SPEECH_ON%Oni, eee, złapali mnie, panie.%SPEECH_OFF%Kiwasz głową.%SPEECH_ON%Tak, widzę.%SPEECH_OFF%Mężczyzna szybko unosi palec, a kleks błota leci w bok, lądując z mokrym plaskiem.%SPEECH_ON%Ale następnym razem!%SPEECH_OFF%Zatrzymujesz go uniesioną dłonią.%SPEECH_ON%Może idź się opatrzyć, a potem porozmawiamy o tym \"następnym razem\", tak?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And see that you don\'t fling anymore mud around on your way out.",
+					Text = "I uważaj, by wychodząc nie chlapać więcej błotem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -110,7 +110,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury2.getIcon(),
-						text = _event.m.Graverobber.getName() + " suffers " + injury2.getNameOnly()
+						text = _event.m.Graverobber.getName() + " doznaje " + injury2.getNameOnly()
 					});
 				}
 				else
@@ -119,7 +119,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Graverobber.getName() + " suffers light wounds"
+						text = _event.m.Graverobber.getName() + " doznaje lekkich ran"
 					});
 				}
 
@@ -134,13 +134,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%townname% is not the pillar upon which you wish to sacrifice your good standing in the world - or at least, what good standing a mercenary can have. You tell %graverobber% that not only will you not be accompanying him, but that you refuse to let him go off and do this alone. He pouts like a young hunter whose bow has been taken away by an angry father.%SPEECH_ON%Well... alright then... I suppose it was only riches...%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%townname% nie jest filarem, na którym chcesz poświęcać swoje dobre imię w świecie - a przynajmniej to, jakie dobre imię może mieć najemnik. Mówisz %graverobber%, że nie tylko nie będziesz mu towarzyszył, ale też nie pozwolisz mu iść i zrobić tego samemu. Marszczy się jak młody myśliwy, któremu zły ojciec zabrał łuk.%SPEECH_ON%Cóż... no dobrze... to tylko bogactwa...%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Get back to work.",
+					Text = "Wracaj do roboty.",
 					function getResult( _event )
 					{
 						return 0;
@@ -162,13 +162,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You and %graverobber% stalk low through the bushes, a gangly duo of absurdity, silhouettes murky and ruminating of obvious hijinks even in the darkest of nights. The two of you enter the graveyard as though you were to happen about it by accident, merrily pretending that what is to unfold next would surely not come from two stranges such as yourselves.\n\n About the graveyard are rows and rows of gray slabs and marbled statues with no faces and black iron gates that hee-hawed in the wind. Tall grass everywhere, fertilizer in abundance. Flowers homegrown and others laid down from elsewhere, and some a bit of both.\n\nPursing his lips, the graverobber turns about. He stabs his shovel into the ground and puts his fists to his hips.%SPEECH_ON%Goddammit.%SPEECH_OFF%Sensing something off, you ask what\'s wrong. He spits and answers.%SPEECH_ON%I can\'t \'member if it is that grave, that one, or that one.%SPEECH_OFF%He points to three different sites: one is a modest little stone, bleached and balded to commemorate a death; another is gated with gothic spires; another is but a door to a mausoleum. The graverobber turns to you.%SPEECH_ON%We probably don\'t have much time here, which grave you think it be?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Ty i %graverobber% skradacie się nisko przez krzaki, niezgrabny duet absurdu, sylwetki mętne, niosące oczywistą psotę nawet w najciemniejszą noc. Wchodzicie na cmentarz, jakbyście przypadkiem się tu znaleźli, wesoło udając, że to, co za chwilę nastąpi, na pewno nie może być dziełem takich dziwaków jak wy.\n\n Wokół cmentarza stoją rzędy szarych płyt i marmurowych posągów bez twarzy, a czarne żelazne bramy skrzypią na wietrze. Wszędzie wysoka trawa, nawozu pod dostatkiem. Kwiaty uprawiane na miejscu i inne przyniesione z zewnątrz, a niektóre po trochu jedno i drugie.\n\nZaciskając usta, grabarz odwraca się. Wbija łopatę w ziemię i opiera pięści na biodrach.%SPEECH_ON%Cholera.%SPEECH_OFF%Wy czuwając nad sytuacją, pytasz, co jest nie tak. Pluje i odpowiada.%SPEECH_ON%Nie pamiętam, czy to ten grób, tamten, czy tamten.%SPEECH_OFF%Wskazuje trzy różne miejsca: jedno to skromny kamień, wyblakły i ogołocony, upamiętniający śmierć; drugie ogrodzone jest gotyckimi wieżyczkami; trzecie to po prostu drzwi do mauzoleum. Grabarz odwraca się do ciebie.%SPEECH_ON%Pewnie nie mamy tu dużo czasu, który grób, twoim zdaniem?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll dig up the motley grave.",
+					Text = "Wykopiemy skromny grób.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 66)
@@ -183,7 +183,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We\'ll break past the gothic fence.",
+					Text = "Przebijemy się przez gotyckie ogrodzenie.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 66)
@@ -198,7 +198,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We\'ll break into the mausoleum.",
+					Text = "Włamiemy się do mauzoleum.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 66)
@@ -221,13 +221,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You and %graverobber% stalk low through the bushes, a gangly duo of absurdity, silhouettes murky and ruminating of obvious hijinks even in the darkest of nights. The two of you enter the graveyard as though you were to happen about it by accident, merrily pretending that what is to unfold next would surely not come from two stranges such as yourselves.\n\n About the graveyard are rows and rows of gray slabs and marbled statues with no faces and black iron gates that hee-hawed in the wind. Tall grass everywhere, fertilizer in abundance. Flowers homegrown and others laid down from elsewhere, and some a bit of both.\n\nPursing his lips, the graverobber turns about. He stabs his shovel into the ground and puts his fists to his hips.%SPEECH_ON%Goddammit.%SPEECH_OFF%Sensing something off, you ask what\'s wrong. He spits and answers.%SPEECH_ON%I can\'t \'member if it is that grave, that one, or that one.%SPEECH_OFF%He points to three different sites: one is a modest little stone, bleached and balded to commemorate a death; another is gated with gothic spires; another is but a door to a mausoleum. The graverobber turns to you.%SPEECH_ON%We probably don\'t have much time here, which grave you think it be?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Ty i %graverobber% skradacie się nisko przez krzaki, niezgrabny duet absurdu, sylwetki mętne, niosące oczywistą psotę nawet w najciemniejszą noc. Wchodzicie na cmentarz, jakbyście przypadkiem się tu znaleźli, wesoło udając, że to, co za chwilę nastąpi, na pewno nie może być dziełem takich dziwaków jak wy.\n\n Wokół cmentarza stoją rzędy szarych płyt i marmurowych posągów bez twarzy, a czarne żelazne bramy skrzypią na wietrze. Wszędzie wysoka trawa, nawozu pod dostatkiem. Kwiaty uprawiane na miejscu i inne przyniesione z zewnątrz, a niektóre po trochu jedno i drugie.\n\nZaciskając usta, grabarz odwraca się. Wbija łopatę w ziemię i opiera pięści na biodrach.%SPEECH_ON%Cholera.%SPEECH_OFF%Wy czuwając nad sytuacją, pytasz, co jest nie tak. Pluje i odpowiada.%SPEECH_ON%Nie pamiętam, czy to ten grób, tamten, czy tamten.%SPEECH_OFF%Wskazuje trzy różne miejsca: jedno to skromny kamień, wyblakły i ogołocony, upamiętniający śmierć; drugie ogrodzone jest gotyckimi wieżyczkami; trzecie to po prostu drzwi do mauzoleum. Grabarz odwraca się do ciebie.%SPEECH_ON%Pewnie nie mamy tu dużo czasu, który grób, twoim zdaniem?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "All for naught.",
+					Text = "Wszystko na nic.",
 					function getResult( _event )
 					{
 						return 0;
@@ -249,13 +249,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_33.png[/img]With a swift crack of your spade, the gothic gate is broken open. The twang of metal on metal is sent grumbling between the gravestones and swaying tree branches seem to snicker at your rather loud trespass. When you swing the gate open, the hinges squall as if they themselves were awakened spirits. You enter the little square plot and lean against the spires of the fence. A short order gets %graverobber% to work while you keep a look out like a man unimpressed by the nature of his own crimes. Some minutes of scrupulous shoveling later and the robber of graves is finished. What ends up being found is a very large coffin that has no hopes of being dragged out of the ground, not with just two men anyway.\n\n Using the same manner with which you dealt the gate a blow, you break the latches off the casket and throw it open. A freshly-dead man stares back up at you, two stones painted with eyes rolling away from his sockets. The sight startles you, but you quickly start rifling through the dead man\'s baggage. As it turns out, %graverobber% was right: the man was buried with great satchels of gold and goblets and golden goblets. You take it all, close the casket, and sneak back out of the graveyard.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Jednym szybkim uderzeniem łopaty rozbijasz gotycką bramę. Metaliczny dźwięk rozchodzi się między nagrobkami, a kołyszące się gałęzie drzew zdają się szydzić z twojego głośnego wtargnięcia. Gdy otwierasz bramę, zawiasy zawodzą, jakby obudziły się duchy. Wchodzisz na mały kwadratowy skwer i opierasz się o wieżyczki ogrodzenia. Krótki rozkaz wystarcza, by %graverobber% wziął się do pracy, a ty czuwasz niczym człowiek nieporuszony naturą własnych zbrodni. Po kilku minutach skrupulatnego kopania rabusiów kończy. Znajdujecie bardzo dużą trumnę, której nie da się wyciągnąć z ziemi, przynajmniej nie we dwóch.\n\n Tym samym sposobem, którym uderzyłeś bramę, zrywasz zatrzaski trumny i otwierasz ją. Świeżo zmarły mężczyzna patrzy na ciebie, a w jego oczodołach tkwią dwa kamienie pomalowane na oczy. Widok cię zaskakuje, ale szybko zaczynasz przeszukiwać jego dobytek. Okazuje się, że %graverobber% miał rację: mężczyzna został pochowany z wielkimi sakwami złota i kielichami, nawet złotymi kielichami. Zabierasz wszystko, zamykasz trumnę i wymykasz się z cmentarza.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Treasures!",
+					Text = "Skarby!",
 					function getResult( _event )
 					{
 						return 0;
@@ -272,7 +272,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Otrzymujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 					}
 				];
 				_event.m.Graverobber.improveMood(1.0, "Found treasure while robbing a grave");
@@ -286,13 +286,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You enter the mausoleum like a man fearful that the door behind him might forever snap closed. The coffin rests on a slab of marble with candles burning about its four corners. While there was no wind outside, you can\'t help but hear a faint moan of it circling about the room. Shaking away your fears, you and %graverobber% push the casket\'s lid off, careful not to let it drop off the otherside and presumably wake half the town.\n\n Inside the sarcophagus, you find a man attired in a knight\'s clothing: a helmet, chest plate, and shield. His sword crosses his body from neck to groin, his hands clasped around the handle in a battle-ready embrace. You look to %graverobber% who shrugs.%SPEECH_ON%Suppose this fella was a knight.%SPEECH_OFF%You nod. The graverobber glances from dead man to living.%SPEECH_ON%Suppose... this knight don\'t need that stuff no more...%SPEECH_OFF%Seeing as how you don\'t plan to leave empty handed, you nod again. The dead knight puts up quite the fight as %graverobber% struggles to free him of that which he no longer needs. After a few minutes of battle, you lend a hand in removing the helmet. What falls out is a great bundle of blonde hair. %graverobber% steps back.%SPEECH_ON%That\'s a woman!%SPEECH_OFF%Suddenly, voices rise up from outside the graveyard. You grab all the things you can and tell the graverobber to start running.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Wchodzisz do mauzoleum jak człowiek, który boi się, że drzwi za nim mogą na zawsze się zatrzasnąć. Trumna spoczywa na marmurowej płycie, a przy jej czterech rogach palą się świece. Choć na zewnątrz nie ma wiatru, słyszysz jego cichy jęk krążący po pomieszczeniu. Odpędzając strach, ty i %graverobber% zsuwacie wieko trumny, uważając, by nie spadło na drugą stronę i nie obudziło, zapewne, połowy miasta.\n\n W sarkofagu znajdujesz człowieka ubranego jak rycerz: hełm, napierśnik i tarcza. Miecz leży na jego ciele od szyi po pachwiny, a dłonie są zaciśnięte na rękojeści w gotowym do walki uścisku. Spoglądasz na %graverobber%, który wzrusza ramionami.%SPEECH_ON%Pewnie ten facet był rycerzem.%SPEECH_OFF%Kiwając głową, patrzysz, jak grabarz zerka z martwego na żywego.%SPEECH_ON%Pewnie... temu rycerzowi nie potrzeba już tego sprzętu...%SPEECH_OFF%Skoro i tak nie zamierzasz wyjść z pustymi rękami, znów kiwasz głową. Martwy rycerz stawia spory opór, gdy %graverobber% usiłuje go pozbawić tego, czego już nie potrzebuje. Po kilku minutach walki pomagasz zdjąć hełm. Wypada z niego wielki kosmyk blond włosów. %graverobber% cofa się.%SPEECH_ON%To kobieta!%SPEECH_OFF%Nagle z zewnątrz cmentarza rozlegają się głosy. Chwytasz wszystko, co się da, i każesz grabarzowi uciekać.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Treasures!",
+					Text = "Skarby!",
 					function getResult( _event )
 					{
 						return 0;
@@ -324,7 +324,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Otrzymujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				_event.m.Graverobber.improveMood(1.0, "Found treasure while robbing a grave");
 				this.List.push({
@@ -337,13 +337,13 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_33.png[/img]Just as you take your shovel into hand, a man\'s voice calls out to you.%SPEECH_ON%Just what in the hell do you think y\'all are doing?%SPEECH_OFF%You wheel around to see a man lighting a lantern. He holds it up, the handle creaking as it swivels back and forth.%SPEECH_ON%Y\'all look like graverobbers to me.%SPEECH_OFF%%graverobber% unsheathes a knife from his belt. The watchman unsheathes a bell from his own belt, a large, rotund instrument that glistens gold on the side of the lantern\'s light and white on the side of the moon\'s.%SPEECH_ON%Come after me ye may, but not before I give this here bell a good ringing. Then the next bell you\'ll hear shall toll for thee.%SPEECH_OFF%You grab %graverobber% by the collar and tell him to leave. There\'s no sense in causing trouble. The watchman barks at you as you depart.%SPEECH_ON%I\'ll remember yer faces! Like a kicked dog knows the boot that done did it, I\'ll remember yer faces!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Gdy tylko chwytasz łopatę, odzywa się męski głos.%SPEECH_ON%A co wy, do diabła, myślicie, że robicie?%SPEECH_OFF%Odwracasz się i widzisz mężczyznę zapalającego latarnię. Unosi ją, a uchwyt skrzypi, gdy latarnia kołysze się w przód i w tył.%SPEECH_ON%Wyglądacie mi na rabusiów grobów.%SPEECH_OFF%%graverobber% wyciąga nóż z pasa. Strażnik wyciąga dzwonek z własnego pasa, duży, okrągły instrument, który lśni złotem od strony światła latarni i bielą od strony księżyca.%SPEECH_ON%Możecie iść za mną, ale najpierw dam temu dzwonkowi porządnie zadzwonić. A następny dzwon, który usłyszycie, zadzwoni już za was.%SPEECH_OFF%Łapiesz %graverobber% za kołnierz i każesz mu odejść. Nie ma sensu robić kłopotów. Strażnik szczeka za tobą, gdy odchodzisz.%SPEECH_ON%Zapamiętam wasze twarze! Jak kopnięty pies pamięta but, który go skopał, tak ja zapamiętam wasze twarze!%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Embarrassing.",
+					Text = "Żenujące.",
 					function getResult( _event )
 					{
 						this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationOffense, "You and your men attempted to rob a local grave");

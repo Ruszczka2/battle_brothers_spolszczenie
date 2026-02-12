@@ -6,17 +6,17 @@ this.shortsighted_shoots_bro_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.shortsighted_shoots_bro";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_10.png[/img] You take a good, long look at the men, a gaze that flickers from one to the other and then back again, all the while shaking your head. %shortsightedtarget% is holding his head, a rather large lump cresting at the hairline. He looks at %shortsighted% then to you. Both men shrug. You ask %shortsighted% what happened. He explains.%SPEECH_ON%Thought I saw somethin\' that wasn\'t there.%SPEECH_OFF%Incredulously, %shortsightedtarget% throws his hand out.%SPEECH_ON%I said, \'Hey, it\'s me\' and you clocked me anyway.%SPEECH_OFF%Throwing out his own hands, %shortsighted% defends himself.%SPEECH_ON%\'Hey it\'s me\' aren\'t words beholden to ya! Any man can say them words! I reckon any man of ill-will would say them very words before he followed them with a sword, I bet he would!%SPEECH_OFF%It appears that %shortsighted%\'s poor eyesight has led to something of an accident.",
+			Text = "[img]gfx/ui/events/event_10.png[/img]Przyglądasz się mężczyznom długim, uważnym spojrzeniem, przenosząc wzrok z jednego na drugiego i z powrotem, cały czas kręcąc głową. %shortsightedtarget% trzyma się za głowę, a na linii włosów rośnie spory guz. Patrzy na %shortsighted%, potem na ciebie. Obaj wzruszają ramionami. Pytasz %shortsighted%, co się stało. Wyjaśnia.%SPEECH_ON%Myślałem, że widzę coś, czego nie było.%SPEECH_OFF%%shortsightedtarget% wyrzuca rękę w geście niedowierzania.%SPEECH_ON%Powiedziałem: \'Hej, to ja\', a ty i tak mnie zdzieliłeś.%SPEECH_OFF%%shortsighted% rozkłada ręce i się broni.%SPEECH_ON%\'Hej, to ja\' nie są słowa zarezerwowane dla ciebie! Każdy może je powiedzieć! I powiem ci, że każdy o złej woli właśnie tych słów użyłby, zanim dołożyłby ci mieczem, na pewno!%SPEECH_OFF%Wygląda na to, że słaby wzrok %shortsighted% doprowadził do pewnego wypadku.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Get that wound looked at, %shortsightedtargetshort%.",
+					Text = "Niech ktoś obejrzy tę ranę, %shortsightedtargetshort%.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,10 +32,10 @@ this.shortsighted_shoots_bro_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.OtherGuy.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.OtherGuy.getName() + " doznaje " + injury.getNameOnly()
 				});
-				_event.m.Shortsighted.worsenMood(1.0, "Shot at " + _event.m.OtherGuy.getName() + " by accident");
-				_event.m.OtherGuy.worsenMood(1.0, "Got shot at by " + _event.m.Shortsighted.getName());
+				_event.m.Shortsighted.worsenMood(1.0, "Przypadkowo postrzelił " + _event.m.OtherGuy.getName());
+				_event.m.OtherGuy.worsenMood(1.0, "Został postrzelony przez " + _event.m.Shortsighted.getName());
 
 				if (_event.m.OtherGuy.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -3,17 +3,17 @@ this.dead_merchant_forest_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dead_merchant_forest";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]While marching through the forest, you come across a body swinging from a branch. It appears it has been there long enough for even the flies to have gotten their fill. %randombrother% notes some sharp suede shoes on the corpse\'s feet.%SPEECH_ON%Looks like a merchant to me, sir.%SPEECH_OFF%You agree and have it cut down. Upon closer inspection, the eyes have been carved out and tattoos drawn across his chest. Given that you find some crowns still on the body, this was likely to be the work of uncivilized wildmen being spooked by an outsider.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Maszerując przez las, natykasz się na ciało zwisające z gałęzi. Wygląda na to, że wisi tu wystarczająco długo, by nawet muchy zdążyły się nasycić. %randombrother% zwraca uwagę na ostre, zamszowe buty na stopach trupa.%SPEECH_ON%Wygląda mi to na kupca, panie.%SPEECH_OFF%Zgadzasz się i każesz go ściągnąć. Przy bliższych oględzinach widzisz, że oczy zostały wycięte, a na klatce piersiowej narysowano tatuaże. Skoro na ciele wciąż znajdujesz trochę koron, to zapewne dzieło niecywilizowanych dzikich, wystraszonych przez obcego.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest in peace.",
+					Text = "Spoczywaj w pokoju.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,7 +28,7 @@ this.dead_merchant_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Otrzymujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 				});
 			}
 

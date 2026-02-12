@@ -9,11 +9,11 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.how_far_is_the_sun";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]While resting, the men start a conversation about how far away the sun is. %otherbrother% looks up at it, wincing and gritting his teeth as he just about blinds himself in his measuring. Finally, he looks back down.%SPEECH_ON%I\'d wager it\'s about ten to fifteen miles away.%SPEECH_OFF%He nods at his own presumably accurate summation.%SPEECH_ON%Aye, probably not even that far. I heard a story about an archer in a faraway land hitting it with an arrow.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Podczas odpoczynku ludzie zaczynają rozmowę o tym, jak daleko jest słońce. %otherbrother% spogląda w górę, krzywiąc się i zaciskając zęby, niemal oślepiając się przy tych pomiarach. W końcu opuszcza wzrok.%SPEECH_ON%Założyłbym się, że to jakieś dziesięć do piętnastu mil.%SPEECH_OFF%Kiwa głową na własne, zapewne trafne podsumowanie.%SPEECH_ON%Ano, pewnie nawet nie tak daleko. Słyszałem opowieść o łuczniku z dalekiej krainy, który trafił je strzałą.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [],
@@ -22,7 +22,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Historian != null)
 				{
 					this.Options.push({
-						Text = "%historianfull%, what have you to say?",
+						Text = "%historianfull%, co masz do powiedzenia?",
 						function getResult( _event )
 						{
 							return "Historian";
@@ -34,7 +34,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Monk != null)
 				{
 					this.Options.push({
-						Text = "I bet %monkfull% knows the truth.",
+						Text = "Założę się, że %monkfull% zna prawdę.",
 						function getResult( _event )
 						{
 							return "Monk";
@@ -46,7 +46,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Cultist != null)
 				{
 					this.Options.push({
-						Text = "I see you thinking, %cultistfull%. What say you?",
+						Text = "Widzę, że myślisz, %cultistfull%. Co powiesz?",
 						function getResult( _event )
 						{
 							return "Cultist";
@@ -58,7 +58,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Archer != null)
 				{
 					this.Options.push({
-						Text = "%archerfull%, why don\'t you take a shot?",
+						Text = "%archerfull%, może spróbujesz strzału?",
 						function getResult( _event )
 						{
 							return "Archer";
@@ -68,7 +68,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Enough star talk. Back to the road.",
+					Text = "Dość gadania o gwiazdach. Wracamy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -80,13 +80,13 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Historian",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%historian% the historian starts in on the conversation.%SPEECH_ON%I doubt the veracity of that claim about shooting it with a bow. Here\'s a much more truthful tale I\'ve read of: there are men in the mountains of the east who have big spyglasses to stare up at the night sky. They think the sun is quite far away. At least ten thousand miles, even. They also think the nightlights are other suns and not the souls of dead heroes.%SPEECH_OFF%%otherbrother% gets up.%SPEECH_ON%Watch yer mouth, fool, and don\'t speak ill of our ancestors.%SPEECH_OFF%The historian nods.%SPEECH_ON%Of course! It was only an idea.%SPEECH_OFF%What hogwash. Pretty dumb shite for a supposed \'smart\' man like %historian%. A few of the brothers have a laugh at the historian\'s silly notions.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%historian%, historyk, włącza się do rozmowy.%SPEECH_ON%Wątpię w wiarygodność tej opowieści o trafieniu go łukiem. Znam znacznie bardziej prawdziwą historię: na wschodnich górach są ludzie, którzy mają wielkie lunety, by wpatrywać się w nocne niebo. Uważają, że słońce jest bardzo daleko. Co najmniej dziesięć tysięcy mil. Uważają też, że nocne światła to inne słońca, a nie dusze zmarłych bohaterów.%SPEECH_OFF%%otherbrother% podnosi się.%SPEECH_ON%Pilnuj języka, głupcze, i nie mów źle o naszych przodkach.%SPEECH_OFF%Historyk kiwa głową.%SPEECH_ON%Oczywiście! To była tylko myśl.%SPEECH_OFF%Co za bzdury. Jak na rzekomo mądrego człowieka, %historian% gada straszne głupoty. Kilku braci śmieje się z jego niedorzecznych pomysłów.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What a laugh riot he is.",
+					Text = "Ale z niego ubaw.",
 					function getResult( _event )
 					{
 						return 0;
@@ -125,13 +125,13 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Monk",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%monk% the monk starts in on the conversation.%SPEECH_ON%The sun is neither far nor close. It is the eye of many of the gods, the scope through which they use to watch over us.%SPEECH_OFF%%otherbrother% nods, but then, curious, asks about the moon. The monk smiles confidently.%SPEECH_ON%Do you think the gods would shine upon us for all hours? Of course they dim the lights a bit, to give us mortals a nice night to sleep in.%SPEECH_OFF%You nod. Truly the old gods are always looking out for us.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%monk%, mnich, włącza się do rozmowy.%SPEECH_ON%Słońce nie jest ani daleko, ani blisko. To oko wielu bogów, przez które spoglądają na nas.%SPEECH_OFF%%otherbrother% kiwa głową, lecz potem, ciekaw, pyta o księżyc. Mnich uśmiecha się z pewnością.%SPEECH_ON%Czy myślisz, że bogowie świeciliby na nas przez wszystkie godziny? Oczywiście, że przyciemniają światła, aby dać nam, śmiertelnym, miłą noc do spania.%SPEECH_OFF%Kiwasz głową. Zaprawdę starzy bogowie zawsze nad nami czuwają.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Bless them.",
+					Text = "Niech będą błogosławieni.",
 					function getResult( _event )
 					{
 						return 0;
@@ -170,13 +170,13 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Cultist",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%cultist% the cultist gets up and looks at the sun. As he continues to stare at it, a shadow slowly emerges over his face, as though some entity were shielding him from the light. Suddenly, he raises a hand and starts drawing some aerial rites with his hand. You swear the darkness on his face is moving as though an imprint of his drawings, a sort of shifting tattoo. When he\'s finished, he takes a seat.%SPEECH_ON%The sun is dying.%SPEECH_OFF%The men look concerned. One interjects.%SPEECH_ON%Dying? What do you mean?%SPEECH_OFF%%cultist% stares at him.%SPEECH_ON%Davkul wills it that all may die.%SPEECH_OFF%One man asks if this supposed \'Davkul\' will die too. The cultist nods.%SPEECH_ON%When there is nothing left to die, Davkul may finally rest. A crueler god would have departed already. It is by Davkul\'s good graces that he will go last, and for that we praise him.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%cultist%, kultysta, wstaje i spogląda na słońce. Gdy wciąż się w nie wpatruje, na jego twarzy powoli pojawia się cień, jakby jakaś istota osłaniała go od światła. Nagle unosi rękę i zaczyna kreślić nią powietrzne rytuały. Przysięgasz, że ciemność na jego twarzy porusza się jak odcisk tych rysunków, niczym zmienny tatuaż. Gdy kończy, siada.%SPEECH_ON%Słońce umiera.%SPEECH_OFF%Ludzie wyglądają na zaniepokojonych. Jeden wtrąca.%SPEECH_ON%Umiera? Co masz na myśli?%SPEECH_OFF%%cultist% patrzy na niego.%SPEECH_ON%Davkul chce, by wszyscy umarli.%SPEECH_OFF%Jeden z mężczyzn pyta, czy ten rzekomy Davkul też umrze. Kultysta kiwa głową.%SPEECH_ON%Kiedy nie będzie już nic do umierania, Davkul wreszcie spocznie. Okrutniejszy bóg już by odszedł. To z łaski Davkula odejdzie jako ostatni, i za to go chwalimy.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Errr, right.",
+					Text = "Eee, jasne.",
 					function getResult( _event )
 					{
 						return 0;
@@ -249,13 +249,13 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Archer",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%archer% takes the challenge, grabbing his bow and a couple of arrows. He licks his finger and holds it up.%SPEECH_ON%Wind\'s right for a good star shootin\'.%SPEECH_OFF%The archer nocks an arrow, draws, and takes aim. The blistering light is instantly blinding.%SPEECH_ON%Fark, I can\'t see shit.%SPEECH_OFF%His aim wobbles as dark spots take over his vision. The arrow is loosed and sails wide of the sun. Real wide. He looks at the company, eyes dimmed, hands out as he tries to steady himself while his sight returns.%SPEECH_ON%Did I hit it?%SPEECH_OFF%%otherbrother% hides his chuckling.%SPEECH_ON%Right on the button!%SPEECH_OFF%The men burst into laughter.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%archer% podejmuje wyzwanie, chwytając łuk i kilka strzał. Oblizuje palec i unosi go.%SPEECH_ON%Wiatr dobry na strzelanie do gwiazd.%SPEECH_OFF%Łucznik osadza strzałę, naciąga cięciwę i celuje. Oślepiające światło natychmiast go razi.%SPEECH_ON%Cholera, nic nie widzę.%SPEECH_OFF%Jego celowanie chwieje się, gdy ciemne plamy zalewają mu wzrok. Strzała zostaje wypuszczona i mija słońce. I to bardzo. Patrzy na kompanię, zgaszonym wzrokiem i wyciągniętymi dłońmi, próbując się uspokoić, gdy wzrok wraca.%SPEECH_ON%Trafiłem?%SPEECH_OFF%%otherbrother% ukrywa chichot.%SPEECH_ON%W samo sedno!%SPEECH_OFF%Ludzie wybuchają śmiechem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good shot, sir!",
+					Text = "Dobry strzał, panie!",
 					function getResult( _event )
 					{
 						return 0;
