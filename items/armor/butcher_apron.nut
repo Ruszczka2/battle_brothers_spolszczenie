@@ -1,0 +1,22 @@
+this.butcher_apron <- this.inherit("scripts/items/armor/armor", {
+	m = {},
+	function create()
+	{
+		this.armor.create();
+		this.m.ID = "armor.body.butcher_apron";
+		this.m.Name = "Fartuch Rzeźnika";
+		this.m.Description = "Twardy fartuch noszony przez rzeźników, aby chronić ich przed przypadkowymi skaleczeniami.";
+		this.m.IsDroppedAsLoot = true;
+		this.m.ShowOnCharacter = true;
+		this.m.Variant = 9;
+		this.updateVariant();
+		this.m.ImpactSound = this.Const.Sound.ArmorLeatherImpact;
+		this.m.InventorySound = this.Const.Sound.ClothEquip;
+		this.m.Value = 55;
+		this.m.Condition = 25;
+		this.m.ConditionMax = 25;
+		this.m.StaminaModifier = 0;
+	}
+
+});
+
