@@ -7,16 +7,16 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.greenskins_investigation";
-		this.m.Title = "At %town%...";
+		this.m.Title = "W %town%...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_31.png[/img]While you restock your inventory and give the men some rest, the lord of the castle, %nobleman%, calls for you. He says that there is a goblin loose in the castle and he wants you to track it down.%SPEECH_ON%I\'d ask my men, but they couldn\'t find their own arses even if they ate their eyes and shat them out.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Gdy uzupełniasz zapasy i dajesz ludziom odpocząć, pan zamku, %nobleman%, wzywa cię. Mówi, że w zamku błąka się goblin i chce, byś go wytropił.%SPEECH_ON%Zapytałbym moich ludzi, ale nie znaleźliby własnych dup, nawet gdyby zjedli sobie oczy i wysrali je na wierzch.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "We shall search the pantry.",
+					Text = "Przeszukamy spiżarnię.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -31,7 +31,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We shall search the halls.",
+					Text = "Przeszukamy korytarze.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -46,7 +46,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We shall search the armory.",
+					Text = "Przeszukamy zbrojownię.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -61,7 +61,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We have no time for favors.",
+					Text = "Nie mamy czasu na przysługi.",
 					function getResult( _event )
 					{
 						_event.m.NobleHouse.addPlayerRelation(-5.0, "Denied " + _event.m.Noble.getName() + " a favor");
@@ -79,13 +79,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B1",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You search the pantry, opening the door to shelves upon shelves of foodstuffs from cheeses to salted meats to vegetables which dangle from wall hooks. Wickerwork carboys tempt you, but just as you reach out to get a taste a shape darts across your peripheral. You turn, blade in hand, and stab the goblin just as it lunges toward you with a broken bottle. It dies instantly and makes quite a mess of the floor, ruining a couple bags of flour. The greenskin killed, you calmly drag it to %nobleman%. The nobleman puts his hands to his hips.%SPEECH_ON%Most impressive, sellsword, but did you have to drag it all the way here? My servants will have to scrub the floor for weeks!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Przeszukujesz spiżarnię, otwierając drzwi do półek pełnych żywności: od serów, przez solone mięsa, po warzywa wiszące na hakach. Wiklinowe gąsiory kuszą, ale gdy wyciągasz rękę po łyk, w polu widzenia przemyka kształt. Odwracasz się z ostrzem w dłoni i przebijasz goblina w chwili, gdy rzuca się na ciebie z rozbitą butelką. Ginie natychmiast i robi niezły bałagan na podłodze, niszcząc parę worków mąki. Po zabiciu zielonoskórego spokojnie wleczesz go do %nobleman%. Szlachcic opiera dłonie na biodrach.%SPEECH_ON%Bardzo imponujące, najemniku, ale musiałeś ciągnąć go aż tutaj? Moi służący będą szorować podłogę tygodniami!%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "That was easy. ",
+					Text = "To było łatwe.",
 					function getResult( _event )
 					{
 						return 0;
@@ -103,20 +103,20 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain Wine"
+					text = "Zyskujesz Wino"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "B2",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You go down to the pantry and open the door. Inside, you find shelves upon shelves of foods and goods. There also happens to be a man and woman having a good shag in the corner. They yelp like a couple of pups and cover themselves, the man using a wet flour bag, the woman strategically angling herself behind a shelf of melons. The man clears his throat.%SPEECH_ON%Please, sir, do not tell %nobleman%.%SPEECH_OFF%You were not even aware that this was the nobleman\'s wife, but now it\'s good to know. The man offers a deal.%SPEECH_ON%Look, I\'m just a stable boy. I can\'t offer you gold or nothing like that, but a famous jouster is staying here for a week and I can nab you his shield. It\'s a right pretty thing and you\'ll love it, I promise. All I ask is that you don\'t tell the lord!%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Schodzisz do spiżarni i otwierasz drzwi. W środku znajdujesz półki pełne jedzenia i towarów. W kącie akurat stoi też mężczyzna i kobieta, którzy ostro się bzyknęli. Zawyli jak dwa szczeniaki i zakryli się, mężczyzna używając mokrego worka mąki, a kobieta ustawiając się sprytnie za półką z melonami. Mężczyzna odchrząkuje.%SPEECH_ON%Proszę, panie, nie mów %nobleman%.%SPEECH_OFF%Nie miałeś pojęcia, że to żona szlachcica, ale teraz dobrze o tym wiedzieć. Mężczyzna proponuje układ.%SPEECH_ON%Słuchaj, jestem tylko stajennym. Nie mogę ci dać złota ani nic takiego, ale sławny kopijnik zatrzymuje się tu na tydzień i mogę ci zwędzić jego tarczę. To piękna rzecz i pokochasz ją, obiecuję. Proszę tylko, żebyś nie mówił panu!%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Your lord will hear of this. ",
+					Text = "Twój pan się o tym dowie.",
 					function getResult( _event )
 					{
 						return "C";
@@ -124,7 +124,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Your secret is safe with me. ",
+					Text = "Twój sekret jest u mnie bezpieczny.",
 					function getResult( _event )
 					{
 						return "D";
@@ -140,13 +140,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_31.png[/img]This seems as good of a time as any to develop a steady relationship with %townname%, and the best way to go about doing that is absolutely ruining this relationship you\'ve stumbled upon. You return to %nobleman%\'s room and report your findings. His face goes red, his knuckles a stark white.%SPEECH_ON%I figured. I figured. I farkin\' figured! But the stable boy? I will not be so insulted!%SPEECH_OFF%He snaps his finger to his guards.%SPEECH_ON%Bring me tongs and a blacksmith\'s fire. Take my \'wife\' to the tower. I\'ll deal with her later. And you, sellsword, thank you for bringing this news to me. As for the goblin, it\'s been found and taken care of. You need not worry about that no longer.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]To wydaje się tak dobrym momentem, jak każdy inny, by zbudować stałe relacje z %townname%, a najlepszym sposobem na to jest całkowite zniszczenie relacji, na którą się natknąłeś. Wracasz do komnaty %nobleman% i zdajesz raport. Jego twarz czerwienieje, a knykcie stają się kredowobiałe.%SPEECH_ON%Tak myślałem. Tak myślałem. Do cholery, tak myślałem! Ale stajenny? Nie pozwolę, by mnie tak znieważono!%SPEECH_OFF%Pstryka palcami na strażników.%SPEECH_ON%Przynieście mi szczypce i palenisko kowalskie. Zabierzcie moją 'żonę' do wieży. Zajmę się nią później. A tobie, najemniku, dziękuję za przekazanie mi tej wieści. Co do goblina, został znaleziony i się nim zajęto. Nie musisz się tym więcej przejmować.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Truly a savage cockblocking.",
+					Text = "Prawdziwie dzika blokada uciech.",
 					function getResult( _event )
 					{
 						return 0;
@@ -164,13 +164,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You decide not to tell the nobleman of what is wife is up to. The two lovebirds get dressed and hurry out of the pantry, the stable boy pausing to tell you he\'ll have that shield ready when you leave the castle. In the meantime, you report to the lord who stays you with a hand.%SPEECH_ON%Ah, you need not worry yourself any longer, sellsword. The goblin was found in the stables. One of the horses kicked it clear across the barn! I\'ll have to reward the stable boy on the soldiering abilities of his steeds!%SPEECH_OFF%Hmm, of course.\n\n When you leave the castle, the stable boy is there, a suspiciously shield-shaped sack in his hands.%SPEECH_ON%Here, take this. Hurry. And thanks again, sellsword.%SPEECH_OFF%You tell him it\'d be best if he kept it in his pants from now on. He shakes his head.%SPEECH_ON%Nah. She\'s worth it. See you later, sellsword.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Postanawiasz nie mówić szlachcicowi o tym, co wyprawia jego żona. Para gołąbków ubiera się i szybko ucieka ze spiżarni, a stajenny zatrzymuje się, by powiedzieć, że tarcza będzie gotowa, gdy będziesz opuszczał zamek. Tymczasem zgłaszasz się do pana, który powstrzymuje cię gestem.%SPEECH_ON%Ach, nie musisz się już tym martwić, najemniku. Goblin został znaleziony w stajniach. Jeden z koni kopnął go na wylot przez stodołę! Będę musiał nagrodzić stajennego za wojownicze umiejętności jego rumaków!%SPEECH_OFF%Hmm, oczywiście.\n\n Gdy opuszczasz zamek, stajenny czeka z podejrzanie tarczowatym workiem w dłoniach.%SPEECH_ON%Proszę, weź to. Pośpiesz się. I jeszcze raz dzięki, najemniku.%SPEECH_OFF%Mówisz mu, że od teraz najlepiej, by trzymał to w spodniach. Kręci głową.%SPEECH_ON%Nie. Warto. Do zobaczenia, najemniku.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Some men just never learn.",
+					Text = "Niektórzy mężczyźni nigdy się nie uczą.",
 					function getResult( _event )
 					{
 						return 0;
@@ -189,20 +189,20 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E1",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You investigate the halls to see if the little green runt is footing about. Walking down a hallway, you hear the cry of two women come from a nearby room. You draw your sword and barge in. A scribe and treasurer are standing atop a desk while a little goblin jumps up and down to try and knife their ankles. You casually walk in and stab the greenskin through the chest and loft it up like a skewered squirrel. The men calm down and thank you for your work. You nod.%SPEECH_ON%Anytime, ladies.%SPEECH_OFF%They clear their throats and offers nervous smiles. You head on back to %nobleman% and get your pay.",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Przeszukujesz korytarze, by sprawdzić, czy mały zielony szkrab kręci się w pobliżu. Idąc korytarzem, słyszysz krzyk dwóch kobiet z pobliskiego pokoju. Dobywasz miecza i wpadasz do środka. Skryba i skarbnik stoją na biurku, a mały goblin podskakuje, próbując dźgnąć ich w kostki. Wchodzisz spokojnie i przebijasz zielonoskórego przez pierś, unosząc go jak nabitego na rożen wiewióra. Mężczyźni uspokajają się i dziękują za pomoc. Kiwasz głową.%SPEECH_ON%Kiedy tylko zechcecie, panie.%SPEECH_OFF%Odchrząkują i uśmiechają się nerwowo. Wracasz do %nobleman% po zapłatę.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "That was easy.",
+					Text = "To było łatwe.",
 					function getResult( _event )
 					{
 						return 0;
@@ -220,7 +220,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You earn [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] Crowns"
+						text = "Zarabiasz [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] Koron"
 					}
 				];
 			}
@@ -228,13 +228,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E2",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You figure the halls are as good a place as any to start your search. No more than a few twists and turns later do you hear a disturbing noise coming from the treasury. Drawing your blade, you ease up next to the door and then shoulder it open, leveling your weapon at whatever may stand on the other side. Instead of a goblin, you find a young and old man who jump in a fright, each with trousers well dropped, and there\'s a tub of slopped butter on the desk against which they had been leaning. The room smells... awful.\n\n Dressing themselves, the younger fellow states that he is the treasurer while the elder informs you of his position as scribe. The treasurer quickly offers you a good deal of coin to keep silent about these delicate matters. You laugh.%SPEECH_ON%I won\'t be falling for that trick. If I take that coin, you simply run along to your lord and tell him I stole it, no? What better way to protect yourself than to ensure my execution?%SPEECH_OFF%The treasurer retreats and the scribe steps forward. He is an elderly man who smells of arse and candlewax.%SPEECH_ON%In my repository, I have many things which are owned by me, not my lord. These items might be of great interest to you. Potions, drinks, goods which a fighting man such as yourself could make use of. And... and I\'ll throw in a wardog! A local houndmaster owes me a favor and now is as good of a time as any to call upon it!%SPEECH_OFF%The scribe laughs nervously as you mull the idea over. If you turned them in, who knows what may happen. Sodomites bother you none, but there are lords across the realm who consider such fornications to be abhorrent. If %nobleman% is such a fellow, you might gain favor by \'rooting\' these men out.",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Uznajesz, że korytarze są równie dobrym miejscem na rozpoczęcie poszukiwań. Po kilku zakrętach słyszysz niepokojący hałas dochodzący ze skarbca. Dobywasz ostrza, podchodzisz do drzwi i napierasz na nie barkiem, celując bronią we wszystko, co może stać po drugiej stronie. Zamiast goblina znajdujesz młodego i starszego mężczyznę, którzy podskakują ze strachu, każdy ze spuścionymi spodniami, a na biurku stoi beczułka z rozchlapaną maślanką, o którą się opierali. W pokoju śmierdzi... okropnie.\n\n Ubierając się, młodszy mówi, że jest skarbnikiem, a starszy informuje, że jest skrybą. Skarbnik szybko oferuje ci sporą sumę, byś milczał o tych delikatnych sprawach. Śmiejesz się.%SPEECH_ON%Nie dam się na to nabrać. Jeśli wezmę te monety, pobiegniesz do pana i powiesz mu, że je ukradłem, prawda? Jaki lepszy sposób na ochronę siebie niż dopilnowanie mojej egzekucji?%SPEECH_OFF%Skarbnik się cofa, a skryba robi krok naprzód. To starszy mężczyzna, który pachnie dupą i woskiem świec.%SPEECH_ON%W moim skarbcu mam wiele rzeczy, które należą do mnie, nie do mojego pana. Te przedmioty mogą cię bardzo zainteresować. Eliksiry, napitki, dobra, z których wojownik taki jak ty mógłby skorzystać. I... i dorzucę psa bojowego! Lokalny psiarz jest mi winien przysługę, a teraz to równie dobry czas, by się o nią upomnieć!%SPEECH_OFF%Skryba śmieje się nerwowo, gdy rozważasz pomysł. Gdybyś ich wydał, nie wiadomo, co by się stało. Sodomici ci nie przeszkadzają, ale w całym królestwie są panowie, którzy uważają takie praktyki za odrażające. Jeśli %nobleman% jest takim człowiekiem, możesz zyskać przychylność, 'wykorzeniając' tych mężczyzn.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "The lord of the castle will decide your fates.",
+					Text = "Pan zamku zdecyduje o waszym losie.",
 					function getResult( _event )
 					{
 						return "F";
@@ -242,7 +242,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Your secret is safe with me.",
+					Text = "Twój sekret jest u mnie bezpieczny.",
 					function getResult( _event )
 					{
 						return "G";
@@ -258,13 +258,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You close the closet door and hurry to %nobleman%. You explain to the nobleman what you\'ve seen. When you finish, he states that the goblin had been found drowning in a sewage stream and has been put out of its misery.%SPEECH_ON%As for the sodomites, yes, what of it? Have you looked around? A fort is a nonsensical place to the urges of a man. Swingin\' dicks as far as the eye can see and nowhere to put them. Do I like it? No, of course not. Absolutely disgusting nonsense, truly. But if I punished every instance of this behavior I\'d be left with a bunch of scarecrows and farm animals, and I can\'t even be sure of the latter.%SPEECH_OFF%He waves you off.%SPEECH_ON%The goblin\'s been taken care of, sellsword, I\'ve little else to speak to you about. However, if you could, please inform the servants that the room in which you found them needs cleaning. I care not to look over taxes in a smog of shite.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Zamykasz drzwi składziku i spieszysz do %nobleman%. Wyjaśniasz mu, co widziałeś. Gdy kończysz, oznajmia, że goblin został znaleziony tonący w strumieniu ścieków i wybawiono go od męki.%SPEECH_ON%Co do sodomitów, tak, i co z tego? Rozejrzałeś się? Fort to bezsensowne miejsce dla męskich żądz. Wszędzie dyndające fiuty i nigdzie, by je włożyć. Czy mi się to podoba? Nie, oczywiście, że nie. Absolutnie obrzydliwe, doprawdy. Ale gdybym karał każdy taki przypadek, zostałbym z bandą strachów na wróble i zwierząt gospodarskich, a co do tych drugich nie mam nawet pewności.%SPEECH_OFF%Machnięciem ręki odprawia cię.%SPEECH_ON%Goblinem się zajęto, najemniku, niewiele mam już ci do powiedzenia. Jednak jeśli możesz, poinformuj służbę, że pokój, w którym ich znalazłeś, wymaga sprzątania. Nie mam ochoty przeglądać podatków w smrodzie gówna.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Oh.",
+					Text = "Och.",
 					function getResult( _event )
 					{
 						return 0;
@@ -281,13 +281,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You decide to keep their secret under the pretense that the scribe will give you what he has promised. The old man nods as you leave.%SPEECH_ON%I will find you in the courtyard, sellsword, with everything that you are owed. Your silence on this matter is most appreciated.%SPEECH_OFF%When you return to %nobleman%, he explains that the goblin had been found and taken care of. Seeing as how you weren\'t responsible, he sends you off without pay.\n\n Outside, the scribe does in fact meet you. He\'s got a leash in one hand and a sack in the other. He hands them both over.%SPEECH_ON%Once again, my thanks, sellsword.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Postanawiasz zachować ich sekret, licząc na to, że skryba da ci to, co obiecał. Starzec kiwa głową, gdy odchodzisz.%SPEECH_ON%Znajdę cię na dziedzińcu, najemniku, ze wszystkim, co ci się należy. Twoje milczenie w tej sprawie bardzo doceniam.%SPEECH_OFF%Gdy wracasz do %nobleman%, wyjaśnia, że goblin został znaleziony i się nim zajęto. Ponieważ nie byłeś za to odpowiedzialny, odsyła cię bez zapłaty.\n\n Na zewnątrz skryba faktycznie cię spotyka. W jednej ręce ma smycz, w drugiej worek. Podaje ci oba.%SPEECH_ON%Jeszcze raz dziękuję, najemniku.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "I should learn more secrets.",
+					Text = "Powinienem poznać więcej sekretów.",
 					function getResult( _event )
 					{
 						return 0;
@@ -304,41 +304,41 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/accessory/antidote_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/accessory/berserker_mushrooms_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/accessory/wardog_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "H1",
-			Text = "[img]gfx/ui/events/event_31.png[/img]If you were a goblin in a castle of people wanting to kill you, where would you go? Putting yourself in the mind of the runt, you come to the conclusion that the armory would be as good a place as any to start your search. When you get there, you do find an apprentice standing outside and trying to hold the door shut. He yells that the goblin is inside and has already killed the blacksmith. Drawing your blade, you tell the apprentice to stand aside.\n\n The second he does, the door bursts open and a goblin, shaped like a scarecrow built out of broken buckets, shambles out, armored head-to-toe, a shield and spear clumsily stationed at its front. Ignoring the absurdity of what is being seen, you strike through the clutter and pierce the beast\'s skull, instantly killing it. When you withdraw your sword, all the armor and weapons fall away as though you\'d just slain an apparition holding them up.\n\n The apprentice quickly shakes your hand before falling to his knees, weeping over the loss of the blacksmith. With no time for tears, you take the goblin\'s head and return to %nobleman% for your pay.",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Gdybyś był goblinem w zamku pełnym ludzi, którzy chcą cię zabić, dokąd byś poszedł? Wcielając się w umysł szkraba, dochodzisz do wniosku, że zbrojownia to równie dobre miejsce, by rozpocząć poszukiwania. Kiedy tam docierasz, rzeczywiście widzisz ucznia stojącego na zewnątrz i próbującego przytrzymać drzwi zamknięte. Krzyczy, że goblin jest w środku i już zabił kowala. Dobywając ostrza, każesz uczniowi odsunąć się.\n\n Gdy tylko to robi, drzwi wybuchają, a goblin, wyglądający jak strach na wróble zbudowany z połamanych wiader, chwiejnie wychodzi, opancerzony od stóp do głów, z tarczą i włócznią niezgrabnie ustawionymi z przodu. Ignorując absurd tego widoku, przebijasz się przez cały ten złom i przebijasz czaszkę bestii, natychmiast ją zabijając. Gdy wyciągasz miecz, cały pancerz i broń opadają, jakbyś właśnie zabił zjawę, która je podtrzymywała.\n\n Uczeń szybko ściska ci dłoń, po czym pada na kolana, płacząc po stracie kowala. Nie ma czasu na łzy, zabierasz głowę goblina i wracasz do %nobleman% po zapłatę.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "That was easy.",
+					Text = "To było łatwe.",
 					function getResult( _event )
 					{
 						return 0;
@@ -356,7 +356,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You earn [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] Crowns"
+						text = "Zarabiasz [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] Koron"
 					}
 				];
 			}
@@ -364,13 +364,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H2",
-			Text = "[img]gfx/ui/events/event_31.png[/img]Well, if you were a tiny dwarf in a hostile fortress the first place you\'d go is the armory. When you get there, you don\'t find any goblin, but instead there\'s a kid drawing a dagger out of a man who is face down on the floor. The murderer drops his weapon and holds his hands up.%SPEECH_ON%I had no choice! No choice at all!%SPEECH_OFF%You ask the kid who he and the dead man are. He quickly explains.%SPEECH_ON%I\'m the apprentice and this is... was the blacksmith. Now, this had to be done. Had to! You\'ve no idea what horrors this man has put upon me! Every time I errored, he punished me as though I was a kingslaying cretin! See this?%SPEECH_OFF%He sweeps a length of hair out of the way, revealing the bulbous scars of burns. Letting go of the hair, he holds up a hand with a grotesque pinky that rests at a right angle, and the other hand which has no pinky at all. He starts taking a boot off, but you stop him, getting the point. The apprentice clasps his hands together, his pinky sticking out like a haughty highborn sipping wine.%SPEECH_ON%You\'re after the goblin, right? Just tell them the goblin did it! I\'ll... look, I\'m not much of an armorer, but I can forge a sword like nobody\'s business and I will forge you the absolute best that I can do. Just keep this secret between us, that\'s all I ask.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Cóż, gdybyś był małym karzełkiem w wrogiej twierdzy, pierwszym miejscem, do którego byś poszedł, byłaby zbrojownia. Kiedy tam docierasz, nie znajdujesz żadnego goblina, lecz chłopaka wyciągającego sztylet z mężczyzny leżącego twarzą do ziemi. Morderca upuszcza broń i unosi ręce.%SPEECH_ON%Nie miałem wyboru! Żadnego!%SPEECH_OFF%Pytasz chłopaka, kim on jest i kim jest martwy mężczyzna. Szybko wyjaśnia.%SPEECH_ON%Jestem uczniem, a to... był kowal. I to musiało się stać. Musiało! Nie masz pojęcia, jakie okropności ten człowiek mi robił! Za każdym razem, gdy się pomyliłem, karał mnie jakbym był kretynem, który zabił króla! Widzisz to?%SPEECH_OFF%Odgarnia włosy, odsłaniając wypukłe blizny po oparzeniach. Odsuwając włosy, unosi dłoń z groteskowym małym palcem zgiętym pod kątem prostym oraz drugą dłoń bez małego palca. Zaczyna zdejmować but, ale go zatrzymujesz, rozumiejąc aluzję. Uczeń splata dłonie, a mały palec wystaje jak u wyniosłego możnowładcy popijającego wino.%SPEECH_ON%Szukasz goblina, prawda? Po prostu powiedz im, że to goblin to zrobił! Ja... słuchaj, nie jestem wielkim płatnerzem, ale potrafię kuć miecze jak nikt inny i wykupię dla ciebie absolutnie najlepsze, na jakie mnie stać. Zachowaj tylko ten sekret między nami, o to proszę.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Such a crime can\'t go unpunished!",
+					Text = "Taka zbrodnia nie może ujść bezkarnie!",
 					function getResult( _event )
 					{
 						return "I";
@@ -378,7 +378,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Your secret is safe with me.",
+					Text = "Twój sekret jest u mnie bezpieczny.",
 					function getResult( _event )
 					{
 						return "J";
@@ -394,13 +394,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You close the door and lock it, ensuring that the murderer will not be able to flee. As the apprentice screams and bangs against the door, you return to the nobleman.\n\n %nobleman% listens to your report and nods.%SPEECH_ON%Mmhmm, yes. The blacksmith is not the first to fall by that boy\'s hand - we\'ve had a series of murders here, but have never been able to find the culprit. Many believed it him on account of his bashing his hands with hammers and putting his face to a torch. The stable boy even saw him cut the cock off a rat. He was a disturbed fellow, but now you\'ve given us definitive proof of his doings. Well done, sellsword! The goblin you were after has already been taken care of, but this... this is far better than hunting down some greenskin. Consider your payment doubled!%SPEECH_OFF%The nobleman snaps his fingers at his scribe and starts uttering orders, ostensibly issuing a writ of execution. He goes into incredible detail about the logistics of the matter: horses, ropes, blades, tongs, hot fires, a litany of horrors to keep bored soldiers entertained for hours.",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Zamykasz drzwi i je ryglujesz, upewniając się, że morderca nie zdoła uciec. Gdy uczeń krzyczy i wali w drzwi, wracasz do szlachcica.\n\n %nobleman% słucha twojej relacji i kiwa głową.%SPEECH_ON%Mhm, tak. Kowal nie był pierwszym, który zginął z ręki tego chłopaka - mieliśmy tu serię morderstw, ale nigdy nie mogliśmy znaleźć sprawcy. Wielu podejrzewało jego z powodu tego, jak tłukł sobie dłonie młotami i przypalał twarz pochodnią. Stajenny nawet widział, jak odciął fiuta szczurze. To był niespokojny człowiek, ale teraz dałeś nam ostateczny dowód jego czynów. Dobra robota, najemniku! Goblin, którego szukałeś, już został zlikwidowany, ale to... to jest o wiele lepsze niż polowanie na jakiegoś zielonoskórego. Uznaj swoją zapłatę za podwojoną!%SPEECH_OFF%Szlachcic pstryka palcami do skryby i zaczyna wydawać rozkazy, najwyraźniej wystawiając wyrok śmierci. Opisuje logistykę z niewiarygodną dokładnością: konie, liny, ostrza, szczypce, rozżarzone ognie, litanię okropności, by znudzeni żołnierze mieli rozrywkę przez wiele godzin.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Very good.",
+					Text = "Bardzo dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -418,7 +418,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You earn [color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color] Crowns"
+						text = "Zarabiasz [color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color] Koron"
 					}
 				];
 			}
@@ -426,13 +426,13 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "J",
-			Text = "[img]gfx/ui/events/event_31.png[/img]You close the door and lock it, ensuring that the murderer will not be able to flee. As the apprentice screams and bangs against the door, you return to the nobleman.\n\n %nobleman% listens to your report and nods.%SPEECH_ON%Mmhmm, yes. The blacksmith is not the first to fall by that boy\'s hand - we\'ve had a series of murders here, but have never been able to find the culprit. Many believed it him on account of his bashing his hands with hammers and putting his face to a torch. The stable boy even saw him cut the cock off a rat. He was a disturbed fellow, but now you\'ve given us definitive proof of his doings. Well done, sellsword! The goblin you were after has already been taken care of, but this... this is far better than hunting down some greenskin. Consider your payment doubled!%SPEECH_OFF%The nobleman snaps his fingers at his scribe and starts uttering orders, ostensibly issuing a writ of execution. He goes into incredible detail about the logistics of the matter: horses, ropes, blades, tongs, hot fires, a litany of horrors to keep bored soldiers entertained for hours.",
+			Text = "[img]gfx/ui/events/event_31.png[/img]Zamykasz drzwi i je ryglujesz, upewniając się, że morderca nie zdoła uciec. Gdy uczeń krzyczy i wali w drzwi, wracasz do szlachcica.\n\n %nobleman% słucha twojej relacji i kiwa głową.%SPEECH_ON%Mhm, tak. Kowal nie był pierwszym, który zginął z ręki tego chłopaka - mieliśmy tu serię morderstw, ale nigdy nie mogliśmy znaleźć sprawcy. Wielu podejrzewało jego z powodu tego, jak tłukł sobie dłonie młotami i przypalał twarz pochodnią. Stajenny nawet widział, jak odciął fiuta szczurze. To był niespokojny człowiek, ale teraz dałeś nam ostateczny dowód jego czynów. Dobra robota, najemniku! Goblin, którego szukałeś, już został zlikwidowany, ale to... to jest o wiele lepsze niż polowanie na jakiegoś zielonoskórego. Uznaj swoją zapłatę za podwojoną!%SPEECH_OFF%Szlachcic pstryka palcami do skryby i zaczyna wydawać rozkazy, najwyraźniej wystawiając wyrok śmierci. Opisuje logistykę z niewiarygodną dokładnością: konie, liny, ostrza, szczypce, rozżarzone ognie, litanię okropności, by znudzeni żołnierze mieli rozrywkę przez wiele godzin.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Very good.",
+					Text = "Bardzo dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -448,7 +448,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

@@ -5,16 +5,16 @@ this.greenskins_slayer_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.greenskins_slayer";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_35.png[/img]While marching, a man crosses paths with the %companyname%. He is well armored and appears rather knightly save for one feature: a bone necklace hanging from his neck. With each step it clatters with sickly hollowness against his breastplate. You regard this stranger and his skeletal adornments with caution, lest he make a belt out of yer cock and a breast plate out of yer...%SPEECH_ON%Evening, sellswords.%SPEECH_OFF%The warrior waves. There\'s an unseen weight to this man, as though surrounded by dead air or perhaps the souls of his victims. He nods and continues speaking.%SPEECH_ON%You seem the greenskin skinnin\' sort, and that\'s the sort of company I\'d be most agreeable to joining.%SPEECH_OFF%%randombrother% exchanges a glance with you and shrugs. He whispers his indifference.%SPEECH_ON%If he\'s a problem, we can handle him.%SPEECH_OFF%The man shakes his head.%SPEECH_ON%Oh, I\'ll be no problem. I just want to kill orcs and goblins. What more do you need to know? Once these greenskins are taken care of, I\'ll be out of your hair.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_35.png[/img]Podczas marszu waszą drogę przecina mężczyzna. Jest dobrze opancerzony i wygląda dość rycersko, z jednym wyjątkiem: kościany naszyjnik zwisa mu z szyi. Z każdym krokiem dźwięczy chorym, pustym stukiem o napierśnik. Patrzysz na nieznajomego i jego kościane ozdoby z ostrożnością, by nie zrobił pasa z twojego fiuta i napierśnika z twojego...%SPEECH_ON%Dobry wieczór, najemnicy.%SPEECH_OFF%Wojownik macha ręką. Jest w nim niewidoczny ciężar, jakby otaczało go martwe powietrze albo dusze jego ofiar. Kiwając głową, ciągnie dalej.%SPEECH_ON%Wyglądacie na takich, co skórują zielonoskórych, a towarzystwo tego rodzaju najbardziej mi odpowiada.%SPEECH_OFF%%randombrother% wymienia z tobą spojrzenie i wzrusza ramionami. Szepcze obojętnie.%SPEECH_ON%Jeśli jest problemem, poradzimy sobie z nim.%SPEECH_OFF%Mężczyzna kręci głową.%SPEECH_ON%Och, nie będę problemem. Chcę tylko zabijać orki i gobliny. Czego więcej musisz wiedzieć? Gdy zielonoskórni zostaną załatwieni, zniknę z waszej głowy.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "You might as well join us.",
+					Text = "Możesz do nas dołączyć.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -26,7 +26,7 @@ this.greenskins_slayer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, thanks, we\'re good.",
+					Text = "Nie, dzięki, poradzimy sobie.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();

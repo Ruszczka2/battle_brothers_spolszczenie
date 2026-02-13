@@ -5,17 +5,17 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.greenskins_outro";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You come across a handful of soldiers from %randomnoblehouse%. They tilt their caps at you.%SPEECH_ON%Evening, mercenaries.%SPEECH_OFF%Not sure if they\'re about to attack, you make a subtle nod toward %dude%. He puts his weapon within hand\'s reach and nods back. You return your attention to the soldiers, giving them a friendly wave. Their lieutenant steps forward, grinning.%SPEECH_ON%Oy\' mercenary, we\'ve little use for you in this world now.%SPEECH_OFF%Slowly, you lower your hand, hovering it above the pommel of your sword. You ask what the man means by that. He laughs.%SPEECH_ON%You haven\'t heard? War\'s over. The greenskins were routed from %randomtown% just a few days ago. Scouts report seeing them bastards running for the hills every which way, fighting amongst themselves, the orcs killing the goblins, goblins killing the orcs, just a full on rout. So, yeah, noble houses need not pay your sorry arse for nothing now because us real soldiers got it under control. Now why don\'t you and your pathetic lot clear out of the way. Us fighters got places to be, understand?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Spotykasz garstkę żołnierzy z %randomnoblehouse%. Przechylają przed tobą czapki.%SPEECH_ON%Dobry wieczór, najemnicy.%SPEECH_OFF%Niepewny, czy zaraz nie zaatakują, posyłasz subtelny znak do %dude%. Sięga po broń, trzymając ją w zasięgu dłoni, i kiwa w odpowiedzi. Zwracasz uwagę z powrotem na żołnierzy, machając przyjaźnie. Ich porucznik robi krok do przodu, uśmiechając się krzywo.%SPEECH_ON%Ej, najemniku, teraz niewiele z waszego pożytku.%SPEECH_OFF%Powoli opuszczasz dłoń, trzymając ją nad rękojeścią miecza. Pytasz, co ma na myśli. Śmieje się.%SPEECH_ON%Nie słyszałeś? Wojna się skończyła. Zielonoskórni zostali rozbici pod %randomtown% zaledwie kilka dni temu. Zwiadowcy mówią, że te skurczybyki uciekają w góry na wszystkie strony, walczą między sobą, orki zabijają gobliny, gobliny zabijają orki, pełny pogrom. Więc tak, szlacheckie rody nie muszą już płacić waszych żałosnych tyłków, bo my, prawdziwi żołnierze, mamy to pod kontrolą. A teraz znikajcie wy i wasza żałosna zgraja z drogi. My, walczący, mamy gdzie być, rozumiesz?%SPEECH_OFF%",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s move to let these heroes of the realm pass.",
+					Text = "Ustąpmy, by ci bohaterowie królestwa mogli przejść.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You handle him, %dude%.",
+					Text = "Zajmij się nim, %dude%.",
 					function getResult( _event )
 					{
 						return "C";
@@ -57,12 +57,12 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%dude% reaches for his weapon, but you shake your head. The lieutenant nods toward the mercenary.%SPEECH_ON%Best keep that dog on its leash, aye?%SPEECH_OFF%You fan your arm out, inviting the soldiers a \'passage\' they knew they already had. The soldiers gear up and the lieutenant smirks.%SPEECH_ON%I knew you\'d make the right choice. We\'re just \'aving a bit of fun, yeah? You ladies stay tight.%SPEECH_OFF%The man blows a kiss as he walks by. %dude% stands up looking like someone just socked his mother. You tell him to sit back down and he begrudgingly does so. It\'s all bullshit, these theatrics, but you\'re not one to lose your temper and get people killed over it.\n\nThe incident does make you wonder if maybe it\'s time to turn it all in. The greenskins are beaten back and you\'ve made enough money to leave the life for good, but then again you\'d hate to live out the rest of your days wondering \'what if\'...\n\n%OOC%You\'ve won! Battle Brothers is designed for replayability and for campaigns to be played until you\'ve beaten one or two late game crises. Starting a new campaign will allow you to try out different things in a different world.\n\nYou can also choose to continue your campaign for as long as you want. Just be aware that campaigns are not intended to last forever and you\'re likely to run out of challenges eventually.%OOC_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%dude% sięga po broń, ale kręcisz głową. Porucznik kiwa w stronę najemnika.%SPEECH_ON%Lepiej trzymaj tego psa na smyczy, co?%SPEECH_OFF%Rozkładasz ramię, zapraszając żołnierzy do 'przejścia', które i tak mieli. Żołnierze ruszają, a porucznik uśmiecha się krzywo.%SPEECH_ON%Wiedziałem, że wybierzesz właściwie. My tylko tak się bawimy, co? Panienki, trzymajcie się.%SPEECH_OFF%Mężczyzna posyła buziaka, przechodząc obok. %dude% wstaje, wyglądając jak ktoś, komu właśnie uderzono matkę. Mówisz mu, by usiadł, i niechętnie to robi. To wszystko bzdury, te teatrzyki, ale nie jesteś kimś, kto traci zimną krew i przez to giną ludzie.\n\nIncydent sprawia jednak, że zastanawiasz się, czy nie czas już to wszystko zakończyć. Zielonoskórni zostali odparci, a ty zarobiłeś dość, by na zawsze porzucić ten fach, ale z drugiej strony nie chciałbyś spędzić reszty dni, zastanawiając się 'co by było, gdyby'...\n\n%OOC%Wygrałeś! Battle Brothers zostało zaprojektowane z myślą o regrywalności i kampaniach, które kończy się po pokonaniu jednego lub dwóch późnych kryzysów. Nowa kampania pozwoli ci spróbować różnych rzeczy w innym świecie.\n\nMożesz też kontynuować kampanię tak długo, jak chcesz. Pamiętaj jednak, że kampanie nie są przeznaczone do trwania wiecznie i w końcu zabraknie ci wyzwań.%OOC_OFF%",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The %companyname% needs their commander!",
+					Text = "%companyname% potrzebuje swojego dowódcy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -70,7 +70,7 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s time to retire from mercenary life. (End Campaign)",
+					Text = "Czas przejść na emeryturę z życia najemnika. (Zakończ kampanię)",
 					function getResult( _event )
 					{
 						this.World.State.getMenuStack().pop(true);
@@ -88,12 +88,12 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]The soldiers\' lieutenant glares at you.%SPEECH_ON%Do as I said, sellsword, or there will be trouble.%SPEECH_OFF%Ignoring him, you give another nod to %dude%. He gets up, the blade of his weapon loudly scraping off the dirt. The soldiers turn to the mercenary. He hefts his weapon into both hands and stares back. As the lieutenant starts to talk, %dude% bluntly interrupts.%SPEECH_ON%Shush, little man. I see softness in your skin. Not a scar to be seen. Eyes as fresh as the day they were born. Hands as smooth as untouched candles. If you was of the fightin\' sort, you\'d be out there in those battles you speak of, not out here pissing into the wind. I\'ll give you two options because I\'m feeling nice. First option, are you listening? First option is this. Go where you are going and don\'t say another goddam word.%SPEECH_OFF%He pauses to hold up two fingers.%SPEECH_ON%Option two is a mystery. Speak and ye shall learn of it.%SPEECH_OFF%The lieutenant\'s eyes have gotten a little wider, and his mouth infinitely quieter. He glances at you, but all you can do is shrug. After another moment, the soldiers hurry away with determined silence.\n\n%dude% laughs it up, but the incident has you wondering if perhaps it is finally the time to retire. How many more of these cockups are in your future? How many more battles? How many more dead men will you have to bury? The company would do well standing on the foundations you\'ve built for it. But on the other hand, if you retired now, what adventures would you miss out on?\n\n%OOC%You\'ve won! Battle Brothers is designed for replayability and for campaigns to be played until you\'ve beaten one or two late game crises. Starting a new campaign will allow you to try out different things in a different world.\n\nYou can also choose to continue your campaign for as long as you want. Just be aware that campaigns are not intended to last forever and you\'re likely to run out of challenges eventually.%OOC_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Porucznik żołnierzy rzuca ci gniewne spojrzenie.%SPEECH_ON%Rób, co powiedziałem, najemniku, albo będą kłopoty.%SPEECH_OFF%Ignorując go, posyłasz kolejny znak do %dude%. Wstaje, a ostrze jego broni głośno szura po ziemi. Żołnierze odwracają się do najemnika. Chwyta broń oburącz i wpatruje się w nich. Gdy porucznik zaczyna mówić, %dude% bezceremonialnie mu przerywa.%SPEECH_ON%Cicho, mały człowieczku. Widzę miękkość w twojej skórze. Żadnej blizny. Oczy świeże jak w dniu narodzin. Dłonie gładkie jak nieużywane świece. Gdybyś był z walczącego sortu, byłbyś tam, w bitwach, o których mówisz, a nie tu, szczając pod wiatr. Dam ci dwie opcje, bo mam dobry humor. Pierwsza opcja, słuchasz? Pierwsza opcja jest taka. Idź tam, dokąd zmierzasz, i nie wypowiedz ani jednego cholernego słowa.%SPEECH_OFF%Pauzuje, unosząc dwa palce.%SPEECH_ON%Opcja druga to tajemnica. Odezwij się, a się dowiesz.%SPEECH_OFF%Oczy porucznika robią się nieco szersze, a usta nieskończenie cichsze. Spogląda na ciebie, ale możesz tylko wzruszyć ramionami. Po chwili żołnierze odchodzą w pospiesznym milczeniu.\n\n%dude% śmieje się z całego zajścia, ale incydent sprawia, że zastanawiasz się, czy to nie czas wreszcie przejść na emeryturę. Ile jeszcze takich wtop czeka cię w przyszłości? Ile jeszcze bitew? Ilu jeszcze martwych będziesz musiał pochować? Kompania dobrze stoi na fundamencie, który jej zbudowałeś. Ale z drugiej strony, gdybyś przeszedł na emeryturę teraz, jakich przygód byś nie przeżył?\n\n%OOC%Wygrałeś! Battle Brothers zostało zaprojektowane z myślą o regrywalności i kampaniach, które kończy się po pokonaniu jednego lub dwóch późnych kryzysów. Nowa kampania pozwoli ci spróbować różnych rzeczy w innym świecie.\n\nMożesz też kontynuować kampanię tak długo, jak chcesz. Pamiętaj jednak, że kampanie nie są przeznaczone do trwania wiecznie i w końcu zabraknie ci wyzwań.%OOC_OFF%",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The %companyname% needs their commander!",
+					Text = "%companyname% potrzebuje swojego dowódcy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -101,7 +101,7 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s time to retire from mercenary life. (End Campaign)",
+					Text = "Czas przejść na emeryturę z życia najemnika. (Zakończ kampanię)",
 					function getResult( _event )
 					{
 						this.World.State.getMenuStack().pop(true);

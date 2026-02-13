@@ -5,16 +5,16 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.civilwar_treasurer";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_72.png[/img]While marching the lands, you come to find a farmer being accosted by a well-to-do looking man. Seeing you, the farmer quickly calls out.%SPEECH_ON%Sir, help me! This treasurer wants to take my crops!%SPEECH_OFF%The treasurer nods, seemingly as though there\'s no crime being committed here.%SPEECH_ON%That is correct. I\'ve been sent from %noblehouse% and I am here to collect food stores for the army. This is our land, and thus our crops.%SPEECH_OFF%The grind of war gets steadily worse... %randombrother% asks what you want to do.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Maszerując przez ziemie, natrafiasz na rolnika zaczepianego przez zamożnie wyglądającego mężczyznę. Na twój widok rolnik szybko woła.%SPEECH_ON%Panie, pomóż mi! Ten skarbnik chce zabrać moje plony!%SPEECH_OFF%Skarbnik kiwa głową, jakby nie działo się nic złego.%SPEECH_ON%To prawda. Zostałem wysłany przez %noblehouse% i jestem tutaj, by zebrać zapasy żywności dla armii. To nasza ziemia, a więc i nasze plony.%SPEECH_OFF%Ucisk wojny staje się coraz gorszy... %randombrother% pyta, co chcesz zrobić.",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Leave that farmer alone!",
+					Text = "Zostawcie tego rolnika w spokoju!",
 					function getResult( _event )
 					{
 						return "B";
@@ -22,7 +22,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This is none of our business.",
+					Text = "To nie nasza sprawa.",
 					function getResult( _event )
 					{
 						return "C";
@@ -30,7 +30,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Out of the way, both of you. This food is now ours!",
+					Text = "Z drogi, obaj. To jedzenie jest teraz nasze!",
 					function getResult( _event )
 					{
 						return "D";
@@ -46,13 +46,13 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_72.png[/img]Although morality has little play in the game of war, you can\'t help but think this poor farmer\'s done nothing wrong. You grab the treasurer by his shirt and press him against a farmhouse. His eyes go wide, as though you just pierced some veil of invincibility.%SPEECH_ON%Just what do you think you\'re doing?%SPEECH_OFF%You loosen your grab, because while this man may not be invincible, his name does have the backing of one.%SPEECH_ON%Tell your men that this farmer had nothing to offer. Crops were bad this season, got it?%SPEECH_OFF%You put one hand on the pommel of your sword. The man glances at it, then quickly nods.%SPEECH_ON%Alright, I got it.%SPEECH_OFF%The farmer thanks you from the bottom of his heart, and also a little by the bottom of his food stores, rewarding you with a few sacks of grains for your help.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Choć moralność ma niewielkie znaczenie w grze wojny, nie możesz nie myśleć, że ten biedny rolnik niczemu nie zawinił. Chwytasz skarbnika za koszulę i przyciskasz do ściany zagrody. Jego oczy rozszerzają się, jakbyś właśnie przebił jakąś zasłonę nietykalności.%SPEECH_ON%Co ty, do diabła, wyprawiasz?%SPEECH_OFF%Rozluźniasz uścisk, bo choć ten człowiek może nie jest nietykalny, jego nazwisko ma za sobą takich, którzy są.%SPEECH_ON%Powiedz swoim ludziom, że ten rolnik nie miał nic do zaoferowania. Plony były w tym sezonie marne, jasne?%SPEECH_OFF%Kładziesz dłoń na rękojeści miecza. Mężczyzna zerka na nią, po czym szybko kiwa głową.%SPEECH_ON%Dobrze, rozumiem.%SPEECH_OFF%Rolnik dziękuje ci z całego serca, a także z odrobiną swoich zapasów, nagradzając cię kilkoma workami zboża za pomoc.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "We did some good this day.",
+					Text = "Dziś zrobiliśmy coś dobrego.",
 					function getResult( _event )
 					{
 						return 0;
@@ -71,7 +71,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -96,13 +96,13 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_72.png[/img]While you feel bad for the farmer, feelings aren\'t exactly worth much when there\'s a great war going on between the noble houses. You choose not to involve yourself. As the treasurer\'s daytalers carry sacks of grain onto a wagon, he comes over to talk.%SPEECH_ON%I\'ll tell the nobility of your, well, noble decision here. You could have caused a stir, but you did not. Thank you, mercenary. The men of our army needed this food more than you can know.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Choć żal ci rolnika, uczucia niewiele znaczą, gdy między rodami toczy się wielka wojna. Wybierasz, by się nie wtrącać. Gdy robotnicy skarbnika niosą worki zboża na wóz, podchodzi, by porozmawiać.%SPEECH_ON%Powiem szlachcie o twojej, cóż, szlachetnej decyzji. Mogłeś wywołać zamieszanie, ale tego nie zrobiłeś. Dziękuję, najemniku. Ludzie naszej armii potrzebowali tego jedzenia bardziej, niż możesz wiedzieć.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Oh well.",
+					Text = "No cóż.",
 					function getResult( _event )
 					{
 						return 0;
@@ -119,13 +119,13 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_72.png[/img]Initially, it seemed as though there were two options here, but as a sellsword free from the bonds of nobility, responsibility, and well, any sort of social shackle, you choose a third angle: taking the food for you and your men. Both treasurer and farmer protest, but your men draw their blades, which is a quick way to silence any sort of debate.\n\n In total, there\'s really not that much to take and you get the ire of the common man as well as the nobility for the trouble.",
+			Text = "[img]gfx/ui/events/event_72.png[/img]Początkowo wyglądało na to, że są tu tylko dwie opcje, ale jako najemnik wolny od więzów szlachty, odpowiedzialności i, cóż, wszelkich społecznych kajdan, wybierasz trzecią drogę: zabierasz jedzenie dla siebie i swoich ludzi. Zarówno skarbnik, jak i rolnik protestują, ale twoi ludzie dobywają ostrzy, co jest szybkim sposobem uciszenia wszelkiej debaty.\n\n W sumie nie ma tu zbyt wiele do zabrania, a ściągasz na siebie gniew pospólstwa i szlachty za całe zamieszanie.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "We gotta look out for ourselves first.",
+					Text = "Najpierw musimy dbać o siebie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -148,7 +148,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "You gain " + food.getName()
+						text = "Zyskujesz " + food.getName()
 					});
 				}
 			}

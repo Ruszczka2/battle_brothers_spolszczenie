@@ -3,16 +3,16 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.greenskins_caravan_ambush";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_59.png[/img]{Cresting a small hill, you see a caravan of people along the road. They\'re trundling down the path with pots and pans clinking along the wagon sides, children swinging their legs off the edges, women at the front bidding the draught animals forward with sharp whippings. Men march together, looking at a map and arguing over it, gesticulating in different directions to show a difference in geographic opinion. And then, further up the road, beyond the travelers\' eyes, are a few goblins laying in the grass. %randombrother% sees them, too, and comments.%SPEECH_ON%We\'d best get down there now, sir, before there\'s a slaughter.%SPEECH_OFF%%randombrother2% shrugs.%SPEECH_ON%Or... we let the goblins make their move, then we swoop in and clean up the mess. Easier to fight them when they\'re tangled up, no?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_59.png[/img]{Wspinasz się na niewielkie wzgórze i widzisz karawanę ludzi na drodze. Turlają się ścieżką, a garnki i patelnie brzęczą o burty wozów, dzieci machają nogami zwieszonymi z krawędzi, kobiety na przedzie poganiają zwierzęta pociągowe ostrymi batami. Mężczyźni maszerują razem, patrząc na mapę i kłócąc się o nią, gestykulując w różne strony, by pokazać różnice w opiniach geograficznych. A potem, nieco dalej na drodze, poza wzrokiem podróżnych, leży w trawie kilku goblinów. %randombrother% też ich widzi i komentuje.%SPEECH_ON%Lepiej zejdźmy tam teraz, panie, zanim dojdzie do rzezi.%SPEECH_OFF%%randombrother2% wzrusza ramionami.%SPEECH_ON%Albo... pozwólmy goblinom zrobić swój ruch, a potem wpadniemy i posprzątamy bałagan. Łatwiej z nimi walczyć, gdy są poplątani, nie?%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "We attack now!",
+					Text = "Atakujemy teraz!",
 					function getResult( _event )
 					{
 						return "B";
@@ -20,7 +20,7 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We wait for the goblins to attack first, then we charge!",
+					Text = "Czekamy, aż gobliny zaatakują pierwsze, potem uderzamy!",
 					function getResult( _event )
 					{
 						return "C";
@@ -28,7 +28,7 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We don\'t need to get involved in this. March on!",
+					Text = "Nie musimy się w to mieszać. Ruszać!",
 					function getResult( _event )
 					{
 						return "D";
@@ -43,12 +43,12 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_48.png[/img]{You won\'t sacrifice these innocent people for tactical advantage! You order the men to attack now. The goblins immediately hear you come and turn face. In the distance, the peasants clear out, seeing the danger ahead. It appears you\'ve saved them, but now you\'ll have to face the goblins in whole!}",
+			Text = "[img]gfx/ui/events/event_48.png[/img]{Nie poświęcisz tych niewinnych ludzi dla taktycznej przewagi! Rozkazujesz ludziom atakować natychmiast. Gobliny od razu słyszą, że nadchodzicie, i odwracają się. W oddali chłopi rozbiegają się, widząc niebezpieczeństwo. Wygląda na to, że ich uratowałeś, ale teraz będziesz musiał stawić czoło całym goblinom!}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "To arms!",
+					Text = "Do broni!",
 					function getResult( _event )
 					{
 						local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());
@@ -70,12 +70,12 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "AftermathB",
-			Text = "[img]gfx/ui/events/event_83.png[/img]{With the goblins taken care of, the peasants slowly bring their wagons back around. They look at the scene with plenty of awe. One shakes your hand.%SPEECH_ON%By all the old gods, everyone we meet shall hear the name of the %companyname%!%SPEECH_OFF%A few others give you food, kisses, and plenty of thanks.}",
+			Text = "[img]gfx/ui/events/event_83.png[/img]{Gdy z goblinami już po wszystkim, chłopi powoli zawracają wozy. Patrzą na scenę z wielkim podziwem. Jeden ściska ci dłoń.%SPEECH_ON%Na wszystkich dawnych bogów, każdy, kogo spotkamy, usłyszy imię %companyname%!%SPEECH_OFF%Kilku innych daje wam jedzenie, całusy i mnóstwo podziękowań.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "It was nothing, honest.",
+					Text = "To nic takiego, naprawdę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -90,7 +90,7 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company gained renown"
+					text = "Kompania zyskała renomę"
 				});
 				this.World.Assets.addMoralReputation(3);
 				local food = this.new("scripts/items/supplies/bread_item");
@@ -98,19 +98,19 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{You order the men to wait for the right moment.\n\n When the peasants march further down the road, the goblins waylaid them with a volley of poison arrows. The arguing men go down, arrows stuck in their chests, muscles stiffening, faces drawn taut as the poison courses through. A few other men grab the reins from their wives and steer the wagons around. Some stand guard, a bunch of pitchfork-carrying farmers for a  rearguard, but they don\'t last long in the face of the dishonorable gobbos. Seeing that the goblins are scattered in their attack, you order the %companyname% to begin its own ambush.}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{Rozkazujesz ludziom czekać na właściwy moment.\n\n Gdy chłopi idą dalej drogą, gobliny zasadzają się na nich salwą zatrutych strzał. Kłócący się mężczyźni padają, strzały tkwią w piersiach, mięśnie sztywnieją, twarze napinają się, gdy trucizna krąży po ciele. Kilku innych mężczyzn wyrywa lejce swoim żonom i wyprowadza wozy. Niektórzy stają na straży, gromada chłopów z widłami jako tylna straż, ale nie wytrzymują długo wobec niehonorowych goblinów. Widząc, że gobliny są rozproszone w ataku, rozkazujesz %companyname% rozpocząć własną zasadzkę.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "To arms!",
+					Text = "Do broni!",
 					function getResult( _event )
 					{
 						local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());
@@ -135,12 +135,12 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "AftermathC",
-			Text = "[img]gfx/ui/events/event_83.png[/img]{The scattered remains of the traveling peasants slowly emerge out of the strewn battlefield. An old man shakes your hand.%SPEECH_ON%Thank ye, sir, had you not happened upon us we would have all been green-meat!%SPEECH_OFF%But before he can let your hand go, another, younger man springs over, pointing with a finger.%SPEECH_ON%To hell with that, old man, I saw that bastard up on the hill just watching the whole time! He left us out as bait!%SPEECH_OFF%The old man yanks his hand back.%SPEECH_ON%Well I\'ll be. May you experience all the hells, sellsword!%SPEECH_OFF%Like you give a shite. You tell the old man that anything you find is yours. If they want to protest, they can stick their mouth on the end of a blade for all you care.}",
+			Text = "[img]gfx/ui/events/event_83.png[/img]{Rozproszone resztki wędrujących chłopów powoli wyłaniają się ze zniszczonego pola bitwy. Stary mężczyzna ściska ci dłoń.%SPEECH_ON%Dziękuję, panie, gdybyś na nas nie trafił, wszyscy byśmy zostali zielonym mięsem!%SPEECH_OFF%Zanim zdąży puścić twoją dłoń, doskakuje inny, młodszy mężczyzna, wskazując palcem.%SPEECH_ON%A niech to, staruchu, widziałem, jak ten drań stał na wzgórzu i patrzył przez cały czas! Zostawił nas jako przynętę!%SPEECH_OFF%Stary odrywa dłoń.%SPEECH_ON%No proszę. Obyś zaznał wszystkich piekieł, najemniku!%SPEECH_OFF%Jakby cię to obchodziło. Mówisz starcowi, że wszystko, co znajdziecie, jest wasze. Jeśli chcą protestować, mogą sobie wsadzić usta na koniec ostrza, jeśli cię to obchodzi.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Piss off, peasants.",
+					Text = "Spadajcie, chłopi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -157,26 +157,26 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				local item = this.new("scripts/items/weapons/pitchfork");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain a " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_75.png[/img]{One way or another, this isn\'t your problem. You quietly leave the scene, though a few brothers are rather disturbed that you left those poor peasants to such a gruesome fate, particularly when the whole realm is trying to survive these green savages.}",
+			Text = "[img]gfx/ui/events/event_75.png[/img]{Tak czy inaczej, to nie twój problem. Cicho opuszczasz miejsce zdarzenia, choć kilku braci jest dość zaniepokojonych, że zostawiłeś tych biednych chłopów na tak straszny los, zwłaszcza gdy całe królestwo próbuje przetrwać te zielone bestie.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Get over it.",
+					Text = "Pogódźcie się z tym.",
 					function getResult( _event )
 					{
 						return 0;
@@ -192,7 +192,7 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.worsenMood(1.0, "Disappointed that you avoided battle and let peasants die");
+						bro.worsenMood(1.0, "Rozczarowany, że uniknąłeś walki i pozwoliłeś chłopom zginąć");
 
 						if (bro.getMoodState() <= this.Const.MoodState.Neutral)
 						{

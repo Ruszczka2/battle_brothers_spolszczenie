@@ -3,17 +3,17 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.undead_plague_or_infected";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_59.png[/img]You come across a group of peasants sitting by the edge of the path. Men, women, children. Dirtied clothes, muddied boots, sores on their skin. A few carry wounds shaped like bitemarks. The eldest of the party speaks.%SPEECH_ON%Please, sir, do you have any food or water to give us?%SPEECH_OFF%He seems to see you eyeing the pustules and bitemarks. He shakes his head.%SPEECH_ON%Oh, don\'t mind those. Simple fox huntin\' gone awry. We could just use a bit of help and then we can be on our way.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_59.png[/img]Napotykasz grupę chłopów siedzących przy skraju ścieżki. Mężczyźni, kobiety, dzieci. Brudne ubrania, zabłocone buty, owrzodzenia na skórze. Kilku ma rany przypominające ślady ugryzień. Najstarszy z grupy odzywa się.%SPEECH_ON%Proszę, panie, czy masz dla nas trochę jedzenia albo wody?%SPEECH_OFF%Zdaje się dostrzegać, że przyglądasz się krostom i śladom ugryzień. Kręci głową.%SPEECH_ON%Och, nie zwracaj na to uwagi. Proste polowanie na lisy poszło źle. Potrzebujemy tylko odrobiny pomocy i ruszymy w drogę.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We can spare a bit of food.",
+					Text = "Możemy odstąpić trochę jedzenia.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -28,7 +28,7 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This isn\'t our problem.",
+					Text = "To nie nasz problem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -36,7 +36,7 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You\'ll only make the undead ranks swell. Better we finish you now.",
+					Text = "Tylko powiększycie szeregi nieumarłych. Lepiej zakończymy to teraz.",
 					function getResult( _event )
 					{
 						return "B";
@@ -51,13 +51,13 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_59.png[/img]You command these sickened souls to be well - by commanding your men to kill them all. The elder leads the women and children away while the men rise up to stand their ground. One, wavering on green and peeling legs, points at you.%SPEECH_ON%What a saint you are ya prick. I hope I do come back from the dead. I hope my corpse kills the lot of you ya farkin\' savages.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_59.png[/img]Rozkazujesz tym schorowanym duszom ozdrowieć - rozkazując swoim ludziom, by wszystkich zabili. Starszy odprowadza kobiety i dzieci, a mężczyźni wstają, by stawić opór. Jeden z nich, chwiejący się na zielonkawych, łuszczących się nogach, wskazuje na ciebie.%SPEECH_ON%Aleś święty, ty chujku. Obym wrócił z martwych. Oby mój trup pozabijał was wszystkich, pieprzone dzikusy.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I look forward to killing you twice, then.",
+					Text = "W takim razie z przyjemnością zabiję cię dwa razy.",
 					function getResult( _event )
 					{
 						if (this.World.FactionManager.isUndeadScourge())
@@ -84,13 +84,13 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_59.png[/img]You tell %randombrother% to hand out some food and supplies. The elder thanks you and says he\'ll speak highly of the %companyname% wherever he goes. A few of the men seem relieved that you didn\'t ask something awful of them.",
+			Text = "[img]gfx/ui/events/event_59.png[/img]Mówisz %randombrother%, by rozdał trochę jedzenia i zapasów. Starszy dziękuje i mówi, że będzie dobrze mówił o %companyname%, gdziekolwiek się uda. Kilku mężczyzn wydaje się ulżyć, że nie poprosiłeś ich o coś strasznego.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We do what we can.",
+					Text = "Robimy, co możemy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -110,7 +110,7 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + item.getIcon(),
-						text = "You lose " + item.getName()
+						text = "Tracisz " + item.getName()
 					});
 					this.World.Assets.getStash().remove(item);
 					food.remove(idx);
@@ -120,13 +120,13 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_29.png[/img]You tell %randombrother% to hand out some food and supplies. The elder thanks you and says he\'ll speak highly of the %companyname% wherever he goes. Taking a piece of bread, you squat beside a sickly child and the father holding him. But when you hold the loaf out, the child turns its head up and bites into his father\'s neck. Any peasant healthy enough to stand does so and runs off. The rest... well, the rest shamble to their feet, faces pale, jaws slacked, eyes glowing red with furious hunger. You quickly order the mercenaries into formation.",
+			Text = "[img]gfx/ui/events/event_29.png[/img]Mówisz %randombrother%, by rozdał trochę jedzenia i zapasów. Starszy dziękuje i mówi, że będzie dobrze mówił o %companyname%, gdziekolwiek się uda. Biorąc kawałek chleba, kucasz obok chorowitego dziecka i ojca, który je trzyma. Gdy podajesz bochenek, dziecko unosi głowę i wbija zęby w szyję ojca. Każdy chłop na tyle zdrowy, by wstać, robi to i ucieka. Reszta... cóż, reszta dźwiga się na nogi, twarze mają blade, szczęki rozluźnione, oczy świecą czerwienią wściekłego głodu. Szybko rozkazujesz najemnikom ustawić szyk.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "No good deed goes unpunished.",
+					Text = "Żaden dobry uczynek nie pozostaje bez kary.",
 					function getResult( _event )
 					{
 						if (this.World.FactionManager.isUndeadScourge())

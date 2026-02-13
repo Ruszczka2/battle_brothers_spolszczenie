@@ -3,16 +3,16 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.greenskins_trapped_goblin";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]The company steps through some brush and into a clearing where they find a goblin squatting. It turns toward the company, its breath labored, its eyes somber. You see that there\'s a large bear trap tightly clenching its lower thigh. The greenskin tries a growl, but only manages to cough some blood.\n\n Beside the dying goblin is a man face down in the grass. There\'s something shiny attached to his hip, but you can\'t quite tell what it is. %randombrother% comes to your side.%SPEECH_ON%Could be a trap. A trap within a trap. The rest of his buddies are probably not far. Then again, if we leave, he might get free and tell everyone we were here. What should we do?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Kompania przechodzi przez zarośla i wchodzi na polanę, gdzie znajduje przykucniętego goblina. Odwraca się w stronę kompani, oddycha ciężko, ma posępne oczy. Widzisz, że wielka pułapka na niedźwiedzie mocno ściska jego dolne udo. Zielonoskóry próbuje warknąć, ale tylko odkasłuje krew.\n\n Obok umierającego goblina leży mężczyzna twarzą w trawie. Do biodra ma przypięte coś błyszczącego, ale nie do końca widzisz co. %randombrother% podchodzi do twojego boku.%SPEECH_ON%To może być pułapka. Pułapka w pułapce. Reszta jego kumpli pewnie nie jest daleko. Z drugiej strony, jeśli odejdziemy, może się uwolnić i powiedzieć wszystkim, że tu byliśmy. Co robimy?%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Kill it.",
+					Text = "Zabić go.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -27,7 +27,7 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Leave it.",
+					Text = "Zostawić go.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 70)
@@ -49,13 +49,13 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_25.png[/img]One way or another, the goblin cannot be allowed to live. You step into the clearing to put it out of its misery and, perhaps, get a glimpse at what treasures the corpse might carry. The greenskin shrinks at the sight of you, snarling and rearing up, the trap wrinkling the chains to which it is attached. %randombrother%, weapon in hand, carefully gets near to the beast and then kills it with a single blow.\n\n With the threat taken care of, you roll the dead man\'s body over and loot everything worth taking.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Tak czy inaczej, goblin nie może zostać przy życiu. Wchodzisz na polanę, by oszczędzić mu męki i, być może, rzucić okiem na skarby, jakie może nieść jego trup. Zielonoskóry kurczy się na twój widok, warcząc i podrywając się, a pułapka marszczy łańcuchy, do których jest przypięta. %randombrother%, z bronią w dłoni, ostrożnie podchodzi do bestii i zabija ją jednym ciosem.\n\n Gdy zagrożenie jest usunięte, przewracasz ciało martwego mężczyzny i grabisz wszystko, co warte wzięcia.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "One goblin less to worry about. ",
+					Text = "O jednego goblina mniej do zmartwień.",
 					function getResult( _event )
 					{
 						return 0;
@@ -98,20 +98,20 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_69.png[/img]This is a war of annihilation and no greenskin can be allowed to live. You step into the field and slay the foul thing. With it out of the way, you roll the dead man\'s body over and loot all that\'s worth taking. Just as you get ready to leave, a gargling growl rumbles from the treeline. %randombrother% takes out his weapon and points.%SPEECH_ON%Nachzehrers!%SPEECH_OFF%Damn! They must have smelled the dying goblin and came to feast. Some of them are already picking their teeth with orc bones...",
+			Text = "[img]gfx/ui/events/event_69.png[/img]To wojna na wyniszczenie i żadnemu zielonoskóremu nie wolno żyć. Wchodzisz na polanę i zabijasz to plugastwo. Gdy już nie żyje, przewracasz ciało martwego mężczyzny i zabierasz wszystko, co warte wzięcia. Gdy tylko szykujesz się do odejścia, z linii drzew dobiega bulgoczące warczenie. %randombrother% dobywa broni i wskazuje.%SPEECH_ON%Nachzerery!%SPEECH_OFF%Cholera! Musiały wyczuć umierającego goblina i przyszły ucztować. Niektóre już dłubią w zębach kościami orków...",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "A bit messier than expected...",
+					Text = "Trochę większy bałagan, niż się spodziewałem...",
 					function getResult( _event )
 					{
 						local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());
@@ -161,20 +161,20 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_25.png[/img]You\'re not going to risk the company over a single measly goblin and a dead man who may or may not have anything valuable. The company gives a wide berth to the clearing and continue on through the forest without any issue.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Nie zamierzasz ryzykować kompanią dla jednego marnego goblina i martwego człowieka, który może, ale nie musi mieć nic wartościowego. Kompania omija polanę szerokim łukiem i bez problemu kontynuuje marsz przez las.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Best keep the company in shape for bigger threats.",
+					Text = "Lepiej zachować kompanię w formie na większe zagrożenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -189,13 +189,13 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_48.png[/img]You\'re not going to risk the company over a single measly goblin and a dead man who may or may not have anything valuable. The company gives a wide berth to the clearing and continue on through the forest.\n\n No more than five minutes down the road do you hear a thundering of footsteps coming up from the rear. Loud and burly enough that whoever is making it has no fear of being heard. You duck and wait and, unsurprisingly, orcs and goblins come through the trees. One of them is the bastard you\'d left to the bear trap, his leg hurriedly wrapped in linens and leaves.",
+			Text = "[img]gfx/ui/events/event_48.png[/img]Nie zamierzasz ryzykować kompanią dla jednego marnego goblina i martwego człowieka, który może, ale nie musi mieć nic wartościowego. Kompania omija polanę szerokim łukiem i kontynuuje marsz przez las.\n\n Po nie więcej niż pięciu minutach słyszysz z tyłu grzmot kroków. Na tyle głośnych i ciężkich, że ten, kto je robi, nie boi się, że zostanie usłyszany. Kucasz i czekasz, a z drzew, jak można się było spodziewać, wychodzą orki i gobliny. Jeden z nich to ten drań, którego zostawiłeś w pułapce na niedźwiedzie, z nogą naprędce owiniętą płótnem i liśćmi.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Damn, the little runt found us!",
+					Text = "Cholera, ten mały szkrab nas znalazł!",
 					function getResult( _event )
 					{
 						local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());

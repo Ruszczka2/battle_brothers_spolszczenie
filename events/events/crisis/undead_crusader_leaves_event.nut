@@ -5,16 +5,16 @@ this.undead_crusader_leaves_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.undead_crusader_leaves";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_35.png[/img]%crusader% the crusader approaches you with his armor off and his helmet tucked into the nook of his elbow.%SPEECH_ON%Good sir, I must bid the company adieu. With the undead beaten, my mission is complete.%SPEECH_OFF%You go to shake the man\'s hand, but he simply hands you his helm and weapon.%SPEECH_ON%You\'ve more use for these than I. My fighting days are over. It was a pleasure to ride them into the twilight with you by my side. Send the men my regards.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_35.png[/img]%crusader% krzyżowiec podchodzi do ciebie bez zbroi, z hełmem wsuniętym w zgięcie łokcia.%SPEECH_ON%Dobry panie, muszę pożegnać się z kompanią. Gdy nieumarli zostali pokonani, moja misja jest zakończona.%SPEECH_OFF%Chcesz uścisnąć mu dłoń, ale on po prostu podaje ci hełm i broń.%SPEECH_ON%To bardziej przyda się tobie niż mnie. Moje dni walki dobiegły końca. To była przyjemność jechać ku zmierzchowi z tobą u boku. Pozdrów ludzi ode mnie.%SPEECH_OFF%",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Farewell!",
+					Text = "Żegnaj!",
 					function getResult( _event )
 					{
 						_event.m.Dude.getItems().transferToStash(this.World.Assets.getStash());
@@ -32,7 +32,7 @@ this.undead_crusader_leaves_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Dude.getName() + " leaves the " + this.World.Assets.getName()
+					text = _event.m.Dude.getName() + " opuszcza " + this.World.Assets.getName()
 				});
 			}
 

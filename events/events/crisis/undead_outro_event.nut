@@ -5,17 +5,17 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.undead_outro";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You take a nap.\n\n Blackness. Darkness. All what a dream should be, save for one small fact: you know you\'re in it. Standing in the void like a lost thought. A voice breaks over you, dripping down from all sides as though you were in the very mouth that produced it.%SPEECH_ON%Why did you forsake us, Emperor?%SPEECH_OFF%You spin about, or at least think you do, for there is nothing around with which to base even the faintest of movements.%SPEECH_ON%You promised me, don\'t you remember? You said it would be okay if it all fell apart. You said you had a plan, that you had made a deal with that ugly, ugly man. What happened?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Zasypiasz.\n\n Czerń. Ciemność. Wszystko, czym powinien być sen, z wyjątkiem jednej drobnej rzeczy: wiesz, że w nim jesteś. Stoisz w pustce jak zagubiona myśl. Głos spływa na ciebie, kropląc ze wszystkich stron, jakbyś był w samych ustach, które go wypowiedziały.%SPEECH_ON%Czemu nas porzuciłeś, Cesarzu?%SPEECH_OFF%Obracasz się, a przynajmniej tak ci się wydaje, bo nie ma niczego wokół, co pozwoliłoby oprzeć choćby najdrobniejszy ruch.%SPEECH_ON%Obiecałeś mi, nie pamiętasz? Powiedziałeś, że będzie dobrze, jeśli wszystko się rozpadnie. Powiedziałeś, że masz plan, że zawarłeś układ z tym brzydkim, brzydkim człowiekiem. Co się stało?%SPEECH_OFF%",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "I was not the chosen one.",
+					Text = "Nie byłem wybrańcem.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Rest easy, my love. There is nothing to fear in death.",
+					Text = "Odpoczywaj spokojnie, moja miłości. W śmierci nie ma czego się bać.",
 					function getResult( _event )
 					{
 						return "C";
@@ -31,7 +31,7 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Who was the ugly man?",
+					Text = "Kim był ten brzydki człowiek?",
 					function getResult( _event )
 					{
 						return "D";
@@ -46,12 +46,12 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You raise your voice.%SPEECH_ON%I am not the chosen one.%SPEECH_OFF%Before the admission even clear the air, she begins sobbing. Her words burst through the weeps like hiccupped honesty.%SPEECH_ON%I-I know... I did not wish to admit it, but I know. The Empire dies with us. Sy\'leth daef\'nya, my Emperor.%SPEECH_OFF%\'Emperor\' echoes, fainter by the repeat, until you are left with darkness and silence.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Podnosisz głos.%SPEECH_ON%Nie jestem wybrańcem.%SPEECH_OFF%Zanim wyznanie zdąży wybrzmieć, ona zaczyna szlochać. Jej słowa przebijają się przez łkanie jak czkająca szczerość.%SPEECH_ON%J-j-ja wiem... Nie chciałam tego przyznać, ale wiem. Imperium umiera wraz z nami. Sy\'leth daef\'nya, mój Cesarzu.%SPEECH_OFF%Słowo 'Cesarzu' rozbrzmiewa coraz ciszej, aż zostaje tylko ciemność i cisza.",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Wake up!",
+					Text = "Obudź się!",
 					function getResult( _event )
 					{
 						return "E";
@@ -66,12 +66,12 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]At first, you say nothing. She begins to cry. You hear the tears, each drop reverberating all around you.%SPEECH_ON%Are you there, my Emperor?%SPEECH_OFF%You clear your throat and answer.%SPEECH_ON%Yes, I am. The Empire will not rise again. We must go. There is nothing to fear in Death.%SPEECH_OFF%The woman weeps, but slowly steadies herself.%SPEECH_ON%I am not afraid. On the other side, ish\'nyarh ishe\'yarn, my Emperor.%SPEECH_OFF%As her words fade from the black, and perhaps your mind, all you are left with is silence.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Na początku nic nie mówisz. Ona zaczyna płakać. Słyszysz łzy, każda kropla odbija się echem dookoła ciebie.%SPEECH_ON%Czy jesteś tam, mój Cesarzu?%SPEECH_OFF%Odchrząkujesz i odpowiadasz.%SPEECH_ON%Tak, jestem. Imperium nie powstanie ponownie. Musimy odejść. W śmierci nie ma czego się bać.%SPEECH_OFF%Kobieta szlocha, ale powoli się uspokaja.%SPEECH_ON%Nie boję się. Po drugiej stronie, ish\'nyarh ishe\'yarn, mój Cesarzu.%SPEECH_OFF%Gdy jej słowa bledną w czerni, a być może i w twoim umyśle, zostaje tylko cisza.",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Wake up!",
+					Text = "Obudź się!",
 					function getResult( _event )
 					{
 						return "E";
@@ -86,12 +86,12 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You turn about.%SPEECH_ON%Who is the ugly man?%SPEECH_OFF%The woman\'s voice stutters in shock.%SPEECH_ON%You, you don\'t remember?%SPEECH_OFF%Clearing your throat, you feign the honesty of lost memories.%SPEECH_ON%I remember nothing, my love.%SPEECH_OFF%A great sigh falls over the darkness. You can feel its frustration. She talks with exasperation.%SPEECH_ON%I knew we should not have trusted him... The ugly man came to us in the night when our child was born still. He said if he could take our blood, as well as that of our dead child, he would ensure that the Empire would never die, us its eternal rulers. But... it had a cost.%SPEECH_OFF%You quickly figure it out and respond.%SPEECH_ON%He made you barren.%SPEECH_OFF%The woman sobs.%SPEECH_ON%We should have never trusted him! I will have that ugly man! Have no doubt, kearem su\'llah. I will treat him to eternity, an eternity of pain and suffering!%SPEECH_OFF%The once black void glows red, flashing a world of crimson, ferocity in color. You throw a hand up, shielding your eyes. She screams, piercing your ears until all you hear is a harsh ringing.",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Odwracasz się.%SPEECH_ON%Kim był ten brzydki człowiek?%SPEECH_OFF%Głos kobiety drży ze zszokowania.%SPEECH_ON%Ty, ty nie pamiętasz?%SPEECH_OFF%Odchrząkujesz, udając szczerość utraconych wspomnień.%SPEECH_ON%Nie pamiętam nic, moja miłości.%SPEECH_OFF%Nad ciemnością opada wielkie westchnienie. Czujesz jego frustrację. Mówi z rozdrażnieniem.%SPEECH_ON%Wiedziałam, że nie powinniśmy mu ufać... Brzydki człowiek przyszedł do nas w noc, kiedy nasze dziecko urodziło się martwe. Powiedział, że jeśli będzie mógł wziąć naszą krew, a także krew naszego martwego dziecka, sprawi, że Imperium nigdy nie umrze, a my będziemy jego wiecznymi władcami. Ale... było to za cenę.%SPEECH_OFF%Szybko rozumiesz i odpowiadasz.%SPEECH_ON%Uczynił cię bezpłodną.%SPEECH_OFF%Kobieta szlocha.%SPEECH_ON%Nigdy nie powinniśmy mu ufać! Dopadnę tego brzydkiego człowieka! Nie miej wątpliwości, kearem su\'llah. Skazuję go na wieczność, wieczność bólu i cierpienia!%SPEECH_OFF%Niegdyś czarna pustka rozbłyskuje czerwienią, ukazując świat purpury, barwę furii. Podnosisz rękę, zasłaniając oczy. Ona krzyczy, przeszywając twoje uszy, aż słyszysz tylko ostry dzwon.",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Wake up!",
+					Text = "Obudź się!",
 					function getResult( _event )
 					{
 						return "E";
@@ -106,12 +106,12 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_33.png[/img]You wake. A rough wind bends the tent, curling the leather and rolling tides across the ceiling. Faint candlelight flicks and dashes darkness and light all the same. %dude% is standing there, watching you, shadows crossing back and forth across his chest. He shifts on his feet, an uneasy look on his face.%SPEECH_ON%Who were you talking to?%SPEECH_OFF%Rolling out of bed, you put your boots to the ground, wanting to be sure of this reality before you dare parlay with it. Dirt rustles and crunches beneath your feet. You answer.%SPEECH_ON%I\'m not sure. I think... I think the invasion is over.%SPEECH_OFF%The mercenary nods and turns a hand to the tent\'s entrance.%SPEECH_ON%Aye, that\'s why I\'m here. A noble messenger arrived just a minute ago. He says the undead have ceased erupting from the ground. The scribes believe it is over. Are you alright, sir?%SPEECH_OFF%You rub your head. Is it time to retire? What can you make of this world now that you know what you do? It is either go live out the rest of your days in peace, or say damn it all and command the %companyname% to further glory.\n\n%OOC%You\'ve won! Battle Brothers is designed for replayability and for campaigns to be played until you\'ve beaten one or two late game crises. Starting a new campaign will allow you to try out different things in a different world.\n\nYou can also choose to continue your campaign for as long as you want. Just be aware that campaigns are not intended to last forever and you\'re likely to run out of challenges eventually.%OOC_OFF%",
+			Text = "[img]gfx/ui/events/event_33.png[/img]Budzisz się. Szorstki wiatr wygina namiot, marszcząc skórę i tocząc fale po suficie. Słabe światło świec migocze, tak samo rozpraszając mrok, jak i go budując. %dude% stoi tam, obserwując cię, cienie przesuwają się tam i z powrotem po jego piersi. Przestępuje z nogi na nogę, z niepokojem na twarzy.%SPEECH_ON%Z kim rozmawiałeś?%SPEECH_OFF%Wychodząc z łóżka, stawiasz buty na ziemi, chcąc upewnić się co do tej rzeczywistości, zanim z nią rozmawiasz. Ziemia szeleszczy i chrupie pod stopami. Odpowiadasz.%SPEECH_ON%Nie jestem pewien. Myślę... myślę, że inwazja się skończyła.%SPEECH_OFF%Najemnik kiwa głową i wskazuje ręką wejście do namiotu.%SPEECH_ON%Tak, dlatego tu jestem. Przed chwilą przybył szlachecki posłaniec. Mówi, że nieumarli przestali wyłaniać się z ziemi. Skrybowie uważają, że to koniec. Wszystko w porządku, panie?%SPEECH_OFF%Pocierasz głowę. Czy to czas na emeryturę? Co możesz myśleć o tym świecie teraz, gdy wiesz to, co wiesz? Albo pójdziesz żyć resztę dni w spokoju, albo powiesz do diabła z tym wszystkim i poprowadzisz %companyname% ku dalszej chwale.\n\n%OOC%Wygrałeś! Battle Brothers zostało zaprojektowane z myślą o regrywalności i kampaniach, które kończy się po pokonaniu jednego lub dwóch późnych kryzysów. Nowa kampania pozwoli ci spróbować różnych rzeczy w innym świecie.\n\nMożesz też kontynuować kampanię tak długo, jak chcesz. Pamiętaj jednak, że kampanie nie są przeznaczone do trwania wiecznie i w końcu zabraknie ci wyzwań.%OOC_OFF%",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The %companyname% needs their commander!",
+					Text = "%companyname% potrzebuje swojego dowódcy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -119,7 +119,7 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s time to retire from mercenary life. (End Campaign)",
+					Text = "Czas przejść na emeryturę z życia najemnika. (Zakończ kampanię)",
 					function getResult( _event )
 					{
 						this.World.State.getMenuStack().pop(true);

@@ -6,17 +6,17 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.undead_hoggart";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_76.png[/img]Marching through a foggy, hot rain, you spot a figure standing in the middle of the path. He\'s holding a metal-wreathed torch, no doubt the fire of a man wanting to be seen. As you draw near, he puts the torch down, giving light to an oddly familiar face, though you can\'t quite put your finger on it. You order him to announce himself.%SPEECH_ON%Are ye a lot of sellswords, hm?%SPEECH_OFF%You tell him that is not a name. He clears his throat, a soft orange glow of his face peering through the storm\'s dark.%SPEECH_ON%My name is Barnabas. Are ye sellswords or not?%SPEECH_OFF%Carefully, you cross the path and come close to the man. He waves the torch aside.%SPEECH_ON%Yeah, I figured as much. My brother, I need someone... I mean, I can\'t...%SPEECH_OFF%You nod and speak for him.%SPEECH_ON%He\'s come up out of the grave and now you want someone to take care of him.%SPEECH_OFF%The man nods, he waves the torch to a yonder spot where a dim light burns in the distance.%SPEECH_ON%He\'s thataway. I\'ll pay you %reward% crowns, seeing as how you\'re sellswords and all.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Maszerując w mglistym, gorącym deszczu, dostrzegasz postać stojącą pośrodku ścieżki. Trzyma pochodnię oplecioną metalem, bez wątpienia ogień człowieka, który chce być widziany. Gdy się zbliżasz, odkłada pochodnię, oświetlając dziwnie znajomą twarz, choć nie potrafisz wskazać skąd. Każesz mu się przedstawić.%SPEECH_ON%Jesteście najemnikami, hm?%SPEECH_OFF%Mówisz mu, że to nie imię. Odchrząkuje, a delikatny pomarańczowy blask jego twarzy przebija się przez mrok burzy.%SPEECH_ON%Nazywam się Barnabas. Jesteście najemnikami czy nie?%SPEECH_OFF%Ostrożnie przechodzisz przez ścieżkę i podchodzisz do mężczyzny. Odsuwa pochodnię na bok.%SPEECH_ON%Tak, tak myślałem. Mój brat, potrzebuję kogoś... to znaczy, nie mogę...%SPEECH_OFF%Kiwasz głową i mówisz za niego.%SPEECH_ON%Wyszedł z grobu i teraz chcesz, żeby ktoś się nim zajął.%SPEECH_OFF%Mężczyzna kiwa głową, macha pochodnią w stronę miejsca, gdzie w oddali pali się nikłe światło.%SPEECH_ON%Jest tam. Zapłacę wam %reward% koron, skoro jesteście najemnikami i w ogóle.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, show the way.",
+					Text = "Dobrze, prowadź.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This is not our problem.",
+					Text = "To nie nasz problem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -39,13 +39,13 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_76.png[/img]You tell the man to show the way, bringing %chosenbrother% with you and leaving another sellsword in charge while you\'re gone. Barnabas leads you down a hillside and to the fence line of a property home to a decently sized stone house. Candlelight flickers beyond the windows. Barnabas stares forward.%SPEECH_ON%Nobody\'s there. The only one here is Hoggart.%SPEECH_OFF%That name... Barnabas\'s face... You grab the man and push him into the fence, demanding to know if he is the bandit\'s brother. Barnabas quickly nods.%SPEECH_ON%Aye, that I am! What of it?%SPEECH_OFF%You tell him that Hoggart nearly wiped out the %companyname% and that, in return, you slew the man dead. Barnabas holds his hands up.%SPEECH_ON%If that\'s so, it is what it is. Hoggart was only doing what he needed to keep the property in the family. After our father died, we took on debts - debts we could not pay.%SPEECH_OFF%You draw a dagger and put it to the man\'s throat. He shakes his head.%SPEECH_ON%I\'m not here to ambush or rob you. The home\'s been sold. It\'s out of the family. But Hoggart... he\'s come back and he won\'t leave.%SPEECH_OFF%You look over Barnabas\'s shoulder. There\'s a dark figure standing before the home, its silhouette lit by the windowlight.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Mówisz mężczyźnie, by prowadził, zabierając ze sobą %chosenbrother% i zostawiając innego najemnika na czele podczas waszej nieobecności. Barnabas prowadzi cię w dół zbocza do ogrodzenia posesji z dość dużym kamiennym domem. Poza oknami migocze światło świec. Barnabas wpatruje się przed siebie.%SPEECH_ON%Nikogo tam nie ma. Jest tylko Hoggart.%SPEECH_OFF%To imię... twarz Barnabasa... Chwytasz mężczyznę i wciskasz go w płot, żądając, by powiedział, czy jest bratem bandyty. Barnabas szybko kiwa głową.%SPEECH_ON%Tak, jestem! A co z tego?%SPEECH_OFF%Mówisz mu, że Hoggart niemal wytępił %companyname% i że w odwecie zabiłeś go na dobre. Barnabas unosi dłonie.%SPEECH_ON%Jeśli tak było, to tak było. Hoggart robił tylko to, co musiał, by utrzymać majątek w rodzinie. Po śmierci ojca wpadliśmy w długi - długi, których nie mogliśmy spłacić.%SPEECH_OFF%Wyciągasz sztylet i przykładasz go do gardła mężczyzny. Kręci głową.%SPEECH_ON%Nie jestem tu, by zrobić zasadzkę albo was okraść. Dom został sprzedany. Nie jest już w rodzinie. Ale Hoggart... on wrócił i nie chce odejść.%SPEECH_OFF%Spoglądasz przez ramię Barnabasa. Przed domem stoi ciemna postać, której sylwetkę oświetla blask z okien.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fine. Let\'s take a look.",
+					Text = "Dobrze. Rzućmy okiem.",
 					function getResult( _event )
 					{
 						return "E";
@@ -53,7 +53,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ll end this right here.",
+					Text = "Zakończę to tutaj.",
 					function getResult( _event )
 					{
 						return "C";
@@ -61,7 +61,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This is not our problem anymore.",
+					Text = "To już nie nasz problem.",
 					function getResult( _event )
 					{
 						return "D";
@@ -76,13 +76,13 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_76.png[/img]Bloodlines are not easily broken. Whatever Barnabas is saying, it\'s likely that he\'ll come after the company someday, someday when it\'s cold and quiet and the fires of vengeance can\'t be so easily quenched.\n\n You tell the man to lead the way, and the second he turns about you stab him just beneath the armpit, piercing his heart. He doesn\'t say anything. He simply goes to his knees, facing the back of his brother and the home he grew up in. He sits there, crumpled and dying, the rain pattering against the torch until it sizzles dead. %chosenbrother% spits.%SPEECH_ON%Good call, sir.%SPEECH_OFF%He rifles through the body and finds a shiny dagger. Perhaps the tool to an assassin, perhaps the last heirloom of a dead family name. Either way, you take it and return to the %companyname%.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Więzów krwi nie zrywa się łatwo. Cokolwiek mówi Barnabas, jest prawdopodobne, że pewnego dnia przyjdzie po kompanię, któregoś dnia, gdy będzie zimno i cicho, a ognia zemsty nie da się tak łatwo ugasić.\n\n Mówisz mężczyźnie, by prowadził, i w chwili gdy się odwraca, dźgasz go tuż pod pachą, przebijając serce. Nie mówi nic. Po prostu pada na kolana, zwrócony ku plecom brata i domowi, w którym dorastał. Siedzi tam, zgięty i umierający, deszcz uderza o pochodnię, aż ta syczy i gaśnie. %chosenbrother% spluwa.%SPEECH_ON%Dobra decyzja, panie.%SPEECH_OFF%Przeszukuje ciało i znajduje lśniący sztylet. Może to narzędzie zabójcy, a może ostatnia pamiątka po martwym rodzie. Tak czy inaczej, zabierasz go i wracasz do %companyname%.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s that.",
+					Text = "I po sprawie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -100,20 +100,20 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_76.png[/img]This is not your problem, nor should it ever be. Hoggart is dead and that\'s all you need, or want, to know about him or any of his family name. You leave Barnabas there in the rain and return to the %companyname% to plan for the next trip.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]To nie twój problem i nigdy nie powinien nim być. Hoggart nie żyje i to wszystko, co musisz lub chcesz wiedzieć o nim i jego rodzie. Zostawiasz Barnabasa na deszczu i wracasz do %companyname%, by planować następną wyprawę.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We got enough undead problems on our hands.",
+					Text = "Mamy dość problemów z nieumarłymi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -128,13 +128,13 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_76.png[/img]Against better judgment, you go and see if this really is Hoggart. Marching toward him, he growls and peers over his shoulder. It is indeed Hoggart, but he does little more than snarl at you before turning to stare at the home again. Taking out your sword, you approach carefully. From closer up, you can see that the man\'s head has been stitched back onto someone else\'s body, perhaps a knight\'s based upon the armored crest it is wearing.\n\n But enough lollygagging. You swing your sword back and bring it down upon Hoggart for one final blow - but a faint, blue hand launches out, stopping the blade as though you\'d struck a slab of stone. Slowly, a spectral face turns, independent of Hoggart, and looks at you. He shrieks before disappearing back into the dead man\'s lent body.\n\n Barnabas stands beside you.%SPEECH_ON%If I could do it that easily, I would have done it myself.%SPEECH_OFF%It appears there\'s a powerful, malevolent force at play here. You will need to find a different solution.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Wbrew lepszemu osądowi podchodzisz sprawdzić, czy to naprawdę Hoggart. Gdy maszerujesz w jego stronę, warczy i spogląda przez ramię. To istotnie Hoggart, ale poza warczeniem niewiele robi, po czym znów wpatruje się w dom. Dobywasz miecza i podchodzisz ostrożnie. Z bliska widzisz, że głowa mężczyzny została przyszyta do cudzego ciała, być może rycerskiego, sądząc po pancerzu, który nosi.\n\n Dość jednak zwlekania. Cofasz miecz i opuszczasz go na Hoggarta, by zadać ostateczny cios - ale blada, niebieska dłoń wyskakuje, zatrzymując ostrze, jakbyś uderzył w kamienną płytę. Powoli obraca się widmowa twarz, niezależna od Hoggarta, i patrzy na ciebie. Zawyła, po czym znika z powrotem w użyczonym ciele martwego.\n\n Barnabas stoi obok ciebie.%SPEECH_ON%Gdybym mógł to zrobić tak łatwo, zrobiłbym to sam.%SPEECH_OFF%Wygląda na to, że działa tu potężna, złośliwa siła. Musisz znaleźć inne rozwiązanie.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We need to burn down the house.",
+					Text = "Musimy spalić dom.",
 					function getResult( _event )
 					{
 						return "F";
@@ -142,7 +142,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "%chosenbrother%, distract the specter!",
+					Text = "%chosenbrother%, odciągnij widmo!",
 					function getResult( _event )
 					{
 						return "G";
@@ -155,7 +155,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Witchhunter != null)
 				{
 					this.Options.push({
-						Text = "Let\'s get %witchhunter%. Vile spirits are his forte.",
+						Text = "Sprowadźmy %witchhunter%. Złe duchy to jego specjalność.",
 						function getResult( _event )
 						{
 							return "H";
@@ -168,13 +168,13 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_76.png[/img]Hoggart reaches a hand out to his home, gripping at it from a distance. His growls turn to soft moans. A disfigured and desiccated tongue rolls a few words out.%SPEECH_ON%Ours... ours... always...%SPEECH_OFF%You glance at the house, then at %chosenbrother%. He nods. The house has to be ridden of. You go about setting the place aflame from the inside, pitching torches through its windows and setting alight its thatched roof. Even in the rain it catches ablaze. Hoggart growls and his body lurches forward, arms out, hands reached to the furthest fingertips. The specter spawns out of his shoulders, its translucent arms grabbing Hoggart by the head and trying to hold him back. The dead man growls and tries to run forward, his head tearing at the seams of his stitches. He screams.%SPEECH_ON%OURS! I TRIED. SO. HARD!%SPEECH_OFF%The stitches snap free and his body somersaults backwards, his head torn asunder and falling into the mud. The blue specter, wrenched free from the neck, screams and soars into the night sky, a mere shimmer against the rain until it is gone.\n\n Barnabas goes and sits beside Hoggart, the dead man\'s eyes staring blankly at the inferno consuming their childhood home. %chosenbrother% retrieves the armor from the body upon which Hoggart\'s head had rested. You try and talk to Barnabas, but he refuses to speak. Understanding, you do not prod him and leave the place behind, the fires still unerring against the rain when you depart.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Hoggart wyciąga dłoń w stronę swojego domu, próbując chwycić go z daleka. Jego warczenie przechodzi w ciche jęki. Zniekształcony, wysuszony język toczy kilka słów.%SPEECH_ON%Nasz... nasz... zawsze...%SPEECH_OFF%Spoglądasz na dom, potem na %chosenbrother%. Kiwając głową, przyznaje, że dom trzeba oczyścić. Zabierasz się do podpalenia wnętrza, wrzucając pochodnie przez okna i podpalając strzechę. Nawet w deszczu łapie ogień. Hoggart warczy, jego ciało rzuca się do przodu, ramiona wyciągnięte, dłonie sięgają jak najdalej. Widmo wyłania się z jego barków, jego przezroczyste ręce chwytają Hoggarta za głowę i próbują go powstrzymać. Martwy mężczyzna warczy i próbuje biec naprzód, głowa rozdziera szwy. Krzyczy.%SPEECH_ON%NASZ! TAK BARDZO SIĘ STARAŁEM!%SPEECH_OFF%Szwy puszczają, a ciało koziołkuje do tyłu, głowa rozrywa się i wpada w błoto. Niebieskie widmo, wyrwane z szyi, krzyczy i wzbija się w nocne niebo, ledwie migocząc na tle deszczu, aż znika.\n\n Barnabas idzie i siada obok Hoggarta, oczy martwego mężczyzny patrzą tępo na inferno pożerające dom ich dzieciństwa. %chosenbrother% zabiera zbroję z ciała, na którym spoczywała głowa Hoggarta. Próbujesz porozmawiać z Barnabasem, ale on odmawia. Rozumiejąc, nie naciskasz i odchodzisz, pozostawiając za sobą miejsce, a ognie wciąż nieustępliwie walczą z deszczem, gdy odchodzisz.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Guess that\'s that.",
+					Text = "No to po wszystkim.",
 					function getResult( _event )
 					{
 						return 0;
@@ -189,20 +189,20 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_76.png[/img]You whisper to %chosenbrother% to attack Hoggart, but only to try and distract the specter inhabiting his body. The sellsword nods and immediately gets to work, drawing out his weapon and charging forward. Predictably, a blue arm shoots out, crossing its unerring yet translucent shape with %chosenbrother%\'s weapon. He looks over the interlocking and screams.%SPEECH_ON%Now!%SPEECH_OFF%You jump forward and swing your sword. The specter whips around, screaming, but it is too late. Your blade passes through Hoggart\'s neck, rending his head free with a quick slash, his dome rolling down his chest into the mud while the body flails backward. Ushered into the world all by itself, the specter shrieks and swirls around in the sky, finding naught but chaos in its newfound freedom. %chosenbrother% looks at the chest armor that had been on Hoggart\'s body and shakes his head. Damn thing broke.\n\n A group of men suddenly start across the yard, holding out torches and swords alike. One especially opulent fellow leads them.%SPEECH_ON%Is that you Barnabas? I thought I told you to never step foot on my property again!%SPEECH_OFF%You explain to them what happened. The man, ostensibly the buyer of the land, nods, saying he\'d brought with him a cleric to solve the issue, but now that you have he pays you a tidy sum of crowns. When you turn back around, Barnabas and Hoggart\'s head are both gone.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Szepczesz %chosenbrother%, by zaatakował Hoggarta, ale tylko po to, by odciągnąć widmo zamieszkujące jego ciało. Najemnik kiwa głową i natychmiast zabiera się do pracy, dobywa broni i szarżuje. Jak można się spodziewać, niebieskie ramię wyskakuje, krzyżując swój niezawodny, choć przezroczysty kształt z bronią %chosenbrother%. Spogląda na zwarcie i krzyczy.%SPEECH_ON%Teraz!%SPEECH_OFF%Skaczesz do przodu i zamachujesz się mieczem. Widmo obraca się, krzycząc, ale jest już za późno. Ostrze przechodzi przez szyję Hoggarta, odcinając głowę szybkim cięciem, a czaszka stacza się po piersi do błota, podczas gdy ciało miota się do tyłu. Wypchnięte na świat samodzielnie, widmo wrzeszczy i wiruje na niebie, znajdując tylko chaos w nowo zdobytej wolności. %chosenbrother% spogląda na napierśnik, który był na ciele Hoggarta, i kręci głową. Cholerstwo pękło.\n\n Nagle przez podwórze nadchodzi grupa mężczyzn, trzymając pochodnie i miecze. Prowadzi ich szczególnie wystawny jegomość.%SPEECH_ON%To ty, Barnabasie? Myślałem, że powiedziałem ci, żebyś nigdy więcej nie postawił stopy na mojej ziemi!%SPEECH_OFF%Wyjaśniasz im, co się stało. Mężczyzna, najwyraźniej nabywca ziemi, kiwa głową, mówiąc, że przyprowadził ze sobą kleryka, by rozwiązać sprawę, ale skoro już to zrobiłeś, płaci ci solidną sumę koron. Gdy odwracasz się z powrotem, Barnabas i głowa Hoggarta zniknęli.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That was one fast contract.",
+					Text = "To był szybki kontrakt.",
 					function getResult( _event )
 					{
 						return 0;
@@ -216,20 +216,20 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]300[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]300[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_76.png[/img]%chosenbrother% says that %witchhunter% probably knows what to do here. You agree and run to go get the witch hunter. On your return, he assesses the situation before consulting a thick book that\'d been hidden away in a pocket. He nods, murmuring to himself as he reads. Finally, he snaps his fingers.%SPEECH_ON%This is a Gespenst von Zwei, a haunting of two souls. In this case, Hoggart\'s and that of the man whose body his head now rests upon. One soul egregiously cast out is simple enough, but two combined is a malevolent and angry force. If we simply destroy the body or the head, the souls will be bound together and will haunt the lands forever. Some even blunder into the skies. Unfortunately, instead of finding the heavens, they find a hell of unending confusion and the fury that brings. I believe Hoggart\'s soul, or whatever binds him to this world, is stronger than that of the other man\'s. The struggle he had in life was too great to simply end on his final breath and that is why he stands at his old home.%SPEECH_OFF%You stop the witch hunter and ask the most pertinent question...",
+			Text = "[img]gfx/ui/events/event_76.png[/img]%chosenbrother% mówi, że %witchhunter% pewnie wie, co tu zrobić. Zgadzasz się i biegniesz po łowcę czarownic. Po powrocie ocenia sytuację i sięga po grubą księgę ukrytą w kieszeni. Kiwając głową, mamrocze do siebie, czytając. W końcu pstryka palcami.%SPEECH_ON%To jest Gespenst von Zwei, nawiedzenie dwóch dusz. W tym przypadku Hoggarta i mężczyzny, którego ciało nosi teraz jego głowę. Jedna bezwzględnie wypędzona dusza jest prosta, ale dwie połączone tworzą złośliwą i gniewną siłę. Jeśli po prostu zniszczymy ciało albo głowę, dusze zwiążą się ze sobą i będą nawiedzać te ziemie na zawsze. Niektóre nawet błądzą w niebo. Niestety, zamiast znaleźć niebiosa, znajdują piekło niekończącego się zamętu i wściekłości, która z niego płynie. Wierzę, że dusza Hoggarta, albo to, co wiąże go z tym światem, jest silniejsze niż dusza drugiego człowieka. Zmaganie, jakie miał w życiu, było zbyt wielkie, by zakończyć się po prostu ostatnim oddechem, i dlatego stoi przy swoim starym domu.%SPEECH_OFF%Przerywasz łowcy czarownic i zadajesz najważniejsze pytanie...",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "How do we stop him?",
+					Text = "Jak go powstrzymać?",
 					function getResult( _event )
 					{
 						return "I";
@@ -245,13 +245,13 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_76.png[/img]%witchhunter% forces a smile.%SPEECH_ON%Apologize to him.%SPEECH_OFF%Not sure you heard him right, you echo his phrase and the witch hunter nods.%SPEECH_ON%Aye, apologize. And mean it, too. Many men are so filled with hate, or so filled with desire, that any failure contextualizes itself as an energy beyond the mortal coil. You killed this man. It is you who upended a life which could not brook even the slightest of pauses, much less the ultimate defeat that is death. It is you who can end his struggle now. I believe apologizing would do this.%SPEECH_OFF%Barnabas steps forward and explains, again, that Hoggart only worked to ensure that the estate stayed within the family. All that he did was for the family. He was not an evil or cruel man, he was only doing what he thought was right. %witchhunter% throws a hand out as if to say \'see\'.%SPEECH_ON%Well, there ya go. Captain, listen. Whatever feud there was between you two is over. This is something else. No man deserves this fate. Apologize to him from the heart and you can end his suffering once and for all.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_76.png[/img]%witchhunter% wymusza uśmiech.%SPEECH_ON%Przeproś go.%SPEECH_OFF%Niepewny, czy dobrze go usłyszałeś, powtarzasz jego słowa, a łowca czarownic kiwa głową.%SPEECH_ON%Tak, przeproś. I to szczerze. Wielu ludzi jest tak pełnych nienawiści albo tak pełnych pragnień, że każda porażka kontekstualizuje się jako energia poza śmiertelną powłoką. To ty zabiłeś tego człowieka. To ty wywróciłeś życie, które nie znosiło nawet najdrobniejszej pauzy, a tym bardziej ostatecznej klęski, jaką jest śmierć. To ty możesz teraz zakończyć jego walkę. Wierzę, że przeprosiny to uczynią.%SPEECH_OFF%Barnabas podchodzi i znów wyjaśnia, że Hoggart działał tylko po to, by utrzymać posiadłość w rodzinie. Wszystko, co robił, robił dla rodziny. Nie był zły ani okrutny, robił tylko to, co uważał za słuszne. %witchhunter% wyrzuca rękę, jakby mówił: 'widzisz'.%SPEECH_ON%No i masz. Kapitanie, posłuchaj. Jakikolwiek spór był między wami, jest skończony. To coś innego. Nikt nie zasługuje na taki los. Przeproś go z serca, a zakończysz jego cierpienie raz na zawsze.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright. Here goes nothing",
+					Text = "Dobrze. No to spróbujmy",
 					function getResult( _event )
 					{
 						return "J";
@@ -267,13 +267,13 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "J",
-			Text = "[img]gfx/ui/events/event_76.png[/img]You step toward Hoggart. He growls and eyes you for a moment before staring back at the home. With another cautionary step, you come to stand in front of him. His glazed, desiccated eyes glare at you, but he doesn\'t look away this time. You speak.%SPEECH_ON%Hoggart...%SPEECH_OFF%The undead man leans back, his eyes slimming incredulously, his hand touching his chest. His voice seems to unfurl, strained from the depths of a borrowed body.%SPEECH_ON%Ho...ggart... I... tried...%SPEECH_OFF%Nodding, you jack your thumbs into your belt line.%SPEECH_ON%I know you tried. I mean, I didn\'t know you were trying to begin with, but now I know. Look, your brother told me everything. Had I known, I wouldn\'t have taken that contract. You didn\'t...%SPEECH_OFF%You glance at %witchhunter% who nods. You continue.%SPEECH_ON%Hoggart, you didn\'t deserve to die. Not like that. Were I in your shoes, I would have been doing the same. But I wasn\'t in your shoes. I could not have understood who you were or what you were doing. I was only doing what I was paid to do. I can\'t take back what\'s been done, all I can do is say... I\'m sorry. You don\'t deserve this pain and I am sorry.%SPEECH_OFF%Hoggart\'s glazed, drooping eyes stare at you a moment longer, then suddenly his body wobbles and falls forward. Two spirits emerge, one twisting and shooting across the muddied land, wimpling stones with tears of its blue spectra as it streaks straight to the horizon. But the other spirit remains, glowing a faint gold now, and it simply floats toward the home. Barnabas follows after it and you after him. Together, you round a corner and head toward the back end of the property where Hoggart\'s ghost pauses.%SPEECH_ON%All I did, for this. No longer mine. Yours.%SPEECH_OFF%The spirit fades away as Barnabas reaches out to it, glistening dust floating away from his touch. You notice that the earth has been upturned here and a crate is sinking into the rainwater. Dragging it up and opening it, you find an enormous sword with decorations of Hoggart\'s family name. Baranabas looks as shocked as you about it.%SPEECH_ON%The family heirloom. He said he\'d never sell it to save the estate, he thought one couldn\'t be without the other. When I told him it had to be done he took it town and then came back and told me he lost it gambling... I never talked to him again. Last thing I said to him was that he was a no good vagrant and the worst brother anyone could ever have. Now I know the truth. You have brought me and my brother peace, sellsword, and that peace is all I want to remember. Please, as my brother said, take the heirloom.%SPEECH_OFF%You take the sword and wish Barnabas the best. The last you see of him he is sitting in the mud, body hunched, tottering and weeping with the rain all around him until there\'s no man at all, just a warm home and a storm booming with golden lightning.",
+			Text = "[img]gfx/ui/events/event_76.png[/img]Robisz krok w stronę Hoggarta. Warczy i przez chwilę mierzy cię wzrokiem, po czym znów wpatruje się w dom. Kolejny ostrożny krok i stajesz przed nim. Jego oszklone, wyschnięte oczy wpatrują się w ciebie, ale tym razem nie odwraca wzroku. Mówisz.%SPEECH_ON%Hoggart...%SPEECH_OFF%Nieumarły odchyla się, jego oczy zwężają się z niedowierzaniem, dłoń dotyka piersi. Jego głos zdaje się rozwijać, napięty z głębin pożyczonego ciała.%SPEECH_ON%Ho...ggart... Ja... próbowałem...%SPEECH_OFF%Kiwasz głową, wtykając kciuki za pas.%SPEECH_ON%Wiem, że próbowałeś. To znaczy, nie wiedziałem, że w ogóle próbowałeś, ale teraz wiem. Słuchaj, twój brat powiedział mi wszystko. Gdybym wiedział, nie wziąłbym tego kontraktu. Ty nie...%SPEECH_OFF%Spoglądasz na %witchhunter%, który kiwa głową. Kontynuujesz.%SPEECH_ON%Hoggart, nie zasłużyłeś na śmierć. Nie taką. Gdybym był na twoim miejscu, robiłbym to samo. Ale nie byłem na twoim miejscu. Nie mogłem zrozumieć, kim jesteś i co robisz. Robiłem tylko to, za co mi płacono. Nie mogę cofnąć tego, co się stało, mogę tylko powiedzieć... przepraszam. Nie zasługujesz na ten ból i jest mi przykro.%SPEECH_OFF%Oszklone, opadające oczy Hoggarta patrzą na ciebie jeszcze chwilę, po czym jego ciało chwieje się i pada do przodu. Wyłaniają się dwa duchy, jeden skręca i pędzi przez zabłocony teren, zraszając kamienie łzami swojego niebieskiego widma, gdy pędzi prosto ku horyzontowi. Drugi duch pozostaje, teraz świecąc delikatnym złotem, i po prostu unosi się w stronę domu. Barnabas idzie za nim, a ty za Barnabasem. Razem obchodzicie róg i kierujecie się na tył posesji, gdzie duch Hoggarta zatrzymuje się.%SPEECH_ON%Wszystko, co zrobiłem, dla tego. Już nie moje. Twoje.%SPEECH_OFF%Duch znika, gdy Barnabas wyciąga do niego rękę, a lśniący pył odpływa spod jego dotyku. Zauważasz, że ziemia jest tu rozkopana, a skrzynia zapada się w deszczowej wodzie. Wyciągasz ją i otwierasz, znajdując ogromny miecz z ozdobami rodowego imienia Hoggarta. Barnabas wygląda na równie zszokowanego jak ty.%SPEECH_ON%Rodowa pamiątka. Mówił, że nigdy jej nie sprzeda, by ratować posiadłość, uważał, że jedno bez drugiego nie ma sensu. Kiedy powiedziałem mu, że trzeba to zrobić, zabrał ją do miasta, a potem wrócił i powiedział, że przegrał ją w hazardzie... Nigdy więcej z nim nie rozmawiałem. Ostatnie, co mu powiedziałem, to że jest nic nie wartym włóczęgą i najgorszym bratem, jakiego można mieć. Teraz znam prawdę. Przyniosłeś mnie i mojemu bratu spokój, najemniku, i to jedyny spokój, jaki chcę pamiętać. Proszę, jak mówił mój brat, weź rodową pamiątkę.%SPEECH_OFF%Bierzesz miecz i życzysz Barnabasowi wszystkiego dobrego. Ostatni raz widzisz go, jak siedzi w błocie, zgarbiony, chwiejąc się i płacząc wśród deszczu, aż nie ma już człowieka, tylko ciepły dom i burza dudniąca złotym piorunem.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest in peace, Hoggart.",
+					Text = "Spoczywaj w pokoju, Hoggart.",
 					function getResult( _event )
 					{
 						return 0;
@@ -292,7 +292,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

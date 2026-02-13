@@ -3,18 +3,18 @@ this.greenskins_intro_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.greenskins_intro";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_59.png[/img]%randombrother% enters your tent.%SPEECH_ON%Sir, we got a group of refugees out here that\'d like to talk to you.%SPEECH_OFF%You set aside your quill pen and go to meet them. They\'re an awful mess, looking more like dishrags thrown to the mud than people. One, a man nursing a nub where his hand used to be, steps forward and speaks.%SPEECH_ON%I take it you\'re the one in charge?%SPEECH_OFF%Nodding, you ask the man what has happened and why it concerns the company. He explains, gesticulating with his one good hand.%SPEECH_ON%The greenskins are attacking.%SPEECH_OFF%Well, that\'s nothing new. You ask where they are and if they\'re goblins or orcs. The man shakes his head.%SPEECH_ON%Well, see, that\'s just the thing. It\'s both. They\'re... they\'re working together. Hordes of them as numerous as the blades of grass beneath our feet. I misspoke, in a way. What I should have said is that they aren\'t just attacking, they\'re INVADING. All of them. Together. An invasion beyond any scope or measure, don\'t you understand?%SPEECH_OFF%You look at the crowd of refugees. Children huddled beneath the skirts of their mothers, men looking lost. The man continues.%SPEECH_ON%My father fought in the Battle of Many Names. He always did say they\'d come back and now I suppose he\'s right. We hear the noble houses are panicking and might join forces, lest we all be overrun! If you want my advice, I say stay out of it. Those hordes... there\'s no stopping them. And the things they do...%SPEECH_OFF%You grab the man by his shirt.%SPEECH_ON%The things they do don\'t worry me. Get out of here, peasant, and leave the fighting to the fighters.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_59.png[/img]%randombrother% wchodzi do twojego namiotu.%SPEECH_ON%Panie, mamy tu grupę uchodźców, którzy chcieliby z tobą porozmawiać.%SPEECH_OFF%Odkładasz pióro i idziesz ich spotkać. To straszna zbieranina, wyglądają bardziej jak szmaty rzucone w błoto niż ludzie. Jeden z nich, mężczyzna trzymający kikut tam, gdzie kiedyś miał dłoń, wychodzi do przodu i mówi.%SPEECH_ON%Rozumiem, że to ty tu rządzisz?%SPEECH_OFF%Kiwasz głową i pytasz, co się stało i dlaczego to obchodzi kompanię. Wyjaśnia, gestykulując jedyną sprawną ręką.%SPEECH_ON%Zielonoskórzy atakują.%SPEECH_OFF%Cóż, to nic nowego. Pytasz, gdzie są i czy to gobliny, czy orki. Mężczyzna kręci głową.%SPEECH_ON%No właśnie o to chodzi. To jedno i drugie. Oni... oni działają razem. Hordy tak liczne jak źdźbła trawy pod naszymi stopami. W pewnym sensie źle się wyraziłem. Powinienem powiedzieć, że oni nie tylko atakują, oni NAJEŻDŻAJĄ. Wszyscy. Razem. Inwazja ponad wszelki zakres i miarę, rozumiesz?%SPEECH_OFF%Patrzysz na tłum uchodźców. Dzieci skulone pod spódnicami matek, mężczyźni z zagubionym wzrokiem. Mężczyzna ciągnie dalej.%SPEECH_ON%Mój ojciec walczył w Bitwie Wielu Imion. Zawsze mówił, że wrócą, i teraz chyba miał rację. Słyszymy, że szlacheckie rody panikują i mogą połączyć siły, żebyśmy wszyscy nie zostali zgnieceni! Jeśli chcesz mojej rady, mówię: trzymaj się z dala. Tych hord... nie da się powstrzymać. A to, co robią...%SPEECH_OFF%Chwytasz go za koszulę.%SPEECH_ON%To, co robią, mnie nie martwi. Wynoś się stąd, chłopie, i zostaw walkę walczącym.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "War is upon us.",
+					Text = "Wojna jest u naszych bram.",
 					function getResult( _event )
 					{
 						return 0;

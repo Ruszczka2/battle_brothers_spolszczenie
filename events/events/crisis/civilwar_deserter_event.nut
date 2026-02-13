@@ -6,16 +6,16 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.civilwar_deserter";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_02.png[/img]{While on the road you come across two soldiers of %noblehouse%\'s army and they\'re stringing up what it appears to be one of their own. The man\'s head is put through a noose, but upon seeing you he calls out.%SPEECH_ON%They wanted me to kill children! This is what I get for not following orders?%SPEECH_OFF%%randombrother% looks at you with a \'maybe we can do something\' face. | You find two men of %noblehouse%\'s army stringing up a man who has been blindfolded. Curious, you ask what his crime was. One of the executioners laughs.%SPEECH_ON%He was ordered to burn a small village and refused. You don\'t refuse the nobility, lest this happen.%SPEECH_OFF%The blindfolded man spits.%SPEECH_ON%To the hells with you all. I\'ll at least have my dignity and honor to the end.%SPEECH_OFF% | To the side of the path you see a man slinging a rope around a tree branch. A second man pushes a blindfolded prisoner forward, slipping the noose about his neck. The executioners see you and put their hands up.%SPEECH_ON%Step back, sellswords. This man is to be executed under the orders of %noblehouse%. Interfere, and you will be dealt with in a similar fashion.%SPEECH_OFF%The prisoner barks out.%SPEECH_ON%They wanted me to murder women and children. This is the price I pay for ignoring such orders, but at least I will leave this horrid world with my honor intact.%SPEECH_OFF% | The path opens to a shackled man sitting in the grass while two men angrily string a rope along a tree branch. They test it with a few good pulls before nodding and putting a barrel beneath it, presumably for the prisoner to stand on. The prisoner sees you and calls out.%SPEECH_ON%Sellswords, save me! All I did was refuse to burn a temple to the ground!%SPEECH_OFF%One of the executioners kicks the man.%SPEECH_ON%That temple was housing rebels, rebels that killed our lieutenant, you fool! You deserve this fate more than anyone. If %noblehouse% is to win this war, we cannot have rats such as you in our midst.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_02.png[/img]{Podczas drogi napotykasz dwóch żołnierzy armii %noblehouse%, którzy wieszają, jak się wydaje, jednego ze swoich. Głowę mężczyzny wsadzono w pętlę, lecz na twój widok woła.%SPEECH_ON%Chcieli, żebym zabijał dzieci! To mam za to, że nie wykonałem rozkazu?%SPEECH_OFF%%randombrother% spogląda na ciebie z miną \"może możemy coś zrobić\". | Znajdujesz dwóch ludzi z armii %noblehouse%, którzy wieszają człowieka z zawiązanymi oczami. Zaciekawiony pytasz, jaka była jego wina. Jeden z katów śmieje się.%SPEECH_ON%Kazano mu spalić małą wioskę i odmówił. Szlachcie się nie odmawia, bo kończy się tak.%SPEECH_OFF%Z zawiązanymi oczami spluwa.%SPEECH_ON%Do diabła z wami wszystkimi. Przynajmniej zachowam godność i honor do końca.%SPEECH_OFF% | Z boku drogi widzisz człowieka, który zarzuca linę na gałąź drzewa. Drugi popycha oślepionego więźnia do przodu, zakładając mu pętlę na szyję. Kaci widzą cię i unoszą ręce.%SPEECH_ON%Cofnąć się, najemnicy. Ten człowiek ma zostać stracony z rozkazu %noblehouse%. Wtrąćcie się, a spotka was podobny los.%SPEECH_OFF%Więzień warczy.%SPEECH_ON%Chcieli, żebym mordował kobiety i dzieci. Taka jest cena za zignorowanie rozkazów, ale przynajmniej opuszczę ten ohydny świat z honorem nienaruszonym.%SPEECH_OFF% | Ścieżka otwiera się na zakutego w kajdany mężczyznę siedzącego w trawie, podczas gdy dwóch ludzi gniewnie przeciąga linę przez gałąź drzewa. Sprawdzają ją kilkoma mocnymi szarpnięciami, po czym kiwają głowami i stawiają pod nią beczkę, zapewne dla więźnia. Więzień dostrzega cię i woła.%SPEECH_ON%Najemnicy, ratujcie mnie! Wszystko, co zrobiłem, to odmówiłem spalenia świątyni do fundamentów!%SPEECH_OFF%Jeden z katów kopie mężczyznę.%SPEECH_ON%Ta świątynia ukrywała buntowników, buntowników, którzy zabili naszego porucznika, głupcze! Zasługujesz na ten los bardziej niż ktokolwiek. Jeśli %noblehouse% ma wygrać tę wojnę, nie możemy mieć wśród siebie szczurów takich jak ty.%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Free that man!",
+					Text = "Uwolnijcie tego człowieka!",
 					function getResult( _event )
 					{
 						local roster = this.World.getTemporaryRoster();
@@ -23,8 +23,8 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 						_event.m.Dude.setStartValuesEx([
 							"deserter_background"
 						]);
-						_event.m.Dude.setTitle("the Honorable");
-						_event.m.Dude.getBackground().m.RawDescription = "Once a soldier of a noble army, %name% was almost hanged for refusing orders, until rescued by you and the %companyname%.";
+						_event.m.Dude.setTitle("Czcigodny");
+						_event.m.Dude.getBackground().m.RawDescription = "Niegdyś żołnierz armii szlacheckiej, %name% niemal został powieszony za odmowę wykonania rozkazów, aż uratowali go ty i %companyname%.";
 						_event.m.Dude.getBackground().buildDescription(true);
 
 						if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
@@ -54,7 +54,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This is none of our business.",
+					Text = "To nie nasza sprawa.",
 					function getResult( _event )
 					{
 						return "D";
@@ -70,13 +70,13 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_02.png[/img]{You order the executioners to let the man go. They laugh and draw out their swords, but that\'s about the last thing they do as the %companyname% descends upon them with liberating fury, hacking the two soldiers down in mere seconds. The prisoner thanks you and, in return for his rescue, offers to serve you in battle. | You won\'t stand for such an execution and order the men of the %companyname% to intervene. They quickly draw their weapons and descend upon the soldiers, slaughtering them in but a moment. The freed prisoner falls to his feet before you.%SPEECH_ON%Please, let me fight in your ranks, it is the least I can offer!%SPEECH_OFF% | You order the %companyname% to save the prisoner. It is an odd series of sights and sounds to see men who thought themselves the executioners be so suddenly put to the blade. Such turns of fortune bring out wild, womanly-like screaming. Your men would have made it quick had they not tried to run, but a man who is intent on saving himself oft dies the slowest. The prisoner, meanwhile, falls to your feet and offers allegiance.}",
+			Text = "[img]gfx/ui/events/event_02.png[/img]{Rozkazujesz katom uwolnić człowieka. Śmieją się i dobywają mieczy, ale to ostatnia rzecz, jaką robią, bo %companyname% spada na nich z wyzwoleńczą furią, rąbiąc obu żołnierzy w kilka sekund. Więzień dziękuje ci i w zamian za ratunek oferuje służbę w walce. | Nie możesz pozwolić na taką egzekucję i rozkazujesz ludziom z %companyname% interweniować. Szybko dobywają broni i rzucają się na żołnierzy, mordując ich w mgnieniu oka. Uwolniony więzień pada przed tobą na kolana.%SPEECH_ON%Proszę, pozwól mi walczyć w twoich szeregach, to najmniej, co mogę zaoferować!%SPEECH_OFF% | Rozkazujesz %companyname% uratować więźnia. To dziwny ciąg widoków i dźwięków, gdy ludzie, którzy uważali się za katów, tak nagle padają od ostrza. Takie zwroty losu wyzwalają dziki, niemal kobiecy krzyk. Twoi ludzie zrobiliby to szybko, gdyby ci nie próbowali uciec, ale człowiek, który uparcie ratuje własną skórę, często ginie najwolniej. Więzień tymczasem pada ci do stóp i składa przysięgę.}",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Welcome to the %companyname%!",
+					Text = "Witaj w %companyname%!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -87,7 +87,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Go home to your family, soldier.",
+					Text = "Wracaj do rodziny, żołnierzu.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -106,13 +106,13 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_02.png[/img]{You order the man rescued. One of the soldiers draws his sword and is immediately cut down for his misplaced confidence. The other soldier, seemingly sharper of mind, has already run off. No doubt he\'ll tell %noblehouse% of what you have done here. The rescued prisoner comes to you personally, going to one knee as he bows.%SPEECH_ON%Thank you, sellsword. You have my blade for this day until my last.%SPEECH_OFF% | In your mind, it is unlikely that the two executioners would abandon their noble flags to join you. But it is quite probable that the prisoner would fight on your side, were you to free him. So you order his rescue. One of the soldiers draws his sword and pledges allegiance to the %noblehouse%. It\'s the last thing he does. The other soldier flees. Maybe you could have recruited him, but it\'s unlikely he\'ll come back given the prompt killing of his partner. Most likely he will tell his superiors of your actions here.\n\n You go to the freed prisoner. He hurriedly bows and offers to fight for the %companyname%. | You order the soldiers to let the man go. One laughs and simply tightens the noose about his neck and starts to hang him. %randombrother% jumps forward and knocks an executioner to the ground. He beats his face in with a rock while the second soldier runs off. No doubt he\'ll tell his commanders what you\'ve done here.\n\n Freed, the prisoner comes to you personally and bows, offering allegiance in return for his rescue.}",
+			Text = "[img]gfx/ui/events/event_02.png[/img]{Rozkazujesz uwolnić człowieka. Jeden z żołnierzy dobywa miecza i natychmiast pada za swą zbytnią pewność siebie. Drugi, najwyraźniej bystrzejszy, już uciekł. Bez wątpienia powie %noblehouse%, co tu zrobiłeś. Uratowany więzień podchodzi do ciebie osobiście, przyklęka i kłania się.%SPEECH_ON%Dziękuję, najemniku. Masz moje ostrze od dziś aż po mój kres.%SPEECH_OFF% | Wiesz, że dwaj kaci raczej nie porzuciliby szlacheckich sztandarów, by do ciebie dołączyć. Ale jest całkiem prawdopodobne, że więzień walczyłby po twojej stronie, gdybyś go uwolnił. Rozkazujesz więc jego ratunek. Jeden z żołnierzy dobywa miecza i ślubuje wierność %noblehouse%. To ostatnia rzecz, jaką robi. Drugi żołnierz ucieka. Może dałoby się go zwerbować, ale raczej nie wróci po błyskawicznym zabiciu jego towarzysza. Najpewniej opowie przełożonym o twoich działaniach.\n\n Podchodzisz do uwolnionego więźnia. Pośpiesznie się kłania i oferuje walkę dla %companyname%. | Rozkazujesz żołnierzom uwolnić człowieka. Jeden śmieje się i po prostu zaciska pętlę na jego szyi, zaczynając go wieszać. %randombrother% rzuca się naprzód i przewraca jednego z katów na ziemię. Tłucze mu twarz kamieniem, podczas gdy drugi żołnierz ucieka. Bez wątpienia powie swoim dowódcom, co tu zrobiłeś.\n\n Uwolniony więzień podchodzi do ciebie osobiście i kłania się, oferując lojalność w zamian za ratunek.}",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Welcome to the %companyname%!",
+					Text = "Witaj w %companyname%!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -123,7 +123,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Go home to your family, soldier.",
+					Text = "Wracaj do rodziny, żołnierzu.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -142,13 +142,13 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_02.png[/img]{Though you can\'t necessarily fault the man for ignoring his orders, the decision was his, not yours, just as his punishment will be his, and not yours. You order the %companyname% to keep marching. | You\'ve no reason to involve the %companyname% in the politics of the quarreling nobles. The prisoner nods, understandingly. He lifts his head high before they hang him straight. | The executioners glance at you, perhaps sensing that you might step in to absolutely ruin their day. Instead, you tell the prisoner that it was his choice that got him here. He nods solemnly. The executioners rush to hang him, lest this dangerous stranger crossing their path have a sudden change of heart.}",
+			Text = "[img]gfx/ui/events/event_02.png[/img]{Choć niekoniecznie możesz winić człowieka za zignorowanie rozkazów, decyzja była jego, nie twoja, tak jak kara będzie jego, a nie twoja. Rozkazujesz %companyname% maszerować dalej. | Nie masz powodu mieszać %companyname% w politykę skłóconej szlachty. Więzień rozumiejąco kiwa głową. Unosi wysoko głowę, zanim go powieszą. | Kaci spoglądają na ciebie, być może wyczuwając, że mógłbyś wkroczyć i całkowicie zepsuć im dzień. Zamiast tego mówisz więźniowi, że to jego wybór przywiódł go tutaj. Kiwając głową, przyjmuje to ze spokojem. Kaci spieszą się, by go powiesić, na wypadek gdyby ten niebezpieczny przechodzień nagle zmienił zdanie.}",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "His war was not ours.",
+					Text = "To nie była nasza wojna.",
 					function getResult( _event )
 					{
 						return 0;

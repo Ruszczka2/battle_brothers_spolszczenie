@@ -6,17 +6,17 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.undead_frozen_pond";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_143.png[/img]While traversing the cold wastes, you come to the lip of a frozen pond. %randombrother% spots something sticking out its middle. You see that it\'s a knight whose body has been frozen hip-deep, but the upper body is still moving around. The eyes glow red and its fingers, jet black from frost bite, still manage to clench and grip. Its jaw is held together by ice for muscles as though with decaying and translucent tendons.\n\n%randombrother% points to the giant wiederganger with the frozen visage.%SPEECH_ON%Hey, look! That farker\'s got a big ol\' sword on him. That might be worth trying to nab, no?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_143.png[/img]Przemierzając zimne pustkowia, docierasz do brzegu zamarzniętego stawu. %randombrother% dostrzega coś wystającego pośrodku. Widzisz, że to rycerz, którego ciało zamarzło po biodra, ale górna część wciąż się porusza. Oczy świecą na czerwono, a palce, czarne jak smoła od odmrożeń, wciąż potrafią zaciskać się i chwytać. Szczęka trzyma się dzięki lodowym mięśniom, jakby na gnijących, przezroczystych ścięgnach.\n\n%randombrother% wskazuje na ogromnego wiedergangera o zamarzniętej twarzy.%SPEECH_ON%Hej, patrz! Ten drań ma przy sobie wielki miecz. Może warto spróbować go zgarnąć, co?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Any volunteers?",
+					Text = "Jacyś ochotnicy?",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -36,7 +36,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Lightweight != null)
 				{
 					this.Options.push({
-						Text = "You are quick on your feet, %lightweightfull%. Give it a try?",
+						Text = "Masz lekką stopę, %lightweightfull%. Spróbujesz?",
 						function getResult( _event )
 						{
 							return "Lightweight";
@@ -46,7 +46,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "It\'s not worth it.",
+					Text = "Nie warto.",
 					function getResult( _event )
 					{
 						return 0;
@@ -58,13 +58,13 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Good",
-			Text = "[img]gfx/ui/events/event_143.png[/img]%chosenbrother% elects to try and make a run on getting the dead knight\'s sword. His first step on the pond sends an icy warble clear across the underbelly of the frozen sheet. He tests his footing again. The ice shifts and chitters, but it does not crack. With every step, the sellsword measures his own weight and its likelihood to collapse the ice - all the meanwhile, making sure he doesn\'t step on one of the corpses littered about.\n\nHe successfully gets to the undead knight. Icicles dangle off its sword, the blade itself encapsulated in a layer of ice. The sellsword grabs the blade and yanks. The undead knight\'s arm lurches forward and breaks off at the elbow, sending the sellsword arse-skating backward across the pond. He slides up against the edge where your men help him up. The sword will need to be heated to get the ice off, but the weapon is definitely usable.",
+			Text = "[img]gfx/ui/events/event_143.png[/img]%chosenbrother% postanawia spróbować zdobyć miecz martwego rycerza. Jego pierwszy krok na staw wysyła lodowe drżenie przez spód zamarzniętej tafli. Sprawdza oparcie ponownie. Lód przesuwa się i trzeszczy, ale nie pęka. Z każdym krokiem najemnik waży własny ciężar i prawdopodobieństwo załamania lodu - jednocześnie pilnując, by nie stanąć na jednym z porozrzucanych zwłok.\n\nUdaje mu się dotrzeć do nieumarłego rycerza. Z miecza zwisają sople, a samo ostrze jest uwięzione w warstwie lodu. Najemnik chwyta klingę i szarpie. Ramię nieumarłego rycerza szarpie się do przodu i odrywa w łokciu, posyłając najemnika ślizgiem na tyłku po stawie. Doślizguje do brzegu, gdzie twoi ludzie pomagają mu wstać. Miecz trzeba będzie ogrzać, by zdjąć lód, ale broń jest jak najbardziej użyteczna.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -81,20 +81,20 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Bad",
-			Text = "[img]gfx/ui/events/event_143.png[/img]%chosenbrother% tries the ice, putting a foot right on the edge of the pond. A soft warble echoes across the pondwater\'s cold underbelly, as though someone had skipped a drumming rock across a barreled surface. He looks back at the party and shrugs.%SPEECH_ON%Seem\'s aight.%SPEECH_OFF%His next step sends him crashing through the ice. Shards break into a sort of chevron entrapment and when he reaches out to grab one it slices his hands. The men quickly throw him a rope and drag him out.\n\nBloodied and shivering, %chosenbrother% shakes his head as he\'s wrapped in blankets.%SPEECH_ON%I-I-I-I believe that was aw-aw-aw-awful. Aw-aw-awful idea, sir.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_143.png[/img]%chosenbrother% sprawdza lód, stawiając stopę na samym brzegu stawu. Miękkie drżenie odbija się echem po zimnym spodzie tafli, jakby ktoś puścił grający kamień po beczkowatej powierzchni. Spogląda na kompanię i wzrusza ramionami.%SPEECH_ON%Wygląda w porządku.%SPEECH_OFF%Jego następny krok kończy się załamaniem lodu. Odłamki układają się w coś na kształt zębatych szczęk, a gdy wyciąga rękę, by się chwycić, przecina sobie dłonie. Ludzie szybko rzucają mu linę i wyciągają go.\n\nZakrwawiony i drżący z zimna, %chosenbrother% kręci głową, gdy owijacie go kocami.%SPEECH_ON%J-j-j-jestem zdania, że to był str-str-straszny. Str-str-straszny pomysł, panie.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You tried your best.",
+					Text = "Próbowałeś najlepiej jak umiałeś.",
 					function getResult( _event )
 					{
 						return 0;
@@ -116,7 +116,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Other.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Other.getName() + " cierpi na " + injury.getNameOnly()
 					}
 				];
 				local effect = this.new("scripts/skills/injury/sickness_injury");
@@ -124,20 +124,20 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.Other.getName() + " is sick"
+					text = _event.m.Other.getName() + " jest chory"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Lightweight",
-			Text = "[img]gfx/ui/events/event_143.png[/img]%lightweight% steps forward.%SPEECH_ON%Ice? Ice is nothing. You can glide on it like this.%SPEECH_OFF%Without even a pause, the man leaps out onto the frozen pond and skates across its surface. Cracks emerge out from behind him like a wake of imminently bad news, but he remains unperturbed. He swings by the undead knight and grabs the frozen sword. The wiederganger groans as its arm breaks off at the elbow. The man merrily skates his way back to the edge of the pond and presents the sword to you. %otherbrother% steps forward and cracks the wiederganger\'s frozen arm off the handle like a man breaking a crab claw.%SPEECH_ON%Would ya look at that?%SPEECH_OFF%He crushes the fingers into fragments and in the powdered remains there is a signet. A sword and jewelry, what\'s not to love about this result?",
+			Text = "[img]gfx/ui/events/event_143.png[/img]%lightweight% robi krok do przodu.%SPEECH_ON%Lód? Lód to nic. Można po nim sunąć tak.%SPEECH_OFF%Bez najmniejszej pauzy mężczyzna wyskakuje na zamarznięty staw i ślizga się po jego powierzchni. Za nim pojawiają się pęknięcia jak ślad nieuchronnie złych wieści, ale on pozostaje niewzruszony. Mija nieumarłego rycerza i chwyta zamarznięty miecz. Wiederganger jęczy, gdy jego ramię odrywa się w łokciu. Mężczyzna wesoło odślizguje do brzegu i podaje ci miecz. %otherbrother% podchodzi i odłamuje zmarznięte ramię wiedergangera od rękojeści, jakby łamał szczypce kraba.%SPEECH_ON%No, popatrz tylko?%SPEECH_OFF%Rozgniata palce na kawałki, a w sproszkowanych resztkach znajduje się sygnet. Miecz i biżuteria, czego tu nie kochać?",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Impressive.",
+					Text = "Imponujące.",
 					function getResult( _event )
 					{
 						return 0;
@@ -154,14 +154,14 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

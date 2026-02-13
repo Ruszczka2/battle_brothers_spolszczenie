@@ -5,17 +5,17 @@ this.civilwar_outro_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.civilwar_outro";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_96.png[/img]You\'re in your tent when %dude% makes an entrance. He speaks bluntly.%SPEECH_ON%Nobles be talking. Big fancy tent setup yonder and they\'re in there.%SPEECH_OFF%Putting your quill pen down, you respond.%SPEECH_ON%Just talking?%SPEECH_OFF%The mercenary shrugs.%SPEECH_ON%It\'s quiet. So they\'re either talking, or killing one another real quiet like.%SPEECH_OFF%You get up and step outside. A brisk air hits you, and on it is the scent of spices and flavors. Looking upwind, you spot the tent. Cooks and chefs are hurrying about with orders of food and other makings. Servants carry platters of meats, vegetables, and fruits. An opulent tent, black with gold embroidering, houses the nobles. Bannermen stand outside. They take no part in the festivities. They\'re mostly playing cards while occasionally glancing at one another. Some are bandaged with blood splotched linens. One man stands on crutches with a haggard, half-cocked knee. You ask %dude% what the news is. He nods toward the scene.%SPEECH_ON%Well, they rolled up about an hour ago while you were checking the maps. We didn\'t want to bother ya, but, well, they seemed intent on staying so, you know.%SPEECH_OFF%You get a good look at the noble tent. Through its opening, you can see the faint glisten of crowned heads passing back and forth. %dude% spits and asks.%SPEECH_ON%Well, who do you think won the war?%SPEECH_OFF%You hock a loogie, spit, and shake your head.%SPEECH_ON%Who gives a shite?%SPEECH_OFF%All that matters to you is that peace means fewer contracts. Perhaps now would be a good time to put up the sword and enjoy your crowns? Or maybe say to hell with all that sentimental crap and just keep pressing forward, leading the company to even greater things?\n\n%OOC%You\'ve won! Battle Brothers is designed for replayability and for campaigns to be played until you\'ve beaten one or two late game crises. Starting a new campaign will allow you to try out different things in a different world.\n\nYou can also choose to continue your campaign for as long as you want. Just be aware that campaigns are not intended to last forever and you\'re likely to run out of challenges eventually.%OOC_OFF%",
+			Text = "[img]gfx/ui/events/event_96.png[/img]Siedzisz w swoim namiocie, gdy %dude% wchodzi. Mówi wprost.%SPEECH_ON%Szlachta gada. Tam stoi wielki, ozdobny namiot, siedzą w nim.%SPEECH_OFF%Odkładając pióro, odpowiadasz.%SPEECH_ON%Tylko gadają?%SPEECH_OFF%Najemnik wzrusza ramionami.%SPEECH_ON%Cisza. Więc albo gadają, albo się po cichu wyżynają.%SPEECH_OFF%Wstajesz i wychodzisz na zewnątrz. Uderza cię rześkie powietrze, niosące zapach przypraw i smaków. Patrząc pod wiatr, dostrzegasz namiot. Kucharze i kuchmistrze krzątają się z rozkazami i składnikami. Służba niesie półmiski mięsa, warzyw i owoców. W środku, w okazałym namiocie czarnym z złotym haftem, biesiaduje szlachta. Chorążowie stoją na zewnątrz. Nie biorą udziału w ucztach. Przeważnie grają w karty, od czasu do czasu spoglądając na siebie. Niektórzy mają bandaże poplamione krwią. Jeden stoi o kulach z zgarbionym, półzgiętym kolanem. Pytasz %dude%, co słychać. Kiwając głową wskazuje scenę.%SPEECH_ON%Cóż, zjechali tu godzinę temu, kiedy sprawdzałeś mapy. Nie chcieliśmy cię niepokoić, ale, no wiesz, wyglądali na zdecydowanych zostać.%SPEECH_OFF%Przyglądasz się namiotowi szlachty. Przez wejście widać słaby połysk koronowanych głów, krążących tam i z powrotem. %dude% spluwa i pyta.%SPEECH_ON%A jak myślisz, kto wygrał wojnę?%SPEECH_OFF%Chrząkasz, spluwasz i kręcisz głową.%SPEECH_ON%A kogo to obchodzi?%SPEECH_OFF%Jedyne, co się dla ciebie liczy, to że pokój oznacza mniej kontraktów. Może teraz to dobry czas, by odłożyć miecz i cieszyć się koronami? A może posłać do diabła cały ten sentymentalny bełkot i iść dalej, prowadząc kompanię ku jeszcze większym sprawom?\n\n%OOC%Wygrałeś! Battle Brothers jest zaprojektowane z myślą o regrywalności i kampaniach, które trwają do momentu pokonania jednego lub dwóch kryzysów późnej fazy gry. Rozpoczęcie nowej kampanii pozwoli ci spróbować różnych rzeczy w innym świecie.\n\nMożesz też kontynuować kampanię tak długo, jak chcesz. Pamiętaj tylko, że kampanie nie są pomyślane jako wieczne i z czasem prawdopodobnie zabraknie ci wyzwań.%OOC_OFF%",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The %companyname% needs their commander!",
+					Text = "%companyname% potrzebuje swojego dowódcy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -23,7 +23,7 @@ this.civilwar_outro_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s time to retire from mercenary life. (End Campaign)",
+					Text = "Czas przejść na emeryturę z życia najemnika. (Zakończ kampanię)",
 					function getResult( _event )
 					{
 						this.World.State.getMenuStack().pop(true);

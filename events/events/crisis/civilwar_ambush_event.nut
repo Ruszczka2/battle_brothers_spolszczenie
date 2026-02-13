@@ -6,16 +6,16 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.civilwar_ambush";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_25.png[/img]Forests hide many things, being the natural resort of predators and men of wilder intents. But you know this well, and you know how to spot shadows most unnatural to this climate. It doesn\'t take you long to realize that there are more than just trees here, and with a quick punch into the thicket of a bush you pull out a young boy with a bow. He cries for help and the reinforcements arrive like songbirds to the prettiest of tunes: a dozen men emerge from the shadows, but the company is prepared, drawing their weapons and coming to stand on equal footing.\n\n An elderly man steps forth, holding his hands up.%SPEECH_ON%Wait, there is no need for violence here.%SPEECH_OFF%He comes to you personally and in a muted, scholarly tone explains what is happening. The small bunch of peasants are preparing to ambush a troop of %noblehouse% soldiers that will be coming this way any moment. He states you\'ll get a piece of the rewards if you help. If not, please get out of the way.",
+			Text = "[img]gfx/ui/events/event_25.png[/img]Lasy skrywają wiele rzeczy, będąc naturalnym schronieniem drapieżników i ludzi o dzikszych zamiarach. Ale ty dobrze to wiesz i potrafisz wypatrzyć cienie najbardziej niepasujące do tej scenerii. Nie mija wiele czasu, gdy orientujesz się, że nie ma tu tylko drzew, i szybkim uderzeniem w gęstwinę krzewu wyciągasz młodego chłopca z łukiem. Krzyczy o pomoc, a posiłki nadchodzą jak śpiew ptaków do najpiękniejszej melodii: z cieni wyłania się tuzin mężczyzn, lecz kompania jest gotowa, dobywa broni i staje z nimi na równej stopie.\n\n Starszy mężczyzna występuje, unosząc dłonie.%SPEECH_ON%Poczekaj, nie ma potrzeby przemocy.%SPEECH_OFF%Podchodzi do ciebie i tłumaczy przyciszonym, uczonym tonem, co się dzieje. Mała grupa chłopów szykuje zasadzkę na oddział żołnierzy %noblehouse%, którzy lada chwila będą przechodzić tędy. Mówi, że dostaniesz część nagrody, jeśli pomożesz. Jeśli nie, proszę, zejdź z drogi.",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s help these peasants.",
+					Text = "Pomóżmy tym chłopom.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We have to warn the soldiers.",
+					Text = "Musimy ostrzec żołnierzy.",
 					function getResult( _event )
 					{
 						return "D";
@@ -31,7 +31,7 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We\'ve no time for any of this.",
+					Text = "Nie mamy na to czasu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -47,13 +47,13 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_10.png[/img]They\'re peasants, scroungy and looking like they came here to find leaves to dress themselves. But flimsy bows like theirs come with hardened hands, well versed in getting arrows to targets they got no business finding. These are men of the forests. With confidence that this ambush will go right, you elect to join them.\n\n You don\'t have to wait long for the soldiers of %noblehouse% to start trundling there way over. They\'re loud, obnoxious, and some of them farting and complaining about mushrooms that they mistakenly ate.\n\n A kid about half your size releases the first shot. The arrow streaks between two branches and the lead scout drops to his knees. Leaves ruffle as though a great wind has come - arrows, sight unseen, zip into the soldiers\' column and they\'re so true in aim that their targets die silently. A few of the soldiers manage to close the distance, raising swords and shields, but here the %companyname% steps in and cuts them down. After but a minute, the entire troop has been slain.",
+			Text = "[img]gfx/ui/events/event_10.png[/img]To chłopi, obdarci i wyglądający, jakby przyszli tu szukać liści na odzienie. Ale ich lichym łukom towarzyszą stwardniałe dłonie, wprawione w posyłaniu strzał do celów, których nie powinni tak łatwo znajdować. To ludzie lasu. Pewny, że zasadzka się powiedzie, decydujesz się do nich dołączyć.\n\n Nie musisz długo czekać, aż żołnierze %noblehouse% zaczną tamtędy nadciągać. Są głośni, nieznośni, a kilku z nich puszcza bąki i narzeka na grzyby, które zjedli przez pomyłkę.\n\n Chłopak mniej więcej połowę twojego wzrostu oddaje pierwszy strzał. Strzała śmiga między dwiema gałęziami i prowadzący zwiadowca pada na kolana. Liście szeleszczą, jakby nadeszła wielka wichura - strzały, niewidoczne w locie, wbijają się w kolumnę żołnierzy i są tak celne, że cele padają bez głosu. Kilku żołnierzy zdoła zbliżyć się, unosząc miecze i tarcze, lecz wtedy wkracza %companyname% i kładzie ich trupem. Po zaledwie minucie cały oddział jest wybity.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "That went well. Let\'s divide the goods.",
+					Text = "Poszło dobrze. Podzielmy łupy.",
 					function getResult( _event )
 					{
 						return "C";
@@ -69,13 +69,13 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_87.png[/img]Your men go picking through the corpses, joined by the motley crew of killers. A scuffle breaks out over who should take a shield. You explain that the only reason the shield exists for the taking is because your men stepped forward to kill its owner. The leader of the group nods in agreement. He calls out that your company should take the heavier equipment as your men most certainly have better use for such things.\n\n As you divvy up the goods, one of the bowmen comes forward.%SPEECH_ON%I think one of them got away. There\'s tracks, but he must\'ve been a bit smarter than his dead brothers because he doubled back and covered them quite well.%SPEECH_OFF%Just when you thought you could get away with something...",
+			Text = "[img]gfx/ui/events/event_87.png[/img]Twoi ludzie przeszukują zwłoki, dołącza do nich różnorodna zgraja zabójców. Wybucha sprzeczka o to, kto ma wziąć tarczę. Wyjaśniasz, że jedyny powód, dla którego tarcza nadaje się do zabrania, jest taki, że twoi ludzie wyszli naprzód, by zabić jej właściciela. Przywódca grupy kiwa głową na znak zgody. Woła, że wasza kompania powinna wziąć cięższy ekwipunek, bo twoi ludzie na pewno lepiej go wykorzystają.\n\n Gdy dzielisz łupy, jeden z łuczników występuje naprzód.%SPEECH_ON%Chyba jeden z nich uciekł. Są ślady, ale musiał być trochę sprytniejszy od swoich martwych braci, bo zawrócił i dobrze je ukrył.%SPEECH_OFF%A już myślałeś, że uda ci się coś uchachać...",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Except for the guy who got away, that also went well.",
+					Text = "Poza tym, że jeden uciekł, to też poszło dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -149,13 +149,13 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_94.png[/img]You tell the peasants you want no part of their war, but you\'ll stay out of it nonetheless.\n\n As soon as they\'re out of sight and sound, you find the soldiers of %noblehouse% and inform them of the troubles that are soon to come. The lieutenant doesn\'t believe you until you lead him to the peasants and point them out or, rather, their slim shadows sneakily lingering behind this branch or that one.\n\n Going back to the troop, you organize an assault. It\'s pretty simple - you go around the ambush and come up from behind. The old men, desperate men, and naive boys are all slain in turn. They did not see it coming, but in the thick of the chaos some almost certainly escaped and have told of your betrayal. You collect a few goods from the battlefield and a summation of goodwill from the %noblehouse% bannermen.",
+			Text = "[img]gfx/ui/events/event_94.png[/img]Mówisz chłopom, że nie chcesz mieć nic wspólnego z ich wojną, ale i tak się nie wtrącasz.\n\n Gdy tylko znikają z oczu i słuchu, odnajdujesz żołnierzy %noblehouse% i informujesz ich o kłopotach, które wkrótce nadejdą. Porucznik nie wierzy ci, dopóki nie prowadzisz go do chłopów i ich nie wskazujesz, a raczej ich smukłych cieni skrycie czających się za tą czy inną gałęzią.\n\n Wracając do oddziału, organizujesz szturm. To dość proste - omijasz zasadzkę i uderzasz od tyłu. Starcy, zdesperowani mężczyźni i naiwni chłopcy giną po kolei. Nie spodziewali się tego, lecz w wirze chaosu kilku niemal na pewno uciekło i opowiedziało o twojej zdradzie. Zbierasz kilka rzeczy z pola walki i zyskujesz dawkę przychylności od chorążych %noblehouse%.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "So the locals may hear of this, what does it matter?",
+					Text = "Więc miejscowi mogą o tym usłyszeć, co z tego?",
 					function getResult( _event )
 					{
 						return 0;

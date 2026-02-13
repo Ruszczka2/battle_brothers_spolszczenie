@@ -6,16 +6,16 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.civilwar_trapped_soldiers";
-		this.m.Title = "At %town%";
+		this.m.Title = "W %town%";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You come across a large throng of peasants in an uproar. Upon closer look, they\'ve surrounded a small band of soldiers carrying the banner of %noblehouse%, who this very village belongs to. Each man has his sword out, but they\'ve been back into a corner and completely outnumbered. The laymen shout and point.%SPEECH_ON%Murderers! Rapists! Arsonists!%SPEECH_OFF%Spitting and tomato throwing follow suit. %randombrother% comes to you and asks if the men should step in or stay out of it.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Natrafiasz na duży tłum chłopów w wybuchu gniewu. Z bliższa okazuje się, że otoczyli mały oddział żołnierzy niosących sztandar %noblehouse%, do którego należy ta wioska. Każdy ma dobyte miecze, ale zostali wepchnięci w kąt i są całkowicie przeważeni liczebnie. Pospólstwo krzyczy i wskazuje palcami.%SPEECH_ON%Mordercy! Gwałciciele! Podpalacze!%SPEECH_OFF%W ruch idą plucie i rzucanie pomidorami. %randombrother% podchodzi do ciebie i pyta, czy ludzie mają interweniować, czy trzymać się z dala.",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "We need to put a stop to this.",
+					Text = "Musimy to powstrzymać.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -30,7 +30,7 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This isn\'t our fight.",
+					Text = "To nie nasza wojna.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -53,13 +53,13 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_43.png[/img]No man, especially of the fighting stock, deserves to be lynched. You order you men to step in, barking the command loud enough to turn half the crowd around to see you. Gasps ripple through the throng, and you nod confidently.%SPEECH_ON%Step aside, peasants. These men might be deserving of many things, but your unruly justice is not one of them.%SPEECH_OFF%A scruffy layman cries out.%SPEECH_ON%But they\'re murderers and worse!%SPEECH_OFF%You throw a stern look.%SPEECH_ON%And so are my men. Now get out of the way.%SPEECH_OFF%The crowd does as told. The rescued soldiers tell you that %noblehouse% will hear of your deeds here.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Żaden człowiek, zwłaszcza z wojennego rodu, nie zasługuje na lincz. Rozkazujesz swoim ludziom wkroczyć, szczekając komendę na tyle głośno, by połowa tłumu odwróciła się i zobaczyła ciebie. Przez zgromadzonych przechodzi pomruk, a ty kiwasz pewnie głową.%SPEECH_ON%Odstąpcie, chłopi. Ci ludzie mogą zasługiwać na wiele, ale wasza nieokiełznana sprawiedliwość do tego nie należy.%SPEECH_OFF%Zaniedbany wieśniak krzyczy.%SPEECH_ON%Ale to mordercy i gorzej!%SPEECH_OFF%Posyłasz mu surowe spojrzenie.%SPEECH_ON%A moi ludzie też. Teraz zejdźcie z drogi.%SPEECH_OFF%Tłum robi, jak kazano. Ocaleni żołnierze mówią ci, że %noblehouse% usłyszy o twoich czynach.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "That went pretty well. ",
+					Text = "Poszło całkiem dobrze. ",
 					function getResult( _event )
 					{
 						return 0;
@@ -78,13 +78,13 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_43.png[/img]There\'s no reason soldiers should be lynched like this. Or, for some reason, the sudden pang of justice in your side says so. With a loud voice, you announce yourself as a neutral third party here to mediate the ongoings. The cordial proceedings last for all over one second before the peasants, more shrill and hysterical than ever, announce that you are but more soldiers from %noblehouse%. You raise your hands to explain, but a melee breaks out.\n\n You can only grimace as you watch your men cut the peasants down one by one, like strong-armed farmers scything through the freshest of wheat fields. It is a gruesome sight and a few bystanders look on in horror before running off, surely to tell others of what you have done here. The soldiers, conversely, thank your bloodied and gore covered men.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Nie ma powodu, by żołnierzy linczować w ten sposób. Albo, z jakiegoś powodu, tak mówi nagły impuls sprawiedliwości w twoim wnętrzu. Głośnym głosem ogłaszasz się neutralną stroną, która ma mediować. Uczone procedury trwają nieco ponad sekundę, zanim chłopi, bardziej piskliwi i histeryczni niż kiedykolwiek, ogłaszają, że jesteś tylko kolejnymi żołnierzami %noblehouse%. Podnosisz ręce, by wyjaśnić, ale wybucha bijatyka.\n\n Możesz tylko skrzywić się, patrząc, jak twoi ludzie kładą chłopów jednego po drugim, jak silni rolnicy koszący najświeższe łany pszenicy. To makabryczny widok i kilku gapiów patrzy z przerażeniem, po czym ucieka, by zapewne opowiedzieć innym o tym, co tu zrobiłeś. Żołnierze, przeciwnie, dziękują twoim zakrwawionym i umazanym ludom.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Not sure what I expected.",
+					Text = "Nie wiem, czego się spodziewałem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -120,7 +120,7 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = injury.getIcon(),
-						text = bro.getName() + " suffers " + injury.getNameOnly()
+						text = bro.getName() + " cierpi na " + injury.getNameOnly()
 					});
 				}
 			}
@@ -128,13 +128,13 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_43.png[/img]Getting involved might simply complicate matters - peasants are fickle and uneducated, seers of their own solitude, purveyors of bad luck and paranoia. You order your men not to just stand aside, but to make themselves small.\n\n A thrown rocks open up the attack, soon followed by a wall of pitchforks and machetes. The soldiers try and put up a fight, but the best summation of their defense is one of horrid screaming. One is dragged out of the pile, kicking and screaming, and the peasants stab him repeatedly until he stops. Another is roped and run up a tree, hanged by the pull of three angry men.\n\nSatiated, the crowd quiets down. Children dance around the dead man\'s feet. A poor and mumbling man lily hops around the corpses, picking through the pockets of each.",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Wtrącenie się może tylko skomplikować sprawy - chłopi są kapryśni i niewykształceni, prorocy własnej samotności, handlarze złego losu i paranoi. Rozkazujesz swoim ludziom nie tylko stać z boku, ale i uczynić się niewidocznymi.\n\n Rzucony kamień rozpoczyna atak, a wkrótce potem nadciąga ściana wideł i maczet. Żołnierze próbują się bronić, ale najlepszym podsumowaniem ich obrony jest przeraźliwy krzyk. Jednego wyciąga się z tłumu, kopiącego i wrzeszczącego, a chłopi dźgają go raz po raz, aż milknie. Innego wiąże się liną i wciąga na drzewo, wieszając go wysiłkiem trzech wściekłych mężczyzn.\n\n Nasycony tłum cichnie. Dzieci tańczą wokół stóp martwego mężczyzny. Biedny, mamroczący człowiek podskakuje między zwłokami, grzebiąc w kieszeniach każdego z nich.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "The friction of war meets the madness of the layman.",
+					Text = "Tarcie wojny spotyka się z szaleństwem pospólstwa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -151,13 +151,13 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_43.png[/img]You decide to keep out of it. This isn\'t your fight and involving yourself will only complicate things. Standing back, you watch as the crowd collapses in on the soldiers. There\'s a scuffle, shrill voices pipe over the din of the chaos, squirming cries of those unprepared for such a brutal final moment. But one man pushes his way through the crowd, kicking people off his legs and daggering one man in the eye. He manages to sprint to a nearby horse, mount up, and spur it into a sprint. The man eyes the %companyname%\'s banner as he passes by. You can\'t help but think that %noblehouse% might hear of your neutrality on this day...",
+			Text = "[img]gfx/ui/events/event_43.png[/img]Postanawiasz nie mieszać się w to. To nie twoja walka, a ingerencja tylko skomplikowałaby sprawy. Stojąc z boku, patrzysz, jak tłum napiera na żołnierzy. Jest szamotanina, przenikliwe krzyki przebijają się przez zgiełk chaosu, wijące się wołania tych, którzy nie byli przygotowani na tak brutalny koniec. Lecz jeden mężczyzna przebija się przez tłum, odpychając ludzi i wbijając sztylet jednemu w oko. Udaje mu się dopędzić pobliskiego konia, dosiąść go i popędzić do galopu. Mężczyzna spogląda na sztandar %companyname%, gdy mija cię w biegu. Nie możesz się oprzeć myśli, że %noblehouse% może usłyszeć o twojej neutralności tego dnia...",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "I\'m sure he won\'t say anything.",
+					Text = "Na pewno nic nie powie.",
 					function getResult( _event )
 					{
 						return 0;

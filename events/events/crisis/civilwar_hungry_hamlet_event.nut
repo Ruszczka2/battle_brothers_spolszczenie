@@ -5,15 +5,15 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.civilwar_hungry_hamlet";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{While traveling the roads, you come across a small hamlet with, apparently, it\'s entire populace standing outside. Their leader steps forward, hands out, pleading, though with hardly the strength to keep his hands clasped together.%SPEECH_ON%Please, would you help us? We have been without food for almost a week now. We\'re down to eating dirt! You have to understand, we have nothing! The war has ravaged us all.%SPEECH_OFF% | A small hamlet emerges beside your travels, little more than a cursory wink were it not for the large band of villagers standing outside seemingly awaiting you. Their leader steps forward.%SPEECH_ON%Mercenary, I know you are probably not the one to ask for this, but do you have any food to spare? The war has ravaged our crops and the soldiers that roam the land have taken what else there is to take! Please, help us!%SPEECH_OFF% | The roads lead you to a small hamlet. Villagers are squatting outside their hamlets, heads between their knees, looking thin and grey. Children are with them, frail and wiry, yet with the glow of youth still in their eyes. The town\'s leader comes to you personally.%SPEECH_ON%Sir... sellsword? Yes, sellsword. Please, we\'ve been without food for a week now. We\'ve been surviving on our pets, insects... even the dirt. Do you have anything to help us?%SPEECH_OFF% | As your men take a rest beside the road, villagers from a nearby hamlet come to you. They bumble forward, wiry legs shambling them from side to side. The head of the group raises and lowers a hand as though to bless your presence.%SPEECH_ON%Oh sellsword, mercenary, please, do you have anything to eat? We\'ve yet to have a bite in two days! And what we have eaten are things not to be said aloud! The war between nobles has ruined this place, but maybe you can help?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{Podczas podróży natrafiasz na małą osadę, z której, jak się wydaje, cała ludność stoi na zewnątrz. Ich przywódca wychodzi naprzód, wyciągając ręce w błagalnym geście, choć ledwo ma siłę je utrzymać.%SPEECH_ON%Proszę, pomożecie nam? Jesteśmy bez jedzenia już prawie tydzień. Zeszliśmy do jedzenia ziemi! Musisz zrozumieć, nie mamy nic! Wojna nas wszystkich spustoszyła.%SPEECH_OFF% | Przy twojej drodze pojawia się mała osada, niewiele więcej niż przelotny błysk, gdyby nie duża grupa wieśniaków stojących na zewnątrz, jakby na ciebie czekali. Ich przywódca występuje.%SPEECH_ON%Najemniku, wiem, że pewnie nie do ciebie powinno się z tym zwracać, ale czy masz coś do jedzenia? Wojna zniszczyła nasze uprawy, a żołnierze, którzy włóczą się po tych ziemiach, zabrali wszystko, co zostało! Proszę, pomóż nam!%SPEECH_OFF% | Droga prowadzi cię do małej osady. Wieśniacy kucają przed chatami, głowy mają między kolanami, są chudzi i poszarzali. Dzieci są z nimi, kruche i żylaste, a jednak z blaskiem młodości w oczach. Przywódca wioski podchodzi do ciebie osobiście.%SPEECH_ON%Panie... najemniku? Tak, najemniku. Proszę, od tygodnia nie mamy jedzenia. Przetrwaliśmy dzięki naszym zwierzętom, owadom... nawet ziemi. Czy masz coś, by nam pomóc?%SPEECH_OFF% | Gdy twoi ludzie odpoczywają przy drodze, podchodzą do ciebie mieszkańcy pobliskiej osady. Chwieją się naprzód, chude nogi kołyszą ich z boku na bok. Przywódca grupy podnosi i opuszcza dłoń, jakby błogosławił twoją obecność.%SPEECH_ON%Och, najemniku, błagamy, masz coś do jedzenia? Nie mieliśmy ani kęsa od dwóch dni! A to, co jedliśmy, lepiej nawet nie mówić na głos! Wojna między rodami zrujnowała to miejsce, ale może możesz pomóc?%SPEECH_OFF%}",
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, let\'s give those poor folks some food.",
+					Text = "Dobrze, dajmy tym biednym ludziom trochę jedzenia.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(3);
@@ -35,7 +35,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Find your own way, peasants.",
+					Text = "Radźcie sobie sami, chłopi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -50,12 +50,12 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{Against typical mercenary judgment, you elect to give the poor villagers some food. %randombrother% is told to disperse what he can, although obviously not too much. The people are forever grateful, swarming the sellsword as though he was about whisper an immense and unforgettable truth. The leader of the small town says he will spread word of your goodwill. You\'re actually not sure if news of altruism is good for a mercenary band... | Shocking the villagers, you order %randombrother% to hand out some food. Not too much, just enough that these people can eat. And obviously, don\'t give away anything too good!\n\n The leader of the town comes to you, shaking hands clapping your shoulders.%SPEECH_ON%You\'ve no idea what this means to us! All shall hear of the good in the...%SPEECH_OFF%He glances at you and then your banner. You nod.%SPEECH_ON%The %companyname%.%SPEECH_OFF%The man laughs.%SPEECH_ON%Of course! Everyone shall hear of the %companyname%!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{Wbrew typowemu rozsądkowi najemnika decydujesz się dać biednym wieśniakom trochę jedzenia. %randombrother% ma rozdzielić tyle, ile może, choć oczywiście nie za dużo. Ludzie są dozgonnie wdzięczni, oblepiają najemnika jakby miał zaraz wyszeptać wielką i niezapomnianą prawdę. Przywódca miasteczka mówi, że rozniesie wieść o twojej dobroci. Nie masz pewności, czy sława altruizmu jest dobra dla najemników... | Zaskakując wieśniaków, każesz %randombrother% rozdać trochę jedzenia. Nie za dużo, tylko tyle, by ci ludzie mogli zjeść. I oczywiście, nie oddawaj niczego zbyt dobrego!\n\n Przywódca osady podchodzi do ciebie, ściska dłonie i klepie po ramionach.%SPEECH_ON%Nie masz pojęcia, co to dla nas znaczy! Wszyscy usłyszą o dobru w...%SPEECH_OFF%Spogląda na ciebie, potem na wasz sztandar. Kiwasz głową.%SPEECH_ON%%companyname%.%SPEECH_OFF%Mężczyzna śmieje się.%SPEECH_ON%Oczywiście! Wszyscy usłyszą o %companyname%!%SPEECH_OFF%}",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Shall they fare better in the coming days.",
+					Text = "Oby w nadchodzących dniach wiodło im się lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -70,19 +70,19 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 				this.List.insert(0, {
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company gained renown"
+					text = "Kompania zyskała renomę"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{Goodness gets the better of you: you order %randombrother% to start handing out food. He complies, but as soon as he starts handing it out, the crowd goes nearly rabid, snatching it from one another. Fiery tempers are quickly fed by the air of empty bellies. The mercenary tries to maintain order, but anything he says only spurs the hungry masses into thinking it\'s all his fault. The violence spills over, ironically spilling all the food into the mud. Your brothers have to draw swords and by the end of it some peasants lay dead while the survivors look at the corpses with cannibalistic eyes.\n\nYou quickly order the %companyname% to move on before this gets any worse. | For some reason, perhaps to sleep better at night, you order %randombrother% to hand out parcels of food. He\'s just getting started on the process when a villager quickly snatches a sack of foods. Another peasant stoves that man\'s head in and takes the sack for himself. This quickly erupts into a total free-for-all and your mercenaries have to draw weapons to protect the rest of the stores. By the end of the scuffle a few laymen lay dead and your brothers are a little marked up. Seeing no reason to hang around, you order the company to get back on the road. The leader who asked for your help is spotted in the distance, staring out at the horizon as a bitter wind curls his thin pantaloons about his shins.}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{Dobroć bierze górę: każesz %randombrother% zacząć rozdawać jedzenie. Wykonuje rozkaz, ale gdy tylko zaczyna je wydawać, tłum niemal wpada w szał, wyrywając je sobie z rąk. Puste brzuchy szybko rozpalają gniew. Najemnik próbuje utrzymać porządek, ale cokolwiek powie, tylko utwierdza głodnych, że to jego wina. Przemoc eskaluje, ironicznie rozrzucając całe jedzenie w błocie. Twoi bracia muszą dobyć mieczy i ostatecznie kilku chłopów leży martwych, a ocalali patrzą na ciała z kanibalistycznym błyskiem w oczach.\n\n Szybko rozkazujesz %companyname% ruszać dalej, zanim zrobi się jeszcze gorzej. | Z jakiegoś powodu, być może by lepiej spać w nocy, każesz %randombrother% rozdawać paczki z jedzeniem. Dopiero zaczyna, gdy jeden z wieśniaków porywa worek jedzenia. Inny chłop rozbija mu głowę i zabiera worek dla siebie. Szybko wybucha totalna bijatyka i twoi najemnicy muszą dobyć broni, by chronić resztę zapasów. Po bójce kilku wieśniaków leży martwych, a twoi bracia są nieco poturbowani. Nie widząc sensu zostawania, każesz kompanii wrócić na drogę. Przywódca, który prosił o pomoc, stoi gdzieś w oddali, wpatrzony w horyzont, podczas gdy gorzki wiatr owija jego cienkie portki wokół piszczeli.}",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "That went south real fast.",
+					Text = "Szybko poszło na złe.",
 					function getResult( _event )
 					{
 						return 0;
@@ -98,13 +98,13 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_79.png[/img]Well. This world is a terrible place and if you can do a little to relieve it of its horrid nature, why not? You order %randombrother% to start doling out food, but not too much, and nothing that your tastes will miss. But as he goes about the business, a few soldiers waving the %noblehouse% banner show up. They sift through the hungry crowd, taking food and drawing swords whenever someone resists. Their supposed leader speaks out.%SPEECH_ON%This food is needed by the arm of %noblehouse%. Do not resist its seizure.%SPEECH_OFF%You explain to the man that it is in fact your food and you just handed it out.%SPEECH_ON%If it\'s your food, why is it in their hands? Go along, men, take all that you can! And don\'t try anything, sellsword, or there will be violence.%SPEECH_OFF%%randombrother% glances at you as if to say, what should we do?",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Cóż. Ten świat jest okropny, więc jeśli możesz choć trochę złagodzić jego ohydę, czemu nie? Każesz %randombrother% zacząć rozdawać jedzenie, ale nie za dużo i niczego, za czym byś tęsknił. Gdy zajmuje się tym, pojawia się kilku żołnierzy machających sztandarem %noblehouse%. Przeczesują głodny tłum, zabierając jedzenie i dobywając mieczy, gdy ktoś stawia opór. Ich rzekomy przywódca odzywa się.%SPEECH_ON%To jedzenie jest potrzebne na rzecz ramienia %noblehouse%. Nie opierajcie się jego przejęciu.%SPEECH_OFF%Wyjaśniasz mężczyźnie, że to w istocie twoje jedzenie i dopiero co je rozdaliście.%SPEECH_ON%Jeśli to twoje jedzenie, to czemu jest w ich rękach? No dalej, ludzie, bierzcie, ile się da! I nie próbuj niczego, najemniku, bo będzie przemoc.%SPEECH_OFF%%randombrother% spogląda na ciebie, jakby pytał, co mamy robić?",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "This is our food and we decide what we do with it!",
+					Text = "To nasze jedzenie i my decydujemy, co z nim zrobić!",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -119,7 +119,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "That\'s our food, but this ain\'t our fight.",
+					Text = "To nasze jedzenie, ale to nie nasza wojna.",
 					function getResult( _event )
 					{
 						return "G";
@@ -136,13 +136,13 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_79.png[/img]The lieutenant turns back to his men, directing them in their thievery. You draw your sword and hobble over, the pain in your side still lingering, but it doesn\'t take much effort to sneak up on a man. With a quick blade about his neck, you call out to the rest of his men.%SPEECH_ON%Is it violence you really want?%SPEECH_OFF%Holding his hands up, the lieutenant squeaks out some words.%SPEECH_ON%Wait, wait, hold on. I think we, uh, made a mistake. This is the wrong village, fellas.%SPEECH_OFF%You nick him with the sword before releasing him. The peasants rejoice as the food goes back to them. No doubt, the nobility will hear of your \'good\' deeds done here, but so will the common man.",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Porucznik odwraca się do swoich ludzi, kierując ich złodziejstwem. Dobywasz miecza i kulejąc podchodzisz, ból w boku wciąż ci dokucza, ale nie potrzeba wiele, by podejść do człowieka. Szybkim ruchem przykładasz mu ostrze do szyi i wołasz do reszty jego ludzi.%SPEECH_ON%Naprawdę chcecie przemocy?%SPEECH_OFF%Z uniesionymi rękami porucznik piszczy.%SPEECH_ON%Czekajcie, chwila. Chyba, eee, popełniliśmy błąd. To nie ta wioska, panowie.%SPEECH_OFF%Nacinasz go mieczem, po czym puszczasz. Chłopi cieszą się, gdy jedzenie do nich wraca. Bez wątpienia szlachta usłyszy o twoich \"dobrych\" uczynkach, ale usłyszy też pospólstwo.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Sometimes being stupid feels good.",
+					Text = "Czasem dobrze jest być głupim.",
 					function getResult( _event )
 					{
 						return 0;
@@ -159,20 +159,20 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 				this.List.insert(0, {
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company gained renown"
+					text = "Kompania zyskała renomę"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_79.png[/img]You grab the lieutenant by the shoulder and pull him close. He grabs you arm and throws you off, going to draw his sword in the same motion. You jump to his side, blocking the draw, and in turn pull a quick dagger and plunge it into his neck. His soldiers come scrambling through the crowd, but your mercenaries cut them down and the peasants finish them off with sheer brutality only hunger can create. The lieutenant slowly slides down from your grip. You stare down at his blackening eyes.%SPEECH_ON%Yes, there will be violence.%SPEECH_OFF%The peasants cheer the results, though you recommend they bury the bodies or, even better, not be here anymore. No doubt an army will wonder where these men went.",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Chwytasz porucznika za ramię i przyciągasz go blisko. Łapie cię za ramię i odpycha, jednocześnie sięgając po miecz. Wyskakujesz mu na bok, blokujesz dobycie i wyciągasz sztylet, wbijając go w szyję. Jego żołnierze przeciskają się przez tłum, ale twoi najemnicy ich ścinają, a chłopi dobijają z brutalnością, jaką potrafi stworzyć tylko głód. Porucznik powoli osuwa się z twojego uścisku. Patrzysz w dół na jego ciemniejące oczy.%SPEECH_ON%Tak, będzie przemoc.%SPEECH_OFF%Chłopi wiwatują, choć zalecasz im pochować ciała albo, lepiej, zniknąć stąd. Bez wątpienia jakaś armia zacznie się zastanawiać, gdzie zniknęli ci ludzie.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "We should also get going.",
+					Text = "My też powinniśmy ruszać.",
 					function getResult( _event )
 					{
 						return 0;
@@ -189,7 +189,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 				this.List.insert(0, {
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company gained renown"
+					text = "Kompania zyskała renomę"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 				local bro = brothers[this.Math.rand(0, brothers.len() - 1)];
@@ -197,20 +197,20 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = bro.getName() + " suffers " + injury.getNameOnly()
+					text = bro.getName() + " cierpi na " + injury.getNameOnly()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_79.png[/img]You inform your men to stand down. The commonfolk wail as their food is taken from them again. It is a horrid cry and many damn you, stating they\'d rather you have never shown up at all than be tortured in this manner. | Giving food is one thing, quarreling with soldiers is another. You inform the soldiers that there will be no fight and that they can carry on. The laymen cry out, begging you to put a stop to it. Some are too weak to say anything, this sudden turn of events having been a bigger blow than any long weeks of hunger.",
+			Text = "[img]gfx/ui/events/event_79.png[/img]Mówisz swoim ludziom, by się wycofali. Pospólstwo jęczy, gdy jedzenie znów jest im odbierane. To straszliwy krzyk i wielu cię przeklina, mówiąc, że woleliby, abyś wcale się nie pojawił, niż żeby byli tak dręczeni. | Dawać jedzenie to jedno, sprzeczać się z żołnierzami to drugie. Informujesz żołnierzy, że nie będzie walki i mogą kontynuować. Pospólstwo krzyczy, błagając, byś to powstrzymał. Niektórzy są zbyt słabi, by powiedzieć cokolwiek, bo ten nagły zwrot wydarzeń był większym ciosem niż długie tygodnie głodu.",
 			Banner = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "Sorry...",
+					Text = "Przykro mi...",
 					function getResult( _event )
 					{
 						return 0;
@@ -225,7 +225,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 				this.List.insert(0, {
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company loses renown"
+					text = "Kompania traci renomę"
 				});
 			}
 
@@ -243,7 +243,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 			_list.push({
 				id = 10,
 				icon = "ui/items/" + item.getIcon(),
-				text = "You lose " + item.getName()
+				text = "Tracisz " + item.getName()
 			});
 			this.World.Assets.getStash().remove(item);
 			food.remove(idx);
