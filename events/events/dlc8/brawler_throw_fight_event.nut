@@ -6,17 +6,17 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.brawler_throw_fight";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{Without giving you any heads up, it appears that %brawler% the brawler entered a fighting tournament on his own accord, and he\'s already made it all the way to the final match. He has so easily smashed all his opposition in the first round that he is the heavy favorite to win it all.\n\nHowever, a few very powerful betting brokers are upset that %brawler% has already caused them to lose a ton of money. Knowing that he is with you, they have asked that you tell %brawler% to take a fall and throw the match. In return, you\'ll get a percentage of their winnings, which will no doubt be quite substantial...}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Bez uprzedzenia okazuje sie, ze %brawler% osiłek sam zapisala sie do turnieju walk i dotarł już do finału. Tak latwo rozbil przeciwnikow w pierwszej rundzie, ze jest zdecydowanym faworytem do zwyciestwa.\n\nJednak kilku bardzo wplywowych bukmacherow jest wscieklych, bo %brawler% sprawil, ze stracili mase pieniedzy. Wiedzac, ze jest z toba, prosza, bys kazal %brawler% polozyc sie i przegrac walke. W zamian dostaniesz procent z ich wygranych, co bez watpienia bedzie spore...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You need to take a fall.",
+					Text = "Musisz sie polozyc.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -24,7 +24,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "He\'s not taking a fall.",
+					Text = "Nie polozy sie.",
 					function getResult( _event )
 					{
 						local outcome = this.Math.rand(1, 100);
@@ -45,7 +45,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "What? There won\'t be a fight at all!",
+					Text = "Co? Nie bedzie zadnej walki!",
 					function getResult( _event )
 					{
 						return "G";
@@ -61,13 +61,13 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You order %brawler% to take a fall. As expected, he resists the idea, but you remind him that you are captain to the company, and while brawling is his business, the fact a third party entered into business with you makes the brawler\'s business your business. He sighs and nods.\n\nWhen the fight occurs, %brawler%, as instructed, takes a few hits then \'sells\' a knockout, spinning away from a weak jab. The crowd roars and the underdog cheers and runs around the fighting pit with his hands raised. After the fight, the betting brokers come and give you %reward% crowns for the fall. One looks over at %brawler%.%SPEECH_ON%Gods damned, man, you could have spurred a riot if anyone had been paying attention. You should look into theater training, cause that winning punch wouldn\'t have harelipped a whore. Next time wait for a cross or solid hook would ya?%SPEECH_OFF%The brawler laughs, but it is forced. He has humiliated himself for a few crowns. Somewhere in %townname% you can hear the townspeople cheering the other fighter\'s name.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Rozkazujesz %brawler% polozyc sie. Jak przewidywano, opiera sie pomyslowi, ale przypominasz mu, ze jestes kapitanem kompanii, a choc bijatyki to jego sprawa, to fakt, ze strona trzecia weszla z toba w interes, czyni sprawe osiłka twoja sprawa. Wzdycha i kiwa glowa.\n\nGdy dochodzi do walki, %brawler% zgodnie z poleceniem przyjmuje kilka ciosow, po czym \"sprzedaje\" nokaut, odskakujac po slabej dzabie. Tlum ryczy, a underdog cieszy sie i biega po ringu z uniesionymi rekami. Po walce bukmacherzy przychodza i wręczaja ci %reward% koron za przegrana. Jeden patrzy na %brawler%.%SPEECH_ON%Na bogow, chlopie, mogles wywolac zamieszki, gdyby ktos zwrocil uwage. Powinienes poćwiczyc aktorstwo, bo ten zwycieski cios nie rozcialby nawet wargi dziwki. Nastepnym razem poczekaj na prosty albo solidny hak, co?%SPEECH_OFF%Osiłek smieje sie, ale to wymuszone. Upokorzyl sie za kilka koron. Gdzies w %townname% slyszysz, jak mieszkancy skanduja imie drugiego wojownika.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "He\'ll get over it.",
+					Text = "Przejdzie mu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -82,10 +82,10 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]400[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]400[/color] Koron"
 				});
-				_event.m.Brawler.worsenMood(0.5, "Was told to throw a fight");
-				_event.m.Brawler.worsenMood(2.0, "Lost a fighting tournament");
+				_event.m.Brawler.worsenMood(0.5, "Kazano mu oddac walke");
+				_event.m.Brawler.worsenMood(2.0, "Przegral turniej walk");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -100,13 +100,13 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You order %brawler% to take a fall. As expected, he resists the idea, but you remind him that you are captain to the company, and while brawling is his business, the fact a third party entered into business with you makes the brawler\'s business your business. He sighs and nods.\n\nWhen the fight occurs, %brawler% does as instructed and goes down to a single punch. He stares at you from the floor of the fighting pit, and you see a fire in his eyes. You tell him to stay down, but instead he gets up and promptly destroys the other fighter with a flurry of hooks and uppercuts. He wins the fight and is carried out of the arena by the crowd. You try and hurry after them and see where he went, only to find him in an alleyway beaten to a pulp. He grins up at you.%SPEECH_ON%Them bettin\' brokers weren\'t happy, but fark them. They shoulda bet on my pride.%SPEECH_OFF%He falls unconscious.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Rozkazujesz %brawler% polozyc sie. Jak przewidywano, opiera sie pomyslowi, ale przypominasz mu, ze jestes kapitanem kompanii, a choc bijatyki to jego sprawa, to fakt, ze strona trzecia weszla z toba w interes, czyni sprawe osiłka twoja sprawa. Wzdycha i kiwa glowa.\n\nGdy dochodzi do walki, %brawler% robi, co kazales, i pada po jednym ciosie. Spoglada na ciebie z podlogi ringu, a ty widzisz ogien w jego oczach. Kazesz mu lezec, ale on wstaje i natychmiast niszczy drugiego wojownika serią hakow i uppercutow. Wygrywa walke i tlum wynosi go z areny. Spieszysz za nimi, by zobaczyc, dokad poszedl, ale znajdujesz go w zaułku, skopanego na miazge. Usmiecha sie do ciebie.%SPEECH_ON%Ci bukmacherzy nie byli zadowoleni, ale niech ich diabli. Powinni byli postawic na moja dume.%SPEECH_OFF%Traci przytomnosc.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'ve had quite enough betting for now, myself.",
+					Text = "Jak na razie mam dosc zakladow.",
 					function getResult( _event )
 					{
 						return 0;
@@ -121,10 +121,10 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Brawler.getName() + " suffers heavy wounds"
+					text = _event.m.Brawler.getName() + " odnosi powazne rany"
 				});
-				_event.m.Brawler.worsenMood(0.5, "Was told to throw a fight");
-				_event.m.Brawler.improveMood(2.0, "Handily won a fighting tournament");
+				_event.m.Brawler.worsenMood(0.5, "Kazano mu oddac walke");
+				_event.m.Brawler.improveMood(2.0, "Z latwoscia wygral turniej walk");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -139,13 +139,13 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You tell the gambling brokers that %brawler% will fight however he pleases. The brokers, not wanting to cross paths with a sellsword, do not argue the issue any further. They simply leave before you can even bet on your own man. Now knowing there is a fight, though, you go and watch as %brawler% completely smashes down %townname%\'s best brawler. The beatdown was so obviously going to happen that everyone bet on %brawler% and there\'s a run on the gambling brokers. Fights break out and some betters and brokers start smashing each other. There\'s no money made out of the fight, but %brawler% is elated to be the champion of %townname%.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Mowisz bukmacherom, ze %brawler% bedzie walczyl, jak mu sie podoba. Bukmacherzy, nie chcac wchodzic w konflikt z najemnikami, nie dyskutuja dalej. Po prostu odchodza, zanim zdazysz nawet postawic na swojego czlowieka. Wiedzac, ze walka sie odbedzie, idziesz i ogladasz, jak %brawler% kompletnie miazdzy najlepszego osiłka %townname%. Masakra byla tak oczywista, ze wszyscy postawili na %brawler%, przez co bukmacherzy zaczynaja tracic pieniadze. Wybuchaja bójki, a niektorzy gracze i bukmacherzy zaczynaja sie nawzajem okładac. Z walki nie ma zysku, ale %brawler% jest w siodmym niebie jako mistrz %townname%.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done!",
+					Text = "Dobra robota!",
 					function getResult( _event )
 					{
 						return 0;
@@ -168,25 +168,25 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Brawler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve_boost + "[/color] Resolve"
+					text = _event.m.Brawler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve_boost + "[/color] Determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Brawler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] Initiative"
+					text = _event.m.Brawler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] Inicjatywy"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Brawler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_skill_boost + "[/color] Melee Skill"
+					text = _event.m.Brawler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_skill_boost + "[/color] Umiejetnosci Walki Wrecz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.Brawler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_defense_boost + "[/color] Melee Defense"
+					text = _event.m.Brawler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_defense_boost + "[/color] Obrony w Walce Wrecz"
 				});
-				_event.m.Brawler.improveMood(0.5, "Was allowed to fight on his own terms");
-				_event.m.Brawler.improveMood(2.0, "Handily won a fighting tournament");
+				_event.m.Brawler.improveMood(0.5, "Pozwolono mu walczyc na swoich zasadach");
+				_event.m.Brawler.improveMood(2.0, "Z latwoscia wygral turniej walk");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -201,13 +201,13 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You tell the gambling brokers that %brawler% will fight however he pleases. Not wanting to get tangled up with a mercenary captain, they simply nod and back off. As expected, %brawler% wins the fight and it is not even close. He\'s the talk of %townname% and you let him go celebrate with the peasants. A few hours pass, though, and you realize you haven\'t seen him in awhile. You venture into town to find him in an alley with smashed knees, his lead hand has been hammered to a pulp, and his eyes are swollen shut. You shout out to him and run over. He picks his head up off the ground.%SPEECH_ON%Captain? Ayy captain, good to hear your voice. Don\'t worry about me. It was worth it.%SPEECH_OFF%He passes out. You carry him back to the company and consider hunting down the brokers, but you know that they wouldn\'t have done such a thing without first preparing to get the hells out of town afterward.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Mowisz bukmacherom, ze %brawler% bedzie walczyl, jak mu sie podoba. Nie chcac zadzierac z kapitanem najemnikow, tylko przytakują i sie wycofuja. Jak przewidywano, %brawler% wygrywa walke, i to bez watpliwosci. Jest o nim glosno w %townname%, wiec pozwalasz mu swietowac z chlopami. Mija jednak kilka godzin i zdajesz sobie sprawe, ze dawno go nie widziales. Wchodzisz do miasta i znajdujesz go w zaułku z zmiazdzonymi kolanami, jego prowadzaca dlon jest rozbita na miazge, a oczy ma spuchniete i zamkniete. Wołasz go i biegniesz. Podnosi glowe z ziemi.%SPEECH_ON%Kapitanie? Eee, kapitanie, dobrze slyszec twoj glos. Nie martw sie o mnie. Bylo warto.%SPEECH_OFF%Traci przytomnosc. Niesiesz go z powrotem do kompanii i rozwazasz pogon za bukmacherami, ale wiesz, ze nie zrobiliby tego bez przygotowania ucieczki z miasta.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn.",
+					Text = "Cholera.",
 					function getResult( _event )
 					{
 						return 0;
@@ -222,7 +222,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Brawler.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Brawler.getName() + " odnosi " + injury.getNameOnly()
 				});
 				injury = _event.m.Brawler.addInjury([
 					{
@@ -234,7 +234,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Brawler.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Brawler.getName() + " odnosi " + injury.getNameOnly()
 				});
 				local initiative_boost = this.Math.rand(2, 4);
 				local melee_skill_boost = this.Math.rand(1, 3);
@@ -244,15 +244,15 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Brawler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] Initiative"
+					text = _event.m.Brawler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] Inicjatywy"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Brawler.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_skill_boost + "[/color] Melee Skill"
+					text = _event.m.Brawler.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_skill_boost + "[/color] Umiejetnosci Walki Wrecz"
 				});
-				_event.m.Brawler.improveMood(0.5, "Was allowed to fight on his own terms");
-				_event.m.Brawler.improveMood(2.0, "Handily won a fighting tournament");
+				_event.m.Brawler.improveMood(0.5, "Pozwolono mu walczyc na swoich zasadach");
+				_event.m.Brawler.improveMood(2.0, "Z latwoscia wygral turniej walk");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -267,13 +267,13 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You tell the gambling brokers that %brawler% will fight however he pleases. The brokers, not wanting to cross paths with a sellsword, do not argue the issue any further. They simply leave before you can even bet on your own man. Now knowing there is a fight, though, you attend the fight. %brawler% starts the bout throwing hooks left and right with zero regard for his opponent\'s skill. Without a single jab to set it up, his opponent shells up and then screams and throws one desperate hook and %brawler%\'s head twists on a swivel, and he falls to the ground unconscious. The crowd goes wild, at least those who didn\'t just lose a pile of crowns. One of the bettors walks over to you as he counts his money. He grins.%SPEECH_ON%Best go fetch yer boy.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Mowisz bukmacherom, ze %brawler% bedzie walczyl, jak mu sie podoba. Bukmacherzy, nie chcac zadzierac z najemnikami, nie dyskutuja dalej. Po prostu odchodza, zanim zdazysz nawet postawic na swojego czlowieka. Wiedzac, ze walka sie odbedzie, idziesz ja obejrzec. %brawler% zaczyna pojedynek, rzucajac haki na lewo i prawo bez zadnego poszanowania umiejetnosci przeciwnika. Bez zadnego jabu na przygotowanie, rywal sie kryje, po czym krzyczy i rzuca jeden desperacki hak, a glowa %brawler% obraca sie i pada nieprzytomny na ziemie. Tlum szaleje, przynajmniej ci, ktorzy nie stracili wlasnie kupy koron. Jeden z graczy podchodzi do ciebie, liczac pieniadze. Usmiecha sie.%SPEECH_ON%Lepiej idz po swojego chlopaka.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That could have gone better.",
+					Text = "Moglo pojsc lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -288,10 +288,10 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Brawler.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Brawler.getName() + " odnosi " + injury.getNameOnly()
 				});
-				_event.m.Brawler.improveMood(0.5, "Was allowed to fight on his own terms");
-				_event.m.Brawler.worsenMood(2.0, "Got badly beaten in a fighting tournament");
+				_event.m.Brawler.improveMood(0.5, "Pozwolono mu walczyc na swoich zasadach");
+				_event.m.Brawler.worsenMood(2.0, "Zostal ciezko pobity w turnieju walk");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -306,13 +306,13 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_64.png[/img]{You shock both parties with an announcement that %brawler% won\'t be fighting at all. The brokers wipe their brows and sigh. They\'ve lost a great deal of money, but at least now there\'s some vague reason to stop the bleeding. As for %brawler%, he is wildly upset with your decision. You explain to him that the %companyname% needs all its fighters in the best shape for actual mercenary work. You can\'t risk his health in some bodunk championship brawl.}",
+			Text = "[img]gfx/ui/events/event_64.png[/img]{Szokujesz obie strony ogloszeniem, ze %brawler% w ogole nie bedzie walczyl. Bukmacherzy ocieraja czola i wzdychaja. Stracili sporo pieniedzy, ale przynajmniej teraz jest jakis powod, by zatrzymac krwawienie. Co do %brawler%, jest wsciekly na twoja decyzje. Wyjasniasz mu, ze %companyname% potrzebuje wszystkich swoich wojownikow w najlepszej formie do prawdziwej pracy najemniczej. Nie mozesz ryzykowac jego zdrowia w jakims prowincjonalnym turnieju.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "There\'ll be plenty of other opportunities to fight, %brawler%.",
+					Text = "Bedzie jeszcze wiele okazji do walki, %brawler%.",
 					function getResult( _event )
 					{
 						return 0;
@@ -323,7 +323,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Brawler.getImagePath());
-				_event.m.Brawler.worsenMood(2.0, "Was denied participation in a fighting tournament");
+				_event.m.Brawler.worsenMood(2.0, "Odmowiono mu udzialu w turnieju walk");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{

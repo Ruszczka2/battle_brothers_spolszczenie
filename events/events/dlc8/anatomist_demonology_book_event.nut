@@ -5,17 +5,17 @@ this.anatomist_demonology_book_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_demonology_book";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{You find %anatomist% scouring a red book. He closes the book and sighs.%SPEECH_ON%As an anatomist, I am compelled to think that monsters, as you laymen would call them, do not merely appear for the sake of appearance. Instead, everything has a purpose. In a sense, and through the old gods, we can trust that these elements have in actuality a divine purpose. Yet, some of my peers have found bones of creatures that have not once been seen in the flesh. It appears that these entities have disappeared entirely. It begs the question: does such evidence entail that we, ourselves, will one day disappear? An affirmative on that front suggests, then, that the divinities above are not actually weighing their visions in our favor. We walk under the gaze of mere happenstance. A terrible thought, indeed.%SPEECH_OFF%Curious, you ask what these mysterious monsters looked like. The anatomist opens the red book and shows you a drawing.%SPEECH_ON%They are quite similar to humans, but larger with implied bulkiness around the neck and shoulders. The skulls carry these notches, similar to that of horns, and the spinal columns have extra vertebrae with three of them near the top broadening out, as if they were holding onto something, something that would extend far from the body. See? Here? The back is almost like a bony mantle.%SPEECH_OFF%Interesting. You ask the anatomist if he\'s seen one of these skeletons for himself, and he says no. He says he\'s only seen it in the text. You ask if he paid for this text and he says he did. You ask him if perhaps the notion of old, bizarre monsters was but a mere sales pitch to get him to buy a book of bullshit. The anatomist ponders for a time. He nods and agrees that it is likely that he has purchased a spoof. He grows angrier by the second and suddenly throws the tome into the campfire, pledging himself to more earthly studies going forward. He thanks you for your ability to cut through the nonsense and eminence fronts this world puts on.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Zastajesz %anatomist% przeglądającego czerwoną księgę. Zamykając ją, wzdycha.%SPEECH_ON%Jako anatomista jestem skłonny sądzić, że potwory, jak wy, laicy, byście je nazwali, nie pojawiają się tylko po to, by wyglądać. Zamiast tego wszystko ma cel. W pewnym sensie, i przez starych bogów, możemy ufać, że te elementy mają faktycznie boski cel. A jednak niektórzy z moich rówieśników znaleźli kości stworzeń, których nigdy nie widziano na żywo. Wygląda na to, że te istoty całkowicie zniknęły. To rodzi pytanie: czy takie dowody oznaczają, że my sami też kiedyś znikniemy? Odpowiedź twierdząca sugeruje, że boskości na górze nie ważą swoich wizji na naszą korzyść. Kroczymy pod spojrzeniem czystego przypadku. Straszna myśl, doprawdy.%SPEECH_OFF%Ciekaw, pytasz, jak wyglądały te tajemnicze potwory. Anatomista otwiera czerwoną księgę i pokazuje ci rysunek.%SPEECH_ON%Są dość podobne do ludzi, ale większe, z wyraźną masywnością wokół szyi i barków. Czaszki mają te wcięcia, podobne do rogów, a kręgosłupy mają dodatkowe kręgi, z trzema przy górze rozszerzającymi się, jakby trzymały coś, coś, co wystawałoby daleko poza ciało. Widzisz? Tu? Plecy są niemal jak kostny płaszcz.%SPEECH_OFF%Interesujące. Pytasz anatomistę, czy sam widział któryś z tych szkieletów, a on mówi, że nie. Twierdzi, że widział to tylko w tekście. Pytasz, czy zapłacił za tę księgę, a on mówi, że tak. Pytasz go, czy może wizja dawnych, dziwacznych potworów była tylko chwytem sprzedażowym, by skłonić go do kupna księgi bzdur. Anatomista rozważa to przez chwilę. Kiwając głową, zgadza się, że najpewniej kupił oszustwo. Z każdą sekundą staje się coraz bardziej zły i nagle wrzuca tom do ogniska, przysięgając, że odtąd zajmie się bardziej przyziemnymi badaniami. Dziękuje ci za to, że potrafisz przebić się przez bzdury i pozory wyniosłości, jakie ten świat nakłada.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Can\'t believe everything you read.",
+					Text = "Nie można wierzyć we wszystko, co się czyta.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,8 +26,8 @@ this.anatomist_demonology_book_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Anatomist.getImagePath());
-				_event.m.Anatomist.worsenMood(0.5, "Wasted time reading a sham demonology book");
-				_event.m.Anatomist.improveMood(1.0, "You helped him realize his demonology book was a farce");
+				_event.m.Anatomist.worsenMood(0.5, "Zmarnował czas, czytając fałszywą księgę demonologii");
+				_event.m.Anatomist.improveMood(1.0, "Pomogłeś mu zrozumieć, że jego księga demonologii to mistyfikacja");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

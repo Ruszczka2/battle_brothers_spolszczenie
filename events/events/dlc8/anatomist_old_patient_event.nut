@@ -6,17 +6,17 @@ this.anatomist_old_patient_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_old_patient";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_77.png[/img]{%townname%\'s denizens have mostly looked upon you and the anatomists as though you were wayward devils. But out of the blue, a man comes down off his porch and strides across the road toward %anatomist% the anatomist, carrying with him an upright posture, swinging gait, and a fat grin. He grabs the anatomist by the hand and starts vigorously shaking it.%SPEECH_ON%Shitfire, I\'d figured you\'d be back one of these days! You don\'t recognize me? You done come by this way years ago, many years ago, we both looked a fair bit younger then. I had that fat sack on m\'back that you cut out, and my whole life\'s been much better since! Hells, gimme one second, don\'t you move a muscle I\'ll be right back!%SPEECH_OFF%The man quickly returns to his home. You look at %anatomist% who remarks that he remembers the man: he had a giant tumor growing on his spine, and the anatomist in his younger days had successfully cut it out using tongs, shearing blades, and a good number of rags. He laments that he did not keep the fleshy mass for study, but that he was a different sort of physician in those days. The man returns with a weapon which he holds out.%SPEECH_ON%Once I was of good health, I took to the fightin\' fields. Was pretty good at it, too, but you know, lives change, and keep on changing. I\'d seen you with this sellsword here so I suppose it had done changed for you as well. Please, take it.%SPEECH_OFF%The second the anatomist hesitates, you take the weapon yourself, lest the charitable opportunity be shortlived. You thank the man. He shakes %anatomist%\'s hands again, then bids goodbye. The anatomist stares at him as he departs.%SPEECH_ON%We could experiment on him, now that I fully recollect my knowledge of him. That mass from his back is likely to return, I could perhaps...just...open him up and take a look...%SPEECH_OFF%You stop the anatomist from fancying any dissecting of the local laity and get back on the road.}",
+			Text = "{[img]gfx/ui/events/event_77.png[/img]{Mieszkańcy %townname% w większości patrzyli na ciebie i anatomistów jak na błąkające się diabły. Ale nagle jakiś mężczyzna schodzi z ganku i maszeruje przez drogę w stronę %anatomist% anatomisty, z wyprostowaną postawą, sprężystym krokiem i szerokim uśmiechem. Chwyta anatomistę za rękę i zaczyna nią energicznie potrząsać.%SPEECH_ON%Do diabła, wiedziałem, że kiedyś wrócisz! Nie poznajesz mnie? Przechodziłeś tędy lata temu, wiele lat temu, obaj wyglądaliśmy wtedy młodziej. Miałem ten wielki worek na plecach, który mi wyciąłeś, i od tamtego czasu moje życie jest o wiele lepsze! Do diabła, daj mi chwilę, nie ruszaj się, zaraz wracam!%SPEECH_OFF%Mężczyzna szybko wraca do domu. Patrzysz na %anatomist%, który mówi, że pamięta tego człowieka: miał ogromny guz na kręgosłupie, a młody anatomista wyciął go szczypcami, nożami i sporą liczbą szmat. Żałuje, że nie zachował tej masy do badań, ale w tamtych czasach był innym typem lekarza. Mężczyzna wraca z bronią, którą wyciąga w twoją stronę.%SPEECH_ON%Gdy wróciłem do zdrowia, poszedłem na pola bitew. Byłem w tym całkiem dobry, ale wiesz, życie się zmienia i ciągle się zmienia. Widziałem cię z tym najemnikiem, więc uznałem, że u ciebie też się zmieniło. Proszę, weź to.%SPEECH_OFF%Gdy tylko anatomista się waha, ty sam bierzesz broń, by dobroczynna okazja nie przepadła. Dziękujesz mężczyźnie. Ten jeszcze raz potrząsa dłońmi %anatomist%, po czym żegna się. Anatomista wpatruje się w niego, gdy odchodzi.%SPEECH_ON%Moglibyśmy na nim eksperymentować, teraz gdy w pełni przypominam sobie jego przypadek. Ta masa na jego plecach zapewne wróci, mógłbym... po prostu... go otworzyć i zobaczyć...%SPEECH_OFF%Powstrzymujesz anatomistę przed rozważaniem rozcinania miejscowej ludności i wracacie na drogę.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'ll find plenty of black masses to research elsewhere.",
+					Text = "Gdzie indziej znajdziesz do badań wiele czarnych mas.",
 					function getResult( _event )
 					{
 						return 0;
@@ -39,16 +39,16 @@ this.anatomist_old_patient_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + weapon.getIcon(),
-					text = "You gain " + weapon.getName()
+					text = "Zyskujesz " + weapon.getName()
 				});
 
 				if (this.Math.rand(1, 100) <= 75)
 				{
-					_event.m.Anatomist.improveMood(0.75, "Saw living proof that his past work was successful");
+					_event.m.Anatomist.improveMood(0.75, "Zobaczył dowód, że jego dawna praca była skuteczna");
 				}
 				else
 				{
-					_event.m.Anatomist.improveMood(0.5, "An old patient thanked him for his medical help");
+					_event.m.Anatomist.improveMood(0.5, "Dawny pacjent podziękował mu za pomoc medyczną");
 				}
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)

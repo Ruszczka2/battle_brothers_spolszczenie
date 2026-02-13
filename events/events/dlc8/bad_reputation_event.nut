@@ -6,17 +6,17 @@ this.bad_reputation_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.bad_reputation";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{A few of the Oathtakers bring a piece of paper to your attention. On it is the name of the %companyname%, a rather amusing drawing of yourself that is not remotely in proportion, and a few choice descriptors of your lowly character. It seems that your reputation in this world is not nearly as high and mighty as you assumed it to be.%SPEECH_ON%We must rectify this, captain! For people to think of the Oathtakers in this manner is a great insult to us, and especially to Young Anselm!%SPEECH_OFF%You agree. | As the company camps, a few of the Oathtakers are grousing about the reputation of the %companyname%.%SPEECH_ON%Young Anselm would not be happy with the way the world sees us. We should be setting an example of how to behave!%SPEECH_OFF%You agree, though it may take some time to repair the Oathtakers\' honor. | Young Anselm founded the Oathtakers with the belief that they should be paragons reestablishing a precedence of honor, virtue, and sound character, elements which he believed the world had lost sight of. Unfortunately, you\'ve struggled to maintain these ideals, slipping the %companyname%\'s reputation a little lower than it ought to be. A few of the men are rightfully complaining, and if they\'re not outwardly complaining it is obvious that these faults are draining morale anyway. You think it best to perhaps start mending the %companyname%\'s reputation as soon as possible lest the men lose faith in its ultimate purpose.}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Kilku Swietobiorcow przynosi ci kartke. Widnieje na niej nazwa %companyname%, dosc zabawny rysunek ciebie samego, zupelnie nieproporcjonalny, i kilka dosadnych okreslen twojego mizernego charakteru. Wyglada na to, ze twoja reputacja w tym swiecie nie jest tak wzniosla, jak sadziles.%SPEECH_ON%Musimy to naprawic, kapitanie! To wielka zniewaga dla Swietobiorcow, a zwlaszcza dla Mlodego Anselma!%SPEECH_OFF%Zgadzasz sie. | Gdy kompania obozuje, kilku Swietobiorcow narzeka na reputacje %companyname%.%SPEECH_ON%Mlody Anselm nie bylby zadowolony z tego, jak swiat nas postrzega. Powinnismy dawac przyklad, jak sie zachowywac!%SPEECH_OFF%Zgadzasz sie, choc naprawa honoru Swietobiorcow moze potrwac. | Mlody Anselm zalozyl Swietobiorcow z przekonaniem, ze powinni byc wzorami, przywracajacymi prymat honoru, cnoty i prawosci - elementow, ktore, jak uwazal, swiat zagubil. Niestety trudno ci bylo utrzymac te ideały, a reputacja %companyname% spadla odrobine nizej, niz powinna. Kilku ludzi slusznie narzeka, a nawet jesli nie narzekaja otwarcie, oczywiste jest, ze te wady i tak obnizaja morale. Uznajesz, ze najlepiej zaczac naprawiac reputacje %companyname% tak szybko, jak to mozliwe, by ludzie nie stracili wiary w ostateczny cel.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I will lead better.",
+					Text = "Bede lepszym przywodca.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,11 +32,11 @@ this.bad_reputation_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(1.0, "Is upset about the company\'s evil reputation");
+						bro.worsenMood(1.0, "Jest zmartwiony zla reputacja kompanii");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.5, "Is upset about the company\'s evil reputation");
+						bro.worsenMood(0.5, "Jest zmartwiony zla reputacja kompanii");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

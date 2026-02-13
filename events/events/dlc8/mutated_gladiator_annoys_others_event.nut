@@ -5,17 +5,17 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 	function create()
 	{
 		this.m.ID = "event.mutated_gladiator_annoys_others";
-		this.m.Title = "During camp...";
+		this.m.Title = "W trakcie obozu...";
 		this.m.Cooldown = 65.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{Ever since %gladiator% the gladiator imbibed one of anatomists\' curios, the pit fighter has not stopped flexing. Many are growing annoyed with the bronzed, glistening, overly muscled man demanding that the other sellswords take him on, one-versus-one, in naked wrestling matches. When he\'s not plying for bouts of grabass, he\'s doing exercises, screaming out between every set as if he were in a pitched battle. Hopefully this phase of his life ends soon.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{Odkad %gladiator% gladiator wypil jedno z dziwactw anatomistow, wojownik areny nie przestaje sie prezyc. Wielu zaczyna sie irytowac opalonym, lsniacym, przesadnie umiesnionym mezczyzna, ktory domaga sie, by inni najemnicy stawali z nim jeden na jednego w nagich zapasach. Gdy nie zabiega o takie przepychanki, robi cwiczenia, wykrzykujac miedzy kazda seria jakby byl w zacietej bitwie. Oby ta faza jego zycia szybko sie skonczyla.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "At least he\'s feeling energetic...",
+					Text = "Przynajmniej ma energie...",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,24 +35,24 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Hitpoints"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Punktow Zycia"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Fatigue"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Zmeczenia"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Initiative"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Inicjatywy"
 				});
-				_event.m.Gladiator.improveMood(0.5, "Feels better than ever");
+				_event.m.Gladiator.improveMood(0.5, "Czuje sie lepiej niz kiedykolwiek");
 
 				if (_event.m.Gladiator.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -72,7 +72,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 						continue;
 					}
 
-					bro.worsenMood(1.0, "Annoyed by " + _event.m.Gladiator.getName() + "\'s antics");
+					bro.worsenMood(1.0, "Zirytowany wybrykami " + _event.m.Gladiator.getName());
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{

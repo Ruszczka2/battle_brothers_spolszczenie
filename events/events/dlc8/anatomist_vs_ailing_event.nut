@@ -6,17 +6,17 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_vs_ailing";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing% the ailing sellsword is curled up and staring into the campfire. He\'s been ill for a while and does not seem to be getting any better. However, %anatomist% the anatomist suggests that he might be able to concoct a solution for the man, a sort of potion that he can imbibe to strengthen his body and heal himself.%SPEECH_ON%I\'ve seen it work many a time. Now, there is an issue: the required ingredients are not native to where we are, but I\'ve read enough on the subject that I can find suitable substitutes with ease.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing%, chorowity najemnik, siedzi skulony i wpatruje sie w ognisko. Choruje od dluzszego czasu i nie wyglada na to, by bylo lepiej. Jednak %anatomist% anatomista twierdzi, ze moze sporzadzic dla niego rozwiazanie - rodzaj mikstury, ktora wzmocni jego cialo i uzdrowi go.%SPEECH_ON%Widziałem, jak to dzialalo wiele razy. Jest tylko jeden problem: potrzebne skladniki nie pochodza z tych okolic, ale czytalem o tym dosc, by z latwoscia znalezc odpowiednie zamienniki.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Go and and heal him of his ailments.",
+					Text = "Idz i wylecz go z dolegliwosci.",
 					function getResult( _event )
 					{
 						local outcome = this.Math.rand(1, 100);
@@ -37,7 +37,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, this doesn\'t sound safe at all.",
+					Text = "Nie, to wcale nie brzmi bezpiecznie.",
 					function getResult( _event )
 					{
 						return "E";
@@ -54,13 +54,13 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You let %anatomist% do his work, whatever that is. The anatomist and %ailing% disappear into a tent for awhile. By the time it is ready for the company to get back on the road, %ailing% is a new man. He is revivified with newfound energies, and he has a certain spring in his step. %anatomist% comes out writing notes in his book.%SPEECH_ON%Results were quite good, quite good indeed.%SPEECH_OFF%Curious, you ask him what he did. He snaps out of his focus and glares up at you, then turns the book away so you cannot read it. He continues murmuring to himself.%SPEECH_ON%Best results? No, I cannot write best results. He might yet still suffer effects which might come in a little, how do I put this, sideways.%SPEECH_OFF%Well. Hopefully %ailing% is merely healed and that\'s that.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Pozwalasz %anatomist% wykonywac jego prace, cokolwiek to znaczy. Anatomista i %ailing% znikaja na chwile w namiocie. Gdy kompanie trzeba ruszac w droge, %ailing% jest jak nowy. Ozywiony nowa energia, ma lekki, sprezysty krok. %anatomist% wychodzi, zapisujac cos w swoim notatniku.%SPEECH_ON%Wyniki byly calkiem dobre, bardzo dobre.%SPEECH_OFF%Z ciekawosci pytasz, co zrobil. Ten odrywa sie od skupienia i rzuca ci spojrzenie, po czym odwraca ksiege, bys nie mogl jej czytac. Dalej mruczy do siebie.%SPEECH_ON%Najlepsze wyniki? Nie, nie moge napisac najlepsze wyniki. Moga wystapic jeszcze skutki uboczne, ktore nadejda, jak to ujac, bokiem.%SPEECH_OFF%Coz. Oby %ailing% byl po prostu wyleczony i na tym koniec.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road then.",
+					Text = "W takim razie ruszajmy w droge.",
 					function getResult( _event )
 					{
 						return 0;
@@ -75,7 +75,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/traits/trait_icon_59.png",
-						text = _event.m.Ailing.getName() + " is no longer Ailing"
+						text = _event.m.Ailing.getName() + " nie jest juz Chorowity"
 					}
 				];
 				local healthBoost = this.Math.rand(2, 4);
@@ -84,7 +84,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Ailing.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + healthBoost + "[/color] Hitpoints"
+					text = _event.m.Ailing.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + healthBoost + "[/color] Punkty Zycia"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Ailing.getImagePath());
@@ -93,13 +93,13 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You give %anatomist% the go ahead. He and %ailing% step away for a time, going into a tent together. Hours pass and the company should get back on the road soon. You walk over and enter the tent. %ailing% is on a cot with his arms crossed over his head and his legs bowed at the knees. He\'s covered in sweat and keeps turning his head from left to right. %anatomist% is at his side taking notes.%SPEECH_ON%It appears the procedure did not work as intended, however even unintended consequences can carry information of great import.%SPEECH_OFF%Furious, you ask if the man is going to make it. The anatomist nods.%SPEECH_ON%He might suffer some delusions for a while, but ultimately he will still be a breathing animal-excuse me, a breathing man.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Dajesz %anatomist% zielone swiatlo. On i %ailing% odchodza na chwile do namiotu. Mijaja godziny i kompanie wkrotce trzeba ruszac w droge. Podchodzisz i wchodzisz do namiotu. %ailing% lezy na pryczy z rekami skrzyzowanymi nad glowa, a nogi ma zgięte w kolanach. Jest spocony i wciaz kreci glowa z lewej na prawa. %anatomist% stoi obok i robi notatki.%SPEECH_ON%Wyglada na to, ze procedura nie zadzialala tak, jak zamierzano, jednak nawet niezamierzone skutki moga niesc wazne informacje.%SPEECH_OFF%Wsciekly pytasz, czy przezyje. Anatomista kiwa glowa.%SPEECH_ON%Moze przez jakis czas miewac urojenia, ale ostatecznie nadal bedzie oddychajacym zwierzeciem - przepraszam, oddychajacym czlowiekiem.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s just get on the road then.",
+					Text = "W takim razie ruszajmy w droge.",
 					function getResult( _event )
 					{
 						return 0;
@@ -113,7 +113,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_59.png",
-					text = _event.m.Ailing.getName() + " is no longer Ailing"
+					text = _event.m.Ailing.getName() + " nie jest juz Chorowity"
 				});
 
 				if (!_event.m.Ailing.getSkills().hasSkill("trait.paranoid"))
@@ -123,7 +123,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = trait.getIcon(),
-						text = _event.m.Ailing.getName() + " gains Paranoid"
+						text = _event.m.Ailing.getName() + " zyskuje Paranoiczny"
 					});
 				}
 
@@ -134,13 +134,13 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You decide to let the anatomist do what he needs to with the hope that %ailing% will make a speedy recovery. As time goes on, you need to get the company back on the road and %anatomist% still hasn\'t come out of the tent. You go over and peek in.\n\nYou find the anatomist sitting on a stool off to the side. He has one arm slung across a table with the hand scratching back and forth in mad notetaking. His other arm is slack between his legs, his thumb and finger pressing together now and again in a strange pinching motion that seems to be counting the seconds. You take your eyes to %ailing% who is sitting up on a cot, his legs over the sides and his feet on the ground. He looks up at you.%SPEECH_ON%Hey there, captain, I think I\'m feeling much better now. Much, much better. Ready to...take on the world.%SPEECH_OFF%The man springs to his feet and pounds his chest, yet his voice does not rise.%SPEECH_ON%Shall we resume the road?%SPEECH_OFF%He walks out of the tent and the second the tarp flaps closed, %anatomist% stops writing and sets down his quill pen. He nods.%SPEECH_ON%The procedure was a success. He is no longer ill. He is healed and then some.%SPEECH_OFF%And then some? That\'s not the sort of language you really want to see right now. You\'ll have to keep an eye on the man to see what exactly has changed about him.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Decydujesz sie pozwolic anatomiscie zrobic to, co uzna za konieczne, majac nadzieje, ze %ailing% szybko wyzdrowieje. Czas mija, kompanie trzeba zbierac w droge, a %anatomist% wciaz nie wychodzi z namiotu. Podchodzisz i zagladasz do srodka.\n\nZastajesz anatomiste siedzacego na stolku z boku. Jedna reka lezy na stole, a dlon szalenie skrobie wte i wewte w notatniku. Druga reka zwisa miedzy nogami, kciuk i palec wskazujacy co chwile zaciskaja sie w dziwnym, szczypiacym ruchu, jakby odliczal sekundy. Przenosisz wzrok na %ailing%, ktory siedzi na pryczy z nogami zwisajacymi z boku i stopami na ziemi. Podnosi wzrok.%SPEECH_ON%Hej, kapitanie, chyba czuje sie juz duzo lepiej. Duuuzo lepiej. Gotowy, by... podbic swiat.%SPEECH_OFF%Mezczyzna zrywa sie na nogi i bije sie w piers, lecz jego glos nie podnosi sie.%SPEECH_ON%Czy ruszamy w droge?%SPEECH_OFF%Wychodzi z namiotu, a gdy tylko plachta opada, %anatomist% przestaje pisac i odklada pioro. Kiwa glowa.%SPEECH_ON%Procedura sie powiodla. Nie jest juz chory. Jest wyleczony i to z nadwyzka.%SPEECH_OFF%Z nadwyzka? To nie jest slownictwo, ktore chcesz teraz slyszec. Musisz miec na niego oko, by sprawdzic, co dokladnie sie w nim zmienilo.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "No more experiments, anatomist.",
+					Text = "Koniec eksperymentow, anatomisto.",
 					function getResult( _event )
 					{
 						return 0;
@@ -154,7 +154,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_59.png",
-					text = _event.m.Ailing.getName() + " is no longer Ailing"
+					text = _event.m.Ailing.getName() + " nie jest juz Chorowity"
 				});
 				local new_traits = [
 					"scripts/skills/traits/bloodthirsty_trait",
@@ -181,7 +181,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = trait.getIcon(),
-							text = _event.m.Ailing.getName() + " gains " + trait.getName()
+							text = _event.m.Ailing.getName() + " zyskuje " + trait.getName()
 						});
 						num_new_traits = num_new_traits - 1;
 					}
@@ -194,13 +194,13 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You tell %anatomist% no. %ailing% is strong enough to heal on his own. The anatomist sighs. You get a sense that he had no real interest in helping the sellsword, only an interest in experimenting on him.%SPEECH_ON%Great advances can only be made with great risks, captain.%SPEECH_OFF%He says before walking off, his quill pen scratching out a name on one of his tomes.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Mowisz %anatomist%, ze nie. %ailing% jest dosc silny, by wyzdrowiec sam. Anatomista wzdycha. Masz wrazenie, ze nie byl zainteresowany pomaganiem najemnikowi, tylko eksperymentowaniem na nim.%SPEECH_ON%Wielkie postepy rodza sie z wielkiego ryzyka, kapitanie.%SPEECH_OFF%Mowi, po czym odchodzi, a jego pioro skrobie imie w jednej z jego ksieg.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "About to advance my fist into your...",
+					Text = "Zaraz wsadze ci piesc w...",
 					function getResult( _event )
 					{
 						return 0;
@@ -210,7 +210,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.0, "Was denied a research opportunity");
+				_event.m.Anatomist.worsenMood(1.0, "Odmowiono mu okazji do badan");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

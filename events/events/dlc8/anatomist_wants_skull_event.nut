@@ -7,17 +7,17 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_wants_skull";
-		this.m.Title = "On the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_16.png[/img]{You come to a remote village to find a few of its peoples crouched before a large, bleached skull decoratively set on a lectern. Passing peasants pause and profess faith to it. As you get closer, you realize the skull itself is extraordinary: a long, thick forehead juts out from the top, its brow quite dominant and ridged, and the jaw of it, still intact, carries enormous and sharp teeth, most of which are in a state of disorder, as if in any ordinary head closing such a mouth would be a danger to itself. What it very well may be is a Nachzehrer\'s skull. Naturally, with this strange skeletal sight before you, you hope to turn the company away before-%SPEECH_ON%We should take that for studying.%SPEECH_OFF%Sighing, you turn to see %anatomist% standing there, ogling the skull. You correct him, saying instead that what he really means is he intends to steal it. The anatomist stares at you.%SPEECH_ON%The vocabulary needn\'t matter, when the studying is done, it will be of better use in our hands than theirs, that much is clear.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_16.png[/img]{Docieracie do odleglej wioski i widzicie kilku mieszkancow przykucnietych przed duza, wybielona czaszka, ktora dekoracyjnie spoczywa na pulpicie. Przechodzacy chlopi przystaja i oddaja jej czesc. Gdy podchodzisz blizej, widzisz, ze sama czaszka jest niezwykla: dlugie, grube czolo wystaje z gory, luk brwiowy jest wyrazny i pofalowany, a szczeka, nadal nienaruszona, nosi ogromne, ostre zeby, w wiekszosci chaotycznie ustawione, jakby w zwyklej glowie zamkniecie takiej paszczy stanowilo zagrozenie dla niej samej. To moze byc czaszka Nachzehrera. Oczywiscie, majac przed soba ten dziwny kosciotrup, chcesz odprowadzic kompanie, zanim-%SPEECH_ON%Powinnismy to zabrac do badan.%SPEECH_OFF%Wzdychasz i obracasz sie, by zobaczyc %anatomist% stojacego i gapiacego sie na czaszke. Poprawiasz go, ze tak naprawde chodzi mu o kradziez. Anatomista patrzy na ciebie.%SPEECH_ON%Slownictwo nie ma znaczenia, gdy badania beda zakonczone, w naszych rekach przyda sie bardziej niz w ich, to jasne.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, take it.",
+					Text = "Dobrze, weź to.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -25,7 +25,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I don\'t think so.",
+					Text = "Nie, raczej nie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,7 +38,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Thief != null)
 				{
 					this.Options.push({
-						Text = "What\'s our thief %thief% have to say?",
+						Text = "A co na to nasz zlodziej, %thief%?",
 						function getResult( _event )
 						{
 							return "D";
@@ -50,7 +50,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "That skull looks like our wildman, %wildman%.",
+						Text = "Ta czaszka wyglada jak nasz dzikus, %wildman%.",
 						function getResult( _event )
 						{
 							return "E";
@@ -65,7 +65,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{Sighing, you agree to the anatomist\'s fancies, but you tell him that it will be he who does the stealing, if it is he who wishes to do the studying. The man doesn\'t even hesitate and heads off, eyes narrowed to the bony item central to his scientific fancy. You\'re not going to be responsible for the mayhem that goes down if he is caught so you leave him to it, returning instead to count inventory while keeping your ears perked for sounds of religion wrecking chaos. A few moments later, %anatomist% returns, a fat skull cradled under an arm and a bit of sweat on his brow.%SPEECH_ON%It\'s a Nachzehrer\'s skull and should be of great value to our studies.%SPEECH_OFF%Curious, you ask him how it was that he managed to get the skull in the first place. %anatomist% raises an eyebrow.%SPEECH_ON%You weren\'t watching? I thought the endeavor was quite impressive, but alas so impressive that I believe telling it second hand will make you susceptible to believing me to tell a tall tale. A fable, if you will. Just know that we should probably get out of here soon. Perhaps sooner than soon, and quicker than quick. Do you understand?%SPEECH_OFF%A din of shouting grows in the distance. The anatomist wipes his brow and turns and walks away. The back of his shirt is clawed apart and there are little darts or arrows sticking out of his back - and those distant shouts are getting louder.}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{Wzdychasz i przystajesz na fanaberie anatomisty, ale mowisz mu, ze to on ma ukrasc, skoro to on chce badac. Mezczyzna nawet sie nie waha i rusza, mruzac oczy na kosciasty obiekt w centrum jego naukowej obsesji. Nie zamierzasz byc odpowiedzialny za balagan, jesli go zlapia, wiec zostawiasz go, a sam wracasz do liczenia zapasow, nasluchujac odglosow religijnego chaosu. Po chwili %anatomist% wraca z wielka czaszka pod pacha i kropelkami potu na czole.%SPEECH_ON%To czaszka Nachzehrera i powinna byc bardzo cenna dla naszych badan.%SPEECH_OFF%Z ciekawosci pytasz, jak w ogole zdolal ja zdobyc. %anatomist% unosi brew.%SPEECH_ON%Nie patrzyles? Uznalem, ze to bylo dosc imponujace, ale tak imponujace, ze opowiadanie z drugiej reki sprawi, iz uznasz, ze bajdurze. Basm, jesli wolisz. Wiedz tylko, ze powinnismy sie stad wyniesc. Moze wczesniej niz wkrotce, i szybciej niz szybko. Rozumiesz?%SPEECH_OFF%W oddali narasta krzyk. Anatomista ociera czolo i odchodzi. Tyl jego koszuli jest rozszarpany, a z plecow wystaja mu male groty lub strzaly - a odlegle krzyki robia sie coraz glosniejsze.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -81,12 +81,12 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Acquired an unusual skull to study");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykla czaszke do badan");
 				_event.m.Anatomist.addLightInjury();
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Anatomist.getName() + " suffers light wounds"
+					text = _event.m.Anatomist.getName() + " odnosi lekkie rany"
 				});
 				local resolveBoost = this.Math.rand(1, 3);
 				local initiativeBoost = this.Math.rand(1, 3);
@@ -96,12 +96,12 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Anatomist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Resolve"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Anatomist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Initiative"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Inicjatywy"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 			}
@@ -109,13 +109,13 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{You tell %anatomist% he can take the skull. He stares at you for a time, then says he thought you were the one that was going to do it. You tell him there\'s no way you\'re taking a skull from local peasants who worship said skull. If he wishes to do the studying, then it is he who should do the stealing. %anatomist% draws a hand to his chest.%SPEECH_ON%I\'m a man of science, and no ordinary scribe, I could not deign myself to a task of such lowness. It requires a man of knowhow, a man who understands the grit and grime of daily life, to steal this skull.%SPEECH_OFF%The anatomist clenches a fist, so certain that his speech is not an insult to you, and his eyes staring off with determined ferocity that could only be vicarious at best.%SPEECH_ON%What the fark you two strangers talkin\' about?%SPEECH_OFF%You both turn around to see a peasant holding a pitchfork, and as a few more join him he motions toward you.%SPEECH_ON%These fellas were aimin\' to steal the skull!%SPEECH_OFF%You hold your hands out, explaining that- before you finish, %anatomist% turns and sprints away. Thinking fast, you call him a thief and promise to have his head, making a grand show of drawing out your sword and waving it at the peasants. You pretend to accidentally drop a purse of crowns, turning the peasants\' anger into greed, and giving you enough time to escape.}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{Mowisz %anatomist%, ze moze wziac czaszke. Przez chwile patrzy na ciebie, po czym stwierdza, ze myslal, iz to ty to zrobisz. Mowisz mu, ze nie ma mowy, zebys zabieral czaszke miejscowym chlopom, ktorzy ja czcza. Jesli chce badac, to on powinien krasc. %anatomist% kladzie dlon na piersi.%SPEECH_ON%Jestem czlowiekiem nauki, nie zwyklym skryba, nie moge sie posunac do tak niskiego zadania. Potrzeba czlowieka z doswiadczeniem, ktory zna trud i brud codziennego zycia, by ukrasc ta czaszke.%SPEECH_OFF%Anatomista zaciska piesc, tak pewny, ze jego mowa cie nie obrazala, a jego oczy wpatruja sie z zawzietoscia, ktora moze byc tylko wyuczona.%SPEECH_ON%O czym wy dwoje obcy gadacie?%SPEECH_OFF%Obaj odwracacie sie i widzicie chlopa z widlami, a gdy dolacza kolejni, wskazuje na was.%SPEECH_ON%Ci goscie chcieli ukrasc czaszke!%SPEECH_OFF%Wyciagasz rece, tlumaczac, ze- zanim skoncysz, %anatomist% odwraca sie i ucieka. Myslac szybko, nazywasz go zlodziejem i obiecujesz jego glowe, robiac wielkie przedstawienie z dobyciem miecza i wymachiwaniem nim na chlopow. Udajesz, ze przypadkiem upuszczasz sakiewke z koronami, zamieniajac zlosc chlopow w chciwosc i dajac sobie czas na ucieczke.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get out of here.",
+					Text = "Wynosimy sie stad.",
 					function getResult( _event )
 					{
 						return 0;
@@ -129,7 +129,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]100[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]100[/color] Koron"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 			}
@@ -137,13 +137,13 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_65.png[/img]{Sighing, you agree to the idea of stealing the skull. Before you can say anything more, %thief% the thief appears. He comes up chewing grass and walking with swagger.%SPEECH_ON%So you wanna steal something, hm? Just point at whatcha need and I\'ll go and fetch it for you. Is it gold? A weapon?%SPEECH_OFF%%anatomist% points at the skull. The thief stares at it for a time before turning back.%SPEECH_ON%Oh, uh, alright.%SPEECH_OFF%The thief and would be skull stealer wanders off. You go and count inventory, giving him time to do his job. He later returns with the skull in tow, as well as a bevy of weapons and armor which you know he didn\'t buy. As you stare at the clearly lifted goods, the man shrugs.%SPEECH_ON%What? I had to make it worth my time.%SPEECH_OFF%The anatomist takes the skull away without saying a word, carrying it off while staring into its emptied eyesockets as though it were a lover, muttering that many things will be learned from its vacant stare. The thief does the same, but instead with a satchel of crowns and other goodies, himself muttering that he\'ll finally be able to afford two whores at the same time, an apparent long held dream of his. You take the weapons and armor to inventory, and in the distance you hear the wailing of peasants looking for the relic.}",
+			Text = "[img]gfx/ui/events/event_65.png[/img]{Wzdychasz i zgadzasz sie na kradziez czaszki. Zanim zdazysz cos powiedziec, pojawia sie %thief% zlodziej. Podchodzi, przegryzajac trawe i kroczac z brawura.%SPEECH_ON%Wiec chcesz cos ukrasc, hm? Wskaz tylko, czego potrzebujesz, a ja to przyniose. Zloto? Bron?%SPEECH_OFF%%anatomist% wskazuje na czaszke. Zlodziej przez chwile sie na nia gapi, po czym odwraca sie z powrotem.%SPEECH_ON%No, eee, dobra.%SPEECH_OFF%Zlodziej i przyszly zlodziej czaszki odchodza. Idziesz liczyc zapasy, dajac mu czas na robote. Pozniej wraca z czaszka, a do tego z naręczem broni i zbroi, o ktorych wiesz, ze ich nie kupil. Gdy wpatrujesz sie w oczywiscie skradzione dobra, mezczyzna wzrusza ramionami.%SPEECH_ON%Co? Musialem sprawic, by to sie oplacalo.%SPEECH_OFF%Anatomista zabiera czaszke bez slowa, niosac ja i wpatrujac sie w puste oczodoły, jakby to byl kochanek, mamroczac, ze wiele rzeczy nauczy sie z jej pustego spojrzenia. Zlodziej robi to samo, tylko z sakiewka koron i innymi dobrami, mamroczac, ze w koncu bedzie go stac na dwie dziwki naraz, co najwyrazniej bylo jego odwiecznym marzeniem. Zabierasz bron i zbroje do ekwipunku, a w oddali slyszysz zawodzenie chlopow szukajacych relikwii.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A win\'s a win.",
+					Text = "Wygrana to wygrana.",
 					function getResult( _event )
 					{
 						return 0;
@@ -153,8 +153,8 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Acquired an unusual skull to study");
-				_event.m.Thief.improveMood(1.0, "Successfully stole from the peasantry");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykla czaszke do badan");
+				_event.m.Thief.improveMood(1.0, "Udanie okradl chlopow");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -179,7 +179,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+100[/color] Experience"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+100[/color] Doswiadczenia"
 				});
 				local initiativeBoost = this.Math.rand(2, 4);
 				_event.m.Thief.getBaseProperties().Initiative += initiativeBoost;
@@ -187,7 +187,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Thief.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Initiative"
+					text = _event.m.Thief.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Inicjatywy"
 				});
 				local item;
 				local weaponList = [
@@ -206,7 +206,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + item.getIcon(),
-						text = "You gain " + item.getName()
+						text = "Zyskujesz " + item.getName()
 					});
 					this.World.Assets.getStash().add(item);
 				}
@@ -227,7 +227,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + item.getIcon(),
-						text = "You gain " + item.getName()
+						text = "Zyskujesz " + item.getName()
 					});
 					this.World.Assets.getStash().add(item);
 				}
@@ -239,13 +239,13 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_43.png[/img]{You decide that if the anatomists can make some grand use of the skull, then you\'ll abide by giving them the chance to study it. The question is how does one go about stealing a hideous skull from a group so insane they\'d worship it? Almost as if on cue, %wildman% the wildman appears, chowing down on a handful of worms. His nature-rinsed face and cruelly shaped skull seem almost kin to the monstrosity which resides on the village\'s town center lectern. %anatomist% snaps his fingers and claims to have an idea. He pulls the wildman forward, and the two walk straight toward the village\'s beloved skull.\n\nThe anatomist pushes the wildman before the praying folk, and claims that they have murdered one who is cousin to his being. He states that by stealing the skull of his kin, they have doomed him to a life of being cursed. The crowd is horrified, not realizing the error of their ways. The wildman eats another worm. You continue to watch as the anatomist picks up the skull, lofts it over his head, and says that with this he may finally heal %wildman% of what ails him, and through him also lift any curses which have befallen the village itself. By this point the crowd is arisen, taken to the anatomist like a tentpole priest, and they clap as he leaves, cheering the theft as it were, the skull lofted above his head. The two men return to you. %anatomist% grins.%SPEECH_ON%To study the body, one shouldn\'t forget to study the mind, and in studying the mind, one shouldn\'t forget to study minds, plural! For many minds put together are a creature to study in and of themselves.%SPEECH_OFF%The anatomist walks off. A group of peasants approach carrying goods of all sorts. They throw them at the feet of %wildman% in apology. The wildman eats another worm.}",
+			Text = "[img]gfx/ui/events/event_43.png[/img]{Decydujesz, ze skoro anatomisci moga zrobic z czaszki cos wielkiego, to dasz im szanse na badania. Pytanie brzmi: jak ukrasc paskudna czaszke od grupy tak szalonej, ze ja czci? Jak na zawolanie pojawia sie %wildman% dzikus, zajadajac garsc robakow. Jego obmyta natura twarz i okrutnie uksztaltowana czaszka wydaja sie niemal spokrewnione z potwornoscia, ktora spoczywa na pulpicie w centrum wioski. %anatomist% pstryka palcami i twierdzi, ze ma pomysl. Wciaga dzikusa do przodu, a obaj ida prosto do ukochanej czaszki wioski.\n\nAnatomista popycha dzikusa przed modlace sie tlumy i twierdzi, ze zamordowali kogos spokrewnionego z jego istota. Mowi, ze kradnac czaszke jego krewnego, skazali go na zycie w przeklenstwie. Tlum jest przerazony, nie rozumiejac swojego bledu. Dzikus zjada kolejnego robaka. Dalej patrzysz, jak anatomista podnosi czaszke, unosi ja nad glowa i mowi, ze dzieki temu wreszcie wyleczy %wildman% z jego dolegliwosci, a tym samym zdejmie przeklenstwa, ktore spadly na wioske. W tym momencie tlum juz wstaje, przyjmujac anatomiste jak kaplana pod namiotem, i bije brawo, gdy odchodzi, wiwatujac na kradziez, jakby to bylo cos dobrego, z czaszka uniesiona nad glowa. Obaj mezczyzni wracaja do ciebie. %anatomist% usmiecha sie.%SPEECH_ON%By badac cialo, nie wolno zapomniec o badaniu umyslu, a badajac umysl, nie wolno zapominac o badaniu umyslow, w liczbie mnogiej! Wiele umyslow zlozonych razem to stworzenie do badania samo w sobie.%SPEECH_OFF%Anatomista odchodzi. Podchodzi grupa chlopow niosacych rozne dobra. Rzucaja je u stop %wildman% na znak przeprosin. Dzikus zjada kolejnego robaka.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Hmm, alright.",
+					Text = "Hmm, dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -255,8 +255,8 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Acquired an unusual skull to study");
-				_event.m.Wildman.improveMood(1.0, "Helped " + _event.m.Anatomist.getName() + " acquire an unusual skull");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykla czaszke do badan");
+				_event.m.Wildman.improveMood(1.0, "Pomogl " + _event.m.Anatomist.getName() + " zdobyc niezwykla czaszke");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -282,14 +282,14 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Anatomist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Initiative"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Inicjatywy"
 				});
 				_event.m.Wildman.addXP(75, false);
 				_event.m.Wildman.updateLevel();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Wildman.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+75[/color] Experience"
+					text = _event.m.Wildman.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+75[/color] Doswiadczenia"
 				});
 				local food;
 				local r = this.Math.rand(1, 3);
@@ -311,7 +311,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain " + food.getName()
+					text = "Zyskujesz " + food.getName()
 				});
 				local goods;
 				r = this.Math.rand(1, 2);
@@ -329,7 +329,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + goods.getIcon(),
-					text = "You gain " + goods.getName()
+					text = "Zyskujesz " + goods.getName()
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Wildman.getImagePath());

@@ -6,17 +6,17 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_vs_asthmatic";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You come up on %anatomist% the anatomist talking to %asthmatic%, a man who is notoriously bad at the simple act of breathing. Almost on cue, the man comes to you with a request. He says that the anatomist has a means to possibly heal his poor lungs. %anatomist% nods.%SPEECH_ON%It is but a small procedure, albeit painful. This daring subject - excuse me, this daring animal - goodness, excuse me, this daring patient has steadied himself of that challenge and is ready to take it on in full. With your say so, I may begin the process and have it done in no time at all.%SPEECH_OFF%You\'re not sure about this, but it would be nice if %asthmatic% could stop wheezing in the middle of the night like some rabbit having the life squeezed out of it.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Zastajesz %anatomist% anatomiste rozmawiajacego z %asthmatic%, czlowiekiem, ktory slynie z kiepskiego oddychania. Niemal na czas, mezczyzna przychodzi do ciebie z prosba. Mowi, ze anatomista zna sposob, by wyleczyc jego slabe pluca. %anatomist% kiwa glowa.%SPEECH_ON%To tylko drobny zabieg, choc bolesny. Ten smialy osobnik - przepraszam, to smiale zwierze - na bogow, przepraszam, ten smialy pacjent jest gotow podjac wyzwanie. Za twoja zgoda moge zaczac proces i skonczyc go bardzo szybko.%SPEECH_OFF%Nie jestes tego pewien, ale byloby milo, gdyby %asthmatic% przestal swiszczec w nocy jak krolik duszony na smierc.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Do it, but be careful.",
+					Text = "Zrob to, ale badz ostrozny.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -24,7 +24,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Do it, and use whatever means necessary.",
+					Text = "Zrob to i uzyj wszelkich srodkow.",
 					function getResult( _event )
 					{
 						return "D";
@@ -32,7 +32,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, I won\'t risk his life on this.",
+					Text = "Nie, nie zaryzykuje jego zycia.",
 					function getResult( _event )
 					{
 						return "E";
@@ -49,13 +49,13 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You okay the procedure and the two disappear for a time. Not long after, %asthmatic% the man with lungs like a dead dog being stepped on comes to you with a wide grin. He stands straight, puffs out his chest, and takes a long, deep breath, his body swelling like a toad, his cheeks puffing, then he slowly, slowly lets the air out. There is no wheeze. There is no scratch in the throat. His face does not get red. His arms slacken, yet he does not become dizzy.%SPEECH_ON%That anatomist got me patched up just right. He is but a miracle on legs.%SPEECH_OFF%The man turns around, revealing a series of holes in his flesh which suck and pucker as he breathes. %anatomist% comes around cleaning some strange metal utensil. He shakes his head.%SPEECH_ON%At least one of us is satisfied with the results as they have arrived.%SPEECH_OFF%You\'re not sure why the anatomist is upset, but you do get a glance at one of his texts which reveals an operation of lung-removal via scalpel and spoon. Surely that wasn\'t what he did to %asthmatic%. Surely.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Zgadzasz sie na zabieg i obaj znikaja na chwile. Niedlugo potem %asthmatic%, czlowiek o plucach jak zdechly pies deptany pod butem, wraca do ciebie z szerokim usmiechem. Staje prosto, wypina piers i bierze dlugi, gleboki oddech, cialo nabrzmiewa mu jak u ropuchy, policzki puchna, a potem powoli, bardzo powoli wypuszcza powietrze. Nie ma swistu. Nie ma drapania w gardle. Twarz nie czerwienieje. Ramiona opadaja, a jednak nie kreci mu sie w glowie.%SPEECH_ON%Ten anatomista zalatal mnie idealnie. To cud na dwoch nogach.%SPEECH_OFF%Mezczyzna odwraca sie, ukazujac serie otworow w ciele, ktore zasysaja i marszcza sie, gdy oddycha. %anatomist% podchodzi, czyszczac jakies dziwne metalowe narzedzie. Kreci glowa.%SPEECH_ON%Przynajmniej jeden z nas jest zadowolony z tych rezultatow, ktore zaszly.%SPEECH_OFF%Nie wiesz, czemu anatomista jest zdenerwowany, ale zerkasz na jeden z jego tekstow, gdzie opisano operacje usuniecia pluca przy pomocy skalpela i lyzki. Oby na pewno nie to zrobil %asthmatic%. Oby.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Surely...",
+					Text = "Oby...",
 					function getResult( _event )
 					{
 						return 0;
@@ -69,15 +69,15 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_22.png",
-					text = _event.m.Asthmatic.getName() + " is no longer Asthmatic"
+					text = _event.m.Asthmatic.getName() + " nie jest juz Astmatykiem"
 				});
 				_event.m.Asthmatic.addHeavyInjury();
 				this.List.push({
 					id = 11,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Asthmatic.getName() + " suffers heavy wounds"
+					text = _event.m.Asthmatic.getName() + " odnosi powazne rany"
 				});
-				_event.m.Asthmatic.improveMood(1.0, "Is no longer asthmatic");
+				_event.m.Asthmatic.improveMood(1.0, "Nie jest juz astmatykiem");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -95,13 +95,13 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You okay the procedure. %asthmatic% turns around to tell the anatomist, who promptly sticks a metal prong deep into the man\'s chest. The man winces and yelps, his fingers curling as though to grasp the pain itself. He reels backward as %anatomist% holds the utensil like a shank. As the anatomist steps forward for another stab, you jump forward and stop him. He looks at you with confusion.%SPEECH_ON%This is part of the process, do you not understand? Now, I must continue with the puncturing. We will put eight more holes into him.%SPEECH_OFF%%asthmatic% screams, rather undignified in his protest of the process. You tell the anatomist that this is over. He sighs, lowering the tool.%SPEECH_ON%Anything of import requires pain, sellsword. Whether it is you acquiring heads to sell for crowns, or myself, pursuing a cure. If pain were not a critical element, we would not be upsetting the natural order in our own ways.%SPEECH_OFF%You tell him to shut his mouth and that it\'s over. He sighs and walks away, cleaning the utensil with a rag. %asthmatic% wheezes a thanks to you for intervening.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Zgadzasz sie na zabieg. %asthmatic% odwraca sie, by powiedziec anatomiscie, a ten natychmiast wbija metalowy kolec gleboko w piers mezczyzny. Ten krzywi sie i wrzeszczy, palce mu sie zwijaja, jakby chcial chwycic sam bol. Cofa sie, a %anatomist% trzyma narzedzie jak sztylet. Gdy anatomista robi krok naprzod, by zadac kolejny cios, wyskakujesz i go powstrzymujesz. Patrzy na ciebie z dezorientacja.%SPEECH_ON%To czesc procesu, czyz nie rozumiesz? Teraz musze kontynuowac nakluwanie. Zrobimy jeszcze osiem otworow.%SPEECH_OFF%%asthmatic% krzyczy, raczej malo godnie protestujac przeciwko procedurze. Mowisz anatomiscie, ze to koniec. Ten wzdycha, opuszczajac narzedzie.%SPEECH_ON%Wszystko, co wazne, wymaga bolu, najemniku. Czy to ty zdobywasz glowy, by sprzedac je za korony, czy ja szukam lekarstwa. Gdyby bol nie byl kluczowy, nie burzylibysmy naturalnego porzadku na swoje sposoby.%SPEECH_OFF%Kazes mu zamknac usta i konczysz sprawe. Wzdycha i odchodzi, czyszczac narzedzie szmata. %asthmatic% sapie, dziekujac ci za interwencje.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Just take it easy for a bit.",
+					Text = "Po prostu odpocznij przez chwile.",
 					function getResult( _event )
 					{
 						return 0;
@@ -121,9 +121,9 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Asthmatic.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Asthmatic.getName() + " odnosi " + injury.getNameOnly()
 				});
-				_event.m.Asthmatic.worsenMood(0.5, "Was injured by a madman");
+				_event.m.Asthmatic.worsenMood(0.5, "Zostal zraniony przez szalenca");
 
 				if (_event.m.Asthmatic.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -134,7 +134,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Anatomist.worsenMood(1.0, "Was denied a research opportunity");
+				_event.m.Anatomist.worsenMood(1.0, "Odmowiono mu okazji do badan");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -152,13 +152,13 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You think why not just go full donkey and take the experimental route? %asthmatic% agrees.%SPEECH_ON%If this is going to hurt, might as well make it worth my while.%SPEECH_OFF%As the two leave to a tent, a part of you considers watching. Another part realizes you probably don\'t have the stomach for it, whatever it is, and also that you don\'t want your presence alone to interfere with the anatomist\'s work. That said, it actually does not take long for the two to reemerge. %asthmatic% stands up straight, breathing in long and heavy, and then letting it all out in one smooth breath.%SPEECH_ON%I have never felt better.%SPEECH_OFF%He says, then shakes %anatomist%\'s hand. The healed man walks off. %anatomist% cleans his hands off.%SPEECH_ON%Unfortunately, there were a few complications. Let me see, what do we have...%SPEECH_OFF%The anatomist unfurls a scroll with hastily written notes, some of which are covered in blood. You read...}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Myslisz, czemu by nie pojsc na calego i wybrac sciezke eksperymentalna? %asthmatic% sie zgadza.%SPEECH_ON%Skoro ma bolec, to niech przynajmniej ma to sens.%SPEECH_OFF%Gdy obaj odchodza do namiotu, czesc ciebie rozważa podgladanie. Inna czesc zdaje sobie sprawe, ze pewnie nie masz na to zoladka, cokolwiek by tam bylo, i ze sama twoja obecnosc moglaby przeszkodzic pracy anatomisty. Tak czy inaczej, nie trwa to dlugo, zanim obaj wyjda. %asthmatic% staje prosto, bierze dlugi, ciezki wdech, a potem wypuszcza wszystko jednym, gladkim wydechem.%SPEECH_ON%Nigdy nie czulem sie lepiej.%SPEECH_OFF%Mowi, po czym podaje reke %anatomist%. Wyleczony mezczyzna odchodzi. %anatomist% wyciera dlonie.%SPEECH_ON%Niestety, bylo kilka komplikacji. Zobaczmy, co my tu mamy...%SPEECH_OFF%Anatomista rozklada zwoj pospiesznie spisanych notatek, z ktorych niektore sa pokryte krwia. Czytasz...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Oh. Oh no.",
+					Text = "Och. O nie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -172,14 +172,14 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_22.png",
-					text = _event.m.Asthmatic.getName() + " is no longer Asthmatic"
+					text = _event.m.Asthmatic.getName() + " nie jest juz Astmatykiem"
 				});
 				local trait = this.new("scripts/skills/traits/iron_lungs_trait");
 				_event.m.Asthmatic.getSkills().add(trait);
 				this.List.push({
 					id = 11,
 					icon = trait.getIcon(),
-					text = _event.m.Asthmatic.getName() + " gains Iron Lungs"
+					text = _event.m.Asthmatic.getName() + " zyskuje Zelazne Pluca"
 				});
 				local new_traits = [
 					"scripts/skills/traits/bloodthirsty_trait",
@@ -206,7 +206,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 12,
 							icon = trait.getIcon(),
-							text = _event.m.Asthmatic.getName() + " gains " + trait.getName()
+							text = _event.m.Asthmatic.getName() + " zyskuje " + trait.getName()
 						});
 						num_new_traits = num_new_traits - 1;
 					}
@@ -219,13 +219,13 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You tell %anatomist% no. The anatomist purses his lips and makes some eggheaded argument about the value of medicine and science, and you tell him about the value of a sellsword who doesn\'t have some fool goofing around with his lungs.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Mowisz %anatomist%, ze nie. Anatomista zaciska usta i prawi jakies madralinskie wywody o wartosci medycyny i nauki, a ty przypominasz mu o wartosci najemnika, ktoremu jakis glupiec nie majstruje przy plucach.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Yeah yeah, go cry into your textbooks.",
+					Text = "Taa, taa, idz sobie poplakac w podreczniki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -235,7 +235,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.0, "Was denied a research opportunity");
+				_event.m.Anatomist.worsenMood(1.0, "Odmowiono mu okazji do badan");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

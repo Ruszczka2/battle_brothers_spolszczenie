@@ -5,17 +5,17 @@ this.anatomist_reflects_on_nobles_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.anatomist_reflects_on_nobles";
-		this.m.Title = "During camp...";
+		this.m.Title = "W czasie obozu...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_39.png[/img]{%anatomist% the anatomist is sitting by the campfire. He seems deep in thought. Being a bit of an arsehole, you feel this is the perfect time to stop by and start asking him questions, particularly the most annoying inquiry in all of existence “What are you thinking about?” The anatomist pinches his eyes and lets out a long sigh. He says,%SPEECH_ON%I am ruminating on the nature of this world\'s entities, notably the ones furthest above, and furthest below. Understand, scapegrace, that we have met a number of royals in our travels and the impression they\'ve imparted on me is one of dire disappointment. Wild animals operate on an even table such that that which eats, and that which finds itself sniveling for scrap, or being scrap itself, are delineated by talent, pure in its innateness. Is the axiom of being the best allowing one to rise up to the top axiomatic only to the world of animals? I took it as truth that our rulers, and now benefactors, would reflect these realities. Instead I am met, time and time again, by buffoons. Incompetents whose primary talents are in balancing indulgences, too much and the peasants are angered by extravagances, too little and the laity think their rulers improperly wasting their extraordinarily lucky station in life. My evaluation of my fellow man drops with every day. Dare I say, dare I say, scapegrace...scapegrace, are you listening?%SPEECH_OFF%You\'re spinning a stick in the fire when you hear your byname. Glancing over, you tell him that you\'re not a stranger to these thoughts, but they\'re just that: thoughts. Despite the pressures of your surroundings, you still decide what you think about. If it bothers him so much, he should simply set it aside. He has no control over the world, after all, and such thinking will not broker greater change. It is mere whinging. The anatomist stares at you. He nods.%SPEECH_ON%I think it is well enough that I do not dwell on these things, for their errors were not by my hand made, nor by my hand could they ever be unmade.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_39.png[/img]{%anatomist% anatomista siedzi przy ognisku. Wygląda na głęboko zamyślonego. Będąc trochę dupkiem, uznajesz, że to idealna chwila, by podejść i zacząć go wypytywać, zwłaszcza o najbardziej irytujące pytanie na świecie: \"O czym myślisz?\" Anatomista mruży oczy i wypuszcza długie westchnienie. Mówi,%SPEECH_ON%Rozważam naturę bytów tego świata, zwłaszcza tych najwyżej i najniżej. Zrozum, łobuzie, że w naszych podróżach spotkaliśmy wielu możnych, a wrażenie, jakie na mnie wywarli, jest skrajnie rozczarowujące. Dzikie zwierzęta funkcjonują na równej zasadzie: ten, kto je, i ten, kto żebrze o okruchy lub sam jest okruchem, są rozdzieleni talentem, czystym w swojej wrodzoności. Czy aksjomat, że bycie najlepszym pozwala wznieść się na szczyt, obowiązuje tylko w świecie zwierząt? Uważałem, że nasi władcy, a teraz dobroczyńcy, będą odzwierciedlać te prawdy. Zamiast tego wciąż spotykam błaznów. Niezdolnych, których głównym talentem jest balansowanie przyjemnościami: zbyt wiele i chłopi oburzają się na zbytki, zbyt mało i lud uważa, że władcy marnują swój niezwykle szczęśliwy los. Moja ocena bliźnich spada z każdym dniem. Ośmielę się powiedzieć, ośmielę się powiedzieć, łobuzie... łobuzie, słuchasz mnie?%SPEECH_OFF%Kręcisz patykiem w ogniu, gdy słyszysz swoje przezwisko. Spoglądasz i mówisz, że te myśli nie są ci obce, ale to tylko myśli. Mimo presji otoczenia wciąż decydujesz, o czym myślisz. Jeśli tak go to dręczy, powinien to po prostu odłożyć. W końcu nie ma kontroli nad światem, a takie rozważania nie przyniosą większej zmiany. To zwykłe narzekanie. Anatomista wpatruje się w ciebie. Przytakuje.%SPEECH_ON%Uznaję, że dobrze, iż nie rozpamiętuję tych spraw, bo ich błędów nie uczyniła moja ręka i moja ręka nie może ich odwrócić.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s the spirit.",
+					Text = "O to chodzi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,9 +32,9 @@ this.anatomist_reflects_on_nobles_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Anatomist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve_boost + "[/color] Resolve"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve_boost + "[/color] determinacji"
 				});
-				_event.m.Anatomist.improveMood(1.0, "Better understands the limits of his volition");
+				_event.m.Anatomist.improveMood(1.0, "Lepiej rozumie granice swojej woli");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

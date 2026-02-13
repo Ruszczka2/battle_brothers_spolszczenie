@@ -7,17 +7,17 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_exhumes_hero";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{While in %townname%, you get wind of a local hero who had been recently buried. To you, this is idle news. The man probably wasn\'t even a hero if you compare him to anything above the level of rat-killer, so you pay it little mind. Naturally, the anatomists are of a different sort, and take to the news like flies to a cadaver\'s arse. They\'re propositioning that the company dig up this hero\'s corpse so that they might see by its shape and make what differentiates this \'heroic element\' from the ordinary man. %anatomist% explains.%SPEECH_ON%A hero\'s corpse is not just another corpse. It is invigorated with something else entire, some alluring drive which separates it from the rest of us.%SPEECH_OFF%Having seen your fair share in life, you assure the anatomists that the corpse will look very much like any other. They\'re quite fervent about stealing a look, though, even if it offends the masses.}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Będąc w %townname%, dowiadujesz się o lokalnym bohaterze, który niedawno został pochowany. Dla ciebie to błaha wiadomość. Ten człowiek pewnie nie był nawet bohaterem, jeśli porównać go do czegokolwiek ponad poziom zabójcy szczurów, więc mało cię to obchodzi. Oczywiście, anatomistów to nie zraża i chwytają się wieści jak muchy kadaveru. Proponują, by kompania wykopała zwłoki bohatera, aby mogli zobaczyć po ich kształcie, co odróżnia ten \"bohaterski pierwiastek\" od zwykłego człowieka. %anatomist% wyjaśnia.%SPEECH_ON%Zwłoki bohatera to nie są byle zwłoki. Są nasycone czymś zupełnie innym, jakimś kuszącym impulsem, który odróżnia je od reszty z nas.%SPEECH_OFF%Widziałeś w życiu sporo i zapewniasz anatomistów, że ciało będzie wyglądać jak każde inne. Mimo to są zdeterminowani, by zerknąć, nawet jeśli obrazi to tłum.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, let\'s go dig it up.",
+					Text = "Dobrze, wykopmy je.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -25,7 +25,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No digging up graves today.",
+					Text = "Dziś nie wykopujemy grobów.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,7 +38,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Graver != null)
 				{
 					this.Options.push({
-						Text = "%graver%, what are you doing here?",
+						Text = "%graver%, co ty tu robisz?",
 						function getResult( _event )
 						{
 							return "D";
@@ -53,13 +53,13 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{After much plying, the anatomists break down your defenses and you agree to go fetch the local hero\'s dead, cold, and allegedly heroically shaped body from the grave. There\'s much stealth and sneaking done in the matter as you traipse through the graveyard like a bunch of kids up to absolutely no good, which you might as well be. The hero\'s grave is easy enough to spot, as it is adorned with flowers and other niceties.\n\n%anatomist% kicks the flowers out of the way and shovels off a kid\'s toy and hurls it across the graveyard. He quickly stakes his shovel and the digging starts. It doesn\'t take long, the soil so recently disturbed. A few items lie in the grave, and alongside them is the body itself: just an ordinary man with a pale visage. It is jerked up and out of the grave, the anatomists throwing it end over end like a piece of plywood and as it lands in the grass they chase after it like gremlins, slicing and dicing and digging into it with a disturbing fervor. When they\'re finished, they roll the body back into the grave, its shape more ragged and shredded than before. They complain that you were possibly correct, that a hero\'s body has no unusual aspects whatsoever. But rather than agree with the likes of an uneducated sellsword, they instead conclude that perhaps he wasn\'t a hero at all, and that their search will have to continue. You\'re just glad you didn\'t get caught.}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{Po długich namowach anatomistom udaje się przełamać twoją obronę i zgadzasz się wydobyć z grobu zimne, martwe ciało lokalnego bohatera, rzekomo o bohaterskim kształcie. W tej sprawie jest dużo skradania i cichych kroków, bo przemykacie przez cmentarz jak banda dzieciaków, które robią coś niedobrego, co zresztą jest prawdą. Grób bohatera łatwo znaleźć, bo zdobią go kwiaty i inne ozdoby.\n\n%anatomist% kopie kwiaty na bok, zrzuca łopatą dziecięcą zabawkę i ciska ją przez cmentarz. Szybko wbija łopatę i zaczyna się kopanie. Nie trwa to długo, ziemia jest świeżo ruszona. W grobie leży kilka przedmiotów, a obok nich samo ciało: zwykły człowiek o bladosinym obliczu. Wyciągają je z grobu, anatomici przerzucają je jak deskę i gdy ląduje na trawie, gonią za nim jak chochliki, tnąc, krojąc i rozgrzebując z niepokojącą gorliwością. Gdy kończą, wtaczają ciało z powrotem do grobu, jego kształt jest bardziej poszarpany niż wcześniej. Narzekają, że być może miałeś rację, że ciało bohatera nie ma żadnych niezwykłych cech. Ale zamiast zgodzić się z niewykształconym najemnikiem, stwierdzają, że może wcale nie był bohaterem, i ich poszukiwania muszą trwać dalej. Cieszysz się, że nie zostaliście przyłapani.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Gross. Let\'s get out of here.",
+					Text = "Ohyda. Zmykajmy stąd.",
 					function getResult( _event )
 					{
 						return 0;
@@ -75,8 +75,8 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.anatomist")
 					{
-						bro.improveMood(1.0, "Got to examine a hero\'s cadaver");
-						bro.worsenMood(0.5, "Was misled about the peculiarities of said cadaver");
+						bro.improveMood(1.0, "Mógł zbadać zwłoki bohatera");
+						bro.worsenMood(0.5, "Został wprowadzony w błąd co do osobliwości tych zwłok");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -92,7 +92,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 16,
 							icon = "ui/icons/xp_received.png",
-							text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+150[/color] Experience"
+							text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+150[/color] doświadczenia"
 						});
 					}
 				}
@@ -103,13 +103,13 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_141.png[/img]{After much plying, the anatomists break down your measly defenses and you agree to go fetch the local hero\'s dead, cold body from the grave. There\'s much stealth and sneaking done in the matter as you traipse through the graveyard like a bunch of kids up to absolutely no good, which you might as well be. You get to the graveyard and ask if any of them know the name of the hero. %anatomist% says he thinks it was, ironically, Mortimer.\n\nYou find such a named grave and begin the digging, but by the time you get down to the bottom of it you just find a dead cat, curled up and grey and decrepit with more worms than fur. As the anatomists hold it up, a shout shoots in from the treeline. You turn to see a young boy there crying and pointing. Before you can grab him, he turns and runs off shouting rather descriptive prose about your ill-designed venture. In return come the murmurs of the mob, and their words are lost in a frenzy, but you can still make out the name of the %companyname% and the racket a bevy of pitchforks make when they\'re clattering together. You turn to tell the anatomists to quit the digging only to see they\'re already halfway out of the graveyard and running for their lives. Cursing, you join them in the dishonorable retreat and cut out from town altogether.}",
+			Text = "[img]gfx/ui/events/event_141.png[/img]{Po długich namowach anatomistom udaje się przełamać twoje mizerne opory i zgadzasz się wydobyć z grobu zimne, martwe ciało lokalnego bohatera. W tej sprawie jest dużo skradania i cichych kroków, bo przemykacie przez cmentarz jak banda dzieciaków robiących coś niedobrego, i w istocie tak jest. Docierasz na cmentarz i pytasz, czy ktoś z nich zna imię bohatera. %anatomist% mówi, że ironicznie było to Mortimer.\n\nZnajdujesz taki grób i zaczynasz kopać, ale gdy docierasz na dno, znajdujesz tylko martwego kota, zwiniętego, szarego i zniszczonego, z większą ilością robaków niż futra. Gdy anatomici podnoszą go, z linii drzew dobiega krzyk. Odwracasz się i widzisz młodego chłopca, który płacze i wskazuje. Zanim go złapiesz, odwraca się i ucieka, wrzeszcząc dość obrazowe słowa o waszym źle przemyślanym przedsięwzięciu. W odpowiedzi słychać pomruki tłumu, a słowa giną w zamieszaniu, ale nadal wyłapujesz nazwę %companyname% i brzęk kilku widłów uderzających o siebie. Odwracasz się, by kazać anatomistom przestać kopać, tylko po to, by zobaczyć, że są już w połowie drogi z cmentarza i uciekają, ratując życie. Klnąc, dołączasz do nich w tej haniebnej rejteradzie i opuszczasz miasto.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The shit they get me into...",
+					Text = "W jakie gówno mnie wciągają...",
 					function getResult( _event )
 					{
 						return 0;
@@ -124,7 +124,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "Your relation to " + f.getName() + " has suffered"
+					text = "Twoje relacje z " + f.getName() + " ucierpiały"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -132,7 +132,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.anatomist")
 					{
-						bro.worsenMood(0.75, "Was unable to exhume an unusual corpse");
+						bro.worsenMood(0.75, "Nie zdołał ekshumować niezwykłych zwłok");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -151,13 +151,13 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{%graver% is suddenly at your side. The graveyard familiar stakes a filthy thumb into his chest.%SPEECH_ON%Wanna dig up a corpse? I\'m yer man.%SPEECH_OFF%With his expertise on hand, you decide to go along with the anatomists\' dire plans. You find the graveyard and set across it in search of the hero\'s grave. The whole place is a pauper\'s lot, but you eventually find a marking covered in fresh flowers and other adornments which the men gracelessly stomp and kick away. The groundwork is soon started and with %graver% on hand the body is dug up in incredible speed. The anatomists set to work on the corpse, hunched over it and murmuring to one another, their curled, cloaked forms like buzzards. %graver% meanwhile roots around in the grave itself before coming up with a weapon that had been tucked into a corner. It\'s a nice find, all things considered, and almost makes this series of events worth it. You turn around to see the anatomists kick the body back into the grave, its limbs coming out of shape and flopping stiffly every which way as the hero\'s face comes to a rest, eyes open, staring into the disturbed soil where the worms are out and prodding air. Everyone having gotten what they needed, you soon depart the place before the locals show up and lynch you to the last.}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{%graver% nagle pojawia się u twojego boku. Znajomy cmentarza wbija brudny kciuk w pierś.%SPEECH_ON%Chcesz wykopać trupa? Jestem twoim człowiekiem.%SPEECH_OFF%Z jego pomocą decydujesz się pójść za ponurymi planami anatomistów. Znajdujecie cmentarz i przemierzacie go w poszukiwaniu grobu bohatera. To cała działka dla biedoty, ale w końcu znajdujecie znak pokryty świeżymi kwiatami i innymi ozdobami, które ludzie bezceremonialnie depczą i odrzucają. Prace ruszają, a dzięki %graver% ciało zostaje wykopane w błyskawicznym tempie. Anatomiści zabierają się do pracy nad zwłokami, pochylając się i mamrocząc do siebie, ich zgarbione sylwetki jak sępy. %graver% tymczasem grzebie w samym grobie, po czym znajduje broń schowaną w rogu. To niezły łup, biorąc wszystko pod uwagę, i niemal sprawia, że ta seria wydarzeń była warta zachodu. Odwracasz się i widzisz, jak anatomici kopią ciało z powrotem do grobu, kończyny wyginają się i sztywnie łopoczą na boki, a twarz bohatera spoczywa, oczy otwarte, wpatrzone w rozgrzebaną ziemię, gdzie robaki wychodzą i szukają powietrza. Gdy wszyscy dostali to, czego potrzebowali, szybko opuszczacie to miejsce, zanim miejscowi się zjawiają i zlinczują was do ostatniego.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -173,7 +173,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.anatomist")
 					{
-						bro.improveMood(1.0, "Got to examine a hero\'s unusual cadaver");
+						bro.improveMood(1.0, "Mógł zbadać niezwykłe zwłoki bohatera");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -189,12 +189,12 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 16,
 							icon = "ui/icons/xp_received.png",
-							text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+150[/color] Experience"
+							text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+150[/color] doświadczenia"
 						});
 					}
 				}
 
-				_event.m.Graver.improveMood(1.0, "Put his grave-exhuming skills to use");
+				_event.m.Graver.improveMood(1.0, "Wykorzystał swoje umiejętności ekshumacji");
 
 				if (_event.m.Graver.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -215,7 +215,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.World.Assets.getStash().add(item);
 				this.Characters.push(_event.m.Anatomist.getImagePath());

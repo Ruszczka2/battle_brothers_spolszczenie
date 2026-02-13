@@ -9,16 +9,16 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.oathtakers_lore";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Texts.resize(4);
-		this.m.Texts[0] = "Speak about Oaths.";
-		this.m.Texts[1] = "Speak about Young Anselm.";
-		this.m.Texts[2] = "Speak about those pieces of shite.";
-		this.m.Texts[3] = "We\'ve said everything there is to say.";
+		this.m.Texts[0] = "Opowiedz o Slubach.";
+		this.m.Texts[1] = "Opowiedz o Mlodym Anselmie.";
+		this.m.Texts[2] = "Opowiedz o tych cholernych typach.";
+		this.m.Texts[3] = "Powiedzielismy juz wszystko.";
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{%townname%\'s people are happy to see the %companyname%. It is an unusual reception for a band of mercenaries, but it seems the Oathtaking aspects of your business are held in high esteem with the laity.%SPEECH_ON%It\'s about time someone brought honor and pride back to these lands.%SPEECH_OFF%One peasant says. Women adorn you with flowers and other good graces. As you bring the wagon to a stop, a throng of children come up wanting to touch Young Anselm\'s skull.%SPEECH_ON%Will it give us strength? Or will it make me sick?%SPEECH_OFF%Another kid comes up and elbows him out of the way.%SPEECH_ON%Just have \'im tell us what they do and are already! Oaths, this here skull, and the other day we heard about Oathbringers, so what makes ye so different?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Ludzie z %townname% ciesza sie na widok %companyname%. To niezwykle przyjecie dla bandy najemnikow, ale wyglada na to, ze slubne aspekty waszej dzialalnosci sa wysoko cenione przez lud.%SPEECH_ON%Nareszcie ktos przywrocil honor i dume tym ziemiom.%SPEECH_OFF%Mowi jeden z chlopow. Kobiety przyozdabiaja was kwiatami i innymi przyslugami. Gdy zatrzymujesz woz, gromada dzieci podbiega, chcac dotknac czaszki Mlodego Anselma.%SPEECH_ON%Czy da nam sily? Czy mnie rozchoruje?%SPEECH_OFF%Inny dzieciak podchodzi i odpycha go lokciem.%SPEECH_ON%Niech nam juz powie, co robia i czym sa! Sluby, ta czaszka, a ostatnio slyszelismy o Slubodawcach, wiec czym sie tak roznicie?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -31,7 +31,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B0",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Hand to Anselm\'s head, you explain the Oaths.%SPEECH_ON%Every day that we rise and offer ourselves unto this world, we take an oath. An oath to ourselves, to our loved ones, to our neighbors, even to the earth, and to the animals which adorn it. We take an oath to the world entire.%SPEECH_OFF%A kid bites down on an apple. He says.%SPEECH_ON%If ever\'one is takin\' oaths, what makes you the Oathtakers? Aren\'t we all Oathtakers then?%SPEECH_OFF%You grin and nod.%SPEECH_ON%Precisely. We are all Oathtakers indeed. However, if I may let you in on a little secret...%SPEECH_OFF%The kids gather around, hushing one another. You explain.%SPEECH_ON%When you were born, you did not know all, yes? Same as our oaths. The old gods wish us to explore this world in full, not have all its mysteries merely handed to us. If they were handed to us, would we be where we are today? Or would our contentedness leave us in our first dwellings? We, Oathtakers, are exploring the extent to which the old gods have strengthened us, and also weakened us, and in seeking all our limits we shall become closer with the old gods, and closer with all others.%SPEECH_OFF%One of the kids kicks dirt. He asks if you have any sweet pies in that there wagon.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Kladac dlon na glowie Anselma, wyjasniasz Sluby.%SPEECH_ON%Kazdego dnia, gdy wstajemy i ofiarowujemy sie temu swiatu, skladamy slub. Slub wobec siebie, wobec bliskich, wobec sasiadow, nawet wobec ziemi i zwierzat, ktore ja zdobia. Skladamy slub calemu swiatu.%SPEECH_OFF%Dzieciak gryzie jablko. Mowi.%SPEECH_ON%Jesli wszyscy skladaja sluby, co czyni was Swietobiorcami? Czy wszyscy nie jestesmy Swietobiorcami?%SPEECH_OFF%Usmiechasz sie i kiwasz glowa.%SPEECH_ON%Dokladnie. Wszyscy jestesmy Swietobiorcami. Jednak jesli moge zdradzic wam mala tajemnice...%SPEECH_OFF%Dzieci zbieraja sie wokol, uciszajac sie nawzajem. Wyjasniasz.%SPEECH_ON%Kiedy sie urodziliscie, nie wiedzieliscie wszystkiego, prawda? Tak samo jest z naszymi slubami. Starzy bogowie chca, bysmy poznali ten swiat w calosci, a nie dostali jego tajemnice na tacy. Gdyby je nam podano, czy bylibysmy tu, gdzie jestesmy? Czy nasza beztroska zostawilaby nas w pierwszych siedzibach? My, Swietobiorcy, badamy, jak bardzo starzy bogowie nas wzmocnili, ale i oslabili, a szukajac wszystkich naszych granic, zblizymy sie do starych bogow i do wszystkich innych.%SPEECH_OFF%Jedno z dzieci kopie ziemie. Pyta, czy masz w wozie jakies slodkie placki.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -45,7 +45,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B1",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{You tap Young Anselm\'s skull.%SPEECH_ON%Young Anselm was the First Oathtaker, the beginning of the Oathtakers. He was the first to realize that the true nature of man required sacrifice. He believed, and rightly so, that when man first wandered the earth, he did so in a state of suffering, and it was in that being that he made his greatest advances. What we have now is so very far away from how things were. Things are simply too good now.%SPEECH_OFF%One of the kids scratches off a black scab and flicks it onto the face of another. The other kid wipes it away and pops a pustule and rubs the pus all over the other kid. While they quarrel, you continue on.%SPEECH_ON%Young Anselm realized this world needed to return to a life of sacrifice, to give up elements of what you enjoy, to sharpen oneself against the grindstone of suffering. Naturally, this made Young Anselm many enemies.%SPEECH_OFF%One of the kids looks up and asks how it was that Young Anselm died. You smile and say that is a story for another time.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Stukasz w czaszke Mlodego Anselma.%SPEECH_ON%Mlody Anselm byl Pierwszym Swietobiorca, poczatkiem Swietobiorcow. Jako pierwszy zrozumial, ze prawdziwa natura czlowieka wymaga poswiecenia. Wierzyl, i slusznie, ze gdy czlowiek po raz pierwszy wedrowal po ziemi, czynil to w stanie cierpienia, i to w nim dokonywal najwiekszych postepow. To, co mamy teraz, jest bardzo dalekie od tego, jak bylo. Teraz jest po prostu za dobrze.%SPEECH_OFF%Jedno z dzieci drapie czarna strupke i strzepuje ja na twarz innego. Drugie dziecko wyciera to, wyciska kroste i rozsmarowuje rope po tamtym. Gdy sie kloca, ty kontynuujesz.%SPEECH_ON%Mlody Anselm zrozumial, ze ten swiat musi wrocic do zycia poswiecenia, zrezygnowac z czesci tego, co lubimy, zahartowac sie o kamien cierpienia. Naturalnie, to uczynilo Mlodego Anselma wrogiem wielu.%SPEECH_OFF%Jedno z dzieci podnosi wzrok i pyta, jak zmarl Mlody Anselm. Usmiechasz sie i mowisz, ze to opowiesc na inny raz.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -59,7 +59,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B2",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{One of the kids pipes up.%SPEECH_ON%We had a group of men like you in town the other day. Said they were the \'Oathbringers.\' Are they like yer brothers or somethin\'?%SPEECH_OFF%You start to answer when %oathtaker% butts in.%SPEECH_ON%The Oathbringers are blasphemers! They are heathens, and not keepers of oaths, but breakers of them! They have stolen Young Anselm\'s jawbone, and we vow slay every Oathbringer to have it returned.%SPEECH_OFF%The boy says that the Oathbringers said they were wanting to get the skull from you, because you, the Oathtakers, were the true heathens. %oathtaker%\'s anger reaches a boiling point.%SPEECH_ON%The Oathbringers say a lot of shite! They are peddlers of lies, nonsense and hysteria for a storefront, and cruel misapprehensions their goods!%SPEECH_OFF%You stare at the Oathtaker for a while, then put a hand on his shoulder and tell him maybe he should go count inventory to cool down for a bit.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Jedno z dzieci sie odzywa.%SPEECH_ON%Mielismy w miescie grupe ludzi takich jak wy. Mowili, ze sa \'Slubodawcami.\' Sa jak wasi bracia czy co?%SPEECH_OFF%Zaczynasz odpowiadac, gdy %oathtaker% sie wtraca.%SPEECH_ON%Slubodawcy to bluzniercy! To poganie, nie straznicy slubow, lecz ich lamacze! Ukradli szczeke Mlodego Anselma i slubujemy zabic kazdego Slubodawce, by ja odzyskac.%SPEECH_OFF%Chlopiec mowi, ze Slubodawcy chcieli zabrac wam czaszke, bo to wy, Swietobiorcy, jestescie prawdziwymi poganami. Gniew %oathtaker% siega zenitu.%SPEECH_ON%Slubodawcy gadaja mnostwo bzdur! To handlarze klamstwami, bredniami i histeria zamiast towarem, a ich dobrem sa okrutne urojenia!%SPEECH_OFF%Patrzysz na Swietobiorce przez chwile, potem kladziesz mu dlon na ramieniu i mowisz, ze moze powinien pojsc policzyc zapasy, zeby troche ostygnac.}",
 			Image = "",
 			List = [],
 			Characters = [],

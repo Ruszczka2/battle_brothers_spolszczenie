@@ -6,17 +6,17 @@ this.oathtaker_mistaken_identity_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.oathtaker_mistaken_identity";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%townImage%{A boy suddenly runs up to the company. He practically gloms onto %oathtaker%\'s leg and the Oathtaker\'s countenance takes on an appearance of confusion. He asks the runt if he is lost. The boy springs back.%SPEECH_ON%Lost? No, I\'m not lost! I thought I\'d never see your sort again, the vaunted Oathbringers!%SPEECH_OFF%%oathtaker%\'s eye twitches, his hands tightens around the handle of his weapon. You\'re not sure when his screaming started and when the boy ended up on the ground with a blackened eye, but the righteous rage cracked from the Oathtaker like a bolt of holy fury, and you watch as he pushes the boy into the mud screaming and frothing that he is an Oathtaker, not some horrible, ugly, and inglorious Oathbringer, and he smooshes the boy\'s face into the grass and drags him into a pile of horse dung and sleds him across the road on the rolls of ordure until the boy cries out and runs for his life. Finished, %oathtaker% straightens up, affixing his attire, regirding his disheveled weaponry.%SPEECH_ON%Let us leave this hellhole of filthy degenerates, captain.%SPEECH_OFF%As he struts off, you turn around to see the townspeople staring at you in horror.}",
+			Text = "%townImage%{Chlopak nagle podbiega do kompanii. Praktycznie przyczepia sie do nogi %oathtaker% i Swietobiorca przybiera wyraz zaklopotania. Pyta malca, czy sie zgubil. Chlopak odskakuje.%SPEECH_ON%Zgubil? Nie, nie zgubilem sie! Myslalem, ze juz nigdy nie zobacze waszego rodzaju, slawnych Slubodawcow!%SPEECH_OFF%Oko %oathtaker% drga, jego dlonie zaciskaja sie na rekojesci broni. Nie wiesz, kiedy zaczal krzyczec i kiedy chlopak wyladowal na ziemi z podbitym okiem, ale sprawiedliwy gniew pekl ze Swietobiorcy jak blysk swietej furii i patrzysz, jak wpycha chlopaka w bloto, krzyczac i pieniac sie, ze jest Swietobiorca, a nie jakims obrzydliwym, brzydkim i nieslawnym Slubodawca, po czym wpycha mu twarz w trawe i wlecze go w sterte konskiego gnoju oraz przeciaga po drodze na walach nieczystosci, az chlopak krzyczy i ucieka, ratujac zycie. Skonczywszy, %oathtaker% prostuje sie, poprawia stroj i porzadkuje rozczochrana bron.%SPEECH_ON%Opuscmy to pieklo brudnych degeneratow, kapitanie.%SPEECH_OFF%Gdy odmaszerowuje, odwracasz sie i widzisz mieszkancow patrzacych na ciebie z przerazeniem.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s pretty much what it looks like.",
+					Text = "To mniej wiecej wyglada tak, jak wyglada.",
 					function getResult( _event )
 					{
 						return 0;
@@ -29,8 +29,8 @@ this.oathtaker_mistaken_identity_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Oathtaker.getImagePath());
 				this.World.Assets.addMoralReputation(-1);
 				local f = _event.m.Town.getFactionOfType(this.Const.FactionType.Settlement);
-				f.addPlayerRelation(this.Const.World.Assets.RelationMinorOffense, "One of your men beat up a kid");
-				_event.m.Oathtaker.worsenMood(2.0, "Was mistaken for an Oathbringer");
+				f.addPlayerRelation(this.Const.World.Assets.RelationMinorOffense, "Jeden z twoich ludzi pobil dziecko");
+				_event.m.Oathtaker.worsenMood(2.0, "Wzieto go za Slubodawce");
 
 				if (_event.m.Oathtaker.getMoodState() < this.Const.MoodState.Neutral)
 				{

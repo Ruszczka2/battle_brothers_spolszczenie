@@ -3,18 +3,18 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.abandoned_village_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy sie zblizasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{A recently destroyed village... with no bodies. Only a breeze swirls through, kicking up ash and hissing it through the ruins. But there survives one element: an enormous stone statue masterfully sculpted in the image of a man. Or at least you think it is a man. Its face has been removed with the sort of accuracy that suggests careful intention and not mere vandalism.\n\nSuddenly, mud-squelching footsteps approach from all corners. Bulbous silhouettes limp into the light: slouching hunchbacks formed of most dishonest stitching, torsos haphazardly sewn together with organs vaguely gated behind strands of flesh, additional arms attached with hands wiggling wildly from all sides, and atop the puttied horrors groan multiple heads like some fleshen totem that knows itself, the maws slackened open and gargling at the realized horrors, eyes aplenty and eyes agog, staring at you and the ground and at each other. Your men gasp and arm themselves. The monsters growl and start picking tools and weapons off the ground. One monster reaches down and picks up two cleavers. It trundles forward and faces smeared across its skin turn their misshapen gazes upon you and their mouths open and yell, their shrieks sucking in and out from one mouth to the next, air howling through their internal chambers as the faces take turns breathing so that another may scream.\n\nYou\'ve still a chance to run - it is unlikely that these things can keep pace with any man, but what would you be leaving behind, aside from your dignity and pride?}",
+			Text = "[img]gfx/ui/events/event_178.png[/img]{Niedawno zniszczona wioska... bez cial. Tylko wiatr wiruje, unoszac popiol i syczac nim wsrod ruin. Ale zostal jeden element: ogromny kamienny posag, mistrzowsko wyrzezony na podobizne mezczyzny. A przynajmniej tak ci sie wydaje. Jego twarz zostala usunieta z dokladnoscia, ktora sugeruje rozmysl, a nie zwykly wandalizm.\n\nNagle z kazdej strony zblizaja sie mlaskajace w blocie kroki. Bulwiaste sylwetki kuleja w swiatlo: przygarbione garbusy zlozone z najbardziej nieuczciwych szwow, torsy zszyte na chybil trafil, z organami ledwie zakratowanymi za pasmami miesa, dodatkowe ramiona z doczepionymi dlonmi, ktore machaja na wszystkie strony, a na szczycie tych zapastowanych potwornosci jecza liczne glowy niczym miesny totem, ktory zna samego siebie, pyski rozwarte i bulgoczace w obliczu ujawnionej grozy, oczu bez liku i wytrzeszczonych, patrzacych na ciebie i na ziemie, i na siebie nawzajem. Twoi ludzie sapna i siegaja po bron. Potwory warcza i zaczynaja zbierac z ziemi narzedzia oraz bron. Jeden potwor schyla sie i podnosi dwa tasaki. Czlapie naprzod, a twarze rozmazane na jego skorze kieruja swoje znieksztalcone spojrzenia na ciebie i otwieraja usta do krzyku, a wrzaski wsysaja sie i wylatuja z jednego pyska do drugiego, powietrze wyje w ich wewnetrznych komorach, gdy twarze zmieniaja sie oddechem, by kolejna mogla krzyczec.\n\nWciaz masz szanse uciec - raczej te rzeczy nie dotrzymaja kroku zadnemu czlowiekowi, ale co zostawisz za soba, poza godnoscia i duma?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "To battle!",
+					Text = "Do boju!",
 					function getResult( _event )
 					{
 						local location = this.World.State.getLastLocation();
@@ -32,7 +32,7 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let\'s get out of here!",
+					Text = "Wynosimy sie stad!",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -49,7 +49,7 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 			{
 				if (this.World.Statistics.getFlags().get("AbandonedVillageFightDefeated"))
 				{
-					this.Text = "[img]gfx/ui/events/event_178.png[/img]{As expected, the Flesh Golems are still meandering around the town\'s faceless statue. Judging by the range of freshness and decay, it seems they have had some new members added to the roster, while the older ones are falling apart. But they are all one-minded when their gooey eyes clap down on you and the company. You draw your sword and order in the formations. If this town has a secret, you are going to find it!}";
+					this.Text = "[img]gfx/ui/events/event_178.png[/img]{Jak mozna sie bylo spodziewac, Golemy z Ciala wciaz kreca sie wokol bezimiennego posagu wiesni. Sadzac po stopniu swiezosci i rozkladu, wyglada na to, ze przybyli nowi, a starsi zaczynaja sie rozpadac. Ale wszyscy sa jednomyslni, gdy ich lepkie oczy padaja na ciebie i kompanie. Dobytasz miecza i wydajesz rozkaz ustawienia. Jesli to miasto skrywa sekret, zamierzasz go znalezc!}";
 					this.Options = [
 						{
 							Text = "To battle!",
@@ -74,13 +74,13 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Victory",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{You stand over one of the...things you just fought. %randombrother% curls a blade underneath the goop and holds it up. A great mop of flesh elongates in stitched segments, arms spindling out like they were the branches of a tree, fat chunks sliding down the appendages like sap. The rest are incongruencies left and right: here a foot hanging from a torso like a doorhandle, there a face spreading apart as if melting into a river of sinews and ligaments. When your sellsword lets it slide off his blade, the fleshbag slops into the ground, the bones rattling like a collapsing rope ladder. %randombrother2% walks up with a quiver of arrows and a small book.%SPEECH_ON%Got this quiver of, uh, interesting arrows. Looks like some sort of reservoir in the bottom of it is for dipping the arrowheads. The old gods know what that material is. I also found this here book tethered to one of their heads. Seems important.%SPEECH_OFF%Opening the book, you find lists of villages with lines crossing them out one by one, and beside each is a simple number. Fifty. Sixty. Seventy. At the back of the book you find a map to another location, what appears to be some sort of estate.}",
+			Text = "[img]gfx/ui/events/event_178.png[/img]{Stoisz nad jedna z...rzeczy, z ktorymi wlasnie walczyles. %randombrother% podsuwa ostrze pod gluty i unosi je. Wielka bryla miesa wydluza sie w zszytych segmentach, ramiona rozchodza sie jak galezie drzewa, a tluste kawalki zsuwaja sie po konczynach jak zywica. Reszta to same niezgodnosci: tu stopa zwisajaca z tulowia jak klamka, tam twarz rozplywajaca sie, jakby topniala w rzeke sciegien i wiazadel. Gdy twoj najemnik pozwala temu zsuwac sie z ostrza, worek miesa pluska o ziemie, a kosci grzechocza jak zawalajaca sie drabina linowa. %randombrother2% podchodzi z kolczanem strzal i mala ksiazka.%SPEECH_ON%Zdobilem ten kolczan z, eee, ciekawymi strzalami. Wyglada na to, ze na dole jest jakis zbiornik do maczania grotow. Starzy bogowie wiedza, co to za material. Znalazlem tez ta ksiazke, przytwierdzona do jednej z ich glow. Wyglada na wazna.%SPEECH_OFF%Otwierasz ksiazke i znajdujesz listy wiosek, jedna po drugiej przekreslane, a obok kazdej prosta liczba. Piecdziesiat. Szesdziesiat. Siedemdziesiat. Na koncu ksiazki jest mapa do innego miejsca, wyglada na jakas posiadlosc.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Hurry it up, too.",
+					Text = "Pospieszajcie sie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -90,14 +90,14 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 				this.World.Assets.getStash().makeEmptySlots(1);
 				local item = this.new("scripts/items/ammo/legendary/quiver_of_coated_arrows");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				local locations = this.World.EntityManager.getLocations();
 
@@ -123,13 +123,13 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Defeat",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{The fight is being lost. You know these monstrosities must, in part, be made of those who have fallen before them already. Not wishing to suffer such a fate, you order a retreat. The Flesh Golems are not quick enough to give chase and lumberingly peel off the rearguard and disappear.\n\nYou might still yet return to this place, for why are those things even here at all?}",
+			Text = "[img]gfx/ui/events/event_178.png[/img]{Walke da sie przegrac. Wiesz, ze te potwornosci musza byc po czesci zrobione z tych, ktorzy polegli przed nimi. Nie chcac podzielic takiego losu, rozkazujesz odwrot. Golemy z Ciala nie sa dosc szybkie, by gonic, wiec ciezko odrywaja sie od tylnej oslonny i znikaja.\n\nWciaz mozesz wrocic do tego miejsca, bo czemu w ogole te rzeczy tu sa?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll be back.",
+					Text = "Wrocimy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -139,7 +139,7 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 				this.World.Statistics.getFlags().set("AbandonedVillageFightDefeated", true);
 			}
 

@@ -6,17 +6,17 @@ this.anatomist_reflects_on_webknechts_event <- this.inherit("scripts/events/even
 	function create()
 	{
 		this.m.ID = "event.anatomist_reflects_on_webknechts";
-		this.m.Title = "During camp...";
+		this.m.Title = "W czasie obozu...";
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% is holding out his arm, watching a long-legged spider trundling across his flesh. As the creature reaches the ends of its newfound earth, the anatomist turns his arm, suggesting the spider continue on another way. He does this for a time until putting his fingers toward the ground and the spider shuffles off entirely, perhaps not ever once aware it was on a living being. The anatomist writes a few pages down in his notes.%SPEECH_ON%The other day I watched a spider jump twenty-times its body length to snatch a fly. And this spider I\'ve let go would, upon seeing its prey, speed across the ground like a hunting dog. It seems that the old gods have taken pity on us, scapegrace, for neither of these creatures can be found in their larger, webknecht forms.%SPEECH_OFF%While being tackled and ripped apart would be quite terrible, you tell him that being wrapped in a cocoon before having your blood sucked out by fangs is undoubtedly worse. The anatomist raises a finger.%SPEECH_ON%A common misconception, scapegrace, for the webknecht actually prefers to feed long after you are deceased. We believe its toxins are designed to target the belly, opening it up and using its fluids to melt you from the inside out. This is presumably why they hang their prey upside down, so the toxins can slosh over the organs, turning you into a sort of sack of fluids. The consuming phase of the process is merely one of digesting whatever is left. The only time they don\'t eat you is if they\'re placing their brood inside you as the spiderlings will need sustenance upon hatching.%SPEECH_OFF%That still sounds infinitely worse than being shanked by a hunting spider, but either way you regret having the conversation and pursue it no further. Unfortunately, %otherbro% is nearby and has heard all too much...}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% wyciąga ramię, obserwując długonogiego pająka, który człapie po jego skórze. Gdy stworzenie dociera do końca swojej nowej ziemi, anatomista obraca rękę, sugerując pająkowi dalszą drogę. Robi tak przez jakiś czas, aż opuszcza palce ku ziemi i pająk całkiem schodzi, być może ani razu nie uświadomiwszy sobie, że chodził po żywym. Anatomista zapisuje kilka stron w notatkach.%SPEECH_ON%Ostatnio widziałem pająka, który skoczył na dwudziestokrotność długości swojego ciała, by porwać muchę. A ten, którego wypuściłem, na widok zdobyczy pędziłby po ziemi jak pies myśliwski. Wygląda na to, że starzy bogowie ulitowali się nad nami, łobuzie, bo żadnego z tych stworzeń nie spotyka się w ich większych, sieciopajęczych formach.%SPEECH_OFF%Choć bycie powalonym i rozerwanym byłoby straszne, mówisz mu, że bycie owiniętym w kokon, zanim kły wyssą z ciebie krew, jest bez wątpienia gorsze. Anatomista unosi palec.%SPEECH_ON%To powszechne nieporozumienie, łobuzie, bo sieciopająk woli żerować długo po twojej śmierci. Wierzymy, że jego toksyny są zaprojektowane, by atakować brzuch, rozcinać go i używać jego płynów do topienia cię od środka. To zapewne dlatego wieszają ofiary głową w dół, by toksyny mogły oblać organy, zamieniając cię w coś w rodzaju worka płynów. Faza zjadania to tylko trawienie tego, co zostało. Jedyny raz, gdy cię nie jedzą, to wtedy, gdy składają w tobie lęg, bo pajączki będą potrzebowały pożywienia po wykluciu.%SPEECH_OFF%To wciąż brzmi nieskończenie gorzej niż bycie dźgniętym przez łowczego pająka, ale tak czy inaczej żałujesz tej rozmowy i nie ciągniesz jej dalej. Niestety, %otherbro% jest w pobliżu i słyszał zbyt wiele...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Stop spreading the heebiejeebies, dammit.",
+					Text = "Przestań straszyć, do diabła.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,9 +33,9 @@ this.anatomist_reflects_on_webknechts_event <- this.inherit("scripts/events/even
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.OtherBro.getName() + " now fears beasts"
+					text = _event.m.OtherBro.getName() + " teraz boi się bestii"
 				});
-				_event.m.OtherBro.worsenMood(1.0, "Terrified of spiders");
+				_event.m.OtherBro.worsenMood(1.0, "Przerażony pająkami");
 
 				if (_event.m.OtherBro.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -46,7 +46,7 @@ this.anatomist_reflects_on_webknechts_event <- this.inherit("scripts/events/even
 					});
 				}
 
-				_event.m.Anatomist.improveMood(1.0, "Fascinated with spiders");
+				_event.m.Anatomist.improveMood(1.0, "Zafascynowany pająkami");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

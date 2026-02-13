@@ -5,16 +5,16 @@ this.anatomist_joins_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_joins";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{A man in drab, grey garb approaches. In place of weapons and armor, he has scrolls and papers with him, as well as a bandolier of vials and pouches brimming with strange flesh and fur. He hails you.%SPEECH_ON%Ah, the %companyname%. I have been looking for men of such...qualities. You see, I am an anatomist and-%SPEECH_OFF%You stop him right there. You\'ve little time for men who obsess over strange fascinations. Either he wants to join or not, and you tell him that tersely. | You come across a man who is kneeling over a dead dog. He probes the snout with a long stick and nods.%SPEECH_ON%As you can tell, I am a famed anatomist.%SPEECH_OFF%Turning his head up like some creepy puppet, he claims that the %companyname% is slowly becoming renowned for its studious work - and that he wishes to join. | You find a coat, pants, and a pair of boots on a rock. Beside it are some bandoliers and reams of paper and bizarre drawings. Looking out, you see a pond and a man frolicking in it. He jolts at the sight of you and points a finger.%SPEECH_ON%Don\'t touch that! Hey you, don\'t touch anything!%SPEECH_OFF%He gets up out of the water, his legs awkwardly splish-splashing through the surface. As he rises up out of the pond you see that, thankfully, he\'s absurdly hairy in parts, the water turning his hairy crotch into some grey felt loincloth. You draw your sword and the man comes to a stop.%SPEECH_ON%Hold that steel, traveler. I see now that you are of an inquisitive mind and so am I! And, my dear steel-driven traveler, I am in dire need of need of equals. What say you that I join?%SPEECH_OFF%You try to keep your eyes above the neck, but a stiff wind blows through and you can hear water flying off his crotch like a shaking wet dog. The glance down which follows is quite unfortunate. | You come across a man sitting on a rock. Across from him is a slab of stone layered with dissected animals. Puppies, kittens, what might be a frog, some sort of rodent, and...a duck. He jumps to his feet.%SPEECH_ON%Behold, traveler, the result of my studies. Yet I am still short on so many of my studies. I can see that you are of an inquisitive mind albeit no doubt a brute. I would like to offer my services to you, though, I must warn, the advances I have made with these are for me and me alone.%SPEECH_OFF%He protectively holds an arm ahead of the dissected animals as if you\'d have any interest with them.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Podchodzi mężczyzna w wyblakłym, szarym odzieniu. Zamiast broni i zbroi ma ze sobą zwoje i papiery, a także bandolier fiolek i sakiewek pełnych dziwnego mięsa i futra. Pozdrawia cię.%SPEECH_ON%Ach, %companyname%. Szukałem ludzi o takich... cechach. Widzisz, jestem anatomistą i-%SPEECH_OFF%Zatrzymujesz go w pół słowa. Nie masz czasu na ludzi, którzy obsesyjnie zajmują się dziwactwami. Albo chce dołączyć, albo nie, i mówisz mu to krótko. | Napotykasz mężczyznę klęczącego nad martwym psem. Bada pysk długim patykiem i przytakuje.%SPEECH_ON%Jak widzisz, jestem sławnym anatomistą.%SPEECH_OFF%Podnosi głowę jak jakiś upiorny marionetka i twierdzi, że %companyname% powoli zyskuje sławę dzięki studiom - i że chce dołączyć. | Znajdujesz na skale płaszcz, spodnie i parę butów. Obok leżą bandoliery, stosy papieru i osobliwe rysunki. Spoglądasz dalej i widzisz staw, a w nim pluskającego się mężczyznę. Drga na twój widok i wskazuje palcem.%SPEECH_ON%Nie dotykaj tego! Hej, ty, niczego nie dotykaj!%SPEECH_OFF%Wychodzi z wody, niezdarnie chlapiąc nogami po powierzchni. Gdy się podnosi, widzisz, że na szczęście jest absurdalnie owłosiony, a woda zamienia jego futrzaste krocze w szary, filcowy przepaski. Dobywasz miecza, a mężczyzna staje w miejscu.%SPEECH_ON%Odłóż stal, wędrowcze. Widzę teraz, że masz dociekliwy umysł, tak jak ja! A ja, mój drogi wędrowcze ze stalą, bardzo potrzebuję równych sobie. Co powiesz na to, żebym dołączył?%SPEECH_OFF%Próbujesz trzymać wzrok powyżej szyi, ale zrywa się silny wiatr i słyszysz, jak woda strząsa się z jego krocza jak z mokrego psa. Spojrzenie w dół, które potem następuje, jest dość niefortunne. | Napotykasz mężczyznę siedzącego na skale. Naprzeciw niego leży płyta kamienia przykryta rozciętymi zwierzętami. Szczenięta, kocięta, chyba żaba, jakiś gryzoń i... kaczka. Mężczyzna zrywa się na nogi.%SPEECH_ON%Spójrz, wędrowcze, na efekt moich badań. Wciąż jednak brakuje mi wielu obserwacji. Widzę, że masz dociekliwy umysł, choć bez wątpienia jesteś brutusem. Chciałbym zaoferować ci swoje usługi, ale muszę ostrzec: postępy, jakie tu poczyniłem, są dla mnie i tylko dla mnie.%SPEECH_OFF%Osłania ramieniem rozcięte zwierzęta, jakbyś miał się nimi interesować.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Yes, we\'ll take you.",
+					Text = "Tak, przyjmiemy cię.",
 					function getResult( _event )
 					{
 						return "B";
@@ -22,7 +22,7 @@ this.anatomist_joins_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We don\'t need your help.",
+					Text = "Nie potrzebujemy twojej pomocy.",
 					function getResult( _event )
 					{
 						return "C";
@@ -43,12 +43,12 @@ this.anatomist_joins_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{The man briefly bows.%SPEECH_ON%Ahh, it is good to be with my intellectual equals, though I shall remind them that there are some more equal than others, and if they wish to read my works they may submit a request to do so.%SPEECH_OFF%Yeah. Sure.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Mężczyzna krótko się kłania.%SPEECH_ON%Ach, dobrze jest być wśród moich intelektualnych równych, choć przypomnę, że niektórzy są bardziej równi niż inni, i jeśli pragną czytać moje prace, mogą złożyć stosowną prośbę.%SPEECH_OFF%Tak. Jasne.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Just get in the wagon.",
+					Text = "Po prostu wsiadaj na wóz.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -68,12 +68,12 @@ this.anatomist_joins_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{The man nods.%SPEECH_ON%Fair enough. I know that when I came across my intellectual superior, I grew jealous and refused any help he provided. Well, good sir, may you travel well and catch up to me and my discoveries!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Mężczyzna przytakuje.%SPEECH_ON%W porządku. Wiem, że gdy spotkałem swego intelektualnego przełożonego, poczułem zazdrość i odrzuciłem wszelką pomoc, jaką oferował. Cóż, dobry panie, podróżuj bezpiecznie i dogoń mnie oraz moje odkrycia!%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Yeah, fark you, too.",
+					Text = "Taa, ty też spadaj.",
 					function getResult( _event )
 					{
 						return 0;

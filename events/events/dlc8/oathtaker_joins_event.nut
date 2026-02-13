@@ -5,16 +5,16 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.oathtaker_joins";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{A man in armor approaches the company. He seems most usual, until he opens his mouth.%SPEECH_ON%Hear ye, hear ye, I am a proud Oathtaker! Now, I see you also have what appears to be a high regard for doing what is right. That makes me believe you, too, are Oathtakers. So! I have but one question for you: that skull hanging from a necklace, what is his name? If it is the one I seek, then ye shall have my hand.%SPEECH_OFF% | Men in armor are not a rare sight on the roads these days, but this man has a certain level of pomp and theatrics that draws the eye, as does the fact he confidently strides right over to you.%SPEECH_ON%I\'d been carousing at a local pub when I got word that a band of Oathtakers had been passing through these lands. Now, either that is some graveyard skullduggery hanging from yer neck, or that is...well, you tell me. Give me the right name of that skull and I\'ll join you right here and now.%SPEECH_OFF% | You come across a man in armor. He stands in the road like he either wants to commit suicide by sellsword, or he\'s looking to risk his neck for a coin. As you draw near, he waves you down.%SPEECH_ON%Ah, the men I am looking for. Are you with the Oathtakers? I wish to join you on the path. The path of...%SPEECH_OFF%He pauses, gesturing toward the company\'s resident skull. Oh, he means... | A man in armor hurries out onto the road. You put a hand to your sword, but he simply bows as though you were an executioner.%SPEECH_ON%I prayed to the old gods to harden my virtues and keep me on the path. Surely, stranger, surely that is his skull there hanging from your neck? If it is, I shall join you and the oaths you\'re on this very minute. Please, tell me, is that the jawless skull of our dear...our...%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Mezczyzna w zbroi zbliza sie do kompani. Wyglada calkiem zwyczajnie, az do chwili gdy otwiera usta.%SPEECH_ON%Sluchajcie, sluchajcie, jestem dumnym Swietobiorca! Widze, ze i wy bardzo cenicie czynienie tego, co sluszne. To sprawia, ze wierze, iz wy tez jestescie Swietobiorcami. Zatem! Mam do was tylko jedno pytanie: ta czaszka wiszaca na naszyjniku, jak ma na imie? Jesli to ta, ktorej szukam, macie moja reke.%SPEECH_OFF% | Ludzie w zbrojach nie sa na drogach niczym rzadkim, ale ten mezczyzna ma w sobie pewna pompe i teatralnosc, ktora przyciaga wzrok, podobnie jak to, ze pewnie kroczy prosto do ciebie.%SPEECH_ON%Hulalem w lokalnej gospodzie, gdy dotarla do mnie wiec, ze przez te ziemie przeszla banda Swietobiorcow. Teraz albo to cmentarny przekret wiszacy u twej szyi, albo to... no wlasnie, sam powiedz. Podaj mi wlasciwe imie tej czaszki, a dolacze do was tu i teraz.%SPEECH_OFF% | Spotykasz mezczyzne w zbroi. Stoi na drodze tak, jakby chcial zginac z reki najemnika albo ryzykowal kark dla monety. Gdy sie zblizasz, macha do ciebie.%SPEECH_ON%Ach, ludzie, ktorych szukam. Czy jestescie ze Swietobiorcami? Chce dolaczyc do was na sciezce. Sciezce...%SPEECH_OFF%Zawiesza glos, wskazujac na kompanijna czaszke. Aha, chodzi mu o... | Mezczyzna w zbroi wybiega na droge. Kladziesz reke na mieczu, ale on po prostu sie klania, jakbys byl katem.%SPEECH_ON%Modlilem sie do starych bogow, by utwardzili moje cnoty i utrzymali mnie na sciezce. Czyz, nieznajomy, czyz to nie jego czaszka wiszaca u twej szyi? Jesli tak, dolacze do was i do slubow, na ktorych jestescie, w tej chwili. Prosze, powiedz mi, czy to bezzuchwa czaszka naszego drogiego...naszego...%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Young Anselm.",
+					Text = "Mlody Anselm.",
 					function getResult( _event )
 					{
 						return "B";
@@ -57,12 +57,12 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{The man drops to a knee, his head down.%SPEECH_ON%Truly, Young Anselm has guided me here! I shall join you on the path, fellow Oathtakers!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Mezczyzna pada na kolano, z opuszczona glowa.%SPEECH_ON%Zaprawde, Mlody Anselm mnie tu poprowadzil! Dolacze do was na sciezce, bracia Swietobiorcy!%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome aboard.",
+					Text = "Witaj na pokladzie.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -82,12 +82,12 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{The man sighs.%SPEECH_ON%Ah, I see now. There are far too many Hugos in this world, it does not surprise me that yet another has appeared in such a state as that dreary skull, though I know not why you carry it around like so.%SPEECH_OFF% | %SPEECH_ON%Hugo.%SPEECH_OFF%The man says.%SPEECH_ON%Another farkin\' Hugo, huh? How many are out here? Every other man I run into is a Hugo.%SPEECH_OFF%He turns and walks off, mumbling angrily about the commoners and their unoriginal naming schemes. | The man sighs.%SPEECH_ON%Hugo, huh? Alright. Whelp, see you later.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Mezczyzna wzdycha.%SPEECH_ON%A, rozumiem. Jest na tym swiecie stanowczo za duzo Hugow, nie dziwi mnie, ze pojawil sie kolejny w stanie tak ponurej czaszki, choc nie wiem, czemu nosicie ja przy sobie.%SPEECH_OFF% | %SPEECH_ON%Hugo.%SPEECH_OFF%Mowi mezczyzna.%SPEECH_ON%Kolejny cholerny Hugo, co? Ilu ich tu jest? Co drugi facet, na ktorego trafiam, to Hugo.%SPEECH_OFF%Odwraca sie i odchodzi, mruczac ze zloscia o pospolitych ludziach i ich nieoryginalnych imionach. | Mezczyzna wzdycha.%SPEECH_ON%Hugo, co? Dobra. No to do zobaczenia.%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Good luck out there.",
+					Text = "Powodzenia w drodze.",
 					function getResult( _event )
 					{
 						return 0;

@@ -6,17 +6,17 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 	function create()
 	{
 		this.m.ID = "event.gladiator_origin_vs_anatomist";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{You see %anatomist% and %gladiator% sitting together near the campfire. The anatomist and gladiator seem ill-suited for conversation, and in little time does the latter rise to his feet with great fury.%SPEECH_ON%Enhancements? You think I take enhancements? You foolish, stick-shaped, daisy-pulling, corpse-chasing fool! My muscles are made out of sweat and blood! No pain, no gain!%SPEECH_OFF%The gladiator kicks a pile of ash onto the anatomist and storms off. %anatomist% cleans himself off, then takes out a ream of notes. He remarks that the \'subject\' is experiencing flashes of hot anger. You ask the man if he\'s secretly doing something to the gladiator. %anatomist% snaps his notebook closed.%SPEECH_ON%Captain! I would never!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{Widzisz %anatomist% i %gladiator% siedzacych razem przy ognisku. Anatomista i gladiator zdaja sie kiepsko dobrani do rozmowy i po chwili ten drugi wstaje z wielka wsciekloscia.%SPEECH_ON%Wzmocnienia? Myslisz, ze biorę wzmocnienia? Ty glupcze, patyczaku, kwiatki zrywajacy, trupy goniacy glupcze! Moje miesnie sa z potu i krwi! Bez bolu nie ma zysku!%SPEECH_OFF%Gladiator kopie kupke popiolu na anatomiste i odchodzi. %anatomist% otrzepuje sie, po czym wyciaga plik notatek. Zauwaza, ze \"obiekt\" doswiadcza napadow goracej zlosci. Pytasz go, czy potajemnie cos robi gladiatorowi. %anatomist% zamyka notes z trzaskiem.%SPEECH_ON%Kapitanie! Nigdy!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A strangely terse retort, %anatomist%...",
+					Text = "Dziwnie krotka odpowiedz, %anatomist%...",
 					function getResult( _event )
 					{
 						return 0;
@@ -42,44 +42,44 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Hitpoints"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Punkty Zycia"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Fatigue"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Zmeczenia"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Initiative"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Inicjatywy"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Melee Skill"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejetnosci Walki Wrecz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_skill.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Ranged Skill"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejetnosci Walki Dystansowej"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Melee Defense"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Wrecz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_defense.png",
-					text = _event.m.Gladiator.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Ranged Defense"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Dystansowej"
 				});
-				_event.m.Gladiator.worsenMood(0.5, "Was accused of taking artificial enhancements");
+				_event.m.Gladiator.worsenMood(0.5, "Zostal oskarzony o sztuczne wzmocnienia");
 
 				if (_event.m.Gladiator.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -90,7 +90,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 					});
 				}
 
-				_event.m.Anatomist.improveMood(0.5, "Experiments on " + _event.m.Gladiator.getName() + " are progressing nicely");
+				_event.m.Anatomist.improveMood(0.5, "Eksperymenty na " + _event.m.Gladiator.getName() + " przebiegaja pomyslnie");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

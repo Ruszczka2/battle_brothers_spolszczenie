@@ -6,17 +6,17 @@ this.anatomist_vs_splinter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_vs_splinter";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 110.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{You find %anatomist% holding up the bare foot of %splinterbro%. Naturally, you inquire just what they\'re doing. The anatomist straightens up with a tweezer in hand and pinched between its prongs is a huge splinter. %splinterbro% wiggles his toes then gets to his feet. He walks around, then quickly plants his foot and pivots and walks backwards and forwards.%SPEECH_ON%I\'ll be damned. I thought I\'d just busted my foot or somethin\', turns out I\'d just been walking around with a huge arsed splinter for years! This feels great!%SPEECH_OFF%Instead of throwing the splinter away, %anatomist% confines it to a wooden box where other medical oddities are rolling around.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Zastajesz %anatomist% trzymajacego bosa stope %splinterbro%. Naturalnie pytasz, co robia. Anatomista prostuje sie z pinceta w dloni, a miedzy jej koncowkami tkwi ogromna drzazga. %splinterbro% porusza palcami, po czym wstaje. Chodzi w kolo, potem szybko staje na stopie, obraca sie i chodzi tam i z powrotem.%SPEECH_ON%Niech mnie. Myslalem, ze po prostu sobie rozwalilem stope czy cos, a tu sie okazuje, ze przez lata chodzilem z wielka drzazga w nodze! To wspaniale uczucie!%SPEECH_OFF%Zamiast wyrzucic drzazge, %anatomist% zamyka ja w drewnianym pudelku, gdzie toczy sie inne medyczne osobliwosci.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I best not see you using that as a toothpick.",
+					Text = "Lepiej zebym nie widzial, jak uzywasz tego jako wykalaczki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,7 +33,7 @@ this.anatomist_vs_splinter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.SplinterBro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Melee Defense"
+					text = _event.m.SplinterBro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Wrecz"
 				});
 			}
 

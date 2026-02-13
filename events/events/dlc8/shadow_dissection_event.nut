@@ -13,11 +13,11 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.shadow_dissection";
-		this.m.Title = "During camp...";
+		this.m.Title = "W trakcie obozu...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{The company has made camp next to an abandoned priory and the men are sitting around the campfire casting shadow animals across one of its stonewalls. First a rabbit, then a panting dog, of course the bird, the head of a snake and the little mouse for it to eat. One of the sellswords ponders what it is that these shadows get up to when they aren\'t looking. He holds his hands up, their shapes blackly set against the wall.%SPEECH_ON%I just mean we have these things following us everywhere we go, we toy with them, you know, and yet we don\'t really think much about it. I mean look at this, what is this?%SPEECH_OFF%He splays his hands wide, blobbing ten fat shadows against the wall. The men ponder...}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstajac, %monk% mnich wznosi prosbe do starych bogow. Jedna dlon spoczywa na piersi, druga wznosi sie, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni bysmy sie obawiac, lecz ognia, ktory je stworzyl, bo to plomien bogowie nam dali, bysmy mogli przenosic dzien w noc, czynic nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzycza: \"hear hear!\"}",
 			Banner = "",
 			Characters = [],
 			Options = [],
@@ -26,7 +26,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Anatomist != null)
 				{
 					this.Options.push({
-						Text = "What does %anatomist% the anatomist have to say?",
+						Text = "Co ma do powiedzenia %anatomist% anatomista?",
 						function getResult( _event )
 						{
 							return "B";
@@ -38,7 +38,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Cultist != null)
 				{
 					this.Options.push({
-						Text = "%cultist% the cultist is murmuring again.",
+						Text = "%cultist% kultysta znowu cos mamrocze.",
 						function getResult( _event )
 						{
 							return "C";
@@ -50,7 +50,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Monk != null)
 				{
 					this.Options.push({
-						Text = "Our monk %monk% seems keen to answer.",
+						Text = "Nasz mnich %monk% chce odpowiedziec.",
 						function getResult( _event )
 						{
 							return "D";
@@ -62,7 +62,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Mercenary != null)
 				{
 					this.Options.push({
-						Text = "Why\'s everyone lookin\' at the biggest sellsword?",
+						Text = "Czemu wszyscy patrza na najwiekszego najemnika?",
 						function getResult( _event )
 						{
 							return "E";
@@ -74,7 +74,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Swordmaster != null)
 				{
 					this.Options.push({
-						Text = "%swordmaster% the swordmaster seems to have a word.",
+						Text = "%swordmaster% mistrz miecza ma cos do powiedzenia.",
 						function getResult( _event )
 						{
 							return "F";
@@ -86,7 +86,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Minstrel != null)
 				{
 					this.Options.push({
-						Text = "Naturally, %minstrel% the minstrel is ready to talk.",
+						Text = "Oczywiscie, %minstrel% minstrel jest gotow gadac.",
 						function getResult( _event )
 						{
 							return "G";
@@ -98,7 +98,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Killer != null && this.Options.len() < 6)
 				{
 					this.Options.push({
-						Text = "What\'s that noise?",
+						Text = "Co to za halas?",
 						function getResult( _event )
 						{
 							return "H";
@@ -111,12 +111,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% the anatomist looks up from the campfire, his face squirming with shadows as the flames rise and fall.%SPEECH_ON%Our shadows are but cuts upon the world which wound and mend all in one stride of black, dissecting the earth with our presence and self-same shaded presence in such a transient manner that it can\'t but be a preview of our stay here. But does the shadow think of dissecting you? Does it wish to free others which are like itself? Surely it is not alone. Surely our insides have shades. Do they cast tricks of themselves against our inner walls? What of when we sleep, are these things set against us from within or do they escape out into the world and wander? Are they the guards against our own minds, departing us in the night and leaving us to the horrors of dreamscapes which are surely present when we are awake? What distills the truth of the morning light better, than our shadow cast along the ground, and the fleeting memories of that which it has returned to ward away?%SPEECH_OFF%One of the sellswords stares at him.%SPEECH_ON%What?%SPEECH_OFF%The rest of the sellswords scoff.%SPEECH_ON%Hey man, we just wanna make like dicks and slags and shite. Check this out, I\'m %anatomist%\'s shadow. Blah blah blah blah!%SPEECH_OFF%The man mimes a mouth opening and closing over and over again as the company laughs.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% anatomista podnosi wzrok znad ogniska, a jego twarz faluje cieniami, gdy plomienie rosna i opadaja.%SPEECH_ON%Nasze cienie to tylko ciecia na swiecie, ktore rania i goja wszystko w jednym kroku czerni, rozcinajac ziemie nasza obecnoscia i tym samym zacienionym bytem w tak przelotny sposob, ze to nie moze byc niczym innym jak zapowiedzia naszego pobytu tutaj. Ale czy cien mysli o rozcinaniu ciebie? Czy chce uwolnic innych, podobnych do siebie? Na pewno nie jest sam. Na pewno nasze wnetrza maja swoje cienie. Czy rzucaja wlasne sztuczki na nasze wewnetrzne sciany? A kiedy spimy, czy te rzeczy sa w nas, czy uciekaja na zewnatrz i wedruja po swiecie? Czy sa straznikami naszych umyslow, opuszczajac nas nocami i zostawiajac na groze sennych krain, ktore przeciez istnieja, gdy czuwamy? Co lepiej destyluje prawde porannego swiatla niz nasz cien rzucony na ziemie i ulotne wspomnienia tego, co powrocil odstraszyc?%SPEECH_OFF%Jeden z najemnikow wpatruje sie w niego.%SPEECH_ON%Co?%SPEECH_OFF%Reszta najemnikow prycha.%SPEECH_ON%Hej stary, my tylko chcemy robic fiuty i rury i inne bzdury. Patrz na to, jestem cieniem %anatomist%. Blah blah blah blah!%SPEECH_OFF%Mezczyzna udaje usta otwierajace sie i zamykajace w kolko, a kompania wybucha smiechem.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "At least the anatomist took it in stride.",
+					Text = "Przynajmniej anatomista to wytrzymal.",
 					function getResult( _event )
 					{
 						return 0;
@@ -133,7 +133,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() == _event.m.Anatomist.getID())
 					{
-						bro.improveMood(0.75, "Felt intellectually superior to the other men");
+						bro.improveMood(0.75, "Czul sie intelektualnie lepszy od innych");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -146,7 +146,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Byl rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -163,12 +163,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{%cultist% the cultist leans toward the fire, his face almost touching the flames. The men glance at him as his eyes go wide, the wetness drying and peeling back until blood veins grow fat on the white. He leans back.%SPEECH_ON%Shadows are but ambassadors of the greater dark.%SPEECH_OFF%The campfire crackles and the man\'s shadow blossoms against the priory wall, and for a moment the company sees something else in that black, something twisted and leaning in, an entity not at all at the behest of %cultist%\'s shape. As the fires die down, the shadow cuts to pieces and draws away into the greater night, and only the cultist\'s own shadowed self remains, flickering uncertainly against the priory walls.}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{%cultist% kultysta nachyla sie ku ogniowi, jego twarz niemal dotyka plomieni. Ludzie spogladaja na niego, gdy jego oczy sie rozszerzaja, wilgoc wysycha i odchodzi, az na bieli puchna krwawe zylki. Odchyla sie.%SPEECH_ON%Cienie sa tylko ambasadorami wiekszej ciemnosci.%SPEECH_OFF%Ognisko trzaska, a cien mezczyzny rozkwita na scianie klasztoru i przez moment kompania widzi w tej czerni cos innego, cos pokreconego i pochylonego, byt zupelnie niezalezny od ksztaltu %cultist%. Gdy ogien przygasa, cien rwie sie na kawalki i oddala w wieksza noc, a zostaje tylko cien kultysty, migoczacy niepewnie na scianach klasztoru.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Strange shadows for a strange night.",
+					Text = "Dziwne cienie na dziwna noc.",
 					function getResult( _event )
 					{
 						return 0;
@@ -185,7 +185,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.improveMood(1.5, "Davkul awaits");
+						bro.improveMood(1.5, "Davkul czeka");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -198,7 +198,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.worsenMood(1.0, "Unnerved by " + _event.m.Cultist.getName());
+						bro.worsenMood(1.0, "Zaniepokojony przez " + _event.m.Cultist.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -215,12 +215,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Standing up, %monk% the monk makes an appeal to the old gods. He has one hand to his chest as the other swings upward as though in a great oratory offering.%SPEECH_ON%It is not the shadows we should mind, but the fire which has produced them, for it is the flame which the gods have bestowed upon us, such that we may carry the day into the night, and make our productive habits unending, and our allegiance to that which is good unerring.%SPEECH_OFF%The men shout \'hear hear!\'}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstajac, %monk% mnich wznosi prosbe do starych bogow. Jedna dlon spoczywa na piersi, druga wznosi sie, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni bysmy sie obawiac, lecz ognia, ktory je stworzył, bo to plomien bogowie nam dali, bysmy mogli przenosic dzien w noc, czynic nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzycza: "hear hear!"}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "May they watch over us.",
+					Text = "Niech nas strzega.",
 					function getResult( _event )
 					{
 						return 0;
@@ -242,7 +242,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "Inspired by " + _event.m.Monk.getName());
+						bro.improveMood(1.0, "Zainspirowany przez " + _event.m.Monk.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -259,7 +259,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 16,
 								icon = "ui/icons/bravery.png",
-								text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+								text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 							});
 						}
 					}
@@ -269,12 +269,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_82.png[/img]{One of the mercenaries stands up and points across the campfire and announces that %mercenary% has the scariest shadow of them all. The large sellsword looks over as if annoyed his name was spoken aloud. He grits his teeth and slowly raises his hands and the rest of the company fearfully rears back. %mercenary% laces his fingers and puts the thumbs out.%SPEECH_ON%This is a chicken. See?%SPEECH_OFF%The men glance at the shadows on the wall. It looks absolutely nothing like a chicken, but nobody dares to say that. They all nod and agree.%SPEECH_ON%Frankly, %mercenary%, that is the best cock I\'ve ever seen.%SPEECH_OFF%The men roar with laughter, but %mercenary% gets to his feet and the laughter stops.%SPEECH_ON%I said it was a chicken, didn\'t I?%SPEECH_OFF%The other man nods hurriedly and agrees it was indeed a chicken. Tensions settle down, but the shadow games are effectively over.}",
+			Text = "[img]gfx/ui/events/event_82.png[/img]{Jeden z najemnikow wstaje, wskazuje przez ognisko i oznajmia, ze %mercenary% ma najstraszniejszy cien ze wszystkich. Wielki najemnik spoglada, jakby zirytowalo go wypowiedzenie imienia na glos. Zaciska zeby i powoli unosi dlonie, a reszta kompani cofa sie ze strachem. %mercenary% splata palce i wystawia kciuki.%SPEECH_ON%To jest kura. Widzicie?%SPEECH_OFF%Ludzie patrza na cienie na scianie. Nie przypomina to wcale kury, ale nikt nie smie tego powiedziec. Wszyscy kiwaja glowami i sie zgadzaja.%SPEECH_ON%Szczerze, %mercenary%, to najlepszy kogut, jakiego widzialem.%SPEECH_OFF%Ludzie rycza ze smiechu, ale %mercenary% wstaje i smiech cichnie.%SPEECH_ON%Powiedzialem, ze to kura, prawda?%SPEECH_OFF%Drugi mezczyzna szybko kiwa glowa i zgadza sie, ze to faktycznie kura. Napiecie opada, ale zabawa w cienie dobiega konca.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "It sorta looked like a worm to me.",
+					Text = "Troche wygladalo to na robaka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -296,7 +296,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.75, "Glad he fights alongside " + _event.m.Mercenary.getName());
+						bro.improveMood(0.75, "Cieszy sie, ze walczy u boku " + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -309,7 +309,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(0.5, "Afraid of " + _event.m.Mercenary.getName());
+						bro.worsenMood(0.5, "Boi sie " + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -326,12 +326,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_17.png[/img]{%swordmaster% the swordmaster nods and speaks to it.%SPEECH_ON%I\'ve long thought about the shadow. When you take to a fight in the light of day, are there two battles going on? One of flesh and blood, and one of the shades at your feet? When you kill a man, do you kill his shadow as well, or does your shadow kill his? What even are we to our own shadows? Because when I find myself in a fight absent of light, it is not a fight at all, but a matter of nonsense, limbs flying, swords slashing. Blindness manifest. It seems only when a shadow is at the hip can we truly say it is a fight of men, and a fight of their talents.%SPEECH_OFF%One of the sellswords tilts a mug dutifully.%SPEECH_ON%Well whatever or however things are, may my shadow never cross illwise of yours, %swordmaster%.%SPEECH_OFF%The company raises their drinks. Hear hear!}",
+			Text = "[img]gfx/ui/events/event_17.png[/img]{%swordmaster% mistrz miecza kiwa glowa i odzywa sie.%SPEECH_ON%Od dawna myslalem o cieniu. Gdy walczysz w swietle dnia, czy tocza sie dwie bitwy? Jedna z ciala i krwi, a druga z cieni u twoich stop? Gdy zabijasz czlowieka, czy zabijasz tez jego cien, czy twoj cien zabija jego? Kim w ogole jestesmy dla naszych cieni? Bo gdy walcze bez swiatla, to nie jest zadna walka, lecz bezsens, latajace konczyny, tnące miecze. Czysta slepota. Wyglada na to, ze tylko wtedy, gdy cien jest u boku, mozemy powiedziec, ze to walka ludzi i ich umiejetnosci.%SPEECH_OFF%Jeden z najemnikow unosi kubek z nalezytym szacunkiem.%SPEECH_ON%Jakkolwiek by to nie bylo, oby moj cien nigdy zle nie skrzyzowal sie z twoim, %swordmaster%.%SPEECH_OFF%Kompania unosi napoje. Na zdrowie!}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "His shadows traverses with great danger.",
+					Text = "Jego cien niesie wielkie niebezpieczenstwo.",
 					function getResult( _event )
 					{
 						return 0;
@@ -353,7 +353,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "Glad he fights with " + _event.m.Swordmaster.getName());
+						bro.improveMood(1.0, "Cieszy sie, ze walczy z " + _event.m.Swordmaster.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -370,12 +370,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%minstrel% the minstrel stands up, his head cocked to a side, his walk a shuffling amble, his eyes affixed to his own shadow upon the priory wall, every step he takes drawing it smaller and smaller yet. He stares at the shadow as though it were a body, and his closing in on it was akin to that of solving who murdered it. Suddenly, he bolts upright, hands to his hips.%SPEECH_ON%By the gods, men, I\'ve got it figured out! My shadow is an absolute womanizer! A scapegrace smellsmock. He\'s got a big hammer in his pants, and every woman\'s a nail! A philanderer, he is! And a drunk, a pitiful sot. And...and a thief! Filching crowns from the filthy, this he cannot resist. And a little prankster, a little rat filled with devilments. Just the other day, my shadow took a shit in %othersellsword%\'s boot! I couldn\'t believe it!%SPEECH_OFF%%othersellsword% jumps to his feet, knocking over the fire and spewing embers that seem to twirl and twist on the laughter of the men. He comes forward.%SPEECH_ON%I knew that wasn\'t no farkin\' dogshite you bastard! What sorta man shits in another man\'s boots!%SPEECH_OFF%The sellsword slips and falls which arises applause from the company, and the minstrel delicately prances away, his shadow bidding goodbye with a kiss and wave.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%minstrel% minstrel wstaje, przechyla glowe na bok, jego krok jest powloczysty, a oczy przyczepione do wlasnego cienia na scianie klasztoru, ktory z kazdym krokiem staje sie coraz mniejszy. Wpatruje sie w cien jak w cialo, a jego zblizanie sie do niego przypomina rozwiazywanie zagadki jego zabojstwa. Nagle prostuje sie, rece na biodrach.%SPEECH_ON%Na bogow, ludzie, juz rozgryzlem! Moj cien to rasowy kobieciarz! Lajdak i wloczega. Ma wielki mlot w spodniach, a kazda kobieta to gwozdz! To lowca przygod! I pijak, zalosny pijaczyna. I... i zlodziej! Kradnie korony brudnym, nie moze sie powstrzymac. I maly psotnik, szczur pelny diabelstw. Dopiero co moj cien nasral do buta %othersellsword%! Nie moglem w to uwierzyc!%SPEECH_OFF%%othersellsword% zrywa sie na nogi, przewracajac ognisko i rozsypujac iskry, ktore zdaja sie wirowac w smiechu ludzi. Podchodzi.%SPEECH_ON%Wiedzialem, ze to nie bylo pieprzone psie gowno, draniu! Jaki czlowiek sra do butow innego czlowieka!%SPEECH_OFF%Najemnik poslizguje sie i upada, a kompania wybucha aplauzem, a minstrel delikatnie odskakuje, a jego cien z zegnaniem posyla pocalunek i macha reka.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The minstrel\'s shadow gets more action than me.",
+					Text = "Cien minstrela ma wiecej akcji niz ja.",
 					function getResult( _event )
 					{
 						return 0;
@@ -397,7 +397,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Byl rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -414,12 +414,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{As the men bandy back and forth making shadows, %killer%, the alleged killer on the run, walks up to the camp carrying armfuls of jewelry and other goods, their metals glistening with crimson sheens. He\'s murmuring to himself, but then suddenly stops and look at the rest of the company.%SPEECH_ON%Oh. You guys are still awake? I was just, uh, out. Doing things.%SPEECH_OFF%There\'s blood on his face and caked under his fingernails. Sensing himself in trouble, he drops the goods.%SPEECH_ON%These are for the company, of course. I\'m just so, uh, thankful that you all took me in. Thought I\'d repay the favor, you know?%SPEECH_OFF%The men stare at the goods. You ask the man if someone is going to come looking for those items. He grins.%SPEECH_ON%No sir, of course not. I made sure of it. Oh captain, did I make sure of it, heh, heh, heh.%SPEECH_OFF%You tell the man to put the goods into inventory, but to be sure to clean them up first. As he walks away, the rest of the men quietly exchange glances. There\'s no more shadow games left to play, it seems.}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Gdy ludzie przerzucaja sie cieniami, %killer%, rzekomy zabojca w ucieczce, podchodzi do obozu, niosac narecza bizuterii i innych dobr, a ich metal polyskuje karmazynem. Mamrocze do siebie, ale nagle sie zatrzymuje i patrzy na reszte kompanii.%SPEECH_ON%O. Wy jeszcze nie spicie? Ja tylko, eee, bylem na zewnatrz. Robilem rzeczy.%SPEECH_OFF%Na jego twarzy jest krew, a pod paznokciami zaschnieta. Czujac klopoty, upuszcza fanty.%SPEECH_ON%To dla kompanii, oczywiscie. Jestem po prostu, eee, wdzieczny, ze mnie przyjeliscie. Pomyslalem, ze sie odwdziecze, wiecie?%SPEECH_OFF%Ludzie wpatruja sie w fanty. Pytasz go, czy ktos bedzie ich szukal. Usmiecha sie.%SPEECH_ON%Nie, prosze pana, oczywiscie ze nie. Dopilnowalem tego. Och, kapitanie, dopilnowalem, heh, heh, heh.%SPEECH_OFF%Kazesz mu schowac rzeczy do ekwipunku, ale najpierw je wyczyscic. Gdy odchodzi, reszta ludzi po cichu wymienia spojrzenia. Wyglada na to, ze zabawy w cienie juz sie skonczyly.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Would somebody please keep an eye on that man?",
+					Text = "Czy ktos moze miec na niego oko?",
 					function getResult( _event )
 					{
 						return 0;
@@ -434,7 +434,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.World.Assets.getStash().add(item);
 			}

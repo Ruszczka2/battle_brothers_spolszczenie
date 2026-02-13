@@ -5,17 +5,17 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.tree_fort";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{You come across a group of kids sitting in a treehouse. Eyes glare out of the portholes and around the wooden bastion you can see readied slingshots. As you size up the fort, they draw up the rope ladder and tell you to scram. Curious, you wonder what they might have of value for such an overreaction to a group of men who would almost certainly destroy them.\n\nBeing that kids easily buckle under pressure, you ask if they\'re hiding something. One makes a jerking off motion and tells you to scram, while another kid slugs him on the shoulder and tells him to shut up. Not exactly the answers of kids hiding treats or pastries. They definitely got something valuable up there.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Natrafiasz na grupe dzieciakow siedzacych w domku na drzewie. Z oczodolow wygladaja spojrzenia, a wokol drewnianego bastionu widzisz przygotowane proce. Gdy oceniasz fort, podciagaja drabine linowa i kaza ci spadac. Ciekawy, zastanawiasz sie, co takiego wartosciowego moga miec, skoro tak przesadnie reaguja na grupe mezczyzn, ktora niemal na pewno by ich zniszczyla.\n\nPoniewaz dzieci latwo uginaja sie pod presja, pytasz, czy cos ukrywaja. Jeden wykonuje gest onanizowania i kaze ci spadac, a inny wali go w ramie i kaze mu sie zamknac. To nie sa odpowiedzi dzieciakow chowajacych slodycze czy ciastka. Na pewno maja tam cos cennego.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Assault the fort!",
+					Text = "Szturm na fort!",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -30,7 +30,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We don\'t have time for this.",
+					Text = "Nie mamy na to czasu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -43,7 +43,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				if (this.World.Assets.getOrigin().getID() == "scenario.paladins")
 				{
 					this.Options.push({
-						Text = "Oathtakers!",
+						Text = "Swietobiorcy!",
 						function getResult( _event )
 						{
 							return "D";
@@ -56,13 +56,13 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{You order the %companyname% to assault the fort. Unable to climb the tree under threat of rocks and slingshots, you have the men build ladders and throw up ropes of their own. The kids scream and throw down sticks and stones, dishing out an unignorable amount of pain, but not nearly as much as the words they call you, awful things like birdwatchers and pig dicks, the mean little bastards. A few manage to cut the ropes as the men are climbing up, leading to even more injuries. But eventually the sellswords roost the kids out, throwing the children out of the tree with great fervor. No surprise to you, your intuition was entirely correct: the kids had stowed away a few armaments and were stockpiling them in the tree fort. You take the goods and have the fort and the tree it rests on burned.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Rozkazujesz %companyname% szturmowac fort. Nie mogac wspiac sie na drzewo pod gradem kamieni i proc, kazesz ludziom zbudowac drabiny i przerzucic liny. Dzieci krzycza i zrzucaja kije i kamienie, sprawiajac bol, ktorego nie da sie zignorowac, ale nie tak wielki jak ich obelgi, okropne slowa w rodzaju ptasich obserwatorow i swinskich kutasow, te male gnojki. Kilku udaje sie przecinac liny, gdy ludzie sie wspinaja, co prowadzi do kolejnych ran. Ale w koncu najemnicy wyganiaja dzieci, zrzucajac je z drzewa z wielkim zapalem. Nie jestes zaskoczony, twoja intuicja byla calkowicie trafna: dzieci schowaly kilka sztuk uzbrojenia i gromadzily je w forcie. Zabierasz rzeczy i kazesz spalic fort oraz drzewo, na ktorym stoi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn kids.",
+					Text = "Cholerne dzieciaki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -85,7 +85,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]);
 				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
@@ -93,7 +93,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]);
 				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
@@ -101,7 +101,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -113,7 +113,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + " suffers light wounds"
+							text = bro.getName() + " doznaje lekkich ran"
 						});
 					}
 				}
@@ -122,13 +122,13 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{You punch two fingers forward, ordering the men to assault the tree fort. The kids respond with slingshots and rocks. Pretending the rocks don\'t hurt like a mug, you tell the kids to give up. In return, they call you an inept fool and a witless schemer. These words hurt almost as much as the stones and rocks.\n\nSuddenly, the fort finds reinforcements as a group of more kids join the fray from the adjacent tree\'s branches, the bastards streaming over like sea raiders boarding a ship. The whole assault is going to all the hells in many handbaskets and a few of the men are complaining that the whole affair is simply far too annoying an endeavor to have it be continued. You wonder if they\'re just worried about their pride. Sighing, you order a cease to the assault. The kids laugh and mock you, but it is what it is.%SPEECH_ON%They probably had nothing up there anyway. Not worth the hassle.%SPEECH_OFF%One of the men says. You disagree, but there\'s no point in dwelling on it. The kids rally into a fowl choir and make squawking chicken noises as you march away.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Wskazujesz dwoma palcami i rozkazujesz ludziom szturmowac fort na drzewie. Dzieci odpowiadaja procami i kamieniami. Udajac, ze kamienie nie bola jak diabli, kazesz dzieciakom sie poddac. W odpowiedzi nazywaja cie nieudolnym glupcem i bezmyslnym intrygantem. Te slowa bola prawie tak bardzo jak kamienie.\n\nNagle fort dostaje posilki, bo z galezi sasiedniego drzewa do walki dolacza kolejne dzieci, te dranie wdzieraja sie jak korsarze na statek. Caly szturm idzie do piekla w wielu koszach, a kilku ludzi narzeka, ze to zbyt irytujace przedsiewziecie, by je kontynuowac. Zastanawiasz sie, czy nie chodzi im tylko o dume. Wzdychasz i rozkazujesz przerwac szturm. Dzieci smieja sie i szydza z ciebie, ale tak to jest.%SPEECH_ON%Pewnie i tak nic tam nie mieli. Nie warto zachodu.%SPEECH_OFF%Mowi jeden z ludzi. Nie zgadzasz sie, ale nie ma sensu nad tym rozpamietywac. Dzieci zbieraja sie w kurzy chor i wydaja gdaczace dzwieki, gdy odchodzicie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That could have gone better.",
+					Text = "Moglo pojsc lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -150,7 +150,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = injury.getIcon(),
-								text = bro.getName() + " suffers " + injury.getNameOnly()
+								text = bro.getName() + " doznaje " + injury.getNameOnly()
 							});
 						}
 						else
@@ -159,7 +159,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = "ui/icons/days_wounded.png",
-								text = bro.getName() + " suffers light wounds"
+								text = bro.getName() + " doznaje lekkich ran"
 							});
 						}
 					}
@@ -169,13 +169,13 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_183.png[/img]{You take Anselm\'s skull and hold it up. With a booming voice, you explain the trials and triumphs of Young Anselm, the original Oathtaker. The kids are wowed, looking at one another as you regale them with tale after tale of courage and honor. Eventually, the kids produce a rather extravagant weapon.%SPEECH_ON%We found it in a pond.%SPEECH_OFF%Another kid pushes another.%SPEECH_ON%No, it was in a stone! Remember, I\'m the one who pulled it out!%SPEECH_OFF%The kids fight each other for a time, but eventually a small girl takes the weapon and hurls it out of the tree fort\'s window. Its blade stakes into the ground, the steel warbling as it bends back and forth. She scoffs.%SPEECH_ON%Maybe it\'s for the best that someone else takes this thing, all they do is fight over it!%SPEECH_OFF%You wrap your hand around the sword\'s handle and its steel song hums to a quiet end. You unsheathe it from the earth and thank the kids for their contribution to the quest of the Oathtakers. The kids glance around at each other. One asks another.%SPEECH_ON%Do we have some sorta purpose now?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_183.png[/img]{Bierzesz czaszke Anselma i unosisz ja. Donosnym glosem opowiadasz o probach i triumfach Mlodego Anselma, pierwotnego Swietobiorcy. Dzieci sa zachwycone, spogladaja na siebie, gdy raczysz je opowiesciami o odwadze i honorze. W koncu dzieci wyciagaja dosc wystawna bron.%SPEECH_ON%Znalezlismy to w stawie.%SPEECH_OFF%Inne dziecko popycha drugie.%SPEECH_ON%Nie, to bylo w kamieniu! Pamietasz, to ja to wyciagnalem!%SPEECH_OFF%Dzieci sprzeczaja sie przez chwile, ale w koncu mala dziewczynka bierze bron i wyrzuca ja przez okno fortu na drzewie. Ostrze wbija sie w ziemie, a stal drzy, gdy wygina sie wte i wewte. Dziewczynka prycha.%SPEECH_ON%Moze lepiej, zeby ktos inny to wzial, bo oni tylko sie o to kloca!%SPEECH_OFF%Chwytasz rekojesc miecza, a jego stalowy spiew cichnie. Wyciagasz go z ziemi i dziekujesz dzieciom za ich wklad w misje Swietobiorcow. Dzieci spogladaja na siebie. Jedno pyta drugie.%SPEECH_ON%Czy mamy teraz jakis cel?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na droge.",
 					function getResult( _event )
 					{
 						return 0;
@@ -190,7 +190,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

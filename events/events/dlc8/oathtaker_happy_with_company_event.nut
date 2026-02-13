@@ -5,17 +5,17 @@ this.oathtaker_happy_with_company_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.oathtaker_happy_with_company";
-		this.m.Title = "During camp...";
+		this.m.Title = "W trakcie obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% the oathtaker joins you by the campfire. He nods.%SPEECH_ON%Respectfully, captain, I can say that it is a big ask to require a man to be of genuine goodness. When I first knew ya, I didn\'t think you had the chops for such an undertaking. I thought this world\'s creeping darkness would wither you away, grind you down like sand to a stone. But here you are. Stalwart. Keeping to the Oaths, one after the other. Good on ya. I think Young Anselm would be proud.%SPEECH_OFF%You thank the Oathtaker for the kind words.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% Swietobiorca siada z toba przy ognisku. Kiwa glowa.%SPEECH_ON%Z szacunkiem, kapitanie, moge powiedziec, ze duzo wymagac od czlowieka, by byl naprawde dobry. Gdy cie poznalem, nie sadzilem, ze masz zadatki do takiego zadania. Myslalem, ze czolgajaca sie ciemnosc tego swiata cie wysuszy, zetrze jak piasek o kamien. A jednak jestes. Niezlomny. Trzymasz sie Slubow, jeden po drugim. Dobra robota. Mlody Anselm bylby dumny.%SPEECH_OFF%Dziekujesz Swietobiorcy za dobre slowa.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad someone appreciates it.",
+					Text = "Milo, ze ktos to docenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,9 +30,9 @@ this.oathtaker_happy_with_company_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Oathtaker.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Oathtaker.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
-				_event.m.Oathtaker.improveMood(1.0, "Is happy about the company\'s moral compass");
+				_event.m.Oathtaker.improveMood(1.0, "Cieszy sie z moralnego kompasu kompani");
 
 				if (_event.m.Oathtaker.getMoodState() > this.Const.MoodState.Neutral)
 				{

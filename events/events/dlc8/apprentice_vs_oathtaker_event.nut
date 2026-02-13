@@ -6,17 +6,17 @@ this.apprentice_vs_oathtaker_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.apprentice_vs_oathtaker";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%apprentice% the apprentice is sitting beside the campfire when %oathtaker% the Oathtaker starts sizing him up. The apprentice returns a confused look.%SPEECH_ON%What is it?%SPEECH_OFF%The Oathtaker grins.%SPEECH_ON%Young Anselm, the First Oathtaker, was an apprentice much like you. He wandered the lands in seeking knowledge and finding himself the Final Path. You even look just like him.%SPEECH_OFF%The apprentice smiles warmly. It seems this notion of connectedness with the dead Oathtaker has emboldened the apprentice. But, as far as you\'re concerned, Young Anselm\'s skull looks absolutely nothing like %apprentice%. The nose is too big, the brow too ridged, and the First Oathtaker\'s teeth are impeccable while %apprentice% looks like he cleans his with a mallet. But maybe %apprentice% will look more the part when he is also a shiny skull cared for by an unwavering cult.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%apprentice% uczen siedzi obok ogniska, gdy %oathtaker% Swiętobiorca zaczyna go mierzyc wzrokiem. Uczen odwzajemnia spojrzenie, wyraznie zmieszany.%SPEECH_ON%O co chodzi?%SPEECH_OFF%Swiatobiorca szczerzy sie w usmiechu.%SPEECH_ON%Mlody Anselm, Pierwszy Swietobiorca, byl uczniem takim jak ty. Wedrowal po ziemiach, szukajac wiedzy i odnajdujac Ostateczna Sciezke. Nawet wygladasz jak on.%SPEECH_OFF%Uczen usmiecha sie serdecznie. Wyglada na to, ze ta wiez z niezyjacym Swietobiorca go osmielila. Ale wedlug ciebie czaszka Mlodego Anselma wcale nie wyglada jak %apprentice%. Nos jest za duzy, luk brwiowy zbyt pofalowany, a zeby Pierwszego Swietobiorcy sa nienaganne, podczas gdy %apprentice% wyglada, jakby czyscil je młotem. Ale moze %apprentice% bedzie wygladal bardziej odpowiednio, gdy sam stanie sie lśniaca czaszka otoczona opieka nieugietego kultu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Not that I want that to happen.",
+					Text = "Nie zebym chcial, zeby do tego doszlo.",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,11 +34,11 @@ this.apprentice_vs_oathtaker_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Apprentice.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Resolve"
+					text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Determinacji"
 				});
 				_event.m.Apprentice.getFlags().add("learnedFromOathtaker");
-				_event.m.Apprentice.improveMood(1.0, "Learned from " + _event.m.Oathtaker.getName());
-				_event.m.Oathtaker.improveMood(0.5, "Has taught " + _event.m.Apprentice.getName() + " something");
+				_event.m.Apprentice.improveMood(1.0, "Uczyl sie od " + _event.m.Oathtaker.getName());
+				_event.m.Oathtaker.improveMood(0.5, "Nauczyl " + _event.m.Apprentice.getName() + " czegos");
 
 				if (_event.m.Apprentice.getMoodState() >= this.Const.MoodState.Neutral)
 				{

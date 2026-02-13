@@ -5,17 +5,17 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 	function create()
 	{
 		this.m.ID = "event.anatomist_helps_blighted_guy_2";
-		this.m.Title = "Along the way...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_58.png[/img]{The supposedly diseased man the anatomists had rescued from the literal grave comes forward. He\'s looking better than ever. He thanks the anatomists for their work, though they regard him with barely any notice at all. It seems he was of more interest to them when he was ill, and they could poke and prod and learn from that which ailed him, and there was some unspoken hope that he would in fact die so they could learn even more. Seeing this, the man then turns to you.%SPEECH_ON%It\'s all much appreciated, I hope at least you know that. You don\'t know what hells I\'ve been through with that lot who tried to bury me alive. I think they knew I wasn\'t no blight, they just wanted my property. See, I used to head the local militia, but that position comes with the weight of conspiracy and jealousy.%SPEECH_OFF%He rubs the back of his head, then comes out with it.%SPEECH_ON%I\'ve nothing else after those gravediggers done taken it all so regardless of whether I\'m alive or dead, I may well be of the latter. So, well, let me just say I\'m glad to be fighting for you and making myself a new living out here.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_58.png[/img]{Rzekomo chory mężczyzna, którego anatomowie wyrwali dosłownie z grobu, podchodzi do przodu. Wygląda lepiej niż kiedykolwiek. Dziękuje anatomom za ich pracę, choć ci ledwie zwracają na niego uwagę. Wydaje się, że był dla nich ciekawszy, gdy był chory, mogli go badać i uczyć się z tego, co go trapiło, a po cichu liczyli, że jednak umrze, by mogli dowiedzieć się jeszcze więcej. Widząc to, mężczyzna zwraca się do ciebie.%SPEECH_ON%Wiele to dla mnie znaczy, mam nadzieję, że przynajmniej o tym wiesz. Nie wiesz, jakie piekło przeżyłem z tamtymi, którzy chcieli mnie pogrzebać żywcem. Myślę, że wiedzieli, iż nie jestem skażony, po prostu chcieli mojej własności. Wiesz, kiedyś dowodziłem lokalną milicją, ale ta funkcja niesie ze sobą ciężar spisków i zazdrości.%SPEECH_OFF%Pociera tył głowy, po czym mówi wprost.%SPEECH_ON%Nie mam już nic, bo ci grabarze wszystko zabrali, więc bez względu na to, czy żyję, czy nie, i tak mogę być martwy. Tak więc powiem po prostu, że cieszę się, że mogę dla ciebie walczyć i ułożyć sobie tu nowe życie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad you\'re feeling better, %militiacaptain%.",
+					Text = "Cieszę się, że czujesz się lepiej, %militiacaptain%.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,9 +30,9 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 				bg.m.IsNew = false;
 				_event.m.MilitiaCaptain.getSkills().removeByID("background.vagabond");
 				_event.m.MilitiaCaptain.getSkills().add(bg);
-				_event.m.MilitiaCaptain.getBackground().m.RawDescription = "You found %name% being buried alive for carrying some unknown blight. The anatomists took interest in him and rescued him, nursing him back to health. Now, he fights for you, putting to use the skills that made him captain of the guard in a previous life.";
+				_event.m.MilitiaCaptain.getBackground().m.RawDescription = "Znalazłeś %name% grzebanego żywcem za rzekome noszenie nieznanej zarazy. Anatomowie zainteresowali się nim i uratowali go, przywracając do zdrowia. Teraz walczy dla ciebie, wykorzystując umiejętności, które w poprzednim życiu uczyniły go kapitanem straży.";
 				_event.m.MilitiaCaptain.getBackground().buildDescription(true);
-				_event.m.MilitiaCaptain.improveMood(1.0, "Recovered from the blight afflicting him");
+				_event.m.MilitiaCaptain.improveMood(1.0, "Wyzdrowiał z zarazy, która go dręczyła");
 
 				if (_event.m.MilitiaCaptain.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -55,42 +55,42 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+4[/color] Melee Defense"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+4[/color] obrony w walce wręcz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_defense.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+4[/color] Ranged Defense"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+4[/color] obrony dystansowej"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+8[/color] Melee Skill"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+8[/color] umiejętności walki wręcz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_skill.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+7[/color] Ranged Skill"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+7[/color] umiejętności dystansowych"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+3[/color] Max Fatigue"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+3[/color] maksymalnego zmęczenia"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+6[/color] Initiative"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+6[/color] inicjatywy"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+12[/color] Resolve"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+12[/color] determinacji"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.MilitiaCaptain.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+5[/color] Hitpoints"
+					text = _event.m.MilitiaCaptain.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+5[/color] punktów zdrowia"
 				});
 			}
 

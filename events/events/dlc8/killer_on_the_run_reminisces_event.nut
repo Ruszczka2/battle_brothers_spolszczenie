@@ -5,17 +5,17 @@ this.killer_on_the_run_reminisces_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.killer_on_the_run_reminisces";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{Seemingly out of nowhere, which you imagine is just how he prefers to behave, %killer% casually mentions that there\'s a body buried out here. You know he\'s a killer on the run, but you do the honor of inquiring as to how he might know that. He flatly states:%SPEECH_ON%Because I killed them and hid the corpse out this way. You know, it was a good kill. I mean that, because this individual was pained by diseases.%SPEECH_OFF%The very word \'diseases\' elicits a turn of heads from the anatomists, as though they were hawks who\'d just seen a scampering mouse. Soon enough, and much to your chagrin, the medical troupe is digging up a corpse. There\'s much discussion over what blights the body might have carried. It is beyond you, but the group agrees that learning of it will make great advances in whatever it is they\'re studying. After their discussions are over, %killer% sidles up to you with a smirk. He says that he killed that person cause he enjoyed it, and it was nice seeing the body again.%SPEECH_ON%It\'s just a shame those eggheads manhandled it like they did. It deserved more care, more...time.%SPEECH_OFF%You ease away from the man and get this bizarre company of men back on the road.}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{Pozornie znikad, co sobie wyobrazasz jako jego ulubiony sposob bycia, %killer% mimochodem wspomina, ze gdzies tu zakopal cialo. Wiesz, ze to zbieg, ale z grzecznosci pytasz, skad o tym wie. Odpowiada bez owijania:%SPEECH_ON%Bo ja ich zabilem i ukrylem zwloki tutaj. Wiesz, to bylo dobre zabojstwo. Mowie tak, bo ten czlowiek cierpial na choroby.%SPEECH_OFF%Samo slowo "choroby" sprawia, ze anatomisci podnosza glowy, jakby jastrzabie zobaczyly mysz. Wkrotce, ku twojej irytacji, medyczna gromada wykopuje zwloki. Dugo dyskutuja o tym, co moglo dręczyc cialo. To poza twoja wiedza, ale grupa zgadza sie, ze poznanie tego przyniesie duze postepy w ich badaniach. Gdy rozmowy sie koncza, %killer% podchodzi do ciebie z drwina. Mowi, ze zabil te osobe, bo sprawialo mu to przyjemnosc, i ze dobrze bylo zobaczyc cialo ponownie.%SPEECH_ON%Szkoda tylko, ze ci jajoglowi tak je obmacali. Zasluzyloby na wiecej troski, wiecej...czasu.%SPEECH_OFF%Oddalasz sie od niego i prowadzisz ta dziwna kompanie z powrotem na droge.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The lot I cast my dice with...",
+					Text = "Taki to los, z kim gram...",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,14 +26,14 @@ this.killer_on_the_run_reminisces_event <- this.inherit("scripts/events/event", 
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Killer.getImagePath());
-				_event.m.Killer.improveMood(1.0, "Reminisced about an old kill");
+				_event.m.Killer.improveMood(1.0, "Wspominal dawne zabojstwo");
 				local resolveBoost = this.Math.rand(1, 3);
 				_event.m.Killer.getBaseProperties().Bravery += resolveBoost;
 				_event.m.Killer.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Killer.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Resolve"
+					text = _event.m.Killer.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Determinacji"
 				});
 
 				if (_event.m.Killer.getMoodState() >= this.Const.MoodState.Neutral)
@@ -56,9 +56,9 @@ this.killer_on_the_run_reminisces_event <- this.inherit("scripts/events/event", 
 						this.List.push({
 							id = 16,
 							icon = "ui/icons/xp_received.png",
-							text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+50[/color] Experience"
+							text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+50[/color] Doswiadczenia"
 						});
-						bro.improveMood(1.0, "Got to examine an interesting blighted cadaver");
+						bro.improveMood(1.0, "Mogl zbadac interesujace, skazone zwloki");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

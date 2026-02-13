@@ -9,17 +9,17 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.missing_kids";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_31.png[/img]{As you wander the streets of %townname%, a bevy of skinny guards suddenly emerge from an alley like a pack of rats and, like rats themselves, they are dangerously numerous. While you keep your head low, %anatomist% the anatomist can\'t help but offer a dimwitted stare and acquire their attention. The guards make eye contact and come over and as expected they start proffering their corruptions.%SPEECH_ON%Hey there, travelers. Word around town is that someone is killing kids. Now we\'ve reason to believe it\'s your strange fella here that\'s doing this awful, awful business.%SPEECH_OFF%The anatomist tries to defend himself, but you know that reason and rationality are not exactly on the table here. You ask the guards how much they want. They say.%SPEECH_ON%How about %blackmail% crowns, and we let this awful, awful kid killin\' business slide. Or we don\'t let it slide and beat the shite out of you both.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_31.png[/img]{Gdy wedrujesz ulicami %townname%, gromadka wychudzonych straznikow nagle wylania sie z zaulka jak stado szczurow i, jak szczury, jest ich niepokojaco wielu. Gdy trzymasz glowe nisko, %anatomist% anatomista nie potrafi sie powstrzymac i gapi sie glupio, przyciagajac ich uwage. Straznicy lapia kontakt wzrokowy, podchodza i jak zwykle zaczynaja z korupcja.%SPEECH_ON%Hej, podrozni. Mowi sie w miescie, ze ktos zabija dzieci. Mamy powod sadzic, ze to wasz dziwak tu odpowiada za to paskudne, paskudne sprawy.%SPEECH_OFF%Anatomista probuje sie bronic, ale wiesz, ze rozsadek nie wchodzi w gre. Pytasz straznikow, ile chca. Mowia.%SPEECH_ON%Co powiesz na %blackmail% koron i przymkniemy oko na to cale dzieciobojstwo. Albo nie przymkniemy i skopiemy wam dupska.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, we\'ll pay the \'fine.\'",
+					Text = "Dobrze, zaplacimy ten \'mandat.\'",
 					function getResult( _event )
 					{
 						return "B";
@@ -27,7 +27,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We aren\'t paying anything.",
+					Text = "Nie zaplacimy nic.",
 					function getResult( _event )
 					{
 						return "C";
@@ -40,7 +40,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Hedge != null)
 				{
 					this.Options.push({
-						Text = "Where is that hedge knight %hedgeknight% when you need him?",
+						Text = "Gdzie jest ten rycerz zywoplotu %hedgeknight%, kiedy go potrzeba?",
 						function getResult( _event )
 						{
 							return "Hedge";
@@ -52,7 +52,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Cultist != null)
 				{
 					this.Options.push({
-						Text = "Do you have something to say, %cultist% the Cultist?",
+						Text = "Masz cos do powiedzenia, %cultist% kultysto?",
 						function getResult( _event )
 						{
 							return "Cultist";
@@ -64,7 +64,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				if (this.Const.DLC.Unhold && _event.m.Killer != null)
 				{
 					this.Options.push({
-						Text = "%killer% the killer is always dodging guards, what would he do?",
+						Text = "%killer% zawsze unika strazy, co by zrobil?",
 						function getResult( _event )
 						{
 							return "Killer";
@@ -79,13 +79,13 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_31.png[/img]{You pay them the gold. They take it and walk off laughing. %anatomist% explains that he never killed any kid, nor would he ever if there wasn\'t scientific value to be had in it. You close your eyes and ask him if he would kill a kid if there was scientific value in it. The anatomist scoffs.%SPEECH_ON%I\'d lay waste to them, sir.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_31.png[/img]{Placisz im zloto. Biora je i odchodza smiejac sie. %anatomist% wyjasnia, ze nigdy nie zabil zadnego dziecka, ani by tego nie zrobil, chyba ze bylaby z tego wartosc naukowa. Zamykasz oczy i pytasz, czy zabilby dziecko, gdyby byla z tego wartosc naukowa. Anatomista prycha.%SPEECH_ON%Zrobilbym z nich pustkowie, panie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Of course you would.",
+					Text = "Oczywiscie, ze tak.",
 					function getResult( _event )
 					{
 						return 0;
@@ -99,7 +99,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]750[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]750[/color] Koron"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 			}
@@ -107,13 +107,13 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_31.png[/img]{You tell them you\'ll have to count how much money you got. Looking down at your pockets you say.%SPEECH_ON%I think I got five.%SPEECH_OFF%The scrawniest of the guards steps forward saying \'five what?\' And you answer with a fist to his face. Before the man even hits the ground the rest of the guards are upon you both, kicking and punching and stomping. They run your pockets but you don\'t have a crown on you. Eventually they let up and stand off to the side, a crowd of peasants slowly gathering around the commotion. One guard slaps the other, indicating it is time to go. The lead guard stares down at you.%SPEECH_ON%Shite man, you sure can take a punch. Hope that beatin\' was worth it. C\'mon, let\'s get out of here.%SPEECH_OFF%Slowly, you get to your feet and then help %anatomist% up. He wipes the blood from his face. You\'re wise to an arse whoopin, but you figure this might be a first for the anatomist. The blood keeps leaking out of his nose and he keeps wiping. You tell him to lean his head back and lead him back to the wagon. The anatomist talks with a squeaky voice.%SPEECH_ON%It keeps bleeding. I know that this is what it was designed to do, but to see it and feel it in person...fascinating. Very fascinating.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_31.png[/img]{Mowisz im, ze musisz policzyc, ile masz pieniedzy. Patrzac do kieszeni, mowisz.%SPEECH_ON%Chyba mam piec.%SPEECH_OFF%Najchudszy ze straznikow podchodzi i pyta \"piec czego?\" Odpowiadasz piescia w jego twarz. Zanim jeszcze upadnie, pozostali straznicy juz sa na was, kopia, bija i depcza. Przeszukuja wam kieszenie, ale nie masz przy sobie ani jednej korony. W koncu odpuszczaja i staja z boku, a tlum chlopow powoli zbiera sie wokol zamieszania. Jeden straznik klepie drugiego, sugerujac, ze czas isc. Dowodca patrzy na ciebie z gory.%SPEECH_ON%Cholera, chlopie, umiesz przyjac cios. Mam nadzieje, ze ten lomot byl tego wart. No dawaj, wynosmy sie stad.%SPEECH_OFF%Powoli wstajesz i pomagasz %anatomist% sie podniesc. Wyciera krew z twarzy. Dla ciebie lanie to nic nowego, ale dla anatomisty to pewnie pierwszy raz. Krew wciaz leci mu z nosa i wciaz ja wyciera. Kazesz mu odchylic glowe do tylu i prowadzisz go do wozu. Anatomista mowi piskliwym glosem.%SPEECH_ON%To dalej krwawi. Wiem, ze tak ma byc, ale widziec to i czuc na wlasnej skorze...fascynujace. Bardzo fascynujace.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It gets old fast, trust me.",
+					Text = "Szybko powszednieje, zaufaj mi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -134,20 +134,20 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Anatomist.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Anatomist.getName() + " odnosi " + injury.getNameOnly()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Hedge",
-			Text = "[img]gfx/ui/events/event_96.png[/img]{%hedgeknight% the hedge knight suddenly rounds the corner. The guards take a step back. He\'s eating an apple with one hand while the other sets on the pommel of his weapon like an executioner\'s hand on his lever. He looks down at the guards, casting his eye upon one person at a time, judging each and finding them wanting. He takes another bite of the apple and turns to you.%SPEECH_ON%Is there a problem here, captain?%SPEECH_OFF%One of the guards quickly steps forward, smiling anxiously.%SPEECH_ON%Ah, no problem. We were just, uh, doing our due diligence in a certain matter.%SPEECH_OFF%The hedge knight tosses an apple core over his shoulder and then takes a long stretch, pieces of his armor grinding and clanking against each other. He nods.%SPEECH_ON%And how\'s that coming along?%SPEECH_OFF%The guards announce that they just finished. The hedge knight grins and says that if a man\'s time is spent in error, he should be compensated. Swallowing nervously, one of the guards forks over a purse of coins. He apologizes to you for wasting your time. The group of scrawny guards then beat a spooked, backpedaling retreat until they are gone. %hedgeknight% sighs. He says he was waiting on you to give the word. You ask him the word to do what. He produces another apple and crushes it in the ferocious squeeze of his hand. He thumbs one of the chunks into his mouth.%SPEECH_ON%What do you think?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_96.png[/img]{%hedgeknight% rycerz zywoplotu nagle wylania sie zza rogu. Straznicy cofaja sie o krok. Je jablko jedna reka, a druga spoczywa na glowicy broni jak dlon kata na dzwigni. Spoglada na straznikow, oceniajac kazdego po kolei i uznajac ich za niewystarczajacych. Bierze kolejny gryz jablka i zwraca sie do ciebie.%SPEECH_ON%Czy jest tu jakis problem, kapitanie?%SPEECH_OFF%Jeden ze straznikow szybko wychodzi naprzod, usmiechajac sie nerwowo.%SPEECH_ON%Ach, nie, zaden problem. Po prostu, eee, wykonywalismy nalezyta starannosc w pewnej sprawie.%SPEECH_OFF%Rycerz zywoplotu rzuca ogryzek za siebie, potem przeciaga sie dlugo, a elementy zbroi chrzeszcza i stukaja o siebie. Kiwal glowa.%SPEECH_ON%I jak wam to idzie?%SPEECH_OFF%Straznicy oznajmiaja, ze wlasnie skonczyli. Rycerz usmiecha sie i mowi, ze jesli czyjs czas zostal zmarnowany, nalezy mu sie rekompensata. Polykajac nerwowo, jeden ze straznikow oddaje sakiewke monet. Przeprasza cie za zmarnowany czas. Chudzi straznicy wycofuja sie w poplochu, cofajac sie, az znikaja. %hedgeknight% wzdycha. Mowi, ze czekal na twoje slowo. Pytasz, jakie slowo i po co. Wyjmuje kolejne jablko i miazdzy je zaciskiem swojej dloni. Wklada kawalek do ust.%SPEECH_ON%No i co myslisz?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Ahh...",
+					Text = "Eee...",
 					function getResult( _event )
 					{
 						return 0;
@@ -161,7 +161,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] Koron"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Hedge.getImagePath());
@@ -170,13 +170,13 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Cultist",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{Before you can answer, a small bag flies between the parties and when it lands a pile of chicken bones spew out. Footsteps follow, and everyone turns to see who is making them. %cultist% the cultist comes forward and leans down and picks up one of the bones. He turns to the guards and says that no child here has gone missing, that their reports are lies. One of the scrawny guards cocks his head.%SPEECH_ON%And just who in the hells are you?%SPEECH_OFF%The cultist walks toward the guards, bones crunching under his boots. He leans into one\'s ear and begins to whisper. After the cultist is finished, the guard leans back.%SPEECH_ON%I am testing his patience?%SPEECH_OFF%The cultist nods and says.%SPEECH_ON%And to draw an end to that which is meant to be eternal will have such dire consequences for you that you will come to believe that to have lived at all was but a tremendous error, which it is, it all is.%SPEECH_OFF%The guards glance at one another. One offers crowns as though it were penitence. You gladly take the crowns and strangely enough they are warm to the touch. %cultist% turns around and nods, whispering something about the resolve of beings far beyond your understanding. You look down at the bones, but you don\'t remember the company getting any chickens, nor do you remember any chicken coops on your way in.%SPEECH_ON%Those look like-%SPEECH_OFF%The anatomist is talking a little too loudly about what those look like and you cut him off then and there, beating a hasty retreat from the street before anymore can come of this strange commotion.}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{Zanim zdazysz odpowiedziec, miedzy strony leci mala torba i gdy spada, wysypuje sie z niej sterta kurzych kosci. Slychac kroki i wszyscy odwracaja sie, by zobaczyc, kto je wydaje. %cultist% kultysta wychodzi naprzod, schyla sie i podnosi jedna z kosci. Odwraca sie do straznikow i mowi, ze zadne dziecko tu nie zaginelo, a ich raporty to klamstwa. Jeden z chudych straznikow przechyla glowe.%SPEECH_ON%A ty niby kto jestes?%SPEECH_OFF%Kultysta podchodzi do straznikow, kosci chrzescza pod jego butami. Pochyla sie do ucha jednego z nich i zaczyna szeptac. Gdy konczy, straznik odchyla sie.%SPEECH_ON%Testuje jego cierpliwosc?%SPEECH_OFF%Kultysta kiwa glowa i mowi.%SPEECH_ON%A zakonczenie tego, co ma byc wieczne, przyniesie ci tak straszliwe konsekwencje, ze uznasz, iz samo zycie bylo wielkim bledem, i tak jest, wszystko nim jest.%SPEECH_OFF%Straznicy spogladaja po sobie. Jeden podaje korony, jakby to byla pokuta. Chetnie je bierzesz i, co dziwne, sa cieple w dotyku. %cultist% odwraca sie i kiwa glowa, szepczac cos o determinacji istot daleko poza twoim pojeciem. Patrzysz na kosci, ale nie pamietasz, by kompania kupowala kury, ani nie pamietasz zadnych kurnikow po drodze.%SPEECH_ON%To wyglada jak-%SPEECH_OFF%Anatomista mowi za glosno o tym, na co to wyglada, wiec przerywasz mu, po czym pospiesznie wycofujesz sie z ulicy, zanim z tego dziwnego zamieszania wyniknie cos gorszego.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s just get out of here.",
+					Text = "Wynosmy sie stad.",
 					function getResult( _event )
 					{
 						return 0;
@@ -192,13 +192,13 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Cultist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Initiative"
+					text = _event.m.Cultist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] Inicjatywy"
 				});
 				this.World.Assets.addMoney(75);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]75[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]75[/color] Koron"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Cultist.getImagePath());
@@ -207,13 +207,13 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Killer",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{You open your mouth to answer when suddenly a woman shrieks. Both parties look over to see a half-naked man twisting at the end of a rope, his neck shunted to an angle that is most incompatible with life. However, it wasn\'t the fall that killed him: his body has been mangled and mutilated, carved up with all manner of torturous devices. There\'s a figure atop a balcony looking down, a pair of wild eyes staring out the depths of a cowl and a smirk beneath them belying any notion of a guilty conscious. The guards shout and give chase. Laughing, the figure disappears from the balcony. You listen to the footrace between guards and murderer as it carries further into %townname%. Soon, all that you can hear is the occasional spatter of blood dripping off the corpse and the lapping of alley dogs who\'d come to lick it up. %anatomist% stares at it closely. He opens his mouth, but %killer% the killer on the run suddenly appears.%SPEECH_ON%Hey there captain. Thought you might enjoy these.%SPEECH_OFF%He hands over some armor attachments, the metals covered in blood. It need not take a genius to know where this item came from, but it is still yet quite nice and worth keeping. You tell him to clean it off and take it to inventory. The man nods. He takes a long great breath and lets it all out on a wide grin.%SPEECH_ON%Don\'t you just love life in the big city?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Otwierasz usta, by odpowiedziec, gdy nagle kobieta krzyczy. Obie strony patrza i widza polnagiego mezczyzne wijacego sie na koncu liny, z szyja wygieta pod katem niezgodnym z zyciem. Jednak nie upadek go zabil: jego cialo jest okaleczone i zmasakrowane, pociete wszelkimi narzedziami tortur. Na balkonie stoi sylwetka, a dzikie oczy spogladaja spod kaptura, a pod nimi kpiacy usmiech, ktory wyklucza jakakolwiek skruche. Straznicy krzycza i ruszaja w pogon. Smiejac sie, postac znika z balkonu. Sluchasz pogoni straznikow za morderca, gdy oddala sie w %townname%. Wkrotce slyszysz tylko odglos kropli krwi spadajacych z ciala i mlaskanie psow z zaulka, ktore przyszly ja wylizac. %anatomist% wpatruje sie w zwloki. Otwiera usta, ale %killer% zbieg pojawia sie nagle.%SPEECH_ON%Hej, kapitanie. Pomyslalem, ze ci sie to spodoba.%SPEECH_OFF%Podaje ci kilka dodatkow do zbroi, metal pokryty krwia. Nie trzeba geniusza, by wiedziec, skad to pochodzi, ale i tak jest to ladne i warte zachowania. Kazesz mu to wyczyscic i zabrac do ekwipunku. Mezczyzna kiwa glowa. Bierze dlugi oddech i wypuszcza go z szerokim usmiechem.%SPEECH_ON%Czy nie kochasz zycia w wielkim miescie?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well at least someone is living it up.",
+					Text = "Przynajmniej ktos dobrze sie bawi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -231,7 +231,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.World.Assets.getStash().add(item);
 				this.Characters.push(_event.m.Anatomist.getImagePath());

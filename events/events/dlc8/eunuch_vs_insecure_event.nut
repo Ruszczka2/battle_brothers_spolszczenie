@@ -6,17 +6,17 @@ this.eunuch_vs_insecure_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.eunuch_vs_insecure";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%eunuch% the eunuch and %insecure% the, rather obviously so, insecure sellsword are sitting and having a chat. The eunuch shakes his head.%SPEECH_ON%Your timidity makes no sense to me, %insecure%. Look at me. I don\'t even have the only reason to live as a man. When the wind blows against my pants, all I feel is cloth against my inner thigh. Do you have any idea how awfully strange that feels? But do you see me complaining? No. When half the company goes to the local whorehouse and dogs a broad, do you see me sitting in a corner crying? Of course not!%SPEECH_OFF%%insecure% nods.%SPEECH_ON%You know what, you dickless bastard, you\'re right. If you can pound air and be happy about it, then I can not be so afraid and small.%SPEECH_OFF%The insecure sellsword gets up and leaves. %eunuch% purses his lips.%SPEECH_ON%Pound air? Did this dumb farker just tell me I pound air? Hey, hey! I\'ll pound yer mother!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%eunuch% eunuch i %insecure%, raczej oczywiscie niepewny siebie najemnik, siedza i rozmawiaja. Eunuch kreci glowa.%SPEECH_ON%Twoja niesmialosc nie ma dla mnie sensu, %insecure%. Spójrz na mnie. Nie mam nawet jedynego powodu, by zyc jak mezczyzna. Gdy wiatr wieje w moje spodnie, czuje tylko material na wewnetrznej stronie uda. Masz pojecie, jak okropnie to dziwnie jest? A widzisz, zebym narzekal? Nie. Gdy polowa kompanii idzie do burdelu i gniecie dziwke, widzisz mnie siedzacego w kacie i placzacego? Oczywiscie, ze nie!%SPEECH_OFF%%insecure% przytakuje.%SPEECH_ON%Wiesz co, ty bezjajeczny skurczybyku, masz racje. Skoro ty mozesz uderzac w powietrze i byc z tego zadowolony, to ja moge nie byc tak przestraszony i maly.%SPEECH_OFF%Niepewny najemnik wstaje i odchodzi. %eunuch% zaciska usta.%SPEECH_ON%Uderzac w powietrze? Czy ten glupi dureń powiedzial, ze uderzam w powietrze? Hej, hej! Uderze jego matke!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Don\'t let his insecurity rub off on you, %eunuch%.",
+					Text = "Nie pozwol, by jego niepewnosc na ciebie przeszla, %eunuch%.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,10 +33,10 @@ this.eunuch_vs_insecure_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/traits/trait_icon_03.png",
-						text = _event.m.Insecure.getName() + " is no longer insecure"
+						text = _event.m.Insecure.getName() + " nie jest juz Niepewny siebie"
 					}
 				];
-				_event.m.Eunuch.worsenMood(1.0, "Was disrespected");
+				_event.m.Eunuch.worsenMood(1.0, "Okazano mu brak szacunku");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Eunuch.getMoodState()],

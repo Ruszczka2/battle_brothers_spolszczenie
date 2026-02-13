@@ -6,17 +6,17 @@ this.gladiator_origin_vs_oathtaker_event <- this.inherit("scripts/events/event",
 	function create()
 	{
 		this.m.ID = "event.gladiator_origin_vs_oathtaker";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%oathtaker% and %gladiator% are ruminating over the proper use of weaponry. The Oathtaker is inclined to believe that every swing of the sword is powered by an intent to do good. The gladiator retorts that keeping oneself alive is the greatest good, such that the start of a sword swing already has good intentions, therefore its finality must not be for oneself, but instead for the crowd that is watching. Raising an eyebrow, %oathtaker% says,%SPEECH_ON%You think battles are shows, gladiator?%SPEECH_OFF%%gladiator% grins as he leans in.%SPEECH_ON%Life itself is a show, Oathtaker, and I\'m its greatest star.%SPEECH_OFF%You regret listening in on the conversation.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%oathtaker% i %gladiator% rozmyslaja o wlasciwym uzyciu broni. Swietobiorca sklania sie ku przekonaniu, ze kazde machniecie mieczem jest napedzane zamiarem czynienia dobra. Gladiator odpowiada, ze utrzymanie sie przy zyciu to najwieksze dobro, wiec poczatek zamachu miecza ma juz dobre intencje, a jego final nie powinien byc dla samego siebie, lecz dla tlumu, ktory patrzy. Unoszac brew, %oathtaker% pyta,%SPEECH_ON%Uwazasz, ze bitwy to przedstawienia, gladiatorze?%SPEECH_OFF%%gladiator% usmiecha sie, pochylajac sie blizej.%SPEECH_ON%Zycie samo w sobie jest przedstawieniem, Swietobiorco, a ja jestem jego najwieksza gwiazda.%SPEECH_OFF%Zalujesz, ze w ogole sluchales tej rozmowy.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s a horror show, truly.",
+					Text = "To prawdziwy horror.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,7 +28,7 @@ this.gladiator_origin_vs_oathtaker_event <- this.inherit("scripts/events/event",
 			{
 				this.Characters.push(_event.m.Gladiator.getImagePath());
 				this.Characters.push(_event.m.Oathtaker.getImagePath());
-				_event.m.Gladiator.improveMood(1.0, "Assured of his importance in the world");
+				_event.m.Gladiator.improveMood(1.0, "Upewnil sie o swoim znaczeniu na swiecie");
 
 				if (_event.m.Gladiator.getMoodState() > this.Const.MoodState.Neutral)
 				{

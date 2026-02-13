@@ -3,18 +3,18 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.artifact_reliquary_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy sie zblizasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{The estate towers over the area with pure cut stoneworks and colored roofing tiles. It has something most royalty cannot afford, which is a sense of taste. With grass trimmed low, the lawn seemed almost like a footprint unto an unkept land. Statues of people dot the landscape, capturing poses both regaling and regretful. Amidst the crowd of sculptures are hedges cut into the shapes of animals and fountains with clear water in them. The company stands outside a black fence, idling and staring through the bars like farm animals. %randombrother% shakes his head and spits.%SPEECH_ON%Yeah, it\'s all quite pretty and all, but no deep pocket fark is just gonna leave the front gate open like this for no reason, ya know? I think either somebody has already ran through the place, or something awful is inside and it don\'t mind the occasional innocent passerby.%SPEECH_OFF%You agree. When looking further in, you can see the path leads to a bowled out decline, as if the gods had knuckled a bit of the earth itself with overhangs and escarpments encircling the area. If you\'re going to explore such a place, you know in your heart that you might not make it back. You could still leave now and return later...}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Posiadlosc wyrasta nad okolica z czystych cietych kamiennych blokow i kolorowych dachowek. Ma cos, na co wiekszosci krolewskich nie stac: wyczucie smaku. Przystrzyzona trawa sprawia, ze trawnik wyglada niemal jak odcisk stopy na zaniedbanej ziemi. Posagi ludzi rozsiane po okolicy uchwycily pozy wzniosle i zalosne. Wsrod rzezb sa zywoploty przyciete w ksztalty zwierzat i fontanny z przejrzysta woda. Kompania stoi przy czarnym ogrodzeniu, bezczynnie wpatrujac sie przez kraty jak zwierzeta gospodarskie. %randombrother% kreci glowa i spluwa.%SPEECH_ON%No, ladne to wszystko, ale zaden bogacz z glebokimi kiesami nie zostawi tak otwartej bramy bez powodu, wiesz? Mysle, ze albo ktos juz tu wszystko przelecial, albo w srodku jest cos paskudnego i nie przeszkadza mu przypadkowy przechodzien.%SPEECH_OFF%Zgadzasz sie. Gdy patrzysz dalej, widzisz, ze sciezka prowadzi do wyzlobionego zaglebienia, jakby bogowie uderzyli knykciami w sama ziemie, zostawiajac nawisy i skarpy otaczajace teren. Jesli masz zwiedzac takie miejsce, wiesz w sercu, ze mozesz juz nie wrocic. Wciaz mozesz odejsc i wrocic pozniej...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Onward, men.",
+					Text = "Naprzod, ludzie.",
 					function getResult( _event )
 					{
 						return "B";
@@ -22,7 +22,7 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let\'s come back later.",
+					Text = "Wrocmy tu pozniej.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -39,10 +39,10 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 			{
 				if (this.World.Statistics.getFlags().get("ReliquaryFightDefeated"))
 				{
-					this.Text = "[img]gfx/ui/events/event_182.png[/img]{You venture into the bowled soil, and in turn the flesh golems predictably take to this \'venue\' and settle about the rim of the escarpment. The Grand Diviner stands center, unusual staff in hand, and a grin on his face.%SPEECH_ON%Welcome back. Let the mothering continue.%SPEECH_OFF%}";
+					this.Text = "[img]gfx/ui/events/event_182.png[/img]{Wchodzisz w wyzlobione zaglebienie, a golemy z ciala, przewidywalnie, traktuja to \'miejsce\' jak arene i rozsiadaja sie na krawedzi skarp. Wielki Wrozbita stoi po srodku z niezwykla laska w dloni i usmiechem na twarzy.%SPEECH_ON%Witajcie znowu. Niech macierzenie trwa.%SPEECH_OFF%}";
 					this.Options = [
 						{
-							Text = "This motherfarker...",
+							Text = "Ten matkojebca...",
 							function getResult( _event )
 							{
 								local location = this.World.State.getLastLocation();
@@ -64,13 +64,13 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{You order the company into the moon-like escarpment. Suddenly, a man wearing a tall black helm swings himself around a statue. He wield an unusual staff, a trail of green mist wafting behind its glassy top.%SPEECH_ON%Welcome! Have you come to understand my work? It is in the warmth of mothering that one finds the primal instincts, the flashes of intellect which all creatures, from the feeblest worms to the most soaring birds, understand, and without which man shall never have supremacy over all things. I, a man, am mother now. I, a man, have broken the order, and on this instinct native to all creatures, I shall rise, wombless, ascending above the architecture of nature herself, and become nurturer to all! I, the Grand Diviner, the one who shall moisten this dry earth with manifestations...%SPEECH_OFF%Monologuing madmen wielding strange staffs rarely have good intentions. You draw your sword and, seeing your blade, the Grand Diviner goes quiet. He nods and swings his arms wide, a flash of green sparking from his staff. Creatures like those you’ve seen before – gelatinous, bulbous assemblages of vague appendages – all start shuffling out from behind the statues. More yet encircle the entire company, occupying spaces on high, saddling themselves onto the lip of the escarpments like visitors in a coliseum, ever-ready to watch a good fight. The Grand Diviner grins and points his staff at you.%SPEECH_ON%Smile, sellsword, for when you die I shall mother you back into this world, and you shall find nurture in the bosom of my power!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Wydajesz rozkaz, by kompania weszla do ksiezycowatej kotliny. Nagle mezczyzna w wysokim czarnym helmie wychyla sie zza posagu. Dzierzy niezwykla laske, a za jej szklistym wierzcholkiem snuje sie smuga zielonej mgly.%SPEECH_ON%Witajcie! Czy przyszliscie zrozumiec moje dzielo? To w cieple macierzenia odnajduje sie pierwotne instynkty, blyski rozumu, ktore wszelkie stworzenie, od najlichszych robakow po najwyzej szybujace ptaki, pojmuje, a bez ktorych czlowiek nigdy nie zapanuje nad wszystkim. Ja, mezczyzna, jestem teraz matka. Ja, mezczyzna, zlamalem porzadek, i na tym instynkcie, wlasciwym wszystkim stworzeniom, wzniose sie, bez lona, ponad architekture samej natury i stane sie opiekunem wszystkich! Ja, Wielki Wrozbita, ten, ktory nawilzy ta sucha ziemie manifestacjami...%SPEECH_OFF%Monologujacy szaleniec z dziwna laska rzadko ma dobre intencje. Dobytasz miecza i, widzac ostrze, Wielki Wrozbita milkne. Kiwa glowa i szeroko rozklada ramiona, a z jego laski strzela blysk zieleni. Stworzenia takie jak te, ktore widziales wczesniej - zelatynowe, bulwiaste zlepki niejasnych konczyn - zaczynaja wygramalac sie zza posagow. Kolejne okrazaja cala kompanie, zajmujac miejsca wysoko, siadajac na krawedziach skarp niczym widzowie w koloseum, gotowi obejrzec dobra walke. Wielki Wrozbita usmiecha sie i wskazuje na ciebie laska.%SPEECH_ON%Usmiechnij sie, najemniku, bo gdy umrzesz, odrodze cie z powrotem w tym swiecie, a ty znajdziesz opieke w lonie mojej mocy!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "To battle!",
+					Text = "Do boju!",
 					function getResult( _event )
 					{
 						local location = this.World.State.getLastLocation();
@@ -95,13 +95,13 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Victory",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{The Diviner is found in the mire of his creatures, a wounded man strewn across the afterbirth of his own manifestations. His heavy helmet guards his neck, but you simply crouch down and lever the point of your sword under it, like lifting a bucket with a dagger. He coughs and says.%SPEECH_ON%You can\'t truly kill me no more than you can kill mother nature.%SPEECH_OFF%You nod and drive the steel through his chin until you hear its tip touch the top of his helm. Blood spews over the neckguard. Standing, you say,%SPEECH_ON%I am mother nature.%SPEECH_OFF%%randombrother% laughs.%SPEECH_ON%Nice line, captain. Sorta dumb if you think about it too much but-%SPEECH_OFF%You cut the sellsword off and tell him and the rest of the men to loot the place. Surely the gothic estate has some valuables that will have made this venture worthwhile. As for the Diviner\'s curious staff still yet swirling with a faint green glow, you have it taken to inventory. As you prepare to leave, a report comes in that a number of the \'flesh golems\' ran out of the gothic estate and fled into the wild. Their progenitor is dead, but it seems you may still yet continue to find his creations.}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Wrozbita lezy w grzeszawisku swoich stworzen, ranny czlowiek rozrzucony po poporodziu wlasnych manifestacji. Jego ciezki helm chroni szyje, ale po prostu kucasz i podwazasz go koncem miecza, jakby podnosil wiadro sztyletem. Zakrztusza sie i mowi.%SPEECH_ON%Nie mozesz mnie prawdziwie zabic bardziej, niz mozesz zabic matke nature.%SPEECH_OFF%Kiwacz glowa i wbijasz stal w jego podbrodek, az slyszysz, jak koniec dotyka szczytu helmu. Krew tryska po ochraniaczu szyi. Wstajesz i mowisz,%SPEECH_ON%Jestem matka natura.%SPEECH_OFF%%randombrother% smieje sie.%SPEECH_ON%Niezla kwestia, kapitanie. Troche glupia, jak sie nad tym zastanowic, ale-%SPEECH_OFF%Ucinasz najemnika i kazesz jemu oraz reszcie ludzi spladrowac miejsce. Gotycka posiadlosc z pewnoscia skrywa jakies kosztownosci, ktore sprawia, ze ta wyprawa byla warta zachodu. A co do dziwnej laski Wrozbity, wciaz wirujacej slaba zielona poswiata, kazesz zabrac ja do ekwipunku. Gdy szykujesz sie do odejscia, przychodzi meldunek, ze czesc \'golemow z ciala\' wybiegla z gotyckiej posiadlosci i uciekla w dzicz. Ich protoplasta nie zyje, ale wyglada na to, ze wciaz mozesz natrafiac na jego tworow.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "At least the most monstrous of the lot is dead.",
+					Text = "Przynajmniej najbardziej potworny z nich nie zyje.",
 					function getResult( _event )
 					{
 						return 0;
@@ -111,7 +111,7 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 
 				if (this.World.State.getLastLocation() != null)
 				{
@@ -124,20 +124,20 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Defeat",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{You\'re losing the fight, and you\'d rather not lose more - for it seems against the Grand Diviner that death may not be the end of you. Cutting your losses, you call a retreat and break your way out of the encirclement. The \'watchful\' flesh golems mockingly groan at you like a displeased coliseum audience.\n\nChoking on laughter, the Grand Diviner holds his ground and fades into the background. A lick of wispy green mist reaches for you, forming the shape of a mouth that grins, and then all is gone and you are back out of the place. Returning is a large ask, but you now feel determined to see this madman slain.}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Przegrywacie walke i wolisz nie tracic wiecej - wyglada na to, ze przeciwko Wielkiemu Wrozbicie smierc moze nie byc twoim koncem. Odcinajac straty, zarzadzasz odwrot i przebijasz sie z okrazenia. \'Czujne\' golemy z ciala pomrukuja szyderczo jak niezadowolona widownia w koloseum.\n\nKrztuszac sie smiechem, Wielki Wrozbita trwa na miejscu i znika w tle. Smuga zielonej mgly siega po ciebie, uklada sie w ksztalt ust, ktore sie usmiechaja, po czym wszystko znika i znowu jestes poza tym miejscem. Powrot to spore wyzwanie, ale teraz czujesz determinacje, by zobaczyc tego szalenca martwego.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Will probably have to kill him to get him out of our dreams anyway.",
+					Text = "Pewnie i tak trzeba go zabic, zeby przestal nawiedzac nam sny.",
 					function getResult( _event )
 					{
 						return 0;
@@ -147,7 +147,7 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 				this.World.Statistics.getFlags().set("ReliquaryFightDefeated", true);
 
 				if (this.World.State.getLastLocation() != null)

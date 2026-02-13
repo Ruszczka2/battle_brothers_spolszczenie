@@ -5,17 +5,17 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.captured_oathbringer";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{One of the men rushes into your tent exclaiming that someone has been caught sneaking into the camp. You ask if it\'s a thief. The man shakes his head.%SPEECH_ON%No, worse. He\'s an Oathbringer.%SPEECH_OFF%Sonuvabitch. You jump to your feet and rush out, finding this interloper already tied up and being battered by the Oathtakers. You break it up, coming to stand before him.%SPEECH_ON%Oathbringer, where is Anselm\'s jaw?%SPEECH_OFF%The man spits on your boot and tells you he\'d never give that up, and that the Oathtakers can go to the hells where they belong, and that Anselm himself would walk them there if he could. This blaspheming of Young Anselm\'s name draws gasps from you and your men. %randombrother% leans over.%SPEECH_ON%Just give the word, captain, and we\'ll show this Oathbringer the error of his ways.%SPEECH_OFF%}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Jeden z ludzi wpada do twojego namiotu, krzyczac, ze zlapano kogos, kto zakradal sie do obozu. Pytasz, czy to zlodziej. Mezczyzna kreci glowa.%SPEECH_ON%Nie, gorzej. To Slubodawca.%SPEECH_OFF%Skurczybyk. Zrywasz sie na nogi i wybiegasz, znajdujac intruza juz zwiazanego i bitego przez Swietobiorcow. Przerywasz to i stajesz przed nim.%SPEECH_ON%Slubodawco, gdzie jest szczeka Anselma?%SPEECH_OFF%Mezczyzna pluje ci na but i mowi, ze nigdy jej nie odda, a Swietobiorcy moga isc do piekla, gdzie ich miejsce, i ze sam Anselm by ich tam zaprowadzil, gdyby mogl. To bluznierstwo w imie Mlodego Anselma wywoluje westchnienia twoje i twoich ludzi. %randombrother% pochyla sie.%SPEECH_ON%Daj tylko slowo, kapitanie, a pokazemy temu Slubodawcy, jak bardzo sie myli.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Kill him.",
+					Text = "Zabij go.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Torture him.",
+					Text = "Torturuj go.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 80 ? "C" : "D";
@@ -31,7 +31,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let him go.",
+					Text = "Puszcz go.",
 					function getResult( _event )
 					{
 						return "E";
@@ -46,13 +46,13 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{You draw your sword and plunge it into the man\'s heart.%SPEECH_ON%Anselm will not await you in the next life, heretic.%SPEECH_OFF%The man\'s body sags around the steel, his eyes briefly wide before settling into a half-lidded gaze at the ground. You draw out your sword and the %companyname% cheers.%SPEECH_ON%Death to all Oathbringers!%SPEECH_OFF%The Oathtakers draw out their swords and raise them to the skies as a ravenous mood sweeps over the company.}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Wyciagasz miecz i wbijasz go w serce mezczyzny.%SPEECH_ON%Anselm nie bedzie na ciebie czekal w nastepnym zyciu, heretyku.%SPEECH_OFF%Cialo mezczyzny opada na ostrze, oczy na chwile szerokie, po czym gasna w polprzymknietym spojrzeniu na ziemie. Wyciagasz miecz, a %companyname% wiwatuje.%SPEECH_ON%Smierc wszystkim Slubodawcom!%SPEECH_OFF%Swietobiorcy dobywaja mieczy i wznosza je ku niebu, gdy po kompanii przechodzi żarliwy zapał.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Justice has been done.",
+					Text = "Sprawiedliwosci stalo sie zadość.",
 					function getResult( _event )
 					{
 						return 0;
@@ -72,7 +72,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.World.Assets.getStash().add(item);
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -81,7 +81,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" || !bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(0.75, "Pleased you slew an Oathbringer heretic");
+						bro.improveMood(0.75, "Cieszy sie, ze zabiles heretyka Slubodawce");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -94,7 +94,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().isOffendedByViolence())
 					{
-						bro.worsenMood(0.5, "Disliked that you slew a captive in cold blood");
+						bro.worsenMood(0.5, "Nie spodobalo mu sie, ze zabiles pojmanego z zimna krwia");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -111,13 +111,13 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{You nod.%SPEECH_ON%Torture him until his tongue points us to Young Anselm\'s jaw. I don\'t care how you do it, just do it.%SPEECH_OFF%Turning away, the prisoner screams out that Anselm would not approve. He then just starts screaming indiscriminately and eventually shouting out things that don\'t make a whole lot of sense. You retire to your tent, bouncing your foot to the screams that now take a rhythmic sort of wailing. Eventually, %randombrother% reappears. He has with him some weapons and armor you know weren\'t in inventory.%SPEECH_ON%He led us to a location that had these hidden away, but Anselm\'s jawbone is still missing. I\'m afraid the Oathbringers must have it in their own camp, but he wouldn\'t say where that was. We, uh, we had some difficulties communicating after we cut his tongue out.%SPEECH_OFF%Sighing, you ask where the prisoner is now. The man clears his throat.%SPEECH_ON%Oh he went all white and fell over. He\'s dead, sir.%SPEECH_OFF%We did right by Young Anselm, at least.}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Kiwasz glowa.%SPEECH_ON%Torturuj go, az jego jezyk wskaze szczeke Mlodego Anselma. Nie obchodzi mnie jak, po prostu to zrob.%SPEECH_OFF%Odwracajac sie, jeniec krzyczy, ze Anselm by tego nie pochwalil. Potem zaczyna krzyczec bez ladu i skladu, az w koncu wykrzykuje rzeczy, ktore nie maja wiekszego sensu. Wracasz do namiotu, podrygujac stopa w rytm krzykow, ktore teraz przybieraja formę rytmicznego zawodzenia. W koncu %randombrother% wraca. Ma ze soba bron i zbroje, o ktorych wiesz, ze nie bylo ich w ekwipunku.%SPEECH_ON%Zaprowadzil nas do miejsca, gdzie to bylo ukryte, ale szczeka Anselma wciaz zaginiona. Obawiam sie, ze Slubodawcy musza ja miec w swoim obozie, ale nie powiedzial, gdzie to bylo. My, eee, mielismy pewne trudnosci z komunikacja po tym, jak wycielismy mu jezyk.%SPEECH_OFF%Wzdychajac, pytasz, gdzie jest jeniec. Mezczyzna odchrząkuje.%SPEECH_ON%No, zrobil sie caly bialy i sie przewrocil. Nie zyje, panie.%SPEECH_OFF%Przynajmniej postapilismy slusznie wobec Mlodego Anselma.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll find the jawbone yet.",
+					Text = "Jeszcze odnajdziemy szczeke.",
 					function getResult( _event )
 					{
 						return 0;
@@ -137,7 +137,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.World.Assets.getStash().add(item);
 				potential_loot = [
@@ -151,7 +151,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				this.World.Assets.getStash().add(item);
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -160,7 +160,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" || !bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(1.25, "Tortured an Oathbringer heretic");
+						bro.improveMood(1.25, "Torturowal heretyka Slubodawce");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -173,7 +173,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().isOffendedByViolence())
 					{
-						bro.worsenMood(0.75, "Is horrified that you ordered a captive tortured");
+						bro.worsenMood(0.75, "Jest przerazony, ze kazales torturowac pojmanego");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -190,13 +190,13 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{You tell the men to torture the man for information. If there\'s one thing every Oathbringer knows, it\'s where Young Anselm\'s jawbone is and that is something every Oathtaker wishes to find out. The man screams as he\'s dragged away, and you retire to your tent to drown out the annoyances of things like shrieking and crying which really put a crimp on your mood. A moment later, %torturer% enters the tent, blood on his shirt. He looks to speak, then collapses to the ground. Another Oathtaker comes in saying the prisoner escaped, shanking his torturer before fleeing. You tell the men to help %torturer% before he bleeds out.%SPEECH_ON%Those damned Oathbringers have no honor! We\'ll find and kill him dead, so sayeth Young Anselm, so sayeth us all!%SPEECH_OFF%You speak with a clenched jaw, and an air of theatrics. The truth is the bastard got away and those Oathbringers are hard to catch, the rats that they are. You just hope that %torturer% survives.}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Mowisz ludziom, by torturowali mezczyzne dla informacji. Jesli jest cos, co kazdy Slubodawca wie, to gdzie znajduje sie szczeka Mlodego Anselma, a to jest cos, czego kazdy Swietobiorca chce sie dowiedziec. Mezczyzna krzyczy, gdy go odciagaja, a ty wracasz do namiotu, by zagluszyc irytujace dzwieki wrzaskow i placzu, które psuja ci nastroj. Chwile pozniej %torturer% wchodzi do namiotu z krwia na koszuli. Chce cos powiedziec, po czym pada na ziemie. Inny Swietobiorca wchodzi i mowi, ze jeniec uciekl, dźgajac oprawce nozem przed ucieczka. Kazesz ludziom pomoc %torturer%, zanim sie wykrwawi.%SPEECH_ON%Ci przekleci Slubodawcy nie maja honoru! Znajdziemy go i zabijemy, tak rzecze Mlody Anselm, tak rzeczemy my wszyscy!%SPEECH_OFF%Mowisz to ze scisnietymi zebami, teatralnym tonem. Prawda jest taka, ze drań uciekł, a Slubodawcow trudno zlapac, takie z nich szczury. Pozostaje miec nadzieje, ze %torturer% przezyje.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn Oathbringer scum.",
+					Text = "Cholerne Slubodawcze scum.",
 					function getResult( _event )
 					{
 						return 0;
@@ -210,7 +210,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Torturer.getName() + " suffers heavy wounds"
+					text = _event.m.Torturer.getName() + " odnosi powazne rany"
 				});
 				local injury = _event.m.Torturer.addInjury([
 					{
@@ -222,21 +222,21 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Torturer.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Torturer.getName() + " odnosi " + injury.getNameOnly()
 				});
-				_event.m.Torturer.worsenMood(0.5, "Let a captive Oathbringer escape");
+				_event.m.Torturer.worsenMood(0.5, "Pozwolil uciec pojmanemu Slubodawcy");
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{This man has nothing of value. You tell the men to cut him loose. They protest, saying that an Oathbringer has but one choice, to submit to the Oathtakers and to the true Final Path, or to die. There is also room for one who returns Young Anselm\'s jawbone, but the codes on how to treat an Oathbringer who does that have not yet been worked out. But, as far as this man is concerned, he is of no real use and you\'re in no mood for bloodspilling. Just as you reiterate to cut him loose, %randombrother% cuts the man\'s throat, much to the cheering of the others.%SPEECH_ON%You said cut him, right captain? Right?%SPEECH_OFF%You realize the Oathtaker is covering for you, and to keep denying that the Oathbringer had to die might put you in a prickly situation. You nod.%SPEECH_ON%Yes, of course, the little rat had to die, same as all the pathless Oathbringers! And die they all shall!%SPEECH_OFF%The men roar again though you have a feeling that a few will remember your ridiculous suggestion to let an Oathbringer walk.}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Ten czlowiek nie ma nic wartosciowego. Mowisz ludziom, by go uwolnili. Protestuja, twierdzac, ze Slubodawca ma tylko jeden wybor: podporzadkowac sie Swietobiorcom i prawdziwej Ostatecznej Sciezce albo umrzec. Jest tez miejsce dla tego, kto zwroci szczeke Mlodego Anselma, ale zasady postepowania z takim Slubodawca wciaz nie zostaly ustalone. Ale jesli chodzi o tego czlowieka, nie ma z niego pozytku, a ty nie masz ochoty na rozlew krwi. Gdy powtarzasz, by go uwolnili, %randombrother% podrzyna mu gardlo, wywolujac wiwaty pozostalych.%SPEECH_ON%Powiedziales, by go przeciac, prawda, kapitanie? Prawda?%SPEECH_OFF%Zrozumiales, ze Swietobiorca kryje ciebie, a dalsze zaprzeczanie, ze Slubodawca musial zginac, mogloby postawic cie w niezrecznej sytuacji. Kiwasz glowa.%SPEECH_ON%Tak, oczywiscie, ten maly szczur musial zginac, jak wszyscy Slubodawcy bez sciezki! I wszyscy oni zginą!%SPEECH_OFF%Ludzie znow rycza, choc masz przeczucie, ze kilku zapamieta twoja niedorzeczna propozycje, by puscić Slubodawce wolno.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I should be more careful what I say.",
+					Text = "Powinienem uwazac na to, co mowie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -252,7 +252,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" || this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(0.75, "You almost let a captive Oathbringer roam free");
+						bro.worsenMood(0.75, "Prawie wypusciles pojmanego Slubodawce");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

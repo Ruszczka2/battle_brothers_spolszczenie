@@ -6,17 +6,17 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_vs_dog";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% the anatomist comes up to you with a horrific idea: he wants to take one of the company\'s dogs and open it up. Just to be sure, you ask him if he means to kill the dog. He throws his head side to side as though to weigh the options.%SPEECH_ON%I believe from the canine\'s perspective it would be best if it had expired before we go dissecting it.%SPEECH_OFF%The anatomist explains that the use of dogs for studies isn\'t unusual, and that this requirement will be for the betterment of understanding direwolves which, by some long stretch, a dog is no doubt related. You can\'t imagine the slaughtering of a company dog will go well with the rest of the men and tell him to find one of the hundreds of mangy mutts moping around. He shakes his head.%SPEECH_ON%All dogs are almost assuredly cousin to the direwolf, but a fighting dog is of a different breed, and most assuredly the closest to the matter at heart.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% anatomista podchodzi do ciebie z okropnym pomyslem: chce wziac jednego z psow kompanii i go rozciac. Dla pewnosci pytasz, czy zamierza psa zabic. Kreci glowa na boki, jakby wazyl opcje.%SPEECH_ON%Uwazam, ze z perspektywy psa najlepiej, by zdechl, zanim zaczniemy go rozcinac.%SPEECH_OFF%Anatomista wyjasnia, ze wykorzystywanie psow do badan nie jest niczym niezwyklym i ze to wymaganie pomoze lepiej zrozumiec wilkory, z ktorymi pies bez watpienia jest spokrewniony. Nie potrafisz sobie wyobrazic, by zabicie psa kompanii spodobalo sie reszcie ludzi, i każesz mu znalezc jednego z setek parszywych kundli włoczacych sie w okolicy. Kreci glowa.%SPEECH_ON%Wszystkie psy sa niemal na pewno kuzynami wilkorów, ale pies bojowy to inna rasa i z pewnoscia najblizsza temu, co nas interesuje.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Yes, do it.",
+					Text = "Tak, zrob to.",
 					function getResult( _event )
 					{
 						if (_event.m.Houndmaster != null)
@@ -35,7 +35,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, I don\'t think so.",
+					Text = "Nie, tak nie sadze.",
 					function getResult( _event )
 					{
 						return "D";
@@ -51,13 +51,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_37.png[/img]{You nod and tell the man to do what he must. As far as you\'re concerned, you\'re here to help these anatomists do their business, and sometimes that might mean cutting into the company funds. In this case, a fighting dog just happens to represent those funds. %anatomist% is pleased and sets off to do it. You hear the jangle of the dog\'s collar followed by a brief yelp. You tune out the sounds that come after.\n\n%anatomist% eventually reappears with bloodied hands. He nods and says that the specimen was satisfactory and that much has been learned from its fighting spirit. You tell him to bury the dog. He seems disgusted, but you glare at him and he backs off, saying he\'ll give it a proper burial.}",
+			Text = "[img]gfx/ui/events/event_37.png[/img]{Kiwasz glowa i mowisz, by zrobil, co musi. Z twojej perspektywy jestes tu, by pomagac tym anatomistom w ich pracy, a czasem oznacza to naruszenie funduszy kompanii. W tym wypadku pies bojowy akurat je reprezentuje. %anatomist% jest zadowolony i rusza, by to zrobic. Slyszysz brzek obrozy psa, a potem krotkie skomlenie. Pozostale dzwieki zagluszasz w glowie.\n\n%anatomist% w koncu wraca z zakrwawionymi dlonmi. Kiwal glowa i mowi, ze okaz byl zadowalajacy i wiele nauczyli sie z jego bojowego ducha. Kazesz mu pochowac psa. Wyglada na zniesmaczonego, ale ty gromisz go wzrokiem i ustępuje, mowiac, ze zapewni mu godny pochowek.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest in peace, dog.",
+					Text = "Spoczywaj w pokoju, psie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -73,7 +73,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/level.png",
-					text = _event.m.Anatomist.getName() + " levels up"
+					text = _event.m.Anatomist.getName() + " awansuje"
 				});
 				local numWardogsToLose = 1;
 				local stash = this.World.Assets.getStash().getItems();
@@ -87,7 +87,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 						break;
 					}
@@ -108,7 +108,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = "ui/items/" + item.getIcon(),
-								text = "You lose " + item.getName()
+								text = "Tracisz " + item.getName()
 							});
 							break;
 						}
@@ -119,13 +119,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_19.png[/img]{You give %anatomist% the go ahead. He smiles like a child given his first gift. As he heads off, you wonder if you\'ve made the wrong choice. You hear the anatomist wrangling with the dog, the clinking of its collar and the growling of it being roughed up. You await the yelp, only to hear instead a that\'s definitely human, and even a little bit feminine. As you race over to the scene, a large dog bolts past. You find %anatomist% on the ground holding his hand. Undeterred or perhaps trying to find some educational value, the anatomist mutters sweet scientific nothings to himself.%SPEECH_ON%Ah, I think that proves that maybe it did have a little direwolf in its blood.%SPEECH_OFF%Regardless of what %anatomist% could glean from a bleeding wound, the dog itself is nowhere to be found. No doubt it even understand that such a betrayal did not emerge from nothing. If there\'s direwolf in that dog, then there\'s also regular dog in that dog, and even a dog knows when its masters have betrayed it.}",
+			Text = "[img]gfx/ui/events/event_19.png[/img]{Dajesz %anatomist% zgode. Usmiecha sie jak dziecko, ktore dostalo pierwszy prezent. Gdy odchodzi, zastanawiasz sie, czy nie podjales zlej decyzji. Slyszysz, jak anatomista szamocze sie z psem, brzek obrozy i warkniecie, gdy jest szarpany. Czekasz na skomlenie, ale zamiast tego slyszysz glos zdecydowanie ludzki i nawet nieco kobiecy. Gdy pędzisz na miejsce, duzy pies przemyka obok. Zastajesz %anatomist% na ziemi, trzymajacego sie za dlon. Niezrażony, albo szukajac wartości edukacyjnej, anatomista mruczy do siebie slodkie naukowe bzdury.%SPEECH_ON%Ach, to chyba dowodzi, ze jednak mial w sobie troche krwi wilkora.%SPEECH_OFF%Niezaleznie od tego, co %anatomist% mogl wywnioskowac z krwawiacej rany, psa nigdzie nie ma. Bez watpienia nawet on zrozumial, ze taka zdrada nie pojawia sie znikad. Jesli w tym psie jest wilkor, to jest w nim tez zwykly pies, a nawet pies wie, kiedy panowie go zdradzili.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Get that wound cleaned.",
+					Text = "Opatrz te rane.",
 					function getResult( _event )
 					{
 						return 0;
@@ -146,7 +146,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Anatomist.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Anatomist.getName() + " odnosi " + injury.getNameOnly()
 				});
 				local numWardogsToLose = 1;
 				local stash = this.World.Assets.getStash().getItems();
@@ -160,7 +160,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 						break;
 					}
@@ -181,7 +181,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = "ui/items/" + item.getIcon(),
-								text = "You lose " + item.getName()
+								text = "Tracisz " + item.getName()
 							});
 							break;
 						}
@@ -192,13 +192,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% sighs, but does not offer much protest and ultimately submits to your denial and walks away with a bit of a slouch. You ponder if he had a tail if it would find the place between his legs just then. Just then the prospect of his scientific designs, the dog itself, appears wagging its tail and carrying a stick in its mouth. It puts the stick down at your feet, but when you go to pick the stick up the dog growls and snatches it away. Maybe these strange creatures should have been studied...}",
+			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% wzdycha, ale nie protestuje zbyt mocno i ostatecznie godzi sie z twoja odmowa, odchodzac lekko zgarbiony. Zastanawiasz sie, czy gdyby mial ogon, schowalby go teraz miedzy nogi. Wtedy pojawia sie obiekt jego naukowych zapędow - sam pies, machajac ogonem i niosac patyk w pysku. Odkłada patyk u twoich stop, ale gdy sie po niego schylasz, pies warczy i porywa go. Moze te dziwne stworzenia powinny byly byc badane...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, you little mutt...",
+					Text = "Dobra, ty maly kundlu...",
 					function getResult( _event )
 					{
 						return 0;
@@ -209,19 +209,19 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Anatomist.getImagePath());
-				_event.m.Anatomist.worsenMood(0.5, "Was denied the opportunity to study a wardog.");
+				_event.m.Anatomist.worsenMood(0.5, "Odmowiono mu okazji zbadania psa bojowego.");
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You let the %anatomist% do as he desires. If your job is to help them along in their scientific duties, then incidents like this are going to be a part of that. A little off a ways you can hear the anatomist wrestling with the dog and trying to pin it down for a quick death. But then you hear a man\'s voice bark in from the side, and the wrestling takes on a distinctly human tone, with more shouts and curses, and voices pleading for reprieve. You realize that you had totally forgotten about the company houndmaster. You hurry over to find %houndmaster% whipping the anatomist with a dog leash and throwing the occasional punch.%SPEECH_ON%Does this hurt, huh? How about this? Tell me, do you learn as you bleed? What do you think your teeth will taste like if I turn them into farkin\' powder, huh?%SPEECH_OFF%Sighing, you go over and pull the houndmaster off the anatomist. %houndmaster% defends himself, saying that %anatomist% was trying to kill one of the dogs. You handwave this away, saying that perhaps there must have been some miscommunication somewhere. You look down at the bloodied anatomist and tell him to stay far away from the dogs and before he can bloodily gargle some protest about how it was you who said he could do it, you simply turn and walk away.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Pozwalasz, by %anatomist% robil, co chce. Jesli twoim zadaniem jest pomagac im w naukowych obowiazkach, to takie incydenty sa tego czescia. Z oddali slyszysz, jak anatomista szamocze sie z psem i probuje go unieruchomic na szybka smierc. Ale potem slyszysz meski glos z boku, a szamotanie nabiera wyraznie ludzkiego charakteru, z krzykami, przeklenstwami i glosami proszacymi o litosc. Uswiadamiasz sobie, ze calkiem zapomniales o psim przewodniku kompanii. Biegniesz i widzisz, jak %houndmaster% smaga anatomiste smycza i od czasu do czasu zadaje ciosy.%SPEECH_ON%Boli, co? A to? Powiedz mi, uczysz sie, kiedy krwawisz? Jak myslisz, jak beda smakowac twoje zeby, jesli przerobie je na przeklety proch, co?%SPEECH_OFF%Wzdychajac, podchodzisz i odciągasz przewodnika psow od anatomisty. %houndmaster% broni sie, mowiac, ze %anatomist% probowal zabic jednego z psow. Zbywasz to machnieciem reki, twierdzac, ze musialo dojsc do jakiegos nieporozumienia. Spogladasz na zakrwawionego anatomiste i kazesz mu trzymac sie z dala od psow, a zanim zdazy wybulgotac protest o tym, ze to ty dales mu zgode, po prostu odwracasz sie i odchodzisz.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Oops.",
+					Text = "Ups.",
 					function getResult( _event )
 					{
 						return 0;
@@ -237,7 +237,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Anatomist.getName() + " suffers heavy wounds"
+					text = _event.m.Anatomist.getName() + " odnosi powazne rany"
 				});
 			}
 

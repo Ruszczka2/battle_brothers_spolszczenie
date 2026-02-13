@@ -6,17 +6,17 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.anatomist_dead_knight";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_75.png[/img]{%anatomist% the anatomist spots something gleaming a little ways off the main path. You walk over and take a look. There\'s something dark and metallic in the distance. Perhaps a knight\'s corpse? Though it would make you wonder how he got there by himself. %anatomist% ponders aloud if perhaps something could be learned from the body of presumably great martial prowess. You shake your head.%SPEECH_ON%Knights rarely die alone, and if they do they sure as shite don\'t keep their armor with them. It smells like a trap through and through.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_75.png[/img]{%anatomist% anatomista dostrzega coś błyszczącego nieco z boku głównej drogi. Podchodzisz i przyglądasz się. W oddali widać coś ciemnego i metalicznego. Może zwłoki rycerza? Choć zastanawiasz się, jak trafił tam sam. %anatomist% zastanawia się na głos, czy z ciała o domniemanej wielkiej sprawności bojowej nie dałoby się czegoś nauczyć. Kręcisz głową.%SPEECH_ON%Rycerze rzadko umierają sami, a jeśli już, to do cholery nie trzymają przy sobie pancerza. To śmierdzi pułapką od początku do końca.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s go get it.",
+					Text = "Chodźmy po to.",
 					function getResult( _event )
 					{
 						if (_event.m.Noble != null)
@@ -39,7 +39,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No.",
+					Text = "Nie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -55,13 +55,13 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{Against your better judgment you go and take a look. You feel quite naked walking across the open ground to the knight, like a thief who steals by reaching all the way across the aisle. When you get to the knight, you pause and look around. No movement in the land around you. No bandits firing off a trap. No wolfpack finding its prey. You shrug and look down. The man is covered in decent armor and carrying a nice, albeit used sword. His face is dried out and the eyes gone. Dry birdshit crusts on the scuff of his chest armor. You order %anatomist% to get him out of the armor and carry it all back the wagon.%SPEECH_ON%What? Why do I have to do it?%SPEECH_OFF%You tell him if he wants to study the body, then the price is he has to strip it down in the first place. Walking off, you tell him that when he puts it in the inventory to make sure to not crush any of the foodstuffs cause that armor does look a bit heavy. Also be sure to clean the bird shit off, too. %anatomist% sighs, but he\'s still happy to have access to the corpse of one \'hero.\' You sometimes wonder what the anatomist would do if he found you dead like this...}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{Wbrew lepszemu osądowi idziesz sprawdzić. Czujesz się dość naga, idąc przez otwarty teren do rycerza, jak złodziej sięgający przez cały korytarz. Gdy docierasz do rycerza, zatrzymujesz się i rozglądasz. Brak ruchu w okolicy. Żadnych bandytów, żadnej zasadzki. Żadnej watahy wilków. Wzruszasz ramionami i patrzysz w dół. Mężczyzna ma przyzwoity pancerz i niezły, choć używany miecz. Jego twarz jest wyschnięta, a oczu brak. Zaschnięte ptasie odchody tworzą skorupę na otarciach napierśnika. Każesz %anatomist% wydobyć go ze zbroi i zanieść wszystko z powrotem do wozu.%SPEECH_ON%Co? Czemu ja mam to zrobić?%SPEECH_OFF%Mówisz mu, że jeśli chce badać ciało, to ceną jest rozebranie go. Odchodząc, mówisz, by wkładając to do ekwipunku, nie zgniatał żywności, bo pancerz wygląda na ciężki. I niech zmyje te ptasie odchody. %anatomist% wzdycha, ale i tak cieszy się z dostępu do zwłok jednego \"bohatera\". Czasem zastanawiasz się, co anatomista zrobiłby, gdyby znalazł ciebie martwego w taki sposób...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Easy enough.",
+					Text = "Prościzna.",
 					function getResult( _event )
 					{
 						return 0;
@@ -82,7 +82,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/weapons/arming_sword");
 				item.setCondition(item.getConditionMax() / 2 - 1);
@@ -90,9 +90,9 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Anatomist.improveMood(0.75, "Got to examine the corpse of a heroic knight");
+				_event.m.Anatomist.improveMood(0.75, "Mógł zbadać zwłoki bohaterskiego rycerza");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -107,13 +107,13 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{You set out to the pile of armor which you hope is not at all the trap it looks like. %anatomist% is practically at your hip, his eyes eating up the prospective \'science\' set before him, and his hands have a tome open and are fervently writing into it already.\n\nSurprisingly, %noble% comes along, the man of noble background seeming to recognize the pile of armor itself. Indeed, as you get close he exclaims that it is a good friend of his from days gone by. You nod solemnly, but still say that the armor would be best used with the company instead of just wasting away here on the ground. The man nods.%SPEECH_ON%I think he would prefer the same. I\'ll get it off him.%SPEECH_OFF%Before he begins, %noble% turns to %anatomist% and tells him that he better not even dare to touch his friend. You go back to the wagon with the anatomist, who you\'ve given the duty of carrying the armor itself. The now sweaty anatomist is upset that he did not get a chance to see the corpse, and %noble% is noticeably upset that the corpse itself was a good friend. All in all, it seems this damn dead man has caused more grief than he was possibly worth.}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{Wyruszasz w stronę sterty pancerza, mając nadzieję, że to nie pułapka, na jaką wygląda. %anatomist% idzie niemal przy twoim boku, oczy pożerają mu tę perspektywną \"naukę\", a dłonie trzymają otwartą księgę, do której już gorliwie pisze.\n\nKu zaskoczeniu, idzie z wami %noble%, człowiek ze szlacheckiego rodu, który zdaje się rozpoznawać sam pancerz. Rzeczywiście, gdy się zbliżacie, wykrzykuje, że to jego dobry przyjaciel sprzed lat. Kiwasz głową z powagą, ale i tak mówisz, że pancerz lepiej posłuży kompanii, zamiast niszczeć tu na ziemi. Mężczyzna przytakuje.%SPEECH_ON%Myślę, że wolałby to samo. Zdejmę go z niego.%SPEECH_OFF%Zanim zacznie, %noble% odwraca się do %anatomist% i mówi mu, żeby nawet nie ważył się dotknąć jego przyjaciela. Wracasz z anatomistą do wozu, bo dałeś mu zadanie niesienia samego pancerza. Spocony anatomista jest zły, że nie miał szansy obejrzeć zwłok, a %noble% wyraźnie przejęty, że zwłoki należały do dobrego przyjaciela. Ostatecznie wygląda na to, że ten przeklęty trup przyniósł więcej żalu, niż był wart.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "At least we got the armor.",
+					Text = "Przynajmniej mamy pancerz.",
 					function getResult( _event )
 					{
 						return 0;
@@ -135,9 +135,9 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Anatomist.worsenMood(1.0, "Was denied the opportunity to examine a promising corpse");
+				_event.m.Anatomist.worsenMood(1.0, "Odebrano mu szansę zbadania obiecujących zwłok");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -148,7 +148,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Noble.worsenMood(2.0, "Saw the decaying remains of an old friend");
+				_event.m.Noble.worsenMood(2.0, "Zobaczył rozkładające się szczątki starego przyjaciela");
 
 				if (_event.m.Noble.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -163,13 +163,13 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_21.png[/img]{You decide to go take a look. As you cross the seemingly open plain you get a feeling you\'re being watched. Something about all this just feels wrong. Halfway across, you turn to %anatomist% and tell him that it\'s time to doubleback. He shakes his head and says that you\'ve already come so far, why stop now? Before you can answer, an arrow whistles past your ear and the anatomist falls backward clutching his shoulder.\n\nYou gather the man up and drag him back to the wagon, arrows landing in the ground around you, tufts of dirt thrown over your boots, until they start hitting the wagon itself. Gathering up the company for a counter-attack, you see the would-be ambushers think better of their chances and run off, a few of them carrying the knight\'s armor with them. As you thought, the whole thing was a brigandine honeypot. %anatomist% will live, thankfully, and he\'s already writing in his book about the experience or perhaps, judging by his fascination with the arrow sticking out of him, writing about his grisly wound.}",
+			Text = "[img]gfx/ui/events/event_21.png[/img]{Decydujesz się podejść. Gdy idziesz przez pozornie otwartą równinę, masz wrażenie, że ktoś cię obserwuje. Coś w tym wszystkim jest nie tak. W połowie drogi odwracasz się do %anatomist% i mówisz mu, że trzeba zawrócić. Kręci głową i mówi, że doszliście już tak daleko, więc czemu teraz się cofać? Zanim zdążysz odpowiedzieć, strzała śwista obok ucha, a anatomista pada do tyłu, trzymając się za ramię.\n\nZbierasz go i wleczesz z powrotem do wozu, strzały wbijają się w ziemię wokół was, kępy ziemi pryskają na buty, aż zaczynają uderzać w sam wóz. Zbierając kompanię do kontrataku, widzisz, jak domniemani napastnicy uznają, że to nie ma sensu, i uciekają, a kilku z nich zabiera pancerz rycerza. Jak sądziłeś, to była brigandzka pułapka. %anatomist% na szczęście przeżyje i już zapisuje w swojej księdze to doświadczenie, albo, sądząc po jego fascynacji strzałą tkwiącą w nim, zapisuje coś o swojej makabrycznej ranie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Next time I\'ll listen to my intuition.",
+					Text = "Następnym razem posłucham intuicji.",
 					function getResult( _event )
 					{
 						return 0;
@@ -184,9 +184,9 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Anatomist.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Anatomist.getName() + " cierpi na " + injury.getNameOnly()
 				});
-				_event.m.Anatomist.improveMood(1.0, "Got to study an interesting wound up close");
+				_event.m.Anatomist.improveMood(1.0, "Mógł z bliska zbadać ciekawą ranę");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -201,13 +201,13 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{Against your better judgment you go and take a look. You feel quite naked walking across the open ground to the knight, like a thief who steals by reaching all the way across the aisle. Nearing the corpse, you look back to ask the %anatomist% what his plans are for the dead body. You see the anatomist is standing stiff, his head back and eyes open, a nervous and jittery hand pointing forward. You look back to see the corpse moving, slowly gathering itself off the ground, moaning, croaking. The helm juts forward as filth pours through its openings. You draw your sword.\n\nThe black knight pushes itself up off the ground, its gauntlets falling away to reveal pale flesh beneath. It turns to look at you and there\'s a slight hue of red glowing somewhere in that frothing helm. You slash the sword down and the creature\'s head falls free, clanking against the ground as air sputters out of its neckholes. Sheathing your sword, you tell %anatomist% that if he wants something to study, well, there it is.%SPEECH_ON%Also be sure to carry its armor back to the wagon. Make sure to use your legs when you bend, don\'t want you hurting your back or anything.%SPEECH_OFF%You walk past the anatomist. He stares, gobsmacked, then closes his mouth and pulls out a quill pen and some scrolls. His fear is put behind him, and his usual self comes to the fore.%SPEECH_ON%A fresh specimen, up close, recently deceased, or perhaps it is re-deceased? Either way...we can learn so much from this.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Wbrew lepszemu osądowi idziesz i sprawdzasz. Czujesz się dość naga, idąc przez otwarty teren do rycerza, jak złodziej sięgający przez cały korytarz. Zbliżając się do zwłok, odwracasz się, by zapytać %anatomist%, co planuje z ciałem. Widzisz, że anatomista stoi sztywno, z odchyloną głową i szeroko otwartymi oczami, a nerwowa, drgająca dłoń wskazuje do przodu. Odwracasz się i widzisz, jak zwłoki się poruszają, powoli podnosząc się z ziemi, jęcząc, rechocząc. Hełm wysuwa się do przodu, a przez jego szczeliny sączy się plugastwo. Dobijasz się po miecz.\n\nCzarny rycerz podnosi się z ziemi, a jego rękawice opadają, ukazując blade ciało pod spodem. Obraca się ku tobie, a w pieniącym się hełmie jarzy się delikatna czerwień. Rąbiesz mieczem i głowa stwora spada, brzęcząc o ziemię, a z szyi ulatuje powietrze. Chowając miecz, mówisz %anatomist%, że jeśli chce czegoś do badania, to proszę bardzo.%SPEECH_ON%I pamiętaj, żeby zanieść jego zbroję do wozu. Używaj nóg, kiedy się schylasz, nie chcę, żebyś sobie kręgosłup uszkodził.%SPEECH_OFF%Mijasz anatomistę. Ten patrzy osłupiały, potem zamyka usta i wyciąga pióro oraz zwoje. Strach mija, a na pierwszy plan wraca jego zwykła postawa.%SPEECH_ON%Świeży okaz, z bliska, niedawno zmarły, a może ponownie zmarły? Tak czy inaczej...możemy się z tego wiele nauczyć.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You can also learn to bend with your knees, chop chop.",
+					Text = "Możesz też nauczyć się schylać na nogach, raz-dwa.",
 					function getResult( _event )
 					{
 						return 0;
@@ -228,14 +228,14 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				_event.m.Anatomist.addXP(200, false);
 				_event.m.Anatomist.updateLevel();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Experience"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] doświadczenia"
 				});
 			}
 

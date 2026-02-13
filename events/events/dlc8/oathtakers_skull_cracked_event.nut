@@ -5,17 +5,17 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.oathtakers_skull_cracked";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% bursts into the tent with trembling hands holding Young Anselm\'s skull.%SPEECH_ON%It\'s broken!%SPEECH_OFF%You jump out of your seat and take a look at Young Anselm\'s holy remains. There\'s a sliver of a crack going down the back of the skull. At first it doesn\'t look too bad, but when you stick a pinky finger in and lift, the bone splits apart. You both gasp and set the skull on the table. There\'s no doubt the skull could be broken apart with only a little bit more effort.%SPEECH_ON%What should we do? How do we fix it?%SPEECH_OFF%You ponder the question very carefully. The last time this happened Young Anselm\'s jawbone broke off, and so too did break the Oathtakers - with one group remaining as the Oathtakers, and the other forming the savage blasphemers, the Oathbringers. You\'re not going to let that happen again.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% wpada do namiotu z drzacymi dlonmi, trzymajac czaszke Mlodego Anselma.%SPEECH_ON%Jest peknieta!%SPEECH_OFF%Zrywasz sie z miejsca i ogladzasz swiete szczatki Mlodego Anselma. Po tyle czaszki biegnie cienka szczelina. Na pierwszy rzut oka nie wyglada to zle, ale gdy wsuwasz maly palec i podnosisz, kosci rozchodza sie. Oboje wzdychacie i kladziecie czaszke na stole. Nie ma watpliwosci, ze wystarczy niewiele, by ja rozlamac.%SPEECH_ON%Co mamy zrobic? Jak to naprawic?%SPEECH_OFF%Rozwazasz to bardzo ostroznie. Ostatnim razem, gdy to sie stalo, odlamala sie szczeka Mlodego Anselma, a wraz z nia pekli Swietobiorcy - jedna grupa zostala Swietobiorcami, a druga stala sie dzikimi bluzniercami, Slubodawcami. Nie pozwolisz, by stalo sie to znowu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fix it.",
+					Text = "Napraw to.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -31,13 +31,13 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{You take out a piece of string and coat it in ivy and sap. Then you gently lift Young Anselm\'s crack and run your finger down it with more sap. %oathtaker% stares nervously. Satisfied, you then insert the string along the crack and set the skull\'s parts back down, chomping down on the string and the sticky ivy with it.  You stand back, looking at your work. %oathtaker% swallows.%SPEECH_ON%I...I don\'t think anyone will notice.%SPEECH_OFF%You actually worry that it may be preferable that they find the crack in the skull absent of one\'s attempt to fix it, than to see the handiwork of some skulking skull restorer who tried to sneak one by. Either way, it\'s done, and Young Anselm\'s honor has been restored. %oathtaker% wipes the sweat from his brow.%SPEECH_ON%I believe this to have been a test, captain, and that Young Anselm has seen us through. His strength flows through me, and no words are capable of describing the honor I feel right now.%SPEECH_OFF%What? Young Anselm probably had no idea about sticky saps and ivies, and he presumably knew even less now that he\'s an unspeaking skull. But...you leave %oathtaker% to his interpretations, as shortchanging as they are to yourself.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{Wyciagasz kawalek sznurka i pokrywasz go bluszczem oraz zywica. Potem delikatnie rozchylasz pekniecie Mlodego Anselma i przeciagasz po nim palec z kolejna porcja zywicy. %oathtaker% patrzy nerwowo. Zadowolony, wkladasz sznurek wzdloz pekniecia i skladasz czesci czaszki, przyciskajac sznurek razem z kleistym bluszczem. Cofasz sie i patrzysz na swoje dzielo. %oathtaker% przelyka sline.%SPEECH_ON%Ja... ja nie sadze, zeby ktokolwiek zauwazyl.%SPEECH_OFF%Zastanawiasz sie nawet, czy lepiej byloby, gdyby znaleziono pekniecie bez prob naprawy, niz gdyby ktos zobaczyl robote skradajacego sie majstra, ktory probowal cos przemycic. Tak czy inaczej, zrobione - honor Mlodego Anselma zostal przywrocony. %oathtaker% ociera pot z czola.%SPEECH_ON%Wierze, ze to byla proba, kapitanie, i ze Mlody Anselm nas przez nia przeprowadzil. Jego sila przeplywa przeze mnie i nie ma slow, ktore opisalyby zaszczyt, jaki teraz czuje.%SPEECH_OFF%Co? Mlody Anselm pewnie nie mial pojecia o lepkich zywicach i bluszczu, a zapewne wiedzial jeszcze mniej teraz, gdy jest niema czaszka. Ale... zostawiasz %oathtaker% jego interpretacjom, choc dla ciebie sa one zbyt skromne.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I should have been an undertaker.",
+					Text = "Powinienem byc grabarzem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -52,7 +52,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Oathtaker.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Resolve"
+					text = _event.m.Oathtaker.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Determinacji"
 				});
 
 				if (!_event.m.Oathtaker.getSkills().hasSkill("trait.determined"))
@@ -62,11 +62,11 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = trait.getIcon(),
-						text = _event.m.Oathtaker.getName() + " is now Determined"
+						text = _event.m.Oathtaker.getName() + " jest teraz Zdeterminowany"
 					});
 				}
 
-				_event.m.Oathtaker.improveMood(1.0, "Had his faith in Young Anselm redoubled");
+				_event.m.Oathtaker.improveMood(1.0, "Podwoila mu sie wiara w Mlodego Anselma");
 
 				if (_event.m.Oathtaker.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -83,13 +83,13 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{You hush %oathtaker% and tell him to close the tent tarp. Taking the skull, you set it on the table and immediately work to fix it. Unfortunately, the second your hands put in any kind of effort, the crack widens and there\'s even fragments that fly off and scatter to who knows where. You let go of the skull as though it had burned you, Anselm\'s grace clopping hollowly on the table. %oathtaker% looks at you.%SPEECH_ON%What now? What should we do? Maybe we should take the best part and run off and form a new band?%SPEECH_OFF%Scoffing, you ask the fool if he takes you for an Oathtaker or an Oathbringer. He swallows and confirms the former. Damn right, and there\'s only one thing to do if that is the case: claim it is Young Anselm\'s desire to have this here skull crack, and that it is a display of how the %companyname% are not owning up to being true Oathtakers. He agrees, and you do end up showing the rest of the men the skull and its newly acquired bony demarcations.\n\nAt first they are fearful of its crack, but soon agree with you, that Young Anselm\'s influence is waning, not because of the First Oathtaker himself, but because you all, the last of the Oathtakers, are not owning up to your Oaths! And that you all must do better to follow the path of a true Oathtaker! The men roar and cheer, their convictions renewed by Young Anselm\'s crack.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{Ucichasz %oathtaker% i kazesz mu zamknac plotno namiotu. Biorac czaszke, kladziesz ja na stole i od razu probujesz ja naprawic. Niestety, w chwili gdy twoje dlonie wkladaja jakikolwiek wysilek, pekniecie sie poszerza i odlamki odlatuja nie wiadomo dokad. Puszczasz czaszke, jakby cie oparzyla, a laska Anselma stukajaca pusto o stol. %oathtaker% patrzy na ciebie.%SPEECH_ON%Co teraz? Co mamy zrobic? Moze powinnismy zabrac najlepsza czesc i uciekac, zakladajac nowa bande?%SPEECH_OFF%Z pogarda pytasz glupca, czy bierze cie za Swietobiorce czy Slubodawce. Przelyka i potwierdza to pierwsze. Wlasnie tak, i jesli tak jest, pozostaje tylko jedno: twierdzic, ze Mlody Anselm chcial, aby czaszka pekla, i ze to dowod, jak bardzo %companyname% nie dorasta do bycia prawdziwymi Swietobiorcami. Zgadza sie, a ty pokazujesz reszcie ludzi czaszke i jej nowo powstale kostne pekniecia.\n\nNa poczatku boja sie tego pekniecia, ale wkrotce zgadzaja sie z toba, ze wplyw Mlodego Anselma slabnie nie przez Pierwszego Swietobiorce, lecz dlatego, ze wy wszyscy, ostatni Swietobiorcy, nie dotrzymujecie swoich Slubow! I ze musicie bardziej trzymac sie sciezki prawdziwego Swietobiorcy! Ludzie rycza i wiwatuja, a ich przekonanie odnawia pekniecie Mlodego Anselma.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice save.",
+					Text = "Dobra improwizacja.",
 					function getResult( _event )
 					{
 						return 0;
@@ -105,7 +105,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(0.25, "Convinced he hasn\'t upheld the oaths as well as he should");
+						bro.worsenMood(0.25, "Przekonany, ze nie dotrzymal slubow tak dobrze, jak powinien");
 
 						if (this.Math.rand(1, 100) <= 33)
 						{
@@ -113,7 +113,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 16,
 								icon = "ui/icons/bravery.png",
-								text = _event.m.Oathtaker.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+								text = _event.m.Oathtaker.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 							});
 						}
 
@@ -124,12 +124,12 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = trait.getIcon(),
-								text = bro.getName() + " gains Deathwish"
+								text = bro.getName() + " zyskuje Smiercze Zyczenie"
 							});
 						}
 					}
 
-					bro.improveMood(0.75, "Was compelled to redouble his efforts following the oaths");
+					bro.improveMood(0.75, "Zostal zmuszony do podwojenia wysilkow w dotrzymywaniu slubow");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

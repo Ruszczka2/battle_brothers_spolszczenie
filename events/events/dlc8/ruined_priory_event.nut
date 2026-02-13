@@ -5,17 +5,17 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ruined_priory";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{You come across a monk standing before a priory. The walls of the building have been shattered, slabs of stone splintering out of the foundations, smaller stones turned to powder in the ensuing collapse. He explains that an earthquake shunted the place entirely, breaking chunks off and nearly bringing the whole place to the ground. He sighs.%SPEECH_ON%The worst of it isn\'t just the material damage, the worst of it is that the earthquake shook the faithful themselves, loosening their reserve for the suffering which is inherent in our day to day. They\'ve not yet returned to me, for they fear that the old gods have chosen our grounds as a point of punishment for some heretofore unrealized error.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Napotykasz mnicha stojacego przed klasztorem. Mury budynku zostaly roztrzaskane, plyty kamienia wyprysly z fundamentow, a mniejsze kamienie zamienily sie w pyl podczas zawalenia. Wyjasnia, ze trzesienie ziemi przesunelo caly obiekt, odrywajac kawalki i niemal zwalajac wszystko na ziemie. Wzdycha.%SPEECH_ON%Najgorsze nie sa same zniszczenia, najgorsze jest to, ze trzesienie wstrzasnelo samymi wiernymi, luzujac ich rezerwe na cierpienie, ktore jest wpisane w nasza codziennosc. Jeszcze do mnie nie wrocili, bo boja sie, ze starzy bogowie wybrali nasze ziemie jako punkt kary za jakis nieuswiadomiony blad.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We have gold. Could you rebuild with 2500 crowns?",
+					Text = "Mamy zloto. Czy odbudujesz za 2500 koron?",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 80 ? "B" : "C";
@@ -23,7 +23,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We have tools. I think 40 should be enough?",
+					Text = "Mamy narzedzia. Chyba 40 wystarczy?",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 75 ? "D" : "E";
@@ -31,7 +31,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This isn\'t our problem.",
+					Text = "To nie nasz problem.",
 					function getResult( _event )
 					{
 						return "F";
@@ -46,13 +46,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{You pay the monk monies to fix up the priory. He breaks into tears, saying that he did not expect such men of honor to even exist in this world, much less come and meet him personally. The very fact that you are here, and that you are so giving, is surely a sign that the old gods are not punishing him.%SPEECH_ON%Not only will these crowns allow me to rebuild, but such generosity will be seen by the locals as a sign that the old gods are not in fact punishing us! Here, please take this. It just barely survived the rubble, but perhaps you\'ll be able to make more use of it in time than we ever could.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Placisz mnichowi pieniadze na naprawe klasztoru. Zalewa sie lzami, mowiac, ze nie spodziewal sie, iz tacy honorowi ludzie w ogole istnieja na tym swiecie, a tym bardziej ze spotka ich osobiscie. Sam fakt, ze tu jestes i ze jestes tak szczodry, to znak, ze starzy bogowie go nie karza.%SPEECH_ON%Te korony nie tylko pozwola mi odbudowac, ale taka hojnosc zostanie uznana przez miejscowych za znak, ze starzy bogowie wcale nas nie karza! Prosze, wezmij to. Ledwo przetrwalo gruzy, ale moze z czasem lepiej je wykorzystasz niz my kiedykolwiek moglibysmy.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "All in a day\'s work.",
+					Text = "Taka nasza robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -67,7 +67,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] Koron"
 				});
 				local item = this.new("scripts/items/weapons/noble_sword");
 				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(60, 80) * 0.01));
@@ -75,7 +75,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -83,11 +83,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(0.75, "The company helped restore a priory");
+						bro.improveMood(0.75, "Kompania pomogla odnowic klasztor");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "The company helped restore a priory");
+						bro.improveMood(0.5, "Kompania pomogla odnowic klasztor");
 					}
 
 					if (bro.getMoodState() > this.Const.MoodState.Neutral)
@@ -104,13 +104,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{You put your hand on the monk\'s shoulder. He looks back, tears in his eyes, then glances at the purse of crowns you\'re holding out. He takes it and holds it tenderly as though he\'d never been gifted anything in his whole life.%SPEECH_ON%Is this...is this for the priory?%SPEECH_OFF%Nodding, you tell him to use it to rebuild the place. You start to suggest maybe also adding a modest belltower, but just as you start in with the poor architectural references, a man comes screaming down the road, his finger pointing, his feet beating a mean path.%SPEECH_ON%Don\'t trust that rat! He\'s a no good beggar!%SPEECH_OFF%When you look back, the supposed monk who was at the priory steps is already running off, sprinting down the road before jumping through a cut of nettles and disappearing into some brush and trees, money in hand and his cackling in the air. The man coming down the road throws his hands up.%SPEECH_ON%That squirrely wretch has been playing woe is me for weeks now. This here buildin\' is dead and gone, not been occupied since the greenskins wrecked it ten years ago. I know you was just lookin\' to do right, but there are many in this world who see your generosity as a big bullseye to aim for. S\'ry you got scammed, fellas.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{Kladziesz dlon na ramieniu mnicha. Spoglada na ciebie ze lzami w oczach, po czym zerka na sakiewke koron, ktora wyciagasz. Bierze ja i trzyma czule, jakby nigdy w zyciu niczego nie dostal.%SPEECH_ON%To... to dla klasztoru?%SPEECH_OFF%Kiwajac glowa, mowisz mu, by uzyla tego na odbudowe. Zaczynasz nawet sugerowac dodanie skromnej dzwonnicy, ale wlasnie gdy zaczynasz z tymi architektonicznymi wywodami, na droge wpada krzyczacy mezczyzna, wskazujac palcem, a jego stopy bija zawziecie ziemie.%SPEECH_ON%Nie ufajcie temu szczurowi! To nic niewarty zebr!%SPEECH_OFF%Gdy odwracasz sie z powrotem, rzekomy mnich z progow klasztoru juz ucieka, biegnac droga, przeskakujac przez pokrzywy i znikajac w krzakach i drzewach, z pieniedzmi w reku i rechotem w powietrzu. Mezczyzna z drogi rozklada rece.%SPEECH_ON%Ten sprytny lajdak od tygodni odgrywa nieszczescie. Ten budynek jest martwy i porzucony, nie byl zajety od czasu, gdy zielonoskory go zniszczyli dziesiec lat temu. Wiem, ze chcieliscie postapic dobrze, ale wielu na tym swiecie widzi wasza szczodrosc jako wielki cel do trafienia. Wybaczcie, ze was oszukano, panowie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Fark.",
+					Text = "Cholera.",
 					function getResult( _event )
 					{
 						return 0;
@@ -124,7 +124,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] Koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -132,11 +132,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" && this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.5, "The company had its kindness taken advantage of");
+						bro.worsenMood(0.5, "Dobrosc kompani zostala wykorzystana");
 					}
 					else
 					{
-						bro.worsenMood(0.75, "The company was duped out of crowns by a charlatan");
+						bro.worsenMood(0.75, "Kompania dala sie oszukac na korony przez szarlatana");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
@@ -153,13 +153,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_85.png[/img]{You believe the %companyname% has the tools and manpower to complete the task themselves. Smiling, you tell the monk that they will set forth and rectify the rectory. The holy man is beside himself as you and the Oathtakers gather up their equipment and start the fixing. It takes a few hours, but the blood and sweat is worth it. By the time you are finished, a throng of peasants have appeared, and they leave not only with the old gods on their minds, but the %companyname% being carried on their tongues. No doubt many will hear of the Oathtakers for days to come!}",
+			Text = "[img]gfx/ui/events/event_85.png[/img]{Uwazasz, ze %companyname% ma narzedzia i ludzi, by wykonac zadanie samodzielnie. Z usmiechem mowisz mnichowi, ze zabieracie sie do naprawy klasztoru. Swiety czlowiek jest zachwycony, gdy ty i Swietobiorcy zbieracie sprzet i zaczynacie prace. Trwa to kilka godzin, ale pot i krew sa tego warte. Gdy konczycie, pojawia sie gromada chlopow i odchodza nie tylko z myslami o starych bogach, ale i z imieniem %companyname% na ustach. Bez watpienia wielu uslyszy o Swietobiorcach przez nadchodzace dni!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "As it should be.",
+					Text = "Tak powinno byc.",
 					function getResult( _event )
 					{
 						return 0;
@@ -174,13 +174,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company gained renown"
+					text = "Kompania zyskala slawe"
 				});
 				this.World.Assets.addArmorParts(-40);
 				this.List.push({
 					id = 11,
 					icon = "ui/icons/asset_supplies.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] Tools and Supplies"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] Narzedzi i Zapasow"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -188,11 +188,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(1.0, "Helped repair a damaged priory");
+						bro.improveMood(1.0, "Pomogl naprawic uszkodzony klasztor");
 					}
 					else
 					{
-						bro.improveMood(0.75, "Helped repair a damaged priory");
+						bro.improveMood(0.75, "Pomogl naprawic uszkodzony klasztor");
 					}
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
@@ -209,13 +209,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{You grab the monk and pull him to his feet. You tell him that the %companyname% will repair the priory. He is tearful and happy, though warns that it might be beyond saving. Smiling, you tell him nothing is too great a task for the Oathtakers. A moment later, %injurybro% pushes on the busted wall only for the bottom half to spill inward and the top parts to spill out, promptly burying him in a pile of rubble. The company shouts in horror and goes to pull him out, and as they do the rest of the building collapses, folding unto itself in a stream of powdered stone. %injurybro% is rescued from the debris, albeit with a fair share of injuries.%SPEECH_ON%Well, I suppose it\'s the thought that counts.%SPEECH_OFF%The monk says, scratching the back of his head.%SPEECH_ON%Perhaps the old gods truly did seek to punish us here. But no matter, I think you still did right, and there is dignity in the attempt, is there not? I shall speak well of you, %companyname%.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Lapiesz mnicha i stawiasz go na nogi. Mowisz mu, ze %companyname% naprawi klasztor. Jest zaplakany i szczesliwy, choc ostrzega, ze moze byc juz nie do uratowania. Usmiechajac sie, mowisz mu, ze dla Swietobiorcow nie ma zadan zbyt wielkich. Chwile pozniej %injurybro% napiera na rozwalona sciane, ale dolna czesc zapada sie do srodka, a gorna rozsypuje na zewnatrz, natychmiast zasypujac go gruzem. Kompania krzyczy z przerazenia i rusza go wyciagnac, a wtedy reszta budynku wali sie, skladajac w strumien pylu kamiennego. %injurybro% zostaje uratowany z rumowiska, choc z niema porcja ran.%SPEECH_ON%Coz, chyba liczy sie intencja.%SPEECH_OFF%Mowi mnich, drapiac sie po karku.%SPEECH_ON%Byc moze starzy bogowie naprawde chcieli nas tu ukarac. Ale niewazne, uwazam, ze postapiliscie slusznie, a w probie jest godnosc, prawda? Bede dobrze o was mowil, %companyname%.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That could have gone better.",
+					Text = "Moglo pojsc lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -230,26 +230,26 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "The company gained renown"
+					text = "Kompania zyskala slawe"
 				});
 				_event.m.InjuryBro.addHeavyInjury();
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.InjuryBro.getName() + " suffers heavy wounds"
+					text = _event.m.InjuryBro.getName() + " doznaje ciezkich ran"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_64.png[/img]{You decide that this venture is not yours to have. This choice has a few of the men questioning your leadership. Sure, the Oaths can\'t all be followed at all times, but to not even spare a drop of sweat or ounce of crown to help a holy man and his flock? It is in skipping over the little things, the things that require no effort at all, that a man can find himself spiraling into being an uncaring savage.}",
+			Text = "[img]gfx/ui/events/event_64.png[/img]{Postanawiasz, ze ta sprawa nie jest twoja. Ta decyzja sprawia, ze kilku ludzi zaczyna kwestionowac twoje przywodztwo. Jasne, nie da sie dotrzymac wszystkich Slubow zawsze, ale zeby nie poswiecic nawet kropli potu ani odrobiny korony, by pomoc swietemu czlowiekowi i jego trzodzie? To w pominieciu drobnostek, tych rzeczy, ktore w ogole nie wymagaja wysilku, czlowiek moze stoczyc sie w bezdusznego dzikusa.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Yeah, yeah.",
+					Text = "Tak, tak.",
 					function getResult( _event )
 					{
 						return 0;
@@ -265,11 +265,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(0.75, "You refused to help a monk in need");
+						bro.worsenMood(0.75, "Odmowiles pomocy mnichowi w potrzebie");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.5, "You refused to help a monk in need");
+						bro.worsenMood(0.5, "Odmowiles pomocy mnichowi w potrzebie");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

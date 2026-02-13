@@ -6,17 +6,17 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.disowned_noble_vs_deserter";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%deserter% the deserter and %disowned% the disowned nobleman are staring at each other over a campfire. Being that the camp is a rather romanceless place, such a thing usually precedes one thing: a barn burner of a fight. But, instead, and rather whimsically, both men slowly start to smile. %deserter% points a finger.%SPEECH_ON%You were commanding %randomname%\'s levy out west, right?%SPEECH_OFF%The disowned nobleman laughs and smacks his knee.%SPEECH_ON%Sonuvabitch. I knew you looked familiar! You little deserter, you, do you have any idea how long we looked for your damn arse? One whole week! We did catch the rest, but you, you got away.%SPEECH_OFF%The deserter laughs.%SPEECH_ON%And now look at us, fighting for the same mercenary company! What are the odds, right? What\'d you do with the guys you did catch, by the way?%SPEECH_OFF%%disowned% shrugs.%SPEECH_ON%Oh, we hanged them, of course. In fact, it reminds me of an old trick that...well, let\'s just say, those were the days!%SPEECH_OFF%%deserter% stares into the fire for a moment. He looks up.%SPEECH_ON%Haha, yeah.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%deserter% dezerter i %disowned% wygnany szlachcic wpatruja sie w siebie ponad ogniskiem. Poniewaz oboz to raczej malo romantyczne miejsce, taka sytuacja zwykle zapowiada jedno: ostrą bijatyke. Ale zamiast tego, dość niespodziewanie, obaj mezczyzni zaczynaja sie usmiechac. %deserter% wskazuje palcem.%SPEECH_ON%Dowodziles pospolitym ruszeniem %randomname% na zachodzie, prawda?%SPEECH_OFF%Wygnany szlachcic smieje sie i klepie sie w kolano.%SPEECH_ON%Skurczybyk. Wiedzialem, ze wygladasz znajomo! Ty, maly dezerterze, masz pojecie, jak dlugo cie szukalismy? Caly tydzien! Reszte złapaliśmy, ale ty, ty uciekles.%SPEECH_OFF%Dezerter smieje sie.%SPEECH_ON%A teraz popatrz na nas, walczymy dla tej samej kompanii najemnikow! Jakie szanse, co? A co zrobiliscie z tymi, ktorych złapaliscie, tak przy okazji?%SPEECH_OFF%%disowned% wzrusza ramionami.%SPEECH_ON%Och, powiesilismy ich, oczywiscie. W sumie przypomina mi to stary trick, ktory... no, powiedzmy tylko, ze to byly czasy!%SPEECH_OFF%%deserter% przez chwile wpatruje sie w ogien. Podnosi wzrok.%SPEECH_ON%Haha, no tak.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s a small world, at least for outcasts.",
+					Text = "Swiat jest maly, przynajmniej dla wyrzutkow.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,7 +30,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Disowned.getImagePath());
 				_event.m.Deserter.getFlags().add("reminiscedWithDisowned");
 				_event.m.Disowned.getFlags().add("reminiscedWithDeserter");
-				_event.m.Disowned.improveMood(1.0, "Reminisced about old times");
+				_event.m.Disowned.improveMood(1.0, "Wspominal stare czasy");
 
 				if (_event.m.Disowned.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -47,9 +47,9 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Disowned.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack_boost + "[/color] Melee Skill"
+					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack_boost + "[/color] Umiejetnosci Walki Wrecz"
 				});
-				_event.m.Deserter.improveMood(1.0, "Reminisced about old times");
+				_event.m.Deserter.improveMood(1.0, "Wspominal stare czasy");
 
 				if (_event.m.Deserter.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -66,7 +66,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Deserter.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve_boost + "[/color] Resolve"
+					text = _event.m.Deserter.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve_boost + "[/color] Determinacji"
 				});
 			}
 
