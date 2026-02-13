@@ -5,17 +5,17 @@ this.fear_beasts_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.fear_beasts";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%brother% is carving a rabbit into a piece of bark. It\'s shaping up nicely until he angrily throws the whole thing into the campfire.%SPEECH_ON%Oh who the fark am I kidding? I wish I was out here hunting game! But this ain\'t game, these are monsters! Creatures of the night! Bullshit, all of it, where\'d they even come from? Well I tell you what, I ain\'t gonna be killed by one of them things! Not a farking chance!%SPEECH_OFF%The rest of the company stares at him as he comes down from the outburst. He quietly watches the rabbit carving churn and burn.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%brother% rzeźbi królika w kawałku kory. Całkiem nieźle mu idzie, aż w złości wrzuca całość do ogniska.%SPEECH_ON%Kogo ja, do farka, oszukuję? Wolałbym tu polować na zwierzynę! Ale to nie zwierzyna, to potwory! Stworzenia nocy! Bzdura, wszystko to bzdura, skąd one się w ogóle wzięły? Powiem wam jedno, nie dam się zabić przez jedno z tych rzeczy! Nie ma, kurwa, mowy!%SPEECH_OFF%Reszta kompanii wpatruje się w niego, gdy uspokaja się po wybuchu. Po cichu patrzy, jak rzeźba królika kręci się i pali.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This is taking a toll on the men.",
+					Text = "To odbija się na ludziach.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.fear_beasts_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Casualty.getName() + " now fears beasts"
+					text = _event.m.Casualty.getName() + " teraz boi się bestii"
 				});
 			}
 

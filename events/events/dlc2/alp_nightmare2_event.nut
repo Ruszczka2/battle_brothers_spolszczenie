@@ -7,17 +7,17 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.alp_nightmare2";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You go to check the inventory only to find %addict% splayed half-assed into a barrel, all four limbs hanging over the lip. There\'s a number of vials collected onto his belly. He stares at you with dim, reddened eyes, and the sockets holding them are purple as though all the blood had rushed there. You ask what the hell is going on and %addict% only smiles.%SPEECH_ON%Do, uh, do what you must. Er, captain. For I have already won.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Idziesz sprawdzić zapasy i znajdujesz %addict%a rozłożonego w beczce, półdupkiem, z wszystkimi czterema kończynami zwisającymi przez rant. Na jego brzuchu leży kilka fiol. Patrzy na ciebie matowymi, zaczerwienionymi oczami, a oczodoły są purpurowe, jakby cała krew napłynęła właśnie tam. Pytasz, co do diabła się dzieje, a %addict% tylko się uśmiecha.%SPEECH_ON%Rób, uh, co musisz. Eee, kapitanie. Bo ja już wygrałem.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I just hope you\'ll heal in time.",
+					Text = "Mam tylko nadzieję, że wyleczysz się na czas.",
 					function getResult( _event )
 					{
 						return "E";
@@ -25,7 +25,7 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This needs to stop now, %addict%.",
+					Text = "To musi się skończyć, %addict%.",
 					function getResult( _event )
 					{
 						return "D";
@@ -33,7 +33,7 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Enough. I\'ll have this bloody demon whipped out of you!",
+					Text = "Dosyć. Wypędzę z ciebie tego pieprzonego demona batem!",
 					function getResult( _event )
 					{
 						return "B";
@@ -47,20 +47,20 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.Item.getIcon(),
-					text = "You lose " + this.Const.Strings.getArticle(_event.m.Item.getName()) + _event.m.Item.getName()
+					text = "Tracisz " + this.Const.Strings.getArticle(_event.m.Item.getName()) + _event.m.Item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_38.png[/img]{You have %addict% taken to an ad-hoc whipping post. He lays limply against the wood, his fingers splayed out and pinching and clenching. He looks like he\'s chasing butterflies, and he carries that absent look when %otherbrother% hides him fierce with the whip.\n\n At first, the whipping does nothing, not even as it snaps across the man\'s back, leaving crescents of crimson. But after a few strikes, he wakes to reality and begins to scream. You come around to face him and ask if he\'ll swallow his addiction. He nods hurriedly. You let him get whipped again, and ask again, and again he nods. Another whipping, another question, another answer. Finally, %otherbrother% slackens the whip and coils it.%SPEECH_ON%He\'s dead, sir.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_38.png[/img]{Każesz odprowadzić %addict%a do prowizorycznego pala do chłosty. Zwisa bezwładnie na drewnie, palce ma rozpostarte, zaciska i rozluźnia. Wygląda, jakby gonił motyle, i ma nieobecne spojrzenie, gdy %otherbrother% smaga go zaciekle batem.\n\n Początkowo chłosta nic nie daje, nawet gdy bicz trzaska po jego plecach, zostawiając krwiste półksiężyce. Lecz po kilku razach wraca do rzeczywistości i zaczyna krzyczeć. Podchodzisz i pytasz, czy połknie swoje uzależnienie. Gorączkowo kiwa głową. Pozwalasz go chłostać ponownie i pytasz znów, a on znów kiwa. Kolejna chłosta, kolejne pytanie, kolejna odpowiedź. W końcu %otherbrother% luzuje bicz i zwija go.%SPEECH_ON%Nie żyje, panie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What? Let me see!",
+					Text = "Co? Pokaż mi!",
 					function getResult( _event )
 					{
 						return "C";
@@ -75,7 +75,7 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Addict.getName() + " has died"
+					text = _event.m.Addict.getName() + " zginął"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -103,13 +103,13 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_39.png[/img]{You rush forward and go to lift the man\'s head up only for it to be a jug tied to a spear. Stepping back, you bump into %addict% who is sorting the inventory.%SPEECH_ON%Captain, you doing alright?%SPEECH_OFF%Nodding, you ask him how the stores of potions are doing. He grins.%SPEECH_ON%All accounted for. Should I count again?%SPEECH_OFF%You tell him to count something else and head to your tent for a drink. Turning around, a pale figure shifts away from one of the crates. You draw your sword and chase after it only to find a sheet billowing in the wind.}",
+			Text = "[img]gfx/ui/events/event_39.png[/img]{Rzucasz się do przodu i chcesz unieść głowę mężczyzny, ale okazuje się, że to dzbanek przywiązany do włóczni. Cofając się, wpadasz na %addict%a, który sortuje zapasy.%SPEECH_ON%Kapitanie, wszystko w porządku?%SPEECH_OFF%Kiwając głową, pytasz, jak stoją zapasy mikstur. Uśmiecha się.%SPEECH_ON%Wszystko policzone. Mam policzyć jeszcze raz?%SPEECH_OFF%Mówisz mu, by policzył coś innego i idziesz do namiotu po drinka. Odwracając się, dostrzegasz bladą postać, która odsuwa się od jednej ze skrzyń. Dobytasz miecza i ruszasz za nią, ale znajdujesz tylko płachtę falującą na wietrze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Maybe I just need rest.",
+					Text = "Może po prostu potrzebuję odpoczynku.",
 					function getResult( _event )
 					{
 						return 0;
@@ -125,13 +125,13 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_39.png[/img]{You pull %addict% out of the barrel and throw him to the ground. He quickly flips around and yells out with perfect clarity.%SPEECH_ON%What the fark, captain?%SPEECH_OFF%It\'s not %addict% at all, but %otherbrother%. Looking away, you see %addict% stropping a blade. A pale figure shifts in the distance, but when you blink it is gone. You pull %otherbrother% to his feet and tell him to keep an eye out for robbers. He nods dutifully, perhaps sensing something is off with you, or perhaps not wanting to confront you for a mistake. You return to your tent for a drink.}",
+			Text = "[img]gfx/ui/events/event_39.png[/img]{Wyciągasz %addict%a z beczki i rzucasz go na ziemię. Szybko się odwraca i krzyczy z pełną jasnością.%SPEECH_ON%Co do farka, kapitanie?%SPEECH_OFF%To wcale nie %addict%, tylko %otherbrother%. Odwracając wzrok, widzisz %addict%a ostrzącego ostrze. Blada postać przesuwa się w oddali, ale gdy mrugasz, znika. Pomagasz %otherbrother%owi wstać i mówisz mu, by wypatrywał rabusiów. Kiwa głową posłusznie, być może czując, że coś z tobą nie tak, albo nie chcąc cię konfrontować z pomyłką. Wracasz do namiotu po drinka.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Perhaps I should sleep instead.",
+					Text = "Może powinienem jednak spać.",
 					function getResult( _event )
 					{
 						return 0;
@@ -147,13 +147,13 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You leave the man be, but the second you turn away you hear the shatter of glass and the gargle of the man which ruined it. Spinning back, you find %addict% doubled over with strips of flesh for a neck and he\'s picking glass out of an exposed throat. You rush to his aid, putting your hand against the bloodletting and you can feel his throat puckering against your fingers like the mouth of a beached fish. The man collapses to the ground, his full weight, his lifeless weight, his dead weight.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Zostawiasz mężczyznę, ale gdy tylko się odwracasz, słyszysz brzęk tłuczonego szkła i bulgot człowieka, który je zniszczył. Odwracasz się i widzisz %addict%a zgiętego wpół, z paskami mięsa zamiast szyi, wygrzebującego szkło z odsłoniętego gardła. Rzucasz się na pomoc, kładąc dłoń na krwawieniu, i czujesz, jak jego gardło zaciska się na twoich palcach jak pysk ryby wyrzuconej na brzeg. Mężczyzna osuwa się na ziemię, cały jego ciężar, bezwładny ciężar, martwy ciężar.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I should have taken action...",
+					Text = "Powinienem był zareagować...",
 					function getResult( _event )
 					{
 						return "F";
@@ -167,7 +167,7 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Addict.getName() + " has died"
+					text = _event.m.Addict.getName() + " zginął"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -195,13 +195,13 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_39.png[/img]{You bow your head to the earth, feeling such shame that you harken to the days when you gave a shite about the old gods. When you look back up, you find your fingers into a grain sack with its contents spilling all over.%SPEECH_ON%Oy captain, we gotta put those to use.%SPEECH_OFF%Looking over, you see %addict% and a white shadow standing behind him. You rush to your feet, but somewhere in all that hustle the shadow departed. You cannot find it nor any footprint and, not wishing to scare %addict% any further, you tell the sellsword to keep a watchful eye on the perimeter. Yourself, you go to your tent for a drink.}",
+			Text = "[img]gfx/ui/events/event_39.png[/img]{Pochylasz głowę ku ziemi, czując tak wielki wstyd, że wracasz myślami do dni, gdy obchodziły cię jeszcze stare bóstwa. Gdy podnosisz wzrok, widzisz, że masz palce w worku zboża, a jego zawartość rozsypuje się wszędzie.%SPEECH_ON%Oj, kapitanie, musimy to wykorzystać.%SPEECH_OFF%Spoglądając w bok, widzisz %addict%a i białą smugę stojącą za nim. Zrywasz się na nogi, ale gdzieś w całym tym zamieszaniu cień znika. Nie znajdujesz go ani śladów, i nie chcąc bardziej straszyć %addict%a, mówisz najemnikowi, by uważnie pilnował obwodu. Sam idziesz do namiotu po drinka.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Maybe two or three drinks, even.",
+					Text = "Może nawet dwa albo trzy drinki.",
 					function getResult( _event )
 					{
 						return 0;

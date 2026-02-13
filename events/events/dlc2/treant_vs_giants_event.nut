@@ -3,17 +3,17 @@ this.treant_vs_giants_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.treant_vs_giants";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_107.png[/img]{%randombrother% wrinkles his calf into a hole in the forest floor and curses with frustration.%SPEECH_ON%For farks sake as if my dogs weren\'t barking enough!%SPEECH_OFF%You turn to tell him to keep it quiet when suddenly you see an unhold scrambling up the forested hillside the company just climbed. Whereas you all struggled to ascend, the giant is hurdling upward and scrambling the incline, leaving small landslides in its wake. Before you can call it out, an enormous tree swerves down from a crowd of its still brethren and clotheslines the giant. A ball of spit zips through the forest breaking branches and brush and the giant slams its back to the forest floor and even at this distance it rumbles the ground beneath your feet. You see more unhold giants coming and more schrats unweaving themselves from the camouflage of the forest to do battle with them. It\'s a schrat against unhold no holds barked brawl!}",
+			Text = "[img]gfx/ui/events/event_107.png[/img]{%randombrother% wciska łydkę w dziurę w leśnym poszyciu i przeklina z frustracją.%SPEECH_ON%Do diabła, jakby mało mnie już gryzły psy!%SPEECH_OFF%Odwracasz się, by kazać mu uciszyć się, gdy nagle widzisz unholda wdrapującego się po zalesionym zboczu, które kompania właśnie przeszła. Podczas gdy wam wszystkim wspinaczka sprawiała trudność, olbrzym pędzi w górę, rozrywając stok i zostawiając za sobą małe osuwiska. Zanim zdążysz krzyknąć, ogromne drzewo wychyla się z tłumu swoich nieruchomych pobratymców i powala olbrzyma jak taran. Kula śliny śwista przez las, łamiąc gałęzie i zarośla, a olbrzym wali plecami o leśną ściółkę i nawet z tej odległości czuć drżenie ziemi pod stopami. Widzisz nadciągających kolejnych unholdów i kolejne schraty wyplatające się z leśnego kamuflażu, by stawić im czoła. To schrat kontra unhold - bój bez trzymanki!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Prepare to attack.",
+					Text = "Szykować się do ataku.",
 					function getResult( _event )
 					{
 						return "C";
@@ -21,7 +21,7 @@ this.treant_vs_giants_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let\'s get the hell out of here.",
+					Text = "Zmykajmy stąd do diabła.",
 					function getResult( _event )
 					{
 						return "B";
@@ -36,13 +36,13 @@ this.treant_vs_giants_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_107.png[/img]{You crouch low and order the men to come forward and to do so quickly. They march past like ants as leaves and mats of hair sputter down from above and the violence of the giants claps against your ears like lightning. But you do manage to get out of there and leave the war of the monsters behind.}",
+			Text = "[img]gfx/ui/events/event_107.png[/img]{Kucasz nisko i rozkazujesz ludziom iść naprzód, i to szybko. Maszerują jak mrówki, podczas gdy z góry spadają liście i kłęby włosów, a przemoc olbrzymów uderza w uszy jak grzmoty. Udaje wam się jednak wydostać stamtąd i zostawić za sobą wojnę potworów.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A close call.",
+					Text = "O mało co.",
 					function getResult( _event )
 					{
 						return 0;
@@ -57,13 +57,13 @@ this.treant_vs_giants_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_107.png[/img]{You draw your sword, but %randombrother% puts his hand on your shoulder.%SPEECH_ON%Really, captain?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_107.png[/img]{Dobijasz miecza, ale %randombrother% kładzie dłoń na twoim ramieniu.%SPEECH_ON%Naprawdę, kapitanie?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Yes, really.",
+					Text = "Tak, naprawdę.",
 					function getResult( _event )
 					{
 						local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());
@@ -81,7 +81,7 @@ this.treant_vs_giants_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "On second thought, no.",
+					Text = "Po namyśle, nie.",
 					function getResult( _event )
 					{
 						return 0;

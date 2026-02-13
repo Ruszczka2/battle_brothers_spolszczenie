@@ -6,17 +6,17 @@ this.lucky_finds_something_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.lucky_finds_something";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{%lucky% the ever lucky sellsword has managed to find something interesting. You ask how he came across the item. He shrugs.%SPEECH_ON%{I was walking, and then I stepped on it. Simple enough. | I looked up and this bird shat and it just missed me. When I looked at where it landed, well, there it was. The bird shit and that thing you got in your hands. | Felt a tingle in my fingers, and then a tingle in my cock. After that I got to looking around for somethin\' boring to absolve myself and saw it just settin\' there. | Saw a horseshoe just layin\' on the ground there and thought to go and fetch it and, well, that was underneath. | Well, see, I saw this four-leaf clover just setting there and I was gonna add it to my bag, see, I got dozens, anyway when I went to go pick it up I saw that item just settin\' there. Pretty nifty, huh?}%SPEECH_OFF%}",
+			Text = "%terrainImage%{%lucky%, jak zawsze szczęśliwy najemnik, znalazł coś interesującego. Pytasz, jak natknął się na ten przedmiot. Wzrusza ramionami.%SPEECH_ON%{Szłem i nagle na to nadepnąłem. Proste. | Spojrzałem w górę i ptak narobił, ledwo mnie minęło. Gdy spojrzałem, gdzie spadło, no i było. Ptasia kupa i to coś, co masz w rękach. | Poczułem mrowienie w palcach, a potem mrowienie w fiucie. Potem rozejrzałem się za czymś nudnym, żeby się uspokoić, i zobaczyłem to leżące tam. | Zobaczyłem podkowę leżącą na ziemi i pomyślałem, żeby ją podnieść, a pod spodem było to. | No widzisz, zauważyłem tę czterolistną koniczynę i miałem ją wrzucić do sakwy, mam ich mnóstwo, a kiedy już się schyliłem, zobaczyłem ten przedmiot leżący obok. Sprytne, co?}%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Lucky you.",
+					Text = "Ale masz szczęście.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.lucky_finds_something_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + _event.m.FoundItem.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(_event.m.FoundItem.getName()) + _event.m.FoundItem.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(_event.m.FoundItem.getName()) + _event.m.FoundItem.getName()
 				});
 			}
 

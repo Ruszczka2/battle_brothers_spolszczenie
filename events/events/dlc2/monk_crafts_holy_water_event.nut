@@ -5,17 +5,17 @@ this.monk_crafts_holy_water_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.monk_crafts_holy_water";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%monk% the modest monk enters your tent with a vial in hand. The flask is topped with a bark stopper and a wreath of greenery with berries hanging beneath the leaves. Inside the vial is a goldish liquid sloshing about. Whatever it is, it catches any glimpse of light and seems to capture it and swirl it around. He holds it out.%SPEECH_ON%Blessed water, sir, to fight the dead that walk again.%SPEECH_OFF%You ask if it\'s a gift from the old gods. He nods. You ask if it\'s really a gift from the old gods, though. He purses his lips.%SPEECH_ON%No, not exactly. The monasteries know how to make it, but it is an ancient recipe protected under penalty of death.%SPEECH_OFF%Of course. You thank the man for taking such a risk to contribute and tell him to put it in the inventory.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%monk%, skromny mnich, wchodzi do twojego namiotu z fiolką w dłoni. Naczynie jest zamknięte korkiem z kory, a pod wieńcem zieleni zwisają jagody. Wewnątrz fiolki chlupocze złotawy płyn. Czymkolwiek jest, łapie każdy promień światła i zdaje się go więzić, wirując w środku. Podaje ją.%SPEECH_ON%Woda święcona, panie, do walki z martwymi, którzy znów chodzą.%SPEECH_OFF%Pytasz, czy to dar starych bogów. Kiwa głową. Pytasz, czy to naprawdę dar starych bogów. Zaciska usta.%SPEECH_ON%Nie, nie do końca. Monastyry wiedzą, jak ją zrobić, ale to starożytna receptura chroniona pod karą śmierci.%SPEECH_OFF%Oczywiście. Dziękujesz mu za podjęcie takiego ryzyka i każesz włożyć ją do zapasów.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Even holy men have tricks of the trade.",
+					Text = "Nawet święci ludzie mają swoje sztuczki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.monk_crafts_holy_water_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

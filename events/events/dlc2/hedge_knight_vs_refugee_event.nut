@@ -7,17 +7,17 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.hedge_knight_vs_refugee";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_52.png[/img]%hedgeknight% the hedge knight walks up to an eating %refugee%. The former refugee sees the shadow loom over him and slowly turns about.%SPEECH_ON%Yeah?%SPEECH_OFF%The hedge knight snorts and spits a loogie about the size of a baby\'s arm. He snorts again.%SPEECH_ON%You ran from your home. You watched it burn and put yer back to the flames rather than fight them. This company is your home now. What stops you from running from the fire now?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_52.png[/img]%hedgeknight%, rycerz z żywopłotu, podchodzi do jedzącego %refugee%a. Były uchodźca widzi cień górujący nad nim i powoli się odwraca.%SPEECH_ON%Tak?%SPEECH_OFF%Rycerz prycha i spluwa gulą flegmy wielkości dziecięcego ramienia. Prycha ponownie.%SPEECH_ON%Uciekłeś z domu. Patrzyłeś, jak płonie, i odwróciłeś się od ognia zamiast z nim walczyć. Ta kompania to teraz twój dom. Co powstrzyma cię przed ucieczką przed ogniem teraz?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Come on, %hedgeknight%. Stop it!",
+					Text = "Daj spokój, %hedgeknight%. Przestań!",
 					function getResult( _event )
 					{
 						return "B";
@@ -25,7 +25,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You can deal with this yourselves.",
+					Text = "Sami to załatwcie.",
 					function getResult( _event )
 					{
 						return "C";
@@ -41,7 +41,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 				if (_event.m.OtherGuy != null)
 				{
 					this.Options.push({
-						Text = "Wait. %streetrat%, you look like you have something to say?",
+						Text = "Czekaj. %streetrat%, wyglądasz, jakbyś miał coś do powiedzenia?",
 						function getResult( _event )
 						{
 							return "D";
@@ -54,13 +54,13 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_52.png[/img]You step forward and tell the hedge knight to stuff it. The company ain\'t here to stroke his ego. Laughing, the bear of a man steps off.%SPEECH_ON%As you say, sir. Wouldn\'t want to get into a scrap with the company princess.%SPEECH_OFF%The company laughs, but the refugee only stares into is bowl of food like someone\'d just spat in it.",
+			Text = "[img]gfx/ui/events/event_52.png[/img]Występujesz do przodu i mówisz rycerzowi, żeby dał sobie spokój. Kompania nie jest tu po to, by łechtać jego ego. Śmiejąc się, niedźwiedzi mężczyzna odchodzi.%SPEECH_ON%Jak pan mówi. Nie chciałbym się bić z księżniczką kompanii.%SPEECH_OFF%Kompania się śmieje, ale uchodźca tylko wpatruje się w miskę jedzenia, jakby ktoś do niej napluł.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, I guess that\'s settled.",
+					Text = "No cóż, chyba po sprawie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -78,9 +78,9 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Refugee.getName() + " loses [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + bravery + "[/color] Resolve"
+					text = _event.m.Refugee.getName() + " traci [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + bravery + "[/color] Determinacji"
 				});
-				_event.m.Refugee.worsenMood(1.0, "Got humiliated in front of the company");
+				_event.m.Refugee.worsenMood(1.0, "Został upokorzony przed kompanią");
 
 				if (_event.m.Refugee.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -95,13 +95,13 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_06.png[/img]You don\'t intervene. The hedge knight continues.%SPEECH_ON%I\'ve no pity for your pain. You understand?%SPEECH_OFF%Nodding, the refugee looks up.%SPEECH_ON%Aye, but what pity does anyone have for yours?%SPEECH_OFF%%refugee%\'s arm shoots forward so fast it flips the plate into the campfire. The fork sticks in the thigh of %hedgeknight% and %refugee% can\'t wrench it out no better than if it were stuck in a trunk of oak. The hedge knight grits and falls on the refugee and flattens him. His giant hands press the refugee\'s skull into the earth until the poor man\'s breathing dirt. The rest of the company stands up and backs off. You step forward, but %hedgeknight% holds his hand out before standing back up.%SPEECH_ON%Alright, little runner, alright. You\'ve fight in you yet.%SPEECH_OFF%He retrieves the fork and holds it out. A drop of blood grooves between he tines.%SPEECH_ON%Whatcha eating? Oh yeah? Good. I\'ll double it with my portion. Come and sit.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_06.png[/img]Nie wtrącasz się. Rycerz z żywopłotu kontynuuje.%SPEECH_ON%Nie mam litości dla twojego bólu. Rozumiesz?%SPEECH_OFF%Uchodźca kiwa głową i podnosi wzrok.%SPEECH_ON%Tak, ale jaką litość ma ktokolwiek dla twojego?%SPEECH_OFF%Ramię %refugee%a wyskakuje tak szybko, że przewraca talerz do ogniska. Widelec wbija się w udo %hedgeknight%a, a %refugee% nie potrafi go wyrwać, jakby utknął w pniu dębu. Rycerz zaciska zęby i pada na uchodźcę, spłaszczając go. Jego ogromne dłonie wciskają czaszkę uchodźcy w ziemię, aż biedak zaczyna oddychać ziemią. Reszta kompanii wstaje i odsuwa się. Podchodzisz, ale %hedgeknight% unosi dłoń, po czym wstaje.%SPEECH_ON%Dobrze, mały uciekinierze, dobrze. Masz jeszcze walkę w sobie.%SPEECH_OFF%Wyciąga widelec i podaje go. Kropla krwi spływa między zębami.%SPEECH_ON%Co jesz? O, tak? Dobrze. Podwoję to swoją porcją. Chodź i usiądź.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad that\'s settled.",
+					Text = "Dobrze, że to załatwione.",
 					function getResult( _event )
 					{
 						return 0;
@@ -119,9 +119,9 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Refugee.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + bravery + "[/color] Resolve"
+					text = _event.m.Refugee.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + bravery + "[/color] Determinacji"
 				});
-				_event.m.Refugee.improveMood(1.0, "Got some recognition from " + _event.m.HedgeKnight.getName());
+				_event.m.Refugee.improveMood(1.0, "Zyskał uznanie od " + _event.m.HedgeKnight.getName());
 
 				if (_event.m.Refugee.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -132,7 +132,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.HedgeKnight.improveMood(0.5, "Grew to like " + _event.m.Refugee.getName() + " some");
+				_event.m.HedgeKnight.improveMood(0.5, "Trochę polubił " + _event.m.Refugee.getName());
 
 				if (_event.m.HedgeKnight.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -147,13 +147,13 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_80.png[/img]%streetrat% steps forward. He points a finger at the hedge knight.%SPEECH_ON%You ain\'t got a lick of understanding of no flame nor fire.%SPEECH_OFF%Laughing, %hedgeknight% turns around and cracks his knuckles.%SPEECH_ON%Course I do. I AM the fire.%SPEECH_OFF%The lowborn defiantly crosses his arms.%SPEECH_ON%And we ain\'t the ash, but the wood itself. You\'re a whore for the noblemen, that\'s what you truly are. They pay you a high price and you go on with your strength and cruelty and do what they tell you to do. Like... like a whore...%SPEECH_OFF%Another sellsword holds up a finger.%SPEECH_ON%I think yer describing us in general. We\'re mercenaries.%SPEECH_OFF%And another adds.%SPEECH_ON%Did you just compare yerself to kindling?%SPEECH_OFF%%streetrat% rubs the back of his head.%SPEECH_ON%Yeah I\'m gonna be honest the hedge knight scared me a bit there and I lost what I was going to say.%SPEECH_OFF%The company looks around before bursting into laughter and whatever animosity there was is gone.",
+			Text = "[img]gfx/ui/events/event_80.png[/img]%streetrat% występuje do przodu. Wskazuje palcem rycerza z żywopłotu.%SPEECH_ON%Nie masz pojęcia o ogniu ani płomieniu.%SPEECH_OFF%Śmiejąc się, %hedgeknight% odwraca się i trzaska knykciami.%SPEECH_ON%Jasne, że mam. JA jestem ogniem.%SPEECH_OFF%Niskourodzony krzyżuje ramiona z przekorą.%SPEECH_ON%A my nie jesteśmy popiołem, tylko samym drewnem. Jesteś dziwką dla szlachty, oto kim naprawdę jesteś. Płacą ci wysoką cenę, a ty idziesz ze swoją siłą i okrucieństwem i robisz, co ci każą. Jak... jak dziwka...%SPEECH_OFF%Inny najemnik unosi palec.%SPEECH_ON%Chyba opisujesz nas w ogóle. Jesteśmy najemnikami.%SPEECH_OFF%A kolejny dodaje.%SPEECH_ON%Czy ty właśnie porównałeś się do rozpałki?%SPEECH_OFF%%streetrat% pociera tył głowy.%SPEECH_ON%Tak, będę szczery, rycerz z żywopłotu trochę mnie przestraszył i zgubiłem, co miałem powiedzieć.%SPEECH_OFF%Kompania rozgląda się, po czym wybucha śmiechem, a wszelka niechęć znika.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What were we fighting about again?",
+					Text = "O co my właściwie się kłóciliśmy?",
 					function getResult( _event )
 					{
 						return 0;
@@ -176,7 +176,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.0, "Felt entertained");
+						bro.improveMood(1.0, "Czuł się rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

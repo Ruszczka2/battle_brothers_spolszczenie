@@ -3,17 +3,17 @@ this.brawl_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.brawl";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You go out for a piss and find yourself midstream when the din of combat erupts behind you. Pinching it off, you fix your drawers and head back for the encampment. There you find the whole company engaged in battle not with any particular foe, but with itself. Sellswords are clambering over equipment and the campfire and each other to swing fists and spin elbows and wrestle one another around or tackle each other to the ground. Anyone who falls gets their ass kicked, literally, until someone else comes along to distract the ones doing the kicking, then the one who had fallen jumps to their feet and throws themselves back into the fray. The ol\' fracas eases as the men slowly realize you\'re there and they shape up and line up as though a swift reorganization would be a suitable resolution for their churlish behavior.\n\n Shaking your head, you ask what sparked it. The men shrug. Not a one can remember. You do a role call to make sure nobody\'s dead. You then tell them all to shake hands, keeping an eye on them as they do so. No bad blood to sniff out. Seems like this was just a bit of a fun tussle and wrassle, that\'s all.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Wychodzisz się odlać i jesteś w pół strumienia, gdy za tobą wybucha gwar walki. Przerywasz, poprawiasz spodnie i wracasz do obozu. Tam znajdujesz całą kompanię walczącą nie z żadnym wrogiem, lecz ze sobą. Najemnicy wspinają się po sprzętach, ognisku i po sobie nawzajem, by wyprowadzać ciosy pięściami, machać łokciami, przewracać się lub powalać innych na ziemię. Każdy, kto upada, dostaje kopniaki w tyłek, dosłownie, aż ktoś inny odciągnie kopiących, wtedy ten, co upadł, zrywa się i rzuca z powrotem do bójki. Stara zadymka cichnie, gdy ludzie powoli uświadamiają sobie, że tu jesteś, i ustawiają się w szeregu, jakby szybka reorganizacja miała rozwiązać ich ordynarne zachowanie.\n\n Kręcąc głową, pytasz, co to wywołało. Ludzie wzruszają ramionami. Nikt nie pamięta. Robisz apel, żeby upewnić się, że nikt nie zginął. Potem każesz im wszystkim uścisnąć dłonie, pilnując ich przy tym. Nie ma złej krwi do wyczucia. Wygląda na to, że to była tylko zabawna bijatyka, nic więcej.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nothing like a good brawl, eh?",
+					Text = "Nic nie przebije dobrej bójki, co?",
 					function getResult( _event )
 					{
 						return 0;
@@ -29,7 +29,7 @@ this.brawl_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.5, "Had a good brawl");
+						bro.improveMood(0.5, "Miał dobrą bójkę");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -47,7 +47,7 @@ this.brawl_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + " suffers light wounds"
+							text = bro.getName() + " doznaje lekkich ran"
 						});
 					}
 				}

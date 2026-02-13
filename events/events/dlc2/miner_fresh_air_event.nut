@@ -5,17 +5,17 @@ this.miner_fresh_air_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.miner_fresh_air";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{%miner% the miner sucks in great gulps of breath and then lets them out in long, albeit a little wheezy exhales. He nods to himself as though satisfied by something everyone does. It seems some folks are easily pleased. But he does explain himself.%SPEECH_ON%You know I spent years in the dank and dark of the mines, breathing in the dust and the metals. I think being surface side this long has been a fortune of its own, a treasure I didn\'t know was out here for the taking. Thank you, captain, cause I wouldn\'t be here right now if it weren\'t for you.%SPEECH_OFF%You nod and thank him for the kind words.}",
+			Text = "%terrainImage%{%miner%, górnik, wciąga wielkie hausty powietrza, po czym wypuszcza je długimi, choć lekko świszczącymi wydechami. Kiwając do siebie głową, zdaje się być zadowolony z czegoś, co wszyscy robią. Widać niektórzy łatwo się cieszą. Ale wyjaśnia.%SPEECH_ON%Wiesz, spędziłem lata w wilgoci i ciemnościach kopalni, oddychając pyłem i metalami. Myślę, że to długie życie na powierzchni to samo w sobie szczęście, skarb, o którym nie wiedziałem, że tu na mnie czeka. Dziękuję, kapitanie, bo nie byłoby mnie teraz tutaj, gdyby nie ty.%SPEECH_OFF%Kiwasz głową i dziękujesz mu za miłe słowa.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "There\'s a fresh breeze coming from the sea.",
+					Text = "Od morza wieje świeża bryza.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.miner_fresh_air_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Miner.getImagePath());
-				_event.m.Miner.improveMood(1.0, "Happy to have a new life surface-side");
+				_event.m.Miner.improveMood(1.0, "Cieszył się nowym życiem na powierzchni");
 
 				if (_event.m.Miner.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -44,7 +44,7 @@ this.miner_fresh_air_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Miner.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Max Fatigue"
+					text = _event.m.Miner.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] Maks. Zmęczenia"
 				});
 			}
 

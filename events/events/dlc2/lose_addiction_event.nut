@@ -6,17 +6,17 @@ this.lose_addiction_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.lose_addiction";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%addict% enters your tent with his hands behind his back in a respective posture. He asks if you have a moment. You nod and he states that he is rid of his tremors and ailments. You ask what he means. He twists his hand above his mouth as though taking a swig.%SPEECH_ON%The potions, sir, I\'ve no longer any overbearing affinity for the things. I\'m good. Sound. Quite sound. Ready to fight as the man I am.%SPEECH_OFF%You\'re not entirely sure what he\'s driving at. You thought most men took to alcohol, but you\'ve no issue with that. Whatever it is it appears he\'s bettered it. | You find %addict% sitting on the ground looking at his palms. He\'s following the grooves with a finger.%SPEECH_ON%I hear you, sir.%SPEECH_OFF%Nodding, you ask what he\'s up to. He smiles.%SPEECH_ON%Feeling better. Feeling like I don\'t need to loosen myself with them potions no longer. Feeling myself, I suppose. Ready to kill, as you command, sir, and do it with clarity of mind to know what I\'m doing and why.%SPEECH_OFF%Great. You\'re not sure what that was about but wish him good luck in staying that way.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%addict% wchodzi do twojego namiotu z rękami za plecami w pełnej szacunku postawie. Pyta, czy masz chwilę. Kiwasz głową, a on stwierdza, że pozbył się drżeń i dolegliwości. Pytasz, co ma na myśli. Przekręca dłoń nad ustami, jakby brał łyk.%SPEECH_ON%Mikstury, panie, już nie czuję do nich tak przytłaczającej skłonności. Jestem w porządku. Zdrowy. Całkiem zdrowy. Gotów walczyć jako ten człowiek, którym jestem.%SPEECH_OFF%Nie jesteś do końca pewien, do czego zmierza. Myślałeś, że większość ludzi ciągnie do alkoholu, ale to ci nie przeszkadza. Cokolwiek to było, wygląda na to, że to przezwyciężył. | Znajdujesz %addict%a siedzącego na ziemi i wpatrującego się w swoje dłonie. Śledzi rowki palcem.%SPEECH_ON%Słyszę cię, panie.%SPEECH_OFF%Kiwasz głową i pytasz, co robi. Uśmiecha się.%SPEECH_ON%Czuję się lepiej. Czuję, że nie muszę już rozluźniać się tymi miksturami. Czuję siebie, chyba. Gotów zabijać, jak rozkażesz, panie, i robić to z jasnością umysłu, wiedząc, co robię i dlaczego.%SPEECH_OFF%Świetnie. Nie jesteś pewien, o co dokładnie chodziło, ale życzysz mu powodzenia, by tak zostało.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good work being you.",
+					Text = "Dobra robota, że jesteś sobą.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.lose_addiction_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Addict.getName() + " no longer is an addict"
+					text = _event.m.Addict.getName() + " nie jest już uzależniony"
 				});
 				_event.m.Addict.getSkills().remove(trait);
 			}

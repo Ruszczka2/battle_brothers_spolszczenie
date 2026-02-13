@@ -8,17 +8,17 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.bird_shits_on_sellsword";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{While traveling the land, %birdbro% gets struck by birdshite. It hits his swordhand and splashes crosswise all over his armor.%SPEECH_ON%Aww, awwww!%SPEECH_OFF%His arms go wide like chicken wings as he looks at the damage.%SPEECH_ON%Bloody hell, just my luck!%SPEECH_OFF%}",
+			Text = "%terrainImage%{Podczas wędrówki %birdbro% zostaje trafiony ptasim gównem. Uderza w jego dłoń na mieczu i rozbryzguje się po zbroi.%SPEECH_ON%Ooo, ooo!%SPEECH_OFF%Rozkłada ramiona jak kurze skrzydła, oglądając szkody.%SPEECH_ON%Cholera, tylko moje szczęście!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Yeah, don\'t dwell on it and let\'s get going.",
+					Text = "Tak, nie roztrząsaj tego i ruszajmy dalej.",
 					function getResult( _event )
 					{
 						if (_event.m.Historian == null)
@@ -40,7 +40,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Superstitious != null)
 				{
 					this.Options.push({
-						Text = "Could this be an omen?",
+						Text = "Czy to może być omen?",
 						function getResult( _event )
 						{
 							return "Superstitious";
@@ -52,7 +52,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Archer != null)
 				{
 					this.Options.push({
-						Text = "Someone bring down that plumed transgressor!",
+						Text = "Niech ktoś strąci tego pierzastego winowajcę!",
 						function getResult( _event )
 						{
 							return "Archer";
@@ -65,13 +65,13 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Continue",
-			Text = "%terrainImage%{%birdbro% nods.%SPEECH_ON%Course. Just ruined m\'day that\'s all.%SPEECH_OFF%}",
+			Text = "%terrainImage%{%birdbro% kiwa głową.%SPEECH_ON%Pewnie. Po prostu zepsuł mi dzień, to wszystko.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Ah well.",
+					Text = "No cóż.",
 					function getResult( _event )
 					{
 						return 0;
@@ -82,7 +82,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
-				_event.m.Victim.worsenMood(0.5, "Got shit on by a bird");
+				_event.m.Victim.worsenMood(0.5, "Został obsrany przez ptaka");
 
 				if (_event.m.Victim.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -97,13 +97,13 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Superstitious",
-			Text = "%terrainImage%{The ever superstitious %superstitious% analyzes the shit with the appraising eye of a proper jeweler. He purses his lips and nods, as satisfied a summary of bird shit as there ever was. He says.%SPEECH_ON%This is a good thing.%SPEECH_OFF%In the face of very incredulous company the man calmly explains that being shat on by a bird is an omen of good things to come. A few of the sellswords seem convinced by this notion. It is rather spectacular to have a bird choose you, out of all earth below, to land a squat on. You nod and say %birdbro% should open his mouth next time for extra special good fortune.}",
+			Text = "%terrainImage%{Wiecznie przesądny %superstitious% analizuje gówno z oceniającym okiem prawdziwego jubilera. Zaciska usta i kiwa głową, jak najbardziej zadowolony znawca ptasiego gówna. Mówi.%SPEECH_ON%To dobra rzecz.%SPEECH_OFF%Wobec wyraźnie niedowierzającej kompanii mężczyzna spokojnie tłumaczy, że obsranie przez ptaka jest omenem dobrych rzeczy, które nadejdą. Kilku najemników wydaje się przekonanych tą myślą. To dość spektakularne, że ptak wybiera właśnie ciebie, spośród całej ziemi pod nim, by na ciebie przykucnąć. Kiwasz głową i mówisz, że %birdbro% następnym razem powinien otworzyć usta dla wyjątkowego szczęścia.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Lucky guy.",
+					Text = "Szczęściarz.",
 					function getResult( _event )
 					{
 						return 0;
@@ -115,7 +115,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
 				this.Characters.push(_event.m.Superstitious.getImagePath());
-				_event.m.Victim.improveMood(1.0, "Got shit on by a bird for good luck");
+				_event.m.Victim.improveMood(1.0, "Został obsrany przez ptaka na szczęście");
 
 				if (_event.m.Victim.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -126,7 +126,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Superstitious.improveMood(0.5, "Witnessed " + _event.m.Victim.getName() + " being shat on by a bird");
+				_event.m.Superstitious.improveMood(0.5, "Był świadkiem obsrania " + _event.m.Victim.getName() + " przez ptaka");
 
 				if (_event.m.Superstitious.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -141,13 +141,13 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Archer",
-			Text = "[img]gfx/ui/events/event_10.png[/img]{%archer% looks up, hand shielded over his eyes, tongue out. He sees the bird and nods. He licks a finger, puts it to the air, and nods again. The archer grins as he nocks an arrow.%SPEECH_ON%With crime there is punishment.%SPEECH_OFF%The mercenaries groan and mock the man\'s moralizing, but he calmly raises the bow and lets the arrow loose. It zips and shrinks high into the air and you can hardly see the shot but you do see the bird suddenly crank sideways and start twirling to the earth. The sharpshooter nods and looks over at the company.%SPEECH_ON%You laughing now?%SPEECH_OFF%This only brings more jeers. The archer snidely comments about his importance and this brings about a healthy debate between the men who stand on the frontline and those in the back. You tell the men that if they want to argue which is better they can prove it on the battlefield.}",
+			Text = "[img]gfx/ui/events/event_10.png[/img]{%archer% spogląda w górę, osłaniając oczy dłonią, z wysuniętym językiem. Widzi ptaka i kiwa głową. Liże palec, przykłada go do powietrza i znów kiwa. Łucznik uśmiecha się, naciągając strzałę.%SPEECH_ON%Za zbrodnią idzie kara.%SPEECH_OFF%Najemnicy jęczą i kpią z jego moralizowania, ale on spokojnie unosi łuk i wypuszcza strzałę. Śmiga wysoko w powietrze i prawie jej nie widać, ale widać, jak ptak nagle skręca na bok i zaczyna wirować ku ziemi. Strzelec kiwa głową i spogląda na kompanię.%SPEECH_ON%Śmiejecie się teraz?%SPEECH_OFF%To tylko wywołuje jeszcze więcej kpin. Łucznik złośliwie komentuje własną ważność, co wywołuje zdrową debatę między ludźmi stojącymi w pierwszym szeregu a tymi z tyłu. Mówisz im, że jeśli chcą się spierać, co jest lepsze, niech udowodnią to na polu bitwy.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice shot!",
+					Text = "Dobry strzał!",
 					function getResult( _event )
 					{
 						return 0;
@@ -159,7 +159,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
 				this.Characters.push(_event.m.Archer.getImagePath());
-				_event.m.Victim.improveMood(0.5, "Got revenge on a bird that shat on him");
+				_event.m.Victim.improveMood(0.5, "Zemścił się na ptaku, który go obsrał");
 
 				if (_event.m.Victim.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -170,7 +170,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Archer.improveMood(1.0, "Exacted revenge on a bird that shat on " + _event.m.Victim.getName() + " with pinpoint accuracy");
+				_event.m.Archer.improveMood(1.0, "Zemścił się na ptaku, który obsrał " + _event.m.Victim.getName() + " z niezwykłą celnością");
 
 				if (_event.m.Archer.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -192,7 +192,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.0, "Witnessed " + _event.m.Archer.getName() + "\'s fine display of archery");
+						bro.improveMood(1.0, "Był świadkiem świetnego pokazu łucznictwa " + _event.m.Archer.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -209,13 +209,13 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Historian",
-			Text = "%terrainImage%{You tell %birdbro% that being shit on is a part of life and get the company ready to get back on the road. But a modest %historian% comes up and tells the ill-fated sellsword to hold off on cleaning the shite. The historian takes a good look at the shite and then up at the bird which authored it.%SPEECH_ON%Yes, yes... I know that bird! That magical creature!%SPEECH_OFF%The men look up at the bird as though they were sealeagured sailors finding rarified land. %historian% points at %birdbro%.%SPEECH_ON%You got shat on by a red-and-blue mockingbird! That\'s all I wanted to say, really. I just hadn\'t seen one in awhile. You... you can clean it now.%SPEECH_OFF%The mercenaries stand slackjawed before bursting into laughter. %birdbro% grabs the historian and uses his sleeves to clean the shit off which brings more roars from the men.}",
+			Text = "%terrainImage%{Mówisz %birdbro%owi, że bycie obsranym to część życia, i szykujesz kompanię do drogi. Ale skromny %historian% podchodzi i mówi pechowemu najemnikowi, by wstrzymał się z czyszczeniem gówna. Historyk przygląda się mu uważnie, a potem ptakowi, który je zrzucił.%SPEECH_ON%Tak, tak... Znam tego ptaka! To magiczne stworzenie!%SPEECH_OFF%Ludzie patrzą w górę na ptaka, jakby byli marynarzami po długiej żegludze znajdującymi upragniony ląd. %historian% wskazuje na %birdbro%a.%SPEECH_ON%Obsrał cię czerwono-niebieski drozd! To wszystko, co chciałem powiedzieć. Po prostu dawno żadnego nie widziałem. Możesz... możesz już to wyczyścić.%SPEECH_OFF%Najemnicy stoją z opadniętymi szczękami, po czym wybuchają śmiechem. %birdbro% chwyta historyka i używa jego rękawów, by zetrzeć gówno, co wywołuje kolejne ryki śmiechu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "So that mystery is solved.",
+					Text = "No i zagadka rozwiązana.",
 					function getResult( _event )
 					{
 						return 0;
@@ -227,7 +227,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
 				this.Characters.push(_event.m.Historian.getImagePath());
-				_event.m.Victim.worsenMood(0.5, "Got shit on by a bird");
+				_event.m.Victim.worsenMood(0.5, "Został obsrany przez ptaka");
 
 				if (_event.m.Victim.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -249,7 +249,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.0, "Felt entertained by " + _event.m.Historian.getName());
+						bro.improveMood(1.0, "Był rozbawiony przez " + _event.m.Historian.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

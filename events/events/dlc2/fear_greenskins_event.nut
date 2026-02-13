@@ -5,17 +5,17 @@ this.fear_greenskins_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.fear_greenskins";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%brother% stares at the campfire with his hands bridged between his knees.%SPEECH_ON%Fark, man. I don\'t know if I can look at a greenskin again. They\'re so much stronger and faster than us! We, we shouldn\'t face them again until we got at least, two, no three times as many men!%SPEECH_OFF%You tell the company to keep an eye on him. Fear is justified but spreading it sure as hell ain\'t.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%brother% wpatruje się w ognisko, trzymając dłonie splecione między kolanami.%SPEECH_ON%Fark, człowieku. Nie wiem, czy potrafię jeszcze spojrzeć na zielonoskórego. Są o wiele silniejsi i szybsi od nas! Nie, nie powinniśmy z nimi znów walczyć, dopóki nie będziemy mieli co najmniej, dwóch, nie, trzech razy więcej ludzi!%SPEECH_OFF%Mówisz kompanii, by miała na niego oko. Strach jest uzasadniony, ale rozsiewanie go na pewno nie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This is taking a toll on the men.",
+					Text = "To odbija się na ludziach.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.fear_greenskins_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Casualty.getName() + " now fears greenskins"
+					text = _event.m.Casualty.getName() + " teraz boi się zielonoskórych"
 				});
 			}
 

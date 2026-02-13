@@ -6,17 +6,17 @@ this.lose_fear_undead_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.lose_fear_undead";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%fearful% interrupts a company break with a sudden speech.%SPEECH_ON%I\'ve killed and buried so many men, you know? And if they were worth their salt then they wouldn\'t have the opportunity to come back as undead to begin with! And if they come back from ancient times then I\'ll be damned, they\'re persistent! But they ain\'t me. I\'m living. I\'m breathing. And I aim to keep it that way. And when it\'s my time I aim to stay dead, because I\'ve the gumption to know I\'ve troubled this world enough.%SPEECH_OFF%Clapping, %otherbrother% offers a plate of food.%SPEECH_ON%Well alright, now stop troubling us!%SPEECH_OFF%The men laugh and %fearful% joins right in.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%fearful% przerywa przerwę kompanii nagłą przemową.%SPEECH_ON%Zabiłem i pochowałem tylu ludzi, wiecie? A gdyby byli coś warci, to w ogóle nie mieliby okazji wrócić jako nieumarli! A jeśli wracają z dawnych czasów, to niech mnie, uparci są! Ale to nie ja. Ja żyję. Oddycham. I zamierzam tak to utrzymać. A gdy przyjdzie mój czas, zamierzam zostać martwy, bo mam dość rozumu, by wiedzieć, że już wystarczająco uprzykrzałem ten świat.%SPEECH_OFF%Klaszcząc, %otherbrother% podaje talerz jedzenia.%SPEECH_ON%Dobra, dobra, teraz przestań nam zawracać głowę!%SPEECH_OFF%Mężczyźni śmieją się, a %fearful% dołącza do nich.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This world belongs to the living.",
+					Text = "Ten świat należy do żywych.",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,7 +31,7 @@ this.lose_fear_undead_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Casualty.getName() + " no longer fears the undead"
+					text = _event.m.Casualty.getName() + " już nie boi się nieumarłych"
 				});
 				_event.m.Casualty.getSkills().remove(trait);
 			}

@@ -5,17 +5,17 @@ this.teamplayer_is_bro_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.teamplayer_is_bro";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_65.png[/img]{%teamplayer%, always the sort to take one for the company, seems to have singlehandedly helped the resolve of the men. As one sellsword explains it.%SPEECH_ON%I dunno how to explain it.%SPEECH_OFF%As another more articulate mercenary says.%SPEECH_ON%It\'s like he\'s more than just a sword for hire, you know? He\'s someone we can depend on. Like a brother. But not a whole brother, obviously. More like a halfbrother. A bro, if you will.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_65.png[/img]{%teamplayer%, zawsze gotów wziąć na siebie coś dla kompanii, zdaje się własnoręcznie podnieść morale ludzi. Jak tłumaczy jeden z najemników.%SPEECH_ON%Nie wiem, jak to wyjaśnić.%SPEECH_OFF%Jak mówi inny, bardziej elokwentny.%SPEECH_ON%To jakby był kimś więcej niż tylko mieczem do wynajęcia, wiesz? To ktoś, na kim możemy polegać. Jak brat. Ale nie taki pełny brat, oczywiście. Bardziej jak przyrodni brat. Taki brachol, jeśli wiesz, o co chodzi.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "%teamplayer% is the best.",
+					Text = "%teamplayer% jest najlepszy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -43,11 +43,11 @@ this.teamplayer_is_bro_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 16,
 							icon = "ui/icons/bravery.png",
-							text = bro.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+							text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 						});
 					}
 
-					bro.improveMood(0.5, "Happy to have a bro in " + _event.m.Teamplayer.getName());
+					bro.improveMood(0.5, "Cieszy się, że w " + _event.m.Teamplayer.getName() + " jest brachol");
 
 					if (bro.getMoodState() > this.Const.MoodState.Neutral)
 					{

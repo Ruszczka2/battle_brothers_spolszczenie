@@ -6,17 +6,17 @@ this.hate_undead_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.hate_undead";
-		this.m.Title = "After the battle...";
+		this.m.Title = "Po bitwie...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%image%{%brother% spits and runs his hand under his nose. His face scowls and he seems to be talking to himself as others look on.%SPEECH_ON%The old gods will have our arses if we permit the dead to walk again! You fellas can go to the hereafter thinking you did right in this world, but I ain\'t following the idle road cause by my sum that road goes straight to the hells. I\'ll see to it that I meet a righteous end, and I\'ll see to that by felling every godforsaken undead fark I see!%SPEECH_OFF%}",
+			Text = "%image%{%brother% spluwa i przeciera dłoń pod nosem. Marszczy twarz i wygląda, jakby mówił do siebie, podczas gdy inni patrzą.%SPEECH_ON%Starzy bogowie wezmą nam tyłki, jeśli pozwolimy martwym znów chodzić! Wy, chłopaki, możecie iść w zaświaty, myśląc, że zrobiliście dobrze na tym świecie, ale ja nie pójdę tą leniwą drogą, bo według mnie prowadzi prosto do piekieł. Dopilnuję, by spotkał mnie sprawiedliwy koniec, a zrobię to, kładąc każdą przeklętą, nieumarłą farsę, jaką zobaczę!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s the spirit!",
+					Text = "O to chodzi!",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,7 +32,7 @@ this.hate_undead_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Casualty.getName() + " now hates the undead"
+					text = _event.m.Casualty.getName() + " teraz nienawidzi nieumarłych"
 				});
 			}
 

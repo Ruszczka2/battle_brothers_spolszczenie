@@ -6,17 +6,17 @@ this.ailing_recovers_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ailing_recovers";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 75.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing% is walking around camp with his hands out and his fingers stretched as though he were balancing across a rope. He nods to himself as he turns around, foot placed before foot, marching his way back across.%SPEECH_ON%For the first time in a long time I actually feel quite alright. Thanks, %healer%!%SPEECH_OFF%It seems %healer% knew of a couple means to rid what ailed %ailing%.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing% przechadza się po obozie z wyciągniętymi rękami i rozprostowanymi palcami, jakby balansował na linie. Kiwając do siebie głową, zawraca, stawiając stopę przed stopą, i maszeruje z powrotem.%SPEECH_ON%Po raz pierwszy od dawna czuję się naprawdę dobrze. Dzięki, %healer%!%SPEECH_OFF%Wygląda na to, że %healer% znał parę sposobów na pozbycie się tego, co dolegało %ailing%owi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad to hear.",
+					Text = "Miło słyszeć.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,7 +28,7 @@ this.ailing_recovers_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Ailing.getImagePath());
 				this.Characters.push(_event.m.Healer.getImagePath());
-				_event.m.Ailing.improveMood(1.5, "Feels the best he did in a long time");
+				_event.m.Ailing.improveMood(1.5, "Czuje się najlepiej od długiego czasu");
 
 				if (_event.m.Ailing.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -43,7 +43,7 @@ this.ailing_recovers_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_59.png",
-					text = _event.m.Ailing.getName() + " is no longer ailing"
+					text = _event.m.Ailing.getName() + " nie jest już schorowany"
 				});
 			}
 

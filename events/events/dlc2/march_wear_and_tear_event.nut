@@ -8,17 +8,17 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.march_wear_and_tear";
-		this.m.Title = "Along the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{Marching all around the world has put some wear and tear on the men. Whenever a mercenary takes off a boot you can see the blood seeping through his sock. They\'ve accumulated sores and boils. One man peels the flesh off his toe and says he regrets doing that and you nod. All in all, this is the price to pay for being on the road so much.}",
+			Text = "%terrainImage%{Maszerowanie po całym świecie odcisnęło na ludziach swoje piętno. Gdy tylko najemnik zdejmuje but, widać krew przesiąkającą przez skarpetę. Nagromadziły się otarcia i czyraki. Jeden z ludzi zdziera skórę z palca u stopy i mówi, że żałuje, a ty kiwasz głową. Ogólnie rzecz biorąc, to cena za ciągłe bycie w drodze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Suck it up.",
+					Text = "Zaciśnijcie zęby.",
 					function getResult( _event )
 					{
 						return "End";
@@ -31,7 +31,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Tailor != null)
 				{
 					this.Options.push({
-						Text = "Maybe we can fashion some fresh wrappings from what we\'ve got?",
+						Text = "Może zrobimy świeże opatrunki z tego, co mamy?",
 						function getResult( _event )
 						{
 							return "Tailor";
@@ -43,7 +43,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Vagabond != null)
 				{
 					this.Options.push({
-						Text = "You\'ve traveled the world, %travelbro%. Suggestions?",
+						Text = "Zwiedziłeś świat, %travelbro%. Jakieś rady?",
 						function getResult( _event )
 						{
 							return "Vagabond";
@@ -55,7 +55,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Thief != null)
 				{
 					this.Options.push({
-						Text = "Wait. %streetrat%, you look like you have something to say?",
+						Text = "Czekaj. %streetrat%, wygląda, jakbyś miał coś do powiedzenia?",
 						function getResult( _event )
 						{
 							return "Thief";
@@ -68,13 +68,13 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "End",
-			Text = "%terrainImage%{The next stop ain\'t far. You hope the men can keep it together until they get there. What bandages you have are applied as necessary.}",
+			Text = "%terrainImage%{Następny postój jest niedaleko. Masz nadzieję, że ludzie wytrzymają do tego czasu. Te bandaże, które masz, używasz w razie potrzeby.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Put your boots back on.",
+					Text = "Załóżcie z powrotem buty.",
 					function getResult( _event )
 					{
 						return 0;
@@ -99,7 +99,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + " suffers light wounds"
+							text = bro.getName() + " odnosi lekkie rany"
 						});
 					}
 				}
@@ -109,20 +109,20 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Medical Supplies."
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Zapasów Medycznych."
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Tailor",
-			Text = "%terrainImage%{%tailor% the tailor rubs his chin with two fingers. He finally points them forward.%SPEECH_ON%I\'ve got it. Gentlemen, give me every scrap of unused or trashy clothing you have. Every article you got. Hand it over. There you go. Yes, that\'s absolutely trash, %otherbrother%. Your favorite shirt? By the gods, just give it to me already. Thank you.%SPEECH_OFF%The tailor collects armfuls of discarded clothing and gets to work with his scissors. He slices and dices and pauses. He pauses a lot, always unsure of his work. But finally he presents the results. A pile of fresh socks and enough left over scraps to furnish some extra bandages. He\'s also wearing a surprisingly flashy new garb that you\'ve no clue how he created.}",
+			Text = "%terrainImage%{%tailor%, krawiec, pociera podbródek dwoma palcami. W końcu wskazuje nimi do przodu.%SPEECH_ON%Mam to. Panowie, dajcie mi każdy skrawek nieużywanej albo zniszczonej odzieży, jaką macie. Każdy ciuch. Dawajcie. O, proszę. Tak, to jest absolutny śmieć, %otherbrother%. Twoja ulubiona koszula? Na bogów, po prostu mi ją już daj. Dziękuję.%SPEECH_OFF%Krawiec zbiera naręcza porzuconych ubrań i zabiera się do pracy z nożycami. Tnie, rwie, zatrzymuje się. Zatrzymuje się często, zawsze niepewny swojej roboty. W końcu jednak prezentuje rezultat. Stos świeżych skarpet i dość resztek, by zrobić dodatkowe bandaże. Ma też na sobie zaskakująco efektowny nowy strój, nie masz pojęcia, jak to stworzył.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Now that\'s a magician if I\'ve ever see one.",
+					Text = "Jeśli to nie magik, to ja nie wiem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -133,7 +133,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Tailor.getImagePath());
-				_event.m.Tailor.improveMood(1.0, "Fashioned himself something nice from cloth scraps");
+				_event.m.Tailor.improveMood(1.0, "Uszył sobie coś ładnego ze skrawków materiału");
 
 				if (_event.m.Tailor.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -150,20 +150,20 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Medical Supplies."
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Zapasów Medycznych."
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Vagabond",
-			Text = "%terrainImage%{When it comes to walking the earth, %travelbro% is longer in the tooth than anyone. He laughs at the plight of his fellow sellswords.%SPEECH_ON%Ah, now this is what I\'m talking about! Nevermind the pain, men, embrace the soreness!%SPEECH_OFF%The company collectively tells him to stuff it, but the roadman happily wiggles his toes around. You didn\'t even realize he had his boots off before that, his feet are so calloused you thought the bony figures but folds of leather!}",
+			Text = "%terrainImage%{Jeśli chodzi o chodzenie po świecie, %travelbro% zjadł zęby bardziej niż ktokolwiek. Śmieje się z niedoli swoich towarzyszy najemników.%SPEECH_ON%Ach, o to mi chodzi! Nie przejmujcie się bólem, panowie, przyjmijcie tę obolałość!%SPEECH_OFF%Kompania zbiorowo każe mu się odczepić, a włóczęga wesoło porusza palcami. Nawet nie zauważyłeś, że wcześniej zdjął buty, jego stopy są tak zrogowaciałe, że wydawały się kostniste, jakby były z fałd skóry!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Put your damn boots back on.",
+					Text = "Załóż te cholerne buty z powrotem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -174,7 +174,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Vagabond.getImagePath());
-				_event.m.Vagabond.improveMood(1.0, "Enjoyed life on the road");
+				_event.m.Vagabond.improveMood(1.0, "Cieszył się życiem w drodze");
 
 				if (_event.m.Vagabond.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -200,7 +200,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + " suffers light wounds"
+							text = bro.getName() + " odnosi lekkie rany"
 						});
 					}
 				}
@@ -210,20 +210,20 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Medical Supplies."
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Zapasów Medycznych."
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Thief",
-			Text = "%terrainImage%{%thief% the thief sidles up to you. Stepping away and putting your hands in your pockets, you ask what he wants. He smirks and answers.%SPEECH_ON%Alright I\'ll be honest with you, captain. Last time we stopped in town I helped myself to a blind peacemaker\'s wares. What? I\'d a sore tooth. No reason to pay to fix what the old gods gave me. Anyway, I fixed my tooth. See? What a smile, right? But then I thought I felt some aches, man, aches all over the place! So I visited the peacemaker again and...%SPEECH_OFF%You interrupt the man and ask just how much he stole. He produces a sack of medicinal goods. He proudly puts his hands to his hips and stare out at the world with his crooked grin.%SPEECH_ON%Suffice it to say I ain\'t hurtin\' no more.%SPEECH_OFF%} ",
+			Text = "%terrainImage%{%thief%, złodziej, podchodzi do ciebie bokiem. Odsuwasz się i wkładasz ręce do kieszeni, pytając, czego chce. On uśmiecha się szyderczo i odpowiada.%SPEECH_ON%Dobra, powiem szczerze, kapitanie. Ostatnim razem, gdy zatrzymaliśmy się w mieście, poczęstowałem się towarem niewidomego uzdrowiciela. Co? Bolał mnie ząb. Nie ma powodu płacić za naprawę tego, co dali mi starzy bogowie. W każdym razie naprawiłem ząb. Widzisz? Jaki uśmiech, co? A potem pomyślałem, że czuję jakieś bóle, człowieku, bóle wszędzie! Więc odwiedziłem uzdrowiciela znowu i...%SPEECH_OFF%Przerywasz mu i pytasz, ile ukradł. Wyciąga worek medykamentów. Dumnie opiera dłonie na biodrach i spogląda na świat ze swoim krzywym uśmiechem.%SPEECH_ON%Wystarczy powiedzieć, że już mnie nic nie boli.%SPEECH_OFF%} ",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What were we complaining about again?",
+					Text = "Na co my właściwie narzekaliśmy?",
 					function getResult( _event )
 					{
 						return 0;
@@ -239,7 +239,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]-" + amount + "[/color] Medical Supplies."
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]-" + amount + "[/color] Zapasów Medycznych."
 				});
 			}
 

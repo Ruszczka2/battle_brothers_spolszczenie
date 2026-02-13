@@ -3,17 +3,17 @@ this.petrified_scream_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.petrified_scream";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_12.png[/img]{A few of the men run into your tent, each of them wide-eyed and sweating. They absentmindedly shrink from each other\'s touch or violently push back. You ask what is the problem and they explain as a mob like birds crowing at someone hiding a piece of bread from them. It takes some parsing, but it sounds as though the artifact superstitiously called the \'petrified scream\' has been giving the men nightmares. You tell the men the item is in the inventory and is of no harm. The men quietly leave.\n\n You return to your map only to see something black hidden under the paper. Lifting the page, you find the alp\'s death mask there, maw open in grisly black permanence. You stare at the mask, you can hear something within it, something clattering its teeth like thrown dice, and the sides of it seem to be vibrating, giving its flesh a bubbling look. With a shrug and laugh you throw it on top of the map as a paperweight. Damn thing is gonna get lost if the men keep moving it around like this.}",
+			Text = "[img]gfx/ui/events/event_12.png[/img]{Kilku ludzi wpada do twojego namiotu, każdy z szeroko otwartymi oczami i spocony. Odskakują bezwiednie od dotyku innych albo gwałtownie odpychają. Pytasz, o co chodzi, a oni tłumaczą się jak rozkrzyczany tłum, niczym ptaki wrzeszczące na kogoś, kto chowa przed nimi okruszek chleba. Trzeba chwilę to poskładać, ale wygląda na to, że artefakt przesądnie zwany \'skamieniałym krzykiem\' wywołuje u nich koszmary. Mówisz im, że przedmiot jest w zapasach i nie stanowi zagrożenia. Ludzie cicho wychodzą.\n\n Wracasz do mapy, tylko po to, by zobaczyć coś czarnego schowanego pod papierem. Podnosisz kartę i znajdujesz tam maskę śmierci alpa, z rozwartą paszczą w upiornej, czarnej trwałości. Patrzysz na maskę, słyszysz w niej coś, coś klekoczącego zębami jak rzucone kości, a jej boki zdają się drżeć, przez co skóra wygląda, jakby bulgotała. Wzruszasz ramionami i ze śmiechem kładziesz ją na mapie jako przycisk do papieru. To cholerstwo się zgubi, jeśli ludzie będą je tak przestawiać.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "How do you keep misplacing that?",
+					Text = "Jak wam się udaje to wciąż gubić?",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,7 +34,7 @@ this.petrified_scream_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.superstitious") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.dastard") || bro.getSkills().hasSkill("trait.craven") || bro.getSkills().hasSkill("trait.mad") || this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(0.75, "Concerned about carrying around a Petrified Scream artifact");
+						bro.worsenMood(0.75, "Niepokoi go noszenie artefaktu Skamieniałego Krzyku");
 
 						if (bro.getMoodState() <= this.Const.MoodState.Neutral)
 						{

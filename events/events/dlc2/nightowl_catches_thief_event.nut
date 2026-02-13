@@ -6,17 +6,17 @@ this.nightowl_catches_thief_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.nightowl_catches_thief";
-		this.m.Title = "Along the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]{Waking from a strange dream, you step out of your tent to find most of the company asleep, aside from the night owl %nightowl%. He\'s at the edge of the camp with his back turned, but he seems to hear you approaching and speaks without looking.%SPEECH_ON%This is how it starts, sir. The rage. The fever. That turns good men, hoooo.%SPEECH_OFF%He wheels around to show off an actual owl he has caught. Its eyelids are half-closed, probably worn out from escaping and now simply humiliated at being caught without any carnivorous purpose. You ask %nightowl% how the hell he caught it. The sellsword lets the bird go and shrugs.%SPEECH_ON%With my hands. I also caught this.%SPEECH_OFF%He crouches and pulls up a heretofore unseen corpse.%SPEECH_ON%Slick little thief. I happened upon him, eh, discounting our wares so to speak. I was a little too tired to talk, so I let my blade here tell him the shop\'s closed. I then followed his footsteps out to where he came from and found his, eh, let\'s say accoutrements.%SPEECH_OFF%You nod. Right. Of course. You tell the man you\'re going back to sleep and you\'ll make judgments of his doings in the morning. He nods back.%SPEECH_ON%Right sir. I\'ll try and get some shuteye myself. Been a couple days. Or was it weeks?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_33.png[/img]{Budząc się z dziwnego snu, wychodzisz z namiotu i widzisz, że większość kompanii śpi, poza nocnym markiem %nightowl%. Stoi na skraju obozu, odwrócony plecami, ale najwyraźniej słyszy, że podchodzisz, i mówi bez odwracania się.%SPEECH_ON%Tak to się zaczyna, panie. Wściekłość. Gorączka. Co zmienia dobrych ludzi, hoooo.%SPEECH_OFF%Odwraca się, by pokazać prawdziwą sowę, którą złapał. Jej powieki są przymknięte, pewnie zmęczona ucieczką i teraz po prostu upokorzona, że ją schwytano bez żadnego drapieżnego powodu. Pytasz %nightowl%, jak do diabła ją złapał. Najemnik wypuszcza ptaka i wzrusza ramionami.%SPEECH_ON%Rękami. Złapałem też to.%SPEECH_OFF%Kuca i wyciąga dotąd niewidziane zwłoki.%SPEECH_ON%Zwinny mały złodziejaszek. Napatoczyłem się na niego, eee, że tak powiem, robił nam upust na towarze. Byłem trochę zbyt zmęczony, by gadać, więc pozwoliłem mojemu ostrzu powiedzieć mu, że sklep jest zamknięty. Potem poszedłem jego śladami tam, skąd przyszedł, i znalazłem jego, eee, nazwijmy to ekwipunek.%SPEECH_OFF%Kiwasz głową. Jasne. Oczywiście. Mówisz mu, że wracasz spać, a rano osądzisz jego postępowanie. On także kiwa głową.%SPEECH_ON%Tak jest, panie. Spróbuję sam trochę odpocząć. Minęło parę dni. A może tygodni?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest well.",
+					Text = "Wypocznij dobrze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -27,7 +27,7 @@ this.nightowl_catches_thief_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.NightOwl.getImagePath());
-				_event.m.NightOwl.improveMood(1.0, "Caught a thief at night");
+				_event.m.NightOwl.improveMood(1.0, "Złapał złodzieja w nocy");
 
 				if (_event.m.NightOwl.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -43,14 +43,14 @@ this.nightowl_catches_thief_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.NightOwl.getName() + " is exhausted"
+					text = _event.m.NightOwl.getName() + " jest wyczerpany"
 				});
 				local money = this.Math.rand(100, 300);
 				this.World.Assets.addMoney(money);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 				});
 			}
 

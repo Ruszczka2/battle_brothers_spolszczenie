@@ -6,17 +6,17 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.corpses_in_forest";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_132.png[/img]{While marching through the forest you come across a pile of burnt corpses clutching themselves in a final fiery embrace. It is a writhing mass of black limbs and the occasional face which gapes up at the sky. The faint smell of burnt pigs is still present, but there are no pigs with it. %randombrother% nods at the sight.%SPEECH_ON%That there is one big pile of awful.%SPEECH_OFF%You nod. Indeed it is.}",
+			Text = "[img]gfx/ui/events/event_132.png[/img]{Maszerując przez las, natrafiasz na stos spalonych zwłok, zaciśniętych w ostatnim ognistym uścisku. To wijąca się masa czarnych kończyn i pojedynczych twarzy, które gapią się w niebo. Wciąż czuć słaby zapach spalonej wieprzowiny, ale żadnych świń tu nie ma. %randombrother% kiwa głową na ten widok.%SPEECH_ON%To jest jeden wielki stos okropieństwa.%SPEECH_OFF%Kiwasz głową. Właśnie tak.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Maybe there\'s something useful in there.",
+					Text = "Może jest tam coś przydatnego.",
 					function getResult( _event )
 					{
 						if (_event.m.BeastSlayer != null && this.Math.rand(1, 100) <= 75)
@@ -35,7 +35,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Better not dwell here.",
+					Text = "Lepiej tu nie zostawać.",
 					function getResult( _event )
 					{
 						return 0;
@@ -50,13 +50,13 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_132.png[/img]{The mercenaries start going through the bodies. Most of the corpses come in bundles of three or four which have to cracked apart like eggs. It takes a boot or steel wedge to get them apart. Chips of charred flesh flutter away as the men work. Burnt children are peeled off like breast plates, their chests caved in and their arms firmly out like spokes. Not much is discovered beneath the bodies. A few bits of gold at most. %randombrother% finds a grisly looking mask of sorts. You\'re not entirely sure what it is, but figure it wouldn\'t hurt to take it along. Maybe some trader will find it interesting.}",
+			Text = "[img]gfx/ui/events/event_132.png[/img]{Najemnicy zaczynają przeszukiwać ciała. Większość zwłok jest zlepiona po trzy lub cztery i trzeba je rozłupywać jak jaja. Do rozdzielenia potrzeba buta lub stalowego klina. Odłupki zwęglonego mięsa fruwają, gdy ludzie pracują. Spalone dzieci odrywają się jak napierśniki, z zapadniętymi klatkami piersiowymi i ramionami sztywno rozstawionymi jak szprychy. Pod ciałami niewiele się znajduje. Co najwyżej kilka kawałków złota. %randombrother% znajduje okropnie wyglądającą maskę. Nie jesteś pewien, czym jest, ale uznajesz, że nie zaszkodzi ją zabrać. Może jakiś handlarz uzna ją za interesującą.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -71,27 +71,27 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				local money = this.Math.rand(10, 100);
 				this.World.Assets.addMoney(money);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_132.png[/img]{%randombrother% crouches beside the ball of charred corpses and shakes his head.%SPEECH_ON%I don\'t rightfully think there\'s anything in there, sir.%SPEECH_OFF%Before you can respond a black hand shoots out and grabs the man by his ankle. The bodies rise and shift, a lone victim pulling himself out of the seared grotesquerie with a cape of charred corpses riding his back like spiderlings. His mouth is firmly agape, the lips burned away and the cheeks hollowed, and his eyes are flat in their sockets. His hand has the grip of a stone gargoyle\'s claw and when the mercenary crawls backward it only pulls the burnt man with him. The whole pile jerks and tumbles with some bodies rolling off the pile with their limbs firmly out like coffee tables and others totters over to stare at the sky and another pitches forward and smashes its head into the ground, pasting it there into a powdery blackmark.\n\n Groaning, the survivor yells for water. You draw your sword and put it through his neck, ending his pain there and then. %randombrother% breaks the fingers off to free his boot from the grisly hand. A few of the sellswords are shaken by the event.}",
+			Text = "[img]gfx/ui/events/event_132.png[/img]{%randombrother% kuca przy kuli zwęglonych zwłok i kręci głową.%SPEECH_ON%Nie sądzę, żeby coś tam było, panie.%SPEECH_OFF%Zanim zdążysz odpowiedzieć, czarna dłoń wyskakuje i chwyta go za kostkę. Ciała unoszą się i przesuwają, samotna ofiara wydobywa się z osmalonej groteski z peleryną zwęglonych zwłok na plecach jak pajączki. Usta ma szeroko otwarte, wargi spalone, policzki wydrążone, a oczy płaskie w oczodołach. Jego dłoń ma chwyt kamiennego szponu gargulca i gdy najemnik czołga się w tył, ciągnie ze sobą spalonego człowieka. Cały stos szarpie i przewraca się, a część ciał stacza się z niego z kończynami sztywno wyciągniętymi jak stoliki, inne kołyszą się, by wpatrywać się w niebo, a jeszcze inne pochylają się i uderzają głowami o ziemię, rozgniatając je w pylisty czarny ślad.\n\n Jęcząc, ocalały błaga o wodę. Dobywasz miecza i przebijasz mu szyję, kończąc jego ból natychmiast. %randombrother% odłamuje palce, by uwolnić but z obrzydliwej dłoni. Kilku najemników jest wstrząśniętych tym zdarzeniem.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -110,7 +110,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(0.75, "Shaken by a gruesome scene");
+					bro.worsenMood(0.75, "Wstrząśnięty przerażającą sceną");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -126,13 +126,13 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_132.png[/img]{%beastslayer% holds his hand up.%SPEECH_ON%They weren\'t murdered, they were purged.%SPEECH_OFF%He squats beside the rim of the pile and lifts a charred arm and wrenched it free at the elbow. He flips the arm around and gives it a squeeze. Green puss oozes out from where the veins would be, dripping steadily to the ground. The beast slayer takes a vial and collects what he can.%SPEECH_ON%These people were infected with a Webknecht\'s poison. It usually dissolves the organs and kills, but sometimes, rarely, it has other effects. Causes bristles of thick hair to grow out on the arms, long fingernails, the shoulder blades start to ache and protrude from the back. Unsightly. And the poisoned, well, they go insane.%SPEECH_OFF%You ask if all these people were poisoned. The beast slayer shakes his head.%SPEECH_ON%This one I knew from the shoulders, the rest, I dunno. When an illness grips a village, it grips the village whole, and soon chaos and confusion become the contagion and the illness itself is but a forgotten spark drifting in the very bonfire it started.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_132.png[/img]{%beastslayer% unosi dłoń.%SPEECH_ON%Nie zostali zamordowani, zostali oczyszczeni.%SPEECH_OFF%Kuca przy krawędzi stosu i podnosi zwęglone ramię, wyrywając je w łokciu. Obraca je i ściska. Zielona ropa sączy się z miejsc, gdzie były żyły, spływając równym strumieniem na ziemię. Pogromca bestii wyciąga fiolkę i zbiera, ile się da.%SPEECH_ON%Ci ludzie byli zakażeni jadem Webknechta. Zwykle rozpuszcza narządy i zabija, ale czasem, rzadko, ma inne skutki. Powoduje wyrastanie grubego włosia na ramionach, długich paznokci, łopatki zaczynają boleć i wystawać z pleców. Ohydne. A zatruci, cóż, szaleją.%SPEECH_OFF%Pytasz, czy wszyscy ci ludzie byli zatruci. Pogromca bestii kręci głową.%SPEECH_ON%Tego rozpoznałem po barkach, reszty nie wiem. Gdy choroba ogarnia wieś, ogarnia ją całą, a wkrótce chaos i zamieszanie stają się zarazą, a sama choroba jest tylko zapomnianą iskrą unoszącą się w ognisku, które rozpaliła.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -148,20 +148,20 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_132.png[/img]{%killer% the murderer on the run smirks and snorts and he nods and spits and nods again. He points at the pile of bodies.%SPEECH_ON%That\'s a cruelty so fierce I don\'t think its doer survived the doing.%SPEECH_OFF%You ask what he means, but the man holds a finger up and walks about the forest, looking behind tree after tree until he comes to a stop.%SPEECH_ON%Just as I thought.%SPEECH_OFF%You come round to see a man hanging there. His fingertips are black and there\'s ash on his face and a noose about his neck. A note in his hand carries apologies, though it does not describe the nature of his crime or if it were a crime at all. Below his feet is his armor and weapons. He may have been a nobleman. Regardless, you have the body cut down and everything looted.}",
+			Text = "[img]gfx/ui/events/event_132.png[/img]{%killer%, morderca w ucieczce, uśmiecha się złośliwie, parska, kiwa głową, pluje i kiwa znowu. Wskazuje na stos ciał.%SPEECH_ON%To okrucieństwo tak zajadłe, że nie sądzę, by jego sprawca przeżył własne dzieło.%SPEECH_OFF%Pytasz, co ma na myśli, ale mężczyzna unosi palec i chodzi po lesie, zaglądając za drzewo po drzewie, aż w końcu się zatrzymuje.%SPEECH_ON%Tak, jak myślałem.%SPEECH_OFF%Podchodzisz i widzisz wiszącego mężczyznę. Ma czarne opuszki palców, popiół na twarzy i pętlę na szyi. W dłoni trzyma notatkę z przeprosinami, choć nie opisuje ona natury jego winy ani nawet czy była winą. Pod jego stopami leżą jego zbroja i broń. Mógł być szlachcicem. Niezależnie od tego, każesz go ściąć, a wszystko złupić.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -178,7 +178,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/armor/basic_mail_shirt");
 				item.setCondition(this.Math.rand(25, 60) * 1.0);
@@ -186,7 +186,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

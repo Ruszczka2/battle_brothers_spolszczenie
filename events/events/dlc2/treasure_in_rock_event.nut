@@ -7,17 +7,17 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.treasure_in_rock";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_66.png[/img]%randombrother% brings you to a crack in the side of a caliche berm. You can see something glinting in the dark. Whatever it is, its earthen hold would be hard going to dig through. The sellsword nods.%SPEECH_ON%I know it\'s in there good and solid, but I reckon that\'s something worth fetching. Whatchu think?%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_66.png[/img]%randombrother% prowadzi cię do szczeliny w boku wapiennej skarpy. W mroku widać coś błyszczącego. Czymkolwiek to jest, twarda ziemia będzie trudna do przekopania. Najemnik kiwa głową.%SPEECH_ON%Wiem, że to tkwi tam solidnie, ale uważam, że warto to wydobyć. Co o tym myślisz?%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s dig!",
+					Text = "Kopać!",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -37,7 +37,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Miner != null)
 				{
 					this.Options.push({
-						Text = "Some miner\'s expertise could be of use here.",
+						Text = "Przyda się tu wiedza górnika.",
 						function getResult( _event )
 						{
 							return "Miner";
@@ -49,7 +49,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Tiny != null)
 				{
 					this.Options.push({
-						Text = "Any of you tiny enough to fit into that hole?",
+						Text = "Kto z was jest dość drobny, by się tam zmieścić?",
 						function getResult( _event )
 						{
 							return "Tiny";
@@ -59,7 +59,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "That\'s not what we\'re after. Get ready to move on.",
+					Text = "To nie nasz cel. Szykować się do dalszej drogi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -71,13 +71,13 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Miner",
-			Text = "[img]gfx/ui/events/event_66.png[/img]%miner% nods at your request. He gathers his tools and surveys the berm for a few minutes. He spits at the rock and nods and gets to work. A few minutes time and this stone hewer\'s already weeding out the weakspots and bringing the hard soil to crumbling dust. The hidden treasure reveals itself and the man pulls it free and hands it over.%SPEECH_ON%A nice workout, captain, and I\'d say well worth the time. Appreciate you depending on me, I mean that honestly.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_66.png[/img]%miner% kiwa głową na twoją prośbę. Zbiera narzędzia i przez kilka minut bada skarpę. Pluje na skałę, kiwa głową i bierze się do pracy. Po kilku minutach ten kamieniarz już wyłapuje słabe punkty i kruszy twardą ziemię na pył. Ukryty skarb się odsłania, a mężczyzna wyciąga go i podaje.%SPEECH_ON%Dobra robota, kapitanie, i powiedziałbym, że była warta czasu. Doceniam, że na mnie liczysz, mówię szczerze.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good work.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -93,16 +93,16 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/trade/uncut_gems_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
-				_event.m.Miner.improveMood(2.0, "Used his mining experience to benefit the company");
+				_event.m.Miner.improveMood(2.0, "Wykorzystał swoje górnicze doświadczenie dla dobra kompanii");
 
 				if (_event.m.Miner.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -117,13 +117,13 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Tiny",
-			Text = "[img]gfx/ui/events/event_66.png[/img]The ever tiny %tiny% walks up to the crack in the berm and stares into it. He turns \'round like a top.%SPEECH_ON%Now I ain\'t one to assume, but I\'ve the sense of being slighted here.%SPEECH_OFF%You assure him that you mean nothing at all by asking he make use of his comical size. He nods and gets to the task as though he were born for it, easily wiggling his way into the crack until it\'s just a pair of boots sticking out the earth. One of the sellswords glances over and quietly asks if it\'s weird that he feels the urge to tickle the feet. You ask what in the fark does that mean with no intention of attaining an answer. Thankfully, %tiny% yells out that he\'s got the item and the men help yank him back out. %tiny% flips over with the treasure held aloft in his tiny hands.",
+			Text = "[img]gfx/ui/events/event_66.png[/img]Zawsze drobny %tiny% podchodzi do szczeliny w skarpie i wpatruje się w nią. Obraca się jak bąk.%SPEECH_ON%Nie żebym coś sugerował, ale mam wrażenie, że mnie tu lekceważycie.%SPEECH_OFF%Zapewniasz go, że nie masz na myśli nic złego, prosząc, by wykorzystał swój komiczny rozmiar. Kiwa głową i zabiera się do pracy, jakby był do tego stworzony, z łatwością przeciska się w szczelinę, aż z ziemi wystają tylko buty. Jeden z najemników zerka i cicho pyta, czy to dziwne, że ma ochotę połaskotać go po stopach. Pytasz, co to u diabła ma znaczyć, nie zamierzając uzyskać odpowiedzi. Na szczęście %tiny% krzyczy, że ma przedmiot, a ludzie pomagają wyciągnąć go z powrotem. %tiny% przewraca się, trzymając skarb wysoko w swoich małych dłoniach.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good work.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -139,16 +139,16 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain an " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 				item = this.new("scripts/items/weapons/ancient/ancient_sword");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain an " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
-				_event.m.Tiny.improveMood(2.0, "Used his unique stature to benefit the company");
+				_event.m.Tiny.improveMood(2.0, "Wykorzystał swój wyjątkowy wzrost dla dobra kompanii");
 
 				if (_event.m.Tiny.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -163,13 +163,13 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "DigGood",
-			Text = "[img]gfx/ui/events/event_66.png[/img]You order the sellswords to use whatever tools are available to dig into the berm. It takes a good clip of time to make headway into the caliche, but eventually %randombrother% manages to loosen the earth enough to reach in and take the hidden treasure right out. It\'s a golden chalice and a scattering of other items one could sell on the market.",
+			Text = "[img]gfx/ui/events/event_66.png[/img]Rozkazujesz najemnikom użyć dowolnych narzędzi, by przekopać skarpę. Przebicie się przez twardą ziemię zajmuje sporo czasu, ale w końcu %randombrother% luzuje ją na tyle, by sięgnąć do środka i wyciągnąć ukryty skarb. To złoty kielich i garść innych przedmiotów, które można sprzedać na rynku.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Luck smiles upon us today.",
+					Text = "Szczęście dziś nam sprzyja.",
 					function getResult( _event )
 					{
 						return 0;
@@ -184,27 +184,27 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Tools and Supplies."
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Narzędzi i Zaopatrzenia."
 				});
 				local item = this.new("scripts/items/loot/golden_chalice_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "DigBad",
-			Text = "[img]gfx/ui/events/event_66.png[/img]You order a few of the mercenaries to set upon the berm with whatever tools are good for the task. They get to it to the best of their abilities, but they\'ve barely started the dig when a chunk of caliche slides free and clips %hurtbro%, knocking him out cold. The desired treasure rolls out after him and you come to find it\'s a rusted and rusticated piece of metal of almost no use to anyone.",
+			Text = "[img]gfx/ui/events/event_66.png[/img]Rozkazujesz kilku najemnikom zabrać się za skarpę z użyciem narzędzi odpowiednich do zadania. Robią, co mogą, ale ledwo zaczęli kopać, gdy fragment twardej ziemi osuwa się i uderza %hurtbro%a, powalając go nieprzytomnego. Po nim wypada pożądany skarb, lecz okazuje się nim zardzewiały i zniszczony kawałek metalu, prawie bezużyteczny dla kogokolwiek.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Goddammit.",
+					Text = "Do diabła.",
 					function getResult( _event )
 					{
 						return 0;
@@ -220,13 +220,13 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Tools and Supplies."
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Narzędzi i Zaopatrzenia."
 				});
 				local injury = _event.m.Other.addInjury(this.Const.Injury.Accident3);
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Other.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Other.getName() + " doznaje " + injury.getNameOnly()
 				});
 			}
 

@@ -6,17 +6,17 @@ this.gain_addiction_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.gain_addiction";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_12.png[/img]{Shouting and hollering, %other% drags %addict% into your tent, drops him, and draws his weapon on the man who looks around dazed and confused. You demand to know what is going on. %addict% slaps the weapon out of his face and tries to get up, but %other% kicks him back down.%SPEECH_ON%Fellas got it rich for the potions, captain. We can hardly keep him away from the stock.%SPEECH_OFF%%addict% slurs his words, grunts and pauses, then nods. He speaks clearly, like a drunkard trying to explain his crime to the constable.%SPEECH_ON%I do not have a problem, sir.%SPEECH_OFF%You get up and check the man\'s forehead. It is cold, yet drawing sweat. %other% spits.%SPEECH_ON%He\'ll get a smidge violent if you confront him about the potions, sir. I think he\'s addicted to the damned things.%SPEECH_OFF%You nod and tell the two to keep it on level to the best of their abilities. | %addict% comes into your tent with sweat on his brow and blackeyes.%SPEECH_ON%Sir, I thought I\'d tell you this personally, you know, to take full responsibility.%SPEECH_OFF%He explains that he has become addicted to the potions. He says he\'ll do his best to manage. You nod and thank him for his honesty. The news worries you, but there is little recourse as of yet. | The men explain that %addict% has strongly taken to the potions and vials and flasks, the ones that carry spirits beyond just good ale and mead. You\'re not sure if it\'s from overuse or because he is having difficulty handling the struggles of being a sellsword. A few of the men are told to keep an eye on him. It\'s the best you can do for now.}",
+			Text = "[img]gfx/ui/events/event_12.png[/img]{Krzycząc i wrzeszcząc, %other% wciąga %addict%a do twojego namiotu, rzuca go na ziemię i dobywa broni na mężczyznę, który rozgląda się otępiały i zdezorientowany. Żądasz wyjaśnień. %addict% strąca broń sprzed twarzy i próbuje wstać, ale %other% kopie go z powrotem na ziemię.%SPEECH_ON%Wpadł po uszy w te mikstury, kapitanie. Ledwo możemy trzymać go z dala od zapasów.%SPEECH_OFF%%addict% bełkocze, mruczy i milknie, po czym kiwa głową. Mówi wyraźnie, jak pijak próbujący wyjaśnić swoje przestępstwo strażnikowi.%SPEECH_ON%Nie mam problemu, panie.%SPEECH_OFF%Wstajesz i sprawdzasz jego czoło. Jest zimne, a jednak spocone. %other% spluwa.%SPEECH_ON%Zrobi się trochę agresywny, jeśli konfrontować go z tymi miksturami, panie. Myślę, że się od tego cholerstwa uzależnił.%SPEECH_OFF%Kiwasz głową i mówisz im obu, by starali się trzymać to w ryzach. | %addict% wchodzi do twojego namiotu z potem na czole i podbitymi oczami.%SPEECH_ON%Panie, pomyślałem, że powiem ci o tym osobiście, wiesz, żeby wziąć pełną odpowiedzialność.%SPEECH_OFF%Wyjaśnia, że uzależnił się od mikstur. Mówi, że zrobi wszystko, by to opanować. Kiwasz głową i dziękujesz mu za szczerość. Wieści cię niepokoją, ale na razie niewiele da się zrobić. | Ludzie wyjaśniają, że %addict% mocno przylgnął do mikstur, fiolek i flaszek, tych, które niosą „ducha” większego niż dobre piwo i miód. Nie wiesz, czy to przez nadużycie, czy dlatego, że trudno mu znieść trudy życia najemnika. Kilku ludziom każesz mieć na niego oko. To najlepsze, co możesz teraz zrobić.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The road takes its toll, but can the men manage?",
+					Text = "Droga zbiera żniwo, ale czy ludzie dadzą radę?",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,7 +32,7 @@ this.gain_addiction_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Addict.getName() + " is now an addict"
+					text = _event.m.Addict.getName() + " jest teraz uzależniony"
 				});
 			}
 

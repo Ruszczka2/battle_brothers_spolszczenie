@@ -6,17 +6,17 @@ this.hate_greenskins_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.hate_greenskins";
-		this.m.Title = "After the battle...";
+		this.m.Title = "Po bitwie...";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%image%{%brother% growls and throws his arms wide like a man overtaken by a primal rage to shed blood.%SPEECH_ON%To hell with those savages! To hell with the greenskins! My life is unfinished so long as they are allowed to walk the same earth as me, my kin, or my children\'s kin! I will rip their tusks from their mouths, ravage their women, I don\'t know if they have women, don\'t know if I\'d go near them if they did actually, but I\'ll ravage something and see to it an annihilation so fierce and thorough the old gods will come to me to borrow a tip!%SPEECH_OFF%}",
+			Text = "%image%{%brother% warczy i rozkłada ramiona szeroko jak człowiek ogarnięty pierwotną żądzą krwi.%SPEECH_ON%Do diabła z tymi dzikusami! Do diabła z zielonoskórymi! Moje życie nie będzie ukończone, dopóki pozwala się im chodzić po tej samej ziemi co ja, moi krewni czy potomkowie! Wyrwę im kły z paszcz, zhańbię ich kobiety, nie wiem, czy mają kobiety, nie wiem, czy podszedłbym do nich, gdyby rzeczywiście miały, ale zhańbię coś i dopilnuję tak zaciekłej i dokładnej zagłady, że starzy bogowie przyjdą do mnie po radę!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "That\'s the spirit!",
+					Text = "O to chodzi!",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,7 +32,7 @@ this.hate_greenskins_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Casualty.getName() + " now hates greenskins"
+					text = _event.m.Casualty.getName() + " teraz nienawidzi zielonoskórych"
 				});
 			}
 

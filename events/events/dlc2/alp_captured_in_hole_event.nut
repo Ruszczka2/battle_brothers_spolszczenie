@@ -5,17 +5,17 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.alp_captured_in_hole";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 170.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{You find a man sitting next to a hole in the ground. Beside him is a metal stake attached to which is a chain that runs into the hole. The hole is covered with goatskin. He regards you with a wave, but says if you wanna see it you\'ll have to pay. You ask what it is he\'s got. He grins.%SPEECH_ON%The darndest thing, sir.%SPEECH_OFF%A few armed men stand off a ways, no doubt a part of whatever scheme is in play here.}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Zastajesz mężczyznę siedzącego obok dziury w ziemi. Przy nim stoi metalowy pal, do którego przymocowany jest łańcuch biegnący w głąb dołu. Dziura przykryta jest kozią skórą. Macha do ciebie, ale mówi, że jeśli chcesz to zobaczyć, musisz zapłacić. Pytasz, co tam ma. Uśmiecha się.%SPEECH_ON%Najdziwniejszą rzecz, panie.%SPEECH_OFF%Kilku uzbrojonych mężczyzn stoi w oddali, bez wątpienia jako część jakiegoś układu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright I\'ll pay a bit to have a look.",
+					Text = "Dobrze, zapłacę trochę, żeby zerknąć.",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We\'re good.",
+					Text = "Nie, dzięki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,13 +38,13 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{You flip the man a few coins. He bites them in his teeth and you tell him to be wary of doing that, there\'s blood on some of them. He shrugs and pockets the pay. You come to the hole and the man throws the tarp off. A gruesome looking alp stares up and hisses at you with rows of sharp teeth and a face like curtain made of pale flesh. There is a shackle around its neck and the man whistles at the reveal as though it was the first time he ever saw it there.%SPEECH_ON%Awful little bugger, ain\'t it? Don\'t get too close, it\'ll have you seeing things. Unless you wanna do that, of course. Some folks do. But if you start seeing things and you enjoy then you gotta pay a little more!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Rzucasz mężczyźnie kilka monet. Gryzie je zębami, a ty mówisz mu, by uważał, bo na niektórych jest krew. Wzrusza ramionami i chowa zapłatę. Podchodzisz do dziury, a mężczyzna zrzuca płachtę. Okropnie wyglądający alp wpatruje się w ciebie i syczy, z rzędami ostrych zębów i twarzą jak zasłona z bladego mięsa. Ma obrożę na szyi, a mężczyzna gwiżdże na widok, jakby pierwszy raz to widział.%SPEECH_ON%Okropny mały gnoj, co? Nie podchodź za blisko, bo będziesz widział rzeczy. Chyba że chcesz, oczywiście. Niektórzy chcą. Ale jeśli zaczniesz widzieć rzeczy i ci się to spodoba, musisz dopłacić!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You should kill it.",
+					Text = "Powinieneś go zabić.",
 					function getResult( _event )
 					{
 						return "C";
@@ -52,7 +52,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Alright, uh, good luck then.",
+					Text = "No cóż, powodzenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -67,20 +67,20 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]" + money + "[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + money + "[/color] Koron"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{Such hideous creatures cannot stand to survive. You tell the man that it is likely to get its way out of the hole at some point and start wreaking havoc on the world, if not moreso than usual in a fit of primeval vengeance. The man spits.%SPEECH_ON%Go fark yourself. Get on out of here and you ain\'t getting your money back. You take one wrong step and I\'ll have to defend myself and my investment. Was a right bitch capturing that thing, don\'t you know?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Tak potworne stworzenia nie powinny przetrwać. Mówisz mężczyźnie, że prędzej czy później to coś wydostanie się z dołu i zacznie siać spustoszenie w świecie, a może nawet większe niż zwykle, w napadzie pierwotnej zemsty. Mężczyzna pluje.%SPEECH_ON%Idź się farkuj. Wynoś się stąd i nie dostaniesz zwrotu. Zrobisz jeden zły krok i będę musiał bronić siebie i swojej inwestycji. To była cholernie ciężka robota, żeby to złapać, wiesz?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'ll kill it myself.",
+					Text = "Sam go zabiję.",
 					function getResult( _event )
 					{
 						return "D";
@@ -88,7 +88,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Fine, let it live.",
+					Text = "Dobra, niech żyje.",
 					function getResult( _event )
 					{
 						return "E";
@@ -101,7 +101,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Beastslayer != null)
 				{
 					this.Options.push({
-						Text = "%beastslayer%, you\'re an expert on these things. What say you?",
+						Text = "%beastslayer%, jesteś ekspertem od takich spraw. Co powiesz?",
 						function getResult( _event )
 						{
 							return "F";
@@ -114,13 +114,13 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{You grab a spear from one of the guards and throw it into the pit, striking the alp through its brainpan. Its pale flesh deflates around the spear shaft as though you\'d struck down an enormous curtain. The monster enslaver draws a dagger and goes to stab you. %randombrother% parries the blow and cuts the man across the throat. A few guards dive into the fray, all of them dying in quick and hurried fashion, though a few of the mercenaries get hurt in the fracas. With the violence over, you collect whatever gold the enslaver had on him. You have the bodies dumped into the hole with the dead alp and then fill it up.}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{Chwytasz włócznię jednego ze strażników i rzucasz ją do dołu, przebijając alpa przez czaszkę. Jego blade ciało zapada się wokół drzewca, jakbyś powalił ogromną zasłonę. Ciemiężyciel potworów dobywa sztyletu i rusza na ciebie. %randombrother% paruje cios i tnie go w gardło. Kilku strażników rzuca się do walki, wszyscy giną szybko i w pośpiechu, choć kilku najemników zostaje rannych w bijatyce. Gdy przemoc się kończy, zbierasz złoto, które miał przy sobie ciemiężyciel. Każesz wrzucić ciała do dołu razem z martwym alpem, a potem zasypujesz go.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -135,7 +135,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -147,7 +147,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + " suffers light wounds"
+							text = bro.getName() + " doznaje lekkich ran"
 						});
 					}
 				}
@@ -156,13 +156,13 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{You\'re not going to bother quarreling with these men. Some of the best fighters you\'ve seen have gotten killed in reckless and pointless bar fights. If these idiots want to keep the monster, so be it. But a few of the company\'s mercenaries are not happy with the idea of an alp allowed to live, especially as the creature gazed its faceless stares upon a number of them and seemed to nod as though it\'d be seeing them at a later juncture.}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Nie będziesz się kłócić z tymi ludźmi. Niektórzy z najlepszych wojowników, jakich widziałeś, zginęli w nieprzemyślanych i bezsensownych bójkach w karczmie. Jeśli ci idioci chcą trzymać potwora, niech tak będzie. Ale kilku najemników z kompanii nie jest zadowolonych z pomysłu, by alp miał żyć, zwłaszcza że stworzenie spoglądało bez twarzy na niektórych z nich i wydawało się kiwać, jakby miało ich zobaczyć później.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get back on the road.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -178,7 +178,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.beast_slayer" || bro.getBackground().getID() == "background.witchhunter" || bro.getSkills().hasSkill("trait.hate_beasts") || bro.getSkills().hasSkill("trait.fear_beasts") || bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.worsenMood(0.75, "You let some alp live which may haunt the company later");
+						bro.worsenMood(0.75, "Pozwoliłeś żyć alpowi, który może nawiedzić kompanię później");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -195,13 +195,13 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_122.png[/img]{%beastslayer% the beast slayer walks up to the hole and stares in. He nods.%SPEECH_ON%You don\'t have it captured. Alps cannot be captured.%SPEECH_OFF%The monster enslaver looks over and asks how so. The slayer laughs.%SPEECH_ON%Because that is no ordinary creature. This alp is biding its time. You said it sends nightmares to people looking in, yeah? Yeah, that\'s right. Fear is its blade and it is sharpening it right and steady. It is practicing its craft the best it can. Alps use environments to put their victims in and currently it\'s making do with the dirt. But eventually you\'ll look in and it\'ll be looking up, ready for the very moment, and you\'ll find yourself in the hole with it. Not you, yourself. No, the body would be spared. It will take your mind into that hole. And it will be there. You and that monstrosity alone in all the dark this world has to spare. For how long? Days, weeks. A very dangerous alp can cage your mind for what seems like years. You\'ll come out of it a fool, broken and slobbering and begging for death, that is if you still have the capacity to speak by then.%SPEECH_OFF%The slayer takes a bow from one of the enslaver\'s guards. He nocks an arrow. The alp looks up and its mouth blossoms open to rows of razor sharp teeth. The slayer shoots it right in the maw killing it instantly. He hands the bow back and unfurls his journeyman sheet.%SPEECH_ON%This is the pay I am owed. Extra for saving your soul and mind from an alp\'s forever harvest. I\'ll also be taking the alp\'s skin. Agreed?%SPEECH_OFF%The enslaver hurriedly nods.%SPEECH_ON%Yes, yes of course!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_122.png[/img]{%beastslayer%, pogromca bestii, podchodzi do dołu i zagląda do środka. Kiwając głową, mówi:%SPEECH_ON%Nie macie go schwytanego. Alpów nie da się schwytać.%SPEECH_OFF%Ciemiężyciel potworów spogląda i pyta, czemu. Pogromca śmieje się.%SPEECH_ON%Bo to nie jest zwykłe stworzenie. Ten alp tylko czeka. Mówiłeś, że wysyła koszmary tym, którzy zaglądają, tak? Tak właśnie. Strach jest jego ostrzem i on ostrzy je równo i cierpliwie. Ćwiczy swój kunszt najlepiej, jak potrafi. Alpy używają otoczenia, by zamykać w nim swoje ofiary, a teraz radzi sobie ziemią. Ale w końcu zajrzysz, a on spojrzy w górę, gotów na tę właśnie chwilę, i znajdziesz się w dole razem z nim. Nie ty, nie twoje ciało. Nie, ciało będzie oszczędzone. On zabierze twój umysł do tego dołu. I będzie tam. Ty i ta potworność, sami w całej ciemności, jaką ten świat ma do zaoferowania. Jak długo? Dni, tygodnie. Bardzo niebezpieczny alp potrafi uwięzić twój umysł na to, co wydaje się latami. Wyjdziesz z tego jako głupiec, złamany, śliniący się i błagający o śmierć, o ile do tego czasu zachowasz zdolność mówienia.%SPEECH_OFF%Pogromca bierze łuk od jednego ze strażników ciemiężyciela. Zakłada strzałę. Alp unosi wzrok, a jego paszcza rozkwita rzędami brzytwowych zębów. Pogromca strzela prosto w paszczę, zabijając go natychmiast. Oddaje łuk i rozwija swoją kartę czeladniczą.%SPEECH_ON%To zapłata, która mi się należy. Dodatkowa za uratowanie twojej duszy i umysłu przed wiecznym żniwem alpa. Wezmę też jego skórę. Zgoda?%SPEECH_OFF%Ciemiężyciel pośpiesznie kiwa głową.%SPEECH_ON%Tak, tak, oczywiście!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'ll be splitting that with the company.",
+					Text = "Podzielisz się tym z kompanią.",
 					function getResult( _event )
 					{
 						return 0;
@@ -217,14 +217,14 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Koron"
 				});
 				local item = this.new("scripts/items/misc/parched_skin_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

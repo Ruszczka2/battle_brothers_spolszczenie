@@ -8,17 +8,17 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.youngling_alp";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]{%callbrother% runs into your tent and says something is watching the camp. You come outside to see a silhouette in the distance, skulking behind brush and tree limbs. You know its staring when it hisses, for what else would it be looking at to elicit such a charge. Its arms are long and slender and end in claws. You take a torch and sling it toward the beast. Its slick skin winks a vibrant orange and it shrieks away from the cloud of embers and sparks as the torch lands and rolls past. The toothy maw is the last thing you see fading back into the darkness.%SPEECH_ON%I think it\'s an alp, sir. It\'s all by itself as far as we can tell.%SPEECH_OFF%You ask if the sellsword has had visions. He shrugs.%SPEECH_ON%Yeah, some, but I also been drinking so there\'s that.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_33.png[/img]{%callbrother% wpada do twojego namiotu i mówi, że coś obserwuje obóz. Wychodzisz na zewnątrz i widzisz sylwetkę w oddali, czającą się za krzakami i gałęziami. Wiesz, że się wpatruje, gdy syczy, bo na co innego miałoby tak reagować. Jego ramiona są długie i smukłe, zakończone pazurami. Bierzesz pochodnię i ciskasz ją w bestię. Jej śliska skóra błyska jaskrawą pomarańczą i stwór odskakuje z krzykiem od chmury żaru i iskier, gdy pochodnia ląduje i przetacza się dalej. Zębata paszcza to ostatnie, co widzisz, nim znika w ciemności.%SPEECH_ON%Myślę, że to alp, panie. Z tego, co wiemy, jest sam.%SPEECH_OFF%Pytasz, czy najemnik miał wizje. Wzrusza ramionami.%SPEECH_ON%Tak, kilka, ale też piłem, więc to też.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Kill it.",
+					Text = "Zabij je.",
 					function getResult( _event )
 					{
 						return "B";
@@ -26,7 +26,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Ignore it.",
+					Text = "Zignoruj je.",
 					function getResult( _event )
 					{
 						return "C";
@@ -41,7 +41,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Beastslayer != null)
 				{
 					this.Options.push({
-						Text = "%beastslayer%, you\'re an expert on these things. What say you?",
+						Text = "%beastslayer%, znasz się na tych bestiach. Co powiesz?",
 						function getResult( _event )
 						{
 							return "D";
@@ -53,7 +53,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Flagellant != null)
 				{
 					this.Options.push({
-						Text = "What is %flagellant% saying about this?",
+						Text = "Co na to %flagellant%?",
 						function getResult( _event )
 						{
 							return "E";
@@ -66,13 +66,13 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_122.png[/img]{The alp is alone and possibly a youngling. Even monsters have to cut their cloth and put in the work to become truly horrible beasts, and this one just doesn\'t seem there yet. You send a pair of sellswords to slay the beast. They close in on it through the shroud of darkness. You see the silhouettes rising up in ambush and there\'s a clatter and a scream, and another scream which is nothing humanlike at all. Shrieking now. And this time a man crying. Someone speaking. Quiet. A long, long quiet. Then the pair comes back. One is clutching his head as though taken by a terrific ache, the other looks at you and nods.%SPEECH_ON%We killed it and, uh, I think we need to lie down.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_122.png[/img]{Alp jest sam i być może młody. Nawet potwory muszą swoje odcierpieć i zapracować, by stać się naprawdę okropnymi bestiami, a ten jeszcze na to nie wygląda. Wysyłasz parę najemników, by zabić bestię. Zbliżają się do niej przez zasłonę ciemności. Widzisz sylwetki podnoszące się do zasadzki, słychać trzask i krzyk, i jeszcze jeden krzyk, już zupełnie nie ludzki. Potem zawodzenie. A tym razem płacz człowieka. Ktoś mówi. Cisza. Długa, długa cisza. W końcu wraca para. Jeden trzyma się za głowę, jakby dopadł go okropny ból, drugi patrzy na ciebie i kiwa głową.%SPEECH_ON%Zabiliśmy go i, eee, myślę, że musimy się położyć.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good work.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -91,9 +91,9 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Callbrother.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Experience"
+					text = _event.m.Callbrother.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doświadczenia"
 				});
-				_event.m.Callbrother.worsenMood(0.75, "Had an alp invade his mind");
+				_event.m.Callbrother.worsenMood(0.75, "Alp wtargnął mu do umysłu");
 
 				if (_event.m.Callbrother.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -107,9 +107,9 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Other.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Experience"
+					text = _event.m.Other.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doświadczenia"
 				});
-				_event.m.Other.worsenMood(0.75, "Had an alp invade his mind");
+				_event.m.Other.worsenMood(0.75, "Alp wtargnął mu do umysłu");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -124,13 +124,13 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]{You tell the men to ignore the alp. If it were of any danger it would have already proven so. Instead, it has let you know it is there, whether by ignorance or arrogance, neither of which bother you none. A few of the men do not agree with this decision and they stay up all night watching for the beast.}",
+			Text = "[img]gfx/ui/events/event_33.png[/img]{Mówisz ludziom, by zignorowali alpa. Gdyby był groźny, już by to udowodnił. Zamiast tego dał wam znać, że tam jest, czy to z niewiedzy, czy z pychy, a żadna z tych rzeczy cię nie rusza. Kilku ludzi nie zgadza się z tą decyzją i czuwa całą noc, wypatrując bestii.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Grow a pair.",
+					Text = "Weźcie się w garść.",
 					function getResult( _event )
 					{
 						return 0;
@@ -146,7 +146,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getLevel() <= 3 || bro.getBackground().getID() == "background.beast_slayer" || bro.getBackground().getID() == "background.witchhunter" || bro.getSkills().hasSkill("trait.hate_beasts") || bro.getSkills().hasSkill("trait.fear_beasts") || bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.worsenMood(0.75, "You let some alp live which may haunt the company later");
+						bro.worsenMood(0.75, "Pozwoliłeś alpowi żyć, co może prześladować kompanię później");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -163,13 +163,13 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_122.png[/img]{%beastslayer% the beast slayer comes over.%SPEECH_ON%It ain\'t dangerous, it\'s confused. I\'ll take care of this.%SPEECH_OFF%He\'s chewing on a dried biscuit and grunts and puts the biscuit in his pocket and sets off into the dark all by himself. A moment later, the alp\'s silhouette suddenly falls away and disappears. A few minutes later and the slayer returns, shoving the last morsels of the biscuit into his mouth. You ask why the alp didn\'t put up much of a fight. The beast slayer laughs.%SPEECH_ON%You said %callbrother% fetched you from your tent, right? Right. And where is %callbrother%?%SPEECH_OFF%The beast slayer points toward the campfire. The sellsword is there. Asleep. Deeply asleep. %beastslayer% gets himself another biscuit.%SPEECH_ON%Young alps are still learning how to pry into your mind. They\'re not good at it and often call attention to themselves while trying. They\'re like thieves who can\'t pick a lock, so they knock on the door instead.%SPEECH_OFF%A few of the men listen to this and are emboldened by the apparent flaws of these otherwise horrifying creatures.}  ",
+			Text = "[img]gfx/ui/events/event_122.png[/img]{%beastslayer%, pogromca bestii, podchodzi.%SPEECH_ON%To nie jest groźne, jest zdezorientowane. Zajmę się tym.%SPEECH_OFF%Przeżuwa suchy suchar, mruczy, wkłada go do kieszeni i rusza w ciemność sam. Chwilę później sylwetka alpa nagle opada i znika. Po kilku minutach pogromca wraca, wciskając do ust ostatnie okruchy suchara. Pytasz, czemu alp nie stawiał większego oporu. Pogromca się śmieje.%SPEECH_ON%Mówiłeś, że %callbrother% ściągnął cię z namiotu, prawda? Właśnie. A gdzie jest %callbrother%?%SPEECH_OFF%Pogromca wskazuje ognisko. Najemnik jest tam. Śpi. Głęboko. %beastslayer% sięga po kolejny suchar.%SPEECH_ON%Młode alpy dopiero uczą się, jak wgryzać się do umysłu. Nie idzie im to dobrze i często zwracają na siebie uwagę podczas prób. Są jak złodzieje, którzy nie potrafią otworzyć zamka, więc zamiast tego pukają do drzwi.%SPEECH_OFF%Kilku ludzi słucha tego i nabiera odwagi dzięki dostrzeżonym słabościom tych skądinąd przerażających stworzeń.}  ",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice job.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -180,14 +180,14 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Beastslayer.getImagePath());
-				_event.m.Beastslayer.improveMood(0.5, "Dispatched of a youngling alp");
+				_event.m.Beastslayer.improveMood(0.5, "Pozbył się młodego alpa");
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
 					if (bro.getLevel() <= 3 && this.Math.rand(1, 100) <= 33 || bro.getBackground().getID() == "background.witchhunter" || bro.getSkills().hasSkill("trait.hate_beasts") || bro.getSkills().hasSkill("trait.fear_beasts") || bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.improveMood(1.0, "Emboldened by learning of the weakness of young alps");
+						bro.improveMood(1.0, "Ośmielony wiedzą o słabości młodych alpów");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -204,13 +204,13 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_33.png[/img]{%flagellant% the flagellant is at the rim of the camp whipping himself raw. His soul cleansing tool is rigged with broken glass and cat claws, bound tight with leather rinsed taut in urine, and tassels of twisted horse hair. He walks out into the wilderness, hiding himself with every step.%SPEECH_ON%It\'s not that I fear you, creature in the shadows. It\'s not that I fear you, shadows in my mind. It\'s not that I fear you, mind in my body.%SPEECH_OFF%The man stops walking, but the urgency of his flagellation increases and you can see the flecks of blood winking in the moonlight.%SPEECH_ON%It is that I fear the old gods of which you are not! Of which you are but an insect!%SPEECH_OFF%The alp\'s silhouette shrinks away, shrieks, and then scurries off altogether. The man returns and collapses into the camp. A few of the men are horrified, while others are emboldened by his courage and righteousness.}",
+			Text = "[img]gfx/ui/events/event_33.png[/img]{%flagellant%, biczownik, stoi na skraju obozu, smagając się do krwi. Jego narzędzie oczyszczania duszy jest uzbrojone w kawałki szkła i kocie pazury, ciasno związane skórą wypłukaną w moczu, i frędzle ze skręconej końskiej sierści. Idzie w dzicz, z każdym krokiem skrywając się coraz bardziej.%SPEECH_ON%Nie to, że się ciebie boję, stworzeń w cieniu. Nie to, że się ciebie boję, cieni w mym umyśle. Nie to, że się ciebie boję, umyśle w mym ciele.%SPEECH_OFF%Mężczyzna przestaje iść, ale jego biczowanie nabiera gwałtowności, widzisz drobiny krwi migoczące w księżycowym świetle.%SPEECH_ON%To starych bogów się boję, a ty do nich nie należysz! Dla nich jesteś tylko owadem!%SPEECH_OFF%Sylwetka alpa kurczy się, krzyczy, po czym umyka w ciemność. Mężczyzna wraca i osuwa się w obozie. Kilku ludzi jest przerażonych, a inni ośmieleni jego odwagą i prawością.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "By the old gods.",
+					Text = "Na starych bogów.",
 					function getResult( _event )
 					{
 						return 0;
@@ -229,13 +229,13 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.Flagellant.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.Flagellant.getName() + " doznaje " + injury.getNameOnly()
 					}
 				];
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Flagellant.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] Hitpoints"
+					text = _event.m.Flagellant.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] Punktów Życia"
 				});
 			}
 

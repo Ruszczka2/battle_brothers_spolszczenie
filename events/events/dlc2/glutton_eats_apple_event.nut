@@ -6,17 +6,17 @@ this.glutton_eats_apple_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.glutton_eats_apple";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_18.png[/img]{You come to a commotion between %glutton% the glutton and a bucket. He\'s heaving into it so hard his back lurches like a cat and his hurls sound like an undead cow giving birth. When he lifts his head his face looks like a gourd, cheeks ballooned, his mouth still all agargle. %otherbrother% comes over.%SPEECH_ON%He ate the witch\'s apple.%SPEECH_OFF%Raising an eyebrow, you ask the glutton why he would do such a thing. Vomit strings wriggle from his wrist as he wipes his eyes.%SPEECH_ON%{Cause I\'m always hungr-hurgh, uh, hungregghhh! | I don\'t rightfully know sir can\'t I just be in pain without having to validate my actiiiherrrghh! | Would I have to explain myself if I wasn\'t losing my gouerrrghhhh! | Cause you told me to eat healthy and it was an apperrrghghh!}%SPEECH_OFF%He pitches his head back into the bucket like a man who dropped a million crowns down a well. You tell the mercenaries to keep an eye on him until it\'s all out of his system, that is if it ever will be.}",
+			Text = "[img]gfx/ui/events/event_18.png[/img]{Trafiasz na zamieszanie między %glutton%em, żarłokiem, a wiadrem. Wymiotuje do niego tak mocno, że plecy wyginają mu się jak u kota, a odgłosy zwracania brzmią jak nieumarła krowa rodząca cielę. Gdy podnosi głowę, jego twarz wygląda jak dynia, policzki ma nabrzmiałe, a usta wciąż bulgoczą. Podchodzi %otherbrother%.%SPEECH_ON%Zjadł jabłko wiedźmy.%SPEECH_OFF%Unosząc brew, pytasz żarłoka, czemu zrobił coś takiego. Nitki wymiocin wiją się z jego nadgarstka, gdy przeciera oczy.%SPEECH_ON%{Bo ja zawsze jestem głod-hurgh, uh, głodnerrrghhh! | Nie wiem, panie, czy nie mogę po prostu cierpieć bez tłumaczenia mojego czynu-iiiherrrghh! | Czy musiałbym się tłumaczyć, gdybym nie rzygerrrghhhh! | Bo kazałeś mi jeść zdrowo, a to było jabbłerrrghghh!}%SPEECH_OFF%Wkłada głowę z powrotem do wiadra jak człowiek, który wrzucił do studni milion koron. Każesz najemnikom mieć go na oku, dopóki to nie wyjdzie z jego organizmu, o ile w ogóle.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Why...?",
+					Text = "Dlaczego...?",
 					function getResult( _event )
 					{
 						return 0;
@@ -37,7 +37,7 @@ this.glutton_eats_apple_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 						break;
 					}
@@ -48,7 +48,7 @@ this.glutton_eats_apple_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.Glutton.getName() + " is sick"
+					text = _event.m.Glutton.getName() + " jest chory"
 				});
 			}
 

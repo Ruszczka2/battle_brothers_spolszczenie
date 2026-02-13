@@ -8,16 +8,16 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.collector_wants_trophy";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_01.png[/img]{While browsing the town\'s markets, a man in silk approaches. He\'s wearing a grin with more glitter than chomp, and each of his fingers are adorned to glint. | As you take a look at the local market\'s wares, a strange man approaches. He has baubles of strange liquids hanging from his hip and there\'s a strange wood taking the place of most of his teeth. | It\'s not a true trip to the markets without some strange fella accosting you. This time it\'s a man with a large face, his mouth a bear trap of jagged teeth, and his cheeks set high as though they were meant to be shelves. Features aside, he swings his weight around like someone of import and wealth.}%SPEECH_ON%{Ah sellsword, I see you have some interesting trophies with ya. How about I take that %trophy% for, say, %reward% crowns? | That\'s an interesting trophy you got there, the %trophy%. I\'ll give you %reward% crowns for it, hand over fist, easy money! | Hmm, I see you are of the adventuring sort. You wouldn\'t come by that %trophy% without some guile in ya. Well I got some gold in me, and I\'ll give you %reward% of it for that trinket.}%SPEECH_OFF%You consider the man\'s offer.",
+			Text = "[img]gfx/ui/events/event_01.png[/img]{Podczas przeglądania targu miasta podchodzi do ciebie mężczyzna w jedwabiu. Ma uśmiech bardziej błyszczący niż szczery, a każdy palec ozdobiony tak, by się mienił. | Kiedy oglądasz towary na miejscowym targu, podchodzi dziwny mężczyzna. U biodra zwisają mu fiolki z dziwnymi płynami, a większość zębów zastępuje dziwne drewno. | Nie ma prawdziwej wizyty na targu bez jakiegoś dziwaka, który cię zaczepi. Tym razem to mężczyzna o wielkiej twarzy, ustach jak pułapka na niedźwiedzie z poszarpanych zębów i policzkach osadzonych wysoko, jakby miały być półkami. Poza wyglądem kręci się jak ktoś wpływowy i bogaty.}%SPEECH_ON%{Ach, najemniku, widzę, że masz ciekawe trofea. Co powiesz, żebym wziął to %trophy% za, powiedzmy, %reward% koron? | To interesujące trofeum, %trophy%. Dam ci za nie %reward% koron, gotówka do ręki, łatwa kasa! | Hmm, widzę, żeś awanturniczego sortu. Nie zdobyłbyś %trophy% bez odrobiny sprytu. Mam trochę złota i dam ci %reward% za ten drobiazg.}%SPEECH_OFF%Rozważasz ofertę mężczyzny.",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Deal.",
+					Text = "Zgoda.",
 					function getResult( _event )
 					{
 						if (_event.m.Peddler != null)
@@ -44,7 +44,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No deal.",
+					Text = "Nie ma mowy.",
 					function getResult( _event )
 					{
 						if (_event.m.Peddler != null)
@@ -66,13 +66,13 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Peddler",
-			Text = "[img]gfx/ui/events/event_01.png[/img]{%peddler% steps forward and pushes you back as though you were a random customer and not the company captain. He yells at the buyer and throws a hand up and the buyer responds and it\'s like two dogs barking at one another and it\'s all so fast and with so many numbers being thrown around it may as well be another language. After a minute passes, the peddler returns.%SPEECH_ON%Alright. He\'s now offering %reward% crowns. I\'m off to look at some pots and pans, good luck.%SPEECH_OFF%He pats you on the shoulder and walks off.}",
+			Text = "[img]gfx/ui/events/event_01.png[/img]{%peddler% podchodzi i odpycha cię, jakbyś był przypadkowym klientem, a nie kapitanem kompanii. Krzyczy do kupca i unosi dłoń, a kupiec odpowiada, i brzmi to jak dwa psy szczekające na siebie, wszystko tak szybko i z tyloma liczbami, że mogłoby to być innym językiem. Po chwili handlarz wraca.%SPEECH_ON%Dobra. Teraz oferuje %reward% koron. Idę obejrzeć garnki i patelnie, powodzenia.%SPEECH_OFF%Klepie cię po ramieniu i odchodzi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Deal.",
+					Text = "Zgoda.",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoney(_event.m.Reward);
@@ -92,7 +92,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No deal.",
+					Text = "Nie ma mowy.",
 					function getResult( _event )
 					{
 						return 0;
