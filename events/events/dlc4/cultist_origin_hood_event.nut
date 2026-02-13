@@ -5,17 +5,17 @@ this.cultist_origin_hood_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cultist_origin_hood";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 15.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{%randomcultist%, one your followers, enters your tent and then just as soon leaves. You stand to see where he\'s gone, but come to find a leather half-helm sitting atop your table. The leather is stitched with hairs of unknown origin and pinched together by what look like hooks and fingernails. The holes of the helm are a pitch black, and you get the sense that even if you filled them the darkness would never depart. It is then, staring into those emptied sockets, that you know something is staring back. You nod approvingly.}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{%randomcultist%, jeden z twoich wyznawców, wchodzi do twojego namiotu i równie szybko wychodzi. Wstajesz, by zobaczyć, dokąd poszedł, ale znajdujesz na stole skórzany półhełm. Skóra jest zszyta włosami nieznanego pochodzenia i ściśnięta czymś, co wygląda jak haki i paznokcie. Otwory hełmu są zupełnie czarne, i masz wrażenie, że nawet gdybyś je wypełnił, ciemność nigdy by nie odeszła. Wpatrując się w te puste oczodoły, wiesz, że coś patrzy z powrotem. Kiwasz głową z aprobatą.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Davkul awaits.",
+					Text = "Davkul czeka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -36,7 +36,7 @@ this.cultist_origin_hood_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 						break;
 					}
@@ -47,7 +47,7 @@ this.cultist_origin_hood_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

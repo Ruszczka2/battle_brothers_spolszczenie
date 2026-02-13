@@ -6,17 +6,17 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.cultist_origin_vs_uneducated";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 13.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]A few brothers come to you looking rather worried. They say %cultist% has been sitting with %uneducated% for a few hours now. When you ask what\'s the worry, they remind you that the cultist has a scarred forehead and speaks of incredibly strange things. Yeah. Those are the demands of Davkul, an example of one\'s committment. You do not understand what could possibly be wrong with that.\n\n You go and see the two men. %uneducated% looks up at you, smiling, and says the cultist actually has a lot to teach him. Perhaps he does, but you know Davkul\'s presence need not be felt in all, and if it desired being forced upon the world it would be a misapprehension of Davkul\'s purpose.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Kilku braci przychodzi do ciebie z wyraźnym niepokojem. Mówią, że %cultist% siedzi z %uneducated% już od kilku godzin. Gdy pytasz, co ich martwi, przypominają ci, że kultysta ma zbliznowaciałe czoło i mówi o niezwykle dziwnych rzeczach. Tak. To są wymagania Davkula, przykład czyjegoś oddania. Nie rozumiesz, co mogłoby być w tym złego.\n\nIdziesz zobaczyć obu mężczyzn. %uneducated% spogląda na ciebie z uśmiechem i mówi, że kultysta naprawdę ma go wiele nauczyć. Być może. Ale wiesz, że obecność Davkula nie musi być odczuwana przez wszystkich, a gdyby chciała zostać narzucona światu, byłoby to nieporozumienie co do celu Davkula.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Show him the darkness.",
+					Text = "Pokaż mu ciemność.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 
 				},
 				{
-					Text = "Davkul does not want him.",
+					Text = "Davkul go nie chce.",
 					function getResult( _event )
 					{
 						return "C";
@@ -41,13 +41,13 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You nod and turn away. By next morning, %uneducated% is found with a fresh wound on his forehead, the blood of conversion and the price some must pay to devote themselves to Davkul. When you ask how he is doing, he only says a few words.%SPEECH_ON%Davkul is coming.%SPEECH_OFF%Shaking your head, you correct him.%SPEECH_ON%Davkul is not coming. Davkul AWAITS us all.%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Kiwasz głową i odchodzisz. Następnego ranka %uneducated% zostaje znaleziony ze świeżą raną na czole, krwią nawrócenia i ceną, jaką niektórzy muszą zapłacić, by poświęcić się Davkulowi. Gdy pytasz, jak się czuje, wypowiada tylko kilka słów.%SPEECH_ON%Davkul nadchodzi.%SPEECH_OFF%Kręcisz głową i poprawiasz go.%SPEECH_ON%Davkul nie nadchodzi. Davkul CZEKA na nas wszystkich.%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Davkul awaits.",
+					Text = "Davkul czeka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -68,7 +68,7 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 					{
 						id = 13,
 						icon = background.getIcon(),
-						text = _event.m.Uneducated.getName() + " has been converted to a Cultist"
+						text = _event.m.Uneducated.getName() + " został nawrócony na kultystę"
 					}
 				];
 				_event.m.Cultist.getBaseProperties().Bravery += 2;
@@ -76,20 +76,20 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Cultist.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Cultist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]You separate the two men, telling %uneducated% to go count some inventory. When he leaves, %cultist% sneers at you.%SPEECH_ON%Davkul awaits. You see him in your sleep. You see him in the nights. His darkness is coming. No light burns forever.%SPEECH_OFF%The man pauses and stares into your soul. And you stare back from somewhere not of your body. You can only see infinite blackness around you and a pip of light through which %cultist% is looking. Slowly, you float back toward the light and find yourself blinking and staring at the man. He bows.%SPEECH_ON%Apologies, captain, I did not know that Davkul had such plans.%SPEECH_OFF%Blinking again, you can only nod.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]Rozdzielasz tych dwóch, każąc %uneducated% iść policzyć zapasy. Gdy odchodzi, %cultist% prycha na ciebie.%SPEECH_ON%Davkul czeka. Widzisz go we śnie. Widzisz go w nocach. Jego ciemność nadchodzi. Żadne światło nie płonie wiecznie.%SPEECH_OFF%Mężczyzna zatrzymuje się i wpatruje w twoją duszę. A ty patrzysz z miejsca, które nie jest twoim ciałem. Widzisz tylko nieskończoną czerń wokół i kropkę światła, przez którą spogląda %cultist%. Powoli wracasz ku światłu i znowu mrugasz, patrząc na mężczyznę. On się kłania.%SPEECH_ON%Przepraszam, kapitanie, nie wiedziałem, że Davkul ma takie plany.%SPEECH_OFF%Mrugasz raz jeszcze i możesz tylko kiwnąć głową.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Davkul awaits us all.",
+					Text = "Davkul czeka na nas wszystkich.",
 					function getResult( _event )
 					{
 						return 0;
@@ -101,7 +101,7 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 			{
 				this.Characters.push(_event.m.Cultist.getImagePath());
 				this.Characters.push(_event.m.Uneducated.getImagePath());
-				_event.m.Cultist.worsenMood(1.0, "Was denied the chance to convert " + _event.m.Uneducated.getName());
+				_event.m.Cultist.worsenMood(1.0, "Odmówiono mu szansy na nawrócenie " + _event.m.Uneducated.getName());
 
 				if (_event.m.Cultist.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -6,17 +6,17 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.rangers_origin_hunt_food";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_10.png[/img]{Being the collection of hunters that you are, it becomes readily apparent that you\'ve entered some fine hunting grounds. %randombrother% suggests the company go for a hunt, though he warns the group should be mindful of just how much they pluck from these bountiful stretches.}",
+			Text = "[img]gfx/ui/events/event_10.png[/img]{Jako że jesteście gromadą myśliwych, szybko staje się jasne, że trafiliście na znakomite tereny łowieckie. %randombrother% sugeruje, by kompania poszła na polowanie, choć ostrzega, że grupa powinna uważać, ile z tych obfitych terenów wybierze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s hunt!",
+					Text = "Na polowanie!",
 					function getResult( _event )
 					{
 						local r = this.Math.rand(1, 100);
@@ -37,7 +37,7 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "There\'s time for this later.",
+					Text = "Będzie na to czas później.",
 					function getResult( _event )
 					{
 						return 0;
@@ -52,13 +52,13 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_10.png[/img]{The men are ordered to go on a hunt and they take an inch a mile! They shoot and strip and slaughter just about everything breathing animal in range. You\'re wary of this leading to the attention of local nobles, but they are none the wiser. Inventory stores will be brimming!}",
+			Text = "[img]gfx/ui/events/event_10.png[/img]{Mężczyźni dostają rozkaz polowania i biorą, co się da! Strzelają, oprawiają i wybijają niemal każde żywe zwierzę w zasięgu. Obawiasz się, że zwróci to uwagę miejscowych możnych, ale niczego nie zauważają. Magazyny będą pełne!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A good hunt.",
+					Text = "Dobre polowanie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -73,27 +73,27 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain Venison"
+					text = "Zdobywasz dziczyznę"
 				});
 				local item = this.new("scripts/items/loot/valuable_furs_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zdobywasz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_10.png[/img]{A few of the men depart on the hunt and return with a couple of kills. You ask if they ran into any trouble and they shake their heads no. Looks like the inventory will see some tasty additions and no nobleman will be any wiser!}",
+			Text = "[img]gfx/ui/events/event_10.png[/img]{Kilku ludzi rusza na polowanie i wraca z paroma zdobyczami. Pytasz, czy napotkali jakieś kłopoty, a oni kręcą głowami. Wygląda na to, że zapasy wzbogacą się o coś smacznego i żaden możny niczego nie zauważy!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A decent hunt.",
+					Text = "Przyzwoite polowanie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -108,20 +108,20 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + food.getIcon(),
-					text = "You gain Venison"
+					text = "Zdobywasz dziczyznę"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "%terrainImage%{An hour or so after sending the men off on a hunt, they return. Except they\'re dragging a bloodied and shredded %bearbrother% back into camp. They report the group had crossed paths with a momma brown bear. Her fight was tremendous, and she only stopped mauling the wounded poacher because one of the men threatened her babies with a torch. You\'re happy the men are all alive, albeit %bearbrother% is going to require a long time to recover.}",
+			Text = "%terrainImage%{Mniej więcej godzinę po wysłaniu ludzi na polowanie wracają. Tyle że wloką zakrwawionego i poszarpanego %bearbrother% do obozu. Meldują, że grupa natknęła się na matkę niedźwiedzicę brunatną. Jej walka była potężna i przestała szarpać rannego kłusownika dopiero wtedy, gdy jeden z ludzi zagroził jej młodym pochodnią. Cieszysz się, że wszyscy żyją, choć %bearbrother% będzie dochodził do siebie bardzo długo.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This mercenary work is dulling our senses.",
+					Text = "Ta najemnicza robota tępi nasze zmysły.",
 					function getResult( _event )
 					{
 						return 0;
@@ -135,7 +135,7 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Hunter.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Hunter.getName() + " doznaje " + injury.getNameOnly()
 				});
 				this.Characters.push(_event.m.Hunter.getImagePath());
 			}

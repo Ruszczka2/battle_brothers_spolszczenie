@@ -5,17 +5,17 @@ this.cultist_origin_armor_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cultist_origin_armor";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 15.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{An urgency takes %randomcultist%. He stands, removes himself from the party\'s campfire, strides across the campground and retires to his tent. It is there that you see him at work, his silhouette and shadows moving frenetically. And there\'s more than just him in there: curves of unknown come and go beside him, reaching up in poles of black, tendrils of darkness, whipping and flailing to match the energy of his own procession. And then he is done, his silhouette falling forward before yanking something to the light.\n\n He leaves his tent with the sort of hurry with which he entered, but this time he has a piece of leather chest armor in hand. He drops it to the ground.%SPEECH_ON%He awaits us all, brothers.%SPEECH_OFF%The chest armor is patterned with unique cuts which are arranged in strips that, to the unbelieving eye, would be meaningless. To you, it is but a language of Davkul.}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{%randomcultist% ogarnia nagła pilność. Wstaje, odsuwa się od ogniska kompanii, przechodzi przez obóz i chowa się do swojego namiotu. Tam widzisz go przy pracy, jego sylwetka i cienie poruszają się gorączkowo. I jest tam coś więcej niż tylko on: nieznane kształty pojawiają się i znikają obok niego, wznosząc się w czarnych słupach, macki ciemności smagają i wiją się, by dorównać energii jego własnego pochodu. Potem kończy, a jego sylwetka pochyla się do przodu i wyciąga coś na światło.\n\nWychodzi z namiotu z takim samym pośpiechem, z jakim wszedł, ale tym razem trzyma w ręku skórzaną zbroję na pierś. Rzuca ją na ziemię.%SPEECH_ON%On na nas wszystkich czeka, bracia.%SPEECH_OFF%Napierśnik ma wyjątkowe nacięcia ułożone w pasy, które dla niewierzącego oka byłyby bez znaczenia. Dla ciebie to po prostu język Davkula.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Davkul awaits.",
+					Text = "Davkul czeka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -36,7 +36,7 @@ this.cultist_origin_armor_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/items/" + item.getIcon(),
-							text = "You lose " + item.getName()
+							text = "Tracisz " + item.getName()
 						});
 						break;
 					}
@@ -47,7 +47,7 @@ this.cultist_origin_armor_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

@@ -5,17 +5,17 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.kings_guard_1";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 9999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{The snowy wastes are home to not much of anything, so to find a man half-naked in its frigid geography is rather unusual. That he is actually alive even more so. You crouch beside him. His eyes are hollow and rime frosts make blinking them a struggle. His lips are jagged and purple. His nose a deep red bordering on black. You ask if he can speak. He nods.%SPEECH_ON%Barbarians. Took. Me.%SPEECH_OFF%You ask where his kidnappers are. He shrugs and continues his cold cadence.%SPEECH_ON%They. Got. Bored. And. Left.%SPEECH_OFF%It does seem in tune with the primitives to up and leave a prisoner in the ice. He explains that he was once a sturdy swordfighter. A smile squeezes  through the pain.%SPEECH_ON%A. King\'s. Guard. In. The. Kingless. Land. Things. Could. Be. Worse?%SPEECH_OFF%}",
+			Text = "%terrainImage%{Śnieżne pustkowia niewiele mają do zaoferowania, więc znalezienie półnagiego człowieka w tym mrozie jest dość niezwykłe. To, że w ogóle żyje, jeszcze bardziej. Przykucasz obok niego. Ma puste oczy, a szron utrudnia ich mruganie. Wargi ma poszarpane i purpurowe. Nos - głęboko czerwony, na granicy czerni. Pytasz, czy potrafi mówić. Kiwnięciem głowy odpowiada.%SPEECH_ON%Barbarzyńcy. Wzięli. Mnie.%SPEECH_OFF%Pytasz, gdzie są porywacze. Wzrusza ramionami i kontynuuje w lodowatym rytmie.%SPEECH_ON%Znudziło. Im. Się. I. Odeszli.%SPEECH_OFF%To pasuje do prymitywów, by porzucić więźnia w lodzie. Wyjaśnia, że był niegdyś krzepkim szermierzem. Uśmiech przeciska się przez ból.%SPEECH_ON%Gwardia. Królewska. W. Krainie. Bez. Króla. Mogło. Być. Gorzej?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We have a place for you, friend.",
+					Text = "Mamy dla ciebie miejsce, przyjacielu.",
 					function getResult( _event )
 					{
 						return "C";
@@ -23,7 +23,7 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You\'re on your own in this world.",
+					Text = "W tym świecie jesteś zdany na siebie.",
 					function getResult( _event )
 					{
 						return "B";
@@ -39,7 +39,7 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 					"cripple_background"
 				], false);
 				_event.m.Dude.setTitle("");
-				_event.m.Dude.getBackground().m.RawDescription = "You found %name% frozen half to death in the north. He claims he was a King\'s Guard once, but looking at him now you see but a cripple.";
+				_event.m.Dude.getBackground().m.RawDescription = "Znalazłeś %name% na północy, zamarzniętego na pół śmierci. Twierdzi, że kiedyś był w Gwardii Królewskiej, ale teraz widzisz tylko kalekę.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getFlags().set("IsSpecial", true);
 				_event.m.Dude.getBaseProperties().Bravery += 15;
@@ -58,7 +58,7 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.fillAttributeLevelUpValues(this.Const.XP.MaxLevelWithPerkpoints - 1);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(1.5, "Got taken by barbarians and left to die in the cold");
+				_event.m.Dude.worsenMood(1.5, "Został porwany przez barbarzyńców i pozostawiony na śmierć w zimnie");
 				_event.m.Dude.getFlags().set("IsKingsGuard", true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
@@ -66,13 +66,13 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%terrainImage%{You pat the man on his head, but tell him it\'s already over. He nods.%SPEECH_ON%Speak. For. Yourself. Mercenary.%SPEECH_OFF%He smiles again, but this time it does release. It sticks. Literally. And he leans forward and his eyes are open and do not blink and in this state he is gone. You get the men back on the road, or what one can make of a road in these snowed stretches.}",
+			Text = "%terrainImage%{Poklepujesz mężczyznę po głowie, ale mówisz, że to już koniec. Kiwając głową, odpowiada.%SPEECH_ON%Mów. Za. Siebie. Najemniku.%SPEECH_OFF%Uśmiecha się ponownie, ale tym razem uśmiech nie odpuszcza. Przymarza. Dosłownie. Pochyla się do przodu, oczy ma otwarte i nie mruga, i w takim stanie odchodzi. Ruszasz z ludźmi z powrotem na drogę, o ile można tak nazwać te zaśnieżone trakty.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s already over for you.",
+					Text = "To już dla ciebie koniec.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -90,13 +90,13 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%terrainImage%{The nearly frozen man joins the company. He\'s a ragged wreck, but if what he said is true maybe he will someday become the fighter he could barely speak of.}",
+			Text = "%terrainImage%{Prawie zamarznięty mężczyzna dołącza do kompanii. Jest zniszczoną kupą nieszczęścia, ale jeśli mówił prawdę, może kiedyś stanie się wojownikiem, o którym ledwo potrafił mówić.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll see.",
+					Text = "Zobaczymy.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);

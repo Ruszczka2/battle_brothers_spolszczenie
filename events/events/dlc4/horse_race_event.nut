@@ -9,17 +9,17 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.horse_race";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{You come across a man holding the reins of a lanky horse whose mangy mane has seen better days. The horse has a grey beard forming and its got dry caliche lips smacking desperately for water. Seeing you, its owner waves.%SPEECH_ON%Come, come! I\'ve a bet to make for those brave and fast enough to think they\'ll win it!%SPEECH_OFF%Curious, you ask what the bet is. The man pats the horse, a plume of dust lifting on the pat and you can see his handprint on the shoulder.%SPEECH_ON%Race m\'horse! Not with another horse, mind, but your humanly legs! If you lose, you give me %reward% crowns. If you win, I\'ll pay you triple. You up for it?%SPEECH_OFF%}",
+			Text = "%terrainImage%{Natrafiasz na mężczyznę trzymającego wodze chudego konia, którego łysawa grzywa widziała lepsze dni. Konio tworzy się siwa broda, a suche, spękane wargi mlaskają rozpaczliwie za wodą. Na twój widok właściciel macha.%SPEECH_ON%No, no! Mam zakład dla odważnych i szybkich, którzy sądzą, że go wygrają!%SPEECH_OFF%Ciekaw, pytasz, o co chodzi w zakładzie. Mężczyzna klepie konia, wzbija się pióropusz kurzu i widać odcisk dłoni na łopatce.%SPEECH_ON%Ścigaj się z moim koniem! Nie z innym koniem, tylko na własnych nogach! Jeśli przegrasz, dasz mi %reward% koron. Jeśli wygrasz, zapłacę ci potrójnie. Wchodzisz w to?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Very well. Someone step forward and race that horse!",
+					Text = "Dobrze. Niech ktoś wystąpi i ściga się z tym koniem!",
 					function getResult( _event )
 					{
 						return "B";
@@ -32,7 +32,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Athletic != null)
 				{
 					this.Options.push({
-						Text = "Our most athletic man, %athlete%, will race that horse.",
+						Text = "Nasz najsprawniejszy, %athlete%, pobiegnie z tym koniem.",
 						function getResult( _event )
 						{
 							return "C";
@@ -44,7 +44,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Fat != null)
 				{
 					this.Options.push({
-						Text = "Our fattest man, %fat%, will race for our enjoyment.",
+						Text = "Nasz najtłuściejszy, %fat%, pobiegnie dla naszej uciechy.",
 						function getResult( _event )
 						{
 							return "D";
@@ -56,7 +56,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Dumb != null)
 				{
 					this.Options.push({
-						Text = "I can think only of %dumb% to be dim enough to race a horse.",
+						Text = "Tylko %dumb% jest na tyle tępy, by ścigać się z koniem.",
 						function getResult( _event )
 						{
 							return "E";
@@ -66,7 +66,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "No, thanks.",
+					Text = "Nie, dzięki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -78,13 +78,13 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%terrainImage%{You nominate %randombrother% to try and see if he can best the beast. The race\'s rules are first to the apple tree and before you can even begin to root for the sellsword the horse smokes him completely. It gets to the finish line and begins fishing the branches for apples. The company is sitting completely silent, but when %randombrother% crosses the finish line in a distant last place they roar with delight as though he just won the keys to the kingdom\'s finest whorehouse. The horse\'s owner laughs.%SPEECH_ON%Don\'t be hard on yerself, kind sir. The fun is in the chance.%SPEECH_OFF%Indeed it seems the spectacle of the man\'s efforts entertained the company.} ",
+			Text = "%terrainImage%{Wskazujesz %randombrother%, by spróbował i zobaczył, czy da radę bestii. Zasady wyścigu są proste: pierwszy do jabłoni, a zanim zdążysz zacząć kibicować najemnikowi, koń kompletnie go rozbija. Dociera do mety i zaczyna wyskubywać z gałęzi jabłka. Kompania siedzi w całkowitej ciszy, ale gdy %randombrother% przekracza linię mety na odległym ostatnim miejscu, wybuchają radością, jakby właśnie wygrał klucze do najlepszego burdelu w królestwie. Właściciel konia śmieje się.%SPEECH_ON%Nie bierz tego do siebie, panie. Frajda jest w samej szansie.%SPEECH_OFF%Rzeczywiście wygląda na to, że widowisko wysiłków tego człowieka rozbawiło kompanię.} ",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It was quite the amusement.",
+					Text = "To była niezła rozrywka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -99,7 +99,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Reward + "[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Reward + "[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -112,7 +112,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 40)
 					{
-						bro.improveMood(1.0, "Felt entertained by " + _event.m.Other.getName() + " racing a horse");
+						bro.improveMood(1.0, "Bawił się, oglądając jak " + _event.m.Other.getName() + " ściga się z koniem");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -129,13 +129,13 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%terrainImage%{%athlete% steps forward. His calves bulge from his socks and he shoulder rolls to loosen up.%SPEECH_ON%Yeah I\'ll race that sorry horse.%SPEECH_OFF%The wager is made and the horse\'s owner directs you to a path. With the race set up, he holds up a pair of wooden tongs held apart, and backwards, by some tine. When he cuts the rope, the tongs snap clap together and start the race. Despite being looking like a wart left in the rain, the horse instantly gets a step on the nimble sellsword. It\'s only halfway down the track does the mercenary\'s stamina seem to put him back in the race, but he ultimately fails at the finish line. The owner claps his hands.%SPEECH_ON%Oh, that was a close one! The closest I\'ve seen!%SPEECH_OFF%You nod and pay the man what he is owed. %athlete% was beaten, but despite that it seems the loss has bettered him in some regard and the company certainly enjoyed the spectacle.}",
+			Text = "%terrainImage%{%athlete% występuje naprzód. Łydki wypychają mu skarpety, a on kręci ramionami, by się rozgrzać.%SPEECH_ON%Jasne, pobiegnę z tym lichym koniem.%SPEECH_OFF%Zakład stoi, a właściciel konia prowadzi was na ścieżkę. Gdy wyścig jest gotowy, unosi parę drewnianych szczypiec trzymanych na dystans odwróconym zębem. Kiedy przecina sznur, szczypce z trzaskiem się zamykają i dają start. Choć wygląda jak brodawka zostawiona na deszczu, koń natychmiast uzyskuje przewagę nad zwinnym najemnikiem. Dopiero w połowie trasy wytrzymałość najemnika zdaje się włączyć go z powrotem do wyścigu, lecz na mecie ostatecznie przegrywa. Właściciel klaszcze w dłonie.%SPEECH_ON%Och, to było blisko! Najbliżej, jak widziałem!%SPEECH_OFF%Kiwasz głową i płacisz mu, co mu się należy. %athlete% przegrał, ale mimo to wygląda na to, że porażka w czymś go poprawiła, a kompania na pewno bawiła się świetnie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice try.",
+					Text = "Niezła próba.",
 					function getResult( _event )
 					{
 						return 0;
@@ -150,14 +150,14 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Reward + "[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Reward + "[/color] koron"
 				});
 				_event.m.Athletic.getBaseProperties().Stamina += 1;
 				_event.m.Athletic.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Athletic.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Max Fatigue"
+					text = _event.m.Athletic.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] maks. zmęczenia"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -170,7 +170,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.0, "Felt entertained by " + _event.m.Athletic.getName() + " racing a horse");
+						bro.improveMood(1.0, "Bawił się, oglądając jak " + _event.m.Athletic.getName() + " ściga się z koniem");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -187,13 +187,13 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "%terrainImage%{Feeling rather courageous, you nominate the fattest man in the company to handle the race. %fat% steps forward with an eyebrow raised, asking if you\'re sure about taking him as your horseracing champion. You hold your hand on his shoulder and say he\'s the fattest fark you\'ve ever seen being a sellsword, but that you believe in him. You also believe the horse is a haggard draught animal that\'s on its last legs, but you keep that part to yourself.\n\n The man and horse are put next to each other. An apple tree stands in the distance and the first to it is the winner. With the rules laid out, the race is started. It\'s not an especially close one. %fat% falls behind almost instantly and trundles down the track with his face beet red and huffing breath and the men nearly die laughing at the sight. The fat sellsword and dire horse meet back up at the apple tree and there share the fruits of their labors. You pay the horse\'s owner what he is owed. He smiles as he counts the coin.%SPEECH_ON%Don\'t usually get a show with the race, sir.%SPEECH_OFF%}",
+			Text = "%terrainImage%{Czując się dość odważnie, wyznaczasz najtłuściejszego człowieka w kompanii do wyścigu. %fat% występuje z uniesioną brwią, pytając, czy na pewno chcesz go jako mistrza wyścigów. Kładziesz dłoń na jego ramieniu i mówisz, że jest najtłuściejszym draniem, jakiego widziałeś wśród najemników, ale w niego wierzysz. Wierzysz też, że koń to zmęczony koń pociągowy na ostatnich nogach, ale to zachowujesz dla siebie.\n\n Mężczyzna i koń stają obok siebie. W oddali stoi jabłoń, a pierwszy przy niej wygrywa. Gdy zasady są ustalone, wyścig się zaczyna. Nie jest specjalnie wyrównany. %fat% niemal od razu zostaje z tyłu i człapie po torze z purpurową twarzą i sapiącym oddechem, a ludzie niemal umierają ze śmiechu na ten widok. Tłusty najemnik i posępny koń spotykają się przy jabłoni i tam dzielą owoce swoich trudów. Płacisz właścicielowi konia, co mu się należy. Uśmiecha się, licząc monety.%SPEECH_ON%Zwykle wyścig nie ma takiego widowiska, sir.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Lose some pounds, would you?",
+					Text = "Może byś zrzucił trochę kilogramów?",
 					function getResult( _event )
 					{
 						return 0;
@@ -208,14 +208,14 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Reward + "[/color] Crowns"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Reward + "[/color] koron"
 				});
 				_event.m.Fat.getBaseProperties().Bravery += 1;
 				_event.m.Fat.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Fat.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Resolve"
+					text = _event.m.Fat.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Determinacji"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -228,7 +228,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.0, "Felt entertained by " + _event.m.Fat.getName() + " racing a horse");
+						bro.improveMood(1.0, "Bawił się, oglądając jak " + _event.m.Fat.getName() + " ściga się z koniem");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -245,13 +245,13 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "%terrainImage%{You elect %dumb%, the company\'s biggest idiot, to be your horse racing champion. The horse\'s owner takes one look at the man and raises an eyebrow.%SPEECH_ON%Well. Alright.%SPEECH_OFF%Rules of the race are clear: first to a distant apple tree is the winner. The man and animal line up on the track. Pretending that he knows what he\'s doing, %dumb% crouches in a tri-pointed stance. The horse owner yells and slaps his beast on the buttocks. %dumb% releases into a nice stride and shockingly gets ahead of the horse, but he\'s unable to handle his speed and tilts into the second lane and collides with the beast. The horse buckles at the knees and flips head over hind and %dumb% somehow ends up in the curve of its loins and on the flip around is catapulted through the air. It\'s a damned sight and one you\'ll surely never see again. The horse gets back to its feet and stares around confused while %dumb%\'s unconscious body flies over the finish line. You turn your palms to the horse owner whose hands are gripping his head.%SPEECH_ON%By the old gods, man, are you not concerned for your sellsword?%SPEECH_OFF%}",
+			Text = "%terrainImage%{Wybierasz %dumb%, największego idiotę w kompanii, na waszego mistrza wyścigów. Właściciel konia rzuca na niego okiem i unosi brwi.%SPEECH_ON%Cóż. Dobrze.%SPEECH_OFF%Zasady wyścigu są jasne: pierwszy do odległej jabłoni wygrywa. Człowiek i zwierzę ustawiają się na torze. Udając, że wie, co robi, %dumb% przykuca w trójpunktowej pozycji. Właściciel krzyczy i klepie bestię po zadzie. %dumb% rusza w ładnym tempie i, co szokujące, wyprzedza konia, ale nie potrafi opanować swojej prędkości, wpada na drugi tor i zderza się z bestią. Koń ugina się w kolanach i przelatuje przez łeb, a %dumb% jakoś ląduje w zagłębieniu jego lędźwi i przy obrocie zostaje wystrzelony w powietrze. To przeklęty widok i na pewno już takiego nie zobaczysz. Koń wraca na nogi i rozgląda się zdezorientowany, podczas gdy nieprzytomne ciało %dumb% przelatuje nad linią mety. Rozkładasz dłonie do właściciela konia, który trzyma się za głowę.%SPEECH_ON%Na starych bogów, człowieku, czy nie martwisz się o swojego najemnika?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "He\'ll be alright. Pay up.",
+					Text = "Nic mu nie będzie. Płać.",
 					function getResult( _event )
 					{
 						return 0;
@@ -266,13 +266,13 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + _event.m.Reward * 3 + "[/color] Crowns"
+					text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + _event.m.Reward * 3 + "[/color] koron"
 				});
 				local injury = _event.m.Dumb.addInjury(this.Const.Injury.Concussion);
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Dumb.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Dumb.getName() + " doznaje " + injury.getNameOnly()
 				});
 			}
 

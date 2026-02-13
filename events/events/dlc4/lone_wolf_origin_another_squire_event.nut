@@ -6,17 +6,17 @@ this.lone_wolf_origin_another_squire_event <- this.inherit("scripts/events/event
 	function create()
 	{
 		this.m.ID = "event.lone_wolf_origin_another_squire";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_64.png[/img]{%squire% comes up to you scratching the back of his head. He looks like he has something on his mind, and you prod him to let it out. Sighing, he asks why %squire2% was hired onto the company.%SPEECH_ON%He\'s a squire, I\'m a squire, are we both your squires?%SPEECH_OFF%You inform the lad that %squire2% was squire to another man, but things changed in his life to lead him here. For all intents and purposes, he is a sellsword now and %squire% is indeed still your squire. %squire% lights up with a smile, but it quickly goes awry.%SPEECH_ON%Wait, does that mean I\'m more sellsword than squire?%SPEECH_OFF%You press a ledger into the kid\'s chest and tell him to go count inventory.}",
+			Text = "[img]gfx/ui/events/event_64.png[/img]{%squire% podchodzi do ciebie, drapiąc się po tyle głowy. Wygląda, jakby coś go trapiło, więc zachęcasz go, by to wyjawił. Wzdychając, pyta, czemu %squire2% został przyjęty do kompanii.%SPEECH_ON%On jest giermkiem, ja jestem giermkiem, czy obaj jesteśmy twoimi giermkami?%SPEECH_OFF%Wyjaśniasz chłopakowi, że %squire2% był giermkiem innego człowieka, ale życie potoczyło się tak, że trafił tutaj. W praktyce jest teraz najemnikiem, a %squire% wciąż jest twoim giermkiem. %squire% rozjaśnia się uśmiechem, ale szybko mu gaśnie.%SPEECH_ON%Chwileczkę, to znaczy, że jestem bardziej najemnikiem niż giermkiem?%SPEECH_OFF%Wciskasz chłopakowi w pierś księgę i każesz mu policzyć zapasy.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And to think I used to roam these lands alone...",
+					Text = "A pomyśleć, że kiedyś przemierzałem te ziemie sam...",
 					function getResult( _event )
 					{
 						return 0;
@@ -27,7 +27,7 @@ this.lone_wolf_origin_another_squire_event <- this.inherit("scripts/events/event
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Dude.worsenMood(0.5, "Confused about his role as your squire");
+				_event.m.Dude.worsenMood(0.5, "Zdezorientowany co do swojej roli jako giermka");
 			}
 
 		});

@@ -5,17 +5,17 @@ this.barbarian_volunteer_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.barbarian_volunteer";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{Unlike the south, finding travelers on the northern \'roads\' is often a cause for caution. You never know what monstrous man or beastly barbarian you\'ll come across next. This time it is a large man limping with a dog beside him. You draw your sword halfway out of its sheath and loud enough to gain his ear. The man looks up and his dog rears to the sudden yank of a leash. The northerner can speak a bit of your tongue.%SPEECH_ON%Ahh, fighters. I\'m a fighter myself.%SPEECH_OFF%You ask why he is alone. He explains that his clan had a dispute, and that he was to duel another man to decide who would take control. You ask why he did not duel this man, you ask if he is afraid. The traveler shakes his head.%SPEECH_ON%No. The clansman was my brother. And I\'d no desire to kill kin. They gave me this bitch here as both insult and reward and threw me from the tribe. I\'ve no land or people to go to, but if you\'d have me, I\'d surely fight for you just as well as anyone else.%SPEECH_OFF%}",
+			Text = "%terrainImage%{W odróżnieniu od południa, spotkanie podróżnych na północnych \'drogach\' często wymaga ostrożności. Nigdy nie wiesz, na jakiego potwornego człowieka albo bestialskiego barbarzyńcę trafisz. Tym razem to rosły mężczyzna kuśtykający z psem u boku. Wysuwasz miecz do połowy z pochwy, na tyle głośno, by zwrócić jego uwagę. Mężczyzna podnosi wzrok, a jego pies staje dęba po nagłym szarpnięciu smyczy. Północniak zna trochę twoją mowę.%SPEECH_ON%Ach, wojownicy. Sam jestem wojownikiem.%SPEECH_OFF%Pytasz, czemu jest sam. Wyjaśnia, że jego klan popadł w spór i miał stoczyć pojedynek z innym mężczyzną, by zdecydować, kto przejmie władzę. Pytasz, czemu nie stoczył tego pojedynku, pytasz, czy się boi. Wędrowiec kręci głową.%SPEECH_ON%Nie. Ten z klanu był moim bratem. A ja nie chciałem zabijać krewniaka. Dali mi tę sukę, jako zniewagę i nagrodę jednocześnie, i wyrzucili z plemienia. Nie mam ziemi ani ludzi, do których mógłbym wrócić, ale jeśli mnie przyjmiesz, będę walczył dla ciebie tak samo dobrze jak każdy inny.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'ve found a new tribe, friend.",
+					Text = "Znalazłeś nowy ród, przyjacielu.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -27,7 +27,7 @@ this.barbarian_volunteer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We have no need for you.",
+					Text = "Nie potrzebujemy cię.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();

@@ -6,17 +6,17 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.lone_wolf_origin_squire";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_20.png[/img]The pub is full of drunk denizens sloshing about, cheering, singing, carousing with the womenfolk of either wench or wife or whore. A man with a lute dances and plays and another with metal cymbals crashes overhead while a fat man booms with songs of battles or love, and whether a tale of victory or defeat they provoke rounds of ale and more merriment all the same.\n\n You leave the pub and enter the next building over. The wind whistles down a pew filled nave as you stand at the door. A man sweeping the stone floor looks up for a time then continues with his work. Another man cheerfully crosses the room and asks if you\'d like to pray. You decline and he purses his lips and crosses his arms. The crowd next door roars with drunken delight as though to make a mockery of you both and then he moves on. You stay for a moment longer and then leave and go back out to the town center and squat on a series of steps. It seems there used to be a statue at the top of those steps, but vandals and raiders alike have made short work of another\'s artisanry. You fall asleep there at the foot of impermanence. \n\n Waking from a nap, you find a young man at the bottom of the steps. He says he knows you\'re a knight and he\'s come to offer his services as a squire.",
+			Text = "[img]gfx/ui/events/event_20.png[/img]Karczma jest pełna pijanych mieszkańców, którzy chwieją się, wiwatują, śpiewają i hulają z niewiastami - czy to służącą, żoną czy ladacznicą. Mężczyzna z lutnią tańczy i gra, inny uderza w metalowe talerze nad głową, a gruby chłop ryczy pieśni o bitwach lub miłości; niezależnie od tego, czy to opowieść o zwycięstwie czy porażce, wywołują kolejne rundy piwa i jeszcze więcej wesołości.\n\n Opuszczasz karczmę i wchodzisz do następnego budynku. Wiatr gwiżdże przez nawę pełną ławek, gdy stajesz w drzwiach. Mężczyzna zamiatający kamienną posadzkę podnosi wzrok na chwilę, po czym wraca do pracy. Inny przechodzi wesoło przez salę i pyta, czy chcesz się pomodlić. Odmawiasz, a on zaciska usta i krzyżuje ramiona. Tłum obok ryczy pijanym zachwytem, jakby chciał z was zakpić, po czym odchodzi. Zostajesz jeszcze chwilę, a potem wychodzisz na rynek i przysiadasz na kilku stopniach. Wygląda na to, że kiedyś stał na nich posąg, ale wandale i najeźdźcy szybko zrobili swoje z czyimś rzemiosłem. Zasypiasz tam, u stóp przemijania. \n\n Budząc się z drzemki, znajdujesz młodego mężczyznę u podnóża schodów. Mówi, że wie, iż jesteś rycerzem, i przyszedł zaoferować swoje usługi jako giermek.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Have you killed anyone?",
+					Text = "Zabiłeś kogoś?",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "What can you do?",
+					Text = "Co potrafisz?",
 					function getResult( _event )
 					{
 						return "C";
@@ -32,7 +32,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I take you as my squire.",
+					Text = "Przyjmuję cię jako giermka.",
 					function getResult( _event )
 					{
 						return "D";
@@ -40,7 +40,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I work alone.",
+					Text = "Działam sam.",
 					function getResult( _event )
 					{
 						return "E";
@@ -55,27 +55,27 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"squire_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "You met %name% in " + _event.m.Town.getName() + " where he volunteered to be your squire. He probably had no idea what he was getting into back then.";
+				_event.m.Dude.getBackground().m.RawDescription = "Poznałeś %name% w " + _event.m.Town.getName() + ", gdzie zgłosił się na twojego giermka. Pewnie nie miał pojęcia, w co się wtedy pakuje.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body));
 				_event.m.Dude.getItems().equip(this.new("scripts/items/armor/linen_tunic"));
-				_event.m.Dude.setTitle("the Squire");
+				_event.m.Dude.setTitle("giermek");
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{The man shakes his head no.%SPEECH_ON%Ain\'t never killed no one, sir.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Mężczyzna kręci głową.%SPEECH_ON%Nikogo jeszcze nie zabiłem, sir.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What can you do?",
+					Text = "Co potrafisz?",
 					function getResult( _event )
 					{
 						return "C";
@@ -83,7 +83,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I take you as my squire.",
+					Text = "Przyjmuję cię jako giermka.",
 					function getResult( _event )
 					{
 						return "D";
@@ -91,7 +91,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I work alone.",
+					Text = "Działam sam.",
 					function getResult( _event )
 					{
 						return "E";
@@ -107,13 +107,13 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{The man stands up straight.%SPEECH_ON%I know how to sharpen steel and mend leather. I can disassemble and reassemble heavy and light armors both, no matter how complex or simple, and I can do it fast. If we have a horse.%SPEECH_OFF%You interrupt.%SPEECH_ON%I walk.%SPEECH_OFF%Shifting uneasily on his feet, the man continues.%SPEECH_ON%Alright. Well I can cook. I can cook a fine meal whether I got the ingredients or not. I make do. And. And. That\'s. That\'s about it. But I\'m willing to learn!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Mężczyzna prostuje się.%SPEECH_ON%Umiem ostrzyć stal i cerować skórę. Potrafię rozkładać i składać pancerze ciężkie i lekkie, nieważne jak skomplikowane czy proste, i robię to szybko. Jeśli mamy konia.%SPEECH_OFF%Przerywasz.%SPEECH_ON%Idę pieszo.%SPEECH_OFF%Nerwowo przestępując z nogi na nogę, mężczyzna kontynuuje.%SPEECH_ON%Dobrze. No to umiem gotować. Ugotuję porządny posiłek, czy mam składniki, czy nie. Jakoś sobie radzę. I. I. To. To wszystko. Ale chcę się uczyć!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Have you killed anyone?",
+					Text = "Zabiłeś kogoś?",
 					function getResult( _event )
 					{
 						return "B";
@@ -121,7 +121,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I take you as my squire.",
+					Text = "Przyjmuję cię jako giermka.",
 					function getResult( _event )
 					{
 						return "D";
@@ -129,7 +129,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I work alone.",
+					Text = "Działam sam.",
 					function getResult( _event )
 					{
 						return "E";
@@ -145,20 +145,20 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{You ask the man his name. He swallows nervously.%SPEECH_ON%%squire%, sir.%SPEECH_OFF%You nod.%SPEECH_ON%Well alright then. I\'ll take ya with me.%SPEECH_OFF%He smiles.%SPEECH_ON%That\'s. That\'s it?%SPEECH_OFF%You nod.%SPEECH_ON%Yeah. That\'s it.%SPEECH_OFF%%squire% looks around.%SPEECH_ON%Well. Alright. What now?%SPEECH_OFF%You lean back against the stone steps.%SPEECH_ON%You follow me. Right now I\'m gonna take another nap. If yer still around when I wake, well, then you\'ve passed your first test. Defeating boredom.%SPEECH_OFF%The squire is grinning ear to ear. He\'s still there when you wake.}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Pytasz mężczyznę o imię. Nerwowo przełyka ślinę.%SPEECH_ON%%squire%, sir.%SPEECH_OFF%Kiwasz głową.%SPEECH_ON%No dobrze. Zabiorę cię ze sobą.%SPEECH_OFF%Uśmiecha się.%SPEECH_ON%To... to wszystko?%SPEECH_OFF%Kiwasz głową.%SPEECH_ON%Tak. To wszystko.%SPEECH_OFF%%squire% rozgląda się.%SPEECH_ON%Cóż. Dobrze. Co teraz?%SPEECH_OFF%Opierasz się o kamienne schody.%SPEECH_ON%Podążasz za mną. Teraz utnę sobie kolejną drzemkę. Jeśli wciąż będziesz, gdy się obudzę, to zdałeś pierwszy test. Pokonanie nudy.%SPEECH_OFF%Giermek uśmiecha się od ucha do ucha. Wciąż tam jest, gdy się budzisz.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Now I need a drink.",
+					Text = "Teraz potrzebuję piwa.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.improveMood(1.0, "Has become a squire to a knight");
+						_event.m.Dude.improveMood(1.0, "Został giermkiem rycerza");
 						_event.m.Dude.getFlags().set("IsLoneWolfSquire", true);
 						_event.m.Dude = null;
 						return 0;
@@ -174,13 +174,13 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{You look at the would-be squire long and hard and then tell him no. He shrugs.%SPEECH_ON%Just so you know, you ain\'t gotta be alone in this world. Loneliness has no presence. It is not a place. It is not a being. It is action!%SPEECH_OFF%Spitting, you wipe your face and laugh.%SPEECH_ON%Is that what you tell yourself every morning? Get out of here.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Przyglądasz się kandydatowi na giermka długo i uważnie, po czym mówisz mu, że nie. Wzrusza ramionami.%SPEECH_ON%Tak tylko mówię, nie musisz być samotny na tym świecie. Samotność nie ma obecności. To nie miejsce. To nie istota. To działanie!%SPEECH_OFF%Spluwasz, wycierasz twarz i śmiejesz się.%SPEECH_ON%To to sobie powtarzasz każdego ranka? Znikaj stąd.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I need a drink.",
+					Text = "Potrzebuję piwa.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();

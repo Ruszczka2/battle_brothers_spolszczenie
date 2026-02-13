@@ -5,17 +5,17 @@ this.lone_wolf_origin_depressing_lady_event <- this.inherit("scripts/events/even
 	function create()
 	{
 		this.m.ID = "event.lone_wolf_origin_depressing_lady";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_91.png[/img]{You come across an old woman outside of the home of a nobleman. She sizes you up as though she were looking into her own past. Amused, you ask her what it is she wants. The lady smiles.%SPEECH_ON%What is it you think you\'re doing, exactly? Wandering the land as a hedge knight, killing and slaying and farkin\' the ladies now and again?%SPEECH_OFF%Politely, you inform her that you are in fact not just some tournament hopper, but a bonafide sellsword. She shrugs and throws her hand to a nobleman\'s house.%SPEECH_ON%And what of it? They\'ll never accept you. You\'ll be a fighter. You\'re out here, forever. You only go inside when they let you. This is not a world you can improve yourself in. You are what you are born as.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_91.png[/img]{Natrafiasz na starą kobietę przed domem szlachcica. Mierzy cię wzrokiem, jakby spoglądała w swoją przeszłość. Rozbawiony, pytasz, czego chce. Kobieta się uśmiecha.%SPEECH_ON%Co ty właściwie myślisz, że robisz? Włóczysz się po świecie jako rycerz bez pana, zabijasz i sieczesz, a od czasu do czasu posuwasz panienki?%SPEECH_OFF%Grzecznie informujesz ją, że nie jesteś zwykłym bywalcem turniejów, lecz prawdziwym najemnikiem. Wzrusza ramionami i gestem wskazuje dom szlachcica.%SPEECH_ON%I co z tego? Nigdy cię nie zaakceptują. Będziesz wojownikiem. Jesteś tu, na zawsze. Do środka wchodzisz tylko, kiedy ci pozwolą. To nie jest świat, w którym można się poprawić. Jesteś tym, kim się urodziłeś.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "This world is what I make of it.",
+					Text = "Ten świat jest tym, co z niego uczynię.",
 					function getResult( _event )
 					{
 						return 0;

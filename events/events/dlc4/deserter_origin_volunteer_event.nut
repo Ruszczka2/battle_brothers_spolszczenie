@@ -7,17 +7,17 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.deserter_origin_volunteer";
-		this.m.Title = "Along the road...";
+		this.m.Title = "W drodze...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_88.png[/img]{A pair of men looking disheveled and weary emerge from some bushes beside the road. They hold their hands up as if they\'d come to surrender themselves.%SPEECH_ON%Are ye the %companyname%? We\'d heard you were a band of deserters. And I don\'t mean that as an insult. We\'re runners, too, but we got nowhere else to go. Everywhere we turn there are bounty hunters and executioners. Let us fight for you. It ain\'t the fight that ever scared us, we swears by that.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_88.png[/img]{Z krzaków przy drodze wychodzi para obdartych i zmęczonych mężczyzn. Unoszą ręce, jakby chcieli się poddać.%SPEECH_ON%Jesteście %companyname%? Słyszeliśmy, że to banda dezerterów. I nie mówię tego jako obelgi. My też uciekamy, ale nie mamy już dokąd iść. Wszędzie, gdzie się obrócimy, są łowcy nagród i kaci. Pozwólcie nam walczyć dla was. To nie walka nas kiedykolwiek przerażała, przysięgamy na to.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We could use fighting men like you.",
+					Text = "Przydadzą nam się tacy wojownicy jak wy.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 60 ? "B" : "C";
@@ -25,7 +25,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We have no need for you.",
+					Text = "Nie potrzebujemy was.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -43,13 +43,13 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude1.setStartValuesEx([
 					"deserter_background"
 				]);
-				_event.m.Dude1.getBackground().m.RawDescription = "Running from bounty hunters and executioners for some time, %name% bumped into your company on the road and promptly volunteered.";
+				_event.m.Dude1.getBackground().m.RawDescription = "Od jakiegoś czasu uciekając przed łowcami nagród i katami, %name% wpadł na twoją kompanię na drodze i od razu się zgłosił.";
 				_event.m.Dude1.getBackground().buildDescription(true);
 				_event.m.Dude2 = roster.create("scripts/entity/tactical/player");
 				_event.m.Dude2.setStartValuesEx([
 					"deserter_background"
 				]);
-				_event.m.Dude2.getBackground().m.RawDescription = "%name% deserted an army regiment together with " + _event.m.Dude1.getNameOnly() + " before he volunteered to join your company.";
+				_event.m.Dude2.getBackground().m.RawDescription = "%name% zdezerterował z pułku razem z " + _event.m.Dude1.getNameOnly() + " zanim zgłosił się do twojej kompanii.";
 				_event.m.Dude2.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude1.getImagePath());
 				this.Characters.push(_event.m.Dude2.getImagePath());
@@ -58,13 +58,13 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_88.png[/img]{It would be almost satisfyingly ironic to string these men up and hang them for what they\'d done, but you are not about to set that tone for the company. You welcome them to the band, sending them forth to the inventory. %victim% keeps an eye on them for a time, but he reports that the men are true to their word and will fight.}",
+			Text = "[img]gfx/ui/events/event_88.png[/img]{Prawie satysfakcjonująco ironiczne byłoby powiesić tych ludzi za to, co zrobili, ale nie zamierzasz nadawać takiego tonu kompanii. Witasz ich w bandzie i wysyłasz do ekwipunku. %victim% obserwuje ich przez jakiś czas, ale melduje, że dotrzymują słowa i będą walczyć.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the %companyname%!",
+					Text = "Witajcie w %companyname%!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude1);
@@ -88,13 +88,13 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{It would be almost satisfyingly ironic to string these men up and hang them for what they\'d done, but you are not about to set that tone for the company. You welcome them to the band, sending them forth to the inventory with %victim% keeping an eye on them. Except you don\'t see your sellsword for a suspicious length of time. When you go looking, he\'s found knocked out on the ground and the inventory ransacked. The two men are nowhere to be seen!}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Prawie satysfakcjonująco ironiczne byłoby powiesić tych ludzi za to, co zrobili, ale nie zamierzasz nadawać takiego tonu kompanii. Witasz ich w bandzie i wysyłasz do ekwipunku, a %victim% ma na nich oko. Tyle że przez podejrzanie długi czas nie widzisz swojego najemnika. Gdy idziesz sprawdzić, znajduje się go nieprzytomnego na ziemi, a zapasy są splądrowane. Tych dwóch nie ma nigdzie!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn those scroundels!",
+					Text = "Niech ich diabli, łotrów!",
 					function getResult( _event )
 					{
 						return 0;
@@ -111,7 +111,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Victim.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Victim.getName() + " doznaje " + injury.getNameOnly()
 				});
 				local r = this.Math.rand(1, 4);
 
@@ -123,7 +123,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "You lose " + food.getName()
+						text = "Tracisz " + food.getName()
 					});
 				}
 				else if (r == 2)
@@ -133,7 +133,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/asset_ammo.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Ammunition"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Amunicji"
 					});
 				}
 				else if (r == 3)
@@ -143,7 +143,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/asset_supplies.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Tools and Supplies"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Narzędzi i Zaopatrzenia"
 					});
 				}
 				else if (r == 4)
@@ -153,7 +153,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/asset_medicine.png",
-						text = "You lose [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Medical Supplies"
+						text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] Zapasów Medycznych"
 					});
 				}
 

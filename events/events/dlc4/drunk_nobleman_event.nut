@@ -8,17 +8,17 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.drunk_nobleman";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{While on the march, you find a drunken nobleman tottering side to side on the path. Mussy is the name of his hair, leaves and grass and what looks like birdshit swept up in it like someone stirred the ingredients to a prank. But his clothes sweep about with the finest of silks and his fingers glisten with jewelry. He has a bottle in each hand and he swings them around as he sings gibberish pub songs.\n\nHe is in all regards the greatest magnet for a mugging you\'ve ever seen. %randombrother% purses his lips and he looks like a wolf staring at a fat sheep.%SPEECH_ON%I\'m not saying nothing, sir, I\'m just. I\'m just seeing it. That\'s a lot of juice. A lot of juice limping down the road. But again I ain\'t saying nothing.%SPEECH_OFF%You know what he\'s talking about.}",
+			Text = "%terrainImage%{Podczas marszu znajdujesz pijanego szlachcica chwiejącego się na boki na ścieżce. Włosy ma w nieładzie, pełne liści i trawy oraz czegoś, co wygląda na ptasie gówno, jakby ktoś wymieszał składniki żartu. Ale jego ubrania falują z najdelikatniejszych jedwabi, a palce lśnią biżuterią. W każdej ręce trzyma butelkę i wymachuje nimi, śpiewając bełkotliwe karczemne piosenki.\n\nPod każdym względem jest największym magnesem na rabunek, jakiego kiedykolwiek widziałeś. %randombrother% zaciska usta i wygląda jak wilk wpatrzony w tłustą owcę.%SPEECH_ON%Ja nic nie mówię, sir, ja tylko... ja tylko to widzę. To dużo soku. Dużo soku, co się chwieje po drodze. Ale znowu, nic nie mówię.%SPEECH_OFF%Wiesz, o co mu chodzi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll rob him.",
+					Text = "Ograbimy go.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -31,7 +31,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Servant != null)
 				{
 					this.Options.push({
-						Text = "Why is he looking at %servant%?",
+						Text = "Czemu patrzy na %servant%?",
 						function getResult( _event )
 						{
 							return "G";
@@ -43,7 +43,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Thief != null)
 				{
 					this.Options.push({
-						Text = "Perhaps %thief% can ease his burden.",
+						Text = "Może %thief% ulży mu w ciężarze.",
 						function getResult( _event )
 						{
 							return "H";
@@ -53,7 +53,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Leave him be.",
+					Text = "Zostawmy go.",
 					function getResult( _event )
 					{
 						return 0;
@@ -65,13 +65,13 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%terrainImage%{You walk up to the man and help him sit down. He grins as one of his bottles clanks off the path and rolls away.%SPEECH_ON%Thankiicup, sir, jast, no, well, ya.%SPEECH_OFF%Nodding, you hold his hand out and spit on his fingers, then roll the jewelry off and pocket them. He merely watches as though you were a physician treating a malady. The rest of your mercenaries strip him down and throw a goatskin tarp over him and then leave him there. As you walk away he asks if you know about the drink.%SPEECH_ON%Not, not sayin\' away the secret, but, sirs, drinks are good.%SPEECH_OFF%Yes, are they ever. Unfortunately, as you rejoin the company %randombrother% reports that a kid saw everything and scampered off. You ask why he didn\'t chase after him. He looks at you shrewdly.%SPEECH_ON%I\'m not the scampering sort, sir.%SPEECH_OFF%}",
+			Text = "%terrainImage%{Podchodzisz do mężczyzny i pomagasz mu usiąść. Uśmiecha się, gdy jedna z jego butelek z brzękiem spada ze ścieżki i toczy się w bok.%SPEECH_ON%Dzięęękuję, sir, jas... no, no, tak.%SPEECH_OFF%Kiwając głową, wyciągasz mu dłoń, spluwasz na palce, po czym zsuwasz biżuterię i chowasz ją do kieszeni. On tylko patrzy, jakbyś był lekarzem leczących dolegliwość. Reszta twoich najemników zdziera z niego ubrania, narzuca kozią skórę i zostawia go tam. Gdy odchodzisz, pyta, czy znasz się na piciu.%SPEECH_ON%Nie, nie zdradzam sekretu, ale, panowie, picie jest dobre.%SPEECH_OFF%O tak, jest. Niestety, gdy wracasz do kompanii, %randombrother% melduje, że dzieciak wszystko widział i dał drapaka. Pytasz, czemu za nim nie pogonił. Spogląda na ciebie przebiegle.%SPEECH_ON%Nie jestem od ganiania, sir.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Rest easy, stranger.",
+					Text = "Spoczywaj spokojnie, nieznajomy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -88,41 +88,41 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "Your relation to " + f.getName() + " has suffered"
+					text = "Twoje relacje z " + f.getName() + " ucierpiały"
 				});
 				local money = this.Math.rand(1, 100);
 				this.World.Assets.addMoney(money);
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 				});
 				local item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/loot/valuable_furs_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%terrainImage%{You walk up to the man and, startled, he reels back with a hiccup.%SPEECH_ON%Oy, who are ye?%SPEECH_OFF%Telling him you\'re a good friend, you approach to rob him of everything, but as you take another step his eyes clear and he drops both bottles and suddenly reaches into his coat and pulls out a crossbow.%SPEECH_ON%Not another step you lout. I got men yonder who are watching. I don\'t want no trouble. We ain\'t keen on getting squirrely with sellswords. We\'re here to rob travelers, no good travelers at that, choosing to rob a drunk! Now why dontcha just get on down the road and we all leave without impasse upon our purposes.%SPEECH_OFF%The crossbow crickets as its wood shakes in his loose grip.}",
+			Text = "%terrainImage%{Podchodzisz do mężczyzny, a on, zaskoczony, cofa się z czknięciem.%SPEECH_ON%Ej, a wy kto?%SPEECH_OFF%Mówiąc, że jesteś dobrym przyjacielem, zbliżasz się, by go ograbić ze wszystkiego, ale gdy robisz kolejny krok, jego oczy stają się trzeźwe, upuszcza obie butelki i nagle sięga do płaszcza, wyciągając kuszę.%SPEECH_ON%Ani kroku, łajdaku. Mam tam ludzi, którzy patrzą. Nie chcę kłopotów. Nie mamy ochoty zadzierać z najemnikami. Jesteśmy tu, by rabować podróżnych, a nie takich podróżnych, by rabować pijaka! To może po prostu ruszysz dalej, a my rozejdziemy się bez przeszkód w naszych zamiarach.%SPEECH_OFF%Kusza skrzypi, gdy drewno drży w jego luźnym uścisku.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Deal.",
+					Text = "Zgoda.",
 					function getResult( _event )
 					{
 						return "D";
@@ -130,7 +130,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No deal.",
+					Text = "Nie ma mowy.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "E" : "F";
@@ -145,13 +145,13 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "%terrainImage%{You nod.%SPEECH_ON%Quite alright. I\'m assuming all that you got is counterfeit, aye?%SPEECH_OFF%The man nods.%SPEECH_ON%Of course. The finest fitting counterfeit this side of %townname% this is! But enough chin wagging shenanigans. Appreciate ya keeping this square, but we got work to do.%SPEECH_OFF%Nodding again, you wish him luck in them doings.}",
+			Text = "%terrainImage%{Kiwasz głową.%SPEECH_ON%No proszę. Zakładam, że wszystko, co masz, to falsyfikaty, co?%SPEECH_OFF%Mężczyzna przytakuje.%SPEECH_ON%Oczywiście. Najlepiej dopasowane falsyfikaty po tej stronie %townname%! Ale dość tej gadaniny. Dzięki, że trzymasz to uczciwie, ale mamy robotę.%SPEECH_OFF%Ponownie kiwasz głową i życzysz mu szczęścia.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Back to the road.",
+					Text = "Z powrotem na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -166,13 +166,13 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "%terrainImage%{You look back at the company, then unsheathe your sword as you turn around. You swing it up and clip the crossbow and the man shoots it just over your shoulder. You drive the blade down the slat of wood and cut the cords of the weapon and stab the steel into the man\'s chest. He goes down easy and you hear men shout in the distance, but they\'re scared and scampering away. Thieves like this know not to fight with sellswords. You collect whatever goods the man had already stolen up to this point.}",
+			Text = "%terrainImage%{Spoglądasz na kompanię, po czym dobywasz miecza, odwracając się. Zamachujesz się i trafiasz w kuszę, a mężczyzna strzela tuż nad twoim ramieniem. Wbijasz ostrze w szczelinę drewna, przecinasz cięciwę i wbijasz stal w jego pierś. Pada łatwo, a w oddali słyszysz krzyki, ale uciekają - tacy złodzieje wiedzą, by nie walczyć z najemnikami. Zbierasz wszystko, co mężczyzna zdążył już ukraść.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s see what he had.",
+					Text = "Zobaczmy, co miał.",
 					function getResult( _event )
 					{
 						return 0;
@@ -187,34 +187,34 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 				});
 				local item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/loot/valuable_furs_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "%terrainImage%{You look back at the company, then unsheathe your sword as you turn around. You swing it up and clip the crossbow and the man shoots it just over your shoulder. You drive the blade down the slat of wood and cut the cords of the weapon and stab the steel into the man\'s chest. He goes down easy and you hear men shout in the distance, but they\'re scared and scampering away. Thieves like this know not to fight with sellswords. Unfortunately, the crossbow bolt that went over your shoulder struck %hurtbro%. He\'ll survive, but it is a garish wound.}",
+			Text = "%terrainImage%{Spoglądasz na kompanię, po czym dobywasz miecza, odwracając się. Zamachujesz się i trafiasz w kuszę, a mężczyzna strzela tuż nad twoim ramieniem. Wbijasz ostrze w szczelinę drewna, przecinasz cięciwę i wbijasz stal w jego pierś. Pada łatwo, a w oddali słyszysz krzyki, ale uciekają - tacy złodzieje wiedzą, by nie walczyć z najemnikami. Niestety, bełt kuszy, który przeleciał nad twoim ramieniem, trafił %hurtbro%. Przeżyje, ale to paskudna rana.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s see what he had.",
+					Text = "Zobaczmy, co miał.",
 					function getResult( _event )
 					{
 						return 0;
@@ -229,34 +229,34 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Other.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Other.getName() + " doznaje " + injury.getNameOnly()
 				});
 				local item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/loot/valuable_furs_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "%terrainImage%{As you near the nobleman, his eyes go wide and he points at %servant% the servant.%SPEECH_ON%Jast wait a sssec, I know youuu.%SPEECH_OFF%You look back. He does? The nobleman stumbles forward with his legs scissoring side to side.%SPEECH_ON%You were servant to my cousin in %randomtown% one fine evening. You were great! The greatest. Greeaaatest. S-servant. Hargh. Well -hic- I dare say you can have all this shite cause I don\'t think -hic- we explained yee, sorry, paid ya.%SPEECH_OFF%The man takes anything of value and throws it over. He seems happy just to be relieved of the weight of it all.%SPEECH_ON%If ye see my c-cousin again, let, let him know that I killed his brother, with the, the, mantlepiece. No harsh -hic- feelings.%SPEECH_OFF%Well alright then.}",
+			Text = "%terrainImage%{Gdy zbliżasz się do szlachcica, jego oczy rozszerzają się i wskazuje na %servant% sługę.%SPEECH_ON%Chwileczkę, ja cię znam.%SPEECH_OFF%Odwracasz się. On? Szlachcic zatacza się, nogi krzyżują mu się na boki.%SPEECH_ON%Byłeś sługą mojego kuzyna w %randomtown% pewnego wieczoru. Byłeś świetny! Najlepszy. Najleeeepszy. S-sługa. Hargh. No to -hic- możesz wziąć te wszystkie graty, bo chyba -hic- nie wyjaśniliśmy, przepraszam, nie zapłaciliśmy ci.%SPEECH_OFF%Mężczyzna zabiera wszystko, co ma wartość, i oddaje. Wygląda na szczęśliwego, że pozbył się ciężaru.%SPEECH_ON%Jakbyś znów zobaczył mojego k-kuzyna, to, to mu powiedz, że zabiłem jego brata, tym, tym, gzymsem kominka. Bez urazy -hic- uczuć.%SPEECH_OFF%No dobrze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good job doing that thing awhile back.",
+					Text = "Dobra robota z tamtej sprawy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -269,31 +269,31 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Servant.getImagePath());
 				_event.m.Servant.getBaseProperties().Bravery += 2;
 				_event.m.Servant.getSkills().update();
-				_event.m.Servant.improveMood(1.0, "Finally got paid for a job while back");
+				_event.m.Servant.improveMood(1.0, "Wreszcie dostał zapłatę za dawną robotę");
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
-					text = _event.m.Servant.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Resolve"
+					text = _event.m.Servant.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
 				local item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "%terrainImage%{As you approach the drunkard, a sharp whistle cracks across the path. You and the drunkard both look to see %thief% the thief standing there with a weapon to the back of another man.%SPEECH_ON%That feller\'s no nobleman, and probably aint no drunk neither. They\'re working together to either ambush travelers or threaten them with blackmail. They\'re robbers, sir.%SPEECH_OFF%You look back to see the man smiling nervously. He explains with suddenly sharpened clarity.%SPEECH_ON%We\'d no interest in robbing sellswords, sir, I-I-I swear I was about to explain myself soon as I sawr yer swords.%SPEECH_OFF%%thief% yells out, asking where the cache is. You look back at the man and tell him to hand over everything he\'s stolen. He nods and asks if you\'ll gut him if he refuses. You nod and tell him the gutting will come last, and by that point it\'ll be a relief. The man puts a little pep in his step.%SPEECH_ON%Yessir gotcha sir, right this way.%SPEECH_OFF%} ",
+			Text = "%terrainImage%{Gdy podchodzisz do pijaka, ostry gwizd przecina drogę. Ty i pijak patrzycie, jak %thief% złodziej stoi z bronią przy plecach innego mężczyzny.%SPEECH_ON%To żaden szlachcic i pewnie nie jest nawet pijany. Działają razem, by urządzać zasadzki na podróżnych albo szantażować ich. To rabusie, sir.%SPEECH_OFF%Odwracasz się i widzisz nerwowy uśmiech mężczyzny. Tłumaczy się z nagle wyostrzoną jasnością.%SPEECH_ON%Nie chcieliśmy rabować najemników, sir, p-przysięgam, już miałem wszystko wyjaśnić, gdy tylko zobaczyłem wasze miecze.%SPEECH_OFF%%thief% krzyczy, pytając, gdzie jest skrytka. Odwracasz się do mężczyzny i każesz mu oddać wszystko, co ukradł. Kiwając głową, pyta, czy go poderżniesz, jeśli odmówi. Potwierdzasz, mówiąc, że podcięcie gardła będzie na końcu, a wtedy to już ulga. Mężczyzna nabiera wigoru.%SPEECH_ON%Tak jest, sir, tędy.%SPEECH_OFF%} ",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Ol\' thief sniffed that right out.",
+					Text = "Stary złodziej wywąchał to od razu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -309,7 +309,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+					text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 				});
 				local item;
 				item = this.new("scripts/items/loot/signet_ring_item");
@@ -317,14 +317,14 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/loot/silverware_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zdobywasz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

@@ -8,17 +8,17 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cultist_origin_sacrifice";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_140.png[/img]{Most would consider the dream to have been a nightmare: the darkness surrounded you, a black so flat you could reach out and touch it. The voice spoke a language you\'d never heard before, and yet you understood it nonetheless. Two faces emerged for the infinite shade: %sac1% and %sac2%. The men seemed so close, yet when you reached out they shrank, as though your fingers stretched infinitely into the void.\n\n Upon waking, you knew what must be done. But a trust had been put in you here, a trust by Davkul. A trust to do what few men can: make a choice. | Davkul\'s presence arrived during a campfire. The rest of the men faded into the aether of infinite black, and a strange entity replaced them. An entity which you could not see, but whose presence was but a penumbra of crossing shadows. It requested a sacrifice, not by speaking to you, but by showing: %sac1% and %sac2%. First one melted away before revivifying, then the other repeated the process until both existed with their hands out and eyes closed. It was clear that Davkul was trusting you with a choice. \n\n When the shadows snapped away, the campfire was blinding. %sac1% and %sac2% were staring at you.%SPEECH_ON%Is all alright, sir?%SPEECH_OFF% | You traveled to the place. You knew you were sleeping, but you knew damn well you traveled there nonetheless, shifting beyond your mind, beyond your body, coursing over the earth, over its rivers, across its dry earth, and past the mountains which would crumble. There you found Davkul, the immutable darkness, the inviting shade.\n\n %sac1% and %sac2% were already there, standing closest to you and Davkul\'s shape shifted restlessly behind their images. A black hand of fog pushed one man forward and then yanked him back, then repeated it with the other man. You nodded in understanding. A sacrifice was required and you were to choose.}",
+			Text = "[img]gfx/ui/events/event_140.png[/img]{Większość uznałaby ten sen za koszmar: ciemność otaczała cię, czarna tak płaska, że mógłbyś jej dotknąć. Głos mówił językiem, którego nigdy wcześniej nie słyszałeś, a jednak go rozumiałeś. Z nieskończonego cienia wyłoniły się dwie twarze: %sac1% i %sac2%. Mężczyźni byli tak blisko, lecz gdy wyciągnąłeś rękę, kurczyli się, jakby twoje palce nieskończenie rozciągały się w pustkę.\n\nPo przebudzeniu wiedziałeś, co trzeba zrobić. Ale włożono w ciebie zaufanie, zaufanie Davkula. Zaufanie, by uczynić to, czego niewielu ludzi potrafi: dokonać wyboru. | Obecność Davkula przyszła podczas ogniska. Reszta ludzi zniknęła w eterze nieskończonej czerni, a zastąpiła ich dziwna istota. Istota, której nie mogłeś zobaczyć, ale której obecność była jedynie półmrokiem krzyżujących się cieni. Zażądała ofiary nie słowami, lecz obrazem: %sac1% i %sac2%. Najpierw jeden stopniał i ożył na nowo, potem drugi powtórzył to samo, aż obaj stali z wyciągniętymi dłońmi i zamkniętymi oczami. Było jasne, że Davkul powierza ci wybór.\n\nGdy cienie pękły, ognisko oślepiło. %sac1% i %sac2% wpatrywali się w ciebie.%SPEECH_ON%Czy wszystko w porządku, panie?%SPEECH_OFF% | Podróżowałeś do tego miejsca. Wiedziałeś, że śpisz, ale wiedziałeś też, że mimo to tam dotarłeś, przesuwając się poza umysł, poza ciało, pędząc nad ziemią, nad rzekami, przez suchą ziemię i obok gór, które by się skruszyły. Tam znalazłeś Davkula, niezmienną ciemność, zapraszający cień.\n\n%sac1% i %sac2% byli już tam, stojąc najbliżej ciebie, a kształt Davkula niespokojnie przesuwał się za ich postaciami. Czarna mglista dłoń pchnęła jednego mężczyznę do przodu i szarpnęła go z powrotem, potem powtórzyła to z drugim. Kiwasz głową ze zrozumieniem. Potrzebna była ofiara i to ty miałeś dokonać wyboru.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "%sac1% will have the honor to meet Davkul.",
+					Text = "%sac1% będzie miał zaszczyt spotkać Davkula.",
 					function getResult( _event )
 					{
 						_event.m.Sacrifice = _event.m.Sacrifice1;
@@ -27,7 +27,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "%sac2% will have the honor to meet Davkul.",
+					Text = "%sac2% będzie miał zaszczyt spotkać Davkula.",
 					function getResult( _event )
 					{
 						_event.m.Sacrifice = _event.m.Sacrifice2;
@@ -45,13 +45,13 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_140.png[/img]{%sacrifice% is bound and put to the fire. The smell of burnt pork fills the air and the men around you rejoice with tears in their eyes. You see a face twisting in the smoke of the sacrifice, a knowing visage that approves. The men are emboldened. | %sacrifice% is chopped to pieces until he is but a torso and head. The blood has emptied across the ground and yet there\'s still light in his eyes and a perverse smile upon his face. You take an axehead and run it into his throat until he is no more. Every bodypart is separated and put upon a pole, caked in grease, and lit aflame. You and the men dance beneath the pyres as the night comes and the night goes. | The procession is such: %sacrifice% is flayed alive and pierced with sharpened sticks through each limb and held aloft, spread-eagled over a fire which cooks him until death. The men watch his passing in silence, but as soon as one of his charred limbs breaks and collapses his corpse into the flames the men cheer and hoot and holler, some pray, others roll around in the ashes of %sacrifice%, some licking it off their fingertips like it were sweets. It is a good night. | A long stick is pierced through %sacrifice% from posterior to out the side of his neck. He is tilted up into the sky and held there by one man while others use long spears to stab him through until his corpse is the apex of an uncovered tent. The conical corpse is then covered with grass and mud until there stands a tipi, a torso and head of %sacrifice% all that remains above, and should you enter the tent you would find his legs dangling from its ceiling. The monument should stand as an omen for those to come, and a sign that they should come to accept that which awaits us all.}",
+			Text = "[img]gfx/ui/events/event_140.png[/img]{%sacrifice% zostaje związany i wrzucony w ogień. Zapach palonej wieprzowiny wypełnia powietrze, a mężczyźni wokół ciebie radują się ze łzami w oczach. W dymie ofiary widzisz skręcającą się twarz, wiedzące oblicze, które aprobuje. Ludzie są pokrzepieni. | %sacrifice% zostaje porąbany na kawałki, aż zostają tylko tułów i głowa. Krew spłynęła po ziemi, a jednak w jego oczach wciąż jest światło i przewrotny uśmiech na twarzy. Bierzesz ostrze topora i wciskasz je w jego gardło, aż gaśnie. Każda część ciała zostaje oddzielona i umieszczona na palu, oblepiona tłuszczem i podpalona. Ty i ludzie tańczycie pod stosami, gdy noc nadchodzi i odchodzi. | Obrzęd wygląda tak: %sacrifice% zostaje żywcem obdarty ze skóry, przebity ostrzonymi kijami przez każdą kończynę i uniesiony, rozpostarty nad ogniem, który piecze go aż do śmierci. Ludzie obserwują w ciszy, ale gdy tylko jedna z jego zwęglonych kończyn pęka i zwala ciało w płomienie, ludzie wiwatują, wyją i krzyczą, jedni się modlą, inni tarzają się w popiołach %sacrifice%, niektórzy zlizują je z czubków palców jak słodycze. To dobra noc. | Długi kij przebija %sacrifice% od tyłu i wychodzi z boku szyi. Zostaje uniesiony ku niebu i trzymany przez jednego mężczyznę, podczas gdy inni długimi włóczniami przebijają go, aż jego ciało staje się szczytem nieosłoniętego namiotu. Stożkowe zwłoki zostają następnie przykryte trawą i błotem, aż powstaje tipi, a tułów i głowa %sacrifice% pozostają nad nim, a gdybyś wszedł do środka, zobaczyłbyś jego nogi zwisające z sufitu. Monument ma stać jako omen dla tych, którzy przyjdą, i jako znak, że powinni przyjąć to, co czeka nas wszystkich.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A reminder for us all.",
+					Text = "Przypomnienie dla nas wszystkich.",
 					function getResult( _event )
 					{
 						return 0;
@@ -76,7 +76,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Sacrifice.getName() + " has died"
+					text = _event.m.Sacrifice.getName() + " zginął"
 				});
 				_event.m.Sacrifice.getItems().transferToStash(this.World.Assets.getStash());
 				this.World.getPlayerRoster().remove(_event.m.Sacrifice);
@@ -96,7 +96,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.improveMood(2.0, "Appeased Davkul");
+						bro.improveMood(2.0, "Udobruchał Davkula");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -168,13 +168,13 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = skill.getIcon(),
-								text = bro.getName() + " is now " + this.Const.Strings.getArticle(skill.getName()) + skill.getName()
+								text = bro.getName() + " jest teraz " + this.Const.Strings.getArticle(skill.getName()) + skill.getName()
 							});
 						}
 					}
 					else if (!bro.getSkills().hasSkill("trait.mad"))
 					{
-						bro.worsenMood(4.0, "Horrified by the sacrifice of " + _event.m.Sacrifice.getName());
+						bro.worsenMood(4.0, "Przerażony ofiarą z " + _event.m.Sacrifice.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

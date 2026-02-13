@@ -5,19 +5,19 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.icy_cave_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A1",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{You discover a cave in the ice with its maw shielded by a gate of thick icicles. Looking through the icy bars, you find the cave quickly declines down a steep slope and toward what may be an underground riverbank that has long since frozen. Something is huddled beside it hitting the ice with a pickaxe over and over again. The wind whistles as it grates against the teeth of the cave. You call out to the huddled man, but there is no response.\n\nIt will take some time to chop through this thick ice and get in there. Fortunately, one of the sellswords reports that there may be a rear entrance. It is blocked just as well, but a strong enough man just might be able to squeeze through and face any dangers within.}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{Odkrywasz jaskinię w lodzie, której paszczę osłania brama z grubych sopli. Patrząc przez lodowe pręty, widzisz, że jaskinia szybko opada stromym zboczem w stronę czegoś, co może być podziemnym brzegiem rzeki, dawno już zamarzniętej. Obok czegoś skulona postać uderza kilofem w lód raz za razem. Wiatr gwiżdże, ocierając się o zęby jaskini. Wołasz do skulonego mężczyzny, ale nie ma odpowiedzi.\n\nPrzebicie się przez ten gruby lód zajmie trochę czasu. Na szczęście jeden z najemników meldował, że może istnieć tylne wejście. Jest równie zablokowane, ale dość silny człowiek mógłby się przecisnąć i stawić czoła niebezpieczeństwom w środku.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [],
 			function start( _event )
 			{
-				_event.m.Title = "As you approach...";
+				_event.m.Title = "Gdy się zbliżasz...";
 				local raw_roster = this.World.getPlayerRoster().getAll();
 				local roster = [];
 
@@ -48,7 +48,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "I need you to scout ahead, " + bro.getName() + ".",
+						Text = "Potrzebuję, żebyś poszedł na zwiad, " + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;
@@ -60,7 +60,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				}
 
 				$[stack offset 0].Options.push({
-					Text = "We should leave this place.",
+					Text = "Powinniśmy opuścić to miejsce.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -77,14 +77,14 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "A2",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{You followed the mysterious messenger\'s footsteps to a cave in the ice. This time it has not been recently trespassed as a thick gate of icicles keep your entrance well stayed. To the side of the cavern\'s maw is the old man face down in the snow, dead as can be, and with one arm stretched out pointing into the cave.\n\n Looking through the icy bars, you find the cave quickly declines down a steep slope and toward what may be an underground riverbank that has long since frozen. Something is huddled beside it hitting the ice with a pickaxe over and over again. The wind whistles as it grates against the teeth of the cave. You call out to the huddled man, but there is no response.\n\nIt will take some time to chop through this thick ice and get in there. Fortunately, one of the sellswords reports that there may be a rear entrance. It is blocked just as well, but a strong enough man just might be able to squeeze through and face any dangers within.}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{Podążasz śladami tajemniczego posłańca do jaskini w lodzie. Tym razem nikt tu niedawno nie wchodził, bo gruba brama z sopli skutecznie blokuje wejście. Z boku paszczy jaskini leży stary mężczyzna twarzą w śniegu, martwy jak to tylko możliwe, z wyciągniętą ręką wskazującą do środka.\n\nPatrząc przez lodowe pręty, widzisz, że jaskinia szybko opada stromym zboczem w stronę czegoś, co może być podziemnym brzegiem rzeki, dawno już zamarzniętej. Obok czegoś skulona postać uderza kilofem w lód raz za razem. Wiatr gwiżdże, ocierając się o zęby jaskini. Wołasz do skulonego mężczyzny, ale nie ma odpowiedzi.\n\nPrzebicie się przez ten gruby lód zajmie trochę czasu. Na szczęście jeden z najemników meldował, że może istnieć tylne wejście. Jest równie zablokowane, ale dość silny człowiek mógłby się przecisnąć i stawić czoła niebezpieczeństwom w środku.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [],
 			function start( _event )
 			{
-				_event.m.Title = "As you approach...";
+				_event.m.Title = "Gdy się zbliżasz...";
 				local roster = this.World.getPlayerRoster().getAll();
 				roster.sort(function ( _a, _b )
 				{
@@ -105,7 +105,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "I need you to scout ahead, " + bro.getName() + ".",
+						Text = "Potrzebuję, żebyś poszedł na zwiad, " + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;
@@ -117,7 +117,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				}
 
 				$[stack offset 0].Options.push({
-					Text = "We should leave this place.",
+					Text = "Powinniśmy opuścić to miejsce.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -134,7 +134,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{%chosen% heads off while you and the rest work on the front of the cave. You knock a few of the thick icicles out letting you see into the cave with better eyes. Just as you do, %chosen% comes tumbling down an adjacent slope and lands right in the middle of the cave and slides across the frozen river and rides up its embankment. He hops to his feet and dusts himself off with a childish grin.\n\n In a flash the huddled man slams the pickaxe into the ice with unhinted power and the shards splinter from one side of the embankment to the other. The clank of the metal and shattered ice reverberates as though lightning itself had struck. Now you can finally see the stranger: he is a barbarian shelled in broken armor that rattles as he moves. The icy walls mirror his steps, scattering his presence all around the cave in transient sheens. Jittery and jutting, his walk is seemingly going backwards despite his advance as though his shadow were his true self and his flesh the afterimage. Despite being in a cave, his loud voice echoes not at all.%SPEECH_ON%An interloper in my midst, a mere moment from the mist, these things I shall not miss.%SPEECH_OFF%He approaches the sellsword like a cold spider unfurling from its trapdoor. You see that his face is half-frozen, and a wry smile squeezes across the half that could still be called flesh.%SPEECH_ON%I long to leave this body, my dear fighter. Will you help guide me out and to something higher?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{%chosen% rusza przodem, podczas gdy ty i reszta pracujecie przy wejściu do jaskini. Wybijasz kilka grubych sopli, by lepiej zajrzeć do środka. Właśnie wtedy %chosen% zsuwa się po sąsiednim zboczu i ląduje w samym środku jaskini, sunąc po zamarzniętej rzece i wjeżdżając na jej brzeg. Wstaje, otrzepuje się i uśmiecha dziecinnie.\n\nW jednej chwili skulony mężczyzna uderza kilofem w lód z niebywałą siłą, a odłamki pękają od jednego krańca brzegu do drugiego. Brzęk metalu i roztrzaskanego lodu rozbrzmiewa, jakby uderzył piorun. Teraz wreszcie widzisz nieznajomego: to barbarzyńca w powyłamywanym pancerzu, który grzechocze przy każdym ruchu. Lodowe ściany odbijają jego kroki, rozpraszając jego obecność po całej jaskini w przelotnych połyskach. Drgający i poszarpany chód zdaje się cofać mimo jego natarcia, jakby cień był jego prawdziwym ja, a ciało jedynie powidokiem. Choć jest w jaskini, jego donośny głos wcale się nie odbija.%SPEECH_ON%Intruz w mym pośród, zaledwie chwila od mgły, takich rzeczy nie przepuszczę.%SPEECH_OFF%Zbliża się do najemnika jak zimny pająk wysuwający się z kryjówki. Widzisz, że jego twarz jest w połowie zamarznięta, a szyderczy uśmiech rozciąga się na tej części, którą wciąż można nazwać ciałem.%SPEECH_ON%Pragnę opuścić to ciało, mój drogi wojowniku. Czy pomożesz mi wyjść i wznieść się ku czemuś wyższemu?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -184,21 +184,21 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "As you approach...";
-				this.Options[0].Text = "You can take him, %chosen%!";
+				_event.m.Title = "Gdy się zbliżasz...";
+				this.Options[0].Text = "Dasz mu radę, %chosen%!";
 				this.Characters.push(_event.m.Champion.getImagePath());
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Victory",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{%chosen% cuts the madman down. His chest armor shatters and flies off his body, chunks of plate spinning and warbling into the air and yet tethered together by some strange blue tendrils.\n\n Your men finally break through the icy cavern\'s entrance and slide down the declination. %chosen% is quite alright, nodding smugly as he sheathes his weapon.%SPEECH_ON%Just a crazy fuck, captain.%SPEECH_OFF%You crouch beside the body. Ice contorts half the flesh, twisting it into nubs of black, and what isn\'t frozen is flaked by strangely sparkling rime. Despite his grisly state, the mad man died with a wild grin still on his face. The eyes are a bright blue and you see yourself in their gaze, a faceless silhouette. And then the color slowly slips away, not like you\'ve seen before, but as though someone were dragging a curtain through a window, slowly sucking all color right into the sockets. The corpse grins at you, but you refuse to believe that is what you saw.\n\n One of the mercenaries picks up the mad man\'s bizarre armor and holds it at length.%SPEECH_ON%What do you figure this is?%SPEECH_OFF%The plates dangle from one another by some strange blue gelatin, and the insides of the metal slats are coated in bubbling, twirling blues as though it were the work of some celestial blacksmith. It is cool to the touch and gives beneath the slightest push of your finger. You\'ve never seen or felt anything like it, but the armor itself is currently in an unusable state. You have the goop and armor put into inventory, scour the cave for more goods which there are none. Before you leave the cave, you glance at the corpse one last time. You think you saw it move again, but surely it is the cold of the frozen north that is playing tricks on you.}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{%chosen% ścina szaleńca. Jego napierśnik pęka i odlatuje z ciała, kawałki blachy wirują i jęczą w powietrzu, a jednak trzymają się razem dzięki dziwnym niebieskim włóknom.\n\nTwoi ludzie w końcu przebijają się przez lodowe wejście jaskini i zsuwają się w dół. %chosen% ma się świetnie, kiwa z zadowoleniem głową, chowając broń.%SPEECH_ON%Tylko jakiś pieprzony szaleniec, kapitanie.%SPEECH_OFF%Kucasz obok ciała. Lód zniekształca połowę ciała, skręcając je w czarne sęki, a to, co nie zamarzło, pokrywa się dziwnie iskrzącym szronem. Mimo makabrycznego stanu szaleniec zginął z dzikim uśmiechem na twarzy. Oczy są jaskrawo niebieskie i widzisz siebie w ich spojrzeniu jako bezkształtną sylwetkę. Potem kolor powoli znika, nie jak kiedykolwiek widziałeś, lecz jakby ktoś przeciągał zasłonę przez okno, wysysając barwy prosto z oczodołów. Zwłoki uśmiechają się do ciebie, ale odmawiasz wiary, że to naprawdę widziałeś.\n\nJeden z najemników podnosi dziwny pancerz szaleńca i trzyma go na wyciągnięcie ręki.%SPEECH_ON%Jak myślisz, co to jest?%SPEECH_OFF%Płyty zwisają jedna z drugiej na jakimś niebieskim żelu, a wnętrza metalowych listew pokrywa bulgoczący, wirujący błękit, jakby to dzieło niebiańskiego kowala. Jest chłodny w dotyku i ugina się pod najlżejszym naciskiem palca. Nigdy nie widziałeś ani nie czułeś niczego podobnego, ale sam pancerz jest teraz niezdatny do użytku. Każesz włożyć tę maź i pancerz do zapasów, przeszukujesz jaskinię w poszukiwaniu innych dóbr, ale ich nie ma. Zanim wyjdziesz, rzucasz zwłokom ostatnie spojrzenie. Wydaje ci się, że znów się poruszyły, lecz to przecież zimno mroźnej północy płata ci figle.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You did well, %chosen%.",
+					Text = "Dobrze się spisałeś, %chosen%.",
 					function getResult( _event )
 					{
 						return "D";
@@ -208,7 +208,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 
 				if (this.World.State.getLastLocation() != null)
 				{
@@ -222,21 +222,21 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Defeat",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{Through the icicles you can see the madman cutting down %chosen%. Even as he lies dead on the ground, the stranger continues to hack away at him, and each time a muffled thump echoes through the cave. What will you do now?}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{Przez sople widzisz, jak szaleniec zabija %chosen%. Nawet gdy ten leży martwy na ziemi, nieznajomy nadal go rąbie, a za każdym razem w jaskini rozbrzmiewa stłumione uderzenie. Co teraz zrobisz?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 
 				if (this.World.State.getLastLocation() != null)
 				{
@@ -263,7 +263,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "I need you to go in there, " + bro.getName() + ".",
+						Text = "Potrzebuję, żebyś tam wszedł, " + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;
@@ -275,7 +275,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				}
 
 				$[stack offset 0].Options.push({
-					Text = "This isn\'t worth it. We should leave this place.",
+					Text = "Nie warto. Powinniśmy opuścić to miejsce.",
 					function getResult( _event )
 					{
 						return 0;
@@ -287,13 +287,13 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{As you depart the cave, a local northerner covered in bear furs stands across the company. He looks at you and then the cave entrance. He asks.%SPEECH_ON%Do you speak the southern or native tongue?%SPEECH_OFF%Keeping your guard, you confirm the former. He nods.%SPEECH_ON%And what did you see in that cave? Did you see it?%SPEECH_OFF%You tell him you found nothing, only a madman. The stranger smirks.%SPEECH_ON%A madman. A madman, that is what you think you saw. It is within us all to speak warily of the unnatural, but not within us to recognize when nature herself takes a step back. Horrors are easier said than seen. That was no ordinary man, you fool, but the Ijirok, a transient spirit that shifts from one vessel to another. No one really knows what it looks like, the whole world is simply a series of masks and it will happily go from one to the other, usually taking the shape of animals, sometimes a man if he is so weak. It is a being of absolute malice. It cannot be killed, no, it sees death, even its own, as entertainment. It remembers those who escape it, it remembers those it wishes to play with. I pray you\'ve a face worth forgetting.%SPEECH_OFF%You put your hand on the pommel of your sword and tell him that whatever mysticism and mythmaking he\'s got left he can keep to himself. You saw the madman in the cave, and that\'s all he was, a man. The stranger nods again and backs off.%SPEECH_ON%As you wish, and may you travel well.%SPEECH_OFF%} ",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{Gdy opuszczasz jaskinię, miejscowy północniak okryty niedźwiedziimi skórami staje naprzeciw kompanii. Patrzy na ciebie, potem na wejście do jaskini. Pyta.%SPEECH_ON%Mówisz po południowemu czy w ojczystej mowie?%SPEECH_OFF%Zachowując ostrożność, potwierdzasz to pierwsze. Kiwa głową.%SPEECH_ON%A co widziałeś w tej jaskini? Widziałeś to?%SPEECH_OFF%Mówisz mu, że niczego nie znalazłeś, tylko szaleńca. Nieznajomy uśmiecha się krzywo.%SPEECH_ON%Szaleńca. Szaleńca, to myślisz, że widziałeś. W każdym z nas jest ostrożność wobec nienaturalnego, ale nie potrafimy rozpoznać, kiedy sama natura robi krok wstecz. O grozach łatwiej mówić, niż je widzieć. To nie był zwykły człowiek, głupcze, lecz Ijirok, ulotny duch, który przechodzi z jednego naczynia do drugiego. Nikt naprawdę nie wie, jak wygląda, cały świat to tylko seria masek i chętnie przechodzi z jednej w drugą, zwykle przybierając kształt zwierząt, czasem człowieka, jeśli jest tak słaby. To istota absolutnej złośliwości. Nie da się jej zabić, nie, śmierć, nawet własną, traktuje jak rozrywkę. Pamięta tych, którzy przed nią uciekli, pamięta tych, z którymi chce się bawić. Modlę się, byś miał twarz wartą zapomnienia.%SPEECH_OFF%Kładziesz dłoń na głowicy miecza i mówisz mu, że całą tę mistykę i mitotwórstwo, które mu zostały, może zachować dla siebie. Widziałeś w jaskini szaleńca i tylko nim był, człowiekiem. Nieznajomy ponownie kiwa głową i cofa się.%SPEECH_ON%Jak sobie życzysz, i szerokiej drogi.%SPEECH_OFF%} ",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Travel well.",
+					Text = "Szerokiej drogi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -303,7 +303,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Title = "After the battle...";
+				_event.m.Title = "Po bitwie...";
 				this.World.Flags.set("IjirokStage", 4);
 				local locations = this.World.EntityManager.getLocations();
 

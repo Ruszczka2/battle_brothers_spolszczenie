@@ -3,17 +3,17 @@ this.ijirok_1_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ijirok_1";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_143.png[/img]%randombrother% hails you down and says that there\'s something you should come take a look at. Surely something that\'s out in all this ice and nothingness is worth seeing.\n\n The sellsword brings you to a cavernous hole in the ground. He lights a torch and steps into and you follow. There at the bottom you find a few more of your men. They\'re standing around what looks like a sarcophagus made of ice, except there\'s no lid. A frozen blackness cakes the edges of the container. In the corner of the room is an icy corpse stuck to the wall. His hands are at his sides and icicles of blood run from his wrists. Adjacent to it is a pair of clothes hanging from icehooks, but there is no body attached. A trail of blood leads from the clothes to the other man, then back out the cave.%SPEECH_ON%I don\'t know what to make of this sir.%SPEECH_OFF%One mercenary says. You ask the men if they\'ve seen anything in their scouting, and you mean damn near anything. But they all shake their heads no. If something was in that box then it is surely out now. You tell the men to get on out of the cave and back to camp.",
+			Text = "[img]gfx/ui/events/event_143.png[/img]%randombrother% zatrzymuje cię i mówi, że jest coś, co powinieneś zobaczyć. Na pewno coś, co leży w całym tym lodzie i pustce, jest warte uwagi.\n\n Najemnik prowadzi cię do ogromnej dziury w ziemi. Zapala pochodnię i schodzi, a ty za nim. Na dole znajdujesz kilku innych ludzi. Stoją wokół czegoś, co wygląda jak sarkofag z lodu, tylko bez wieka. Zamarznięta czerń oblepia krawędzie pojemnika. W rogu komnaty tkwi w ścianie lodowe zwłoki. Ręce ma wzdłuż ciała, a z nadgarstków spływają sopelki krwi. Obok wisi para ubrań na lodowych hakach, ale nie ma do nich ciała. Smuga krwi prowadzi od ubrań do tamtego mężczyzny, a potem z powrotem na zewnątrz jaskini.%SPEECH_ON%Nie wiem, co o tym myśleć, sir.%SPEECH_OFF%mówi jeden z najemników. Pytasz ludzi, czy podczas zwiadu widzieli cokolwiek, dosłownie cokolwiek. Ale wszyscy kręcą głowami. Jeśli coś było w tej skrzyni, to na pewno już tego nie ma. Każesz ludziom wyjść z jaskini i wrócić do obozu.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And keep your wits about you.",
+					Text = "I miejcie się na baczności.",
 					function getResult( _event )
 					{
 						this.World.Flags.set("IjirokStage", 1);

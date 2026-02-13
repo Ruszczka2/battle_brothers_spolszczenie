@@ -3,17 +3,17 @@ this.ijirok_3_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ijirok_3";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_76.png[/img]{While camping in the northern wastes, a silhouette approaches, a flat black whose appearance was seemingly cut out of the thin air itself. As it nears, an orange glow blossoms from a horn of fire. The company draw their weapons for what shadowy figure could possibly be out here in all this nothing? What \'something\' crosses such a wretched land? But you find it is just elderly man with a bald pate and bulbous, red nose. If the snow could carve man from granite, this would be the look of its creation. The stranger passes through the camp with the company turning to him and yelling out, but not one sellsword goes near him. He finally leans down and puts the horn to the ground and the snow extinguishes its fire. Then he gets up and keeps going and soon disappears into the fog of night.\n\n  %randombrother% picks up the horn and tips it over. A rose falls out and its clear even in the dark that the petals are soft, but already curling to the brutal cold. You look around for the old man and see his tracks still fresh in the powder.}",
+			Text = "[img]gfx/ui/events/event_76.png[/img]{Podczas biwakowania na północnych pustkowiach zbliża się sylwetka, płaska czerń, jakby wycięta z powietrza. Gdy się zbliża, z rogu ognia rozkwita pomarańczowa poświata. Kompania dobywa broni - cóż za mroczna postać mogłaby być tutaj, wśród tej pustki? Co za \'coś\' przemierza tak nędzną krainę? Ale okazuje się, że to tylko starszy mężczyzna z łysą czaszką i bulwiastym, czerwonym nosem. Gdyby śnieg miał wyrzeźbić człowieka z granitu, tak wyglądałby jego twór. Nieznajomy przechodzi przez obóz, a kompania odwraca się do niego i krzyczy, lecz żaden najemnik nie podchodzi. W końcu schyla się i kładzie róg na ziemi, a śnieg gasi jego ogień. Potem wstaje, idzie dalej i wkrótce znika w nocnej mgle.\n\n  %randombrother% podnosi róg i przechyla go. Wypada z niego róża i nawet w ciemności widać, że płatki są miękkie, ale już podwijają się od okrutnego chłodu. Rozglądasz się za starcem i widzisz jego ślady wciąż świeże w puchu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "All sorts of strange in these wastes.",
+					Text = "Na tych pustkowiach pełno dziwactw.",
 					function getResult( _event )
 					{
 						this.World.Flags.set("IjirokStage", 3);
