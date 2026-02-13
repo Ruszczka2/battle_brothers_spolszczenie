@@ -3,18 +3,18 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.goblin_city_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{%randombrother% shakes his head.%SPEECH_ON%May the old gods have mercy upon us for allowing such a sight.%SPEECH_OFF%The goblin city is sequestered between opposing mountains. Saying the goblins built their city around the mountains is like saying a soldier sheathed his sword in his enemy\'s chest. The gibbering greenskins didn\'t add to the terrain, they desecrated the place whole, putting mines where trees used to be, constructing a maze of rusted shanties and lean-tos, raising cultish totems and digging primitive sacrificial pits, piling unused timber as though the mutilation of the mountain was not truly finished without blatant waste.\n\n But beyond the goblin rubbish does stand a central core of the city, a number of towers unambiguously set apart from the riffraff. These are clearly ancient requisitions, the stonework being unlike anything you\'ve ever seen and surely beyond the greenskin\'s scope of construct. The goblins walking amongst the walls are upright and boastful as though invigorated by being allowed to stride such hallowed grounds. Nestled inside the fortress seem to be of some sort of higher nobility, well dressed goblins with servants mucking about, which means the same thing it does when it comes to humans: there\'s good loot to be had.\n\n A rare sight are the little ones running about. Families, if that\'s what the greenskins truly have, will mean that a fight here will be a vicious one. The little maggots will have more to protect than just their savageness and greed, and that which must extend itself beyond its own vices is also that which has been weakened.}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{%randombrother% kręci głową.%SPEECH_ON%Niech starzy bogowie zlitują się nad nami za to, że pozwolili na taki widok.%SPEECH_OFF%Miasto goblinów jest wciśnięte między przeciwległe góry. Mówienie, że gobliny zbudowały miasto wokół gór, jest jak twierdzić, że żołnierz schował miecz w klatce piersiowej wroga. Gaworzące zielonoskóre nie dodały nic do terenu, tylko zbezcześciły to miejsce w całości, kładąc kopalnie tam, gdzie kiedyś stały drzewa, budując labirynt zardzewiałych szałasów i prowizorek, stawiając kultowe totemy i kopiąc prymitywne doły ofiarne, piętrząc nieużyteczne drewno, jakby okaleczanie góry nie było dokończone bez jawnego marnotrawstwa.\n\n Jednak ponad goblińskim śmietniskiem wznosi się centralny rdzeń miasta, kilka wież wyraźnie odseparowanych od pospólstwa. To ewidentnie starożytne konstrukcje, kamieniarka niepodobna do niczego, co kiedykolwiek widziałeś, i z pewnością poza możliwościami zielonoskórych. Gobliny chodzące wśród murów są wyprostowane i wyniosłe, jakby dodawało im sił pozwolenie na stąpanie po tak uświęconych ziemiach. Wewnątrz fortecy zdają się mieszkać jakaś wyższa szlachta, dobrze ubrane gobliny z krzątającymi się sługami, co znaczy to samo, co u ludzi: jest tu dobry łup.\n\n Rzadkim widokiem są małe gobliny biegające wszędzie. Rodziny, jeśli zielonoskórzy w ogóle je mają, oznaczają, że walka będzie tu wyjątkowo zaciekła. Te małe larwy będą miały do ochrony coś więcej niż tylko dzikość i chciwość, a to, co musi wyjść poza własne występki, jest zarazem tym, co zostało osłabione.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What\'s the plan?",
+					Text = "Jaki plan?",
 					function getResult( _event )
 					{
 						return "B";
@@ -22,7 +22,7 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let\'s leave for now.",
+					Text = "Na razie odejdźmy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -43,13 +43,13 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{After observing the city for a time, you know that you can\'t simply assault it head on. There are far too many to take on and with the numbers already on their side it is even likely the families of the goblins will partake in your slaughter, and you will have only enshrined the city whole with further experience in slaughtering humans. So you wait. And think. And then the man approaches.\n\n He\'s bound in light armor with a leafy hood used to camouflage the metal beneath and a multitude of swords clank from his hip and a spear yokes across his back one way and an axe the other and bandolier of potions chime as he comes to a halt. You can\'t see his face, much less his eyes, and he\'s dripping with the blood of recent action.%SPEECH_ON%Despite their cruelties and cruel appearance, the goblins are in a way a civilized group. They will respond to violence that is at its base nothing more than senseless savagery. If you wish to draw them out, then you must do as the orcs do. My plan was to slaughter as many as I could find in the fields, raiding parties, scouts, the like, but it is just as well that their encampments are destroyed in great number. Together, the carnage will be a pincer upon their fears, for they fear reckless orcs more than anything and will seek to preemptively snuff them out.%SPEECH_OFF%The man nods as though you\'ve already agreed to something.%SPEECH_ON%So choose, traveler, the manner in which you wish to have this city laid flat. Slaughter their raiding parties and scouts, or burn their forward posts? Whatever you do, I\'ll do the other, alone, and we shall meet here when the summary of our actions is obvious.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{Po pewnym czasie obserwacji miasta wiesz, że nie możesz po prostu zaatakować go frontalnie. Jest ich zbyt wielu i przy tej przewadze liczebnej prawdopodobne jest, że nawet rodziny goblinów wezmą udział w twojej rzezi, a miasto jedynie zyska dodatkowe doświadczenie w mordowaniu ludzi. Więc czekasz. I myślisz. A potem podchodzi mężczyzna.\n\n Jest opięty w lekkiej zbroi, z liściastym kapturem maskującym metal pod spodem, a z jego biodra brzęczy mnóstwo mieczy, przez plecy ma przewieszoną włócznię z jednej strony i topór z drugiej, a bandolier z miksturami pobrzękuje, gdy się zatrzymuje. Nie widzisz jego twarzy, a tym bardziej oczu, i ocieka krwią świeżej akcji.%SPEECH_ON%Mimo swoich okrucieństw i okrutnego wyglądu, gobliny są w pewien sposób cywilizowane. Zareagują na przemoc, która u podstaw jest niczym innym jak bezsensowną dzikością. Jeśli chcesz je wywabić, musisz zrobić to, co robią orki. Mój plan zakładał wybicie tylu, ilu znajdę na polach: grup łupieżczych, zwiadowców i tym podobnych, ale równie dobrze, by ich obozowiska zostały zniszczone w dużej liczbie. Razem ta rzeź będzie jak kleszcze na ich strachu, bo bardziej niż czegokolwiek boją się nieokrzesanych orków i będą chcieli wyprzedzająco ich zdusić.%SPEECH_OFF%Mężczyzna kiwa głową, jakbyś już na coś przystał.%SPEECH_ON%Zatem wybierz, wędrowcze, sposób, w jaki chcesz zrównać to miasto z ziemią. Wyrżniesz ich grupy łupieżcze i zwiadowców, czy spalisz wysunięte posterunki? Cokolwiek zrobisz, ja zrobię drugie, sam, a spotkamy się tu, gdy wynik naszych działań będzie oczywisty.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll slaughter their scouts and raiding parties.",
+					Text = "Wyrżniemy ich zwiadowców i grupy łupieżcze.",
 					function getResult( _event )
 					{
 						return "C";
@@ -57,7 +57,7 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We\'ll take on the forward posts.",
+					Text = "Zajmiemy się wysuniętymi posterunkami.",
 					function getResult( _event )
 					{
 						return "D";
@@ -72,13 +72,13 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{You tell him that the %companyname% will slaughter the goblins in the fields. The man nods.%SPEECH_ON%Ah, traveler, that is a good choice. The disappearances of these parties will put a strain upon the greenskins\' beliefs. They\'re natural scouts and raiders, so when those in that ilk go missing it unnerves them to the core. The forward posts will retreat and spread rumors to this city and out shall come an expeditionary force. While you take them in the fields, I shall see to it that many of the encampments are destroyed. By my own experience, you need to destroy somewhere around %goblinkillcount% parties of them and that shall be sufficient.%SPEECH_OFF%He heads off, but you call out asking who he is, or if perhaps it would be a better idea to join together. He ignores you completely and walks away.}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{Mówisz mu, że %companyname% wyrżnie gobliny na polach. Mężczyzna kiwa głową.%SPEECH_ON%Ach, wędrowcze, to dobry wybór. Znikanie tych grup nadwyręży przekonania zielonoskórych. To urodzeni zwiadowcy i rabusie, więc gdy ci z takiego rodzaju znikają, niepokoi ich to do głębi. Wysunięte posterunki się wycofają i rozniosą plotki do miasta, a wtedy wyjdzie siła ekspedycyjna. Gdy ty będziesz ich łapał na polach, ja dopilnuję, by wiele obozowisk zostało zniszczonych. Z własnego doświadczenia wiem, że wystarczy zniszczyć około %goblinkillcount% ich grup.%SPEECH_OFF%Odchodzi, ale wołasz, pytając kim jest, albo czy nie lepiej byłoby połączyć siły. Całkowicie cię ignoruje i odchodzi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll return after %goblinkillcount% goblin parties have been destroyed.",
+					Text = "Wrócimy po zniszczeniu %goblinkillcount% goblińskich grup.",
 					function getResult( _event )
 					{
 						return 0;
@@ -95,13 +95,13 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{You tell the stranger that the %companyname% will pursue the destruction of the encampments. He nods.%SPEECH_ON%Excellent, traveler, excellent! The goblins send raiding parties frequently and when they come home to ashes they will return here, spread word of destruction, and be lead out. Very well. We have a plan and by my own experiences you need only march down around %goblinpostcount% encampments. You take their posts, I will take their parties.%SPEECH_OFF%He heads off, but you call out asking who he is, or if perhaps it would be a better idea to join together. He ignores you completely and walks away.}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{Mówisz nieznajomemu, że %companyname% zajmie się niszczeniem obozowisk. Kiwając głową, mówi:%SPEECH_ON%Wspaniale, wędrowcze, wspaniale! Gobliny często wysyłają grupy łupieżcze, a gdy wracają do popiołów, wrócą tutaj, roznosząc wieści o zniszczeniu, i zostaną wyprowadzeni. Dobrze. Mamy plan i z własnego doświadczenia wiem, że trzeba zniszczyć około %goblinpostcount% obozowisk. Ty weźmiesz ich posterunki, ja wezmę ich grupy.%SPEECH_OFF%Odchodzi, ale wołasz, pytając kim jest, albo czy nie lepiej byłoby połączyć siły. Całkowicie cię ignoruje i odchodzi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll return after five outposts have been razed.",
+					Text = "Wrócimy po zrównaniu z ziemią pięciu posterunków.",
 					function getResult( _event )
 					{
 						return 0;
@@ -118,13 +118,13 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{You return to the city, but the stranger you met earlier is nowhere to be seen. However, what is seen is an enormous contingent of goblin forces marching out of their city. They\'re in lockstep and chittering loudly. Their leaders sit atop saddled wolves with their war banners tilting side to side as though it were a fleet set to sea. Goblin families stand perched at the gates. They\'re throwing handfuls of bones upon the marchers, and sometimes you see a dog or human limb get tossed down and whichever goblin catches it holds it up like a trophy and the surrounding troop cheers. It takes a full hour for the army to pass at which time the goblins at the gates recede back into the city and a few guards mill about.\n\nThere\'s still plenty yet to put up a good fight, but not enough to handle the %companyname%.}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{Wracasz do miasta, ale nieznajomy, którego spotkałeś wcześniej, nigdzie się nie pokazuje. Jednak to, co widać, to ogromny kontyngent goblińskich sił maszerujących z miasta. Idą zwartym krokiem i głośno skrzeczą. Ich przywódcy siedzą na osiodłanych wilkach, a ich sztandary wojenne kołyszą się na boki niczym flota wypływająca na morze. Rodziny goblinów stoją przy bramach. Rzucają garści kości na maszerujących, a czasem widzisz, jak spada kończyna psa lub człowieka, a którykolwiek goblin ją złapie, unosi ją jak trofeum, a otaczający oddział wiwatuje. Zajmuje pełną godzinę, by armia przeszła, po czym gobliny przy bramach cofają się do miasta, a kilku strażników kręci się bez celu.\n\nWciąż jest ich dość, by stawić dobry opór, ale za mało, by poradzić sobie z %companyname%.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Prepare the attack.",
+					Text = "Przygotować atak.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -139,7 +139,7 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Fall back for now.",
+					Text = "Wycofać się na razie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -154,13 +154,13 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{The goblin city remains guarded by a horde of the little greenskins. You recall that the %companyname% will have to destroy a couple more of their patrols and scouts to draw the army away from the city.}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{Miasto goblinów pozostaje strzeżone przez hordę małych zielonoskórych. Przypominasz sobie, że %companyname% musi zniszczyć jeszcze kilka ich patroli i zwiadowców, aby odciągnąć armię od miasta.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll return after %goblinkillcount% goblin parties have been destroyed.",
+					Text = "Wrócimy po zniszczeniu %goblinkillcount% goblińskich grup.",
 					function getResult( _event )
 					{
 						return 0;
@@ -179,13 +179,13 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_119.png[/img]{The goblin city remains guarded by a horde of the little greenskins. You recall that the %companyname% will have to destroy a couple more of their encampments and forward posts to draw the army away from the city.}",
+			Text = "[img]gfx/ui/events/event_119.png[/img]{Miasto goblinów pozostaje strzeżone przez hordę małych zielonoskórych. Przypominasz sobie, że %companyname% musi zniszczyć jeszcze kilka ich obozowisk i wysuniętych posterunków, aby odciągnąć armię od miasta.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll return after %goblinpostcount% outposts have been razed.",
+					Text = "Wrócimy po zrównaniu z ziemią %goblinpostcount% posterunków.",
 					function getResult( _event )
 					{
 						return 0;
@@ -216,11 +216,11 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 	{
 		_vars.push([
 			"goblinkillcount",
-			"ten"
+			"dziesięć"
 		]);
 		_vars.push([
 			"goblinpostcount",
-			"five"
+			"pięć"
 		]);
 	}
 

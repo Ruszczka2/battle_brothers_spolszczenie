@@ -3,18 +3,18 @@ this.monolith_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.monolith_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_101.png[/img]{From a distance, the Black Monolith looked like a black tower tilting from the earth. The sky above was without blemish, as though the clouds and the birds were circumventing some unseen mountain. A numbness settled its hinterland, terra neither dying nor growing, and a cruel silence left the listless life worse than no life at all. Adventurers went to it and did not return. Stories of their demise stacked high until their absence shielded the monolith whole, clothing it in such fear and menace no one dared go near.\n\n But now the %companyname% stands before the obelisk like ants at the steel of a staked sword. Here you see that the structure was not built upon the earth at all: the obelisk rests in the pit of an abandoned quarry. Roads and paths sidewinder into the depths like some great and hollow terra socket. Ropes carrying buckets hang across every gap, innumerable pails of dirt left listing like fireless lanterns on a festive night. More bindings hold the frames of bridges, the walkway planks long since fallen, and more yet wrap about the monolith as though a great bevy of men had attempted to pull it down or perhaps even correct its tilt. At the bottom of this abandoned pit is the base of the monolith, but to you this is only a guess. It has every appearance of never stopping its descent into the very earth and whatever is below. Shovels and pickaxes litter about its obsidian walls with soil still clumped on their metals. %randombrother% nods at the scene.%SPEECH_ON%Looks like whoever was digging there got interrupted.%SPEECH_OFF%The man\'s words carry far into the quarry and there become so presently shaped in echo that you just about watch them go. Looking back, you see that the silence itself has followed you in, but even here at the edge of the pit it is pensive and cut with ease. The decision to enter the quarry rests heavy on your shoulders.}",
+			Text = "[img]gfx/ui/events/event_101.png[/img]{Z oddali Czarny Monolit wyglądał jak czarna wieża przechylona z ziemi. Niebo nad nim było nieskalane, jakby chmury i ptaki omijały niewidoczną górę. Odrętwienie spowiło jego zaplecze, ziemia ani nie umierała, ani nie rosła, a okrutna cisza sprawiała, że ospałe życie było gorsze niż żadne życie. Poszukiwacze przygód szli tam i nie wracali. Opowieści o ich zgubie piętrzyły się, aż ich brak osłonił monolit w całości, odziewając go takim strachem i grozą, że nikt nie odważył się podejść.\n\n Ale teraz %companyname% stoi przed obeliskiem jak mrówki przy stali wbitego miecza. Tutaj widzisz, że struktura w ogóle nie została zbudowana na ziemi: obelisk spoczywa w wyrobisku opuszczonego kamieniołomu. Drogi i ścieżki wężowato schodzą w głąb jak jakieś wielkie, puste ziemne gniazdo. Liny niosące wiadra zwisają nad każdą szczeliną, niezliczone wiadra ziemi przechylone jak bezpłomienne latarnie w świąteczną noc. Kolejne wiązania trzymają ramy mostów, deski pomostów dawno już opadły, a jeszcze inne oplatają monolit, jakby wielka gromada ludzi próbowała go ściągnąć albo choć skorygować jego przechył. Na dnie tego opuszczonego wyrobiska jest podstawa monolitu, ale to tylko przypuszczenie. Wszystko wskazuje, że nigdy nie kończy on swojego zejścia w głąb ziemi i tego, co pod nią. Łopaty i kilofy leżą rozsiane przy jego obsydianowych ścianach, z ziemią wciąż zbryloną na metalu. %randombrother% kiwa głową na ten widok.%SPEECH_ON%Wygląda na to, że tego, kto tu kopał, coś przerwało.%SPEECH_OFF%Słowa mężczyzny niosą się daleko po kamieniołomie i tam stają się tak wyraźnie ukształtowane w echu, że niemal widzisz, jak odchodzą. Oglądając się, widzisz, że sama cisza podążyła za tobą, lecz nawet tutaj, na krawędzi wyrobiska, jest zadumana i łatwa do rozcięcia. Decyzja o wejściu do kamieniołomu ciąży na twoich barkach.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Go in.",
+					Text = "Wejdź.",
 					function getResult( _event )
 					{
 						return "B";
@@ -22,7 +22,7 @@ this.monolith_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Fall back.",
+					Text = "Wycofaj się.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -42,13 +42,13 @@ this.monolith_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_101.png[/img]{Halfway into the quarry and rounding a long bend, you notice a series of hallways cut into the lower wall. You cast up a fist. The company seizes, bumbling into one another as the formation comes to a stop. %randombrother% asks what\'s wrong. You put a finger to your lips. \n\n With the lightest of steps you approach one of the ropes strung between this level and the very bottom of the pit. A pail filled with soil totters the tether as though jittered by your appearance. The pulley used to draw it up and down has long since rusted over. You draw your sword and cut the rope. The binding shoots back like a whip and the bucket plummets. It clatters side to side off the rocks until striking the ground with a metal pang and a cloud of dust. And just like that, the silence is gone.\n\n Pale men flood out of the hallways below, a stream of malignant miners and ditch diggers in haggard drawers and boots and capes of shredded shirts, shambling back out as though returning to some long gone work left incomplete. You try and count their numbers but are mightily distracted when a throng of armored soldiers march out behind the mob, this outfit carrying polearms, shields, spears and, most dangerously of all, a sense of cohesion.\n\n No point in running out of the quarry. Nothing in the land to run to. When you look back at the men, they\'re already drawing out their weapons. %randombrother% nods.%SPEECH_ON%With you to the end, captain.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_101.png[/img]{W połowie drogi przez kamieniołom, za długim zakrętem, dostrzegasz szereg korytarzy wykutych w dolnej ścianie. Podnosisz zaciśniętą pięść. Kompania zastyga, wpadając na siebie, gdy szyk się zatrzymuje. %randombrother% pyta, co jest nie tak. Przykładasz palec do ust.\n\n Najlżejszym krokiem podchodzisz do jednej z lin rozpiętych między tym poziomem a samym dnem wyrobiska. Wiadro wypełnione ziemią kołysze liną, jakby poruszone twoją obecnością. Kołowrót używany do podnoszenia i opuszczania dawno już pokrył się rdzą. Dobytasz miecza i przecinasz linę. Wiązanie strzela wstecz jak bicz, a wiadro spada. Klekoce na boki po skałach, aż uderza o ziemię metalicznym jękiem i obłokiem kurzu. I tak po prostu cisza znika.\n\n Blade postacie wylewają się z korytarzy poniżej, strumień złowrogich górników i kopaczy rowów w zszarganych spodniach, butach i pelerynach z poszarpanych koszul, wypełzających, jakby wracali do dawno porzuconej, niedokończonej pracy. Próbujesz policzyć ich liczbę, ale odciąga cię widok tłumu opancerzonych żołnierzy maszerujących za zgrają, uzbrojonych w drzewce, tarcze, włócznie i, co najgroźniejsze, w poczucie spójności.\n\nNie ma sensu uciekać z kamieniołomu. Nie ma dokąd. Gdy spoglądasz na ludzi, już dobywają broni. %randombrother% kiwa głową.%SPEECH_ON%Z tobą do końca, kapitanie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "To the end!",
+					Text = "Do końca!",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)

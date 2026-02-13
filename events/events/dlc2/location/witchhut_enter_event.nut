@@ -3,18 +3,18 @@ this.witchhut_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.witchhut_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{You pause at the forest clearing. The hut before you stands like a mere crumb. It\'s so quaint and easily forgotten you wondered how it could survive, but perhaps its total banality and unassuming nature is itself a sort of armor. But you\'ve been around this world long enough to know to trust your instinct, and right now your instinct is to wait.\n\n Soon enough, the hut\'s door pops open and an elderly woman hobbles out. She immediately waves in your direction.%SPEECH_ON%You, and only you.%SPEECH_OFF%Confused, you ask why just yourself, or more particularly why would you ever trust her to begin with. She smiles.%SPEECH_ON%Because I know what the False King dreams of at night.%SPEECH_OFF%The mercenaries around you turn about and ask what she said. You put a hand up and tell them to stay their ground while you go have a talk with the mysterious woman.}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Zatrzymujesz się na leśnej polanie. Chata przed tobą stoi jak okruszek. Jest tak swojska i łatwa do zapomnienia, że zastanawiasz się, jak mogła przetrwać, ale może jej całkowita banalność i niepozorność są same w sobie rodzajem pancerza. Jednak jesteś na tym świecie wystarczająco długo, by ufać instynktowi, a teraz instynkt każe ci czekać.\n\n Wkrótce drzwi chaty otwierają się i wychodzi z niej starsza kobieta. Natychmiast macha w twoją stronę.%SPEECH_ON%Ty, i tylko ty.%SPEECH_OFF%Zdezorientowany pytasz, czemu tylko ty, albo dokładniej, czemu w ogóle miałbyś jej zaufać. Uśmiecha się.%SPEECH_ON%Bo wiem, o czym Fałszywy Król śni w nocy.%SPEECH_OFF%Najemnicy wokół ciebie odwracają się i pytają, co powiedziała. Unosisz dłoń i każesz im trzymać pozycję, podczas gdy ty pójdziesz porozmawiać z tajemniczą kobietą.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Stay here and stay on guard.",
+					Text = "Zostańcie tutaj i trzymajcie straż.",
 					function getResult( _event )
 					{
 						return "B";
@@ -29,13 +29,13 @@ this.witchhut_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{You come in with your sword drawn just to find the woman offering you a bowl of stew. She suggests it is only rabbit and potatoes, and more the former than the latter. Sheathing your sword, you take the bowl and have a seat at a table with her opposite you. A couple of candles burn nearby, and there are glyphs painted on the walls in white, and similar shapes hang from the ceiling as dreamcatchers. The woman puts her elbows on the table. There are trinkets wound into her hair, clips of bird bones and feathers. She carries a weathered face, though her eyes are starkly young like pearls glimmering from the depths of a swamp.%SPEECH_ON%I knew you would come in, a phantom of a friend, like a moth to the flame, seeking truth which cannot be tamed.%SPEECH_OFF%Pushing the bowl back across the table, you ask if she is a witch. She nods affirmatively and stares at you before nodding again.%SPEECH_ON%Good. You haven\'t killed me which means you\'re thinking now. I am indeed a so-called witch, but I am alone. Entirely alone. And hounded by the others. You might call them my \'sisters\', but these others know who you are, just as I do, and they want your blood. They can smell it and that is why I want to talk.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Wchodzisz z dobytym mieczem, by zobaczyć kobietę podającą ci miskę gulaszu. Sugeruje, że to tylko królik i ziemniaki, bardziej królik niż ziemniaki. Chowając miecz, bierzesz miskę i siadasz przy stole naprzeciw niej. W pobliżu płoną świece, na ścianach namalowano białe glify, a podobne kształty zwisają z sufitu jako łapacze snów. Kobieta opiera łokcie o stół. We włosy ma powplatane drobiazgi, klipsy z ptasich kości i piór. Ma twarz pooraną przez czas, choć jej oczy są zaskakująco młode, jak perły migoczące z głębin bagna.%SPEECH_ON%Wiedziałam, że wejdziesz, widmo przyjaciela, jak ćma do płomienia, szukając prawdy, której nie da się okiełznać.%SPEECH_OFF%Odsuwając miskę przez stół, pytasz, czy jest wiedźmą. Przytakuje i wpatruje się w ciebie, po czym kiwa raz jeszcze.%SPEECH_ON%Dobrze. Nie zabiłeś mnie, co znaczy, że myślisz. Jestem tak zwaną wiedźmą, ale jestem sama. Całkowicie sama. I ścigana przez inne. Możesz je nazwać moimi \'siostrami\', ale one wiedzą, kim jesteś, tak jak ja, i chcą twojej krwi. Czują ją, i dlatego chcę rozmawiać.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What is it you want?",
+					Text = "Czego chcesz?",
 					function getResult( _event )
 					{
 						return "C";
@@ -50,13 +50,13 @@ this.witchhut_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{The woman draws a long object wrapped in table cloth and sets it on the table. She throws back its linens to reveal a jagged obsidian blade with a leather strips for a grip.%SPEECH_ON%Cut your flesh and bleed upon the black. The hexen and their lowly craft shall come, and then you shall kill them all. After that, we can talk. Sellsword and witch, witch and sellsword.%SPEECH_OFF%You ask what is in it for you. The witch cackles.%SPEECH_ON%Oh sellsword, you are not in the business of allegiance, but in the business of gold, and with a clever turn of coin you know friend can turn to foe. But I offer something more. A truth which cannot be seen, a truth for the False King.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Kobieta wyciąga długi przedmiot owinięty w obrus i kładzie go na stole. Odsłania płótno, ukazując poszarpane obsydianowe ostrze z paskami skóry zamiast rękojeści.%SPEECH_ON%Przetnij ciało i krwaw na czerni. Heksy i ich marny kunszt przyjdą, a wtedy zabijesz je wszystkie. Potem będziemy rozmawiać. Najemnik i wiedźma, wiedźma i najemnik.%SPEECH_OFF%Pytasz, co z tego masz. Wiedźma rechocze.%SPEECH_ON%Ach, najemniku, nie zajmujesz się wiernością, tylko złotem, i przy sprytnym obrocie monetą wiesz, że przyjaciel może stać się wrogiem. Ale ja oferuję coś więcej. Prawdę, której nie widać, prawdę dla Fałszywego Króla.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ve already come this far.",
+					Text = "Skoro już tu jesteśmy.",
 					function getResult( _event )
 					{
 						return "D";
@@ -71,13 +71,13 @@ this.witchhut_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{The black blade rests in your hand, and your reflection rests jaggedly in its stony grooves, stretched and pulled into every divot and edge. Tis a simple stone. A simple dagger. That is all. Not the least bit heavy, but you can feel the import, like dust tossed upon a grave, there is not so much weight in the sand as there is in the throw itself. This blade is either loss or gain and there\'s only one way to see to which. The witch nods. You nod back and slash your upper arm. The blood pools onto the stone and your reflections disappear beneath the crimson. Almost growling, the witch eagerly leans in and presses the blade against the skin.%SPEECH_ON%More. More, sellsword. More!%SPEECH_OFF%You slash again and flex. A spurt hits the stone. She takes the knife and slaps a spotless cloth onto the wound.%SPEECH_ON%Well enough, sellsword. Go to your men and prepare.%SPEECH_OFF%You stand and look at the woman. You ask.%SPEECH_ON%And once I kill your enemies, then we talk again?%SPEECH_OFF%She smiles.%SPEECH_ON%In so many words, yes.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Czarne ostrze spoczywa w twojej dłoni, a twoje odbicie spoczywa poszarpane w jego kamiennych rowkach, rozciągnięte i wciągnięte w każdą szczelinę i krawędź. To zwykły kamień. Zwykły sztylet. Tylko tyle. Nie jest ciężki, a jednak czujesz wagę, jak kurz rzucony na grób; nie tyle ciężar tkwi w piasku, ile w samym geście. To ostrze jest albo stratą, albo zyskiem, i jest tylko jeden sposób, by się dowiedzieć, którym. Wiedźma kiwa głową. Ty kiwasz z powrotem i nacinasz ramię. Krew zbiera się na kamieniu, a twoje odbicie znika pod purpurą. Niemal warcząc, wiedźma pochyla się chciwie i dociska ostrze do skóry.%SPEECH_ON%Więcej. Więcej, najemniku. Więcej!%SPEECH_OFF%Tniesz ponownie i napinasz mięsień. Strumień uderza w kamień. Ona bierze nóż i przykłada na ranę nieskazitelnie czystą szmatę.%SPEECH_ON%Wystarczy, najemniku. Idź do swoich ludzi i przygotuj się.%SPEECH_OFF%Wstajesz i patrzysz na kobietę. Pytasz.%SPEECH_ON%A kiedy zabiję twoich wrogów, to znów porozmawiamy?%SPEECH_OFF%Uśmiecha się.%SPEECH_ON%W pewnym sensie, tak.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Then I will do so.",
+					Text = "Tak uczynię.",
 					function getResult( _event )
 					{
 						return "E";
@@ -92,13 +92,13 @@ this.witchhut_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{When you step outside and inform the company that hostiles are coming. Soon enough, the haggard women are spotted walking between the trees of the forest, their long fingernails scratching across the bark and their drooling lips sniveling up to snort and cackle. The first to come through has a long head shaped like a canoe. An infant\'s skull dangles from her necklace, and a leather bag bounces at her hip, two rabbit feet sticking out of the pouch. She glares at the hut and sniffs the air, then shifts her eyes upon you.%SPEECH_ON%Ah, you have made covenant with that bitch?%SPEECH_OFF%You nod.%SPEECH_ON%The deal\'s been made, aye, and it will end with you dying on the end of this blade. And I believe she prefers to just be called \'witch.\'%SPEECH_OFF%Another hexen steps forward.%SPEECH_ON%We prefer to call her cunt. Kill the sellswords. Take the captain alive, but remove his eyes and that lousy tongue.%SPEECH_OFF%The throng of witches rush forward, some already shifting into licentious looking younglings while others revolve their arms in ritual rites.}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Gdy wychodzisz na zewnątrz i informujesz kompanię, że nadchodzą wrogowie. Wkrótce widać, jak zgarbione kobiety idą między drzewami lasu, ich długie paznokcie drapią korę, a śliniące się wargi pociągają nosem i parskają rechotem. Pierwsza, która wychodzi, ma długą głowę w kształcie czółna. Z jej naszyjnika zwisa czaszka niemowlęcia, a skórzana torba podskakuje na biodrze, z sakiewki wystają dwie królicze łapy. Gapi się na chatę i węszy powietrze, po czym przenosi wzrok na ciebie.%SPEECH_ON%A więc zawarłeś przymierze z tą suką?%SPEECH_OFF%Kiwasz głową.%SPEECH_ON%Umowa została zawarta, tak, i skończy się tym, że zginiesz na końcu tego ostrza. A z tego, co wiem, woli być nazywana po prostu \'wiedźmą\'.%SPEECH_OFF%Inna heksa wychodzi naprzód.%SPEECH_ON%Wolimy nazywać ją kurwą. Zabić najemników. Kapitana wziąć żywcem, ale wydrzeć mu oczy i ten parszywy jęzor.%SPEECH_OFF%Gromada wiedźm rzuca się naprzód, część już przeistacza się w lubieżnie wyglądające młódki, podczas gdy inne kręcą ramionami w rytualnych obrządkach.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "To battle!",
+					Text = "Do boju!",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)

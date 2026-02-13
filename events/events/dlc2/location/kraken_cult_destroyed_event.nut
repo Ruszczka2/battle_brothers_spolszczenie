@@ -3,18 +3,18 @@ this.kraken_cult_destroyed_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.kraken_cult_destroyed";
-		this.m.Title = "After the battle";
+		this.m.Title = "Po bitwie";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_105.png[/img]{Tentacles chain across the swamp in a corrupted mass such that you didn\'t slay the kraken so much as annihilate the very place it called home. Each wormy vestige is wimpled with swamp moss, a stretch of profitable farmland to hatch the very mushrooms you saw the woman eating time and time again. You crouch beside one unharvested batch, poking at their caps like a cat at a wingless moth. The fungi deflate at the touch. %randombrother% looks at them.%SPEECH_ON%Mycologist might know what those are.%SPEECH_OFF%You nod. Yeah. Might. You move along, crushing the shrooms underfoot and wading through limbs and bloodied cloaks floating along the swamp and the tentacles\' faceless heads with their leafy maws folded over each other and their tongues lolled like whips. You find the woman nestled behind a cast of kudzu, yourself parting the vines like a man seeking his fortune. She regards you with a grin.%SPEECH_ON%Did you hear it? Did you hear its beauty?%SPEECH_OFF%Sighing, you tell her that the shrooms overtook her mind, and the shrooms were likely there for a reason and that the kraken had her well before it ever rose, that it used her to bring everyone here. Grinning ever more, she only asks again if you heard its beauty. You tell her you heard it die. Her brow furrows.%SPEECH_ON%A cry of death? Is that what you think? Oh my, oh no. Stranger, that was a cry for help. Don\'t you get it? That means more are out there! More! Perhaps hundreds! And now they are awake! Now they are all awake!%SPEECH_OFF%You step back and close the kudzu curtain. %randombrother% tells you that the company has found something. For a moment, you think to save this woman, but you know better. You know the grip she is in and leave her be.}",
+			Text = "[img]gfx/ui/events/event_105.png[/img]{Macki łańcuchem ciągną się przez bagno w skażonej masie, tak że nie tyle zabiłeś krakena, co unicestwiłeś samo miejsce, które nazywał domem. Każdy robaczywy szczątek okryty jest bagnistym mchem, żyzną połać dla grzybów, które widziałeś, jak kobieta jadła raz za razem. Kucasz przy jednej niezerwanej partii, szturchając ich kapelusze jak kot ćmę bez skrzydeł. Grzyby zapadają się pod dotykiem. %randombrother% przygląda się im.%SPEECH_ON%Mykolog mógłby wiedzieć, co to jest.%SPEECH_OFF%Kiwasz głową. Tak. Może. Idziesz dalej, miażdżąc grzyby pod stopami i brodząc przez kończyny oraz zakrwawione płaszcze unoszące się w bagnie, i bezkształtne głowy macek z ich liściastymi paszczami złożonymi na siebie i językami zwisającymi niczym bicze. Znajdujesz kobietę ukrytą za zasłoną kudzu, sam rozchylasz pnącza jak człowiek szukający swego szczęścia. Spogląda na ciebie z uśmiechem.%SPEECH_ON%Czy to słyszałeś? Słyszałeś jego piękno?%SPEECH_OFF%Wzdychając, mówisz jej, że grzyby przejęły jej umysł, że grzyby były tam zapewne po coś i że kraken miał ją w swych sidłach, zanim kiedykolwiek się wynurzył, że użył jej, by sprowadzić tu wszystkich. Uśmiechając się coraz szerzej, pyta tylko ponownie, czy słyszałeś jego piękno. Mówisz jej, że słyszałeś, jak umiera. Marszczy brwi.%SPEECH_ON%Krzyk śmierci? Tak myślisz? Ojej, o nie. Nieznajomy, to był krzyk o pomoc. Nie pojmujesz? To znaczy, że są tam inne! Więcej! Może setki! I teraz się obudziły! Teraz wszystkie się obudziły!%SPEECH_OFF%Robisz krok w tył i zamykasz zasłonę kudzu. %randombrother% mówi ci, że kompania coś znalazła. Przez chwilę myślisz, by ocalić tę kobietę, ale wiesz lepiej. Wiesz, w jakim jest uścisku, i zostawiasz ją.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright, show me what\'s been found.",
+					Text = "Dobrze, pokażcie, co znaleźliście.",
 					function getResult( _event )
 					{
 						if (this.World.Flags.get("IsWaterWheelVisited"))
@@ -36,13 +36,13 @@ this.kraken_cult_destroyed_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_105.png[/img]{The creature was almost too large to die properly on its side and instead tilts forward with its horrid mouth gaping like a hole blasted into a leaning bastion. One sellsword sits crosslegged atop the kraken\'s dome like a monk deep in study. Another is poking the creature in its eyes until one pops and the corners of the socket slurp the liquid in a frothy gargle. You ask the mercenaries what of import has been found and one waves you over to the creature\'s maw. With slackened gums the teeth now hang downward, limp crenellations to a tower of horror, the slew of razors coated in clothes and flesh and so large that whole limbs are wedged between them. And so is the blade.\n\n You reach into the mouth and wrench out the blade and wipe it down with a cloth. Turning the blade, you spot glyphs in the fuller with numbers beside them, a suggestion of smithing eternal yet purposed particular to a time and place. The steel is so vibrant it seems to have been fashioned by the light of the stars themselves. Unfortunately, there is no handle for it. The magnificence of the blade suggests it is not to be accommodated by any mere hilt. Putting the blade in inventory, you tell the men to collect what they can from the \'Beast of Beasts\' and to get ready to leave this wretched place.}",
+			Text = "[img]gfx/ui/events/event_105.png[/img]{Stworzenie było niemal zbyt wielkie, by godnie paść na bok, więc przechyla się do przodu z obrzydliwą paszczą rozdziawioną jak dziura wybita w przechylonej baszcie. Jeden najemnik siedzi po turecku na kopule krakena jak mnich pogrążony w studiach. Inny dłubie stworzeniu w oczach, aż jedno pęka, a kąciki oczodołu zasysają płyn w pieniącym się bulgocie. Pytasz najemników, co ważnego znaleźli, a jeden macha, byś podszedł do paszczy. Gdy dziąsła zwiotczały, zęby zwisają w dół jak miękkie blanki wieży grozy, a cały zestaw brzytew pokrytych odzieżą i ciałem jest tak wielki, że między nie wklinowane są całe kończyny. I tak samo ostrze.\n\n Sięgasz do paszczy, wyrywasz ostrze i wycierasz je szmatą. Obracając klingę, dostrzegasz glify w zbroczu i liczby obok nich, sugestię kowalstwa wiecznego, lecz przeznaczonego na konkretny czas i miejsce. Stal jest tak żywa, że wygląda, jakby została wykuta w świetle samych gwiazd. Niestety, nie ma do niej rękojeści. Wspaniałość ostrza sugeruje, że nie da się go zadowolić byle jaką rękojeścią. Odkładając ostrze do ekwipunku, każesz ludziom zebrać, co się da, z \'Bestii Bestii\' i przygotować się do opuszczenia tego przeklętego miejsca.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We prevailed.",
+					Text = "Zwyciężyliśmy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -58,20 +58,20 @@ this.kraken_cult_destroyed_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_105.png[/img]{The creature was almost too large to die properly on its side and instead tilts forward with its horrid mouth gaping like a hole blasted into a leaning bastion. One sellsword sits crosslegged atop the kraken\'s dome like a monk deep in study. Another is poking the creature in its eyes until one pops and the corners of the socket slurp the liquid in a frothy gargle. You ask the mercenaries what of import has been found and one waves you over to the creature\'s maw. With slackened gums the teeth now hang downward, limp crenellations to a tower of horror, the slew of razors coated in clothes and flesh and so large that whole limbs are wedged between them. And so is the blade.\n\n You reach into the mouth and wrench out the blade and wipe it down with a cloth. Turning the blade, you spot glyphs in the fuller with numbers beside them, a suggestion of smithing eternal yet purposed particular to a time and place. The steel is so vibrant it seems to have been fashioned by the light of the stars themselves. Unfortunately, there is no handle for it and you immediately do the math on that: a sword of unseen magnificence with no handle and one strange old man in a secluded wheelhouse with a blade-less handle. You think you know just where to take this. You put it in the inventory and order the company to plunder whatever else is worth taking, including from the so-called \'beast of beasts.\'}",
+			Text = "[img]gfx/ui/events/event_105.png[/img]{Stworzenie było niemal zbyt wielkie, by godnie paść na bok, więc przechyla się do przodu z obrzydliwą paszczą rozdziawioną jak dziura wybita w przechylonej baszcie. Jeden najemnik siedzi po turecku na kopule krakena jak mnich pogrążony w studiach. Inny dłubie stworzeniu w oczach, aż jedno pęka, a kąciki oczodołu zasysają płyn w pieniącym się bulgocie. Pytasz najemników, co ważnego znaleźli, a jeden macha, byś podszedł do paszczy. Gdy dziąsła zwiotczały, zęby zwisają w dół jak miękkie blanki wieży grozy, a cały zestaw brzytew pokrytych odzieżą i ciałem jest tak wielki, że między nie wklinowane są całe kończyny. I tak samo ostrze.\n\n Sięgasz do paszczy, wyrywasz ostrze i wycierasz je szmatą. Obracając klingę, dostrzegasz glify w zbroczu i liczby obok nich, sugestię kowalstwa wiecznego, lecz przeznaczonego na konkretny czas i miejsce. Stal jest tak żywa, że wygląda, jakby została wykuta w świetle samych gwiazd. Niestety, nie ma do niej rękojeści i od razu to łączysz: miecz o niebywałej wspaniałości bez rękojeści i jeden dziwny starzec w odosobnionym młynie z rękojeścią bez ostrza. Myślisz, że wiesz, gdzie to zanieść. Wkładasz ostrze do ekwipunku i każesz kompanii złupić wszystko, co warte zabrania, także z tak zwanej \'Bestii Bestii\'.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We prevailed.",
+					Text = "Zwyciężyliśmy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -87,7 +87,7 @@ this.kraken_cult_destroyed_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 

@@ -3,18 +3,18 @@ this.ancient_watchtower_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.ancient_watchtower";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_108.png[/img]{The spire is twice as tall as any castle you\'ve seen, and narrower than any tower. It is as though someone had all the material to build a fortress, and instead of building the bastion they built the spire. %randombrother% squints as he looks up at its rise.%SPEECH_ON%Like it just goes on forever, sir. Damn near right to the clouds.%SPEECH_OFF%You enter with a map and a few men. Inside you find a glass sphere sitting on a hollowed lectern. Inside the bulb sits some powdery remains. Perhaps the last issuance of magic, you know not. Your intuition tells you that whoever dwelled in this slender refuge did not always take the stairs. But you\'ll have to. The climb is brutal and long. At the top you find yet another bulb, this one jagged and shattered, and beneath the glass a skeleton. A broken staff lies nearby. You shake your head and head toward the crenelations. So far are the sights the world itself seems to curve at the horizon, a strange trick of the eye no doubt. You draw the geography upon your map, take a five minute breather, then descend back down.\n\nWhen you get to the bottom the skeleton is there with its staff beside it and the busted bulb is on the lectern. The whole group of men run out the door and you\'re hot on their heels. Looking back, you see the spire\'s gate slowly close with a mighty metal clank.}",
+			Text = "[img]gfx/ui/events/event_108.png[/img]{Iglica jest dwa razy wyższa niż jakikolwiek zamek, który widziałeś, i węższa niż jakakolwiek wieża. Jakby ktoś miał cały materiał na fortecę, a zamiast bastionu zbudował iglicę. %randombrother% mruży oczy, patrząc w górę.%SPEECH_ON%Jakby ciągnęła się bez końca, panie. Prawie aż do chmur.%SPEECH_OFF%Wchodzisz z mapą i kilkoma ludźmi. W środku znajdujesz szklaną kulę spoczywającą na wydrążonym pulpicie. W środku bańki są pylące szczątki. Być może ostatni ślad magii, nie wiesz. Twoja intuicja podpowiada, że ten, kto mieszkał w tej smukłej kryjówce, nie zawsze korzystał ze schodów. Ale ty musisz. Wspięcie się jest brutalne i długie. Na szczycie znajdujesz kolejną bańkę, tym razem poszarpaną i rozbitą, a pod szkłem szkielet. W pobliżu leży złamany kostur. Kręcisz głową i kierujesz się do blank. Widoki są tak odległe, że sam świat zdaje się zakrzywiać na horyzoncie, niewątpliwie dziwna sztuczka oka. Rysujesz geografię na mapie, odpoczywasz pięć minut, po czym schodzisz z powrotem na dół.\n\nGdy docierasz na dół, szkielet jest tam wraz ze swoim kosturem, a rozbita bańka spoczywa na pulpicie. Cała grupa ludzi wybiega przez drzwi, a ty pędzisz im po piętach. Oglądając się, widzisz, jak brama iglicy powoli się zamyka z potężnym metalicznym szczękiem.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, at least we got a lay of the land.",
+					Text = "Cóż, przynajmniej mamy rozeznanie w terenie.",
 					function getResult( _event )
 					{
 						local radius = 1900.0;

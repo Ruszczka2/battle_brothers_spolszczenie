@@ -6,18 +6,18 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.ancient_temple_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{Only half of the temple\'s entrance is visible, the rest long since sunk into the earth as though unsure whether to be coffin or mausoleum. Along a visible frieze you can see a stony relief of tables being thrown and monied men running from what looks like an armored skeleton with a whip. A few of the mercenaries seem uncomfortable with the idea of going in, but you\'ve the notion that others have felt that way as well and have thus left the place unmolested.\n\n You take out a torch and enter with a sellsword\'s spirit and robber\'s resolve. After gathering supplies, you crouch and enter the temple by slinging your legs over the earth and jumping into the steps below. The clap of your boots snickers into the marbled halls and you wave the torch before you as if to watch the echoes go. Looking back, the light between the shelf of earth and the temple top silhouetting your company as though they were a throng of sextons satisfied at their work. %volunteer% shakes his head and says he\'s coming with. The rest of the company mutually agrees to keep watch.}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Tylko połowa wejścia do świątyni jest widoczna, reszta dawno już osunęła się w ziemię, jakby niepewna, czy ma być trumną, czy mauzoleum. Na widocznym fryzie widać kamienny relief stołów przewracanych i bogatych mężczyzn uciekających przed czymś, co wygląda jak opancerzony szkielet z biczem. Kilku najemników czuje się nieswojo na myśl o wejściu, ale masz wrażenie, że inni też tak czuli i dlatego zostawili to miejsce nietknięte.\n\n Wyciągasz pochodnię i wchodzisz z duchem najemnika i determinacją rabusia. Po zebraniu zapasów kucasz i wchodzisz do świątyni, przerzucając nogi przez ziemię i skacząc na schody poniżej. Klapnięcie twoich butów chichocze w marmurowych salach, a ty machasz pochodnią przed sobą, jakbyś chciał widzieć, jak biegną echa. Oglądając się, widzisz światło między półką ziemi a szczytem świątyni, które tworzy sylwetki twojej kompanii, jakby byli gromadą kościelnych zadowolonych z pracy. %volunteer% kręci głową i mówi, że idzie z tobą. Reszta kompanii zgodnie decyduje się trzymać wartę.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll go in.",
+					Text = "Wejdziemy.",
 					function getResult( _event )
 					{
 						return "B";
@@ -25,7 +25,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Forget those ruins, we\'re moving on.",
+					Text = "Zapomnij o tych ruinach, ruszamy dalej.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -46,13 +46,13 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{The sides of the halls are blanketed in military mosaics so large they\'re more fit to a whole campaign than any single battle. One parcel in particular stretches seemingly forever down the hall, a scene of armored men running roughshod over what looks like a barbarian horde so thick in number they lose humanity and begin to look indiscernible from bugs. Your torch bulbs and dims in the dark, the light bringing an artist\'s battlefield to an orangish life and in the corners you find depictions of righteous torture and outrage. Between the lockstep forces and the disassembled mob, it looks like order and chaos have come to clash, and while order is surely set to win, it is chaos itself which is driving the way to victory.\n\n %volunteer% whistles. You look to see his torch flaring in the distance like an ignis fatuus. You run over to find him holding a vial with a strange liquid inside. The sellsword swings his torch to an alcove in the wall. A marbled post hold the center and there\'s a throng of skeletons at its base.%SPEECH_ON%I found the vial on the pedestal there. And I see two more like it yonder, but they\'re behind gates.%SPEECH_OFF%You ask the sellsword why he didn\'t tell you about the bodies. He shrugs.%SPEECH_ON%They ain\'t breathing, then I ain\'t caring. You wanna make a try for the other two flasks or no?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Ściany korytarzy pokrywają wojenne mozaiki tak wielkie, że pasują raczej do całej kampanii niż do jednej bitwy. Jeden fragment w szczególności ciągnie się pozornie w nieskończoność, przedstawiając opancerzonych ludzi tratowanych przez to, co wygląda na barbarzyńską hordę tak liczną, że traci człowieczeństwo i zaczyna przypominać nie do odróżnienia owady. Twoja pochodnia przygasa i rozbłyska w ciemności, a światło ożywia pole bitwy w pomarańczowym blasku; w kątach znajdujesz przedstawienia sprawiedliwych tortur i oburzenia. Między zwartymi szeregiem a rozproszoną tłuszczą wygląda to tak, jakby porządek i chaos starły się ze sobą, i choć porządek zapewne zwycięży, to właśnie chaos wytycza drogę do zwycięstwa.\n\n %volunteer% gwiżdże. Patrzysz i widzisz, jak jego pochodnia płonie w oddali niczym ignis fatuus. Podbiegasz, by zastać go z fiolką dziwnej cieczy w dłoni. Najemnik kieruje pochodnię na wnękę w ścianie. Pośrodku stoi marmurowy słup, a u jego podstawy leży gromada szkieletów.%SPEECH_ON%Znalazłem fiolkę na tamtym postumencie. I widzę jeszcze dwie takie dalej, ale są za kratami.%SPEECH_OFF%Pytasz najemnika, czemu nie powiedział o ciałach. Wzrusza ramionami.%SPEECH_ON%Nie oddychają, to mnie nie obchodzą. Chcesz spróbować po te dwie fiolki czy nie?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s do it.",
+					Text = "Zróbmy to.",
 					function getResult( _event )
 					{
 						return "C";
@@ -70,20 +70,20 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{You find the next vial set behind a chest-high gate. The flask itself is grasped by the stone claw of a wingless gargoyle hanging down from the ceiling. There are a few glyphs on a slab in front of the gate, but the words are ancient and even if they weren\'t you\'re not sure how well you\'d be able to read them anyway. Suddenly, a voice booms overhead.%SPEECH_ON%A flock of birds are in a field when a hunter comes along. The hunter draws an arrow and yells out as though in pain. A few birds fly up. The hunter kills them. More birds fly up, the hunter kills them just as well and he begins to cry as he collects their bodies. More birds fly at the sound of him. The hunter\'s crying and killing. He can hardly nock arrows fast enough and he has to pause to wipe his eyes. One bird turns to his friend and says he should go console the man. What does the bird\'s friend say in return?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Znajdujesz kolejną fiolkę za kratą sięgającą do piersi. Sam flakon trzyma kamienny szpon bezskrzydłego gargulca zwisającego z sufitu. Na płycie przed kratą są jakieś glify, ale słowa są starożytne, a nawet gdyby nie były, nie masz pewności, czy potrafiłbyś je dobrze odczytać. Nagle nad głową rozlega się głos.%SPEECH_ON%Stado ptaków jest na polu, gdy pojawia się myśliwy. Myśliwy naciąga strzałę i krzyczy, jakby go bolało. Kilka ptaków wzlatuje. Myśliwy je zabija. Więcej ptaków wzlatuje, myśliwy zabija je równie dobrze i zaczyna płakać, zbierając ich ciała. Więcej ptaków leci na dźwięk jego głosu. Myśliwy płacze i zabija. Ledwo nadąża z zakładaniem strzał i musi przystanąć, by otrzeć oczy. Jeden ptak zwraca się do przyjaciela i mówi, że powinien pocieszyć człowieka. Co odpowiada przyjaciel ptaka?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nevermind his tears, watch his hands!",
+					Text = "Nieważne jego łzy, patrz na jego ręce!",
 					function getResult( _event )
 					{
 						return "D";
@@ -91,7 +91,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "From the brink a broken man must be saved.",
+					Text = "Z krawędzi trzeba ocalić złamanego człowieka.",
 					function getResult( _event )
 					{
 						return "D";
@@ -99,7 +99,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Chirp. Chirp chirp chirp?",
+					Text = "Ćwir. Ćwir ćwir ćwir?",
 					function getResult( _event )
 					{
 						return "D";
@@ -107,7 +107,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "What?",
+					Text = "Co?",
 					function getResult( _event )
 					{
 						return "D";
@@ -123,13 +123,13 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{The voice is silent for a moment, then returns.%SPEECH_ON%Correct!%SPEECH_OFF%Jolting with ancient engineering, the gate slides down and the gargoyle lowers within arm\'s reach, the vial\'s rigid guardian staring with stoic aplomb. You grab the vial and hold it close as though the monstrous stonework might come alive to take it back. You wave your torch around and demand to know who is speaking. The voice laughs, but that is all. %volunteer% looks at you and shrugs.%SPEECH_ON%Well, we got the treasure did we not? No harm in trying for another.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Głos milknie na chwilę, po czym wraca.%SPEECH_ON%Dobrze!%SPEECH_OFF%Szarpnięta pradawną mechaniką krata zsuwa się w dół, a gargulec opuszcza się na długość ramienia, sztywny strażnik fiolki patrzy ze stoickim spokojem. Chwytasz fiolkę i przyciskasz ją do siebie, jakby potworne kamienne dzieło miało ożyć i odebrać ją z powrotem. Kręcisz pochodnią i żądasz, by ujawnił się mówiący. Głos się śmieje, i to wszystko. %volunteer% patrzy na ciebie i wzrusza ramionami.%SPEECH_ON%No cóż, mamy skarb, prawda? Nie zaszkodzi spróbować po następną.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Might as well see.",
+					Text = "Możemy spróbować.",
 					function getResult( _event )
 					{
 						return "G";
@@ -137,7 +137,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Seems dangerous. Let\'s get out now.",
+					Text = "Wygląda niebezpiecznie. Wyjdźmy teraz.",
 					function getResult( _event )
 					{
 						return "F";
@@ -155,20 +155,20 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{You shake your head no. The first vial was circumstance, and probably the end result of another robber\'s failure. You were lucky. The second vial comes attached with a voice that asks you nonsensical shite. That\'s enough. You order %volunteer% out of the temple and you quickly depart with the two vials and the common sense to find happiness in that alone.\n\n Outside, you find the %companyname% kicking and poking at a corpse still freshly leaking. They say the man came running out of the temple while you were down there. One mercenary produces a scrap of paper. Drawings on it depict the vials, and they show the liquids expunging wiedergangers like molten metal poured on an ant. %volunteer% laughs.%SPEECH_ON%Well I guess that explains what these are for.%SPEECH_OFF%Nodding, you ask if the dead fella had anything else on him. Another sellsword shrugs.%SPEECH_ON%He walked up out where you went in. He said \'an armed man, a steel companion, for you I have a riddle\', and then I cut him down. He seemed a dangerous sort.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Kręcisz głową. Pierwsza fiolka to był przypadek, zapewne końcowy skutek czyjejś nieudanej grabieży. Miałeś szczęście. Druga fiolka ma głos, który zadaje bezsensowne bzdury. Wystarczy. Każesz %volunteer% wyjść ze świątyni i szybko odchodzisz z dwiema fiolkami i zdrowym rozsądkiem, by zadowolić się tylko tym.\n\n Na zewnątrz zastajesz %companyname% kopiących i trącających zwłoki, z których wciąż świeżo sączy się krew. Mówią, że człowiek wybiegł ze świątyni, gdy byłeś na dole. Jeden z najemników wyciąga skrawek papieru. Rysunki przedstawiają fiolki i pokazują, jak płyny wypalają wiedergangery jak roztopiony metal wlany na mrówkę. %volunteer% śmieje się.%SPEECH_ON%No to już wiadomo, do czego to służy.%SPEECH_OFF%Kiwasz głową i pytasz, czy ten trup miał przy sobie coś jeszcze. Inny najemnik wzrusza ramionami.%SPEECH_ON%Wyszedł tam, gdzie wszedłeś. Powiedział \'uzbrojony człowiek, stalowy towarzysz, dla ciebie mam zagadkę\', a potem go ściąłem. Wyglądał na groźnego.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Probably the best way to answer a riddle yet.",
+					Text = "To chyba najlepszy sposób na odpowiedź na zagadkę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -184,13 +184,13 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{The last vial is behind another gate, an unsettling one to look at just by an architectural standpoint. There are not mere stone bars here, but twisted iron spires scarred with scoria and slag, and the gate is not at chest level, but at your shins. The vial itself is on a further rise, meaning you\'d have to reach under the wall and then up again to get it. The voice returns.%SPEECH_ON%From me all comes to being, from me all shall be in the end. When man crosses the earth, I follow in his footsteps.%SPEECH_OFF%You stand in the silence and look over at %volunteer%. He shrugs.}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Ostatnia fiolka jest za kolejną kratą, niepokojącą już od strony architektonicznej. Nie ma tu zwykłych kamiennych prętów, lecz skręcone żelazne kolce poorane żużlem i szlaką, a krata nie sięga do piersi, tylko do łydek. Sama fiolka jest wyżej, co oznacza, że trzeba by sięgnąć pod ścianą, a potem w górę, by ją zdobyć. Głos powraca.%SPEECH_ON%Ze mnie wszystko powstaje, do mnie wszystko w końcu wróci. Gdy człowiek stąpa po ziemi, podążam za jego śladami.%SPEECH_OFF%Stoisz w ciszy i patrzysz na %volunteer%. Wzrusza ramionami.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Dust.",
+					Text = "Proch.",
 					function getResult( _event )
 					{
 						return "H";
@@ -198,7 +198,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Go fark yourself!",
+					Text = "Idź się farkuj!",
 					function getResult( _event )
 					{
 						return "I";
@@ -206,7 +206,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Help me kick in that gate, %volunteer%!",
+					Text = "Pomóż mi wyważyć tę kratę, %volunteer%!",
 					function getResult( _event )
 					{
 						return "J";
@@ -222,13 +222,13 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{As soon as the word leaves your lips the gate jolts up. You pensively stare at the remaining gap. %volunteer% crouches down and slings his arm under the gateway\'s top and gets up at the vial. His fingers scrape its glass while the gate\'s spires rattle in their catches like a bear reluctantly letting someone brush its teeth. The man finally pinches the vial between two fingers and scissor-flips it into the safe embrace of his palm. He stands up and hands it over.%SPEECH_ON%Simple enough, eh?%SPEECH_OFF%You nod but then turn around with your torch and yell out, demanding to know who was talking. There is no answer. A brief search in the darkness turns up no hidey-holes or dugouts, but you do find scraps and notes with drawings on them. The pages seem to indicate the vials are capable of killing wiedergangers with but a single touch of the liquid within each flask. There is also a sticky paper with a crudely drawn woman on it. Whoever was here, you don\'t care. You take the vials back out and return to the %companyname%. They draw swords at the sound of you, then sheepishly sheathe them once they see your face.%SPEECH_ON%Sorry captain, thought ya a mite dead. And walking. A walking dead man.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Gdy tylko słowo schodzi z twoich ust, krata podskakuje w górę. W zamyśleniu wpatrujesz się w pozostałą szczelinę. %volunteer% kuca i wsadza ramię pod górną część kraty, po czym sięga po fiolkę. Jego palce skrobią po szkle, a kolce kraty dzwonią w zaczepach niczym niedźwiedź niechętnie pozwalający komuś wyszczotkować zęby. Mężczyzna w końcu ściska fiolkę dwoma palcami i nożycowym ruchem przerzuca ją w bezpieczny chwyt dłoni. Wstaje i podaje ci ją.%SPEECH_ON%Proste, co?%SPEECH_OFF%Kiwasz głową, po czym obracasz się z pochodnią i krzyczysz, domagając się, by ujawnił się mówiący. Brak odpowiedzi. Krótkie przeszukanie ciemności nie znajduje kryjówek ani nor, ale znajdujesz skrawki i notatki z rysunkami. Strony zdają się wskazywać, że fiolki potrafią zabić wiedergangery już samym dotknięciem płynu w każdej z nich. Jest też lepki papier z prymitywnie narysowaną kobietą. Ktokolwiek tu był, nie obchodzi cię to. Zabierasz fiolki i wracasz do %companyname%. Na dźwięk twoich kroków dobywają mieczy, a potem zawstydzeni chowają je, gdy widzą twoją twarz.%SPEECH_ON%Przepraszam kapitanie, myśleliśmy, żeś trochę martwy. I chodzący. Chodzący trup.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, we got vials for just that problem now.",
+					Text = "No cóż, mamy teraz fiolki na ten problem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -246,20 +246,20 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{As soon as the word leaves your lips the gate jolts up. You pensively stare at the remaining gap. %volunteer% crouches down and slings his arm under the gateway\'s top and gets up at the vial. His fingers scrape its glass while the gate\'s spires rattle in their catches. The voice suddenly booms back in.%SPEECH_ON%G-go fark myself? How about fark you, uh, pal!%SPEECH_OFF%With that, the gate\'s catch fails and its tips sink down and spear %volunteer%\'s arm. The man yells out and you drop to your knees and yank the gate back up. It\'s heavier than expected and when you let go it slams with unnerving finality, a strip of the sellsword\'s arm here, a gush of his veins there. You wrap the wound and help the man toward the exit, all the while waving the torch around to ward off any would be ambush. However, while heading out, you pause and look at the skeleton\'s you found beside the first flask. You take a drop from the vial and touch it to your fingertips. No response. You then put your finger on one of the bones and it sizzles and smokes. %volunteer% laughs.%SPEECH_ON%That\'s why you\'re captain, sir. Intuition like that can take you far!%SPEECH_OFF%You never hear the mysterious voice again and, not wanting to sound insane, make no reference of the riddler to the %companyname%.\n\n %volunteer%\'s wounds won\'t be the end of him. Tis but a small price to pay for the ancient vials.}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Gdy tylko słowo schodzi z twoich ust, krata podskakuje w górę. W zamyśleniu wpatrujesz się w pozostałą szczelinę. %volunteer% kuca i wsadza ramię pod górną część kraty, po czym sięga po fiolkę. Jego palce skrobią po szkle, a kolce kraty dzwonią w zaczepach. Głos nagle rozlega się z powrotem.%SPEECH_ON%M-mam się farkować? A może to ty się farkuj, hę, kolego!%SPEECH_OFF%W tej chwili zatrzask kraty puszcza, a jej kolce opadają i przebijają ramię %volunteer%. Mężczyzna krzyczy, a ty padając na kolana, podrywasz kratę w górę. Jest cięższa, niż się spodziewałeś, i gdy puszczasz, trzaska z niepokojącą ostatecznością, tu pasek z ramienia najemnika, tam strużka z żył. Owijasz ranę i pomagasz mężczyźnie kierować się do wyjścia, przez cały czas machając pochodnią, by odpędzić ewentualną zasadzkę. Jednak wychodząc, zatrzymujesz się i patrzysz na szkielety znalezione przy pierwszej fiolce. Bierzesz kroplę z fiolki i dotykasz nią opuszków palców. Brak reakcji. Potem przykładasz palec do jednej z kości i ta syczy oraz dymi. %volunteer% śmieje się.%SPEECH_ON%Dlatego jesteś kapitanem, panie. Taka intuicja może cię daleko zaprowadzić!%SPEECH_OFF%Nigdy więcej nie słyszysz tajemniczego głosu i, nie chcąc brzmieć jak szaleniec, nie wspominasz o zagadkowiczu przed %companyname%.\n\n Rany %volunteer%a nie będą jego końcem. To tylko niewielka cena za pradawne fiolki.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad someone else paid that price, though.",
+					Text = "Dobrze, że ktoś inny zapłacił tę cenę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -280,9 +280,9 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Volunteer.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Volunteer.getName() + " doznaje " + injury.getNameOnly()
 				});
-				_event.m.Volunteer.worsenMood(1.0, "Got injured navigating an ancient mausoleum");
+				_event.m.Volunteer.worsenMood(1.0, "Został ranny podczas przemierzania starożytnego mauzoleum");
 				this.World.Assets.getStash().makeEmptySlots(1);
 				local item;
 				item = this.new("scripts/items/tools/holy_water_item");
@@ -290,20 +290,20 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "J",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{You\'ve had enough of this shit. If the voice is that of an ancient or that of some jester, you might as well find out fully. You take a step back and smash the gate with your boot. The rails crank into chevrons at the first strike, and snap apart on the second. Briefly, and rather squeakily, the voice returns.%SPEECH_ON%H-hey! You can\'t do that!%SPEECH_OFF%Clearing out the rusted pieces and the sharp spires, you crouch to look at the vial. Just then you see a man jumping down into the vial\'s tiny room. He lands like a baby deer falling off a cliff and knocks the flask from its hold. You watch it tumble to the floor with a pitiful, glassy crash. You grab the man by his foot and drag him out through the spines of the gate and all. He holds shaking hands before himself as %volunteer% presses a sword against his throat.%SPEECH_ON%I-I-I didn\'t mean nothing by nothing. I meant nothing at all. Just nothing.%SPEECH_OFF%You ask who he is. You ask if he killed those men at the first vial.%SPEECH_ON%M\'name\'s %idiot% a-a-and them there fellas ain\'t no skellies. They the walking dead, and then they sniffed that there flask and went down like drunks. Look, sir, I\'d not meant anything by nothin\'! Just having a bit of fun, that\'s all. I-I\'ll do anything for a reprieve! Well, almost anything.%SPEECH_OFF%He looks worried. You look at %volunteer% who shrugs.}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Masz dość tego gówna. Czy głos należy do pradawnego, czy do jakiegoś błazna, równie dobrze możesz to w pełni sprawdzić. Robisz krok w tył i rozbijasz kratę butem. Pręty wykręcają się w jodełki przy pierwszym uderzeniu, a przy drugim pękają. Na krótko, i dość piskliwie, głos wraca.%SPEECH_ON%H-hej! Nie możesz tego zrobić!%SPEECH_OFF%Usuwając zardzewiałe kawałki i ostre kolce, kucasz, by spojrzeć na fiolkę. Wtedy dostrzegasz mężczyznę skaczącego do małej komory fiolki. Ląduje jak koźlę spadające z urwiska i strąca flakon z uchwytu. Patrzysz, jak tłucze się o podłogę z żałosnym, szklistym trzaskiem. Chwytasz mężczyznę za stopę i wyciągasz go przez kolce kraty. Trzyma drżące ręce przed sobą, gdy %volunteer% dociska miecz do jego gardła.%SPEECH_ON%J-ja-ja nic nie chciałem przez nic. Wcale nic. Tylko nic.%SPEECH_OFF%Pytasz, kim jest. Pytasz, czy zabił tych ludzi przy pierwszej fiolce.%SPEECH_ON%M-mam na imię %idiot% i-i-i tamci to nie żadne szkielety. To żywe trupy, a potem powąchali tę tam fiolkę i padli jak pijacy. Proszę pana, ja nic nie chciałem przez nic! Tylko trochę zabawy, ot co. J-ja zrobię wszystko za darowanie życia! No, prawie wszystko.%SPEECH_OFF%Wygląda na zmartwionego. Patrzysz na %volunteer%, który wzrusza ramionami.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well, fine. You can join us.",
+					Text = "No dobrze. Możesz do nas dołączyć.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -312,7 +312,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No, that\'s not happening.",
+					Text = "Nie, nie ma mowy.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -352,13 +352,13 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "K",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{The man\'s eyes gleam in the dark and each glance is like an ember scattered.%SPEECH_ON%Ya mean it? I can join ya? Alright!%SPEECH_OFF%He slowly gets to his feet as though quick action might lead to even quicker reneging. He puts a hand out, which you do not shake.%SPEECH_ON%My name\'s %idiot%. I\'ve got half a brain, rest is wood and pulp. I\'m kindling, of course. Kidding. Kindling. Get it?%SPEECH_OFF%You look at %volunteer% who stabs the man in the chest. The idiot\'s face goes tense as he looks down at the sword impaling his heart.%SPEECH_ON%Hey. I think you killed me.%SPEECH_OFF%%volunteer% nods.%SPEECH_ON%Aye. I did. You got seconds. Speech?%SPEECH_OFF%The riddler thinks briefly.%SPEECH_ON%Well, I didn\'t prepare one, but... since... ya... asked...%SPEECH_OFF%He dies on the word and the blade. The sellsword cleans the blood and picks through the body, finding only musty rat bones in his pockets. When he lets the corpse go it clunks the tile rather hollowly. You crouch and feel the man\'s skull and find he actually wasn\'t kidding, its half made of wood! You look at %volunteer% who shrugs.%SPEECH_ON%He could have shat gold for all I care, I ain\'t putting up with his mouth. Besides, look at his eyes! That fool was blind as a bat.%SPEECH_OFF%The riddler\'s eyes are a blank grey. Who knows how long he spent in this temple.}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Oczy mężczyzny lśnią w ciemności, a każde spojrzenie jest jak rozsypany żar.%SPEECH_ON%Naprawdę? Mogę do was dołączyć? Dobra!%SPEECH_OFF%Powoli podnosi się na nogi, jakby szybki ruch mógł doprowadzić do równie szybkiej zmiany zdania. Wyciąga rękę, której nie ściskasz.%SPEECH_ON%Mam na imię %idiot%. Mam pół mózgu, reszta to drewno i masa. Jestem rozpałką, rzecz jasna. Żartuję. Rozpałką. Rozumiesz?%SPEECH_OFF%Patrzysz na %volunteer%, który wbija mężczyźnie miecz w pierś. Idiota napina twarz, gdy patrzy na ostrze przebijające mu serce.%SPEECH_ON%Hej. Chyba mnie zabiłeś.%SPEECH_OFF%%volunteer% kiwa głową.%SPEECH_ON%Ano. Zabiłem. Masz chwile. Przemowa?%SPEECH_OFF%Zagadkowicz krótko się zastanawia.%SPEECH_ON%Cóż, nie przygotowałem, ale... skoro... pytasz...%SPEECH_OFF%Umiera na słowie i na ostrzu. Najemnik czyści krew i przeszukuje ciało, znajdując w kieszeniach tylko stęchłe kości szczurów. Gdy puszcza zwłoki, te głucho stukają o płytki. Kucasz i dotykasz czaszki mężczyzny, odkrywając, że rzeczywiście nie żartował, połowa jest z drewna! Patrzysz na %volunteer%, który wzrusza ramionami.%SPEECH_ON%Mógłby srać złotem, a i tak nie znosiłbym jego gadki. Poza tym, spójrz na jego oczy! Ten głupiec był ślepy jak nietoperz.%SPEECH_OFF%Oczy zagadkowicza są puste i szare. Kto wie, jak długo spędził w tej świątyni.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Ah well. Two of the vials are ours.",
+					Text = "No cóż. Dwie fiolki są nasze.",
 					function getResult( _event )
 					{
 						return 0;
@@ -374,13 +374,13 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "L",
-			Text = "[img]gfx/ui/events/event_111.png[/img]{You\'ve no time for the idiot. You let him go and he runs off and you listen to his footsteps snickering through the dark like the flaps of a bat through a familiar cave. It\'s not long until you hear him making an exit, and no sooner does he get that far does the %companyname% cut him down in a series of hollers and one short-lived scream. By the time you surface you find the sellswords kicking the idiot\'s corpse and robbing anything worth having, which is mostly a pile of poorly written riddles.\n\n %volunteer% laughs and puts the seemingly magical flasks into the inventory. You order the men to get ready to head out again.}",
+			Text = "[img]gfx/ui/events/event_111.png[/img]{Nie masz czasu dla idioty. Pozwalasz mu odejść, a on ucieka, a ty słyszysz jego kroki chichoczące w ciemności jak trzepot nietoperza w znajomej jaskini. Niedługo potem słyszysz, że wychodzi, i ledwie dociera tak daleko, %companyname% zabija go wśród serii wrzasków i jednego krótkiego krzyku. Gdy wychodzisz na powierzchnię, zastajesz najemników kopiących ciało idioty i rabujących wszystko, co warto zabrać, a to głównie kupa źle napisanych zagadek.\n\n %volunteer% śmieje się i wkłada pozornie magiczne fiolki do ekwipunku. Każesz ludziom szykować się do dalszej drogi.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Still a successful go, all things considered.",
+					Text = "Mimo wszystko wyprawa udana.",
 					function getResult( _event )
 					{
 						return 0;

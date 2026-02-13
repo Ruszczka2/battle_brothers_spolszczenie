@@ -5,18 +5,18 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.golden_goose";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_125.png[/img]{The ship is wrecked amongst the trees some of which have long since started to grow through it. As far as you\'re aware, there is neither sea nor river for miles. %observer% walks up and halts at the very sight.%SPEECH_ON%By the old gods, is that a ship?%SPEECH_OFF%You sigh and tell the company to stay here while you and the very observant sellsword go take a look.}",
+			Text = "[img]gfx/ui/events/event_125.png[/img]{Wrak statku leży pośród drzew, z których część dawno już zaczęła przez niego przerastać. Z tego co wiesz, w promieniu wielu mil nie ma ani morza, ani rzeki. %observer% podchodzi i zatrzymuje się na sam widok.%SPEECH_ON%Na starych bogów, czy to statek?%SPEECH_OFF%Wzdychasz i każesz kompanii zostać tutaj, podczas gdy ty i nad wyraz spostrzegawczy najemnik idziecie się przyjrzeć.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s see what secrets are inside.",
+					Text = "Zobaczmy, jakie sekrety są w środku.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s not worth investigating now.",
+					Text = "Nie warto teraz tego badać.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -45,13 +45,13 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_125.png[/img]{You step into the bowels of the ship. It\'s completely vacant save for a stump with an axehead chopped into it. %observer% looks at it.%SPEECH_ON%There\'s an axehead.%SPEECH_OFF%Nodding, you say there it is indeed. But the metal of it carries veins of a sort of golden hue. Getting closer to the stump, you can see embers flittering upward out of the wedge. %observer% taps your shoulder and you find him pointing into the dark of the ship.%SPEECH_ON%Skeleton. Dead one.%SPEECH_OFF%Just faintly can you see the pale bones. As you draw near, the clothing becomes apparent, and readily obvious as royal attire. There is a cracked ale horn in one hand and a molded loaf of bread in the other. His jacket is blown open and shredded by splinters. Upon closer inspection, some of the wood is embedded in his brainpan.}",
+			Text = "[img]gfx/ui/events/event_125.png[/img]{Wchodzisz do wnętrza statku. Jest zupełnie pusty, poza pniakiem z wbitym w niego toporem. %observer% przygląda się temu.%SPEECH_ON%Jest tu głowica topora.%SPEECH_OFF%Kiwając głową, mówisz, że owszem. Ale metal ma żyłki o złotawym odcieniu. Podchodząc bliżej pniaka, widzisz iskry unoszące się ku górze z klinu. %observer% dotyka twojego ramienia i widzisz, że wskazuje w ciemność statku.%SPEECH_ON%Szkielet. Martwy.%SPEECH_OFF%Zaledwie dostrzegasz blade kości. Gdy podchodzisz bliżej, widać ubranie, a nawet oczywiste królewskie szaty. W jednej dłoni ma pęknięty róg do piwa, w drugiej zeschnięty bochenek chleba. Jego kaftan jest rozerwany i poszarpany drzazgami. Przy bliższej inspekcji widać, że część drewna tkwi w jego czaszce.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Inspect the stump.",
+					Text = "Sprawdź pniak.",
 					function getResult( _event )
 					{
 						return "C";
@@ -59,7 +59,7 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Let\'s get out of here.",
+					Text = "Wynośmy się stąd.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -80,13 +80,13 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_125.png[/img]{Seeing as how the skeleton and his beer and bread ain\'t going anywhere, you leave it be. The axehead however draws your eye again. %observer% walks over to the stump and the glowing wedge. He tries to take it out. Finding no luck there, he angrily steps back and kicks it. The stump cracks in twain and the sellsword suddenly flies upside down and the axehead shoots through the ceiling and you can hear it clunk and clatter down the starboard. Debris and smoke drift lazily about. The sellsword gets up and pats himself off.%SPEECH_ON%What in all the hells was that?%SPEECH_OFF%You shush him and point. A little golden goose squats where the stump\'s base used to be. The sheen of its metal glows and swirls. You\'ve heard stories of a golden goose, but never thought they were anything beyond that!}",
+			Text = "[img]gfx/ui/events/event_125.png[/img]{Skoro szkielet i jego piwo z chlebem nigdzie się nie ruszają, zostawiasz to w spokoju. Jednak głowica topora znów przyciąga twój wzrok. %observer% podchodzi do pniaka i żarzącego się klina. Próbuje go wyciągnąć. Gdy mu się nie udaje, ze złością odsuwa się i kopie. Pniak pęka na dwoje, a najemnik nagle wylatuje do góry nogami, a głowica topora przelatuje przez sufit i słychać, jak tłucze się i grzechocze po prawej burcie. Odłamki i dym leniwie unoszą się w powietrzu. Najemnik wstaje i otrzepuje się.%SPEECH_ON%Co do wszystkich diabłów to było?%SPEECH_OFF%Uciskasz go gestem i wskazujesz. Tam, gdzie był korzeń pniaka, kuca mała złota gęś. Połysk jej metalu jarzy się i wiruje. Słyszałeś opowieści o złotej gęsi, ale nigdy nie sądziłeś, że to coś więcej niż bajki!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Is it real?",
+					Text = "To prawdziwe?",
 					function getResult( _event )
 					{
 						return "D";
@@ -102,13 +102,13 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_125.png[/img]{%observer% stumbles forward.%SPEECH_ON%Sir, what are you doing?%SPEECH_OFF%You wave him off and pick the golden goose up. Holding it in both hands, it feels oddly warm. And it isn\'t exploding or melting your face. You can feel its metal rippling ever so slightly against your fingers. It might even be growing? With the treasure safely huddled beneath your elbow, you wonder why the skeleton didn\'t fare better. %observer% walks up and touches the golden goose on the head, but quickly recoils. You ask if it burned him. The sellsword purses his lips.%SPEECH_ON%Really, sir? Was it not obvious?%SPEECH_OFF%He sticks his finger in his mouth. You tell him to not be so snappy with his commander or you\'ll throw the goose at him and see if it makes short work of him as it did the skeleton. The man shrugs.%SPEECH_ON%Oh look at the man chosen by a shiny bauble, put a blade beneath a wing so it can knight ye, or hells why not put it on yer head and call yerself king already?%SPEECH_OFF%You look down at the goose. A drop of red blood runs down its length, turns gold, and drops to the ground with a tiny plink. You pick it up and bite it. The gold smooshes satisfyingly in your teeth and you then throw it to %observer%. It does not burn him this time, and you realize you may have found the genuine Golden Goose from the tales!}",
+			Text = "[img]gfx/ui/events/event_125.png[/img]{%observer% potyka się do przodu.%SPEECH_ON%Panie, co robisz?%SPEECH_OFF%Odprawiasz go gestem i podnosisz złotą gęś. Trzymając ją obiema dłońmi, czujesz, że jest dziwnie ciepła. I nie wybucha ani nie topi ci twarzy. Czujesz, jak jej metal delikatnie faluje pod palcami. Może nawet rośnie? Z bezpiecznie przytulonym skarbem pod ramieniem zastanawiasz się, czemu szkieletowi poszło gorzej. %observer% podchodzi i dotyka złotej gęsi po głowie, ale szybko się cofa. Pytasz, czy go sparzyła. Najemnik zaciska usta.%SPEECH_ON%Naprawdę, panie? Czy to nie było oczywiste?%SPEECH_OFF%Wkłada palec do ust. Mówisz mu, by nie pyszczył do dowódcy, bo inaczej rzucisz w niego gęsią i sprawdzisz, czy zrobi z nim szybki porządek tak, jak zrobiła ze szkieletem. Mężczyzna wzrusza ramionami.%SPEECH_ON%O, spójrzcie na człeka wybranego przez świecidełko, włóż pod skrzydło miecz, niech cię pasuje na rycerza, a do diabłów, czemu nie położyć jej na głowie i od razu nazwać się królem?%SPEECH_OFF%Spoglądasz na gęś. Kropla czerwonej krwi spływa po jej długości, zamienia się w złoto i spada na ziemię z cichym plink. Podnosisz ją i gryziesz. Złoto rozgniata się przyjemnie w zębach, a potem rzucasz je do %observer%. Tym razem go nie parzy i uświadamiasz sobie, że być może znalazłeś prawdziwą Złotą Gęś z opowieści!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The tales tell true!",
+					Text = "Opowieści mówią prawdę!",
 					function getResult( _event )
 					{
 						return 0;
@@ -126,7 +126,7 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain the " + item.getName()
+					text = "Zyskujesz " + item.getName()
 				});
 			}
 

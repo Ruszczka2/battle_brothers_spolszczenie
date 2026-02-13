@@ -3,18 +3,18 @@ this.monolith_destroyed_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.monolith_destroyed";
-		this.m.Title = "After the battle";
+		this.m.Title = "Po bitwie";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_101.png[/img]{%SPEECH_START%It\'s disappointing.%SPEECH_OFF%%randombrother% says as he looks at the slain corpses. He snorts and spits.%SPEECH_ON%Don\'t think disappointing is the word for it, though. They\'re just lying there, bones and coats, like we\'d fought a closet. No flesh, no blood. It\'s unsatisfying. And knowing that, thinking it true, well that unnerves me.%SPEECH_OFF%You got nothing to say to such things other than there\'s a kernel of truth in the matter. If it weren\'t the issuances of its lust, why else the vigor for violence? Another sellsword calls you over, interrupting any solemn introspection.%SPEECH_ON%Sir, come have a look.%SPEECH_OFF%You head over and spot a skull sitting in the bed of pauldrons like an egg in the bosom of a well-endowed southerner. The rest of its body is battered and thrown to the winds as far as you can tell. What remains is a decadent slab of chest armor. It is covered in glyphs and treatments, fortunes and historical retellings, and is embroidered with red tassels and combs made of bristly hair. You touch the metal and the second you do the skull beside it powders and blows away. The mercenary seeing this shrugs rather sheepishly.%SPEECH_ON%If you got magical powers I won\'t tell no one.%SPEECH_OFF%You slug the sellsword in the shoulder and tell him to the load armor into the inventory for later allocation.}",
+			Text = "[img]gfx/ui/events/event_101.png[/img]{%SPEECH_START%To rozczarowujące.%SPEECH_OFF%%randombrother% mówi, patrząc na zabite trupy. Prycha i pluje.%SPEECH_ON%Tylko że rozczarowujące to nie jest właściwe słowo. Leżą tak, kości i płaszcze, jakbyśmy walczyli z szafą. Bez mięsa, bez krwi. To niesatysfakcjonujące. A świadomość tego, uznanie tego za prawdę, cóż, to mnie niepokoi.%SPEECH_OFF%Nie masz na to nic do powiedzenia poza tym, że jest w tym ziarno prawdy. Gdyby nie wykwity ich żądzy, skąd ten zapał do przemocy? Inny najemnik woła cię, przerywając wszelką poważną zadumę.%SPEECH_ON%Panie, proszę spojrzeć.%SPEECH_OFF%Podchodzisz i widzisz czaszkę leżącą na naramiennikach jak jajko w piersi hojnie obdarzonego południowca. Reszta ciała jest roztrzaskana i, jak sądzisz, rozwiana z wiatrem. To, co zostało, to zbytkowna płyta pancerza. Pokryta jest glifami i zdobieniami, wróżbami i historycznymi opowieściami, a także obszyta czerwonymi frędzlami i grzebieniami z szorstkich włosów. Dotykasz metalu i w tej samej chwili czaszka obok rozsypuje się w proch i rozwiewa. Najemnik, widząc to, wzrusza ramionami z zakłopotaniem.%SPEECH_ON%Jeśli masz magiczne moce, nikomu nie powiem.%SPEECH_OFF%Dajesz najemnikowi kuksańca w ramię i każesz mu załadować zbroję do ekwipunku na późniejszy przydział.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I should take a closer look at that armor.",
+					Text = "Powinienem przyjrzeć się temu pancerzowi.",
 					function getResult( _event )
 					{
 						return "B";
@@ -29,13 +29,13 @@ this.monolith_destroyed_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_101.png[/img]{As the men pack up to leave, you hear a voice behind you.%SPEECH_ON%...never were...%SPEECH_OFF%You turn back and the world darkens in a shrouded tunnel, your men and their voices fading into the dark until all that remains is an elderly man and a light at the end of all that black, an unsteady flicker and a warble of flesh trying to hold it. You approach slowly, getting bearing on the speaker. It is a shrewd, elderly man, bent at the waist and bent again at the back, and his arms are thinner than a sword\'s hilt. You look back to see the world of dark had followed you forward, nothing behind but blackness. Looking forward again, the man is suddenly before you. He looks so similar, like someone you had seen in the past and yet had forgotten, perhaps someone you had seen in your childhood, a dying uncle glimpsed on your fourth winter and his last. He is holding the candlestick with the wax drooping over his knuckles and rolling down his wrist.%SPEECH_ON%You never were meant to be... never were... never were... never were meant to be, you, the one they call the False King.%SPEECH_OFF%You wake on the ground. A mercenaries are looking down at you with concerned stares.%SPEECH_ON%Uhh, you alright captain?%SPEECH_OFF%Getting up, you tell them that you were just fell into a quick nap. You look back at the Black Monolith and you can see yourself in the obelisk\'s reflection, and it is your reflection alone.}",
+			Text = "[img]gfx/ui/events/event_101.png[/img]{Gdy ludzie pakują się do drogi, słyszysz za sobą głos.%SPEECH_ON%...nigdy nie miałeś...%SPEECH_OFF%Odwracasz się, a świat ciemnieje w spowitym tunelu, twoi ludzie i ich głosy nikną w mroku, aż zostaje tylko starszy mężczyzna i światło na końcu tej czerni, chwiejny migot i drżenie ciała próbującego je utrzymać. Podchodzisz powoli, zyskując orientację co do mówiącego. To przenikliwy starzec, zgięty w pasie i jeszcze raz w plecach, a jego ramiona są cieńsze niż rękojeść miecza. Odwracasz się, by zobaczyć, że świat mroku podążył za tobą do przodu, za tobą nic poza czernią. Gdy znów spoglądasz w przód, mężczyzna nagle stoi tuż przed tobą. Wygląda tak znajomo, jak ktoś, kogo widziałeś w przeszłości, a jednak zapomniałeś, może ktoś z dzieciństwa, umierający wuj widziany podczas twojej czwartej zimy i jego ostatniej. Trzyma świecznik, a wosk zwisa z jego kostek i spływa po nadgarstku.%SPEECH_ON%Nigdy nie miałeś być... nigdy... nigdy... nigdy nie miałeś być, ty, którego nazywają Fałszywym Królem.%SPEECH_OFF%Budzisz się na ziemi. Najemnicy patrzą na ciebie z troską.%SPEECH_ON%Eee, wszystko w porządku, kapitanie?%SPEECH_OFF%Wstając, mówisz im, że po prostu uciąłeś sobie krótką drzemkę. Spoglądasz na Czarny Monolit i widzisz siebie w odbiciu obelisku, tylko twoje odbicie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'m alright.",
+					Text = "Wszystko w porządku.",
 					function getResult( _event )
 					{
 						return 0;
