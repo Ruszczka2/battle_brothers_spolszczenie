@@ -6,17 +6,17 @@ this.gladiators_vibes_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.gladiators_vibes";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_155.png[/img]{%gl1% watches %gl2% pluck at his eyebrows, using the sheen of his weapons blade for a mirror.%SPEECH_ON%Your back is looking thick and tight, %gl2%. Das it, mane.%SPEECH_OFF%The gladiator turns around and nods.%SPEECH_ON%Thanks, I use it to carry this company.%SPEECH_OFF% | %SPEECH_ON%Form check! Form check!%SPEECH_OFF%%gl1% is in mid-squat as he yells out. %gl2% rushes over and palms the gladiator\'s buttocks and yells \'go!\'. The man dips the squat far past ninety degrees.%SPEECH_ON%It\'s tight!%SPEECH_OFF%%gl2% confirms.%SPEECH_ON%How tight?%SPEECH_OFF%%gl2% takes a hand back, balls into a fist, and punches the man\'s ass. He then flails his hand back and forth like it touched a hot pan.%SPEECH_ON%Tighter than a Vizier\'s purse!%SPEECH_OFF%%gl1% finishes his squat and stands up and they chest bump.%SPEECH_ON%Your turn, man! Let\'s gooo!%SPEECH_OFF% | %SPEECH_ON%Hey. Look at this.%SPEECH_OFF%%gl1%\'s chest bounces, one boob at a time. You tell him \'nice boobs\' and move on, but he grabs you.%SPEECH_ON%They\'re not boobs, they\'re pecs. And they\'re beautiful. Hey. Say they\'re beautiful.%SPEECH_OFF%One tit bumps, and then the other, back and forth. Sighing, you say they\'re beautiful. %gl1% nods and wipes something from his eye.%SPEECH_ON%Thanks, captain.%SPEECH_OFF% | You find %gl1% bench pressing %gl2%, the latter reading from a scroll as he goes up and down.%SPEECH_ON%%randomcitystate% is said to have beautiful women.%SPEECH_OFF%He looks back at the man lifting him. %gl1% glances at you, then back to his workout.%SPEECH_ON%Ninety-eight. Ninety-nine. One hundred! Alright, flip over.%SPEECH_OFF%%gl2% rolls over, %gl1%\'s hands puttying into his chest and belly.%SPEECH_ON%Alright, one-hundred more reps.%SPEECH_OFF% | %gl1% holds up four fingers. %gl2% holds up six. Cocking his head, %gl1% laughs.%SPEECH_ON%In one night?%SPEECH_OFF%The other gladiator nods.%SPEECH_ON%Yessir. In one night.%SPEECH_OFF%%gl1% laughs and asks if they were all women. %gl2% hesitates.%SPEECH_ON%Well, there were a couple men there. But we didn\'t like, you know, touch or anything. We got close though, cause at one point he was down there, and I was positioned like this behind-%SPEECH_OFF%You walk over clapping, not in applause but to tell the gladiators to stay focused. You understand the roads can be long and boring, but this is getting ridiculous. | %gl1% flexes his biceps.%SPEECH_ON%I could snap a mule\'s neck with one arm.%SPEECH_OFF%Shaking his head, %gl2% asks why he\'s flexing both arms then. %gl1% cocks his head in return.%SPEECH_ON%Well obviously I plan to kill two mules at the same time, man.%SPEECH_OFF%You interrupt, telling the gladiators they won\'t be killing any animals until they complete the %companyname%\'s primary tasks which is only sometimes to kill animals. | %gl1% sits beside %gl2% and turns away. He says.%SPEECH_ON%Put your hand on my spine. Right between the shoulders.%SPEECH_OFF%The other gladiator obliges without question or curiosity. In turn, %gl1% flexes, trapping the man\'s hand between two masses of muscle.%SPEECH_ON%How do you like that power?%SPEECH_OFF%Again, without a hint of irony or incredulity, %gl2% obliges a response.%SPEECH_ON%It is awesome, man! I can hear my hand bones cracking!%SPEECH_OFF%You think to interrupt, but technically nobody is hurt... yet. You leave the gladiators to their, eh, proclivities. | %SPEECH_START%So I got her over the fruit cart like this and we\'re just having a grand old time when her father walks in. He stands all slackjawed and can hardly get a word out.%SPEECH_OFF%%gl1% nods.%SPEECH_ON%So I says to him, watch this. And I stand back and flex with both arms and slowly, ever so slowly, she lifts up off the ground.%SPEECH_OFF%%gl2% slaps the other gladiator in his glistening chest.%SPEECH_ON%You lie! That\'s a buncha lies!%SPEECH_OFF%The gladiator holds his hand up.%SPEECH_ON%By the light of the Gilder, and whatever other gods may deem to gawk at my body, it is the truth. My pole has power.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_155.png[/img]{%gl1% obserwuje, jak %gl2% skubie brwi, używając połysku ostrza jako lustra.%SPEECH_ON%Twoje plecy wyglądają masywnie i ciasno, %gl2%. O to chodzi, stary.%SPEECH_OFF%Gladiator odwraca się i przytakuje.%SPEECH_ON%Dzięki, używam ich do noszenia tej kompanii.%SPEECH_OFF% | %SPEECH_ON%Sprawdzenie formy! Sprawdzenie formy!%SPEECH_OFF%%gl1% jest w połowie przysiadu, gdy krzyczy. %gl2% podbiega, klepie gladiatora po pośladkach i woła: jazda! Mężczyzna schodzi w przysiad głęboko poniżej dziewięćdziesięciu stopni.%SPEECH_ON%Jest napięcie!%SPEECH_OFF%%gl2% potwierdza.%SPEECH_ON%Jakie napięcie?%SPEECH_OFF%%gl2% cofa dłoń, zaciska pięść i uderza go w tyłek. Potem macha dłonią, jakby dotknął rozgrzanej patelni.%SPEECH_ON%Twardszy niż sakiewka wezyra!%SPEECH_OFF%%gl1% kończy przysiad, wstaje, i zderzają się klatkami piersiowymi.%SPEECH_ON%Twoja kolej, stary! Jedziemy!%SPEECH_OFF% | %SPEECH_ON%Ej. Spójrz na to.%SPEECH_OFF%Klatka %gl1% podskakuje, jeden cycek na raz. Mówisz mu "ładne cycki" i idziesz dalej, ale on cię łapie.%SPEECH_ON%To nie cycki, to piersiowe. I są piękne. Ej. Powiedz, że są piękne.%SPEECH_OFF%Jeden cycek podskakuje, potem drugi, tam i z powrotem. Wzdychasz i mówisz, że są piękne. %gl1% kiwa głową i wyciera coś z oka.%SPEECH_ON%Dzięki, kapitanie.%SPEECH_OFF% | Zastajesz %gl1% wyciskającego na ławce %gl2%, ten drugi czyta zwój, gdy idzie w górę i w dół.%SPEECH_ON%%randomcitystate% podobno ma piękne kobiety.%SPEECH_OFF%Odwraca się do mężczyzny, który go podnosi. %gl1% zerka na ciebie, po czym wraca do ćwiczeń.%SPEECH_ON%Dziewięćdziesiąt osiem. Dziewięćdziesiąt dziewięć. Sto! Dobra, obracaj się.%SPEECH_OFF%%gl2% przewraca się, dłonie %gl1% ugniatają jego klatkę i brzuch.%SPEECH_ON%Dobra, sto powtórzeń więcej.%SPEECH_OFF% | %gl1% pokazuje cztery palce. %gl2% pokazuje sześć. Przechylając głowę, %gl1% śmieje się.%SPEECH_ON%W jedną noc?%SPEECH_OFF%Drugi gladiator przytakuje.%SPEECH_ON%Tak, panie. W jedną noc.%SPEECH_OFF%%gl1% śmieje się i pyta, czy to były same kobiety. %gl2% waha się.%SPEECH_ON%Cóż, było tam kilku mężczyzn. Ale nie, wiesz, nie dotykaliśmy się ani nic. Byliśmy blisko, bo w pewnym momencie on był tam, a ja stałem tak za-%SPEECH_OFF%Podchodzisz, klaszcząc, nie z aplauzu, lecz żeby kazać gladiatorom się skupić. Wiesz, że drogi bywają długie i nudne, ale to już robi się absurdalne. | %gl1% napina bicepsy.%SPEECH_ON%Mógłbym jednym ramieniem złamać kark muła.%SPEECH_OFF%%gl2% kręci głową i pyta, czemu w takim razie napina oba ramiona. %gl1% przechyla głowę w odpowiedzi.%SPEECH_ON%Bo oczywiście planuję zabić dwa muły naraz, stary.%SPEECH_OFF%Przerywasz, mówiąc gladiatorom, że nie będą zabijać żadnych zwierząt, dopóki nie wykonają głównych zadań %companyname%, a te tylko czasem polegają na zabijaniu zwierząt. | %gl1% siada obok %gl2% i odwraca się. Mówi.%SPEECH_ON%Połóż dłoń na moim kręgosłupie. Tuż między łopatkami.%SPEECH_OFF%Drugi gladiator robi to bez pytania i ciekawości. %gl1% napina się, zaciskając dłoń mężczyzny między dwiema masami mięśni.%SPEECH_ON%Jak ci się podoba taka siła?%SPEECH_OFF%Znów, bez śladu ironii czy niedowierzania, %gl2% odpowiada.%SPEECH_ON%To jest niesamowite, stary! Słyszę, jak trzeszczą mi kości dłoni!%SPEECH_OFF%Myślisz, żeby przerwać, ale technicznie rzecz biorąc nikt jeszcze nie ucierpiał... jeszcze. Zostawiasz gladiatorów ich, eee, skłonnościom. | %SPEECH_START%Więc ułożyłem ją tak na wozie z owocami i właśnie mieliśmy świetny czas, gdy wchodzi jej ojciec. Stoi z rozdziawioną gębą i ledwo może wydusić słowo.%SPEECH_OFF%%gl1% przytakuje.%SPEECH_ON%Więc mówię mu: patrz na to. I cofam się, napinam oba ramiona i powoli, bardzo powoli, ona unosi się nad ziemię.%SPEECH_OFF%%gl2% klepie drugiego gladiatora po lśniącej klatce.%SPEECH_ON%Łżesz! To stek kłamstw!%SPEECH_OFF%Gladiator unosi dłoń.%SPEECH_ON%Na światło Gildera, i jakiekolwiek inne bóstwa zechcą gapić się na moje ciało, to prawda. Mój kij ma moc.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good for you.",
+					Text = "No proszę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,7 +28,7 @@ this.gladiators_vibes_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Gladiator1.getImagePath());
 				this.Characters.push(_event.m.Gladiator2.getImagePath());
-				_event.m.Gladiator1.improveMood(1.0, "Feels strong and beautiful");
+				_event.m.Gladiator1.improveMood(1.0, "Czuje się silny i piękny");
 
 				if (_event.m.Gladiator1.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -39,7 +39,7 @@ this.gladiators_vibes_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Gladiator2.improveMood(1.0, "Feels strong and beautiful");
+				_event.m.Gladiator2.improveMood(1.0, "Czuje się silny i piękny");
 
 				if (_event.m.Gladiator2.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -54,13 +54,13 @@ this.gladiators_vibes_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_155.png[/img]{%gl1% bursts into your tent.%SPEECH_ON%Captain! Quick, %gl2% needs help!%SPEECH_OFF%You rush out of the tent and find %gl2% sitting before the campfire. He\'s practically shaking. %gl1% tells you the man had a nightmare.%SPEECH_ON%He dreamt that he was a man so scrawny he could hardly lift a basket of apples. Women spat at him. Children ran from him in fear. And he went to the arenas, except he had to sit in the stands!%SPEECH_OFF%%gl2% looks up sorrowfully.%SPEECH_ON%They weren\'t even good seats, captain. They weren\'t even good seats.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_155.png[/img]{%gl1% wpada do twojego namiotu.%SPEECH_ON%Kapitanie! Szybko, %gl2% potrzebuje pomocy!%SPEECH_OFF%Wybiegasz z namiotu i znajdujesz %gl2% siedzącego przy ognisku. Trzęsie się. %gl1% mówi, że mężczyzna miał koszmar.%SPEECH_ON%Śniło mu się, że jest tak chudy, iż ledwie unosi kosz jabłek. Kobiety na niego pluły. Dzieci uciekały w strachu. I poszedł na areny, tylko że musiał siedzieć na trybunach!%SPEECH_OFF%%gl2% spogląda smutno.%SPEECH_ON%To nawet nie były dobre miejsca, kapitanie. To nawet nie były dobre miejsca.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It was just a bad dream.",
+					Text = "To był tylko zły sen.",
 					function getResult( _event )
 					{
 						return 0;
@@ -72,7 +72,7 @@ this.gladiators_vibes_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Gladiator1.getImagePath());
 				this.Characters.push(_event.m.Gladiator2.getImagePath());
-				_event.m.Gladiator2.worsenMood(1.0, "Had a bad dream about not being strong and beautiful");
+				_event.m.Gladiator2.worsenMood(1.0, "Miał zły sen o tym, że nie jest silny i piękny");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Gladiator2.getMoodState()],

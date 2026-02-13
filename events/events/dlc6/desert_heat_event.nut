@@ -5,17 +5,17 @@ this.desert_heat_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.desert_heat";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_161.png[/img]{%heatbro% sags into the sands, one knee buckling, and as soon as it straightens back up the other buckles in turn. You look back just in time to watch as his eyes roll back in his head and he crumples. The company rushes to his help, getting him water and shade. He hacks and thrashes back to life, but the withering heat has already done its damage.}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{%heatbro% osuwa się w piasek, jedno kolano się ugina, a gdy tylko się prostuje, drugie ugina się w jego miejsce. Odwracasz się akurat na czas, by zobaczyć, jak przewraca oczami i osuwa się na ziemię. Kompania rusza na pomoc, daje mu wodę i cień. Kaszląc i szarpiąc się wraca do życia, ale wyniszczający upał już zdążył wyrządzić szkody.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Stay hydrated!",
+					Text = "Nawadniajcie się!",
 					function getResult( _event )
 					{
 						return 0;
@@ -27,11 +27,11 @@ this.desert_heat_event <- this.inherit("scripts/events/event", {
 			{
 				local effect = this.new("scripts/skills/effects_world/exhausted_effect");
 				_event.m.SomeGuy.getSkills().add(effect);
-				_event.m.SomeGuy.worsenMood(1.0, "Experienced a heat stroke");
+				_event.m.SomeGuy.worsenMood(1.0, "Doświadczył udaru cieplnego");
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.SomeGuy.getName() + " is exhausted"
+					text = _event.m.SomeGuy.getName() + " jest wyczerpany"
 				});
 				this.Characters.push(_event.m.SomeGuy.getImagePath());
 			}

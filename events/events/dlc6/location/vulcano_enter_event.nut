@@ -3,18 +3,18 @@ this.vulcano_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.vulcano_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_151.png[/img]{Empire\'s End. Metropolis of Ash. The Annihilation.\n\nWhatever its name, the ancient city is now a vast grey ruin. It sits beneath a mountain missing a peak, its once glorious shape obliterated in an enormous eruption. The explosion hit with such violence that shockwaves unfurled cobbled streets and sent the bricks showering over the city proper. Enormous granitic boulders cratered neighborhoods whole and boiling debris vaporized all in its way. The flow of lava came last, smoldering much of the city in a black sludge, the edges of which pillowed and toed in bulbous contours until it looked as though a cloud of black smoke had solidified. It is a horrid sight to behold, in part because the earthen rage also captured many victims in perpetuity: grey casts of ancient humans still stand to this day, posed in manners most lively like pairs shaking hands, one looking over a stove, another petting a dog.\n\nOf course, it is wholly within man\'s nature to see such relics of destruction and, distant as they are from its reality, flock to its remains, and vicariously revivify the violence through means of faith. Followers of the Gilder see it as a warning to not fall for profligacy and greed. Northerners see it as a clash between old gods, a rarity since the dawn of man. One faith or the other, both reside here in mutual respect for those whose lives were lost... respectful for now, at least.}",
+			Text = "[img]gfx/ui/events/event_151.png[/img]{Koniec Imperium. Metropolia Popiołu. Anihilacja.\n\nJak by tego nie nazwać, starożytne miasto jest dziś rozległą, szarą ruiną. Leży u stóp góry bez szczytu, jej niegdyś wspaniały kształt został zniszczony przez ogromną erupcję. Wybuch uderzył z taką siłą, że fale uderzeniowe rozrywały brukowane ulice i posyłały grad cegieł nad właściwe miasto. Ogromne granitowe głazy kraterowały całe dzielnice, a wrzące szczątki parowały wszystko na swojej drodze. Na końcu przyszła lawa, tląc znaczną część miasta w czarnej brei, której krawędzie puchły i wybrzuszały się, aż wyglądało to tak, jakby chmura czarnego dymu stężała. To straszliwy widok, po części dlatego, że ziemska furia uwięziła wielu ofiar na wieczność: szare odlewy dawnych ludzi stoją do dziś, zastygłe w żywych pozach - pary ściskające dłonie, ktoś pochylony nad piecem, ktoś inny głaszczący psa.\n\nOczywiście leży to w naturze człowieka, by widząc takie relikty zniszczenia i, choć odległe od jego codzienności, gromadzić się przy ich szczątkach i pośrednio ożywiać przemoc przez wiarę. Wyznawcy Gildera widzą w tym ostrzeżenie, by nie popaść w rozrzutność i chciwość. Północniacy widzą w tym starcie starych bogów, rzadkość od zarania dziejów. Jedna wiara czy druga, obie trwają tutaj we wzajemnym szacunku dla tych, którzy stracili życie... przynajmniej na razie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Our fate will lead us here again in time.",
+					Text = "Los w końcu znów nas tu przywiedzie.",
 					function getResult( _event )
 					{
 						return 0;

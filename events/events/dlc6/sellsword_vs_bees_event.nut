@@ -6,11 +6,11 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.sellsword_vs_bees";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{The desert is not home to much of anything beyond the sands. So it is rather particular when you come across a lone tree setting out by itself, and even more stranger that hanging from a branch is a fat beehive with a cloud of workers swarming around its bulbous shape. Even at some distance, you can see the golden ember of their honey glistening...}",
+			Text = "%terrainImage%{Pustynia nie jest domem dla niczego poza piaskami. Tym bardziej niezwykłe jest spotkać samotne drzewo stojące w oddali, a jeszcze dziwniejsze, że z gałęzi zwisa gruby ul, wokół którego krąży chmura robotnic otaczających jego bulwiasty kształt. Nawet z pewnej odległości widać złoty żar ich miodu...}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -18,7 +18,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Someone go fetch it!",
+					Text = "Niech ktoś to przyniesie!",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "Good" : "Fail";
@@ -29,7 +29,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "Looks like %wildmanfull% wants to go for it.",
+						Text = "Wygląda na to, że %wildmanfull% chce tego spróbować.",
 						function getResult( _event )
 						{
 							return "Wildman";
@@ -39,7 +39,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Let\'s go. Nothing good can come of this.",
+					Text = "Ruszajmy. Z tego nic dobrego nie będzie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -51,13 +51,13 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Good",
-			Text = "%terrainImage%{%chosen% confidently walks up toward the tree and the bees seem shunted away by his very presence. The noise of their fluttering thickens with angry vibrations, but otherwise they take no further offense. He carefully scoops some of the honey into a jar and then eases back and steps away. He returns to the company.%SPEECH_ON%Easy peasy beehive squeezy, lads.%SPEECH_OFF%}",
+			Text = "%terrainImage%{%chosen% podchodzi pewnie do drzewa, a pszczoły zdają się ustępować na samą jego obecność. Szum ich skrzydeł gęstnieje od gniewnych wibracji, lecz poza tym nie robią nic więcej. Ostrożnie nabiera trochę miodu do słoja, po czym cofa się i odchodzi. Wraca do kompanii.%SPEECH_ON%Bułka z miodem, chłopy.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Buzz all you want, this honey is ours!",
+					Text = "Buczcie ile chcecie, ten miód jest nasz!",
 					function getResult( _event )
 					{
 						return 0;
@@ -74,7 +74,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.75, "Enjoyed some honey in the desert");
+						bro.improveMood(0.75, "Zjadł trochę miodu na pustyni");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -91,13 +91,13 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Fail",
-			Text = "%terrainImage%{%chosen% laces his fingers and cracks the knuckles with a long stretch.%SPEECH_ON%Like stealing candy from a baby.%SPEECH_OFF%He walks up to the tree and stands beneath the hive. He poses and points up at it, laughs, then turns his hands up and - much to the shock of everyone - just grabs the entire beehive. The bees instantly swarm the sellsword and he drops the hive and sprints away, a cloud of angry buzzing chasing him down a sand dune. He rolls and rolls, his screams issuing out whenever he flies out of the sand, and then he lands at the bottom and a wash of sand covers him and spares him from further bee stings. You wait a while before retrieving him, lest the bees know your hand in this attempted thievery.}",
+			Text = "%terrainImage%{%chosen% splata palce i strzela kostkami, przeciągając się długo.%SPEECH_ON%Jak zabieranie cukierka dziecku.%SPEECH_OFF%Podchodzi do drzewa i staje pod ulem. Pozuje i wskazuje go, śmieje się, po czym wyciąga ręce i - ku szokowi wszystkich - po prostu chwyta cały ul. Pszczoły natychmiast obsiadają najemnika, ten upuszcza ul i pędzi, a chmura gniewnego bzyczenia goni go po wydmie. Turlika się i turlika, jego krzyki słychać za każdym razem, gdy wynurza się z piasku, aż w końcu ląduje na dole, a lawina piasku przykrywa go i chroni przed dalszymi użądleniami. Czekasz chwilę, zanim go wyciągniesz, żeby pszczoły nie kojarzyły cię z tą próbą kradzieży.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s not do that again.",
+					Text = "Nie róbmy tego więcej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -109,11 +109,11 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
 				_event.m.Dude.addHeavyInjury();
-				_event.m.Dude.worsenMood(2.0, "Was brutalized by bees");
+				_event.m.Dude.worsenMood(2.0, "Został poturbowany przez pszczoły");
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Dude.getName() + " suffers heavy wounds"
+					text = _event.m.Dude.getName() + " cierpi z powodu ciężkich ran"
 				});
 
 				if (_event.m.Dude.getMoodState() < this.Const.MoodState.Neutral)
@@ -129,13 +129,13 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Wildman",
-			Text = "%terrainImage%{You\'re sure %wildman% the Wildman has seen a hive or two in his time estranged to the forests. He grunts and points at the beehive and then at himself. You nod. He grunts again and goes up the sand dune to the tree while you watch from a safe distance. When he stands beneath the hive, he hoots again, cupping his hand over his mouth to make sure you hear him. He points at the beehive. You nod again and point aggressively at the hive. It\'s the only beehive for miles, what could possibly be so confusing about this? \n\n The Wildman turns toward the beehive. He cocks an arm back. That... that is not what you wanted to see. He sizes up the beehive, tongue out, eyes slimmed. You rush forward, yelling at him, but he\'s already honed in. He launches a fist and absolutely obliterates the bees. Honeycombs stickily flail around his wrist as though his hairy arm were an impromptu maypole. The Wildman casually walks back down the sand dune. As he nears, you see bees crawling all over his face and stinging away like the pissed off savages that they are, but he doesn\'t seem to even sense their presence. He holds out the crunchy remains of his honeyed demolition as though he held the heart of a ferocious beast.}",
+			Text = "%terrainImage%{Jesteś pewien, że %wildman% Dziki widział niejeden ul w czasach, gdy żył z dala od lasów. Warczy, wskazuje na ul, a potem na siebie. Kiwasz głową. Warczy znowu i idzie po wydmie do drzewa, a ty obserwujesz z bezpiecznej odległości. Gdy staje pod ulem, znów pohukuje, przykładając dłoń do ust, żebyś go usłyszał. Wskazuje na ul. Kiwasz głową i agresywnie wskazujesz na ul. To jedyny ul na wiele mil, co tu może być niejasne? \n\n Dziki odwraca się do ula. Odsuwa ramię. To... to nie jest to, co chciałeś zobaczyć. Mierzy się z ulem, język na wierzchu, oczy zmrużone. Ruszasz w jego stronę, krzycząc, ale on już jest skupiony. Wyprowadza cios i doszczętnie rozgniata pszczoły. Plastry miodu klejąco wiją się wokół jego nadgarstka, jakby owłosione ramię było prowizorycznym słupem majowym. Dziki spokojnie schodzi z wydmy. Gdy się zbliża, widzisz pszczoły pełzające po jego twarzy i kąsające jak wściekłe dzikusy, ale on zdaje się nawet ich nie czuć. Wyciąga chrupiące resztki swojego miodowego dzieła zniszczenia, jakby trzymał serce dzikiej bestii.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good... job",
+					Text = "Dobra... robota",
 					function getResult( _event )
 					{
 						return 0;
@@ -150,7 +150,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Wildman.getName() + " suffers light wounds"
+					text = _event.m.Wildman.getName() + " cierpi z powodu lekkich ran"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -158,7 +158,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50 || bro.getID() == _event.m.Wildman.getID())
 					{
-						bro.improveMood(0.75, "Enjoyed some honey in the desert");
+						bro.improveMood(0.75, "Zjadł trochę miodu na pustyni");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

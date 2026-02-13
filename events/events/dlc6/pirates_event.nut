@@ -6,11 +6,11 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.pirates";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_157.png[/img]{You come across a line of men being marched in chains. Their leader remarks that they are a part of the \'indebted,\' but one of the men, clearly a northerner, yells out that they\'re merchant mariners who have been captured by pirates. The supposed manhunter at the head of this troop laughs.%SPEECH_ON%Don\'t believe his lies, traveler, those who are deeply indebted to the Gilder fear the long journey to redemption. He\'d rather die and face hellfire than trouble himself with salvation. Is there nothing more human than that?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_157.png[/img]{Napotykasz szereg ludzi prowadzonych w łańcuchach. Ich przywódca mówi, że to \'dłużnicy\', ale jeden z mężczyzn, wyraźnie północniak, krzyczy, że są marynarzami handlowymi pojmanymi przez piratów. Rzekomy łowca ludzi na czele oddziału śmieje się.%SPEECH_ON%Nie wierz jego kłamstwom, wędrowcze, ci, którzy są głęboko zadłużeni u Gildera, boją się długiej drogi do odkupienia. Wolałby umrzeć i stanąć przed piekielnym ogniem niż trudzić się zbawieniem. Czy jest coś bardziej ludzkiego?%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
@@ -18,7 +18,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Let these men go free at once!",
+					Text = "Puść tych ludzi wolno, natychmiast!",
 					function getResult( _event )
 					{
 						return "B";
@@ -29,7 +29,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Fisherman != null)
 				{
 					this.Options.push({
-						Text = "It looks like %fisherman% has something to say on the matter.",
+						Text = "Wygląda na to, że %fisherman% ma coś do powiedzenia.",
 						function getResult( _event )
 						{
 							return "C";
@@ -41,7 +41,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				if (this.World.Assets.getOrigin().getID() == "scenario.manhunters")
 				{
 					this.Options.push({
-						Text = "Hand over the indebted to me and I will pursue their salvation accordingly.",
+						Text = "Oddaj mi dłużników, a zajmę się ich zbawieniem.",
 						function getResult( _event )
 						{
 							return "D";
@@ -51,7 +51,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Be on your way then, manhunters.",
+					Text = "Ruszajcie dalej, łowcy ludzi.",
 					function getResult( _event )
 					{
 						return "E";
@@ -63,13 +63,13 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_157.png[/img]{You draw your sword and demand the \'indebted\' be set free. The manhunter looks around, incredulous.%SPEECH_ON%Kind traveler, I am merely obeying the laws of the Gilder. These men have debts to pay, and hellfire awaits the ones who shall go unremitted.%SPEECH_OFF%Shaking your head, you tell him you won\'t repeat yourself. He sighs and goes about unshackling the men. Most immediately take off running, however one stays behind. But he\'s not there to join you, he stays with the manhunter, holding his wrists out.%SPEECH_ON%Please, let me into the Gilder\'s light.%SPEECH_OFF%Another man also stays behind, but mostly to convene with you. He announces himself with clear intentions: he\'ll join and fight for the %companyname%.%SPEECH_ON%If I\'ve debts to pay off, it\'s with you, sir.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_157.png[/img]{Wyciągasz miecz i żądasz, by \'dłużników\' wypuszczono. Łowca ludzi rozgląda się z niedowierzaniem.%SPEECH_ON%Dobry wędrowcze, jedynie przestrzegam praw Gildera. Ci ludzie mają długi do spłacenia, a piekielny ogień czeka na tych, którzy odejdą bez odkupienia.%SPEECH_OFF%Kręcisz głową i mówisz, że nie będziesz się powtarzał. Wzdycha i zaczyna odpinać kajdany. Większość natychmiast ucieka, ale jeden zostaje. Nie po to, by dołączyć do ciebie, lecz zostaje przy łowcy ludzi, wyciągając nadgarstki.%SPEECH_ON%Proszę, wpuść mnie do światła Gildera.%SPEECH_OFF%Drugi człowiek także zostaje, ale głównie po to, by porozmawiać z tobą. Oświadcza się jasno: dołączy i będzie walczył dla %companyname%.%SPEECH_ON%Jeśli mam długi do spłacenia, to wobec ciebie, panie.%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I hope you know how to use a weapon.",
+					Text = "Mam nadzieję, że umiesz posługiwać się bronią.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -81,7 +81,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You\'re free, but you\'ll have to find your way back home on your own.",
+					Text = "Jesteś wolny, ale do domu wrócisz sam.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -99,31 +99,31 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"fisherman_background"
 				]);
-				_event.m.Dude.setTitle("the Sailor");
-				_event.m.Dude.getBackground().m.RawDescription = "You rescued %name% from a life in slavery after he was taken by pirates operating out of the city states.";
+				_event.m.Dude.setTitle("Żeglarz");
+				_event.m.Dude.getBackground().m.RawDescription = "Uratowałeś %name% od życia w niewoli po tym, jak piraci z miast-państw go pojmali.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.0, "Got taken captive by manhunters");
+				_event.m.Dude.worsenMood(2.0, "Został pojmany przez łowców ludzi");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local cityStates = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.OrientalCityState);
 
 				foreach( c in cityStates )
 				{
-					c.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "Heard rumors of you freeing indebted");
+					c.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "Słyszeli pogłoski, że uwalniasz dłużników");
 				}
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_157.png[/img]{%fisherman% the fisherman steps forward.%SPEECH_ON%Wait, I know this man! He\'s not indebted to no one, we used to sail together many winters ago.%SPEECH_OFF%The sailor nods.%SPEECH_ON%Yes, yes that\'s right!%SPEECH_OFF%The manhunter looks over, then walks forward and frees the sailor.%SPEECH_ON%I am no stranger the circumstances and complexities of the Gilder and can see the machinations of his designs. No doubt he wanted these two to meet. Please, have the man, and his salvation shall be true.%SPEECH_OFF%The manhunter continues on with his train of captured men. One turns to you.%SPEECH_ON%Real shame we don\'t farkin\' know each other, yeah?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_157.png[/img]{%fisherman% rybak wysuwa się do przodu.%SPEECH_ON%Czekaj, znam tego człowieka! On nie jest niczyim dłużnikiem, pływaliśmy razem wiele zim temu.%SPEECH_OFF%Marynarz przytakuje.%SPEECH_ON%Tak, tak, to prawda!%SPEECH_OFF%Łowca ludzi zerka, po czym podchodzi i uwalnia marynarza.%SPEECH_ON%Nie są mi obce okoliczności i zawiłości Gildera, i widzę machinacje jego planów. Bez wątpienia chciał, by ta dwójka się spotkała. Proszę, weź go, a jego zbawienie będzie prawdziwe.%SPEECH_OFF%Łowca ludzi idzie dalej ze swoim szeregiem pojmanych. Jeden odwraca się do ciebie.%SPEECH_ON%Szkoda, że do cholery się nie znamy, co?%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome. I hope you know how to use a weapon.",
+					Text = "Witaj. Mam nadzieję, że umiesz posługiwać się bronią.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -135,7 +135,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You\'ll have to find your way back home on your own.",
+					Text = "Będziesz musiał sam znaleźć drogę do domu.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -154,33 +154,33 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"fisherman_background"
 				]);
-				_event.m.Dude.setTitle("the Sailor");
-				_event.m.Dude.getBackground().m.RawDescription = "You rescued %name% from a life in slavery after he was taken by pirates operating out of the city states.";
+				_event.m.Dude.setTitle("Żeglarz");
+				_event.m.Dude.getBackground().m.RawDescription = "Uratowałeś %name% od życia w niewoli po tym, jak piraci z miast-państw go pojmali.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.0, "Got taken captive by manhunters");
-				_event.m.Dude.improveMood(0.5, "Got saved from a life in slavery by " + _event.m.Fisherman.getName());
-				_event.m.Fisherman.improveMood(2.0, "Saved " + _event.m.Dude.getName() + " from a life in slavery");
+				_event.m.Dude.worsenMood(2.0, "Został pojmany przez łowców ludzi");
+				_event.m.Dude.improveMood(0.5, "Został uratowany od życia w niewoli przez " + _event.m.Fisherman.getName());
+				_event.m.Fisherman.improveMood(2.0, "Uratował " + _event.m.Dude.getName() + " od życia w niewoli");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local cityStates = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.OrientalCityState);
 
 				foreach( c in cityStates )
 				{
-					c.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "Heard rumors of you freeing indebted");
+					c.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "Słyszeli pogłoski, że uwalniasz dłużników");
 				}
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_157.png[/img]{You rattle a chain and bring a few of your indebted forward. Flexing your indebted-wrangling cred, you tell the manhunter that you\'ve experience in these matters and you can tell these unruly sailors will find a moment to ambush and kill him.%SPEECH_ON%Hand them over to me and I will pursue their salvation accordingly. Keep them in your stead, and the Gilder Himself will not be able to protect you from the evil which lies in their hearts.%SPEECH_OFF%The manhunter thinks for a time, then nods in agreement.%SPEECH_ON%You\'re right. This was a good haul, but the Gilder shall see my deeds have already been enough and my intents true. Take them for yourself and may the Gilder shine sublimity upon your life and theirs.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_157.png[/img]{Grzechoczesz łańcuchem i prowadzisz kilku swoich dłużników do przodu. Prężąc swoje kompetencje w ujarzmianiu dłużników, mówisz łowcy ludzi, że masz doświadczenie w tych sprawach i widzisz, że ci niesforni marynarze znajdą moment, by go napaść i zabić.%SPEECH_ON%Oddaj ich mnie, a zajmę się ich zbawieniem. Zatrzymaj ich przy sobie, a sam Gilder nie będzie w stanie ochronić cię przed złem, które tkwi w ich sercach.%SPEECH_OFF%Łowca ludzi chwilę myśli, po czym przytakuje.%SPEECH_ON%Masz rację. To był dobry łup, ale Gilder uzna, że moje czyny już wystarczyły, a intencje są szczere. Weź ich, a niech Gilder rozświetli twoje życie i ich życie wzniosłym blaskiem.%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The Gilder is most benevolent to let you pay off your debt.",
+					Text = "Gilder jest łaskawy, że pozwala ci spłacić dług.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -202,36 +202,36 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Dude.setTitle("the Sailor");
-				_event.m.Dude.getBackground().m.RawDescription = "%name% was working the seas as a sailor when pirates of the city states boarded his vessel and took him as captives along with his crew. By some happenstance, he made his way into your care to work off his debt to the Gilder.";
+				_event.m.Dude.setTitle("Żeglarz");
+				_event.m.Dude.getBackground().m.RawDescription = "%name% pracował na morzach jako żeglarz, gdy piraci z miast-państw weszli na jego statek i pojmali go wraz z załogą. Z jakiegoś zrządzenia losu trafił pod twoją opiekę, by odpracować swój dług wobec Gildera.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.0, "Got taken captive by manhunters");
+				_event.m.Dude.worsenMood(2.0, "Został pojmany przez łowców ludzi");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				_event.m.Fisherman = roster.create("scripts/entity/tactical/player");
 				_event.m.Fisherman.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Fisherman.setTitle("the Mariner");
-				_event.m.Fisherman.getBackground().m.RawDescription = "%name% was working the seas as a sailor when pirates of the city states boarded his vessel and took him as captives along with his crew. By some happenstance, he made his way into your care to work off his debt to the Gilder.";
+				_event.m.Fisherman.setTitle("Marynarz");
+				_event.m.Fisherman.getBackground().m.RawDescription = "%name% pracował na morzach jako marynarz, gdy piraci z miast-państw weszli na jego statek i pojmali go wraz z załogą. Z jakiegoś zrządzenia losu trafił pod twoją opiekę, by odpracować swój dług wobec Gildera.";
 				_event.m.Fisherman.getBackground().buildDescription(true);
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Fisherman.worsenMood(2.0, "Got taken captive by manhunters");
+				_event.m.Fisherman.worsenMood(2.0, "Został pojmany przez łowców ludzi");
 				this.Characters.push(_event.m.Fisherman.getImagePath());
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_157.png[/img]{The manhunter bows briefly.%SPEECH_ON%May your road be ever gilded, traveler.%SPEECH_OFF%He continues on his way while the supposed sailor yell out that they\'re not even from these lands, that they don\'t know anything about this \'Gilder\' they\'re indebted to in the first place.}",
+			Text = "[img]gfx/ui/events/event_157.png[/img]{Łowca ludzi kłania się krótko.%SPEECH_ON%Niech twoja droga zawsze będzie Złocona, wędrowcze.%SPEECH_OFF%Idzie dalej, podczas gdy rzekomy marynarz krzyczy, że w ogóle nie są z tych ziem i nic nie wiedzą o tym \'Gilderze\', któremu rzekomo są winni dług.}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "As yours.",
+					Text = "I twoja.",
 					function getResult( _event )
 					{
 						return 0;

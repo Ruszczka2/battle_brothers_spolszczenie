@@ -5,17 +5,17 @@ this.desert_bugbite_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.desert_bugbite";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_161.png[/img]{While standing around looking at maps and taking inventory, %bitbro% suddenly yells out and falls over in the sand. He slaps at his legs and a black scorpion goes soaring. Another sellsword screams and chops the bug in half with the sort of ferocity you\'ve never even seen him use on the battlefield. %bitbro% clenches his teeth as he takes off his boots. It looks like someone jammed a nail into his ankle. He says he\'s feeling woozy, but it\'s not too serious.}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Stojąc i gapiąc się na mapy oraz robiąc inwentaryzację, %bitbro% nagle krzyczy i przewraca się w piasek. Uderza w nogi, a czarny skorpion wzbija się w powietrze. Inny najemnik wrzeszczy i rozcina robaka na pół z furią, jakiej nigdy nie widziałeś u niego w bitwie. %bitbro% zaciska zęby, zdejmując buty. Wygląda, jakby ktoś wbił mu gwóźdź w kostkę. Mówi, że ma zawroty głowy, ale to nic poważnego.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Watch where you step.",
+					Text = "Patrz pod nogi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -27,11 +27,11 @@ this.desert_bugbite_event <- this.inherit("scripts/events/event", {
 			{
 				local effect = this.new("scripts/skills/effects_world/exhausted_effect");
 				_event.m.SomeGuy.getSkills().add(effect);
-				_event.m.SomeGuy.worsenMood(1.0, "Got stung by a scorpion");
+				_event.m.SomeGuy.worsenMood(1.0, "Został użądlony przez skorpiona");
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.SomeGuy.getName() + " is exhausted"
+					text = _event.m.SomeGuy.getName() + " jest wyczerpany"
 				});
 				this.Characters.push(_event.m.SomeGuy.getImagePath());
 			}

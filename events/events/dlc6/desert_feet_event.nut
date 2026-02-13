@@ -3,17 +3,17 @@ this.desert_feet_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.desert_feet";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_161.png[/img]{Marching through sand dunes for days has built up a lot of grit in the boots of the men. A few take pause, emptying out their shoes, while others reveal that their feet have been ground raw. This is a hellish landscape, it seems, no matter if it\'s the sun above or the sands below, it\'s all out to get you.}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Wielodniowy marsz przez wydmy nagromadził mnóstwo piasku w butach ludzi. Kilku przystaje, wysypując go z obuwia, podczas gdy inni pokazują, że ich stopy są zdarte do krwi. To piekielny krajobraz, wydaje się, że niezależnie od tego, czy to słońce nad głową, czy piasek pod stopami, wszystko chce cię dopaść.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Are those vultures circling above?",
+					Text = "Czy to sępy krążą nad nami?",
 					function getResult( _event )
 					{
 						return 0;
@@ -34,7 +34,7 @@ this.desert_feet_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.75, "Had his feet ground raw by desert sand");
+						bro.worsenMood(0.75, "Zdrapał sobie stopy do krwi przez pustynny piasek");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

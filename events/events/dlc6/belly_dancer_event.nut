@@ -6,17 +6,17 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.belly_dancer";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{A belly dancer magnetizes %townname%\'s center plaza. Rhythmic movements on their own can coerce a beggar to donating a crown, but with the stage of the whole plaza it is enough to draw crowds and with it heaps of gold. Masked by green silk, nearly see through, and clothed in thin silks with the whole mid rift exposed, the dancer is no doubt an expert in her field. She whirls, hips hypnotic, elbows bowed, hands clapping little cymbals, her feet tiptoeing as she spins a spot so tight there very well may be an invisible god above holding her in place as she razzles and dazzles.\n\n Someone throws an apple through the air and the dancer spins around and shoots a tiny dagger through it, plugging it dead center and dropping the fruit to the ground. Another apple soars in and this time a large saber is produced and slashes the stem off and she catches the rest and takes a bite. The crowd claps gently to this.}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Tancerka brzucha hipnotyzuje centralny plac %townname%. Same rytmiczne ruchy potrafią skłonić żebraka do wrzucenia korony, a na scenie całego placu to wystarcza, by przyciągnąć tłumy i z nimi stosy złota. Zamaskowana zielonym jedwabiem, niemal prześwitującym, i ubrana w cienkie tkaniny z odkrytym całym brzuchem, tancerka bez wątpienia jest mistrzynią w swoim fachu. Wiruje, biodra hipnotyczne, łokcie zgięte, dłonie uderzają o małe talerzyki, stopy stąpają na palcach, a ona obraca się w miejscu tak ciasno, że być może niewidzialny bóg nad nią trzyma ją w miejscu, gdy olśniewa i zachwyca.\n\n Ktoś rzuca w powietrze jabłko, a tancerka obraca się i przebija je małym sztyletem, trafiając prosto w środek i strącając owoc na ziemię. Kolejne jabłko leci, tym razem pojawia się duża szabla, odcina ogonek, a ona łapie resztę i odgryza kęs. Tłum delikatnie klaszcze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done, have a crown.",
+					Text = "Dobra robota, masz koronę.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Time to leave.",
+					Text = "Czas iść.",
 					function getResult( _event )
 					{
 						return 0;
@@ -39,13 +39,13 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{You take out a crown and flip it to the dancer. Her eyes catch its glint, but she doesn\'t break the dance. She drops her weapons and sashays over, cymbals clattering, hips gyrating, her knees hardly bending, her feet almost mystically carrying her across the ground. She gets near. The face is narrow, but the jaw broad. Her temples deep. She grins. It\'s a man. She\'s a man. He claps the cymbals in your face, then swings around, briefly gracing your groin with his ass, and starts to dance back to the middle. He picks up your coin with a toe and flips it up and it lands in a clay pot. The crowd cheers.}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Wyciągasz koronę i podrzucasz ją tancerce. Jej oczy wyłapują blask, ale nie przerywa tańca. Odkłada broń i kołysząc się podchodzi, talerzyki brzęczą, biodra falują, kolana ledwo się zginają, a stopy niemal mistycznie niosą ją po ziemi. Zbliża się. Twarz jest wąska, lecz szczęka szeroka. Skronie głębokie. Uśmiecha się. To mężczyzna. On jest mężczyzną. Uderza talerzykami tuż przed twoją twarzą, po czym obraca się, na chwilę muskając twoje krocze pośladkiem, i zaczyna tańczyć z powrotem do środka. Podbiera twoją monetę palcem u stopy i podrzuca ją, a ta wpada do glinianego dzbana. Tłum wiwatuje.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Maybe we can make use of this man?",
+					Text = "Może uda się nam z niego skorzystać?",
 					function getResult( _event )
 					{
 						return "C";
@@ -53,7 +53,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Time to leave.",
+					Text = "Czas iść.",
 					function getResult( _event )
 					{
 						return 0;
@@ -68,7 +68,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]1[/color] Crown"
+						text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]1[/color] koronę"
 					}
 				];
 			}
@@ -76,13 +76,13 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{After the mannish belly dancer takes your crown you wait around for the show to end. You approach as he picks up his things. He looks at you with a wry smile.%SPEECH_ON%Ah, an admirer. Sorry, only one show tonight, good stranger.%SPEECH_OFF%You shake your head and ask if he knows anything about fighting. He nods.%SPEECH_ON%Of course I do. The Gilded One\'s gleam is upon us all, but not at all hours or days. Sometimes we must find our own way through the dark. I take it by your dress that you are a Crownling, putting that blade of yours where it does and sometimes does not belong.%SPEECH_OFF%You nod and ask him if he\'d be interested in joining. He goes bowlegged and sinks to the ground like a collapsing truss. He counts his crowns.%SPEECH_ON%I\'m not sure if you have a good eye for the wandering nature of men such as myself. Perhaps you saw a vocational tiredness not even I was aware of until this present moment. That said, you\'ll have to try harder to get me to go around killing for coin.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Gdy męski tancerz brzucha bierze twoją koronę, czekasz, aż przedstawienie się skończy. Podchodzisz, gdy zbiera swoje rzeczy. Spogląda na ciebie z przekąsowym uśmiechem.%SPEECH_ON%Ach, wielbiciel. Wybacz, tylko jeden występ tej nocy, dobry nieznajomy.%SPEECH_OFF%Kręcisz głową i pytasz, czy zna się na walce. Kiwając, odpowiada.%SPEECH_ON%Oczywiście. Blask Gildera spoczywa na nas wszystkich, lecz nie o każdej porze i nie każdego dnia. Czasem musimy znaleźć własną drogę przez ciemność. Sądząc po twoim stroju, jesteś Koronnikiem, który przykłada swoje ostrze tam, gdzie powinno, i czasem tam, gdzie nie powinno.%SPEECH_OFF%Kiwasz głową i pytasz, czy byłby zainteresowany dołączeniem. Rozstawia nogi i osuwa się na ziemię jak zawalająca się kratownica. Liczy swoje korony.%SPEECH_ON%Nie wiem, czy masz dobre oko do wędrownej natury ludzi takich jak ja. Być może dostrzegłeś zawodowe zmęczenie, o którym nawet ja nie wiedziałem do tej chwili. Tak czy inaczej, musisz się bardziej postarać, żeby skłonić mnie do zabijania za pieniądze.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'ve talent with the blade like I\'ve never seen before.",
+					Text = "Masz talent do ostrza, jakiego nigdy nie widziałem.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 75 ? "E" : "D";
@@ -90,7 +90,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "I\'ll pay you 500 crowns right now if you join us.",
+					Text = "Zapłacę ci teraz 500 koron, jeśli do nas dołączysz.",
 					function getResult( _event )
 					{
 						return "F";
@@ -105,7 +105,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"belly_dancer_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "You found %name% in " + _event.m.Town.getName() + ", masked by green silk and drawing crowds with rhythmic movements and impressively precise fruit slicing. The latter skill is a boon to any mercenary company, and so you didn\'t hesitate to recruit him.";
+				_event.m.Dude.getBackground().m.RawDescription = "Znalazłeś %name% w " + _event.m.Town.getName() + ", zamaskowanego zielonym jedwabiem i przyciągającego tłumy rytmicznymi ruchami oraz imponująco precyzyjnym krojeniem owoców. Ta druga umiejętność to dar dla każdej kompanii najemników, więc nie wahałeś się go zwerbować.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				local trait = this.new("scripts/skills/traits/dexterous_trait");
 				_event.m.Dude.getSkills().add(trait);
@@ -115,13 +115,13 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{You assuage his ego by saying he\'s one of the best with the blade you\'ve seen. The dancer turns his hands to the dust, his fingers sliding beneath each coin and flipping it into his clay pot. His left hand reaches across the ground, but as this catches your eye, his right hand snatches a blade that had been entirely buried beneath the sands. He holds it toward your crotch.%SPEECH_ON%I\'m deadly with the blade, as I\'m sure you are with that stinger there. Now, I know you are merely petting things which shall make me purr, preying upon my pride as the hunter does the lions, and I will say this: it has worked. I will fight for you, captain of the Crownlings, and I will fight well.%SPEECH_OFF%Nodding, you ask that he lower the blade. He spins it in his hand and sheathes it in one swift motion. He gets to his feet, stripping himself down until he is buck naked.%SPEECH_ON%This life I will leave behind in total, and to the Crownling\'s life I will be devoted in whole.%SPEECH_OFF%You shake the man\'s hand. A passerby glances over and scratches his head.%SPEECH_ON%Wait a minute, you\'ve a snake down there! I thought you were a lady of the dance, but this...%SPEECH_OFF%He dabs his forehead with a cloth and lowers his voice.%SPEECH_ON%This makes it even better.%SPEECH_OFF%The dancer looks at you and laughs.%SPEECH_ON%We\'ve all dangers to confront in our respective vocations, Crownling, and I look forward to seeing yours.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Łagodzisz jego ego, mówiąc, że jest jednym z najlepszych, jakich widziałeś z ostrzem. Tancerz opuszcza dłonie ku ziemi, palce wsuwają się pod każdą monetę i przerzucają ją do glinianego dzbana. Lewa ręka sięga po ziemi, lecz gdy to przykuwa twój wzrok, prawa chwyta ostrze całkowicie zakopane w piasku. Kieruje je ku twojemu kroczu.%SPEECH_ON%Jestem zabójczy z ostrzem, tak jak ty z tym żądłem. Wiem, że tylko głaszczesz to, co ma sprawić, żebym mruczał, żerując na mojej dumie, jak myśliwy na lwach, i powiem tak: zadziałało. Będę walczył dla ciebie, kapitanie Koronników, i będę walczył dobrze.%SPEECH_OFF%Kiwając głową prosisz, by opuścił ostrze. Obraca je w dłoni i jednym ruchem chowa. Wstaje, rozbierając się do naga.%SPEECH_ON%To życie porzucam całkowicie, a życiu Koronnika poświęcę się w pełni.%SPEECH_OFF%Ściskasz mu dłoń. Przechodzień zerka i drapie się po głowie.%SPEECH_ON%Zaraz, masz tam węża! Myślałem, że jesteś damą tańca, ale to...%SPEECH_OFF%Ociera czoło szmatką i ścisza głos.%SPEECH_ON%To czyni to jeszcze lepszym.%SPEECH_OFF%Tancerz patrzy na ciebie i śmieje się.%SPEECH_ON%Wszyscy mamy niebezpieczeństwa do stawienia czoła w swoich zajęciach, Koronniku, i czekam, by zobaczyć twoje.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the company!",
+					Text = "Witaj w kompanii!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -141,13 +141,13 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{You tell the dancer that he is one of the best you\'ve seen with a blade. He laughs.%SPEECH_ON%A truly well intentioned attempt on your part, Crownling, to drag me to your ways of life. But you know well that there is nothing you could say or do that would take me away from this life. Yes, the blade suits me well, but so does flittering about for the crowd, earning praise without spilling blood to do it. You go play gladiator on the sands and earn you coin, Crownling, and I will be here earning mine.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Mówisz tancerzowi, że jest jednym z najlepszych, jakich widziałeś z ostrzem. Śmieje się.%SPEECH_ON%To naprawdę dobrze intencjonowana próba z twojej strony, Koronniku, by wciągnąć mnie w twój tryb życia. Ale dobrze wiesz, że nie ma nic, co mógłbyś powiedzieć lub zrobić, by odciągnąć mnie od tego życia. Tak, ostrze mi pasuje, ale równie dobrze pasuje mi krążenie pośród tłumu i zdobywanie uznania bez rozlewu krwi. Ty idź bawić się w gladiatora na piaskach i zarabiaj swoje monety, Koronniku, a ja będę tu zarabiał swoje.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I had to ask.",
+					Text = "Musiałem zapytać.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -165,13 +165,13 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{You offer five hundred crowns to the dancer. He keeps picking up coins - one at a time - and putting them in his clay pot. It is almost a silent affair, coins clapping loudly as they fall into a nearly empty barrel of clay. He looks up, looks down. He puts in one more crown then gets to his feet. He strips off his clothes and holds out his hand.%SPEECH_ON%The Gilded One must be gleaming upon us both, for you to have earned such keep, and no doubt He has guided your purse here to bring it to me.%SPEECH_OFF%You nod and shake his hand. A passerby glances over and scratches his head.%SPEECH_ON%Wait a minute, you\'ve a snake down there! I thought you were a lady of the dance, but this...%SPEECH_OFF%He dabs his forehead and lowers his voice.%SPEECH_ON%This makes it even better.%SPEECH_OFF%Sighing, the dancer asks that he take a look at your inventory.%SPEECH_ON%A body like mine, anything will fit, inside or out, I\'ll make it work.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Oferujesz tancerzowi pięćset koron. On dalej podnosi monety - po jednej - i wkłada je do glinianego dzbana. To niemal cichy rytuał, monety głośno brzęczą, wpadając do prawie pustego naczynia z gliny. Spogląda w górę, spogląda w dół. Wkłada jeszcze jedną koronę i wstaje. Zdejmuje ubranie i wyciąga rękę.%SPEECH_ON%Gilded musi błyszczeć nad nami obojgiem, skoro dorobiłeś się takiego zarobku, i bez wątpienia poprowadził twoją sakiewkę tu, by trafiła do mnie.%SPEECH_OFF%Kiwasz głową i ściskasz mu dłoń. Przechodzień zerka i drapie się po głowie.%SPEECH_ON%Zaraz, masz tam węża! Myślałem, że jesteś damą tańca, ale to...%SPEECH_OFF%Ociera czoło i ścisza głos.%SPEECH_ON%To czyni to jeszcze lepszym.%SPEECH_OFF%Wzdychając, tancerz prosi, by mógł rzucić okiem na twój ekwipunek.%SPEECH_ON%Ciało takie jak moje, wszystko będzie pasować, od środka czy z zewnątrz, poradzę sobie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the company!",
+					Text = "Witaj w kompanii!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -191,7 +191,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] Crowns"
+						text = "Wydajesz [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] koron"
 					}
 				];
 			}

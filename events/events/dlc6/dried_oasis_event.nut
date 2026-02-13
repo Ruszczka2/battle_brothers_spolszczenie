@@ -6,11 +6,11 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dried_oasis";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{The desert is so awash in similarity that seeing a bit of greenery immediately draws the eye. Such is the magnetism of an oasis. You spot it at great distance, and upon approach you realize the green is not a tree at all, but a banner flying from the catch of a dead, dried tree. Around it are more dead trees, some having crumpled into the sands which eat at them from every side. And in the midst of this passed oasis sets a skeleton with its face down in a small bowl of earth where, perhaps, water once was. To the skeleton\'s side is a pile of treasures. All the crowns in the world, but not a single drop of water with which to spend it on.\n\n You move to get the gold, but the coins move with you, sliding apart as a black snake rises up and hisses at you. Green poisons slickly drip from its fangs.}",
+			Text = "%terrainImage%{Pustynia jest tak jednolita, że najmniejszy skrawek zieleni od razu przyciąga wzrok. Tak działa magnetyzm oazy. Dostrzegasz ją z daleka, a gdy podchodzisz bliżej, uświadamiasz sobie, że to nie drzewo, lecz sztandar powiewający z rozgałęzienia martwego, wyschniętego drzewa. Wokół stoją kolejne martwe drzewa, niektóre zapadły się w piasek, który zżera je z każdej strony. A pośrodku tej niegdysiejszej oazy leży szkielet z twarzą utkwioną w małej misie ziemi, gdzie być może kiedyś była woda. Obok szkieletu leży sterta skarbów. Wszystkie korony świata, ale ani jednej kropli wody, na którą można by je wydać.\n\n Ruszasz po złoto, ale monety poruszają się wraz z tobą, rozsuwając się, gdy czarny wąż unosi się i syczy na ciebie. Zielony jad ślisko kapie z jego kłów.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -18,7 +18,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Someone go fetch it!",
+					Text = "Niech ktoś to przyniesie!",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -29,7 +29,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Slayer != null)
 				{
 					this.Options.push({
-						Text = "%beastslayer% can handle this puny monster.",
+						Text = "%beastslayer% poradzi sobie z tym marnym potworem.",
 						function getResult( _event )
 						{
 							return "D";
@@ -39,7 +39,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "This is not worth our trouble.",
+					Text = "Nie warto sobie tym zaprzątać głowy.",
 					function getResult( _event )
 					{
 						return "E";
@@ -51,13 +51,13 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "%terrainImage%{%brother% walks forward with his weapon in hand. The snake rears up and the man stabs it clean through, instantly killing the creature. He holds it up at the end of his steel, wriggling its flesh before tossing it aside.%SPEECH_ON%Easiest pay I\'ve ever had.%SPEECH_OFF%He says as the treasure is taken into the company\'s inventory.}",
+			Text = "%terrainImage%{%brother% podchodzi z bronią w ręku. Wąż wznosi się, a człowiek przebija go na wylot, natychmiast zabijając stworzenie. Unosi je na końcu ostrza, pozwala mu jeszcze przez chwilę się wić, po czym odrzuca na bok.%SPEECH_ON%Najłatwiejszy zarobek, jaki miałem.%SPEECH_OFF%Mówi, gdy skarb trafia do ekwipunku kompanii.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Well done.",
+					Text = "Dobra robota.",
 					function getResult( _event )
 					{
 						return 0;
@@ -74,7 +74,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 					}
 				];
 			}
@@ -82,13 +82,13 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "%terrainImage%{%brother% walks forward with his weapon in hand. The snake rears up and the man laughs and stabs down with his weapon. The snake deftly sidewinders around the steel and strikes up the shaft and nicks the man across his knuckles. Screaming, he falls backwards, and the men collect him and drag him off. Soon he is convulsing and frothing and his entire hand bulbs and spews pus.\n\nYou believe he\'ll survive, but it will be a great deal of time until he is ready to fight again. As for the treasure, it shifts in the sands and you can only watch as it slowly slips into the dune itself like a boat sinking into water. When you lean to see the last of it go, more black snakes emerge as if to warn you just who it belongs to: it\'s the desert\'s treasure now and forever.}",
+			Text = "%terrainImage%{%brother% podchodzi z bronią w ręku. Wąż wznosi się, a człowiek śmieje się i dźga w dół. Wąż zręcznie wije się wokół ostrza, uderza wzdłuż drzewca i rani go w kostki dłoni. Krzycząc, mężczyzna pada do tyłu, a ludzie podnoszą go i odciągają. Wkrótce ma drgawki i pieni się, a cała dłoń puchnie i sączy ropę.\n\nWierzysz, że przeżyje, ale minie sporo czasu, zanim znów będzie gotów do walki. Co do skarbu, porusza się w piasku i możesz tylko patrzeć, jak powoli zapada się w wydmę niczym łódź w wodę. Gdy pochylasz się, by zobaczyć, jak znika, pojawiają się kolejne czarne węże, jakby ostrzegały cię, do kogo należy: to skarb pustyni teraz i na zawsze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice try.",
+					Text = "Niezła próba.",
 					function getResult( _event )
 					{
 						return 0;
@@ -100,7 +100,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
 				_event.m.Dude.addHeavyInjury();
-				_event.m.Dude.worsenMood(1.5, "Was bitten by a desert snake");
+				_event.m.Dude.worsenMood(1.5, "Został ugryziony przez pustynnego węża");
 				local injury = _event.m.Dude.addInjury([
 					{
 						ID = "injury.pierced_hand",
@@ -111,14 +111,14 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = injury.getIcon(),
-					text = _event.m.Dude.getName() + " suffers " + injury.getNameOnly()
+					text = _event.m.Dude.getName() + " cierpi na " + injury.getNameOnly()
 				});
 				local effect = this.new("scripts/skills/injury/sickness_injury");
 				_event.m.Dude.getSkills().add(effect);
 				this.List.push({
 					id = 11,
 					icon = effect.getIcon(),
-					text = _event.m.Dude.getName() + " is sick"
+					text = _event.m.Dude.getName() + " jest chory"
 				});
 
 				if (_event.m.Dude.getMoodState() < this.Const.MoodState.Neutral)
@@ -134,13 +134,13 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "%terrainImage%{%beastslayer% looks down at the snake. He nods as though recollecting an old lesson.%SPEECH_ON%You only see these in the dunes. Highly venomous.%SPEECH_OFF%The serpent hisses at him. The man nods back before shooting a hand out and snatching the snake by its head.%SPEECH_ON%Your venom begin and ends in your mouth, little one, but I can use it everywhere. I trust that you will be understanding of the trade.%SPEECH_OFF%The man cracks the snake\'s head before cutting it clean off with a small blade and he pinches his finger over the reptile\'s stringy corpse. He nods again.%SPEECH_ON%I\'ll make use of the snake, and I trust you captain to make use of the treasure.%SPEECH_OFF%}",
+			Text = "%terrainImage%{%beastslayer% spogląda na węża. Kiwając głową, jakby przypominał sobie starą lekcję.%SPEECH_ON%Takie spotyka się tylko na wydmach. Bardzo jadowite.%SPEECH_OFF%Wąż syczy na niego. Mężczyzna przytakuje, po czym wyciąga dłoń i chwyta węża za głowę.%SPEECH_ON%Twój jad zaczyna się i kończy w twoich ustach, maleńki, ale ja mogę go użyć wszędzie. Ufam, że zrozumiesz ten układ.%SPEECH_OFF%Mężczyzna miażdży głowę węża, po czym odcina ją niewielkim ostrzem, a palce zaciska na żylastym truchle gada. Znów kiwa głową.%SPEECH_ON%Ja zrobię użytek z węża, a tobie, kapitanie, ufam, że zrobisz użytek ze skarbu.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Glad you were here.",
+					Text = "Dobrze, że tu byłeś.",
 					function getResult( _event )
 					{
 						return 0;
@@ -157,7 +157,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 					}
 				];
 				local item = this.new("scripts/items/accessory/antidote_item");
@@ -165,9 +165,9 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Slayer.improveMood(1.0, "Applied his expertise on creatures");
+				_event.m.Slayer.improveMood(1.0, "Zastosował swoją wiedzę o stworach");
 
 				if (_event.m.Slayer.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -182,13 +182,13 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "%terrainImage%{You\'ve heard of such snakes killing men outright. With that threat on the table, you do not feel it worth the trouble and leave the treasure behind.}",
+			Text = "%terrainImage%{Słyszałeś o takich wężach, które zabijają ludzi na miejscu. Przy takim ryzyku nie uważasz, że warto się narażać, i zostawiasz skarb.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We move on!",
+					Text = "Idziemy dalej!",
 					function getResult( _event )
 					{
 						return 0;

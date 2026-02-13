@@ -3,18 +3,18 @@ this.meteorite_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.meteorite_enter";
-		this.m.Title = "As you approach...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_154.png[/img]{A cataclysm as the world knows it comes from the earth herself. Volcanos, floods, earthquakes, plagues, these are things all men fear. The unwarned issuances that can instantly shatter the greatest of kingdoms and disrobe the royal color from the greatest of kings.\n\nThe great caldera before you, then, stands as a stark reminder that not only are you small, but you might not even know just how small you are: it is quite clear to even the simplest of minds that the enormous rock at the crater\'s center came from above. Perhaps very far above. Northerners believe it is the coda of the great war of the old gods. It is a literal mountain weaponized by the deities, thrown like a stone from a catapult before landing with such apocalyptic damage that the horrors wrought ceased all heavenly conflict. Southerners see it as the \'fiery tear\' of the Gilder. Looking down upon a world without man, the God fell into deep sadness and cried upon the earth. At first He was fearful that he had destroyed all that lay below, but instead He watched as Man drew up from the fires and armored himself in the ashes. And it is then that He knew Man, living in every corner of the earth, was His chosen beings, and Man knew Him.\n\nWhatever it is, the crater brings followers and believers from all directions. Here exists an amicable understanding that there shall be no impasses upon one another, though during times of religious war that unspoken agreement is oft shattered.}",
+			Text = "[img]gfx/ui/events/event_154.png[/img]{Kataklizmy, jakie świat zna, pochodzą z samej ziemi. Wulkany, powodzie, trzęsienia ziemi, zarazy - tego boją się wszyscy ludzie. Niespodziewane zjawiska, które potrafią w mgnieniu oka rozbić największe królestwa i zedrzeć królewskie barwy z najpotężniejszych władców.\n\nWielka kaldera przed tobą jest więc surowym przypomnieniem, że nie tylko jesteś mały, ale możesz nawet nie wiedzieć, jak bardzo: nawet najprostszy umysł widzi, że ogromna skała w centrum krateru spadła z góry. Być może z bardzo wielkiej wysokości. Północniacy wierzą, że to koda wielkiej wojny starych bogów. To dosłowna góra uzbrojona przez bóstwa, rzucona niczym kamień z katapulty, która po upadku zadała tak apokaliptyczne zniszczenia, że okropności ustały i wszelki niebiański konflikt wygasł. Południowcy widzą w tym "ognistą łzę" Gildera. Spoglądając na świat bez ludzi, Bóg popadł w głęboki smutek i zapłakał nad ziemią. Na początku obawiał się, że zniszczył wszystko, co było poniżej, lecz zamiast tego ujrzał, jak Człowiek wyłania się z ognia i zbroi się w popiołach. I wtedy poznał, że Człowiek, żyjący w każdym zakątku ziemi, jest Jego wybrańcem, i Człowiek poznał Jego.\n\nCokolwiek to jest, krater przyciąga wyznawców i wierzących ze wszystkich stron. Panuje tu przyjazne porozumienie, że nikt nie będzie sobie nawzajem przeszkadzać, choć w czasach świętej wojny to niewypowiedziane porozumienie bywa łamane.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Our fate will lead us here again in time.",
+					Text = "Los w końcu znów nas tu przywiedzie.",
 					function getResult( _event )
 					{
 						return 0;

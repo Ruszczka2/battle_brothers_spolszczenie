@@ -3,17 +3,17 @@ this.holywar_flavor_south_settlement_event <- this.inherit("scripts/events/event
 	function create()
 	{
 		this.m.ID = "event.crisis.holywar_flavor_south_settlement";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 20.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_97.png[/img]Children peep their heads over a sand dune, just missing another group of children hiding in the shade of a defilade. When the first troop come over the top, the ambushing kids jump out and stab them with sticks and slay them down.%SPEECH_ON%Death to the northerners, may the Gilder\'s gaze shine upon us!%SPEECH_OFF%The slain kids slide down the dune, limp and lifeless, before jolting back to their feet and arguing that it is their turn to play the \'good guys.\' It seems the holy war has already invigorated the next generation to be ready when their time comes. | [img]gfx/ui/events/event_166.png[/img]Rows and rows of the faithful bend to the sands to give their prayers to the Gilder. All manner of men and women and children alike, and dissimilar, being that there were wealthy merchants beside impoverished beggars. The only real standouts are the Vizier and the councilmen, who all pray beside the priests at the head of the procession. That is if these men are praying at all: as far as you can tell, the council is whispering amongst themselves, some not paying the slightest bit of attention to the ceremony.}",
+			Text = "{[img]gfx/ui/events/event_97.png[/img]Dzieci wyściubiają głowy ponad wydmę, o włos mijając inną grupę dzieci ukrytą w cieniu obwałowania. Gdy pierwszy oddział wspina się na szczyt, dzieci w zasadzce wyskakują i dźgają ich patykami, kładąc na piasku.%SPEECH_ON%Śmierć północnym, niech spojrzenie Gildera na nas spocznie!%SPEECH_OFF%Zabite dzieci zsuwają się po wydmie, wiotkie i bez życia, po czym zrywają się na nogi i spierają, że teraz ich kolej grać "dobrych". Wygląda na to, że święta wojna już ożywiła następne pokolenie, by było gotowe, gdy przyjdzie ich czas. | [img]gfx/ui/events/event_166.png[/img]Rzędy i rzędy wiernych pochylają się ku piaskom, by oddać modły Gilderowi. Wszystkiego rodzaju mężczyźni, kobiety i dzieci, podobni i różni, bo obok bogatych kupców stoją biedni żebracy. Jedynymi naprawdę wyróżniającymi się są wezyr i radni, którzy modlą się obok kapłanów na czele procesji. To znaczy, jeśli w ogóle się modlą: z tego, co widzisz, rada szepcze między sobą, niektórzy nie zwracają najmniejszej uwagi na ceremonię.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "A strange time.",
+					Text = "Dziwne czasy.",
 					function getResult( _event )
 					{
 						return 0;

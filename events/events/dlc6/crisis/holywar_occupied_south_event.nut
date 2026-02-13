@@ -5,18 +5,18 @@ this.holywar_occupied_south_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.holywar_occupied_south";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_%image%.png[/img]{News is coming that the Gilded ones have conquered %holysite%. What they plan to do with it, who knows. Maybe put up a gold-plated fence to keep the northerners out? You\'re mostly concerned the fighting might be nearing an end, and with it all the sweet religious honey the %companyname% has been eating up. | The Gilder\'s gleam must be brighter than ever now: %holysite% has fallen under control of the southerners. Perhaps the Gilded folk will ask the %companyname% to help defend it, or maybe the old gods will need a bit of proper gumption in taking it back. Either way, the %companyname% is still on the catbird seat for fattening its purse.}",
+			Text = "[img]gfx/ui/events/event_%image%.png[/img]{Nadchodzą wieści, że Gilded zdobyli %holysite%. Co zamierzają z tym zrobić, kto wie. Może postawią złocony płot, by trzymać północnych z dala? Najbardziej martwi cię, że walki mogą dobiegać końca, a z nimi całe to słodkie religijne miody, z których %companyname% korzystała. | Blask Gildera musi być teraz jaśniejszy niż kiedykolwiek: %holysite% wpadło pod kontrolę południowców. Być może Gilded poproszą %companyname% o pomoc w obronie, a może stare bogi będą potrzebowały odrobiny właściwej odwagi, by je odbić. Tak czy inaczej, %companyname% wciąż jest w doskonałej pozycji, by tuczyć sakiewkę.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The fires of religious turmoil burn bright.",
+					Text = "Ognie religijnego zamętu płoną jasno.",
 					function getResult( _event )
 					{
 						return 0;

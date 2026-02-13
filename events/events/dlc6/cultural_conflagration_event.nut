@@ -3,17 +3,17 @@ this.cultural_conflagration_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cultural_conflagration";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_175.png[/img]{Shouting and yelling drags you from counting inventory. You find a few of the men standing at opposite ends of the campfire pointing fingers and even a weapon or two. Seems there\'s a bit of a dustup over whose women are more beautiful: southerners or northerners. Ironically, the northerners are voting for the southerners and vice versa. A couple of stern commands brings order back to the company, but the tensions remain. | There\'s been a bit of fisticuffs between some of the men. Apparently, there was a disagreement about the marriage rites between men and women. The northerners believe it should be one and one, while the southerners prefer marrying as many women as one can get their hands on. You tell the men to stop fighting like women and focus on the task at hand, which may or may not be to finish a job to get coin to then spend on a woman, but that\'s neither here nor there. | A couple of the men get into it over some religious differences. Some conflict over the old gods and the Gilder, each man a little ambassador of his faith, diplomatically putting fists into the opposition\'s faces. You tell them all to quit it and get their heads straight. If they want to argue over which gods are best, they can do it in the afterlife. | A couple of the men get into it over matters of... sand? It seems the northerners in the company are poking fun at the southerners, asking how stupid one would have to be to settle in a land with nothing but sand.%SPEECH_ON%Who looks around in a hot arse sandy dune and thinks, aye, this\'ll be my home. Bet you wish yer forefathers had a proper mind to realize there\'s more to the world than a gods damned forever sunburn.%SPEECH_OFF%This garners the first punch thrown. The scuffle has a few injured, but you get the men back to order, commanding them to keep their geographic opinions to themselves. | An argument breaks out when southerners in the company start poking fun at their northern brothers\' lack of articulation. One mimics with his hands splayed out at his ears.%SPEECH_ON%We\'s all talks like this, aye, yessir, ain\'t y\'all ready to come on to somesuch sumbitch thing, aye? Ain\'t ain\'t ain-%SPEECH_OFF%Fisticuffs end the jestering. A few are bruised in the exchange, but you manage to break it up before it gets more serious. | Though normally dismissive of their overlords, the northerners and the southerners take to defending the lords and Viziers of their lands respectively. It seems the foil of having some cultural opposition has spurred heretofore unseen fealties. The arguments unwind into an actual fist fight, with not a lord around to be impressed, mind. You break it up, telling them the only one they should look to impress is either you or each other as brothers in battle.}",
+			Text = "[img]gfx/ui/events/event_175.png[/img]{Krzyki i wrzaski wyrywają cię z liczenia zapasów. Zastajesz kilku ludzi stojących po przeciwnych stronach ogniska, wskazujących palcami, a nawet bronią. Wygląda na to, że wybuchła sprzeczka o to, czyje kobiety są piękniejsze: południowe czy północne. Ironicznie, północniacy głosują na południowe i odwrotnie. Kilka stanowczych rozkazów przywraca porządek w kompanii, ale napięcie pozostaje. | Doszło do bójki między kilkoma ludźmi. Najwyraźniej nie zgadzali się co do obrzędów małżeńskich między mężczyznami i kobietami. Północniacy uważają, że powinno być jeden na jedną, podczas gdy południowcy wolą poślubić tyle kobiet, ile się da. Mówisz im, żeby przestali bić się jak kobiety i skupili na zadaniu - którym może być, a może nie, dokończenie roboty, żeby zdobyć monetę i wydać ją na kobietę, ale to już inna sprawa. | Kilku ludzi kłóci się o różnice religijne. Spór o starych bogów i Gildera, każdy mężczyzna małego ambasadora swojej wiary, dyplomatycznie wkładającego pięści w twarze przeciwnika. Mówisz wszystkim, żeby przestali i nastawili głowy na właściwy tor. Jeśli chcą kłócić się o to, którzy bogowie są lepsi, niech zrobią to w zaświatach. | Kilku ludzi kłóci się o... piasek? Wygląda na to, że północniacy w kompanii podśmiewają się z południowców, pytając, jak głupim trzeba być, by osiedlić się w krainie pełnej samego piasku.%SPEECH_ON%Kto rozgląda się po gorącym, cholernym piaszczystym wydmowisku i myśli: tak, to będzie mój dom. Założę się, że żałujecie, iż wasi przodkowie nie mieli rozumu, by zrozumieć, że świat to coś więcej niż przeklęte, wieczne poparzenie słoneczne.%SPEECH_OFF%To wywołuje pierwszy cios. Szamotanina kończy się kilkoma rannymi, ale przywracasz porządek, każąc im zachować swoje opinie geograficzne dla siebie. | Spór wybucha, gdy południowcy w kompanii zaczynają kpić z braku elokwencji u północnych braci. Jeden naśladuje ich, rozkładając dłonie przy uszach.%SPEECH_ON%My wszyscy tak godomy, ano, teroz, nie gotowi, żebyście przyszli na jakieś cośtam, no? Ano, ano, an-%SPEECH_OFF%Bójka kończy żarty. Kilku ma siniaki po wymianie ciosów, ale udaje ci się to przerwać, zanim zrobi się poważniej. | Choć zwykle pogardzają swoimi zwierzchnikami, północniacy i południowcy zaczynają bronić odpowiednio panów i wezyrów swoich ziem. Wygląda na to, że kontrast kulturowy obudził dotąd nieznane lojalności. Spory przeradzają się w prawdziwą bójkę na pięści, i to bez żadnego lorda w pobliżu, by się popisać. Rozdzielasz ich, mówiąc, że jedynym, kogo powinni chcieć zaimponować, jesteś ty lub oni nawzajem jako bracia w boju.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Why can\'t we all just get along?",
+					Text = "Dlaczego nie możemy żyć w zgodzie?",
 					function getResult( _event )
 					{
 						return 0;
@@ -31,11 +31,11 @@ this.cultural_conflagration_event <- this.inherit("scripts/events/event", {
 					{
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.5, "Had a brawl over cultural differences");
+							bro.improveMood(0.5, "Brał udział w bójce z powodów kulturowych");
 						}
 						else
 						{
-							bro.worsenMood(0.5, "Had a brawl over cultural differences");
+							bro.worsenMood(0.5, "Brał udział w bójce z powodów kulturowych");
 						}
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
@@ -54,7 +54,7 @@ this.cultural_conflagration_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + " suffers light wounds"
+							text = bro.getName() + " doznaje lekkich ran"
 						});
 					}
 				}

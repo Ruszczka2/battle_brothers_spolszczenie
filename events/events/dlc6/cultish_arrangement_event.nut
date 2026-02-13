@@ -5,17 +5,17 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cultish_arrangement";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{You come over a sand dune to see a half dozen men. They are wearing black cloaks and have their sleeve-sheathed hands holding onto one another to form a complete circle. Despite every one of their heads being down, they all seem to sense your presence and turn to stare. One man lets his hands go and steps forward.%SPEECH_ON%Davkul awaits us all, traveler, even the gilded path permits his patience.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{Wspinasz się na wydmę i widzisz pół tuzina mężczyzn. Noszą czarne płaszcze, a dłonie schowane w rękawach trzymają się wzajemnie, tworząc pełny krąg. Choć wszystkie głowy mają spuszczone, zdają się wyczuwać twoją obecność i odwracają się, by patrzeć. Jeden z mężczyzn puszcza dłonie i wychodzi naprzód.%SPEECH_ON%Davkul czeka na nas wszystkich, wędrowcze, nawet pozłacana ścieżka pozwala na jego cierpliwość.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll leave you guys to it.",
+					Text = "Zostawimy was z tym.",
 					function getResult( _event )
 					{
 						return "D";
@@ -28,7 +28,7 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Cultist != null)
 				{
 					this.Options.push({
-						Text = "Have a word with your brothers in faith, %cultist%.",
+						Text = "Porozmawiaj z braćmi w wierze, %cultist%.",
 						function getResult( _event )
 						{
 							return "C";
@@ -38,7 +38,7 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Slaughter these fools!",
+					Text = "Zarżnijcie tych głupców!",
 					function getResult( _event )
 					{
 						return "B";
@@ -50,13 +50,13 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_12.png[/img]{You draw your sword and order the company to make short work of the cultists. They are set upon with ease, the cultists not even so much as raising a hand to resist their own demise. A survivor coughs as he lets an open wound bleed. He holds his hand out as if to show you your handiwork.%SPEECH_ON%With all your hard work you cannot buy time, sellsword. Davkul awaits us all.%SPEECH_OFF%You take your dagger out and end the man. You kick his body over and loot it, as well as the other corpses, though not much is to be found.}",
+			Text = "[img]gfx/ui/events/event_12.png[/img]{Dobywasz miecza i każesz kompanii szybko rozprawić się z kultystami. Idzie to łatwo, kultystom nawet nie przychodzi do głowy podnieść ręki, by stawić opór własnej śmierci. Ocalały kaszle, pozwalając, by otwarta rana krwawiła. Wyciąga dłoń, jakby chciał pokazać ci twoje dzieło.%SPEECH_ON%Całą swoją ciężką pracą nie kupisz czasu, najemniku. Davkul czeka na nas wszystkich.%SPEECH_OFF%Wyciągasz sztylet i kończysz z mężczyzną. Kopiesz jego ciało i przeszukujesz, podobnie jak pozostałe zwłoki, choć niewiele da się znaleźć.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let\'s get going.",
+					Text = "Ruszajmy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -73,7 +73,7 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 					}
 				];
 			}
@@ -81,13 +81,13 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{%cultist% steps forward, brandishing his scarred pate for all the strangers to see. They nod and bow, and their leader speaks with his eyes to the sands.%SPEECH_ON%Davkul has spoken.%SPEECH_OFF%Nodding, %cultist% responds.%SPEECH_ON%And to every word I listen.%SPEECH_OFF%The leader retrieves a strange blade seemingly out of nowhere and runs it across his fingers. He speaks again without looking up.%SPEECH_ON%Then do as he requests.%SPEECH_OFF% %cultist% takes the blade and nods.%SPEECH_ON%Davkul awaits us all.%SPEECH_OFF%The strange men collapse to the ground and put their faces into the sand. Their chests rise and fall, tremor, and then they move no more. They have drowned themselves into the desert herself. %cultist% returns carrying a bizarre dagger with him.}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{%cultist% wychodzi naprzód, odsłaniając swoją bliznowatą czaszkę, by wszyscy obcy mogli ją zobaczyć. Kiwną i kłaniają się, a ich przywódca mówi, kierując wzrok ku piaskom.%SPEECH_ON%Davkul przemówił.%SPEECH_OFF%%cultist% kiwa głową i odpowiada.%SPEECH_ON%I każdego słowa słucham.%SPEECH_OFF%Przywódca wyciąga dziwne ostrze jakby znikąd i przesuwa je po swoich palcach. Mówi dalej, nie podnosząc wzroku.%SPEECH_ON%Zatem rób, jak prosi.%SPEECH_OFF% %cultist% bierze ostrze i przytakuje.%SPEECH_ON%Davkul czeka na nas wszystkich.%SPEECH_OFF%Dziwni mężczyźni osuwają się na ziemię i wkładają twarze w piasek. Ich klatki piersiowe unoszą się i opadają, drżą, po czym zamierają. Utopili się w samej pustyni. %cultist% wraca, niosąc ze sobą osobliwy sztylet.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright...",
+					Text = "Dobrze...",
 					function getResult( _event )
 					{
 						return 0;
@@ -103,9 +103,9 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain a " + item.getName()
+					text = "Zdobywasz " + item.getName()
 				});
-				_event.m.Cultist.improveMood(1.0, "Had an understanding with his brothers in faith");
+				_event.m.Cultist.improveMood(1.0, "Porozumiał się z braćmi w wierze");
 
 				if (_event.m.Cultist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -120,13 +120,13 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{You offer a modest hello and goodbye to the black cloaks, then move on. They do not resist you, nor call out to you in any manner. The last you see of them they are holding hands again and have their heads crooned forward and staring into the sands. There is not a single jug of water or basket of food anywhere to be seen. If they had not come here to die, what could possibly save them?}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{Skromnie witasz i żegnasz się z czarnymi płaszczami, po czym ruszasz dalej. Nie stawiają oporu ani nie odzywają się do ciebie w żaden sposób. Ostatnie, co widzisz, to ich dłonie znów splecione i głowy pochylone naprzód, wpatrzone w piaski. Nigdzie nie widać ani dzbana z wodą, ani kosza z jedzeniem. Jeśli nie przyszli tu umrzeć, co mogłoby ich ocalić?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Not for us to know, maybe.",
+					Text = "Może nie nam to wiedzieć.",
 					function getResult( _event )
 					{
 						return 0;

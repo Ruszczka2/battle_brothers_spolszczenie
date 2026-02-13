@@ -6,11 +6,11 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.sword_eater";
-		this.m.Title = "At %townname%";
+		this.m.Title = "W %townname%";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{A sword eater is dancing around a plaza of %townname%. He holds out a blade about as thick as your pinky.%SPEECH_ON%As the Gilder sees me, I will eat this steel!%SPEECH_OFF%The man announces his intent, and follows through promptly: he arches his back, pinches the blade, and glides it into his mouth and onward and inward, his mouth puckering around the steel as though he were slurping noodles. The crowd at first gasps, but then the swallower gives two thumbs up and the onlookers cheer.}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Po placu w %townname% tańczy połykacz mieczy. Wyciąga ostrze grubości twojego małego palca.%SPEECH_ON%Niech Gilder patrzy, pożrę tę stal!%SPEECH_OFF%Mężczyzna ogłasza zamiar i natychmiast go spełnia: wygina plecy, chwyta ostrze i wsadza je do ust, dalej i głębiej, a jego usta zaciskają się wokół stali, jakby zasysał makaron. Tłum najpierw wzdycha z grozy, ale potem połykacz pokazuje dwa kciuki w górę i widzowie wiwatują.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -18,7 +18,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "Bravo! Here\'s a few coins for you.",
+					Text = "Brawo! Oto kilka monet.",
 					function getResult( _event )
 					{
 						return "B";
@@ -29,7 +29,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "Bravo! Give that guy a few coins from me, %wildman%.",
+						Text = "Brawo! Daj mu ode mnie kilka monet, %wildman%.",
 						function getResult( _event )
 						{
 							return "C";
@@ -39,7 +39,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "Interesting way to earn a living.",
+					Text = "Ciekawy sposób na zarobek.",
 					function getResult( _event )
 					{
 						return 0;
@@ -51,13 +51,13 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{You toss the man a few crowns. He pulls out his sword and places its tip upon his pate. The crowd cheers again. Grinning, the man talks as he balances the sword.%SPEECH_ON%I see your banner, Crownling. I\'m no warrior, but I am a traveler and well enough speaker. Though I seek to impress for personal gain, I will on occasion make sure to put in a kind word for your company of coin-seeking misfits.%SPEECH_OFF%The swallower throws his arms wide and nods quickly. The blade plummets from his skull and falls deftly into his sheathe at his hip. Again, the crowd roars with delight and you can\'t help but think this entertainer is a man of his word.}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Rzucasz mu kilka koron. Wyciąga miecz i kładzie jego czubek na czole. Tłum znów wiwatuje. Uśmiechając się, mężczyzna mówi, balansując mieczem.%SPEECH_ON%Widzę wasz sztandar, Koroniarzu. Nie jestem wojownikiem, ale jestem podróżnikiem i niezłym mówcą. Choć zabiegam o poklask dla własnej korzyści, czasem zadbam o dobre słowo o waszej kompanii szukających monet wyrzutków.%SPEECH_OFF%Połykacz rozkłada ramiona i szybko przytakuje. Ostrze spada z jego czaszki i wpada zgrabnie do pochwy na biodrze. Znów tłum ryczy z zachwytu, a ty nie możesz oprzeć się myśli, że ten artysta dotrzymuje słowa.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "My sword is not so sharp, yet the ladies can\'t even do that?",
+					Text = "Mój miecz nie jest tak ostry, a panie i tak tego nie potrafią?",
 					function getResult( _event )
 					{
 						return 0;
@@ -72,23 +72,23 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] Crowns"
+						text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] koron"
 					}
 				];
-				_event.m.Town.getOwner().addPlayerRelation(5.0, "Local entertainers spread the word about you");
+				_event.m.Town.getOwner().addPlayerRelation(5.0, "Lokalni artyści roznoszą wieść o tobie");
 				this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{You hand %wildman% a few crowns and tell him to tip the entertainer. He grunts and heads over, then you realize that wasn\'t just any sellsword you beckoned, but %wildman% the wildman! Before you can stop him, he pushes the sword swallower over. There are cries, screams, and blood gargling death throes, but the crowd sweeps in front of the action and blocks the view. The way it is relayed to you is that the blade came out the swallower\'s front with straps of esophagus or stomach hanging off it. You know this, because the wildman made sure to bring back the sword himself and you had to have it cleaned.\n\n How exactly he retrieved the blade during those moments of carnage is beyond you, though you imagine he escaped the ferocity of the crowd by sheer will, determination, and complete absence of moral judgments which frightens men of normal sensibilities. You ask a few of the sellswords to hide the wildman away as he\'ll need to lay low for a while.}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{Wręczasz %wildman% kilka koron i każesz mu dać napiwek artyście. Warczy i idzie, a ty uświadamiasz sobie, że to nie byle który najemnik, lecz %wildman%, Dziki! Zanim zdążysz go powstrzymać, przewraca połykacza mieczy. Są krzyki, wrzaski i konanie z bulgotem krwi, ale tłum wdziera się przed miejsce zdarzenia i zasłania widok. Z relacji wynika, że ostrze wyszło z przodu połykacza, z pasmami przełyku lub żołądka zwisającymi z niego. Wiesz to, bo Dziki dopilnował, by przynieść miecz, a ty musiałeś go czyścić.\n\n Jak dokładnie odzyskał ostrze w tamtych chwilach rzezi, tego nie pojmujesz, choć wyobrażasz sobie, że uciekł przed wściekłością tłumu dzięki czystej woli, determinacji i całkowitemu brakowi osądów moralnych, co przeraża ludzi o zwykłych obyczajach. Prosisz kilku najemników, by ukryli Dzika, bo przez jakiś czas będzie musiał się nie wychylać.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Good job, but also bad job.",
+					Text = "Dobra robota, ale też kiepska.",
 					function getResult( _event )
 					{
 						return 0;
@@ -104,7 +104,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] Crowns"
+						text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] koron"
 					}
 				];
 				local item = this.new("scripts/items/weapons/fencing_sword");
@@ -113,9 +113,9 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+					text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Town.getOwner().addPlayerRelation(-10.0, "Rumor is that a local entertainer was killed by one of your men");
+				_event.m.Town.getOwner().addPlayerRelation(-10.0, "Krążą pogłoski, że lokalny artysta został zabity przez jednego z twoich ludzi");
 				this.World.Flags.set("IsSwordEaterWildmanDone", true);
 			}
 

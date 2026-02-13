@@ -3,17 +3,17 @@ this.holywar_flavor_north_settlement_event <- this.inherit("scripts/events/event
 	function create()
 	{
 		this.m.ID = "event.crisis.holywar_flavor_north_settlement";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 20.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_41.png[/img]A wagon is stopped on the side of the road. You find a man looking at a wide variety of wares. He turns to your and speaks.%SPEECH_ON%Ah, a sellsword. I imagine you\'re apart of the holy war, huh? Well, I hope you do right by your gods. I know coin\'s important, but there\'s more to life, and more after, understand?%SPEECH_OFF% | [img]gfx/ui/events/event_97.png[/img]You find a few children playfighting each other, some dressed up in loose clothing like you\'d find in the southern deserts. The latter bunch fall easy to the preying swords of the more northern dressage.%SPEECH_ON%Ah-ha! The Gilded fall, and may the old gods take the glory we\'ve to give!%SPEECH_OFF%The kids calm down and then reset to positions. This time, they change guard, each exchanging clothes until the \'bad guys\' become \'good guys\' and then the play resumes. The holy war of the future will not be on short supply of faithful fighters, that\'s certain. | [img]gfx/ui/events/event_40.png[/img]You come across a monk reading a scroll. He states that the old gods have willed the north to victory, and that glory shall be shared in terraria and more. You ask what happens if the north loses. It is a brazen question, certainly, yet he takes it on the chin with a smile.%SPEECH_ON%Do not fool yourself, sellsword, in thinking that our holy war today is all that there will be. These wars will continue until an obvious end, and it will be at that end where we shall find most glory. I pray I live to see it, but my father and his father prayed the same, and alas I believe it will be my son who shall see the holy war brought to their righteous end.%SPEECH_OFF%}",
+			Text = "{[img]gfx/ui/events/event_41.png[/img]Wóz zatrzymał się na poboczu drogi. Spotykasz mężczyznę oglądającego rozmaite towary. Odwraca się do ciebie i mówi.%SPEECH_ON%Ach, najemnik. Pewnie jesteś częścią świętej wojny, co? Cóż, mam nadzieję, że postępujesz zgodnie ze swymi bogami. Wiem, że moneta jest ważna, ale w życiu jest coś więcej, i po nim też, rozumiesz?%SPEECH_OFF% | [img]gfx/ui/events/event_97.png[/img]Widzisz kilka dzieci bawiących się w walkę, część przebranych w luźne stroje jak z południowych pustyń. Ci drudzy łatwo padają pod siecznymi mieczami tych w bardziej północnym rynsztunku.%SPEECH_ON%A-ha! Gilded upadają, a niech stare bogi przyjmą chwałę, którą im dajemy!%SPEECH_OFF%Dzieci uspokajają się i wracają na pozycje. Tym razem zmieniają warty, wymieniają się strojami, aż "źli" stają się "dobrymi" i zabawa toczy się dalej. Święta wojna przyszłości na pewno nie będzie cierpiała na brak wiernych wojowników. | [img]gfx/ui/events/event_40.png[/img]Napotykasz mnicha czytającego zwój. Twierdzi, że stare bogi przeznaczyły północy zwycięstwo, a chwała przypadnie terrarium i innym. Pytasz, co się stanie, jeśli północ przegra. To zuchwałe pytanie, bez wątpienia, lecz przyjmuje je z uśmiechem.%SPEECH_ON%Nie łudź się, najemniku, że nasza dzisiejsza święta wojna będzie jedyną. Te wojny będą trwać aż do oczywistego końca, i właśnie tam znajdziemy największą chwałę. Modlę się, by dożyć tej chwili, ale mój ojciec i jego ojciec modlili się o to samo, i niestety sądzę, że to mój syn zobaczy, jak święta wojna dobiegnie sprawiedliwego końca.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "If you say so.",
+					Text = "Skoro tak mówisz.",
 					function getResult( _event )
 					{
 						return 0;

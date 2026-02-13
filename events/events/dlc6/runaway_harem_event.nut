@@ -5,17 +5,17 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.runaway_harem";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{You come across a sparse group of nomads arguing with a troop of the Vizier\'s men. Between them is another group of what look like the sort of women that would be in the Vizier\'s harem. As you draw near all sides pause and stare at you. A lieutenant of the Vizier\'s troop waves you off.%SPEECH_ON%This does not concern you, Crownling.%SPEECH_OFF%But, perhaps trying to invite you into the event, the nomads explain: the women consist of \'indebted\', those whose service is owed to another for failures or transgressions. In this case, they owe services to the Vizier. However, they have escaped and the nomads, who find the concept of indebtedness to be heresy, have taken them in.%SPEECH_ON%Hey, Crownling! Don\'t listen to a word of that nomad\'s poison! And nomad, these women come with us, or you ALL die here.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Napotykasz nieliczną grupę nomadów kłócących się z oddziałem ludzi wezyra. Między nimi stoi inna grupa kobiet, wyglądających na takie, które mogłyby być w haremie wezyra. Gdy się zbliżasz, wszyscy milkną i wpatrują się w ciebie. Porucznik oddziału wezyra macha na ciebie ręką.%SPEECH_ON%To cię nie dotyczy, Koroniarzu.%SPEECH_OFF%Nomadzi, być może chcąc wciągnąć cię w sprawę, wyjaśniają: kobiety to \'dłużniczki\', których służba należy się innym za przewinienia lub uchybienia. W tym przypadku są winne służbę wezyrowi. Jednak uciekły, a nomadzi, którzy uważają ideę dłużnictwa za herezję, przyjęli je pod swój dach.%SPEECH_ON%Ej, Koroniarzu! Nie słuchaj ani słowa tego nomadzkiego jadu! A ty, nomado, te kobiety idą z nami, albo WSZYSCY tu zginiecie.%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I\'d rather not get involved in this.",
+					Text = "Wolałbym się w to nie mieszać.",
 					function getResult( _event )
 					{
 						return "D";
@@ -23,7 +23,7 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "The women belong to the Vizier.",
+					Text = "Kobiety należą do wezyra.",
 					function getResult( _event )
 					{
 						return "C";
@@ -31,7 +31,7 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "The women are free to go wherever they choose.",
+					Text = "Kobiety są wolne i mogą iść, gdzie zechcą.",
 					function getResult( _event )
 					{
 						return "B";
@@ -47,13 +47,13 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{You draw your sword and tell the Vizier\'s men to get lost, hoping it works because any violence with them will not be without a good amount of bloodshed. Thankfully, they retreat. The lieutenant bows mockingly.%SPEECH_ON%The womenfolk are free, but with their debts to the Gilder left unpaid, they shall burn in pits of burning sand, a hell from which there will never be escape!%SPEECH_OFF%Laughing, you thank him for the imagery. The nomads also thank you, as do the freed harem though it\'s more with their eyes than anything. One nomad hands you a gift of treasures.%SPEECH_ON%We carry these not for us, but for when we occasion upon travelers such as yourself. We do not seek comforts in material things, not in this world. And do not trust that man of the Vizier. He lies. The Gilder shall see us all in sublimity when it is our time to come.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Wyciągasz miecz i każesz ludziom wezyra się wynosić, licząc, że to zadziała, bo każda przemoc z nimi nie obejdzie się bez sporego rozlewu krwi. Na szczęście się wycofują. Porucznik kłania się szyderczo.%SPEECH_ON%Kobiety są wolne, ale z nieopłaconymi długami wobec Gildera będą płonąć w jamach gorejącego piasku, w piekle, z którego nie ma ucieczki!%SPEECH_OFF%Śmiejąc się, dziękujesz mu za obrazowe słowa. Nomadzi również ci dziękują, podobnie jak uwolnione kobiety, choć bardziej oczami niż słowami. Jeden nomada wręcza ci dar w postaci skarbów.%SPEECH_ON%Nosimy je nie dla siebie, lecz na czas, gdy spotkamy wędrowców takich jak ty. Nie szukamy pociech w rzeczach materialnych, nie na tym świecie. I nie ufaj temu człowiekowi wezyra. Kłamie. Gilder ujrzy nas wszystkich w chwale, gdy nadejdzie nasz czas.%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Enjoy your freedom.",
+					Text = "Cieszcie się wolnością.",
 					function getResult( _event )
 					{
 						return 0;
@@ -70,22 +70,22 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] koron"
 					}
 				];
-				_event.m.Citystate.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "You aided in the escape of a Vizier\'s harem");
+				_event.m.Citystate.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "Pomogłeś w ucieczce haremu wezyra");
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{You know a good payday when you see one, and by payday you mean an ambassador of a Vizier. Drawing your sword, you jump between the nomads and the women, telling the former to back off and return to the deserts. The nomads draw bows and raise spears, but their leader quiets them.%SPEECH_ON%No, the interloper has intervened in a manner he finds most suitable, and certainly the Gilder has chosen him as an arbiter in this matter for good reason. Take the women, then, and the dispute is settled.%SPEECH_OFF%The Vizier\'s men gather the harem back into their ranks. A heavy bag is brought to you by the lieutenant.%SPEECH_ON%Payment, Crownling. This was not your task, but that does not mean it carries no reward. You have saved these indebted women from the Gilder\'s hellfire. May our generosity be a constant reminder going forward, yes?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Wiesz, kiedy widzisz dobry zarobek, a przez zarobek rozumiesz ambasadora wezyra. Wyciągasz miecz i wskakujesz między nomadów a kobiety, każąc tym pierwszym się wycofać i wrócić na pustynię. Nomadzi naciągają łuki i podnoszą włócznie, ale ich przywódca ich ucisza.%SPEECH_ON%Nie, przybysz interweniował w sposób, który uznał za najbardziej właściwy, i z pewnością Gilder wybrał go na rozjemcę w tej sprawie z dobrego powodu. Zabierzcie kobiety, a spór jest zakończony.%SPEECH_OFF%Ludzie wezyra zbierają harem z powrotem w swoje szeregi. Porucznik przynosi ci ciężki worek.%SPEECH_ON%Zapłata, Koroniarzu. To nie było twoje zadanie, ale to nie znaczy, że nie ma nagrody. Uratowałeś te dłużniczki przed piekielnym ogniem Gildera. Niech nasza hojność będzie stałym przypomnieniem na przyszłość, tak?%SPEECH_OFF%}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We look forward to further business with your master.",
+					Text = "Liczymy na dalsze interesy z twoim panem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -101,22 +101,22 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] Crowns"
+						text = "Zyskujesz [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] koron"
 					}
 				];
-				_event.m.Citystate.addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "You helped to return a Vizier\'s harem");
+				_event.m.Citystate.addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "Pomogłeś w powrocie haremu wezyra");
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{You shake your head and wish the women the best in the matter, but it\'s resolved before you can even leave: the nomads back off and the Vizier\'s men take them away. When you ask the nomads why they gave up so quick, their leader states that you must have been an arbitrator sent by the Gilder Himself, and if this is what you chose then so be it. Seems the nomads never had a chance at beating those professional soldiers and you were their last hope.}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Kręcisz głową i życzysz kobietom wszystkiego najlepszego, ale sprawa rozwiązuje się, zanim zdążysz odejść: nomadzi ustępują, a ludzie wezyra zabierają kobiety. Gdy pytasz nomadów, czemu tak szybko odpuścili, ich przywódca mówi, że musiałeś być rozjemcą zesłanym przez samego Gildera, więc jeśli tak wybrałeś, niech tak będzie. Wygląda na to, że nomadzi nigdy nie mieli szans z tymi zawodowymi żołnierzami, a ty byłeś ich ostatnią nadzieją.}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "It\'s the way of things.",
+					Text = "Tak już jest.",
 					function getResult( _event )
 					{
 						return 0;

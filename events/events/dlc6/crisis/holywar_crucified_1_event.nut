@@ -5,17 +5,17 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.holywar_crucified_1";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_161.png[/img]{In the middle of the desert wastes one has to be somewhat suspicious of anything they come across, especially if it\'s a lone man on a cross. The crucified figure looks entirely dead, given the buzzards clerically perched on each shoulder, but as you draw near the birds take flight and the man lifts is head. Despite gruesome injuries to hands and feet, he\'s rather lively and asks for water. Instead of giving it to him, you ask why he\'s here. The man sighs.%SPEECH_ON%I was a crusader. Came in with the army looking to gain glory for the old gods. Except when I got down here, and got to talking with the locals and the priests, I had a change of heart.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Pośród pustynnych bezdroży trzeba podejrzliwie podchodzić do wszystkiego, co się spotyka, zwłaszcza gdy to samotny człowiek na krzyżu. Ukrzyżowana postać wygląda na martwą, biorąc pod uwagę sępy niczym kler przycupnięte na obu ramionach, ale gdy podchodzisz, ptaki odlatują, a mężczyzna podnosi głowę. Pomimo straszliwych obrażeń dłoni i stóp, jest całkiem żywy i prosi o wodę. Zamiast mu ją dać, pytasz, czemu tu jest. Mężczyzna wzdycha.%SPEECH_ON%Byłem krzyżowcem. Przybyłem z armią, by zdobyć chwałę dla starych bogów. Ale gdy tu zszedłem i zacząłem rozmawiać z miejscowymi i kapłanami, zmieniłem zdanie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "The other crusaders did this to you?",
+					Text = "To inni krzyżowcy ci to zrobili?",
 					function getResult( _event )
 					{
 						return "B";
@@ -30,13 +30,13 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "{[img]gfx/ui/events/event_161.png[/img]{The man nods.%SPEECH_ON%Aye, that they did. Mind, I was there when they crucified someone else on account of the same reason. So in part I\'m not the brightest fella to follow in his footsteps, nor am I clean of heart, for I cheered it on when they did it to him. But perhaps the Gilder will see the true light I carry within, you know?%SPEECH_OFF%He turns his head to the skies, and to the buzzards cycling above.%SPEECH_ON%I\'m still one open to fight, no matter who it is, south, north, doesn\'t matter. I\'ve the Gilder in my heart.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Mężczyzna kiwa głową.%SPEECH_ON%Ano, tak zrobili. Zwróć uwagę, że byłem przy tym, jak ukrzyżowali kogoś innego z tego samego powodu. Więc po części nie jestem najmądrzejszy, że poszedłem w jego ślady, i serca też nie mam czystego, bo mu kibicowałem, gdy mu to robili. Ale może Gilder zobaczy prawdziwe światło, które noszę w środku, wiesz?%SPEECH_OFF%Odwraca głowę ku niebu i krążącym nad nim sępom.%SPEECH_ON%Wciąż jestem gotów walczyć, bez względu na to, kto to będzie, południe, północ, nieważne. Mam Gildera w sercu.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'re welcome with us.",
+					Text = "Jesteś u nas mile widziany.",
 					function getResult( _event )
 					{
 						return "C";
@@ -44,7 +44,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Only thing you\'ve in your heart are these buzzards.",
+					Text = "Jedyne co masz w sercu to te sępy.",
 					function getResult( _event )
 					{
 						return "D";
@@ -59,13 +59,13 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "{[img]gfx/ui/events/event_161.png[/img]{You draw out your dagger and cut the man down. He\'s got injuries aplenty but is no doubt of strong enough constitution to one day recover. He thanks you with remarkable mildness given the doom which awaited him.%SPEECH_ON%Glad to stretch. I mean, you know, stretch on my terms. Lead the way, captain of the Gilder\'s circumstance, captain of His mighty sublimity.%SPEECH_OFF%Many in the company do not care for taking in a man who has turned his back not only on his fellow man, but his own gods.}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Wyciągasz sztylet i odcinasz mężczyznę. Ma mnóstwo ran, ale bez wątpienia dość silną konstytucję, by kiedyś wyzdrowieć. Dziękuje ci z niezwykłą łagodnością, biorąc pod uwagę los, który na niego czekał.%SPEECH_ON%Dobrze się rozciągnąć. To znaczy, wiesz, rozciągnąć na własnych warunkach. Prowadź, kapitanie okoliczności Gildera, kapitanie Jego potężnej wzniosłości.%SPEECH_OFF%Wielu w kompanii nie chce przyjmować człowieka, który odwrócił się nie tylko od swoich bliźnich, ale i od własnych bogów.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Ah, he\'ll fit in with the rest of the misfits.",
+					Text = "Ach, wpasuje się w resztę wyrzutków.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -84,7 +84,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"crucified_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "You found %name%, a former crusader from the north, crucified in the middle of the desert after turning his back to the old gods. After cutting him down, he pledged his services to you. Despite his attempts to conceal it, he doesn\'t seem to be in the most stable mental condition.";
+				_event.m.Dude.getBackground().m.RawDescription = "Znalazłeś %name%, byłego krzyżowca z północy, ukrzyżowanego pośrodku pustyni po tym, jak odwrócił się od starych bogów. Po odcięciu go przysiągł ci służbę. Mimo prób ukrycia tego, nie wydaje się być w najbardziej stabilnym stanie psychicznym.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				local trait = this.new("scripts/skills/traits/deathwish_trait");
 
@@ -95,8 +95,8 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 
 				_event.m.Dude.getSkills().add(trait);
 				_event.m.Dude.setHitpointsPct(0.33);
-				_event.m.Dude.improveMood(3.0, "Saw the light and accepted the sublimity of the Gilder");
-				_event.m.Dude.worsenMood(3.0, "Was crucified");
+				_event.m.Dude.improveMood(3.0, "Ujrzał światło i przyjął wzniosłość Gildera");
+				_event.m.Dude.worsenMood(3.0, "Został ukrzyżowany");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -104,7 +104,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(1.0, "Disliked that you prevented rightful punishment for betraying the old gods");
+						bro.worsenMood(1.0, "Nie podobało mu się, że powstrzymałeś należną karę za zdradę starych bogów");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -121,13 +121,13 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "{[img]gfx/ui/events/event_161.png[/img]{You tell the man he\'ll be talking to his god or gods real soon. He sighs.%SPEECH_ON%In a manner, I deserve this, but I am at peace with it.%SPEECH_OFF%There\'s mixed reactions about the company on it, and by mixed it is mostly varying levels of exuberance. After all, the man is a traitor to both terra and celestial, making him easily hated by anyone and everyone.}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Mówisz mężczyźnie, że już wkrótce porozmawia ze swoim bogiem albo bogami. Wzdycha.%SPEECH_ON%W pewnym sensie zasłużyłem na to, ale jestem z tym pogodzony.%SPEECH_OFF%Reakcje w kompanii są mieszane, a przez mieszane rozumie się głównie różne stopnie entuzjazmu. W końcu mężczyzna jest zdrajcą zarówno ziemi, jak i niebios, przez co łatwo go nienawidzić każdemu i wszędzie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Serves him well.",
+					Text = "Dobrze mu tak.",
 					function getResult( _event )
 					{
 						return 0;
@@ -143,7 +143,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.25, "Gained confidence in your leadership");
+						bro.improveMood(0.25, "Nabrał pewności co do twojego przywództwa");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

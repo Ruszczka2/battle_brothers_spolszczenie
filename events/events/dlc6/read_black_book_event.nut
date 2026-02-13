@@ -6,17 +6,17 @@ this.read_black_book_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.read_black_book";
-		this.m.Title = "During camp...";
+		this.m.Title = "Podczas obozu...";
 		this.m.Cooldown = 20.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_12.png[/img]{%nonhistorian% enters your tent.%SPEECH_ON%Captain, come quick, there\'s something wrong with %historian%!%SPEECH_OFF%You hurry to the scene. %historian% is bowled over the Lorekeeper\'s book like an ancient man shielding the first flame. He\'s clenching the fleshen covers, hands shaking, and he looks up at you with bloodshot eyes.%SPEECH_ON%I know what it says, captain, I know what it says!%SPEECH_OFF%You crouch down and the man backs off, shaking his head.%SPEECH_ON%No. No! It\'s about the end! The end of all things! We\'re... we\'re merely tools to get there, don\'t you understand? Everything we do, everything anybody does, is a means to the ultimate end: the death of all beings. Our very existence gives it power, without us, it can rest again. But so long as there is existence, it cannot sleep!%SPEECH_OFF%You shake your head and ask what he means. The man turns the book around and there\'s a page that is entirely black, yet he points his finger to a spot on it as though you were meant to read a sentence there.%SPEECH_ON%This is no book, captain, it is instruction, on how to raise the spirits of the dead.%SPEECH_OFF%You ask who could have such knowledge, and %historian% grins madly.%SPEECH_ON%There is no \'who\', there is no \'what\'! It is a tool of undoing, put into this world by the one that calls itself Davkul!%SPEECH_OFF%You tell the men to shelter him as he has clearly lost his mind. One of the sellswords brings you %historian%\'s translations of the book, but they\'re just scribbles, no less unintelligible than their source.%SPEECH_ON%Even if we could understand a word of it, even if we could use it, I don\'t think we should. See, and just between us, but that page he showed you? It had text on it earlier. And I mean in the very moment you were walking up. I could see the words, I could see the symbols. But at some point, the ink, the ash, whatever it was, it spread over the page entirely. It\'s as if we\'re not meant to have this knowledge.%SPEECH_OFF%It\'s quite possible, but there\'s a darker realization spreading over your mind: %historian% is meant to have this knowledge, but his limited understanding is not for your benefit, but merely a tool in the machinations of something else entirely. You are only being shown as much as you need and no more...}",
+			Text = "[img]gfx/ui/events/event_12.png[/img]{%nonhistorian% wchodzi do twojego namiotu.%SPEECH_ON%Kapitanie, szybko, coś jest nie tak z %historian%!%SPEECH_OFF%Spieszysz na miejsce. %historian% pochyla się nad księgą Strażnika Wiedzy jak starzec osłaniający pierwszy płomień. Zaciska palce na skórzanych okładkach, ręce mu drżą, a on podnosi na ciebie przekrwione oczy.%SPEECH_ON%Wiem, co tam jest, kapitanie, wiem, co tam jest!%SPEECH_OFF%Kucasz, a mężczyzna cofa się, kręcąc głową.%SPEECH_ON%Nie. Nie! To o końcu! O końcu wszystkiego! My... my jesteśmy tylko narzędziami, by tam dotrzeć, rozumiesz? Wszystko, co robimy, wszystko, co robi ktokolwiek, jest środkiem do ostatecznego celu: śmierci wszystkich istot. Nasze istnienie daje temu moc, bez nas może znów odpocząć. Ale dopóki istnieje istnienie, nie może spać!%SPEECH_OFF%Kręcisz głową i pytasz, co ma na myśli. Mężczyzna odwraca księgę i jest tam strona całkowicie czarna, a mimo to wskazuje na niej palcem miejsce, jakbyś miał tam przeczytać zdanie.%SPEECH_ON%To nie książka, kapitanie, to instrukcja, jak podnieść duchy zmarłych.%SPEECH_OFF%Pytasz, kto mógł mieć taką wiedzę, a %historian% uśmiecha się obłąkańczo.%SPEECH_ON%Nie ma żadnego \'kto\', nie ma żadnego \'co\'! To narzędzie unicestwienia, włożone w ten świat przez tego, który nazywa siebie Davkulem!%SPEECH_OFF%Mówisz ludziom, żeby go odprowadzili, bo wyraźnie postradał zmysły. Jeden z najemników przynosi ci tłumaczenia %historian% z księgi, ale to tylko bazgroły, równie niezrozumiałe jak oryginał.%SPEECH_ON%Nawet gdybyśmy mogli zrozumieć choć słowo, nawet gdybyśmy mogli z tego skorzystać, nie sądzę, byśmy powinni. Widzisz, i tylko między nami, ta strona, którą ci pokazał? Wcześniej miała tekst. I mam na myśli dokładnie tę chwilę, gdy podchodziłeś. Widziałem słowa, widziałem symbole. Ale w pewnym momencie atrament, popiół, cokolwiek to było, rozlało się po całej stronie. Jakbyśmy nie mieli mieć tej wiedzy.%SPEECH_OFF%To całkiem możliwe, ale w twojej głowie rozlewa się mroczniejsze zrozumienie: %historian% ma mieć tę wiedzę, lecz jego ograniczone pojmowanie nie służy tobie, a jest jedynie narzędziem w machinacjach czegoś zupełnie innego. Pokazuje się ci tylko tyle, ile trzeba, i ani kroku dalej...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "An uneasy thought.",
+					Text = "Niepokojąca myśl.",
 					function getResult( _event )
 					{
 						return 0;
@@ -28,11 +28,11 @@ this.read_black_book_event <- this.inherit("scripts/events/event", {
 			{
 				local effect = this.new("scripts/skills/traits/mad_trait");
 				_event.m.Historian.getSkills().add(effect);
-				_event.m.Historian.improveMood(2.0, "Has seen the end of things");
+				_event.m.Historian.improveMood(2.0, "Widział koniec wszystkiego");
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.Historian.getName() + " has become mad"
+					text = _event.m.Historian.getName() + " oszalał"
 				});
 				this.Characters.push(_event.m.Other.getImagePath());
 				this.Characters.push(_event.m.Historian.getImagePath());
@@ -41,13 +41,13 @@ this.read_black_book_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_12.png[/img]{%nonhistorian% enters your tent.%SPEECH_ON%Captain, come quick, something happened with %historian%!%SPEECH_OFF%You hurry to the scene. %historian% is bowled over the Lorekeeper\'s book like an ancient man shielding the first flame. He\'s clenching the fleshen covers, hands shaking, and he looks up at you with bloodshot eyes.%SPEECH_ON%I know what it says, captain, I know what it says!%SPEECH_OFF%You crouch down and the man backs off, shaking his head.%SPEECH_ON%No. No! It\'s about the end! The end of all things! We\'re... we\'re merely tools to get there, don\'t you understand? Everything we do, everything anybody does, is a means to the ultimate end: the death of all beings. Our very existence gives it power, without us, it can rest again. But so long as there is existence, it cannot sleep!%SPEECH_OFF%You shake your head and ask what he means. The man turns the book around and there\'s a page that is entirely black, yet he points his finger to a spot on it as though you were meant to read a sentence there.%SPEECH_ON%This is no book, captain, it is instruction, on how to raise the spirits of the dead.%SPEECH_OFF%You ask who could have such knowledge, and %historian% grins madly.%SPEECH_ON%There is no \'who\', there is no \'what\'! It is a tool of undoing, put into this world by Davkul!%SPEECH_OFF%One of the men brings you %historian%\'s translations of the book, but they\'re just scribbles, no less unintelligible than their source.%SPEECH_ON%EJust between us, but that page he showed you? It had text on it earlier. And I mean in the very moment you were walking up. I could see the words, I could see the symbols. But at some point, the ink, the ash, whatever it was, it spread over the page entirely. It\'s as if we\'re not meant to have this knowledge.%SPEECH_OFF%It\'s quite possible, but there\'s a darker realization spreading over your mind: %historian% is meant to have this knowledge, but his limited understanding is not for your benefit, but merely a tool in the machinations of something else entirely. You are only being shown as much as you need and no more...}",
+			Text = "[img]gfx/ui/events/event_12.png[/img]{%nonhistorian% wchodzi do twojego namiotu.%SPEECH_ON%Kapitanie, szybko, coś się stało z %historian%!%SPEECH_OFF%Spieszysz na miejsce. %historian% pochyla się nad księgą Strażnika Wiedzy jak starzec osłaniający pierwszy płomień. Zaciska palce na skórzanych okładkach, ręce mu drżą, a on podnosi na ciebie przekrwione oczy.%SPEECH_ON%Wiem, co tam jest, kapitanie, wiem, co tam jest!%SPEECH_OFF%Kucasz, a mężczyzna cofa się, kręcąc głową.%SPEECH_ON%Nie. Nie! To o końcu! O końcu wszystkiego! My... my jesteśmy tylko narzędziami, by tam dotrzeć, rozumiesz? Wszystko, co robimy, wszystko, co robi ktokolwiek, jest środkiem do ostatecznego celu: śmierci wszystkich istot. Nasze istnienie daje temu moc, bez nas może znów odpocząć. Ale dopóki istnieje istnienie, nie może spać!%SPEECH_OFF%Kręcisz głową i pytasz, co ma na myśli. Mężczyzna odwraca księgę i jest tam strona całkowicie czarna, a mimo to wskazuje na niej palcem miejsce, jakbyś miał tam przeczytać zdanie.%SPEECH_ON%To nie książka, kapitanie, to instrukcja, jak podnieść duchy zmarłych.%SPEECH_OFF%Pytasz, kto mógł mieć taką wiedzę, a %historian% uśmiecha się obłąkańczo.%SPEECH_ON%Nie ma żadnego \'kto\', nie ma żadnego \'co\'! To narzędzie unicestwienia, włożone w ten świat przez Davkula!%SPEECH_OFF%Jeden z ludzi przynosi ci tłumaczenia %historian% z księgi, ale to tylko bazgroły, równie niezrozumiałe jak oryginał.%SPEECH_ON%Tylko między nami, ale ta strona, którą ci pokazał? Wcześniej miała tekst. I mam na myśli dokładnie tę chwilę, gdy podchodziłeś. Widziałem słowa, widziałem symbole. Ale w pewnym momencie atrament, popiół, cokolwiek to było, rozlało się po całej stronie. Jakbyśmy nie mieli mieć tej wiedzy.%SPEECH_OFF%To całkiem możliwe, ale w twojej głowie rozlewa się mroczniejsze zrozumienie: %historian% ma mieć tę wiedzę, lecz jego ograniczone pojmowanie nie służy tobie, a jest jedynie narzędziem w machinacjach czegoś zupełnie innego. Pokazuje się ci tylko tyle, ile trzeba, i ani kroku dalej...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Davkul awaits us all.",
+					Text = "Davkul czeka na nas wszystkich.",
 					function getResult( _event )
 					{
 						return 0;
@@ -59,11 +59,11 @@ this.read_black_book_event <- this.inherit("scripts/events/event", {
 			{
 				local effect = this.new("scripts/skills/traits/mad_trait");
 				_event.m.Historian.getSkills().add(effect);
-				_event.m.Historian.improveMood(2.0, "Has seen the end of things");
+				_event.m.Historian.improveMood(2.0, "Widział koniec wszystkiego");
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.Historian.getName() + " has become mad"
+					text = _event.m.Historian.getName() + " oszalał"
 				});
 				this.Characters.push(_event.m.Other.getImagePath());
 				this.Characters.push(_event.m.Historian.getImagePath());

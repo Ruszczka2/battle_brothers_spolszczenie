@@ -3,17 +3,17 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.holywar_ill_southerners";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{You come across a homestead and think to pass it but all of a sudden the door swings open and a man falls out, legs scissoring across the porch until he falls flat in the front yard. Drawing your sword, you investigate him. Turning him over reveals a green and purple face, a mouth caked with vomit and dried blood, and hair falling out of his head. You leave the body and enter the homestead where you find more men like him. They\'re all southerners and seem to have come down with some northern illness that they are perhaps uninitiated to. Judging by the slovenly state of their equipment, they\'ve been holed up here for quite some time.\n\n One of the southerners reaches out to you with a decrepit hand.%SPEECH_ON%Please, send us to the Gilder. The light of this world is no more.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{Natrafiasz na zagrodę i masz zamiar ją ominąć, gdy nagle drzwi się otwierają i wypada z nich mężczyzna, nogami przecinając ganek, aż pada plackiem na podwórzu. Dobywasz miecza i go badajesz. Gdy go odwracasz, widzisz zieloną i purpurową twarz, usta pokryte wymiocinami i zaschniętą krwią oraz włosy wypadające z głowy. Zostawiasz ciało i wchodzisz do zagrody, gdzie znajdujesz więcej takich jak on. To wszyscy południowcy i wygląda na to, że dopadła ich jakaś północna choroba, z którą nie mieli wcześniej do czynienia. Sądząc po zaniedbanym stanie ich sprzętu, siedzą tu już od dłuższego czasu.\n\n Jeden z południowców wyciąga do ciebie zniszczoną rękę.%SPEECH_ON%Proszę, poślij nas do Gildera. Światło tego świata już zgasło.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Let us end them with dignity",
+					Text = "Zakończmy to z godnością",
 					function getResult( _event )
 					{
 						return "B";
@@ -21,7 +21,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "May the flies feast upon your decrepit flesh.",
+					Text = "Niech muchy ucztują na waszym zgniłym ciele.",
 					function getResult( _event )
 					{
 						return "C";
@@ -36,13 +36,13 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{The southerners are killed with dignity, or at least as much dignity a sword can afford. Of course, you kill them at length, not daring to lay a hand on their diseased bodies. After each is laid to rest, you take a look around the homestead. To your luck, and probably because the material was rubbing their skins raw, the sickly had lain some equipment off to the side. You have the brothers scrub it clean and take it with you onto the road. While leaving, there\'s some grousing about how maybe these men deserved worse, but others are quite fine with the mercy killings.}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{Południowców zabija się z godnością, albo przynajmniej z taką godnością, na jaką pozwala miecz. Oczywiście zabijasz ich z dystansu, nie odważając się dotknąć ich chorych ciał. Gdy każdy zostaje uśmiercony, rozglądasz się po zagrodzie. Na szczęście, zapewne dlatego, że materiał obcierał im skórę do krwi, chorzy odłożyli część wyposażenia na bok. Każesz braciom dokładnie je wyczyścić i zabierasz je ze sobą na drogę. Przy wyjściu słychać pomruki, że ci ludzie może zasługiwali na gorszy los, ale inni są całkiem zadowoleni z miłosiernego zakończenia.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Better they don\'t suffer any longer.",
+					Text = "Lepiej, żeby już dłużej nie cierpieli.",
 					function getResult( _event )
 					{
 						return 0;
@@ -57,7 +57,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Tools and Supplies."
+					text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] narzędzi i zapasów."
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -70,7 +70,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getEthnicity() == 1 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(1.0, "Approved of your decision to end the suffering of fellow Gilded");
+						bro.improveMood(1.0, "Poparł twoją decyzję o zakończeniu cierpienia braci Gildera");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -83,7 +83,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(0.75, "Disliked that you ended the suffering of southern invaders");
+						bro.worsenMood(0.75, "Nie podobało mu się, że zakończyłeś cierpienie południowych najeźdźców");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -100,13 +100,13 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{Some of the southerners\' gear has been taken off and placed about the room. You have the sellswords take these and scrub them clean. Going to the front door, you light a torch and tell them the Gilder shall be seeing them in his true self real soon. The soldiers beg for mercy, a writhing mass of silhouettes crawling toward you, groaning in weakness and fear. You close the door and set the rooftop alight before pitching the torch through a window.\n\nYou\'ve taught your men well to not take it personal on these sorts of decisions, but you suspect some in the %companyname% might not care for this one.}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{Część wyposażenia południowców została zdjęta i odłożona w pomieszczeniu. Każesz najemnikom zabrać je i wyszorować do czysta. Idąc do drzwi frontowych, zapalasz pochodnię i mówisz, że Gilder wkrótce ukaże im swe prawdziwe oblicze. Żołnierze błagają o litość, wijąca się masa sylwetek pełznie ku tobie, jęcząc ze słabości i strachu. Zamykasz drzwi i podpalasz dach, a potem wrzucasz pochodnię przez okno.\n\nDobrze nauczyłeś swoich ludzi, by nie brać takich decyzji do siebie, ale podejrzewasz, że niektórzy w %companyname% nie będą zadowoleni.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "They have no place invading the north.",
+					Text = "Nie mają prawa najeżdżać północy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -122,7 +122,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] Tools and Supplies."
+					text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] narzędzi i zapasów."
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -135,7 +135,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getEthnicity() == 1 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(1.0, "Disliked that you left fellow Gilded to suffer a slow death");
+						bro.worsenMood(1.0, "Nie podobało mu się, że zostawiłeś braci Gildera na powolną śmierć");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -148,7 +148,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(0.75, "Approved of your decision to leave southern invaders to die");
+						bro.improveMood(0.75, "Poparł twoją decyzję, by zostawić południowych najeźdźców na śmierć");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{

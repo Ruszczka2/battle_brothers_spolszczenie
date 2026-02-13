@@ -3,17 +3,17 @@ this.holywar_outro_north_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.crisis.holywar_outro_north";
-		this.m.Title = "During camp...";
+		this.m.Title = "W obozie...";
 		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_84.png[/img]{Faith placed in the old gods has been rewarded: the holy war is over, and the northerners stand victorious. Songs fill the air as crowds move as a mob, fists pumping, flags flying, becoming briefly uniform in a shared sense of piety. You stand by the wayside, your shoulders already wreathed in adornments, beads, necklaces, things of no material value, and yet they bear some weight which the wearer can only find by looking into the eyes of those who hand them out.\n\n Of course, certain dignities go unrealized in the celebration: the bodies of the defeated are put on display, thrashed in ways meant to satisfy the old gods that are watching, and holy totems of the Gilder are mocked, desecrated, and ultimately burned. And it is indeed certain that not a joyful soul will recognize you as a force in this cheerful culmination. You\'ve merely slipped right into the background once more, sellsword, crownling, interloper. But the %companyname% made a small fortune in the religious endeavors. Despite the smiles and laughs, you know that strife such as this is buried in the mind, not in the earth, and someday someone or something will come and resurrect it, and there the company will await another glorious payday. Or perhaps now would be a good time to put up the sword and enjoy your crowns?\n\n%OOC%You\'ve won! Battle Brothers is designed for replayability and for campaigns to be played until you\'ve beaten one or two late game crises. Starting a new campaign will allow you to try out different things in a different world.\n\nYou can also choose to continue your campaign for as long as you want. Just be aware that campaigns are not intended to last forever and you\'re likely to run out of challenges eventually.%OOC_OFF%}",
+			Text = "[img]gfx/ui/events/event_84.png[/img]{Wiara w starych bogów została nagrodzona: święta wojna dobiegła końca, a północniacy stoją zwycięsko. Pieśni wypełniają powietrze, a tłumy poruszają się jak jedna masa, pięści w górze, sztandary powiewają, na chwilę zjednoczone wspólnym poczuciem pobożności. Stoisz z boku, a twoje ramiona już oplecione są ozdobami, koralikami, naszyjnikami, rzeczami bez materialnej wartości, które jednak niosą ciężar odczuwalny tylko wtedy, gdy spojrzy się w oczy tych, którzy je wręczają.\n\n Oczywiście pewne godności umykają w świętowaniu: ciała pokonanych wystawia się na pokaz, szarpie w sposób mający zadowolić stare bogi, które patrzą, a święte totemy Gildera są wyśmiewane, profanowane i ostatecznie palone. I z pewnością żadna radosna dusza nie uzna cię za siłę w tym pogodnym zwieńczeniu. Po prostu ponownie zniknąłeś w tle, najemniku, koronniczku, przybyszu. Ale %companyname% zarobiła małą fortunę na religijnych przedsięwzięciach. Mimo uśmiechów i śmiechu wiesz, że taki konflikt jest pogrzebany w umyśle, nie w ziemi, i pewnego dnia ktoś lub coś go wskrzesi, a wtedy kompania będzie czekać na kolejną chwalebną wypłatę. A może to dobry moment, by odłożyć miecz i cieszyć się koronami?\n\n%OOC%Wygrałeś! Battle Brothers zaprojektowano z myślą o powtarzalności i kampaniach, które gra się do momentu pokonania jednego lub dwóch kryzysów późnej gry. Rozpoczęcie nowej kampanii pozwoli ci spróbować innych rzeczy w innym świecie.\n\nMożesz też kontynuować kampanię tak długo, jak chcesz. Pamiętaj jednak, że kampanie nie są zaprojektowane tak, by trwać wiecznie, i w końcu prawdopodobnie zabraknie wyzwań.%OOC_OFF%}",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The %companyname% needs their commander!",
+					Text = "%companyname% potrzebuje swojego dowódcy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -21,7 +21,7 @@ this.holywar_outro_north_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s time to retire from mercenary life. (End Campaign)",
+					Text = "Czas zakończyć życie najemnika. (Zakończ kampanię)",
 					function getResult( _event )
 					{
 						this.World.State.getMenuStack().pop(true);
@@ -59,12 +59,12 @@ this.holywar_outro_north_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_84.png[/img]{Uttering their name is to draw words from tongue to intemporal: the old gods. They are beyond time, and their vast number invoke awe over specificity. Endearing as this is to any listener familiar or not with the faith, it also brings greater weight to any defeat of those who follow these unbranded beings. The crusades are over, and the northerners have lost.\n\n You watch as the northerners try and explain it to one another how it came to pass. It was not a terrestrial defeat here, nor even a victory by the southerners - no, this was punishment. Northerners have grazed far from the holy lands, they have meadowed in the material world, priories and churches dot the realm, empty and hollow for far too long. Naturally, inquiries about the nature of this southern \'Gilder\' have also come, but they quickly pass. To even dwell on Him is to invite doubt, and right now doubt is as dangerous as any poison. Of course, the %companyname% stays at a distance. Sellswords that you are, you put faith in your sword and in the purse, and both got their dues in this war. The only philosophizing you\'ll be doing in the days to come is pondering just how soon the north and south will resume stating their differences. Perhaps now would be a good time to put up the sword and enjoy your crowns?\n\n%OOC%You\'ve won! Battle Brothers is designed for replayability and for campaigns to be played until you\'ve beaten one or two late game crises. Starting a new campaign will allow you to try out different things in a different world.\n\nYou can also choose to continue your campaign for as long as you want. Just be aware that campaigns are not intended to last forever and you\'re likely to run out of challenges eventually.%OOC_OFF%}",
+			Text = "[img]gfx/ui/events/event_84.png[/img]{Wypowiedzieć ich imię to wydobyć słowa z języka ku wieczności: stare bogi. Są poza czasem, a ich wielka liczba budzi podziw bardziej niż konkret. Choć brzmi to ujmująco dla każdego słuchacza, wierzącego czy nie, nadaje też większą wagę każdej porażce tych, którzy podążają za tymi nieoznaczonymi bytami. Krucjaty dobiegły końca, a północniacy przegrali.\n\n Patrzysz, jak północniacy próbują wyjaśnić sobie, jak do tego doszło. To nie była tu klęska ziemska, ani nawet zwycięstwo południowców - nie, to była kara. Północniacy odeszli zbyt daleko od świętych ziem, rozgościli się w świecie materialnym, a klasztory i kościoły od dawna stoją puste i wydrążone. Oczywiście pojawiają się pytania o naturę południowego \"Gildera\", ale szybko cichną. Samo roztrząsanie Go to zapraszanie wątpliwości, a teraz wątpliwość jest tak niebezpieczna jak trucizna. Oczywiście %companyname% trzyma się z boku. Jako najemnicy pokładacie wiarę w mieczu i sakiewce, i oba zostały w tej wojnie wynagrodzone. Jedyne filozofowanie, jakie cię czeka w najbliższych dniach, to zastanawianie się, jak szybko północ i południe znów zaczną wyliczać swoje różnice. A może to dobry moment, by odłożyć miecz i cieszyć się koronami?\n\n%OOC%Wygrałeś! Battle Brothers zaprojektowano z myślą o powtarzalności i kampaniach, które gra się do momentu pokonania jednego lub dwóch kryzysów późnej gry. Rozpoczęcie nowej kampanii pozwoli ci spróbować innych rzeczy w innym świecie.\n\nMożesz też kontynuować kampanię tak długo, jak chcesz. Pamiętaj jednak, że kampanie nie są zaprojektowane tak, by trwać wiecznie, i w końcu prawdopodobnie zabraknie wyzwań.%OOC_OFF%}",
 			Image = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "The %companyname% needs their commander!",
+					Text = "%companyname% potrzebuje swojego dowódcy!",
 					function getResult( _event )
 					{
 						return 0;
@@ -72,7 +72,7 @@ this.holywar_outro_north_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "It\'s time to retire from mercenary life. (End Campaign)",
+					Text = "Czas zakończyć życie najemnika. (Zakończ kampanię)",
 					function getResult( _event )
 					{
 						this.World.State.getMenuStack().pop(true);

@@ -5,11 +5,11 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.holywar_neutral_nomads";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{You come across a band of nomads. Despite the severity of a war going on, they do not treat you as a threat. One welcomes you with a drink and the shade of an umbrella which you accept.%SPEECH_ON%I hope your travels have been kind, Crownling. You share a similarity with us dune runners, that of the interloper. The grievances between the north and south need not concern us.%SPEECH_OFF%He sips his own drink and nods.%SPEECH_ON%Though I suspect you have made a great deal of coin in the conflict. Some of my countrymen would consider you most faithful to the Gilder because of it.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Napotykasz grupę nomadów. Mimo powagi toczącej się wojny nie traktują cię jak zagrożenia. Jeden wita cię napojem i cieniem pod parasolem, który przyjmujesz.%SPEECH_ON%Mam nadzieję, że podróże były dla ciebie łaskawe, Koronniku. Masz z nami, biegaczami wydm, coś wspólnego: jesteś przybyszem. Spory między północą a południem nie muszą nas obchodzić.%SPEECH_OFF%Popija swój napój i kiwa głową.%SPEECH_ON%Choć podejrzewam, że na tym konflikcie zbiłeś niemałą fortunę. Niektórzy z moich rodaków uznaliby cię za najwierniejszego Gilderowi właśnie z tego powodu.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -17,7 +17,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "You don\'t follow the beliefs of your countrymen?",
+					Text = "Nie podzielasz wierzeń swoich rodaków?",
 					function getResult( _event )
 					{
 						return "B";
@@ -28,7 +28,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "What is %wildmanfull% doing over there?",
+						Text = "Co robi tam %wildmanfull%?",
 						function getResult( _event )
 						{
 							return "D";
@@ -38,7 +38,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				}
 
 				this.Options.push({
-					Text = "And I\'m about to make even more after you\'re dead.",
+					Text = "A ja zaraz zarobię jeszcze więcej po twojej śmierci.",
 					function getResult( _event )
 					{
 						return "C";
@@ -50,13 +50,13 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{The nomad laughs.%SPEECH_ON%In matters of faith, why would anyone think alike?%SPEECH_OFF%He gathers up his rugs and umbrellas.%SPEECH_ON%I have heard in the north that there are wildmen like us.%SPEECH_OFF%You purse your lips, holding back a laugh.%SPEECH_ON%We\'ve men of the forest who have absconded civilization, aye. But they\'re a more... peculiar sort compared to you and yours. They are not so much like you.%SPEECH_OFF%Nodding, the nomad gives you a gift.%SPEECH_ON%But maybe they are and you just have not been listening to them.%SPEECH_OFF%He touches his chest with a fist then the nomads continue on their journey.}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Nomad śmieje się.%SPEECH_ON%W sprawach wiary, czemu ktokolwiek miałby myśleć tak samo?%SPEECH_OFF%Zbiera swoje dywany i parasole.%SPEECH_ON%Słyszałem, że na północy są dzicy ludzie tacy jak my.%SPEECH_OFF%Zaciskasz usta, powstrzymując śmiech.%SPEECH_ON%Mamy leśnych ludzi, którzy porzucili cywilizację, tak. Ale są... bardziej osobliwi w porównaniu do was. Niezbyt podobni do ciebie.%SPEECH_OFF%Nomad kiwa głową i daje ci dar.%SPEECH_ON%A może są, tylko nie słuchałeś.%SPEECH_OFF%Uderza pięścią w pierś, po czym nomadzi ruszają dalej.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Thank you for your hospitality.",
+					Text = "Dziękuję za gościnę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -71,13 +71,13 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zdobywasz " + item.getName()
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(0.5, "Enjoyed the hospitality of nomads");
+					bro.improveMood(0.5, "Cieszył się gościnnością nomadów");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -93,13 +93,13 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{You finish your drink and tell the man your time with him was all very interesting. He goes to shake your hand at which point you put the sword through him. The rest of the company joins in and the battle is as short-lived as your sense of hospitality. The nomads have little worthwhile in their holding, but no one will know of what you\'ve done here, though it\'s unlike they would care anyway.}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{Kończysz swój napój i mówisz mężczyźnie, że spędzony z nim czas był bardzo interesujący. Wyciąga rękę do uścisku, a wtedy przebijasz go mieczem. Reszta kompanii dołącza i walka trwa równie krótko, co twoje poczucie gościnności. Nomadzi mają niewiele wartościowych rzeczy, ale nikt nie dowie się, co tu zrobiłeś, choć i tak raczej by ich to nie obchodziło.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Take anything we can use.",
+					Text = "Zabierzcie wszystko, co się przyda.",
 					function getResult( _event )
 					{
 						return 0;
@@ -116,7 +116,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] Crowns"
+						text = "Zdobywasz [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] koron"
 					}
 				];
 				local item = this.new("scripts/items/supplies/dates_item");
@@ -124,14 +124,14 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zdobywasz " + item.getName()
 				});
 				item = this.new("scripts/items/supplies/rice_item");
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zdobywasz " + item.getName()
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -139,7 +139,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(0.75, "Disliked that you killed and robbed your hosts");
+						bro.worsenMood(0.75, "Nie podobało mu się, że zabiłeś i ograbiłeś gospodarzy");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -156,13 +156,13 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_170.png[/img]{%wildman% the wildman steps beneath the umbrella. The nomad stares at him, and the wildman at the nomad. You ask if they know each other. The nomad smiles.%SPEECH_ON%No, but yes. We\'ve kindred spirits. I can see it in his eyes.%SPEECH_OFF%The wildman hoots and grunts, then turns and leaves. When you return your gaze to the nomad he is holding out a gilded dagger.%SPEECH_ON%Treasures, golds, those things which shine and catch a man\'s eye, they carry little value to me. I found this upon one of the Vizier\'s guards. We had slain him and his caravan for their food and water, the things which I believe most important. You may have the dagger, as nothing more than a gift.%SPEECH_OFF%You take it, but warn him that if he ambushes you the way he did the Vizier\'s men that you will perhaps use the very same dagger against him. The nomad nods.%SPEECH_ON%And yet it is still my gift. I would find the occasion to be of such irony that it could only be a pleasure to die in such a manner. There are worse ways to go here in the desert, friend.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_170.png[/img]{%wildman% dziki człowiek wchodzi pod parasol. Nomad patrzy na niego, a dziki człowiek na nomada. Pytasz, czy się znają. Nomad uśmiecha się.%SPEECH_ON%Nie, ale tak. Mamy pokrewne dusze. Widzę to w jego oczach.%SPEECH_OFF%Dziki człowiek pohukuje i mruczy, po czym odchodzi. Gdy znów spoglądasz na nomada, trzyma pozłacany sztylet.%SPEECH_ON%Skarby, złoto, rzeczy, które lśnią i przyciągają wzrok, mają dla mnie niewielką wartość. Znalazłem to przy jednym ze strażników wezyra. Zabiliśmy go i jego karawanę dla jedzenia i wody, rzeczy, które uważam za najważniejsze. Możesz wziąć sztylet, jako dar.%SPEECH_OFF%Bierzesz go, ale ostrzegasz, że jeśli urządzi ci zasadzkę jak ludziom wezyra, być może użyjesz tego samego sztyletu przeciw niemu. Nomad kiwa głową.%SPEECH_ON%A jednak to wciąż mój dar. Uznałbym tę okazję za tak ironiczną, że śmierć w taki sposób byłaby przyjemnością. Są gorsze sposoby, by odejść tu, na pustyni, przyjacielu.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Thank you for your generosity.",
+					Text = "Dziękuję za hojność.",
 					function getResult( _event )
 					{
 						return 0;
@@ -178,13 +178,13 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
-					text = "You gain " + item.getName()
+					text = "Zdobywasz " + item.getName()
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(0.5, "Enjoyed the hospitality of nomads");
+					bro.improveMood(0.5, "Cieszył się gościnnością nomadów");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

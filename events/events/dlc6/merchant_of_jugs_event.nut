@@ -3,7 +3,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.merchant_of_jugs";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -50,27 +50,27 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "How refreshing!",
+				this.m.Title = "Wzdłuż drogi...";
 					function getResult( _event )
 					{
 						return 0;
-					}
+					Text = "[img]gfx/ui/events/event_171.png[/img]{Samotny kupiec zbliża się na wozie ciągniętym przez wielbłąda. W skrzyni wozu dudnią o siebie duże dzbany, a między ich pokrywami zwisają sznury suszonego mchu. Kupiec prostuje się na wielbłądzie i przerzuca nogi na jedną stronę kłębu zwierzęcia, stukając własnym butem w palcat dżokeja.%SPEECH_ON%Witajcie, podróżni, oby wasza droga do monet była dobrze Złocona. Moja była, choć obawiam się, że spotkaliśmy się w chwili, gdy moje osobliwe połyski są w rzadkiej liczbie. Zostało mi tylko kilka towarów, wszystkie do picia. 50 koron za dzban. Zainteresowani?%SPEECH_OFF%}",
 
 				}
 			],
 			function start( _event )
 			{
 				this.World.Assets.addMoney(-150);
-				this.List.push({
+							Text = "Weźmiemy wszystkie dzbany za 150 koron.",
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]150[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]150[/color] koron"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				for( local i = 0; i < 3; i = ++i )
 				{
-					foreach( bro in brothers )
+							Text = "Za 50 koron weźmiemy tylko jeden.",
 					{
 						if (this.Math.rand(1, 100) <= 33)
 						{
@@ -79,7 +79,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 							if (bro.getMoodState() > this.Const.MoodState.Neutral)
 							{
 								this.List.push({
-									id = 10,
+							Text = "Nie, dzięki.",
 									icon = this.Const.MoodStateIcon[bro.getMoodState()],
 									text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
 								});
@@ -94,14 +94,14 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 			ID = "C",
 			Text = "[img]gfx/ui/events/event_171.png[/img]{The merchant nods and you exchange crowns for one of the jugs. Despite only having a single jug of the drink, it will provide a refreshing respite from the hellish heat of the desert.}",
 			Image = "",
-			List = [],
+					Text = "[img]gfx/ui/events/event_171.png[/img]{Wymieniasz się za wszystko, co ma, a kupiec chętnie się zgadza. Gdy odchodzi, jego wielbłądy są odciążone i zdają się mieć sprężysty krok po tak długim dźwiganiu. Napój w dzbanach to mieszanka wody i innych dodatków, które zapewniają dobry, długotrwały smak. Orzeźwiający trunek w skądinąd piekielnych pustkowiach.}",
 			Characters = [],
 			Options = [
 				{
 					Text = "How refreshing!",
 					function getResult( _event )
 					{
-						return 0;
+							Text = "Jak orzeźwiające!",
 					}
 
 				}
@@ -112,9 +112,9 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]50[/color] Crowns"
+					text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]50[/color] koron"
 				});
-				local brothers = this.World.getPlayerRoster().getAll();
+							text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]150[/color] koron"
 
 				foreach( bro in brothers )
 				{
@@ -125,14 +125,14 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
 							this.List.push({
-								id = 10,
+									bro.improveMood(1.0, "Wypił bardzo orzeźwiający napój");
 								icon = this.Const.MoodStateIcon[bro.getMoodState()],
 								text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
 							});
 						}
 					}
 				}
-			}
+											text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
 
 		});
 	}
@@ -143,14 +143,14 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 		{
 			return;
 		}
-
+					Text = "[img]gfx/ui/events/event_171.png[/img]{Kupiec przytakuje i wymieniacie korony za jeden z dzbanów. Mimo że to tylko jeden dzban, napój zapewni orzeźwiający odpoczynek od piekielnego żaru pustyni.}",
 		local currentTile = this.World.State.getPlayer().getTile();
 
 		if (currentTile.Type != this.Const.World.TerrainType.Desert && currentTile.TacticalType != this.Const.World.TerrainTacticalType.DesertHills)
 		{
 			return;
 		}
-
+							Text = "Jak orzeźwiające!",
 		if (!currentTile.HasRoad)
 		{
 			return;
@@ -163,7 +163,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 
 		this.m.Score = 10;
 	}
-
+							text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]50[/color] koron"
 	function onPrepare()
 	{
 	}
@@ -172,7 +172,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 	{
 	}
 
-	function onClear()
+								bro.improveMood(1.0, "Wypił bardzo orzeźwiający napój");
 	{
 	}
 

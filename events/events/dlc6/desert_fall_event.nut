@@ -5,17 +5,17 @@ this.desert_fall_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.desert_fall";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_161.png[/img]{As you tread down the slope of a dune, %fallbro% loses his footing and starts to slide down. He yells out for help, flailing as he tumbles downward. Each tumble gains speed and air, every roll of the limbs seemingly arcing him higher into the air than the last. Despite the silky slipperiness of the dune\'s slope, the bottom of its valley is a hard firmament and the sellsword grinds across it until he comes to a complete stop. He\'s not dead but comes away a little banged up, with scrapes, bruises, burns, and a hint of embarrassment.}",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{Schodząc po zboczu wydmy, %fallbro% traci równowagę i zaczyna zjeżdżać. Krzyczy o pomoc, machając rękami, gdy stacza się w dół. Każde przewrotne uderzenie nabiera prędkości i wysokości, a każde przekręcenie kończyn zdaje się wyrzucać go wyżej w powietrze niż poprzednie. Mimo jedwabistej śliskości zbocza wydmy, dno doliny to twarde podłoże i najemnik szoruje po nim, aż w końcu się zatrzymuje. Nie jest martwy, ale wraca poturbowany, z zadrapaniami, siniakami, oparzeniami i odrobiną wstydu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Careful!",
+					Text = "Ostrożnie!",
 					function getResult( _event )
 					{
 						return 0;
@@ -25,7 +25,7 @@ this.desert_fall_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.SomeGuy.worsenMood(1.0, "Bruised his leg when sliding down a sand dune");
+				_event.m.SomeGuy.worsenMood(1.0, "Stłukł nogę, zjeżdżając z wydmy");
 				local injury = _event.m.SomeGuy.addInjury([
 					{
 						ID = "injury.bruised_leg",
@@ -37,7 +37,7 @@ this.desert_fall_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = injury.getIcon(),
-						text = _event.m.SomeGuy.getName() + " suffers " + injury.getNameOnly()
+						text = _event.m.SomeGuy.getName() + " cierpi na " + injury.getNameOnly()
 					}
 				];
 				this.Characters.push(_event.m.SomeGuy.getImagePath());

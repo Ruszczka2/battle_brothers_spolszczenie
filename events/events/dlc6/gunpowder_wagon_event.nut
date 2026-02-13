@@ -5,17 +5,17 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.gunpowder_wagon";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Wzdłuż drogi...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_171.png[/img]{A series of camels come into view. They\'ve dozens of satchels and knapsacks bobbing at their sides, and large umbrellas hoisted above. The camels are guided by a singular jockey riding the lead mount: an old man seated side-saddle with one foot in a stirrup and the other balancing a plate. He\'s eating nuts and berries and enjoying a cool beverage. He is nonplussed at the sight of you.%SPEECH_ON%Crownlings, yes? I can tell by your swagger, the braggadocio alchemists, transmuting raw gold in the copper of his fellow man\'s blood. I do not look down upon you, Crownling, and you shan\'t look upon me as prey to the brigandage that I know pulses whimsically in your heart.%SPEECH_OFF%He holds up a stick with a black mark at the top, his thumbnail pressed into it.%SPEECH_ON%I carry saltpeter for the Viziers\' various war machines. You see, the great cast iron shots do not travel high and far without my ingredient, this here gentle dust which fills my camels\' every bag. Were you to think yourself a brave robber I will set alight my wares and make us all together shine so bright the Gilder Himself shall shade His very eyes.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_171.png[/img]{Na horyzoncie pojawia się karawana wielbłądów. Po ich bokach kołyszą się dziesiątki toreb i sakw, a nad nimi niesione są duże parasole. Wielbłądy prowadzi jeden dżokej jadący na przednim zwierzęciu: stary człowiek siedzący bokiem, z jedną stopą w strzemieniu i drugą podtrzymującą talerz. Je orzechy i jagody, popijając chłodny napój. Na twój widok nie robi wrażenia.%SPEECH_ON%Koroniarze, tak? Widać po kroku, po zadziorze alchemików, którzy transmutują surowe złoto w miedzi krwi bliźniego. Nie patrzę na ciebie z góry, Koroniarzu, i ty nie spoglądaj na mnie jak na łup dla rozbójnictwa, które wiem, że kapryśnie pulsuje w twoim sercu.%SPEECH_OFF%Unosi kij z czarną kreską na końcu, zaciśniętym na nim paznokciem.%SPEECH_ON%Wiozę saletrę dla rozmaitych machin wojennych wezyrów. Widzisz, wielkie żeliwne pociski nie lecą wysoko i daleko bez mojego składnika, tego łagodnego pyłu, który wypełnia każdą sakwę moich wielbłądów. Gdybyś pomyślał, że jesteś dzielnym rabusiem, podpalę swoje towary i sprawię, że wszyscy razem zabłyśniemy tak jasno, iż sam Gilder osłoni oczy.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "You\'ve made your point. Do you sell anything?",
+					Text = "Rozumiem. Sprzedajesz coś?",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We\'ll leave you to your travels.",
+					Text = "Zostawimy cię w podróży.",
 					function getResult( _event )
 					{
 						return "E";
@@ -38,13 +38,13 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_171.png[/img]{The merchant grins.%SPEECH_ON%I\'m glad you have asked for I do at times tire of dealing with the Viziers\' feathery liveries. The blackguards and blaggards.%SPEECH_OFF%He snaps his fingers and points at you with fatherly sincerity.%SPEECH_ON%Conversation quickly becomes confabulation. As my father used to say, business is balladry. And we all need a bit of poetry in the dullness of our lives.%SPEECH_OFF%He nods and speaks with a tone you know he uses upon his fellow merchants.%SPEECH_ON%I have an expectation with the Viziers, but being robbed or losing items is also an expectation of this expectation. Upon this, I do have things to offer, which if agreed upon, will be \'stolen\' from me at your expense. But you can only have one of these availabilities: a Handgonne for but 2,500 crowns, or a Fire Lance for a mere 500 crowns. You may have only one of the two on offer.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_171.png[/img]{Kupiec uśmiecha się.%SPEECH_ON%Cieszę się, że pytasz, bo czasem męczy mnie interesowanie się z wezyrami w ich piórkowych liberiach. Łotry i szelmy.%SPEECH_OFF%Pstryka palcami i wskazuje na ciebie z ojcowską szczerością.%SPEECH_ON%Rozmowa szybko przeradza się w poufałą naradę. Jak mawiał mój ojciec, handel to ballada. A wszyscy potrzebujemy trochę poezji w szarości życia.%SPEECH_OFF%Kiwa głową i mówi tonem, którego używa wobec innych kupców.%SPEECH_ON%Mam zobowiązanie wobec wezyrów, ale bycie obrabowanym lub utrata towaru też jest oczekiwaniem tego zobowiązania. Dlatego mam coś do zaoferowania, co - jeśli się zgodzisz - zostanie mi \'skradzione\' na twój koszt. Ale możesz wziąć tylko jedną z tych opcji: handgonne za jedyne 2500 koron albo ognistą lancę za marne 500 koron. Tylko jedna z dwóch.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "We\'ll take the handgonne for 2,500 crowns.",
+					Text = "Weźmiemy handgonne za 2500 koron.",
 					function getResult( _event )
 					{
 						_event.m.Bought = 1;
@@ -53,7 +53,7 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "The firelance at 500 crowns for sure.",
+					Text = "Ognistą lancę za 500 koron.",
 					function getResult( _event )
 					{
 						_event.m.Bought = 2;
@@ -62,7 +62,7 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "For that price, none are of interest.",
+					Text = "Za taką cenę żadna nie jest warta uwagi.",
 					function getResult( _event )
 					{
 						return "D";
@@ -77,13 +77,13 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_171.png[/img]{You and the merchant come to an agree upon the items. After you make an exchange of coin and goods, he gets back up on his camel and thumbs his nose at you.%SPEECH_ON%I\'m so sorry to have been stolen from, this has truly been an awful day. Woe, the Viziers will be just as sad as I am.%SPEECH_OFF%The merchant sits sidesaddle again and begins to feast on his berries and nuts. He doesn\'t take up his reins, yet the camels seem to move as though on command.%SPEECH_ON%May your path be ever Gilded, Crownling, and may my abrogated goods provide you the shine you seek.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_171.png[/img]{Ty i kupiec dochodzicie do porozumienia w sprawie towaru. Po wymianie monet i dóbr wraca na wielbłąda i kpiąco pokazuje ci figę.%SPEECH_ON%Tak mi przykro, że mnie okradziono, to był naprawdę straszny dzień. Ach, wezyrowie będą równie smutni jak ja.%SPEECH_OFF%Kupiec znów siada bokiem i zaczyna ucztować na swoich jagodach i orzechach. Nie chwyta za wodze, a jednak wielbłądy ruszają, jakby na rozkaz.%SPEECH_ON%Niech twoja ścieżka zawsze będzie Złocona, Koroniarzu, i niech moje utracone dobra dadzą ci blask, którego szukasz.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "And may you find shine as well.",
+					Text = "I obyś i ty znalazł blask.",
 					function getResult( _event )
 					{
 						return 0;
@@ -101,20 +101,20 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + item.getIcon(),
-						text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+						text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 					});
 					item = this.new("scripts/items/ammo/powder_bag");
 					this.World.Assets.getStash().add(item);
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + item.getIcon(),
-						text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+						text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 					});
 					this.World.Assets.addMoney(-2500);
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] Crowns"
+						text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] koron"
 					});
 					break;
 
@@ -124,13 +124,13 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/items/" + item.getIcon(),
-						text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.getName()
+						text = "Zyskujesz " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 					});
 					this.World.Assets.addMoney(-500);
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "You spend [color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color] Crowns"
+						text = "Wydajesz [color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color] koron"
 					});
 					break;
 				}
@@ -139,13 +139,13 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_171.png[/img]{The merchant puts his hands out as though you are robbing him.%SPEECH_ON%It is no matter that you do not wish to have my goods, truly.%SPEECH_OFF%He crosses his legs to sit sidesaddle once more and the camels immediately begin to move as though this was their command. The merchant talks as he eats his nuts and berries.%SPEECH_ON%May your path be ever Gilded, Crownling, and may the Viziers of these deserts put you to good use.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_171.png[/img]{Kupiec wyciąga ręce, jakbyś go okradał.%SPEECH_ON%To nic, że nie chcesz moich towarów, naprawdę.%SPEECH_OFF%Krzyżuje nogi i znów siada bokiem, a wielbłądy natychmiast ruszają, jakby dostały rozkaz. Kupiec mówi, jedząc orzechy i jagody.%SPEECH_ON%Niech twoja ścieżka zawsze będzie Złocona, Koroniarzu, a wezyrowie tych pustyń niech zrobią z ciebie dobry użytek.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "I hope they do as well.",
+					Text = "Oby tak było.",
 					function getResult( _event )
 					{
 						return 0;
@@ -160,13 +160,13 @@ this.gunpowder_wagon_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_171.png[/img]{You nod and wish the man good luck in his travels. He bows respectively.%SPEECH_ON%May your path be ever Gilded, Crownling.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_171.png[/img]{Kiwasz głową i życzysz mu powodzenia w podróży. Kłania się z szacunkiem.%SPEECH_ON%Niech twoja ścieżka zawsze będzie Złocona, Koroniarzu.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "As yours.",
+					Text = "I twoja także.",
 					function getResult( _event )
 					{
 						return 0;

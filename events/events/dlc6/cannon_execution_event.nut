@@ -5,17 +5,17 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cannon_execution";
-		this.m.Title = "Along the road...";
+		this.m.Title = "Na drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_177.png[/img]{You come across a man in military garb with a pair of similarly dressed guards. Between them is a man with his arms and legs tied akimbo to a giant mortar, his torso facing into the barrel, his head resting atop its sights. He looks up at you with a side eye.%SPEECH_ON%Ah, traveler. I\'m in quite the predicament. You see, these fine, muted gentlemen wish to splash me across the sands using the greatest technical marvel of our age. Whilst I can see the benefit of avoiding the executioner\'s rusted sword, I must confess that to have my final moment be one of watching my own body parts bomb the desert creatures to be one of severe embarrassment. A fair penalty for some crimes, no doubt, but I am a mere thief.%SPEECH_OFF%The military executioner glances at you, but just as the thief said, he appears to be a mute. Or possibly deaf, as his role as mortarman might imply on its own.}",
+			Text = "[img]gfx/ui/events/event_177.png[/img]{Napotykasz mężczyznę w wojskowym stroju z parą podobnie ubranych strażników. Pomiędzy nimi jest człowiek z rękami i nogami rozpostartymi i przywiązanymi do ogromnego moździerza, tułowiem zwrócony do lufy, z głową opartą na celownikach. Spogląda na ciebie z ukosa.%SPEECH_ON%Ach, wędrowcze. Jestem w niemałej opresji. Widzisz, ci zacni, milczący panowie chcą rozchlapać mnie po piaskach, używając największego technicznego cudu naszych czasów. Choć widzę zaletę w uniknięciu zardzewiałego miecza kata, muszę przyznać, że mieć ostatnią chwilę na oglądaniu, jak moje własne części ciała bombardują pustynne stwory, to niezła kompromitacja. Słuszna kara za pewne zbrodnie, bez wątpienia, ale ja jestem zwykłym złodziejem.%SPEECH_OFF%Wojskowy kat spogląda na ciebie, ale, jak powiedział złodziej, wygląda na niemego. Albo głuchego, jak sugerowałaby sama rola moździerzowego.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "What is your crime, exactly?",
+					Text = "Jakie dokładnie masz przestępstwo?",
 					function getResult( _event )
 					{
 						return "B";
@@ -23,7 +23,7 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "This doesn\'t concern us.",
+					Text = "To nas nie dotyczy.",
 					function getResult( _event )
 					{
 						return 0;
@@ -38,13 +38,13 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_177.png[/img]{The executioner surprisingly answers, plugging one ear with a finger as he talks.%SPEECH_ON%Crownling, this does not concern you. Move along.%SPEECH_OFF%The thief tries to turn his head again.%SPEECH_ON%Ah, ah! He speaks! Wonderful. Let us hash this out like good gentlemen with sensibilities kind to but also ahead of our current era.%SPEECH_OFF%The executioner ignores the thief\'s articulate pleas.%SPEECH_ON%I shall make a deal for your neutrality, Crownling. When this thief is splashed across the desert, you may have whatever is inside of him for, you see, it is said that he carries a heart of gold.%SPEECH_OFF%The thief nervously speaks.%SPEECH_ON%That means something else where I\'m from.%SPEECH_OFF%You ask the executioner to explain. He states that the Gilder \'touches\' those who oppose Him, condemning and dooming the hated with insides made of gold. The condemnation is a level beyond being merely indebted. It sounds rather fantastical, even for you.}",
+			Text = "[img]gfx/ui/events/event_177.png[/img]{Kat, ku zaskoczeniu, odpowiada, zatykając jedno ucho palcem, gdy mówi.%SPEECH_ON%Koronniku, to nie twoja sprawa. Idź dalej.%SPEECH_OFF%Złodziej znów próbuje obrócić głowę.%SPEECH_ON%Ach, ach! Mówi! Wspaniale. Rozstrzygnijmy to jak dobrzy dżentelmeni o wrażliwości miłej, choć wyprzedzającej nasze czasy.%SPEECH_OFF%Kat ignoruje elokwentne błagania złodzieja.%SPEECH_ON%Zaproponuję układ w zamian za twoją neutralność, Koronniku. Gdy ten złodziej zostanie rozchlapany po pustyni, możesz zabrać cokolwiek jest w jego środku, bo, widzisz, mówi się, że nosi złote serce.%SPEECH_OFF%Złodziej nerwowo odzywa się.%SPEECH_ON%To znaczy coś innego tam, skąd pochodzę.%SPEECH_OFF%Prosisz kata o wyjaśnienie. Twierdzi, że Gilder "dotyka" tych, którzy mu się sprzeciwiają, potępiając i skazując znienawidzonych na wnętrzności ze złota. To potępienie wykracza poza zwykłe zadłużenie. Brzmi dość fantastycznie, nawet dla ciebie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Carry on with the execution then.",
+					Text = "W takim razie kontynuujcie egzekucję.",
 					function getResult( _event )
 					{
 						return "C";
@@ -52,7 +52,7 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "You need to stop this execution.",
+					Text = "Musisz przerwać tę egzekucję.",
 					function getResult( _event )
 					{
 						return "D";
@@ -67,13 +67,13 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_177.png[/img]{You\'re interested to see if what the executioner says is true and stand aside. The thief sighs.%SPEECH_ON%Well. Alright then. Just make sure that when they write about me, that this execution isn\'t canon. That\'s \'canon\' spelled with one-%SPEECH_OFF%The explosion disintegrates the man and the pulverizing force shunts a wave of sand clear of the mortar itself, expelling a cloud of dust and gore, swirling through the air like some storm of viscera, and a few moments later the body parts begin to pitter-patter about the ground. None of these bits and pieces are golden. In fact, most are charred black or vibrantly red, freshly bared to the world to see. The executioner wipes the gunpowder from his face.%SPEECH_ON%It appears we were wrong. The thief shall be compensated by the Gilder Himself, oh to be that lucky.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_177.png[/img]{Chcesz sprawdzić, czy kat ma rację, więc stajesz z boku. Złodziej wzdycha.%SPEECH_ON%Cóż. No to dobrze. Tylko dopilnujcie, żeby kiedy będą o mnie pisać, ta egzekucja nie była kanonem. To \"kanon\" przez jedno-%SPEECH_OFF%Wybuch rozrywa mężczyznę, a miażdżąca siła wypycha falę piasku z samego moździerza, wyrzucając chmurę pyłu i krwi, wirującą w powietrzu jak burza wnętrzności, a po chwili części ciała zaczynają stukać o ziemię. Żaden z tych kawałków nie jest złoty. Właściwie większość jest zwęglona na czarno lub jaskrawoczerwona, świeżo odsłonięta na widok świata. Kat ociera twarz z prochu.%SPEECH_ON%Wygląda na to, że się myliliśmy. Złodziej zostanie wynagrodzony przez samego Gildera, ach, mieć takie szczęście.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Guess that\'s that.",
+					Text = "No to po sprawie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -88,13 +88,13 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_177.png[/img]{You inform the guards and executioner that you\'ll be stopping the execution. They immediately stand back from the mortar. The executioner plugs his ear again.%SPEECH_ON%A stay of execution? Or did you say to start it?%SPEECH_OFF%The thief nervously laughs.%SPEECH_ON%Yes, Crownling, please clear that up for our friend here.%SPEECH_OFF%The matter is settled slowly and for all to hear. Surprisingly, the guards agree. They see you not as a random intervention, but as one sent from the Gilder Himself, for why else would you be there? The thief is cut free from the device and he is handed over to the company. He holds his hand out.%SPEECH_ON%All funny business aside, I\'ll fight for you, uh, hmmm... the %companyname%. Quaint. But I\'m no ordinary thief, I\'m a man of pride, and a man with a sense of duty, and a man with a sense of crowns!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_177.png[/img]{Informujesz strażników i kata, że przerwiesz egzekucję. Natychmiast odsuwają się od moździerza. Kat znów zatyka ucho.%SPEECH_ON%Wstrzymanie egzekucji? Czy powiedziałeś, żeby ją rozpocząć?%SPEECH_OFF%Złodziej nerwowo się śmieje.%SPEECH_ON%Tak, Koronniku, proszę wyjaśnić to naszemu przyjacielowi.%SPEECH_OFF%Sprawę rozstrzygacie powoli i tak, by wszyscy usłyszeli. Ku zaskoczeniu, strażnicy się zgadzają. Nie widzą w tobie przypadkowej interwencji, lecz kogoś zesłanego przez samego Gildera - bo dlaczego inaczej miałbyś tu być? Złodziej zostaje uwolniony z urządzenia i oddany kompanii. Wyciąga dłoń.%SPEECH_ON%Pomijając całe to zamieszanie, będę walczył dla ciebie, uh, hmmm... %companyname%. Urocze. Ale nie jestem zwykłym złodziejem, jestem człowiekiem dumy, człowiekiem obowiązku i człowiekiem koron!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Welcome to the company, I suppose.",
+					Text = "Witaj w kompanii, jak mniemam.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -106,7 +106,7 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "We saved your life. That doesn\'t mean you\'re welcome with us.",
+					Text = "Uratowaliśmy ci życie. To nie znaczy, że jesteś u nas mile widziany.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
@@ -123,12 +123,12 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"thief_southern_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "Only by your timely intervention was %name% saved from execution by being shot at with a giant mortar. An eccentric thief, his latest failed attempt to burglarize a Vizier\'s palace was deemed a good reason to set a very clear deterrent for anyone else harboring similar plans.";
+				_event.m.Dude.getBackground().m.RawDescription = "Tylko dzięki twojej szybkiej interwencji %name% został ocalony przed egzekucją, podczas której miał zostać wystrzelony z ogromnego moździerza. Ekscentryczny złodziej, jego ostatnia nieudana próba okradzenia pałacu wezyra została uznana za dobry powód, by ustanowić bardzo wyraźne ostrzeżenie dla każdego, kto ma podobne plany.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head));
-				_event.m.Dude.worsenMood(1.0, "Almost got executed by a technological marvel in spectacular fashion");
+				_event.m.Dude.worsenMood(1.0, "O mało nie został spektakularnie stracony przez techniczny cud");
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
 
