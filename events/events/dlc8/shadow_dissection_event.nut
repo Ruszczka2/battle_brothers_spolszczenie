@@ -215,7 +215,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstajac, %monk% mnich wznosi prosbe do starych bogow. Jedna dlon spoczywa na piersi, druga wznosi sie, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni bysmy sie obawiac, lecz ognia, ktory je stworzył, bo to plomien bogowie nam dali, bysmy mogli przenosic dzien w noc, czynic nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzycza: "hear hear!"}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstajac, %monk% mnich wznosi prosbe do starych bogow. Jedna dlon spoczywa na piersi, druga wznosi sie, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni bysmy sie obawiac, lecz ognia, ktory je stworzył, bo to plomien bogowie nam dali, bysmy mogli przenosic dzien w noc, czynic nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzycza: \"hear hear!\"}",
 			Banner = "",
 			Characters = [],
 			Options = [

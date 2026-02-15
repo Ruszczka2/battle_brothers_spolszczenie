@@ -1,7 +1,6 @@
 this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/event", {
 	m = {
-		LastCombatID = 0,
-						Text = "Weź go jako dłużnika Gildera, aby mógł zasłużyć na zbawienie.",
+		LastCombatID = 0
 	},
 	function create()
 	{
@@ -14,7 +13,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 			Image = "",
 			List = [],
 			Characters = [],
-						Text = "Nie jest nam potrzebny.",
+			Options = [
 				{
 					Text = "Weź go jako dłużnika Gildera, aby mógł zasłużyć na zbawienie.",
 					function getResult( _event )

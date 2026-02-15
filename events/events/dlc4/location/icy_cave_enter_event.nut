@@ -59,7 +59,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 					  // [057]  OP_CLOSE          0      6    0    0
 				}
 
-				$[stack offset 0].Options.push({
+				this.Options.push({
 					Text = "Powinniśmy opuścić to miejsce.",
 					function getResult( _event )
 					{
@@ -116,7 +116,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 					  // [041]  OP_CLOSE          0      5    0    0
 				}
 
-				$[stack offset 0].Options.push({
+				this.Options.push({
 					Text = "Powinniśmy opuścić to miejsce.",
 					function getResult( _event )
 					{
@@ -274,7 +274,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 					  // [057]  OP_CLOSE          0      5    0    0
 				}
 
-				$[stack offset 0].Options.push({
+				this.Options.push({
 					Text = "Nie warto. Powinniśmy opuścić to miejsce.",
 					function getResult( _event )
 					{

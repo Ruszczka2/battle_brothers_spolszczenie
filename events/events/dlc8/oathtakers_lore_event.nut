@@ -104,7 +104,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		if (n == 0)
 		{
 			_to.push({
-				Text = $[stack offset 0].m.Texts[3],
+				Text = this.m.Texts[3],
 				function getResult( _event )
 				{
 					return 0;
