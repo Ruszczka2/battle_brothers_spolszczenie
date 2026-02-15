@@ -7,8 +7,8 @@ this.beast_hunter_background <- this.inherit("scripts/skills/backgrounds/charact
 		this.m.Name = "Pogromca Bestii";
 		this.m.Icon = "ui/backgrounds/background_57.png";
 		this.m.BackgroundDescription = "Pogromcy Bestii zawodowo zajmują się polowaniem na potworne bestie, z różnych odległości.";
-		this.m.GoodEnding = "%name% retired from the company and bought the deed to an abandoned castle. There he commands a troop of fellow beast slayers who journey the land protecting it from monsters. Last you spoke to him he had a raven-haired lady friend who did not take kindly to your presence, nor the presence of anyone else for that matter. You\'re sure he\'s happy.";
-		this.m.BadEnding = "After leaving the %companyname%, %name% retired from beast slaying altogether and last you heard he fathered an albino daughter. Unfortunately, rumors spread quickly about the girl having supernatural powers and her mother was executed by fire. The father and child were never caught nor seen again.";
+		this.m.GoodEnding = "%name% odszedł z kompanii i kupił akt własności opuszczonego zamku. Tam dowodzi oddziałem pogromców bestii, którzy przemierzają krainę, broniąc jej przed potworami. Ostatnim razem, gdy z nim rozmawiałeś, miał rudowłosą towarzyszkę, która niezbyt przychylnie znosiła twoją obecność, a także obecność kogokolwiek innego. Jesteś pewien, że jest szczęśliwy.";
+		this.m.BadEnding = "Po odejściu z %companyname% %name% całkiem zrezygnował z polowania na bestie i, jak ostatnio słyszałeś, został ojcem albinotycznej córki. Niestety pogłoski o jej nadnaturalnych mocach szybko się rozeszły i jej matkę spalono na stosie. Ojca i dziecka już nigdy nie złapano ani nie widziano.";
 		this.m.HiringCost = 150;
 		this.m.DailyCost = 15;
 		this.m.Excluded = [

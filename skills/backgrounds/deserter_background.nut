@@ -7,8 +7,8 @@ this.deserter_background <- this.inherit("scripts/skills/backgrounds/character_b
 		this.m.Name = "Dezerter";
 		this.m.Icon = "ui/backgrounds/background_07.png";
 		this.m.BackgroundDescription = "Dezerterzy otrzymali nieco szkolenia bitewnego, choć zazwyczaj nie są zbyt chętni, by je wykorzystać.";
-		this.m.GoodEnding = "%name% the deserter continued fighting for the %companyname%, ever striving to redeem his name. Word has it that during a brutal fight with orcs, he dove headfirst into a crowd of greenskins, surfing across the top of their shocked heads. His heroism rallied the men to an incredible victory and he lives out his days getting toasted in every bar he enters.";
-		this.m.BadEnding = "You heard %name% the deserter actually renewed his title and fled a battle the %companyname% had with some greenskins. Goblins caught him out in the woods and turned his head into a goblet for an orc warlord.";
+		this.m.GoodEnding = "%name%, dezerter, nadal walczył dla %companyname%, wciąż próbując odkupić swe imię. Mówi się, że podczas brutalnej bitwy z orkami skoczył głową wprost w tłum zielonoskórych, sunąc po czubkach ich zaskoczonych głów. Jego bohaterstwo porwało ludzi do niewiarygodnego zwycięstwa, a teraz spędza dni, pijąc w każdej gospodzie, do której wejdzie.";
+		this.m.BadEnding = "Słyszałeś, że %name%, dezerter, naprawdę odnowił swój przydomek i uciekł z bitwy %companyname% przeciw zielonoskórym. Gobliny dorwały go w lesie i zrobiły z jego głowy puchar dla orczego wodza.";
 		this.m.HiringCost = 85;
 		this.m.DailyCost = 11;
 		this.m.Excluded = [

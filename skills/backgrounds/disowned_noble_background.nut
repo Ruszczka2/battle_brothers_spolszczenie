@@ -7,8 +7,8 @@ this.disowned_noble_background <- this.inherit("scripts/skills/backgrounds/chara
 		this.m.Name = "Wydziedziczony Szlachcic";
 		this.m.Icon = "ui/backgrounds/background_08.png";
 		this.m.BackgroundDescription = "Wydziedziczona szlachta często zdobyła nieco umiejętności w walce wręcz na dworze.";
-		this.m.GoodEnding = "A noble at heart, the disowned nobleman %name% returned to his family. Word has it he kicked in the doors and demanded a royal seat. An usurper challenged him in combat and, well, %name% learned a lot in his days with the %companyname% and he now sits on a very, very comfortable throne.";
-		this.m.BadEnding = "A man of nobility at heart, %name% the disowned noble returned to his family home. Word has it an usurper arrested him at the gates. His head currently rests on a pike with crows for a crown.";
+		this.m.GoodEnding = "Szlachcic z serca, wydziedziczony %name% wrócił do rodziny. Mówi się, że wyważył drzwi i zażądał królewskiego miejsca. Uzurpator wyzwał go na pojedynek i, cóż, %name% sporo nauczył się w czasach %companyname%, więc teraz zasiada na bardzo, bardzo wygodnym tronie.";
+		this.m.BadEnding = "Szlachcic z serca, %name%, wydziedziczony, wrócił do rodzinnej siedziby. Mówi się, że uzurpator aresztował go u bram. Jego głowa spoczywa teraz na pice, a kruki robią za koronę.";
 		this.m.HiringCost = 135;
 		this.m.DailyCost = 17;
 		this.m.Excluded = [

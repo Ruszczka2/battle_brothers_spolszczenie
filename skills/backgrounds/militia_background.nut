@@ -7,8 +7,8 @@ this.militia_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Name = "Milicjant";
 		this.m.Icon = "ui/backgrounds/background_35.png";
 		this.m.BackgroundDescription = "Każdy, kto był w milicji, otrzymał przynajmniej podstawowe szkolenie w zakresie walki.";
-		this.m.GoodEnding = "A former militiaman such as %name% eventually left the %companyname%. He traveled the lands, visiting villages and helping them establish credible militias with which to defend themselves. Finding success in an increasingly dangerous world, %name% eventually came to be a known name, called upon as a sort of \'fixer\' to come and ensure these villages would remain safe. Last you heard, he\'s purchased a plot of land and was raising a family far from the strife of the world.";
-		this.m.BadEnding = "%name% left the collapsing company and returned to his village. Back in the militia, it wasn\'t long until {greenskins | raiders} attacked and he was called to action. It\'s said that he stood tall, rallying the defense as he slew through countless enemies before succumbing to mortal wounds. When you visited the village, you found children playfighting beneath a statue made in the militiaman\'s image.";
+		this.m.GoodEnding = "%name%, dawny milicjant, w końcu opuścił %companyname%. Wędrował po ziemiach, odwiedzał wsie i pomagał im tworzyć wiarygodne milicje do samoobrony. Odnosząc sukces w coraz niebezpieczniejszym świecie, stał się znanym nazwiskiem, wzywanym jako swoisty fachowiec, by zapewnić wsiom bezpieczeństwo. Ostatnio słyszałeś, że kupił kawałek ziemi i zakłada rodzinę z dala od światowych waśni.";
+		this.m.BadEnding = "%name% opuścił rozpadającą się kompanię i wrócił do swej wioski. Wrócił do milicji i niedługo potem {greenskins | raiders} zaatakowali, wzywając go do walki. Mówi się, że stał niewzruszony, zagrzewając obrońców i kładąc pokotem niezliczonych wrogów, nim padł od śmiertelnych ran. Gdy odwiedziłeś wioskę, zobaczyłeś dzieci udające walkę pod pomnikiem upamiętniającym milicjanta.";
 		this.m.HiringCost = 100;
 		this.m.DailyCost = 10;
 		this.m.Excluded = [

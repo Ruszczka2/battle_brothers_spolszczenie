@@ -7,8 +7,8 @@ this.gambler_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Name = "Hazardzista";
 		this.m.Icon = "ui/backgrounds/background_20.png";
 		this.m.BackgroundDescription = "Hazardziści zwykle mają dobry refleks i wyższą stanowczość od swoich przeciwników przy stole karcianym.";
-		this.m.GoodEnding = "It was perhaps a risk to take a gambler like %name% into your ranks. Now, many days later it\'s obvious you made the right choice. Last you heard, he was still with the company and uses his earnings to enrich his habits. Rumor has it that, through all his winnings, he\'s secretly become one of the richest men in all the land. You think it\'s a bunch of hogwash, but a surprising number of mayors have become suddenly lax on gaming...";
-		this.m.BadEnding = "%name% the gambler retired from the declining company and returned to his gambling ways. He quickly acquired great debts he could not pay. You saw him begging on a street corner with one of his hands missing and gaps in his teeth. You dropped a few crowns into his tin and said a few words, but he did not recognize you.";
+		this.m.GoodEnding = "Być może było ryzykiem przyjąć takiego hazardzistę jak %name% do swoich szeregów. Teraz, po wielu dniach, widać, że dokonałeś właściwego wyboru. Ostatnio słyszałeś, że wciąż jest w kompanii i używa swoich zarobków, by podsycać nawyki. Mówi się, że dzięki wygranym stał się potajemnie jednym z najbogatszych ludzi w całej krainie. Uważasz to za stek bzdur, ale zaskakująco wielu burmistrzów nagle złagodniało wobec hazardu...";
+		this.m.BadEnding = "%name%, hazardzista, odszedł z podupadającej kompanii i wrócił do swoich gier. Szybko popadł w wielkie długi, których nie mógł spłacić. Widziałeś go żebrzącego na rogu ulicy, z brakującą dłonią i ubytkami w zębach. Wrzuciłeś mu kilka koron do puszki i powiedziałeś parę słów, ale cię nie rozpoznał.";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

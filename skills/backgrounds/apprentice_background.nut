@@ -7,8 +7,8 @@ this.apprentice_background <- this.inherit("scripts/skills/backgrounds/character
 		this.m.Name = "Czeladnik";
 		this.m.Icon = "ui/backgrounds/background_40.png";
 		this.m.BackgroundDescription = "Czeladnicy często są złaknieni wiedzy i uczą się szybciej od innych.";
-		this.m.GoodEnding = "Perhaps one of the sharpest men you\'ve ever met, %name% the apprentice was the quickest learner in the %companyname%. With plenty of crowns stored, he retired from fighting to take his talents to the business world. Last you heard he was doing very well for himself across multiple trades. If you ever have a son, this is the man you\'ll send him to for apprenticeship.";
-		this.m.BadEnding = "%name% the apprentice was, by far, the quickest learner in the %companyname%. Little surprise then that he was also one of the quickest to recognize its inevitable downfall and leave while he still could. Had he been born in a different time he would have gone on to do great things. Instead, many wars, invasions, and plagues spreading across the land ultimately ensured %name% and many other talented men went to total waste.";
+		this.m.GoodEnding = "Być może jeden z najbystrzejszych ludzi, jakich kiedykolwiek spotkałeś, %name%, czeladnik, był najszybszym uczniem w %companyname%. Zgromadziwszy niemało koron, wycofał się z walki i przeniósł swoje talenty do świata interesów. Ostatnio słyszałeś, że świetnie sobie radzi w wielu fachach. Jeśli kiedykolwiek będziesz miał syna, to właśnie do niego poślesz go na termin.";
+		this.m.BadEnding = "%name%, czeladnik, był zdecydowanie najszybszym uczniem w %companyname%. Nic więc dziwnego, że jako jeden z pierwszych rozpoznał nieunikniony upadek kompanii i odszedł, póki jeszcze mógł. Gdyby urodził się w innym czasie, dokonałby wielkich rzeczy. Zamiast tego liczne wojny, najazdy i plagi rozlewające się po krainie sprawiły, że %name% i wielu innych utalentowanych ludzi poszło na marne.";
 		this.m.HiringCost = 90;
 		this.m.DailyCost = 8;
 		this.m.Excluded = [

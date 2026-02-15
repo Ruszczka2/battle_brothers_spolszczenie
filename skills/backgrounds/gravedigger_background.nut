@@ -7,8 +7,8 @@ this.gravedigger_background <- this.inherit("scripts/skills/backgrounds/characte
 		this.m.Name = "Grabarz";
 		this.m.Icon = "ui/backgrounds/background_28.png";
 		this.m.BackgroundDescription = "Gabarze przyzwyczajeni są do pracy fizycznej i zadawania się ze zmarłymi.";
-		this.m.GoodEnding = "With the great successes of the %companyname%, %name% the gravedigger got continued practice in his trade. As the crowns began to stack, he eventually left the company and returned to the graveyards. Last you heard, he had retired to digging holes again and was happily raising a family of sextons.";
-		this.m.BadEnding = "The way you heard things, %name% the gravedigger was one of the last men to leave the %companyname%. With hardly a crown to his name, he slipped hard into drinking and last you heard his body was found in a muddied gully.";
+		this.m.GoodEnding = "Przy wielkich sukcesach %companyname% %name%, grabarz, miał nadal wiele okazji, by praktykować swój fach. Gdy korony zaczęły się piętrzyć, w końcu opuścił kompanię i wrócił na cmentarze. Ostatnio słyszałeś, że znów kopie doły i z radością wychowuje rodzinę kościelnych.";
+		this.m.BadEnding = "Z tego, co słyszałeś, %name%, grabarz, był jednym z ostatnich, którzy opuścili %companyname%. Z ledwie jedną koroną przy duszy, stoczył się w alkoholizm i ostatnio mówiło się, że jego ciało znaleziono w zabłoconym jarze.";
 		this.m.HiringCost = 50;
 		this.m.DailyCost = 5;
 		this.m.Excluded = [

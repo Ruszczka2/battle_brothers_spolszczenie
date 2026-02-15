@@ -7,8 +7,8 @@ this.beggar_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.Name = "Żebrak";
 		this.m.Icon = "ui/backgrounds/background_18.png";
 		this.m.BackgroundDescription = "Żebracy to niezbyt zdeterminowane osoby, a życie na ulicy zdaje się mieć wyniszczający wpływ na ich zdrowie.";
-		this.m.GoodEnding = "Having enough of all the fighting, %name% the once-beggar retired from the %companyname%. You know the man made a pretty crown in his time with the mercenary company, yet the other day you saw him out begging again. You asked if he\'d wasted all his money and he laughed. He said he\'d purchased land and was doing just fine. Then he held out his little tin and asked for a crown. You gave him two.";
-		this.m.BadEnding = "The fighting life is a rough one, and %name% the once-beggar saw fit to retire from it before it became a deadly one. Unfortunately, he went back to beggaring. Word has it that a nobleman cleaned a city of riff-raff and sent them marching north despite it being winter. Cold and hungry, %name% died on the side of a road, a tin cup frozen to his finger.";
+		this.m.GoodEnding = "Mając dość walk, %name%, dawniej żebrak, odszedł z %companyname%. Wiesz, że w czasie służby w kompanii najemników zebrał niemało koron, a jednak ostatnio widziałeś go znów żebrzącego na ulicy. Zapytałeś, czy roztrwonił wszystkie pieniądze, a on się roześmiał. Powiedział, że kupił ziemię i radzi sobie świetnie. Potem wyciągnął swoją blaszaną puszkę i poprosił o koronę. Dałeś mu dwie.";
+		this.m.BadEnding = "Życie w walce bywa ciężkie, więc %name%, dawniej żebrak, uznał za stosowne odejść, zanim stanie się śmiertelne. Niestety, wrócił do żebractwa. Mówi się, że pewien szlachcic oczyścił miasto z hołoty i kazał im maszerować na północ, mimo że była zima. Zimny i głodny, %name% zmarł przy drodze, z blaszaną miską przymarzniętą do palca.";
 		this.m.HiringCost = 30;
 		this.m.DailyCost = 3;
 		this.m.Excluded = [

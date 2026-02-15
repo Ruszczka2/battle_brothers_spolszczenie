@@ -7,8 +7,8 @@ this.kings_guard_background <- this.inherit("scripts/skills/backgrounds/characte
 		this.m.Name = "Gwardzista Królewski";
 		this.m.Icon = "ui/backgrounds/background_59.png";
 		this.m.BackgroundDescription = "";
-		this.m.GoodEnding = "You thought %name% a simple peasant when you found him freezing in the wastes of the north. As it turned out, he was very much a King\'s Guard, not only in title but in action. He fought like a man protecting his liege from the world at large. Thankfully, for a time, that \'liege\' happened to be you. Last you heard he traveled to the southern realms and is protecting an upstart nomad king trying to overthrow the local Viziers.";
-		this.m.BadEnding = "You never truly found out which king %name% supposedly \'guarded\' in his days before joining the %companyname%, but it matters not now. After your abrupt retirement, the King\'s Guard took himself to the southern deserts. He served a Vizier for a time but failed to protect the royal from a concubine\'s poison. For punishment, %name%\'s equipment was melted into a pot and poured down his throat.";
+		this.m.GoodEnding = "Gdy znalazłeś %name% zamarzającego na północnych pustkowiach, wziąłeś go za zwykłego chłopa. Jak się okazało, był prawdziwym Gwardzistą Królewskim, nie tylko z tytułu, ale i z czynów. Walczył jak człowiek, który chroni swego seniora przed całym światem. Na szczęście przez pewien czas tym \"seniorem\" byłeś ty. Ostatnio słyszałeś, że wyruszył do południowych krain i strzeże młodego króla nomadów, próbującego obalić miejscowych wezyrów.";
+		this.m.BadEnding = "Nigdy tak naprawdę nie dowiedziałeś się, jakiego króla %name% rzekomo \"strzegł\" przed dołączeniem do %companyname%, ale teraz nie ma to znaczenia. Po twojej nagłej emeryturze Gwardzista Królewski udał się na południowe pustynie. Przez pewien czas służył wezyrowi, ale nie zdołał ochronić władcy przed trucizną nałożnicy. Za karę ekwipunek %name% przetopiono w kocioł i wlano mu do gardła.";
 		this.m.HiringCost = 0;
 		this.m.DailyCost = 30;
 	}

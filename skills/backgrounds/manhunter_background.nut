@@ -7,8 +7,8 @@ this.manhunter_background <- this.inherit("scripts/skills/backgrounds/character_
 		this.m.Name = "Łowca Głów";
 		this.m.Icon = "ui/backgrounds/background_62.png";
 		this.m.BackgroundDescription = "Łowcy głów są przyzwyczajeni do polowania na ludzi w surowym środowisku południowych kresów.";
-		this.m.GoodEnding = "%name% the manhunter stuck with the %companyname% for a long while after you left it. You haven\'t gotten much word of the man other than he\'s found far more income in the world of sellswords than that of hunting down the indebted.";
-		this.m.BadEnding = "Upset with how his time in the company of the %companyname% has gone, %name% the manhunter deserted and returned south. It\'s hard to say what became of him, but the business of tracking and hunting human prey carries endless dangers. The only news you have of him is ancillary to his vocation: that of numerous indebted uprisings with many manhunters being buried alive or fed to a variety of desert-borne creatures.";
+		this.m.GoodEnding = "%name% trzymał się %companyname% długo po twoim odejściu. Niewiele o nim słyszałeś poza tym, że w świecie najemników zarabia znacznie więcej niż na tropieniu zadłużonych.";
+		this.m.BadEnding = "%name%, rozczarowany tym, jak potoczył się jego czas w %companyname%, zdezerterował i wrócił na południe. Trudno powiedzieć, co się z nim stało, ale tropienie i polowanie na ludzi niesie niekończące się niebezpieczeństwa. Jedyne wieści, jakie masz, są poboczne: liczne powstania zadłużonych, podczas których wielu łowców głów zakopano żywcem albo nakarmiono rozmaitymi pustynnymi bestiami.";
 		this.m.HiringCost = 120;
 		this.m.DailyCost = 10;
 		this.m.Excluded = [

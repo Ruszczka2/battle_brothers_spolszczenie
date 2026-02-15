@@ -5,9 +5,9 @@ this.oath_of_valor_ambition <- this.inherit("scripts/ambitions/oaths/oath_ambiti
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_valor";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "We must have the courage to face down any challenge, no matter how daunting.\nLet us take an Oath of Valor and prove our bravery to all!";
-		this.m.TooltipText = "\"Remember in times of peril that courage can overcome skill. While little can be learned through bravery alone, sheer determination shall keep you alive and that is well enough as any conclusion to the lessons of battle.\" - Young Anselm";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{A man cannot thrive merely on skill and capability. Many know how to swing a sword, heft an axe, or loose an arrow. It is not in martial matters where man is molded, but within himself, within the corridors of his own heart. The steel forged there can\'t ever be defeated, for even a felled man of valor shall find himself eternal in the tomes of this world, celebrated in awe, and his name carried on the lips of those like him.\n\nNow that the company has proven itself of the firmest element, it is ready to accept another Oath!}";
+		this.m.ButtonText = "Musimy mieć odwagę stawić czoło każdemu wyzwaniu, choćby było jak najstraszniejsze.\nZłóżmy Przysięgę Męstwa i dowiedźmy naszej odwagi wszystkim!";
+		this.m.TooltipText = "\"Pamiętaj w chwilach grozy, że odwaga potrafi pokonać kunszt. Choć niewiele da się nauczyć z samej brawury, czysta determinacja utrzyma cię przy życiu i to wystarczy jako podsumowanie lekcji bitewnych.\" - Młody Anzelm";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{Człowiek nie przetrwa dzięki samej umiejętności i sprawności. Wielu wie, jak machać mieczem, dźwigać topór czy wypuszczać strzałę. Nie w sprawach wojennych człowiek jest kształtowany, lecz w sobie samym, w korytarzach własnego serca. Stal wykuta tam nigdy nie zostanie pokonana, bo nawet poległy człowiek męstwa pozostanie wieczny w tomach tego świata, czczony w podziwie, a jego imię niesione będzie na ustach mu podobnych.\n\nTeraz, gdy kompania dowiodła, że jest z najszlachetniejszego kruszcu, jest gotowa przyjąć kolejną Przysięgę!}";
 		this.m.SuccessButtonText = "{Za Młodego Anzelma! | Za Przysięgających! | I śmierć Dawcom Przysięgi!}";
 		this.m.OathName = "Przysięga Męstwa";
 		this.m.OathBoonText = "Twoi ludzie nigdy nie uciekną z bitwy.";

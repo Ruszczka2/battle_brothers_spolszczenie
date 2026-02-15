@@ -7,8 +7,8 @@ this.caravan_hand_background <- this.inherit("scripts/skills/backgrounds/charact
 		this.m.Name = "Pomocnik Karawany";
 		this.m.Icon = "ui/backgrounds/background_12.png";
 		this.m.BackgroundDescription = "Pomocnicy karawany przyzwyczajeni są do długich i wyczerpujących podróży.";
-		this.m.GoodEnding = "%name% the once-caravan hand retired from fighting. He used his mercenary money to start a trade-guarding business that specializes in transporting goods through dangerous lands.";
-		this.m.BadEnding = "%name% the caravan hand retired back into guarding trade wagons. He died when defending against an ambush by brigands. They took his shirt and left his body in a ditch.";
+		this.m.GoodEnding = "%name%, dawniej pomocnik karawany, odszedł z walk. Za najemnicze pieniądze założył interes ochrony handlu, specjalizujący się w przewożeniu towarów przez niebezpieczne ziemie.";
+		this.m.BadEnding = "%name%, pomocnik karawany, wrócił do pilnowania wozów handlowych. Zginął, broniąc się przed zasadzką zbójców. Zabrali mu koszulę i zostawili ciało w rowie.";
 		this.m.HiringCost = 75;
 		this.m.DailyCost = 8;
 		this.m.Excluded = [

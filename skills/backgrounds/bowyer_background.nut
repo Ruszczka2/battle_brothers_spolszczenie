@@ -7,8 +7,8 @@ this.bowyer_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.Name = "Łuczarz";
 		this.m.Icon = "ui/backgrounds/background_29.png";
 		this.m.BackgroundDescription = "Łuczarze zwykle mają nieco wiedzy na temat tego, jak posługiwać się bronią, którą wytwarzają.";
-		this.m.GoodEnding = "While at a jousting tournament, a young boy was using an oddly shaped, yet perfectly crafted bow. His aiming hand was shaky, yet the arrows did not wobble upon being loosed. After he won the competition, you inquired about where the boy had gotten such an incredible bow. He stated that a bowyer by the name of %name% had crafted it. Apparently, he\'s known for making the finest bows in all the land!";
-		this.m.BadEnding = "After you left the %companyname%, you sent a letter inquiring about the status of %name% the bowyer. You got word that he had discovered a way to craft the finest bow possible and, instead of giving this secret to the company, he departed to start his own business. He did not get far: whatever he had learned about his trade died with him on a muddy road out {north | south | west | east} of here, his body ironically skewered with what is said to have been a dozen arrows.";
+		this.m.GoodEnding = "Podczas turnieju rycerskiego pewien chłopiec używał dziwnie ukształtowanego, lecz perfekcyjnie wykonanego łuku. Ręka, którą celował, drżała, a jednak strzały nie chwiały się po wypuszczeniu. Kiedy wygrał zawody, spytałeś, skąd ma tak niezwykły łuk. Odpowiedział, że wykonał go łuczarz imieniem %name%. Podobno jest znany z najlepszych łuków w całej krainie!";
+		this.m.BadEnding = "Po twoim odejściu z %companyname% wysłałeś list, pytając o los %name%, łuczarza. Dotarła do ciebie wieść, że odkrył sposób na wyrabianie najdoskonalszego łuku i zamiast zdradzić sekret kompanii, odszedł, by założyć własny interes. Nie zaszedł daleko: to, czego się nauczył o swym fachu, zginęło wraz z nim na błotnistej drodze {na północ | na południe | na zachód | na wschód} stąd, a jego ciało, ironicznie, przebito tym, co rzekomo było tuzinem strzał.";
 		this.m.HiringCost = 80;
 		this.m.DailyCost = 8;
 		this.m.Excluded = [

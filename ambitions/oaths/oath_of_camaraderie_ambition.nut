@@ -7,9 +7,9 @@ this.oath_of_camaraderie_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_camaraderie";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "No single Oathtaker can face all the evils of the world alone.\nLet us take an Oath of Camaraderie, lest we lose sight of our true allies!";
-		this.m.TooltipText = "Young Anselm believed that, on occasion, it was right to bring as many to a battle as one could muster, even if the great throngs did threaten the chain of command. Indeed, \"All men deserve to stand by their brothers.\"";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{Power in numbers, camaraderie in brotherhood. While fielding additional men encumbered your ability to command, over the course of every battle the %companyname% quickly realized that the chaos of combat could be overcome by standing shoulder to shoulder with the man beside you, trusting him to do his job and him trusting that you do yours. The experience has hardened the company to the havocs of war.\n\nNow that the company knows it can confront its enemies by trusting its own members, it is ready to take on another Oath!}";
+		this.m.ButtonText = "Żaden Dawca Przysięgi nie stawi sam czoła wszystkiemu złu świata.\nZłóżmy Przysięgę Koleżeństwa, by nie stracić z oczu naszych prawdziwych sprzymierzeńców!";
+		this.m.TooltipText = "Młody Anzelm wierzył, że czasem słusznie jest zebrać na bitwę tylu, ilu zdoła się zebrać, choć wielkie tłumy potrafią zagrozić łańcuchowi dowodzenia. \"Wszyscy ludzie zasługują, by stanąć u boku swych braci.\"";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{Siła w liczbie, koleżeństwo w braterstwie. Choć większa liczba ludzi utrudniała dowodzenie, w toku każdej bitwy %companyname% szybko pojęło, że chaos walki można przezwyciężyć, stając ramię w ramię z człowiekiem obok, ufając, że wykona swoje zadanie, i dając mu pewność, że ty zrobisz swoje. To doświadczenie zahartowało kompanię na spustoszenia wojny.\n\nTeraz, gdy kompania wie, że może stawić czoło wrogom, ufając własnym ludziom, jest gotowa podjąć kolejną Przysięgę!}";
 		this.m.SuccessButtonText = "{Za Młodego Anzelma! | Za Przysięgających! | I śmierć Dawcom Przysięgi!}";
 		this.m.OathName = "Przysięga Koleżeństwa";
 		this.m.OathBoonText = "Możesz zabrać do bitwy nawet [color=" + this.Const.UI.Color.PositiveValue + "]14[/color] ludzi.";

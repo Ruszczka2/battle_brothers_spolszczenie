@@ -7,8 +7,8 @@ this.cultist_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Name = "Kultysta";
 		this.m.Icon = "ui/backgrounds/background_34.png";
 		this.m.BackgroundDescription = "Kultyści są niezwykle stanowczy w szerzeniu dalej swojego kultu.";
-		this.m.GoodEnding = "The cultist, %name%, left the company with a band of cloaked converts. You know not what became of him, but every so often you have dreams in which he appears. He\'s often standing by himself in a great void and there is always someone, or something, lingering in the black beyond. Every night, this image gets a little more clear, and each night you find yourself staying up later and later just to avoid dreaming at all.";
-		this.m.BadEnding = "You heard that %name%, the cultist, left the company at some juncture and went out to spread his faith. There\'s no telling what became of him, but there was a recent inquisition against unholy faiths and hundreds of \'men in dark cloaks with even darker intentions\' were burned at the stake across the realm.";
+		this.m.GoodEnding = "Kultysta, %name%, opuścił kompanię z bandą zakapturzonych neofitów. Nie wiesz, co się z nim stało, ale od czasu do czasu śnisz, że się pojawia. Często stoi samotnie w wielkiej pustce, a w czerni poza nią zawsze czai się ktoś lub coś. Każdej nocy ten obraz staje się odrobinę wyraźniejszy i każdej nocy siedzisz coraz dłużej, byle tylko w ogóle nie zasnąć.";
+		this.m.BadEnding = "Słyszałeś, że %name%, kultysta, w pewnym momencie opuścił kompanię i ruszył szerzyć swoją wiarę. Nie wiadomo, co się z nim stało, ale niedawno odbyła się inkwizycja przeciw bezbożnym kultom i setki \"mężczyzn w ciemnych płaszczach z jeszcze mroczniejszymi zamiarami\" spalono na stosie w całym królestwie.";
 		this.m.HiringCost = 50;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

@@ -8,7 +8,7 @@ this.have_armor_upgrades_ambition <- this.inherit("scripts/ambitions/ambition", 
 		this.m.ButtonText = "Nudne zbroje są niegodne prawdziwego najemnika.\nOzdobimy nasz sprzęt trofeami z naszych wyczynów!";
 		this.m.UIText = "Posiadaj co najmniej 6 pancerzy z dodatkami";
 		this.m.TooltipText = "Posiadaj co najmniej 6 pancerzy z dodatkami. Kup te dodatki, złup, lub zamów u taksydermisty, a następnie połącz je ze zbrojami twoich ludzi.";
-		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]When you took command of the company it was a ragtag band of men clinging for life, an ad hoc assembly of sellswords stitched together with nothing if not sheer stubbornness and absolute contempt for common sense. Now you watch as the men walk around like frayed revenants of an unworldly wild, their armor adorned with hideous scalps and pelts and bones, the ill-shapen recreation of conquest fitted such that others may know the %companyname% could not be sorted by any measure known to the earth whether it be monster or man.";
+		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]Gdy obejmowałeś dowództwo, kompania była zbieraniną ludzi kurczowo trzymających się życia, doraźną zlepioną bandą najemników spajaną jedynie uporem i pogardą dla zdrowego rozsądku. Teraz patrzysz, jak ludzie krążą niczym postrzępione upiory z dzikich bezdroży, w zbrojach ozdobionych ohydnymi skalpami, skórami i kośćmi, pokrętną rekonstrukcją podboju, tak wyeksponowaną, by każdy wiedział, że %companyname% nie da się zmierzyć żadną ziemską miarą, czy to potwora, czy człowieka.";
 		this.m.SuccessButtonText = "To się nam przysłuży.";
 	}
 

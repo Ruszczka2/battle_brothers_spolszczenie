@@ -7,8 +7,8 @@ this.houndmaster_background <- this.inherit("scripts/skills/backgrounds/characte
 		this.m.Name = "Psiarz";
 		this.m.Icon = "ui/backgrounds/background_50.png";
 		this.m.BackgroundDescription = "Psiarze przywykli do zajmowania się psami wojennymi.";
-		this.m.GoodEnding = "Dogs were not simply \'hounds\' to %name%, despite his title as \'houndmaster.\' To him, they were the most loyal friends of his life. After leaving the company, he discovered an ingenious way to breed the animals specifically tailored to the desires of the nobility. Wanted a brutish beast for a guard dog? He could do it. Wanted something small and cuddly for the children? He could do that, too. The former mercenary now earns an incredible earning doing what he loves - working with dogs.";
-		this.m.BadEnding = "What\'s merely a hound to one man is a loyal beast to %name%. After leaving the company, the houndmaster went out to work for the nobility. Unfortunately, he refused to let hundreds of his dogs be used as a battle vanguard to be thrown away for some short-lived tactical advantage. He was hanged for his \'traitorous ideals\'.";
+		this.m.GoodEnding = "Psy nie były dla %name% jedynie \"ogarami\", mimo tytułu \"psiarza\". Dla niego były najwierniejszymi przyjaciółmi życia. Po opuszczeniu kompanii odkrył pomysłowy sposób hodowli zwierząt dopasowanych do życzeń szlachty. Chcieli brutalnej bestii na psa stróżującego? Potrafił to zrobić. Chcieli czegoś małego i przytulnego dla dzieci? To też. Były najemnik zarabia teraz fortunę, robiąc to, co kocha - pracując z psami.";
+		this.m.BadEnding = "To, co dla jednego jest tylko ogarem, dla %name% jest wierną bestią. Po odejściu z kompanii psiarz zaczął pracować dla szlachty. Niestety odmówił, by setki jego psów poszły jako straż przednia i zostały rzucone na śmierć dla krótkotrwałej przewagi taktycznej. Powieszono go za \"zdradzieckie ideały\".";
 		this.m.HiringCost = 80;
 		this.m.DailyCost = 7;
 		this.m.Excluded = [

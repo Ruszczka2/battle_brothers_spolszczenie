@@ -7,8 +7,8 @@ this.messenger_background <- this.inherit("scripts/skills/backgrounds/character_
 		this.m.Name = "Posłaniec";
 		this.m.Icon = "ui/backgrounds/background_46.png";
 		this.m.BackgroundDescription = "Posłańcy są przyzwyczajeni do długich i męczących podróży.";
-		this.m.GoodEnding = "The oddity of having %name% the messenger in your band did not seem so strange after he showed himself to be a killer sellsword. As far as you know, he\'s still with the company, preferring the march of a mercenary to that of a messenger. You don\'t blame him: an errand boy must bend the knee to every nobleman he comes across, but in the company of sellswords he\'ll no doubt get the occasional chance to kill one of them bastards. Not a hard trade off to accept!";
-		this.m.BadEnding = "%name% the messenger departed the %companyname% and returned to being an errand boy for the letters of lieges. You tried to find out where the man had gone to and eventually tracked him down - or what was left of him. Unfortunately, \"don\'t shoot the messenger\" is not an adage well followed in these fractured lands.";
+		this.m.GoodEnding = "Dziwactwo posiadania w bandzie posłańca %name% przestało dziwić, gdy okazał się zabójczym najemnikiem. Z tego co wiesz, wciąż jest z kompanią, woląc marsz najemnika od biegu posłańca. I nic dziwnego: gońca zmusza się do kłaniania każdemu szlachcicowi, jakiego spotka, ale w kompanii najemników z pewnością od czasu do czasu może zabić któregoś z tych drani. Niezbyt trudny wybór!";
+		this.m.BadEnding = "%name% odszedł z %companyname% i wrócił do roli posłańca roznoszącego listy możnych. Próbowałeś dowiedzieć się, gdzie trafił, i w końcu go odnalazłeś - albo to, co po nim zostało. Niestety, powiedzenie 'nie zabijaj posłańca' nie jest w tych rozbitych krainach zbyt przestrzegane.";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

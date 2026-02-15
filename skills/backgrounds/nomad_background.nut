@@ -7,8 +7,8 @@ this.nomad_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Name = "Koczownik";
 		this.m.Icon = "ui/backgrounds/background_63.png";
 		this.m.BackgroundDescription = "Każdy koczownik, który jest w stanie przeżyć na pustyni, musi mieć nieco doświadczenia w walce.";
-		this.m.GoodEnding = "The nomad %name% left the %companyname% a few months after yourself. He apparently traveled south and now leads what they\'re calling the \'City on Legs,\' a huge band of peoples that roam the deserts. It is apparently so rich and successful a society that the Viziers worry their own people will flock to it.";
-		this.m.BadEnding = "You learned that %name% the nomad departed the company with the hope of finding new plains to roam. Apparently, he got the idea in his head that he would travel far to the north and land cozily with the barbarians there. To his credit, the barbarians and nomads share a similar lifestyle, culture, language, religion, laws, struggles, conflicts, and general appearances aside. The nomad was butchered almost instantly upon entrance to a barbarian encampment and his remains eaten in a warrior ritual.";
+		this.m.GoodEnding = "%name% opuścił %companyname% kilka miesięcy po tobie. Podobno wyruszył na południe i teraz przewodzi temu, co nazywają 'Miastem na Nogach' - ogromnej hordzie ludzi przemierzających pustynie. Społeczność jest ponoć tak bogata i udana, że Wezyrowie obawiają się, iż ich własny lud do niej dołączy.";
+		this.m.BadEnding = "Dowiedziałeś się, że %name% opuścił kompanię z nadzieją znalezienia nowych równin do wędrówki. Wpadł na pomysł, by ruszyć daleko na północ i ułożyć się z tamtejszymi barbarzyńcami. Trzeba przyznać, że barbarzyńcy i nomadzi mają podobny styl życia, kulturę, język, religię, prawa, zmagania i konflikty, nie licząc ogólnego wyglądu. Koczownik został niemal natychmiast zarąbany po wejściu do barbarzyńskiego obozu, a jego szczątki zjedzono w wojennym rytuale.";
 		this.m.HiringCost = 200;
 		this.m.DailyCost = 28;
 		this.m.Excluded = [

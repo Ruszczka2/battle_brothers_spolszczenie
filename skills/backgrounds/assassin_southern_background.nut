@@ -7,8 +7,8 @@ this.assassin_southern_background <- this.inherit("scripts/skills/backgrounds/ch
 		this.m.Name = "Asasyn";
 		this.m.Icon = "ui/backgrounds/background_53.png";
 		this.m.BackgroundDescription = "Asasyni muszą być szybcy i umiejętnie posługiwać się bronią.";
-		this.m.GoodEnding = "%name% the assassin departed the %companyname% with a large chest of gold and traveled far away. From what rumors you\'ve heard, he built a castle in the mountains east of the southern kingdoms. You\'re not sure if it\'s true, but there\'s been a steady increase in dead viziers and lords alike as of late.";
-		this.m.BadEnding = "%name% disappeared not long after your retirement from the %companyname%. The assassin presumably does not want to be found and there\'s no telling where he is. In moments of honesty, you tell others you wished you never hired him at all. You just can\'t shake the terror that it is you he is stalking and hunting, and you spend many nights with one eye open, looking for the man in black with the crooked dagger.";
+		this.m.GoodEnding = "%name%, asasyn, opuścił %companyname% z wielką skrzynią złota i udał się daleko. Z pogłosek wynika, że zbudował zamek w górach na wschód od południowych królestw. Nie wiesz, czy to prawda, ale ostatnio coraz częściej słychać o martwych wezyrach i lordach.";
+		this.m.BadEnding = "%name% zniknął niedługo po twoim odejściu z %companyname%. Asasyn zapewne nie chce, by go odnaleziono, i nie wiadomo, gdzie się znajduje. W chwilach szczerości przyznajesz innym, że wolałbyś nigdy go nie zatrudniać. Nie potrafisz pozbyć się lęku, że to ciebie tropi i ściga, więc wiele nocy spędzasz z jednym okiem otwartym, wypatrując człowieka w czerni z wygiętym sztyletem.";
 		this.m.HiringCost = 800;
 		this.m.DailyCost = 25;
 		this.m.Excluded = [

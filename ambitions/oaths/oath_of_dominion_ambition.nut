@@ -5,9 +5,9 @@ this.oath_of_dominion_ambition <- this.inherit("scripts/ambitions/oaths/oath_amb
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_dominion";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "Beasts have always threatened civilization.\nLet us take an Oath of Dominion and stake our claim against the tides of nature!";
-		this.m.TooltipText = "\"We are from the beasts, but the beasts wish to have us back. Distance oneself from nature\'s primitiveness, prove your worth over Her such that your humanity be held in the grip of your own hands and seen through thine own eyes.\" - Young Anselm";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]There is no more common a menace in this world than that of the common beast. And yet, despite this rampant disease of creatures, very few men are willing to take up arms and go seeking their vanquishment. It is only you all, the %companyname%, who swore an oath to slay the monsters, and slay them you did. With steady hands and stilled hearts, you kept to that Oath.\n\nTriumphant over beasts and monsters, the men are ready to take on whatever\'s next!";
+		this.m.ButtonText = "Bestie od zawsze zagrażały cywilizacji.\nZłóżmy Przysięgę Zwierzchnictwa i postawmy się przypływom natury!";
+		this.m.TooltipText = "\"Jesteśmy z bestii, ale bestie pragną nas z powrotem. Odgrodź się od prymitywności natury i dowiedź swej wartości nad Nią, by twoje człowieczeństwo spoczywało w uścisku własnych dłoni i było widziane własnymi oczami.\" - Młody Anzelm";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]Nie ma w tym świecie bardziej pospolitego zagrożenia niż zwykła bestia. A jednak, mimo tej plagi stworzeń, niewielu ludzi gotowych jest chwycić za broń i wyruszyć na ich zgładzenie. Tylko wy, %companyname%, złożyliście przysięgę, by zabijać potwory, i tak też uczyniliście. Ze spokojnymi dłońmi i uciszonymi sercami dochowaliście Przysięgi.\n\nTriumfując nad bestiami i potworami, ludzie są gotowi na to, co będzie dalej!";
 		this.m.SuccessButtonText = "{Za Młodego Anzelma! | Za Przysięgających! | I śmierć Dawcom Przysięgi!}";
 		this.m.RewardTooltip = "";
 		this.m.OathName = "Przysięga Zwierzchnictwa";

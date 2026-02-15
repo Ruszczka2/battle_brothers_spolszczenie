@@ -7,8 +7,8 @@ this.peddler_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Name = "Handlarz";
 		this.m.Icon = "ui/backgrounds/background_19.png";
 		this.m.BackgroundDescription = "Handlarze nie są przyzwyczajeni do ciężkiej pracy fizycznej i wojaczki, ale doskonale sobie radzą z targowaniem się o niższe ceny.";
-		this.m.GoodEnding = "A man of the sale, %name% the peddler couldn\'t stay fighting for long. He eventually left the %companyname% to go out and start his own business. Recently, you got word that he was selling trinkets with the company\'s sigil on them. You specifically told him he can do whatever he wants except just this one thing, but apparently your warning merely fostered the idea in him. When you went to tell him to stop, he slammed a crown-bulging satchel on his rather ornate table, saying it was your \'cut.\' He sells those trinkets to this day.";
-		this.m.BadEnding = "With hard times hitting the %companyname%, many brothers saw fit to return to their old lives. %name% the peddler was no different. Last you heard he got the tar beaten out of him trying to sell stolen wares that \'fell off the wagon\' to the very merchant which they originally belonged.";
+		this.m.GoodEnding = "Człowiek od handlu, %name% nie mógł długo walczyć. W końcu opuścił %companyname%, by założyć własny interes. Niedawno dotarła do ciebie wieść, że sprzedaje bibeloty z sygnetem kompanii. Wyraźnie powiedziałeś mu, że może robić wszystko poza tą jedną rzeczą, ale najwyraźniej ostrzeżenie tylko go zachęciło. Gdy poszedłeś kazać mu przestać, trzasnął na swoim dość ozdobnym stole sakiewką wypchaną koronami, mówiąc, że to twoja 'działka'. Sprzedaje te bibeloty do dziś.";
+		this.m.BadEnding = "Gdy %companyname% dopadły ciężkie czasy, wielu braci uznało, że pora wrócić do dawnego życia. %name% nie był wyjątkiem. Ostatnio słyszałeś, że porządnie go obito, gdy próbował sprzedać kradzione towary, które 'spadły z wozu', dokładnie temu kupcowi, do którego pierwotnie należały.";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

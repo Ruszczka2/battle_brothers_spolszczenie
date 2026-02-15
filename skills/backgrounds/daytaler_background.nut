@@ -7,8 +7,8 @@ this.daytaler_background <- this.inherit("scripts/skills/backgrounds/character_b
 		this.m.Name = "Robotnik";
 		this.m.Icon = "ui/backgrounds/background_36.png";
 		this.m.BackgroundDescription = "Robotnicy są używani do wszelakiej pracy fizycznej, choć w niczym się nie wyróżniają.";
-		this.m.GoodEnding = "%name% the daytaler retired from fighting and, well, he keeps working with his hands. Now he\'s back to laying bricks and carrying hay instead of slaying beasts and crushing heads. He took all his mercenary money to purchase a bit of land and settle down. While not the richest man, word has it that there is hardly a happier man in the realm.";
-		this.m.BadEnding = "%name% retired from fighting while he still had most of his fingers and toes intact. He went back to working for the nobility. Last you heard he was out {south | north | east | west} building a great tower for some nobleman. Sadly, you also heard that tower collapsed halfway through its construction with many workers going down with it.";
+		this.m.GoodEnding = "%name%, robotnik, odszedł z walk i, cóż, nadal pracuje rękami. Zamiast zarzynać bestie i miażdżyć czaszki, wrócił do układania cegieł i noszenia siana. Wszystkie najemnicze pieniądze przeznaczył na zakup skrawka ziemi i spokojne życie. Choć nie jest najbogatszym człowiekiem, mówią, że trudno znaleźć szczęśliwszego w całej krainie.";
+		this.m.BadEnding = "%name% odszedł z walk, gdy wciąż miał większość palców u rąk i nóg. Wrócił do pracy dla szlachty. Ostatnio słyszałeś, że budował wielką wieżę dla jakiegoś możnego gdzieś {na południu | na północy | na wschodzie | na zachodzie}. Niestety dotarła też wieść, że wieża runęła w połowie budowy, grzebiąc wielu robotników.";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

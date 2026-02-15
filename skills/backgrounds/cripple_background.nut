@@ -7,8 +7,8 @@ this.cripple_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Name = "Kaleka";
 		this.m.Icon = "ui/backgrounds/background_51.png";
 		this.m.BackgroundDescription = "Jedyną szybką rzeczą odnośnie kaleki jest jego spodziewany zgon w prawdziwej bitwie.";
-		this.m.GoodEnding = "It\'s shocking that a man of %name%\'s stature survived at all, but the cripple did retire from the %companyname% with a sizeable stack of crowns. He runs an orphanage these days, spending his crowns to help the world\'s broken and abandoned children. That, or it\'s just a front for cheap labor. Can\'t be too sure these days.";
-		this.m.BadEnding = "When you left the %companyname%, there was one thing you were almost certain of: that damned cripple, %name%, wouldn\'t last long. Despite all odds, he did survive. Long enough in fact to retire himself, albeit departing with about as many crowns as he had when he joined up. You\'ve no idea what became of him, but surely he\'s dead by now. Surely, right?";
+		this.m.GoodEnding = "Szokujące, że człowiek takiego stanu jak %name% w ogóle przeżył, lecz kaleka odszedł z %companyname% z pokaźnym plikiem koron. Dziś prowadzi sierociniec, wydając swe pieniądze na pomoc porzuconym i złamanym dzieciom świata. Albo to tylko przykrywka dla taniej siły roboczej. Trudno dziś mieć pewność.";
+		this.m.BadEnding = "Kiedy opuściłeś %companyname%, byłeś niemal pewien jednej rzeczy: ten przeklęty kaleka, %name%, nie pociągnie długo. Mimo wszelkich przeciwności przeżył. Wystarczająco długo, by odejść na emeryturę, choć z niemal tyloma koronami, ile miał, gdy dołączył. Nie masz pojęcia, co się z nim stało, ale na pewno już nie żyje. Prawda?";
 		this.m.HiringCost = 30;
 		this.m.DailyCost = 3;
 		this.m.Excluded = [

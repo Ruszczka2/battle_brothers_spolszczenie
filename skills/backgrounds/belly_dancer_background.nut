@@ -7,8 +7,8 @@ this.belly_dancer_background <- this.inherit("scripts/skills/backgrounds/charact
 		this.m.Name = "Tancerz Brzucha";
 		this.m.Icon = "ui/backgrounds/background_64.png";
 		this.m.BackgroundDescription = "";
-		this.m.GoodEnding = "%name% the southern belly dancer left the company in good time. While his... particularities made him an excellent soldier, it was not his life\'s passion. To entertain, through rhythmic, confusingly erotic motions, that is what he\'s wanted. The last you heard, he was in the court of a Vizier where he serves not only as an entertainer, but, thanks to his time with the %companyname%, also as an adviser on marital matters.";
-		this.m.BadEnding = "As the company failed to achieve the success you had hoped for, many departed its ranks. The southern belly dancer %name% joined them. Unfortunately, he sought to ply his trade in the north, thinking he may be able to spread his culture there. The indigenous population was quick to accuse him of \'unregulated body sorcery\' and burn him at the stake.";
+		this.m.GoodEnding = "%name%, południowy tancerz brzucha, opuścił kompanię w porę. Choć jego... osobliwości czyniły go znakomitym żołnierzem, nie była to pasja jego życia. Chciał bawić, rytmicznymi, osobliwie zmysłowymi ruchami, oto czego pragnął. Ostatnio słyszałeś, że przebywa na dworze wezyra, gdzie służy nie tylko jako artysta, lecz dzięki czasowi spędzonemu w %companyname% także jako doradca w sprawach małżeńskich.";
+		this.m.BadEnding = "Ponieważ kompania nie osiągnęła sukcesu, na jaki liczyłeś, wielu odeszło z jej szeregów. Południowy tancerz brzucha %name% do nich dołączył. Niestety, postanowił wykonywać swój fach na północy, sądząc, że zdoła tam szerzyć własną kulturę. Miejscowi szybko oskarżyli go o \"nieuregulowaną magię ciała\" i spalili na stosie.";
 		this.m.HiringCost = 0;
 		this.m.DailyCost = 20;
 		this.m.Excluded = [

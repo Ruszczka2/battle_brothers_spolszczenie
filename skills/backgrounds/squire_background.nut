@@ -7,8 +7,8 @@ this.squire_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.Name = "Giermek";
 		this.m.Icon = "ui/backgrounds/background_03.png";
 		this.m.BackgroundDescription = "Giermkowie zwykle są szkoleni w wojaczce, a często wyróżniają się też wysoką stanowczością w tym, co robią.";
-		this.m.GoodEnding = "%name% the squire eventually left the %companyname%. You\'ve heard that he\'s since been knighted. No doubt he is sitting happy as a plum wherever he is.";
-		this.m.BadEnding = "The squire, %name%, eventually departed the %companyname%. He intended to return home and become knighted, fulfilling his lifelong dream. Cruel politics got in the way and not only was he not knighted, he was stripped of his squire duties. Word has it he hanged himself from a barn\'s rafters.";
+		this.m.GoodEnding = "%name% giermek w końcu opuścił %companyname%. Słyszałeś, że został pasowany na rycerza. Z pewnością siedzi zadowolony, gdziekolwiek teraz jest.";
+		this.m.BadEnding = "Giermek %name% w końcu odszedł z %companyname%. Chciał wrócić do domu i zostać pasowanym na rycerza, spełniając marzenie życia. Okrutna polityka stanęła na drodze i nie dość, że nie został pasowany, to jeszcze odebrano mu obowiązki giermka. Mówi się, że powiesił się na belkach stodoły.";
 		this.m.HiringCost = 160;
 		this.m.DailyCost = 20;
 		this.m.Excluded = [

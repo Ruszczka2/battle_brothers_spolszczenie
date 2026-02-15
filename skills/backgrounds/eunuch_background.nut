@@ -7,8 +7,8 @@ this.eunuch_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.Name = "Rzezaniec";
 		this.m.Icon = "ui/backgrounds/background_52.png";
 		this.m.BackgroundDescription = "Fakt, że rzezańcy nie mogą płodzić dzieci jest raczej drugorzędną sprawą dla kompanii najemników.";
-		this.m.GoodEnding = "For %name%, some things would just always come up a little short. But that didn\'t stop the eunuch from enjoying himself. Retiring from the %companyname% with a large pile of crowns, and completely devoid of the allures of women, the man went on to live a wonderful, extremely focused life.";
-		this.m.BadEnding = "It\'s said that %name% the eunuch departed from the company shortly after you did. He traveled the lands, broke and broken, wasting his scant crowns on ale and wenches. Insulted by a whore for his cockless nature, the drunken and enraged eunuch stabbed the woman in the eye with a goat horn. Still inebriated when the constable found him, the confused and bewildered eunuch was stripped, hanged, and mutilated by the townspeople before having his body fed to pigs.";
+		this.m.GoodEnding = "Dla %name% pewne rzeczy zawsze były odrobinę za krótkie. Ale to nie przeszkodziło eunuchowi cieszyć się życiem. Odszedł z %companyname% z wielkim stosem koron i całkowicie wolny od uroków kobiet, a potem prowadził cudowne, niezwykle skupione życie.";
+		this.m.BadEnding = "Mówi się, że %name%, eunuch, opuścił kompanię krótko po tobie. Wędrował po krainach, złamany i bez grosza, trwoniąc nieliczne korony na piwo i ladacznice. Wyśmiany przez prostytutkę za brak męskości, pijany i wściekły eunuch dźgnął kobietę w oko kozim rogiem. Gdy konstabl go znalazł, wciąż był nietrzeźwy, a zdezorientowanego eunucha rozebrano, powieszono i okaleczono przez mieszkańców, po czym jego ciało dano świniom na pożarcie.";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

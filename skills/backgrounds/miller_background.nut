@@ -7,8 +7,8 @@ this.miller_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.Name = "Młynarz";
 		this.m.Icon = "ui/backgrounds/background_05.png";
 		this.m.BackgroundDescription = "Młynarze są przyzwyczajeni do pracy fizycznej.";
-		this.m.GoodEnding = "%name% the once-miller stayed with the %companyname% for a time, collecting enough crowns to start his own bakery. Last you heard, his sword-shaped desserts have been a hit with the nobility and he makes more money selling to them than he ever did with the company.";
-		this.m.BadEnding = "As the %companyname% fell on hard times, %name% the miller saw fit to go ahead and leave while he could still walk. He helped a nobleman test out a new way of grinding grains with mules and waterwheels working in tandem. Unfortunately, by \'helping\' he managed to fall into the contraption and was brutally crushed to death.";
+		this.m.GoodEnding = "%name%, dawniej młynarz, został z %companyname% przez jakiś czas, zbierając dość koron, by otworzyć własną piekarnię. Ostatnio słyszałeś, że jego wypieki w kształcie miecza zrobiły furorę wśród szlachty i zarabia na nich więcej, niż kiedykolwiek w kompanii.";
+		this.m.BadEnding = "Gdy %companyname% popadła w ciężkie czasy, %name% uznał, że czas odejść, póki jeszcze może chodzić. Pomagał pewnemu szlachcicowi testować nowy sposób mielenia zboża przy użyciu mułów i kół wodnych pracujących w tandemie. Niestety, 'pomagając', wpadł do mechanizmu i został bestialsko zmiażdżony na śmierć.";
 		this.m.HiringCost = 65;
 		this.m.DailyCost = 7;
 		this.m.Excluded = [

@@ -7,8 +7,8 @@ this.miner_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Name = "Górnik";
 		this.m.Icon = "ui/backgrounds/background_45.png";
 		this.m.BackgroundDescription = "Górnik będzie przyzwyczajony do pracy fizycznej, choć oddychanie przez lata zapylonym powietrzem prawdopodobnie odbiło się jego zdrowiu.";
-		this.m.GoodEnding = "%name% the miner never did return to the mines, thankfully. If there\'s one life that could be worse than that of fighting for a living, it very well may be digging into mountains for a living! Apparently, the miner built a home by the sea, spending the rest of his days peacefully fishing for dinner and enjoying sunrises or some such sappy shite.";
-		this.m.BadEnding = "If there\'s one life that\'s more rough than that of being a sellsword, it is that of being a miner. Sadly, %name% returned to that life, going back into the mines to dig out metals and ores to fill some rich man\'s pockets. A recent earthquake collapsed many such mines. You\'re not sure if the ol\' brother survived, but it\'s looking pretty grim.";
+		this.m.GoodEnding = "Na szczęście %name% nigdy nie wrócił do kopalni. Jeśli jest życie gorsze od walki na chleb, to chyba kopanie w górach na chleb! Podobno zbudował dom nad morzem i resztę dni spędził spokojnie, łowiąc ryby na kolację i zachwycając się wschodami słońca czy innymi ckliwymi bzdurami.";
+		this.m.BadEnding = "Jeśli istnieje życie cięższe niż bycie najemnikiem, to jest nim los górnika. Niestety, %name% wrócił do tego życia, schodząc znów pod ziemię, by wydobywać metale i rudy do kieszeni jakiegoś bogacza. Niedawne trzęsienie ziemi zawaliło wiele takich kopalń. Nie wiesz, czy stary towarzysz przeżył, ale wygląda to bardzo ponuro.";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

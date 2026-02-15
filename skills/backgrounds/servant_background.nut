@@ -7,8 +7,8 @@ this.servant_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Name = "Sługa";
 		this.m.Icon = "ui/backgrounds/background_16.png";
 		this.m.BackgroundDescription = "Służący często nie są przyzwyczajeni do ciężkiej pracy fizycznej.";
-		this.m.GoodEnding = "As it turns out, %name% the servant had been stowing away every last crown he had earned with the %companyname%. When he had enough, he retired and bought himself some land and slowly worked his way up the social ladder. He died in a comfortable bed, surrounded by friends, family, and loyal servants.";
-		this.m.BadEnding = "%name% the servant grew tired of the sellsword life and left the company. He returned to serving nobility. When raiders attacked his liege\'s castle, the nobleman pushed the servant out the door with only a kitchen knife to defend himself with. He was found headless in a pile of broken chairs, a few dead raiders littered around him.";
+		this.m.GoodEnding = "%name% skrzętnie odkładał każdą koronę zarobioną w %companyname%. Gdy uzbierał dość, odszedł, kupił ziemię i powoli wspinał się po drabinie społecznej. Zmarł w wygodnym łóżku, otoczony przyjaciółmi, rodziną i wiernymi sługami.";
+		this.m.BadEnding = "%name% zmęczył się życiem najemnika i opuścił kompanię. Wrócił do służby u szlachty. Gdy najeźdźcy zaatakowali zamek jego pana, szlachcic wypchnął sługę za drzwi z samym kuchennym nożem do obrony. Znaleziono go bez głowy w stercie połamanych krzeseł, a wokół leżało kilku martwych najeźdźców.";
 		this.m.HiringCost = 45;
 		this.m.DailyCost = 4;
 		this.m.Excluded = [

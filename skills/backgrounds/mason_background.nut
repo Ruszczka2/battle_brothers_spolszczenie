@@ -7,8 +7,8 @@ this.mason_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Name = "Murarz";
 		this.m.Icon = "ui/backgrounds/background_17.png";
 		this.m.BackgroundDescription = "Dobry murarz przyzwyczajony jest do pracy fizycznej i uczenia się, aby udoskonalić swoje rzemiosło.";
-		this.m.GoodEnding = "Masonry has its own call, notably a call perfectly cut stones and impossible towers that defy the eye\'s ability to even shape them against the skies. %name% the mason returned to his old trade and, with all the money he\'d made with the %companyname%, he started a reputable business renowned for its ability to construct stone rooms that held the heat during winters and the cool during summers.";
-		this.m.BadEnding = "The %companyname% continued to suffer losses long after you\'d left. More and more of the brothers departed the company, a good lot of them returning to old trades. %name% the mason was no different. Sadly, all the time spent fighting had destroyed any steadiness he had left. With hands that wouldn\'t stop shaking, he could no longer shape stones like he used to. Last you heard, he was hauling rocks as a daytaler instead of shaping them as a mason.";
+		this.m.GoodEnding = "Murarstwo ma swoje powołanie: idealnie ciosane kamienie i niemożliwe wieże, które zdają się przeczyć samemu niebu. %name% wrócił do dawnego fachu i, za pieniądze zarobione w %companyname%, założył szanowaną firmę słynącą z budowania kamiennych domów, które zimą trzymają ciepło, a latem chłód.";
+		this.m.BadEnding = "%companyname% ponosiła straty długo po twoim odejściu. Coraz więcej braci odchodziło, wielu wracało do dawnych fachów. %name% nie był wyjątkiem. Niestety, lata walk zniszczyły resztki pewnej ręki. Z dłońmi, które nie przestawały drżeć, nie potrafił już ciosać kamienia jak dawniej. Ostatnio słyszałeś, że dźwigał głazy jako parobek, zamiast je obrabiać jako murarz.";
 		this.m.HiringCost = 90;
 		this.m.DailyCost = 8;
 		this.m.Excluded = [

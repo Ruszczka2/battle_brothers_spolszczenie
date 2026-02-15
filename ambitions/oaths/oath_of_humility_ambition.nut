@@ -5,9 +5,9 @@ this.oath_of_humility_ambition <- this.inherit("scripts/ambitions/oaths/oath_amb
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_humility";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "Arrogance is an insidious killer.\nLet us take an Oath of Humility and reflect on our shortcomings for a time.";
-		this.m.TooltipText = "\"As you are indeed men in pursuit of power, always listen to the weak...for the weak know the strong better than you do, and in turn they shall know you better than you know yourself.\" - Young Anselm";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]Any weak man can kneel, but to do so from a position of strength is true humility. While the %companyname% could have sought to wield its fame to make new fortunes, it instead stood aside, dedicating portions of its wealth to the needy and back to the communities who were offering these contracts in the first place. Many of the men have learned well from this experience and there is some hope that the methods deployed will be of use going forward, whether in this life or the next.\n\nThe %companyname% are ready to take on their next challenge.";
+		this.m.ButtonText = "Pycha to podstępny zabójca.\nZłóżmy Przysięgę Pokory i przez jakiś czas pochylmy się nad własnymi brakami.";
+		this.m.TooltipText = "\"Skoro rzeczywiście jesteście ludźmi w pogoni za potęgą, zawsze słuchajcie słabych... bo słabi znają silnych lepiej, niż wy znacie ich, a w zamian poznają was lepiej, niż wy znacie samych siebie.\" - Młody Anzelm";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]Każdy słaby człowiek potrafi uklęknąć, lecz uczynić to z pozycji siły to prawdziwa pokora. Choć %companyname% mogło użyć swej sławy do zbicia nowej fortuny, zamiast tego stanęło z boku, przeznaczając część majątku potrzebującym i z powrotem dla wspólnot, które w pierwszej kolejności oferowały te kontrakty. Wielu ludzi wiele się z tego nauczyło i jest nadzieja, że zastosowane metody przydadzą się w przyszłości, czy to w tym życiu, czy w następnym.\n\n%companyname% jest gotowa na kolejne wyzwanie.";
 		this.m.SuccessButtonText = "{Za Młodego Anzelma! | Za Przysięgających! | I śmierć Dawcom Przysięgi!}";
 		this.m.OathName = "Przysięga Pokory";
 		this.m.OathBoonText = "Twoi ludzie zdobywają o [color=" + this.Const.UI.Color.PositiveValue + "]10%[/color] więcej doświadczenia.";

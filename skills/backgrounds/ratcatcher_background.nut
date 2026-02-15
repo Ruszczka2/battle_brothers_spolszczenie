@@ -7,8 +7,8 @@ this.ratcatcher_background <- this.inherit("scripts/skills/backgrounds/character
 		this.m.Name = "Szczurołap";
 		this.m.Icon = "ui/backgrounds/background_41.png";
 		this.m.BackgroundDescription = "Szczurołapy muszą mieć dobry refleks, aby móc schwytać swą zwierzynę.";
-		this.m.GoodEnding = "%name% the ratcatcher came from stranger stocks, and to stranger stocks he returned. After retiring from the %companyname%, he started a ratcatching company. He was doing wonderful business until it came out that he hadn\'t been killing any of the rats, but instead stowing thousands of them in a storehouse just outside town. Last you heard, the man was quite content with his new and numerous friends.";
-		this.m.BadEnding = "You didn\'t think %name% would fit in with sellswords, but he proved himself capable. Unfortunately, the %companyname% fell apart and he returned to ratcatching. You got word that his body was found in a sewer utterly covered in nibbling rats. It\'s said that he had a smile on his face.";
+		this.m.GoodEnding = "%name%, szczurołap z dziwacznych stron, wrócił do jeszcze dziwniejszych. Po odejściu z %companyname% założył firmę zajmującą się łapaniem szczurów. Interes szedł znakomicie, aż wyszło na jaw, że nie zabijał żadnego z gryzoni, tylko składował tysiące w magazynie tuż za miastem. Ostatnio słyszałeś, że był całkiem zadowolony ze swoich nowych, licznych przyjaciół.";
+		this.m.BadEnding = "Nie sądziłeś, że %name% odnajdzie się u najemników, ale udowodnił, że potrafi. Niestety, %companyname% rozpadła się i wrócił do łapania szczurów. Dotarła do ciebie wieść, że jego ciało znaleziono w kanałach, całe pokryte obgryzającymi je szczurami. Mówi się, że na jego twarzy widniał uśmiech.";
 		this.m.HiringCost = 40;
 		this.m.DailyCost = 4;
 		this.m.Excluded = [
