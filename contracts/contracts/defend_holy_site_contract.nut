@@ -419,7 +419,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "Negocjacje",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{%SPEECH_START%Dune rune bastards.%SPEECH_OFF%This is the first thing you hear upon entering %employer%\'s room. He begrudgingly waves you in.%SPEECH_ON%The war with the South continues, but they\'ve taken it upon themselves to break bonds of unspoken agreements: they\'re moving on %holysite% and I\'ve no means to protect it. I\'m not one to dally on how important the grounds are, but if I were to let it slide the public will undoubtedly clip my nuts. Being that I quite like my balls, I\'ll put %reward% crowns on the table for you to go there and defend %holysite%.%SPEECH_OFF% | You find %employer% trying to talk his way over a throng of peasants. It appears news has arrived that Southern soldiers are approaching %holysite%.%SPEECH_ON%We\'ve unspoken rules that these sacred grounds, they\'re, they\'re... they\'re sacred!%SPEECH_OFF%Seeing you, the nobleman clears a path, announcing you as brave warriors that he beckoned a week ago. When he gets near, however, he shelters his voice in a whisper.%SPEECH_ON%These idiots don\'t need to know you\'re sellswords. Look, the Southerners jammed a stick far up my ass on this one. The savages truly are making a move on %holysite% and I need you to get there and stop them. %reward% crowns should be sufficient for this task, yeah?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{%SPEECH_START%Pustynne gnojki.%SPEECH_OFF%To pierwsze, co słyszysz po wejściu do komnaty %employer%a. Z niechęcią macha, byś wszedł.%SPEECH_ON%Wojna z Południem trwa, ale postanowili złamać niepisane zasady: ruszają na %holysite%, a ja nie mam środków, by je ochronić. Nie będę się rozwodził nad znaczeniem tych ziem, ale jeśli to przepuszczę, lud na pewno urwie mi jaja. A że lubię swoje klejnoty, kładę na stół %reward% koron, byś tam poszedł i obronił %holysite%.%SPEECH_OFF% | Zastajesz %employer%a próbującego przekrzyczeć tłum chłopów. Wygląda na to, że dotarła wieść o zbliżających się do %holysite% żołnierzach południa.%SPEECH_ON%Mamy niepisane zasady, że te święte ziemie są... są... są święte!%SPEECH_OFF%Widząc cię, szlachcic przeciska się przez tłum, przedstawiając cię jako dzielnych wojowników, których wezwał tydzień temu. Gdy podchodzi bliżej, ścisza głos do szeptu.%SPEECH_ON%Ci idioci nie muszą wiedzieć, że jesteście najemnikami. Słuchaj, południowcy wsadzili mi kij głęboko w tyłek. Dzikusy naprawdę ruszają na %holysite% i potrzebuję, żebyś tam poszedł i ich powstrzymał. %reward% koron powinno wystarczyć za to zadanie, co?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
@@ -451,7 +451,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Approaching1",
 			Title = "Gdy się zbliżasz...",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{The great caldera has been mostly emptied of its faithful and curious occupants. Even the slightest suggestion of war has dispersed believers back to the shelters of their respective priories. After all, there will be a winner and a loser in the hours to come. A certain level of vigor may entreat the former to overindulging themselves on righteousness...}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Wielka kaldera opustoszała z wiernych i ciekawskich. Nawet najmniejsza zapowiedź wojny rozproszyła wyznawców, którzy wrócili do schronień swoich przyoratów. W końcu w nadchodzących godzinach będzie zwycięzca i przegrany. Pewien poziom żarliwości może skłonić tych pierwszych do nadmiernego upajania się słusznością...}",
 			Image = "",
 			List = [],
 			Options = [
@@ -473,7 +473,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Approaching0",
 			Title = "Gdy się zbliżasz...",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{The Oracle isn\'t as you last remember it: many of the faithful have departed and the drums of war have come to the ancient temple\'s doorstep. Not that it matters. You\'ve no visions to seek here, no dreams to unwind, only nightmares to provide your enemies.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Wyrocznia nie jest taka, jak ją pamiętasz: wielu wiernych odeszło, a bębny wojny stanęły u progu starożytnej świątyni. Zresztą to bez znaczenia. Nie szukasz tu wizji ani snów do rozwikłania, jedynie koszmarów dla wrogów.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -495,7 +495,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Approaching2",
 			Title = "Gdy się zbliżasz...",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Ironically, the leveled city which dwells beneath the half-blown mountain finally feels eerily abandoned. Few of the faithful linger, the rest having departed long before the religious strife arrives upon their tent cities and spiritual interloping.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Ironią losu, zrównane z ziemią miasto u podnóża nadkruszonej góry wreszcie wydaje się niepokojąco opuszczone. Nieliczni wierni pozostali, reszta odeszła długo przed tym, jak religijny konflikt dotarł do ich namiotowych osiedli i duchowych rubieży.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -517,7 +517,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Preparation1",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{You believe you have made a modest defense out of what positions %holysite% can give. With what little time remains, there\'s probably at least one serious task you can set the %companyname% to completing. It\'s just a question of what exactly would suit the company best.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Uważasz, że udało ci się przygotować skromną obronę z pozycji, jakie oferuje %holysite%. Z tym, co zostało czasu, jest jeszcze przynajmniej jedno poważne zadanie, które możesz zlecić %companyname%. Pytanie tylko, co najlepiej jej pasuje.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -555,7 +555,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Preparation2",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Looting the holy site itself, which you\'ll tell no one of your doing, and pilfering through the abandoned belongings of the faithful, you manage to scrap together enough wood to reinforce a set of walls that ring a corner of %holysite%. It is in your estimation the best spot for an attacker to come in, and thus the one you\'ll want to defend most.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Plądrując samo święte miejsce, o czym nikomu nie powiesz, i przeszukując porzucone dobra wiernych, udaje ci się zebrać dość drewna, by wzmocnić fragment murów osłaniających róg %holysite%. To, twoim zdaniem, najlepsze miejsce do natarcia, więc właśnie je będziesz bronić najzacieklej.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -578,7 +578,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Preparation3",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{You have the men scour the area for battle supplies. A litany of items are pilfered and piled. Once the whole of %holysite% has been combed, you and the men spend a few minutes figuring out what would be of most use...}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Rozkazujesz ludziom przeszukać okolicę w poszukiwaniu zapasów bitewnych. Różne przedmioty zostają zebrane i ułożone w stosy. Gdy całe %holysite% zostaje przeszukane, ty i twoi ludzie spędzacie kilka minut, wybierając to, co będzie najbardziej przydatne...}",
 			Image = "",
 			List = [],
 			Options = [
@@ -677,7 +677,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Preparation4",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{What few faithful still linger around the %holysite% must be the most fervid and zealous. Being that you are here representing the north, you have the men pick out a few hardy looking old gods zealots and ask that they fight for their gods. It is a convenient recruiting tool if there ever was one, and they are quick to arm themselves and undergo the shortest of training. You can only hope they are of any use in the actual battle to come.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Ci nieliczni wierni, którzy wciąż kręcą się wokół %holysite%, muszą być najbardziej żarliwi i fanatyczni. Ponieważ reprezentujesz północ, każesz ludziom wybrać kilku najtwardszych wyznawców starych bogów i prosisz, by walczyli za swoich bogów. To wygodne narzędzie rekrutacji, jeśli kiedykolwiek istniało, i szybko się uzbrajają, przechodząc najkrótsze z możliwych szkolenie. Możesz tylko mieć nadzieję, że będą przydatni w nadchodzącej bitwie.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -700,7 +700,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "TheEnemyAttacks",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_164.png[/img]{The southerners appear over the horizon. Followers of the Gilded One is an apt description for their armor glints and shines even at great distance. %randombrother% spits and looks over.%SPEECH_ON%They look far too dapper for a buncha dead men. You ever wonder if we just dressed ourselves like a buncha djinn and rode out with all the confidence of little devils them southerners would just up and leave?%SPEECH_OFF%Smiling, you draw out your sword and command the men to battle.}",
+			Text = "[img]gfx/ui/events/event_164.png[/img]{Południowcy pojawiają się na horyzoncie. Wyznawcy Pozłacanego - trafne określenie, bo ich zbroje lśnią nawet z daleka. %randombrother% spluwa i zerka na nich.%SPEECH_ON%Wyglądają zbyt szykownie jak na bandę trupów. Zastanawiałeś się kiedyś, czy gdybyśmy przebrali się za dżinny i wyjechali z pewnością małych diabłów, południowcy po prostu by odeszli?%SPEECH_OFF%Uśmiechając się, dobywasz miecza i rozkazujesz ludziom do walki.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -721,7 +721,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Quartermaster",
 			Title = "W %townname%",
-			Text = "[img]gfx/ui/events/event_158.png[/img]{Leaving %townname%, you\'re approached by a man flying %employerfaction%\'s banner off the back end of a wagon. He states that he is a quartermaster for your employer and he has a few supplies to offload.%SPEECH_ON%Got a couple of wardogs, nets and throwing spears. I\'ve been told you can have one or the other, but not all as there are plenty of fightin\' men in need around here.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_158.png[/img]{Opuszczając %townname%, podchodzi do ciebie mężczyzna niosący sztandar %employerfaction% na końcu wozu. Oznajmia, że jest kwatermistrzem twojego pracodawcy i ma kilka zapasów do przekazania.%SPEECH_ON%Mam kilka psów bojowych, sieci i włócznie do rzucania. Powiedziano mi, że możesz wziąć jedno albo drugie, ale nie wszystko, bo w okolicy jest wielu walczących ludzi w potrzebie.%SPEECH_OFF%}",
 			Image = "",
 			Banner = "",
 			List = [],
@@ -802,7 +802,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SallyForth1",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_164.png[/img]{The southerners appear, but it is not in full force, and nor is it necessarily just their scouts. It seems they have spent little time keeping cohesion and have instead spread themselves out on the approach. If you were to sally forth and attack now, you\'d likely catch them with their drawers down.}",
+			Text = "[img]gfx/ui/events/event_164.png[/img]{Południowcy się pojawiają, ale nie w pełnej sile i nie są to wyłącznie zwiadowcy. Wygląda na to, że niewiele dbali o spójność i rozciągnęli się podczas podejścia. Gdybyś teraz wypadł i zaatakował, pewnie zaskoczyłbyś ich z opuszczonymi gaciami.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -831,7 +831,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SallyForth2",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_50.png[/img]{%SPEECH_START%Good call.%SPEECH_OFF%The words of %randombrother% follow your order. Set to a fast pace, the %companyname% sets out to catch the southerners before they muster their full strength. You cross the field and before you know it are upon them. They\'re still offloading gear and equipment and at the very sight of you a few camp followers up and run for their lives. The rest of the soldiers hurry to collect their weapons.\n\nJudging by his shrill voice, the only commander in the area isn\'t trained for this sort of thing as his voice cracks with every barked order as some semblance of a formation tries to take shape. Wasting no more time, you charge into the fray!}",
+			Text = "[img]gfx/ui/events/event_50.png[/img]{%SPEECH_START%Dobra decyzja.%SPEECH_OFF%Słowa %randombrother% potwierdzają twój rozkaz. Ruszając w szybkim tempie, %companyname% wychodzi, by dopaść południowców, zanim zbiorą pełne siły. Przechodzicie przez pole i nim się obejrzysz, jesteście na nich. Wciąż rozładowują sprzęt i wyposażenie, a na sam wasz widok kilku obozowych pachołków zrywa się do ucieczki. Reszta żołnierzy śpieszy się po broń.\n\nSądząc po jego piskliwym głosie, jedyny dowódca w okolicy nie jest przeszkolony do takich sytuacji - przy każdym wrzasku rozkazów głos mu się łamie, gdy próbuje uformować choćby pozory szyku. Nie tracąc czasu, ruszasz do boju!}",
 			Image = "",
 			List = [],
 			Options = [
@@ -853,7 +853,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SallyForth3",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_90.png[/img]{You finish off the last of the soldiers, the look of surprise still grimly shaped across their faces.%SPEECH_ON%Captain, got the rest coming.%SPEECH_OFF%%randombrother% says, returning from a quick gaze of the horizon. Nodding, you order the men to get ready. This time, the southerners are making an approach in good formation, though it briefly waivers at the sight of you and the dead littered about your feet. Their banner rises into the sky and the southerners are revivified, charging forth with anger and energy. Shouts of \'for the Gilder!\' ripple through the air. You point your sword forward.%SPEECH_ON%Admirable in their faith they might be, no god shall find them here, only the %companyname% awaits and we\'ve but one prayer to offer.%SPEECH_OFF%The men roar as the battle hastens upon them.}",
+			Text = "[img]gfx/ui/events/event_90.png[/img]{Dobijasz ostatnich żołnierzy, a na ich twarzach wciąż tkwi grymas zaskoczenia.%SPEECH_ON%Kapitanie, reszta nadciąga.%SPEECH_OFF%%randombrother% mówi, wracając po szybkim spojrzeniu na horyzont. Kiwasz głową i każesz ludziom się przygotować. Tym razem południowcy nadciągają w dobrym szyku, choć na chwilę ich formacja chwieje się na widok ciebie i trupa, którymi usłane są twoje stopy. Ich sztandar wznosi się ku niebu, a południowcy odżywają, ruszając z gniewem i energią. Po powietrzu niesie się okrzyk: \'Za Pozłacanego!\'. Wskazujesz mieczem naprzód.%SPEECH_ON%Choćby byli godni podziwu w swej wierze, żaden bóg ich tu nie znajdzie - czeka tylko %companyname%, a my mamy do ofiarowania jedną modlitwę.%SPEECH_OFF%Ludzie ryczą, gdy bitwa pędzi ku nim.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -875,7 +875,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SallyForth4",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_164.png[/img]{%SPEECH_START%Good call.%SPEECH_OFF%The words of %randombrother% follow your order. Set to a fast pace, the %companyname% sets out to catch the southerners before they muster their full strength. You cross the field and before you know it are upon them. They\'re still offloading gear and equipment and at the very sight of you a few camp followers up and run for their lives. The rest of the soldiers hurry to collect their weapons. Just when you think you have the upper hand, another contingent arrives from the side.%SPEECH_ON%The Gilder smiles only upon those who deserve His gleam, Crownling!%SPEECH_OFF%The southern commander shouts mockingly. With the defenses too far, and the enemy too close, there\'s only one place to go now. You raise your sword and ready the men to charge.}",
+			Text = "[img]gfx/ui/events/event_164.png[/img]{%SPEECH_START%Dobra decyzja.%SPEECH_OFF%Słowa %randombrother% potwierdzają twój rozkaz. Ruszając w szybkim tempie, %companyname% wychodzi, by dopaść południowców, zanim zbiorą pełne siły. Przechodzicie przez pole i nim się obejrzysz, jesteście na nich. Wciąż rozładowują sprzęt i wyposażenie, a na sam wasz widok kilku obozowych pachołków zrywa się do ucieczki. Reszta żołnierzy śpieszy się po broń. Gdy wydaje się, że masz przewagę, z boku nadciąga kolejny oddział.%SPEECH_ON%Pozłacany uśmiecha się tylko do tych, którzy zasługują na Jego blask, Koroniarzu!%SPEECH_OFF%Krzyczy szyderczo południowy dowódca. Gdy umocnienia są za daleko, a wróg za blisko, zostaje tylko jedno wyjście. Podnosisz miecz i szykujesz ludzi do szarży.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -898,7 +898,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SallyForth5",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{You figure it\'s best to man the defenses. It might let an opportunity slip, but it is in part the safest of all available options.%SPEECH_ON%Shoulda went out. We missed something there on that one, captain.%SPEECH_OFF%Looking over you find %randombrother% shrugging. You tell him to mind his tongue, or he\'ll be missing something himself.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Uznajesz, że najlepiej obsadzić umocnienia. To może zmarnować okazję, ale jest to po części najbezpieczniejsza z dostępnych opcji.%SPEECH_ON%Trzeba było wyjść. Coś tu przegapiliśmy, kapitanie.%SPEECH_OFF%Zerkasz i widzisz, jak %randombrother% wzrusza ramionami. Mówisz mu, by pilnował języka, bo sam coś straci.}",
 			Image = "",
 			List = [],
 			Options = [
@@ -921,7 +921,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AlliedSoldiers1",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{As you await the southerners, a troop of northerners arrives. Their lieutenant tips his helmet.%SPEECH_ON%When they told me to come out this way to aide a sellsword, I said they can go shit that command out their arse. But you know what convinced me? Knowing it was the %companyname%. You\'ve reputation, and I\'ve men to spare for this fight.%SPEECH_OFF%Judging by their equipment, they\'d be best used as a screening force to perhaps draw away elements of the oncoming enemy force. That, or perhaps it\'d be best to just fold them into the company, bolstering your ranks where you\'re already strongest.}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{Gdy oczekujesz południowców, nadciąga oddział północnych. Ich porucznik unosi hełm.%SPEECH_ON%Kiedy kazali mi przyjść tu wspierać najemników, powiedziałem, że mogą sobie ten rozkaz wysrać. Ale wiesz, co mnie przekonało? To, że chodzi o %companyname%. Macie reputację, a ja mam ludzi do oddania na tę bitwę.%SPEECH_OFF%Sądząc po ich wyposażeniu, najlepiej użyć ich jako zasłony, by może odciągnąć część nadciągającego wroga. Albo po prostu włączyć ich do kompanii, wzmacniając szeregi tam, gdzie już jesteś najsilniejszy.}",
 			Image = "",
 			Banner = "",
 			List = [],
@@ -967,7 +967,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AlliedSoldiers2",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{You take out a long-glass and scope the battlefield ahead. The northern troop charge toward the enemy in a chevron formation, and then split off at the wings to run off in separate directions. It seems a suicidal charge, but much to your surprise they\'ve made a tasty retreat the southerners can\'t quite resist. You watch as the Gilder\'s followers don\'t keep their eye on the shine, instead depleting their ranks to chase down the feint.%SPEECH_ON%Worked like a charm, captain.%SPEECH_OFF%%randombrother% says.}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{Wyciągasz lunetę i lustrujesz pole bitwy. Północny oddział szarżuje na wroga w szyku klina, po czym rozdziela się na skrzydłach, uciekając w przeciwnych kierunkach. Wygląda to na samobójczą szarżę, ale ku twojemu zaskoczeniu wykonują smakowity odwrót, któremu południowcy nie potrafią się oprzeć. Widzisz, jak wyznawcy Pozłacanego odrywają wzrok od blasku, przerzedzając własne szeregi, by ścigać pozorowany odwrót.%SPEECH_ON%Zadziałało jak w zegarku, kapitanie.%SPEECH_OFF%%randombrother% mówi.}",
 			Image = "",
 			Banner = "",
 			List = [],
@@ -992,7 +992,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AlliedSoldiers3",
 			Title = "%holysite%",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{You\'d rather the soldiers stay with you. The lieutenant nods.%SPEECH_ON%Yessir, captain, uh, what\'s your name?%SPEECH_OFF%Ignoring him, you tell %randombrother% to accommodate the northern troop to the defenses.%SPEECH_ON%Make sure they know it well, but not too well.%SPEECH_OFF%The sellsword leans in and whispers.%SPEECH_ON%Ah, if they\'re spies we don\'t want to give them too much detail, aye captain?%SPEECH_OFF%You lean in and whisper back.%SPEECH_ON%No. Put them where we are weakest. Hopefully they all eat shit on the frontline and then we\'ll have their belongings.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{Wolisz, by żołnierze zostali z tobą. Porucznik kiwa głową.%SPEECH_ON%Tak jest, kapitanie, eee, jak się pan nazywa?%SPEECH_OFF%Ignorując go, mówisz %randombrother%owi, by rozlokował północny oddział w umocnieniach.%SPEECH_ON%Upewnij się, że dobrze je poznają, ale nie za dobrze.%SPEECH_OFF%Najemnik pochyla się i szepcze.%SPEECH_ON%A jeśli to szpiedzy, to nie chcemy zdradzić zbyt wiele szczegółów, co kapitanie?%SPEECH_OFF%Pochylasz się i szepczesz w odpowiedzi.%SPEECH_ON%Nie. Postaw ich tam, gdzie jesteśmy najsłabsi. Może wszyscy zeżrą gówno na pierwszej linii, a potem będziemy mieli ich dobytek.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Banner = "",
@@ -1017,7 +1017,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "Po bitwie...",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{The last southern soldier looks up at you.%SPEECH_ON%By the Gilder\'s gleam, I am ready.%SPEECH_OFF%You draw out your sword.%SPEECH_ON%And of what use was that gleam if I\'m the one here, and you there?%SPEECH_OFF%Before he can respond, you put the blade through his neck. You tell the sellswords to loot the remains and ready a return to %employer%. | You find the last of the southern soldiers perched against a rock, his arm slung across its top as though it were a drinking buddy. He spits blood and nods.%SPEECH_ON%Perhaps my path was not so gilded as I thought.%SPEECH_OFF%Nodding back, you tell him that he can ask the Gilder about that himself real soon here.%SPEECH_ON%And I\'ll ask Him about you, too.%SPEECH_OFF%He responds. You pause for a moment on that comment, then run him through with the sword. The rest of the remains will need to be looted. %employer% should be happy to see you. | The battle is over and the dead litter the field. You stand over the last breathing southerner. He stares over your shoulder at the sky. When you ask if he thinks his \'Gilder\' is watching, the man smiles.%SPEECH_ON%He\'s watching us both.%SPEECH_OFF%You nod and then end his life. With a sharp whistle, you get the %companyname%\'s attention. Your orders are simple: loot what\'s worthwhile, and then ready to return to %employer%.}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{Ostatni południowy żołnierz podnosi na ciebie wzrok.%SPEECH_ON%Na blask Pozłacanego, jestem gotów.%SPEECH_OFF%Dobywasz miecza.%SPEECH_ON%A na cóż ten blask, skoro ja jestem tu, a ty tam?%SPEECH_OFF%Zanim zdąży odpowiedzieć, wbijasz mu ostrze w szyję. Każesz najemnikom ograbić pole i przygotować powrót do %employer%. | Znajdujesz ostatniego z południowych żołnierzy, opartego o skałę, z ramieniem przerzuconym przez jej wierzch, jakby była kompanem od kielicha. Spluwa krwią i kiwa głową.%SPEECH_ON%Może moja ścieżka nie była tak pozłacana, jak sądziłem.%SPEECH_OFF%Odwzajemniając skinienie, mówisz mu, że niebawem sam zapyta o to Pozłacanego.%SPEECH_ON%A ja zapytam Go o ciebie.%SPEECH_OFF%Odpowiada. Zatrzymujesz się na moment przy tym komentarzu, po czym przebijasz go mieczem. Resztę szczątków trzeba będzie ograbić. %employer% powinien być zadowolony. | Bitwa dobiegła końca, a pole zasłane jest trupami. Stoisz nad ostatnim oddychającym południowcem. Wpatruje się ponad twoim ramieniem w niebo. Gdy pytasz, czy myśli, że jego \'Pozłacany\' patrzy, mężczyzna się uśmiecha.%SPEECH_ON%Patrzy na nas obu.%SPEECH_OFF%Kiwasz głową i kończysz jego życie. Ostre gwizdnięcie przyciąga uwagę %companyname%. Twoje rozkazy są proste: zrabować to, co warte, i przygotować powrót do %employer%.}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -1041,7 +1041,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Failure",
 			Title = "Po bitwie...",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{The southerners raise their banners over %holysite%.%SPEECH_ON%I suppose that\'s it, then.%SPEECH_OFF%%randombrother% says. If by \'it\' you mean there\'s no reason to see %employer% about the end of the contract then yes, that is indeed it.}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{Południowcy wznoszą swoje sztandary nad %holysite%.%SPEECH_ON%No to chyba po wszystkim.%SPEECH_OFF%Mówi %randombrother%. Jeśli przez \'po wszystkim\' rozumiesz, że nie ma powodu, by widzieć się z %employer% w sprawie końca kontraktu, to tak - to właśnie to.}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -1066,7 +1066,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "Po twoim powrocie...",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%I take it them southern shits squealed when you put an end to their farkin\' around.%SPEECH_OFF%%employer% bites into half a chicken breast before you can respond. And he keeps talking anyway, mouth only full of contents insofar as they have not yet launched out and spread across the table.%SPEECH_ON%Ya know, I\'d doubt of the old gods, but now, with this, I can see their ways are true, and their divinity most righteous.%SPEECH_OFF%He swallows what\'s left and slams the chicken on his plate.%SPEECH_ON%Pay the sellsword his money.%SPEECH_OFF% | You find %employer% in the company of a few monks, their prior, and women who don\'t look in remotely marital status with anyone. The nobleman is grinning ear to ear.%SPEECH_ON%Word of your doings reached us a few days ago. The old gods raise their chalices to your men, sellsword. I\'m sure you gave them southerners all the hells they deserve, and in which they no doubt dwell. Your payment, as promised.%SPEECH_OFF%A few of the women go toward you, but are quickly reeled back.%SPEECH_ON%Ladies, ladies, please, be proper. Sellsword.%SPEECH_OFF%%employer% points toward a chest of %reward% crowns. | You find %employer% in a priory. He is praying alone at an altar, and when he finishes he speaks without turning back.%SPEECH_ON%I believe the old gods spoke to me last night. Said you were returning with good news and indeed, here you are. Because we are alone, I\'ll tell you something. The \'Gilded\' ones riding around in that desert, I think them an earnest sort. I think whatever buildings they pray in, they\'re praying in them now. You\'ve not shook their faith at all, and someday we\'ll be out there again.%SPEECH_OFF%The nobleman stands up and turns around.%SPEECH_ON%Defeat hardens the faithful. I\'ve taken my licks, and now they have theirs. When you take your gold for the job, put in a prayer that it\'s the last you take for it.%SPEECH_OFF%You\'ll not be doing that, but feel it improper to tell the truth to an opened heart. %reward% crowns, however, makes a very proper entrance into the company\'s purse strings.}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%Zakładam, że te południowe gnojki zapiszczały, kiedy położyliście kres ich pieprzeniu się z tym wszystkim.%SPEECH_OFF%%employer% wgryza się w pół piersi z kurczaka, zanim zdążysz odpowiedzieć. I tak dalej gada, choć ma pełne usta, o ile jego zawartość nie wyleciała jeszcze i nie rozmazała się po stole.%SPEECH_ON%Wiesz, wątpiłbym w starych bogów, ale teraz, po tym wszystkim, widzę, że ich drogi są prawdziwe, a ich boskość najsprawiedliwsza.%SPEECH_OFF%Połyka resztę i z hukiem odkłada kurczaka na talerz.%SPEECH_ON%Zapłaćcie najemnikowi jego pieniądze.%SPEECH_OFF% | Zastajesz %employer%a w towarzystwie kilku mnichów, ich przeora i kobiet, które nie wyglądają na czyjekolwiek żony. Szlachcic uśmiecha się od ucha do ucha.%SPEECH_ON%Wieści o waszych czynach dotarły do nas parę dni temu. Starzy bogowie wznoszą kielichy za twoich ludzi, najemniku. Jestem pewien, że zgotowaliście tym południowcom wszystkie piekła, na które zasługują i w których bez wątpienia mieszkają. Twoja zapłata, jak obiecałem.%SPEECH_OFF%Kilka z kobiet podchodzi do ciebie, ale szybko są cofane.%SPEECH_ON%Damy, damy, proszę, zachowujcie się. Najemniku.%SPEECH_OFF%%employer% wskazuje na skrzynię z %reward% koronami. | Zastajesz %employer%a w przyoracie. Modli się samotnie przy ołtarzu, a gdy kończy, odzywa się bez odwracania.%SPEECH_ON%Wierzę, że starzy bogowie przemówili do mnie ostatniej nocy. Powiedzieli, że wracasz z dobrymi wieściami i oto jesteś. Ponieważ jesteśmy sami, powiem ci coś. Ci \'Pozłacani\', jeżdżący po tamtej pustyni, to uczciwy sort. Myślę, że niezależnie od tego, w jakich budynkach się modlą, modlą się w nich teraz. Wcale nie zachwiałeś ich wiarą i pewnego dnia znów tam będziemy.%SPEECH_OFF%Szlachcic wstaje i odwraca się.%SPEECH_ON%Porażka hartuje wiernych. Ja przyjąłem swoje razy, a teraz oni przyjęli swoje. Gdy odbierzesz złoto za tę robotę, pomódl się, by to był ostatni raz.%SPEECH_OFF%Nie zamierzasz tego robić, ale nie wypada mówić prawdy przed otwartym sercem. %reward% koron jednakże brzmi bardzo właściwie w sakiewce kompanii.}",
 			Image = "",
 			Characters = [],
 			List = [],

@@ -207,7 +207,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 					}
 					else
 					{
-						this.Contract.m.BulletpointsObjectives.push("Hunt for Direwolves, Webknechts and Nachzehrers");
+						this.Contract.m.BulletpointsObjectives.push("Poluj na Wilkory, Webknechty i Nachzehrery");
 					}
 				}
 				else if (this.Contract.m.Size == 1)
