@@ -114,7 +114,6 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-				{
 					Text = "Witaj na pokładzie!",
 					function getResult( _event )
 					{
