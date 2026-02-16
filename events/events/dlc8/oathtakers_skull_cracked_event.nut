@@ -9,7 +9,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% wpada do namiotu z drzacymi dlonmi, trzymajac czaszke Mlodego Anselma.%SPEECH_ON%Jest peknieta!%SPEECH_OFF%Zrywasz sie z miejsca i ogladzasz swiete szczatki Mlodego Anselma. Po tyle czaszki biegnie cienka szczelina. Na pierwszy rzut oka nie wyglada to zle, ale gdy wsuwasz maly palec i podnosisz, kosci rozchodza sie. Oboje wzdychacie i kladziecie czaszke na stole. Nie ma watpliwosci, ze wystarczy niewiele, by ja rozlamac.%SPEECH_ON%Co mamy zrobic? Jak to naprawic?%SPEECH_OFF%Rozwazasz to bardzo ostroznie. Ostatnim razem, gdy to sie stalo, odlamala sie szczeka Mlodego Anselma, a wraz z nia pekli Swietobiorcy - jedna grupa zostala Swietobiorcami, a druga stala sie dzikimi bluzniercami, Slubodawcami. Nie pozwolisz, by stalo sie to znowu.}",
+			Text = "[img]gfx/ui/events/event_183.png[/img]{%oathtaker% wpada do namiotu z drżącymi dłońmi, trzymając czaszkę Młodego Anselma.%SPEECH_ON%Jest pęknięta!%SPEECH_OFF%Zrywasz się z miejsca i oglądasz święte szczątki Młodego Anselma. Po tyle czaszki biegnie cienka szczelina. Na pierwszy rzut oka nie wygląda to źle, ale gdy wsuwasz mały palec i podnosisz, kości rozchodzą się. Oboje wzdychacie i kładziecie czaszkę na stole. Nie ma wątpliwości, że wystarczy niewiele, by ją rozłamać.%SPEECH_ON%Co mamy zrobić? Jak to naprawić?%SPEECH_OFF%Rozważasz to bardzo ostrożnie. Ostatnim razem, gdy to się stało, odłamała się szczęka Młodego Anselma, a wraz z nią pękli Świętobiorcy - jedna grupa została Świętobiorcami, a druga stała się dzikimi bluźniercami, Ślubodawcami. Nie pozwolisz, by stało się to znowu.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -31,13 +31,13 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{Wyciagasz kawalek sznurka i pokrywasz go bluszczem oraz zywica. Potem delikatnie rozchylasz pekniecie Mlodego Anselma i przeciagasz po nim palec z kolejna porcja zywicy. %oathtaker% patrzy nerwowo. Zadowolony, wkladasz sznurek wzdloz pekniecia i skladasz czesci czaszki, przyciskajac sznurek razem z kleistym bluszczem. Cofasz sie i patrzysz na swoje dzielo. %oathtaker% przelyka sline.%SPEECH_ON%Ja... ja nie sadze, zeby ktokolwiek zauwazyl.%SPEECH_OFF%Zastanawiasz sie nawet, czy lepiej byloby, gdyby znaleziono pekniecie bez prob naprawy, niz gdyby ktos zobaczyl robote skradajacego sie majstra, ktory probowal cos przemycic. Tak czy inaczej, zrobione - honor Mlodego Anselma zostal przywrocony. %oathtaker% ociera pot z czola.%SPEECH_ON%Wierze, ze to byla proba, kapitanie, i ze Mlody Anselm nas przez nia przeprowadzil. Jego sila przeplywa przeze mnie i nie ma slow, ktore opisalyby zaszczyt, jaki teraz czuje.%SPEECH_OFF%Co? Mlody Anselm pewnie nie mial pojecia o lepkich zywicach i bluszczu, a zapewne wiedzial jeszcze mniej teraz, gdy jest niema czaszka. Ale... zostawiasz %oathtaker% jego interpretacjom, choc dla ciebie sa one zbyt skromne.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{Wyciągasz kawałek sznurka i pokrywasz go bluszczem oraz żywicą. Potem delikatnie rozchylasz pęknięcie Młodego Anselma i przeciągasz po nim palec z kolejną porcją żywicy. %oathtaker% patrzy nerwowo. Zadowolony, wkładasz sznurek wzdłuż pęknięcia i składasz części czaszki, przyciskając sznurek razem z kleistym bluszczem. Cofasz się i patrzysz na swoje dzieło. %oathtaker% przełyka ślinę.%SPEECH_ON%Ja... ja nie sądzę, żeby ktokolwiek zauważył.%SPEECH_OFF%Zastanawiasz się nawet, czy lepiej byłoby, gdyby znaleziono pęknięcie bez prób naprawy, niż gdyby ktoś zobaczył robotę skradającego się majstra, który próbował coś przemycić. Tak czy inaczej, zrobione - honor Młodego Anselma został przywrócony. %oathtaker% ociera pot z czoła.%SPEECH_ON%Wierzę, że to była próba, kapitanie, i że Młody Anselm nas przez nią przeprowadził. Jego siła przepływa przeze mnie i nie ma słów, które opisałyby zaszczyt, jaki teraz czuję.%SPEECH_OFF%Co? Młody Anselm pewnie nie miał pojęcia o lepkich żywicach i bluszczu, a zapewne wiedział jeszcze mniej teraz, gdy jest niema czaszka. Ale... zostawiasz %oathtaker% jego interpretacjom, choć dla ciebie są one zbyt skromne.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Powinienem byc grabarzem.",
+					Text = "Powinienem być grabarzem.",
 					function getResult( _event )
 					{
 						return 0;
@@ -66,7 +66,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Oathtaker.improveMood(1.0, "Podwoila mu sie wiara w Mlodego Anselma");
+				_event.m.Oathtaker.improveMood(1.0, "Podwoiła mu się wiara w Młodego Anselma");
 
 				if (_event.m.Oathtaker.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -83,7 +83,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{Ucichasz %oathtaker% i kazesz mu zamknac plotno namiotu. Biorac czaszke, kladziesz ja na stole i od razu probujesz ja naprawic. Niestety, w chwili gdy twoje dlonie wkladaja jakikolwiek wysilek, pekniecie sie poszerza i odlamki odlatuja nie wiadomo dokad. Puszczasz czaszke, jakby cie oparzyla, a laska Anselma stukajaca pusto o stol. %oathtaker% patrzy na ciebie.%SPEECH_ON%Co teraz? Co mamy zrobic? Moze powinnismy zabrac najlepsza czesc i uciekac, zakladajac nowa bande?%SPEECH_OFF%Z pogarda pytasz glupca, czy bierze cie za Swietobiorce czy Slubodawce. Przelyka i potwierdza to pierwsze. Wlasnie tak, i jesli tak jest, pozostaje tylko jedno: twierdzic, ze Mlody Anselm chcial, aby czaszka pekla, i ze to dowod, jak bardzo %companyname% nie dorasta do bycia prawdziwymi Swietobiorcami. Zgadza sie, a ty pokazujesz reszcie ludzi czaszke i jej nowo powstale kostne pekniecia.\n\nNa poczatku boja sie tego pekniecia, ale wkrotce zgadzaja sie z toba, ze wplyw Mlodego Anselma slabnie nie przez Pierwszego Swietobiorce, lecz dlatego, ze wy wszyscy, ostatni Swietobiorcy, nie dotrzymujecie swoich Slubow! I ze musicie bardziej trzymac sie sciezki prawdziwego Swietobiorcy! Ludzie rycza i wiwatuja, a ich przekonanie odnawia pekniecie Mlodego Anselma.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{Ucichasz %oathtaker% i każesz mu zamknąć płótno namiotu. Biorąc czaszkę, kładziesz ją na stole i od razu próbujesz ją naprawić. Niestety, w chwili gdy twoje dłonie wkładają jakikolwiek wysiłek, pęknięcie się poszerza i odłamki odlatują nie wiadomo dokąd. Puszczasz czaszkę, jakby cię oparzyła, a laska Anselma stukająca pusto o stół. %oathtaker% patrzy na ciebie.%SPEECH_ON%Co teraz? Co mamy zrobić? Może powinniśmy zabrać najlepszą część i uciekać, zakładając nową bandę?%SPEECH_OFF%Z pogardą pytasz głupca, czy bierze cię za Świętobiorcę czy Ślubodawcę. Przełyka i potwierdza to pierwsze. Właśnie tak, i jeśli tak jest, pozostaje tylko jedno: twierdzić, że Młody Anselm chciał, aby czaszka pękła, i że to dowód, jak bardzo %companyname% nie dorasta do bycia prawdziwymi Świętobiorcami. Zgadza się, a ty pokazujesz reszcie ludzi czaszkę i jej nowo powstałe kostne pęknięcia.\n\nNa początku boją się tego pęknięcia, ale wkrótce zgadzają się z tobą, że wpływ Młodego Anselma słabnie nie przez Pierwszego Świętobiorcę, lecz dlatego, że wy wszyscy, ostatni Świętobiorcy, nie dotrzymujecie swoich Ślubów! I że musicie bardziej trzymać się ścieżki prawdziwego Świętobiorcy! Ludzie ryczą i wiwatują, a ich przekonanie odnawia pęknięcie Młodego Anselma.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -105,7 +105,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(0.25, "Przekonany, ze nie dotrzymal slubow tak dobrze, jak powinien");
+						bro.worsenMood(0.25, "Przekonany, że nie dotrzymał ślubów tak dobrze, jak powinien");
 
 						if (this.Math.rand(1, 100) <= 33)
 						{
@@ -124,12 +124,12 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 							this.List.push({
 								id = 10,
 								icon = trait.getIcon(),
-								text = bro.getName() + " zyskuje Smiercze Zyczenie"
+								text = bro.getName() + " zyskuje Śmiercze Życzenie"
 							});
 						}
 					}
 
-					bro.improveMood(0.75, "Zostal zmuszony do podwojenia wysilkow w dotrzymywaniu slubow");
+					bro.improveMood(0.75, "Został zmuszony do podwojenia wysiłków w dotrzymywaniu ślubów");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

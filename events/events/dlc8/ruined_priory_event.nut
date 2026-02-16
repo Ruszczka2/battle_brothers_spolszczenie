@@ -9,13 +9,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Napotykasz mnicha stojacego przed klasztorem. Mury budynku zostaly roztrzaskane, plyty kamienia wyprysly z fundamentow, a mniejsze kamienie zamienily sie w pyl podczas zawalenia. Wyjasnia, ze trzesienie ziemi przesunelo caly obiekt, odrywajac kawalki i niemal zwalajac wszystko na ziemie. Wzdycha.%SPEECH_ON%Najgorsze nie sa same zniszczenia, najgorsze jest to, ze trzesienie wstrzasnelo samymi wiernymi, luzujac ich rezerwe na cierpienie, ktore jest wpisane w nasza codziennosc. Jeszcze do mnie nie wrocili, bo boja sie, ze starzy bogowie wybrali nasze ziemie jako punkt kary za jakis nieuswiadomiony blad.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Napotykasz mnicha stojącego przed klasztorem. Mury budynku zostały roztrzaskane, płyty kamienia wyprysły z fundamentów, a mniejsze kamienie zamieniły się w pył podczas zawalenia. Wyjaśnia, że trzęsienie ziemi przesunęło cały obiekt, odrywając kawałki i niemal zwalając wszystko na ziemię. Wzdycha.%SPEECH_ON%Najgorsze nie są same zniszczenia, najgorsze jest to, że trzęsienie wstrząsnęło samymi wiernymi, luzując ich rezerwę na cierpienie, które jest wpisane w naszą codzienność. Jeszcze do mnie nie wrócili, bo boją się, że starzy bogowie wybrali nasze ziemie jako punkt kary za jakiś nieuświadomiony błąd.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Mamy zloto. Czy odbudujesz za 2500 koron?",
+					Text = "Mamy złoto. Czy odbudujesz za 2500 koron?",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 80 ? "B" : "C";
@@ -23,7 +23,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Mamy narzedzia. Chyba 40 wystarczy?",
+					Text = "Mamy narzędzia. Chyba 40 wystarczy?",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 75 ? "D" : "E";
@@ -46,7 +46,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Placisz mnichowi pieniadze na naprawe klasztoru. Zalewa sie lzami, mowiac, ze nie spodziewal sie, iz tacy honorowi ludzie w ogole istnieja na tym swiecie, a tym bardziej ze spotka ich osobiscie. Sam fakt, ze tu jestes i ze jestes tak szczodry, to znak, ze starzy bogowie go nie karza.%SPEECH_ON%Te korony nie tylko pozwola mi odbudowac, ale taka hojnosc zostanie uznana przez miejscowych za znak, ze starzy bogowie wcale nas nie karza! Prosze, wezmij to. Ledwo przetrwalo gruzy, ale moze z czasem lepiej je wykorzystasz niz my kiedykolwiek moglibysmy.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Płacisz mnichowi pieniądze na naprawę klasztoru. Zalewa się łzami, mówiąc, że nie spodziewał się, iż tacy honorowi ludzie w ogóle istnieją na tym świecie, a tym bardziej że spotka ich osobiście. Sam fakt, że tu jesteś i że jesteś tak szczodry, to znak, że starzy bogowie go nie karzą.%SPEECH_ON%Te korony nie tylko pozwolą mi odbudować, ale taka hojność zostanie uznana przez miejscowych za znak, że starzy bogowie wcale nas nie karzą! Proszę, weźmij to. Ledwo przetrwało gruzy, ale może z czasem lepiej je wykorzystasz niż my kiedykolwiek moglibyśmy.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -83,11 +83,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(0.75, "Kompania pomogla odnowic klasztor");
+						bro.improveMood(0.75, "Kompania pomogła odnowić klasztor");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "Kompania pomogla odnowic klasztor");
+						bro.improveMood(0.5, "Kompania pomogła odnowić klasztor");
 					}
 
 					if (bro.getMoodState() > this.Const.MoodState.Neutral)
@@ -104,7 +104,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{Kladziesz dlon na ramieniu mnicha. Spoglada na ciebie ze lzami w oczach, po czym zerka na sakiewke koron, ktora wyciagasz. Bierze ja i trzyma czule, jakby nigdy w zyciu niczego nie dostal.%SPEECH_ON%To... to dla klasztoru?%SPEECH_OFF%Kiwajac glowa, mowisz mu, by uzyla tego na odbudowe. Zaczynasz nawet sugerowac dodanie skromnej dzwonnicy, ale wlasnie gdy zaczynasz z tymi architektonicznymi wywodami, na droge wpada krzyczacy mezczyzna, wskazujac palcem, a jego stopy bija zawziecie ziemie.%SPEECH_ON%Nie ufajcie temu szczurowi! To nic niewarty zebr!%SPEECH_OFF%Gdy odwracasz sie z powrotem, rzekomy mnich z progow klasztoru juz ucieka, biegnac droga, przeskakujac przez pokrzywy i znikajac w krzakach i drzewach, z pieniedzmi w reku i rechotem w powietrzu. Mezczyzna z drogi rozklada rece.%SPEECH_ON%Ten sprytny lajdak od tygodni odgrywa nieszczescie. Ten budynek jest martwy i porzucony, nie byl zajety od czasu, gdy zielonoskory go zniszczyli dziesiec lat temu. Wiem, ze chcieliscie postapic dobrze, ale wielu na tym swiecie widzi wasza szczodrosc jako wielki cel do trafienia. Wybaczcie, ze was oszukano, panowie.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{Kładziesz dłoń na ramieniu mnicha. Spogląda na ciebie ze łzami w oczach, po czym zerka na sakiewkę koron, którą wyciągasz. Bierze ją i trzyma czule, jakby nigdy w życiu niczego nie dostał.%SPEECH_ON%To... to dla klasztoru?%SPEECH_OFF%Kiwając głową, mówisz mu, by użyła tego na odbudowę. Zaczynasz nawet sugerować dodanie skromnej dzwonnicy, ale właśnie gdy zaczynasz z tymi architektonicznymi wywodami, na drogę wpada krzyczący mężczyzna, wskazując palcem, a jego stopy biją zawzięcie ziemię.%SPEECH_ON%Nie ufajcie temu szczurowi! To nic niewarty żebrak!%SPEECH_OFF%Gdy odwracasz się z powrotem, rzekomy mnich z progów klasztoru już ucieka, biegnąc drogą, przeskakując przez pokrzywy i znikając w krzakach i drzewach, z pieniędzmi w ręku i rechotem w powietrzu. Mężczyzna z drogi rozkłada ręce.%SPEECH_ON%Ten sprytny łajdak od tygodni odgrywa nieszczęście. Ten budynek jest martwy i porzucony, nie był zajęty od czasu, gdy zielonoskórzy go zniszczyli dziesięć lat temu. Wiem, że chcieliście postąpić dobrze, ale wielu na tym świecie widzi waszą szczodrość jako wielki cel do trafienia. Wybaczcie, że was oszukano, panowie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -153,13 +153,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_85.png[/img]{Uwazasz, ze %companyname% ma narzedzia i ludzi, by wykonac zadanie samodzielnie. Z usmiechem mowisz mnichowi, ze zabieracie sie do naprawy klasztoru. Swiety czlowiek jest zachwycony, gdy ty i Swietobiorcy zbieracie sprzet i zaczynacie prace. Trwa to kilka godzin, ale pot i krew sa tego warte. Gdy konczycie, pojawia sie gromada chlopow i odchodza nie tylko z myslami o starych bogach, ale i z imieniem %companyname% na ustach. Bez watpienia wielu uslyszy o Swietobiorcach przez nadchodzace dni!}",
+			Text = "[img]gfx/ui/events/event_85.png[/img]{Uważasz, że %companyname% ma narzędzia i ludzi, by wykonać zadanie samodzielnie. Z uśmiechem mówisz mnichowi, że zabieracie się do naprawy klasztoru. Święty człowiek jest zachwycony, gdy ty i Świętobiorcy zbieracie sprzęt i zaczynacie pracę. Trwa to kilka godzin, ale pot i krew są tego warte. Gdy kończycie, pojawia się gromada chłopów i odchodzą nie tylko z myślami o starych bogach, ale i z imieniem %companyname% na ustach. Bez wątpienia wielu usłyszy o Świętobiorcach przez nadchodzące dni!}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Tak powinno byc.",
+					Text = "Tak powinno być.",
 					function getResult( _event )
 					{
 						return 0;
@@ -174,13 +174,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "Kompania zyskala slawe"
+					text = "Kompania zyskała sławę"
 				});
 				this.World.Assets.addArmorParts(-40);
 				this.List.push({
 					id = 11,
 					icon = "ui/icons/asset_supplies.png",
-					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] Narzedzi i Zapasow"
+					text = "Tracisz [color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] Narzędzi i Zapasów"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -188,11 +188,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(1.0, "Pomogl naprawic uszkodzony klasztor");
+						bro.improveMood(1.0, "Pomógł naprawić uszkodzony klasztor");
 					}
 					else
 					{
-						bro.improveMood(0.75, "Pomogl naprawic uszkodzony klasztor");
+						bro.improveMood(0.75, "Pomógł naprawić uszkodzony klasztor");
 					}
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
@@ -209,13 +209,13 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Lapiesz mnicha i stawiasz go na nogi. Mowisz mu, ze %companyname% naprawi klasztor. Jest zaplakany i szczesliwy, choc ostrzega, ze moze byc juz nie do uratowania. Usmiechajac sie, mowisz mu, ze dla Swietobiorcow nie ma zadan zbyt wielkich. Chwile pozniej %injurybro% napiera na rozwalona sciane, ale dolna czesc zapada sie do srodka, a gorna rozsypuje na zewnatrz, natychmiast zasypujac go gruzem. Kompania krzyczy z przerazenia i rusza go wyciagnac, a wtedy reszta budynku wali sie, skladajac w strumien pylu kamiennego. %injurybro% zostaje uratowany z rumowiska, choc z niema porcja ran.%SPEECH_ON%Coz, chyba liczy sie intencja.%SPEECH_OFF%Mowi mnich, drapiac sie po karku.%SPEECH_ON%Byc moze starzy bogowie naprawde chcieli nas tu ukarac. Ale niewazne, uwazam, ze postapiliscie slusznie, a w probie jest godnosc, prawda? Bede dobrze o was mowil, %companyname%.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Łapiesz mnicha i stawiasz go na nogi. Mówisz mu, że %companyname% naprawi klasztor. Jest zapłakany i szczęśliwy, choć ostrzega, że może być już nie do uratowania. Uśmiechając się, mówisz mu, że dla Świętobiorców nie ma zadań zbyt wielkich. Chwilę później %injurybro% napiera na rozwaloną ścianę, ale dolna część zapada się do środka, a górna rozsypuje na zewnątrz, natychmiast zasypując go gruzem. Kompania krzyczy z przerażenia i rusza go wyciągnąć, a wtedy reszta budynku wali się, składając w strumień pyłu kamiennego. %injurybro% zostaje uratowany z rumowiska, choć z niema porcją ran.%SPEECH_ON%Cóż, chyba liczy się intencja.%SPEECH_OFF%Mówi mnich, drapiąc się po karku.%SPEECH_ON%Być może starzy bogowie naprawdę chcieli nas tu ukarać. Ale nieważne, uważam, że postąpiliście słusznie, a w próbie jest godność, prawda? Będę dobrze o was mówił, %companyname%.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Moglo pojsc lepiej.",
+					Text = "Mogło pójść lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -230,20 +230,20 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "Kompania zyskala slawe"
+					text = "Kompania zyskała sławę"
 				});
 				_event.m.InjuryBro.addHeavyInjury();
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.InjuryBro.getName() + " doznaje ciezkich ran"
+					text = _event.m.InjuryBro.getName() + " doznaje ciężkich ran"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_64.png[/img]{Postanawiasz, ze ta sprawa nie jest twoja. Ta decyzja sprawia, ze kilku ludzi zaczyna kwestionowac twoje przywodztwo. Jasne, nie da sie dotrzymac wszystkich Slubow zawsze, ale zeby nie poswiecic nawet kropli potu ani odrobiny korony, by pomoc swietemu czlowiekowi i jego trzodzie? To w pominieciu drobnostek, tych rzeczy, ktore w ogole nie wymagaja wysilku, czlowiek moze stoczyc sie w bezdusznego dzikusa.}",
+			Text = "[img]gfx/ui/events/event_64.png[/img]{Postanawiasz, że ta sprawa nie jest twoja. Ta decyzja sprawia, że kilku ludzi zaczyna kwestionować twoje przywództwo. Jasne, nie da się dotrzymać wszystkich Ślubów zawsze, ale żeby nie poświęcić nawet kropli potu ani odrobiny korony, by pomóc świętemu człowiekowi i jego trzodzie? To w pominięciu drobnostek, tych rzeczy, które w ogóle nie wymagają wysiłku, człowiek może stoczyć się w bezdusznego dzikusa.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -265,11 +265,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(0.75, "Odmowiles pomocy mnichowi w potrzebie");
+						bro.worsenMood(0.75, "Odmówiłeś pomocy mnichowi w potrzebie");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.5, "Odmowiles pomocy mnichowi w potrzebie");
+						bro.worsenMood(0.5, "Odmówiłeś pomocy mnichowi w potrzebie");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

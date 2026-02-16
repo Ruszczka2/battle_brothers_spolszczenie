@@ -10,13 +10,13 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%deserter% dezerter i %disowned% wygnany szlachcic wpatruja sie w siebie ponad ogniskiem. Poniewaz oboz to raczej malo romantyczne miejsce, taka sytuacja zwykle zapowiada jedno: ostrą bijatyke. Ale zamiast tego, dość niespodziewanie, obaj mezczyzni zaczynaja sie usmiechac. %deserter% wskazuje palcem.%SPEECH_ON%Dowodziles pospolitym ruszeniem %randomname% na zachodzie, prawda?%SPEECH_OFF%Wygnany szlachcic smieje sie i klepie sie w kolano.%SPEECH_ON%Skurczybyk. Wiedzialem, ze wygladasz znajomo! Ty, maly dezerterze, masz pojecie, jak dlugo cie szukalismy? Caly tydzien! Reszte złapaliśmy, ale ty, ty uciekles.%SPEECH_OFF%Dezerter smieje sie.%SPEECH_ON%A teraz popatrz na nas, walczymy dla tej samej kompanii najemnikow! Jakie szanse, co? A co zrobiliscie z tymi, ktorych złapaliscie, tak przy okazji?%SPEECH_OFF%%disowned% wzrusza ramionami.%SPEECH_ON%Och, powiesilismy ich, oczywiscie. W sumie przypomina mi to stary trick, ktory... no, powiedzmy tylko, ze to byly czasy!%SPEECH_OFF%%deserter% przez chwile wpatruje sie w ogien. Podnosi wzrok.%SPEECH_ON%Haha, no tak.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%deserter% dezerter i %disowned% wygnany szlachcic wpatrują się w siebie ponad ogniskiem. Ponieważ obóz to raczej mało romantyczne miejsce, taka sytuacja zwykle zapowiada jedno: ostrą bijatykę. Ale zamiast tego, dość niespodziewanie, obaj mężczyźni zaczynają się uśmiechać. %deserter% wskazuje palcem.%SPEECH_ON%Dowodziłeś pospolitym ruszeniem %randomname% na zachodzie, prawda?%SPEECH_OFF%Wygnany szlachcic śmieje się i klepie się w kolano.%SPEECH_ON%Skurczybyk. Wiedziałem, że wyglądasz znajomo! Ty, mały dezerterze, masz pojęcie, jak długo cię szukaliśmy? Cały tydzień! Resztę złapaliśmy, ale ty, ty uciekłeś.%SPEECH_OFF%Dezerter śmieje się.%SPEECH_ON%A teraz popatrz na nas, walczymy dla tej samej kompanii najemników! Jakie szanse, co? A co zrobiliście z tymi, których złapaliście, tak przy okazji?%SPEECH_OFF%%disowned% wzrusza ramionami.%SPEECH_ON%Och, powiesiliśmy ich, oczywiście. W sumie przypomina mi to stary trik, który... no, powiedzmy tylko, że to były czasy!%SPEECH_OFF%%deserter% przez chwilę wpatruje się w ogień. Podnosi wzrok.%SPEECH_ON%Haha, no tak.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Swiat jest maly, przynajmniej dla wyrzutkow.",
+					Text = "Świat jest mały, przynajmniej dla wyrzutków.",
 					function getResult( _event )
 					{
 						return 0;
@@ -30,7 +30,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Disowned.getImagePath());
 				_event.m.Deserter.getFlags().add("reminiscedWithDisowned");
 				_event.m.Disowned.getFlags().add("reminiscedWithDeserter");
-				_event.m.Disowned.improveMood(1.0, "Wspominal stare czasy");
+				_event.m.Disowned.improveMood(1.0, "Wspominał stare czasy");
 
 				if (_event.m.Disowned.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -47,9 +47,9 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack_boost + "[/color] Umiejetnosci Walki Wrecz"
+					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack_boost + "[/color] Umiejętności Walki Wręcz"
 				});
-				_event.m.Deserter.improveMood(1.0, "Wspominal stare czasy");
+				_event.m.Deserter.improveMood(1.0, "Wspominał stare czasy");
 
 				if (_event.m.Deserter.getMoodState() >= this.Const.MoodState.Neutral)
 				{

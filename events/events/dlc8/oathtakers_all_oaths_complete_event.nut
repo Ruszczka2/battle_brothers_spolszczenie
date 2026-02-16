@@ -7,12 +7,12 @@ this.oathtakers_all_oaths_complete_event <- this.inherit("scripts/events/event",
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{Ostatnie Sluby Mlodego Anselma zostaly wypelnione. Swietobiorcy naprawde zasluzyli na swoje imie! Pozostaje tylko jedno pytanie: co dalej? Nigdy nie byliscie pewni, co sie stanie, gdy sluby Pierwszego Swietobiorcy zostana wypelnione, a teraz, gdy to zrobiliscie, cos dociera do ciebie i reszty kompani: trzeba isc dalej. Czemu zawracac teraz? Kto chce wracac do starego, nieprowadzonego zycia? Otepialego i bezwolnego, dryfujacego bez celu? Na pewno nie o to chodzilo Mlodego Anselmowi, gdy zaczynal Ostateczna Sciezke. Mowisz ludziom, ze kazdy Slub ma swoje znaczenie, a moze to wszystkie Sluby razem tworza znaczenie wlasne. Sciezka Swietobiorcy konczy sie wtedy, gdy Swietobiorca tego chce. Patrzysz na grupe ludzi.%SPEECH_ON%Jesli uwazacie sie za wolnych od potrzeby Slubow, prosze, odejdzcie.%SPEECH_OFF%Fala zamyslonych spojrzen na ziemie przechodzi przez grupe. W koncu jeden podnosi wzrok.%SPEECH_ON%Jest tylko jeden sposob, by wyjsc spod przewodnictwa Mlodego Anselma, a to dolaczyc do niego!%SPEECH_OFF%Grupa wiwatuje. Za Mlodego Anselma, za odnalezienie jego szczeki i za zabicie wszystkich Slubodawcow!}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Ostatnie Śluby Młodego Anselma zostały wypełnione. Świętobiorcy naprawdę zasłużyli na swoje imię! Pozostaje tylko jedno pytanie: co dalej? Nigdy nie byliście pewni, co się stanie, gdy śluby Pierwszego Świętobiorcy zostaną wypełnione, a teraz, gdy to zrobiliście, coś dociera do ciebie i reszty kompanii: trzeba iść dalej. Czemu zawracać teraz? Kto chce wracać do starego, nieprowadzonego życia? Otępiałego i bezwolnego, dryfującego bez celu? Na pewno nie o to chodziło Młodemu Anselmowi, gdy zaczynał Ostateczną Ścieżkę. Mówisz ludziom, że każdy Ślub ma swoje znaczenie, a może to wszystkie Śluby razem tworzą znaczenie własne. Ścieżka Świętobiorcy kończy się wtedy, gdy Świętobiorca tego chce. Patrzysz na grupę ludzi.%SPEECH_ON%Jeśli uważacie się za wolnych od potrzeby Ślubów, proszę, odejdźcie.%SPEECH_OFF%Fala zamyślonych spojrzeń na ziemię przechodzi przez grupę. W końcu jeden podnosi wzrok.%SPEECH_ON%Jest tylko jeden sposób, by wyjść spod przewodnictwa Młodego Anselma, a to dołączyć do niego!%SPEECH_OFF%Grupa wiwatuje. Za Młodego Anselma, za odnalezienie jego szczęki i za zabicie wszystkich Ślubodawców!}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Za Mlodego Anselma!",
+					Text = "Za Młodego Anselma!",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.oathtakers_all_oaths_complete_event <- this.inherit("scripts/events/event",
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(2.0, "Ukonczyl wszystkie sluby Mlodego Anselma");
+					bro.improveMood(2.0, "Ukończył wszystkie śluby Młodego Anselma");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

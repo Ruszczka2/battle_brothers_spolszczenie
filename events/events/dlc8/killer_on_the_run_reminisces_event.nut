@@ -9,7 +9,7 @@ this.killer_on_the_run_reminisces_event <- this.inherit("scripts/events/event", 
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{Pozornie znikad, co sobie wyobrazasz jako jego ulubiony sposob bycia, %killer% mimochodem wspomina, ze gdzies tu zakopal cialo. Wiesz, ze to zbieg, ale z grzecznosci pytasz, skad o tym wie. Odpowiada bez owijania:%SPEECH_ON%Bo ja ich zabilem i ukrylem zwloki tutaj. Wiesz, to bylo dobre zabojstwo. Mowie tak, bo ten czlowiek cierpial na choroby.%SPEECH_OFF%Samo slowo \"choroby\" sprawia, ze anatomisci podnosza glowy, jakby jastrzabie zobaczyly mysz. Wkrotce, ku twojej irytacji, medyczna gromada wykopuje zwloki. Dugo dyskutuja o tym, co moglo dręczyc cialo. To poza twoja wiedza, ale grupa zgadza sie, ze poznanie tego przyniesie duze postepy w ich badaniach. Gdy rozmowy sie koncza, %killer% podchodzi do ciebie z drwina. Mowi, ze zabil te osobe, bo sprawialo mu to przyjemnosc, i ze dobrze bylo zobaczyc cialo ponownie.%SPEECH_ON%Szkoda tylko, ze ci jajoglowi tak je obmacali. Zasluzyloby na wiecej troski, wiecej...czasu.%SPEECH_OFF%Oddalasz sie od niego i prowadzisz ta dziwna kompanie z powrotem na droge.}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{Pozornie znikąd, co sobie wyobrażasz jako jego ulubiony sposób bycia, %killer% mimochodem wspomina, że gdzieś tu zakopał ciało. Wiesz, że to zbieg, ale z grzeczności pytasz, skąd o tym wie. Odpowiada bez owijania:%SPEECH_ON%Bo ja ich zabiłem i ukryłem zwłoki tutaj. Wiesz, to było dobre zabójstwo. Mówię tak, bo ten człowiek cierpiał na choroby.%SPEECH_OFF%Samo słowo \"choroby\" sprawia, że anatomisci podnoszą głowy, jakby jastrzębie zobaczyły mysz. Wkrótce, ku twojej irytacji, medyczna gromada wykopuje zwłoki. Długo dyskutują o tym, co mogło dręczyć ciało. To poza twoją wiedzą, ale grupa zgadza się, że poznanie tego przyniesie duże postępy w ich badaniach. Gdy rozmowy się kończą, %killer% podchodzi do ciebie z drwiną. Mówi, że zabił tę osobę, bo sprawiało mu to przyjemność, i że dobrze było zobaczyć ciało ponownie.%SPEECH_ON%Szkoda tylko, że ci jajogłowi tak je obmacali. Zasłużyłoby na więcej troski, więcej...czasu.%SPEECH_OFF%Oddalasz się od niego i prowadzisz tę dziwną kompanię z powrotem na drogę.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -26,7 +26,7 @@ this.killer_on_the_run_reminisces_event <- this.inherit("scripts/events/event", 
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Killer.getImagePath());
-				_event.m.Killer.improveMood(1.0, "Wspominal dawne zabojstwo");
+				_event.m.Killer.improveMood(1.0, "Wspominał dawne zabójstwo");
 				local resolveBoost = this.Math.rand(1, 3);
 				_event.m.Killer.getBaseProperties().Bravery += resolveBoost;
 				_event.m.Killer.getSkills().update();
@@ -56,9 +56,9 @@ this.killer_on_the_run_reminisces_event <- this.inherit("scripts/events/event", 
 						this.List.push({
 							id = 16,
 							icon = "ui/icons/xp_received.png",
-							text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+50[/color] Doswiadczenia"
+							text = bro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+50[/color] Doświadczenia"
 						});
-						bro.improveMood(1.0, "Mogl zbadac interesujace, skazone zwloki");
+						bro.improveMood(1.0, "Mógł zbadać interesujące, skażone zwłoki");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

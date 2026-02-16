@@ -9,12 +9,12 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{Mezczyzna w zbroi zbliza sie do kompani. Wyglada calkiem zwyczajnie, az do chwili gdy otwiera usta.%SPEECH_ON%Sluchajcie, sluchajcie, jestem dumnym Swietobiorca! Widze, ze i wy bardzo cenicie czynienie tego, co sluszne. To sprawia, ze wierze, iz wy tez jestescie Swietobiorcami. Zatem! Mam do was tylko jedno pytanie: ta czaszka wiszaca na naszyjniku, jak ma na imie? Jesli to ta, ktorej szukam, macie moja reke.%SPEECH_OFF% | Ludzie w zbrojach nie sa na drogach niczym rzadkim, ale ten mezczyzna ma w sobie pewna pompe i teatralnosc, ktora przyciaga wzrok, podobnie jak to, ze pewnie kroczy prosto do ciebie.%SPEECH_ON%Hulalem w lokalnej gospodzie, gdy dotarla do mnie wiec, ze przez te ziemie przeszla banda Swietobiorcow. Teraz albo to cmentarny przekret wiszacy u twej szyi, albo to... no wlasnie, sam powiedz. Podaj mi wlasciwe imie tej czaszki, a dolacze do was tu i teraz.%SPEECH_OFF% | Spotykasz mezczyzne w zbroi. Stoi na drodze tak, jakby chcial zginac z reki najemnika albo ryzykowal kark dla monety. Gdy sie zblizasz, macha do ciebie.%SPEECH_ON%Ach, ludzie, ktorych szukam. Czy jestescie ze Swietobiorcami? Chce dolaczyc do was na sciezce. Sciezce...%SPEECH_OFF%Zawiesza glos, wskazujac na kompanijna czaszke. Aha, chodzi mu o... | Mezczyzna w zbroi wybiega na droge. Kladziesz reke na mieczu, ale on po prostu sie klania, jakbys byl katem.%SPEECH_ON%Modlilem sie do starych bogow, by utwardzili moje cnoty i utrzymali mnie na sciezce. Czyz, nieznajomy, czyz to nie jego czaszka wiszaca u twej szyi? Jesli tak, dolacze do was i do slubow, na ktorych jestescie, w tej chwili. Prosze, powiedz mi, czy to bezzuchwa czaszka naszego drogiego...naszego...%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Mężczyzna w zbroi zbliża się do kompanii. Wygląda całkiem zwyczajnie, aż do chwili gdy otwiera usta.%SPEECH_ON%Słuchajcie, słuchajcie, jestem dumnym Świętobiorcą! Widzę, że i wy bardzo cenicie czynienie tego, co słuszne. To sprawia, że wierzę, iż wy też jesteście Świętobiorcami. Zatem! Mam do was tylko jedno pytanie: ta czaszka wisząca na naszyjniku, jak ma na imię? Jeśli to ta, której szukam, macie moją rękę.%SPEECH_OFF% | Ludzie w zbrojach nie są na drogach niczym rzadkim, ale ten mężczyzna ma w sobie pewną pompę i teatralność, która przyciąga wzrok, podobnie jak to, że pewnie kroczy prosto do ciebie.%SPEECH_ON%Hulałem w lokalnej gospodzie, gdy dotarła do mnie wieść, że przez te ziemie przeszła banda Świętobiorców. Teraz albo to cmentarny przekręt wiszący u twej szyi, albo to... no właśnie, sam powiedz. Podaj mi właściwe imię tej czaszki, a dołączę do was tu i teraz.%SPEECH_OFF% | Spotykasz mężczyznę w zbroi. Stoi na drodze tak, jakby chciał zginąć z ręki najemnika albo ryzykował kark dla monety. Gdy się zbliżasz, macha do ciebie.%SPEECH_ON%Ach, ludzie, których szukam. Czy jesteście ze Świętobiorcami? Chcę dołączyć do was na ścieżce. Ścieżce...%SPEECH_OFF%Zawiesza głos, wskazując na kompanijną czaszkę. Aha, chodzi mu o... | Mężczyzna w zbroi wybiega na drogę. Kładziesz rękę na mieczu, ale on po prostu się kłania, jakbyś był katem.%SPEECH_ON%Modliłem się do starych bogów, by utwardzili moje cnoty i utrzymali mnie na ścieżce. Czyż, nieznajomy, czyż to nie jego czaszka wisząca u twej szyi? Jeśli tak, dołączę do was i do ślubów, na których jesteście, w tej chwili. Proszę, powiedz mi, czy to bezzuchwa czaszka naszego drogiego...naszego...%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Mlody Anselm.",
+					Text = "Młody Anselm.",
 					function getResult( _event )
 					{
 						return "B";
@@ -57,12 +57,12 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{Mezczyzna pada na kolano, z opuszczona glowa.%SPEECH_ON%Zaprawde, Mlody Anselm mnie tu poprowadzil! Dolacze do was na sciezce, bracia Swietobiorcy!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Mężczyzna pada na kolano, z opuszczoną głową.%SPEECH_ON%Zaprawdę, Młody Anselm mnie tu poprowadził! Dołączę do was na ścieżce, bracia Świętobiorcy!%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Witaj na pokladzie.",
+					Text = "Witaj na pokładzie.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -82,7 +82,7 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{Mezczyzna wzdycha.%SPEECH_ON%A, rozumiem. Jest na tym swiecie stanowczo za duzo Hugow, nie dziwi mnie, ze pojawil sie kolejny w stanie tak ponurej czaszki, choc nie wiem, czemu nosicie ja przy sobie.%SPEECH_OFF% | %SPEECH_ON%Hugo.%SPEECH_OFF%Mowi mezczyzna.%SPEECH_ON%Kolejny cholerny Hugo, co? Ilu ich tu jest? Co drugi facet, na ktorego trafiam, to Hugo.%SPEECH_OFF%Odwraca sie i odchodzi, mruczac ze zloscia o pospolitych ludziach i ich nieoryginalnych imionach. | Mezczyzna wzdycha.%SPEECH_ON%Hugo, co? Dobra. No to do zobaczenia.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Mężczyzna wzdycha.%SPEECH_ON%A, rozumiem. Jest na tym świecie stanowczo za dużo Hugów, nie dziwi mnie, że pojawił się kolejny w stanie tak ponurej czaszki, choć nie wiem, czemu nosicie ją przy sobie.%SPEECH_OFF% | %SPEECH_ON%Hugo.%SPEECH_OFF%Mówi mężczyzna.%SPEECH_ON%Kolejny cholerny Hugo, co? Ilu ich tu jest? Co drugi facet, na którego trafiam, to Hugo.%SPEECH_OFF%Odwraca się i odchodzi, mrucząc ze złością o pospolitych ludziach i ich nieoryginalnych imionach. | Mężczyzna wzdycha.%SPEECH_ON%Hugo, co? Dobra. No to do zobaczenia.%SPEECH_OFF%}",
 			Banner = "",
 			Characters = [],
 			Options = [

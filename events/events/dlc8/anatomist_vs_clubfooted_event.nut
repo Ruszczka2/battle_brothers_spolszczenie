@@ -10,13 +10,13 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Zastajesz %anatomist% anatomiste, jak przyglada sie niezgrabnym stopom %clubfoot%: a wlasciwie temu, ze jedna z nich wyglada jak worek mlotow. To obrzydliwe, odpychajace i, rzecz jasna, utrudnia mu wykonywanie pelnych obowiazkow najemnika. Mowi sie, ze to dziwnie pociaga kobiety, ale to niepotwierdzone plotki. Tak czy inaczej, anatomista przychodzi do ciebie z propozycja.%SPEECH_ON%To wcale nie taka rzadka dolegliwosc, ta koslawosc stopy. W mlodym wieku latwo ja naprawic, ale operacja staje sie coraz trudniejsza, im czlowiek starszy. Na szczescie jestem wyszkolonym anatomista z ogromna wiedza na ten temat. Jesli mi pozwolisz, sprobuje wyleczyc tego mezczyzne z jego nieszczesnej i zupelnie niepotrzebnej, dozywotniej przypadlosci.%SPEECH_OFF%%clubfoot% kiwa glowa, mowiac, ze jest gotow sprobowac, jesli uznasz to za najlepsze.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Zastajesz %anatomist% anatomistę, jak przygląda się niezgrabnym stopom %clubfoot%: a właściwie temu, że jedna z nich wygląda jak worek młotów. To obrzydliwe, odpychające i, rzecz jasna, utrudnia mu wykonywanie pełnych obowiązków najemnika. Mówi się, że to dziwnie pociąga kobiety, ale to niepotwierdzone plotki. Tak czy inaczej, anatomista przychodzi do ciebie z propozycją.%SPEECH_ON%To wcale nie taka rzadka dolegliwość, ta koślawość stopy. W młodym wieku łatwo ją naprawić, ale operacja staje się coraz trudniejsza, im człowiek starszy. Na szczęście jestem wyszkolonym anatomistą z ogromną wiedzą na ten temat. Jeśli mi pozwolisz, spróbuję wyleczyć tego mężczyznę z jego nieszczęsnej i zupełnie niepotrzebnej, dożywotniej przypadłości.%SPEECH_OFF%%clubfoot% kiwa głową, mówiąc, że jest gotów spróbować, jeśli uznasz to za najlepsze.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Zrob to, wykonaj swoje rzemioslo.",
+					Text = "Zrób to, wykonaj swoje rzemiosło.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -24,7 +24,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Nie, ryzyko jest zbyt duze.",
+					Text = "Nie, ryzyko jest zbyt duże.",
 					function getResult( _event )
 					{
 						return "E";
@@ -41,13 +41,13 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Dajesz %anatomist% zielone swiatlo. On i koslawy mezczyzna odchodza, kroczac i kulejac, by zalatwic sprawe. Naturalnie idziesz popatrzec. Widzisz, jak %anatomist% uklada stope %clubfoot% na stolku. Wyciaga kawalek drewna, w ktorym juz widac odciski zebow. Potem bierze fiolke z plynem, odtyka korek, naciera nim drewno, sam bierze lyk, po czym podaje reszte pacjentowi. %clubfoot% wypija, a potem zagryza drewno. Nastepuje obrzydliwa seria laman nogi, zakladania gipsu i ponownego gipsowania. %anatomist% zaczyna naciecie skalpelem, szczerzac sie oblakanczo podczas pracy. %clubfoot% dawno juz odpłynal.\n\nGdy wszystko sie konczy, noga %clubfoot% jest kompletnie zmasakrowana i zagesowana. %anatomist% twierdzi, ze operacja sie powiodla, choc potrzebny bedzie dość dlugi okres rekonwalescencji. Stopa bedzie musiala byc gipsowana raz po raz, a za kazdym razem ustawiana odrobine bardziej, ale da sie to zrobic. Omajaczony %clubfoot% usmiecha sie, spogladajac na swoja stope.%SPEECH_ON%Warto bedzie, kapitanie. Dla mnie i dla %companyname%.%SPEECH_OFF%Dosyc sumienny i odurzony najemnik pada do tylu i zasypia z glosnym chrapaniem.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Dajesz %anatomist% zielone światło. On i koślawy mężczyzna odchodzą, krocząc i kulejąc, by załatwić sprawę. Naturalnie idziesz popatrzeć. Widzisz, jak %anatomist% układa stopę %clubfoot% na stołku. Wyciąga kawałek drewna, w którym już widać odciski zębów. Potem bierze fiolkę z płynem, odtyka korek, naciera nim drewno, sam bierze łyk, po czym podaje resztę pacjentowi. %clubfoot% wypija, a potem zagryza drewno. Następuje obrzydliwa seria łamań nogi, zakładania gipsu i ponownego gipsowania. %anatomist% zaczyna nacięcie skalpelem, szczerząc się obłąkańczo podczas pracy. %clubfoot% dawno już odpłynął.\n\nGdy wszystko się kończy, noga %clubfoot% jest kompletnie zmasakrowana i zagesowana. %anatomist% twierdzi, że operacja się powiodła, choć potrzebny będzie dość długi okres rekonwalescencji. Stopa będzie musiała być gipsowana raz po raz, a za każdym razem ustawiana odrobinę bardziej, ale da się to zrobić. Omajaczony %clubfoot% uśmiecha się, spoglądając na swoją stopę.%SPEECH_ON%Warto będzie, kapitanie. Dla mnie i dla %companyname%.%SPEECH_OFF%Dość sumienny i odurzony najemnik pada do tyłu i zasypia z głośnym chrapaniem.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Maszeruj, bracie, to twoje zycie.",
+					Text = "Maszeruj, bracie, to twoje życie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -61,7 +61,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_23.png",
-					text = _event.m.Clubfooted.getName() + " nie jest juz Koslawy"
+					text = _event.m.Clubfooted.getName() + " nie jest już Koślawy"
 				});
 				local injury = _event.m.Clubfooted.addInjury([
 					{
@@ -87,7 +87,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Clubfooted.getName() + " odnosi " + injury.getNameOnly()
 				});
-				_event.m.Clubfooted.improveMood(1.0, "Wyleczono mu koslawosc");
+				_event.m.Clubfooted.improveMood(1.0, "Wyleczono mu koślawość");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Clubfooted.getImagePath());
 			}
@@ -95,7 +95,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Niechetnie dajesz zielone swiatlo, by %anatomist% anatomista zabral sie do pracy. Rozwazasz dolaczenie do niego i %clubfoot% w namiocie, ale cos w lamaniu stopy, by ja wyleczyc, nie do końca... stoi. Zamiast tego zajmujesz sie ulubionym zadaniem: liczeniem zapasow. Spokoj i cisza, notowanie ile czego masz, ile bedziesz potrzebowal, i w jakim tempie kompanie zuzywa te rzeczy. To wszystko jest fascynujace.\n\nNaprawde nie ma nic lepszego od liczenia zapasow, a jedyne, co mogloby przerwac twoja przyjemnosc, to przenikliwe, okropne krzyki %clubfoot% dobiegajace z namiotu, do ktorego tak skrupulatnie nie wchodziles. Teraz, gdy jego pisk wypełnia powietrze, biegniesz do namiotu i wchodzisz do srodka. Zastajesz %anatomist% z boku, ocierajacego pot z czola.%SPEECH_ON%Witaj, kapitanie. Cóż, pozwol, ze podsumuje. Jak widac, pojawily sie pewne nieprzewidziane komplikacje. Oczywiscie wyzdrowieje, nie martw sie o to, ale koslawosc pozostanie. Okazala sie, eee, odporna na moje zabiegi.%SPEECH_OFF%Patrzysz na %clubfoot%. Teraz jest nieprzytomny, a ponizej kolan noga jest wykrecona jak szmata. Anatomista kiwa uprzejmie glowa.%SPEECH_ON%Nie martw sie tym, to tez naprawie. Potrzebowalem tylko, by przestal tak krzyczec i wiercic sie oraz chwili oddechu, zebym sam mogl zlapac oddech. Chcesz patrzec?%SPEECH_OFF%Anatomista chwyta mezczyzne za stope. Ta lata w jego uscisku, jakby trzymal ciasto. Krecisz glowa i pospiesznie wychodzisz z namiotu.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Niechętnie dajesz zielone światło, by %anatomist% anatomista zabrał się do pracy. Rozważasz dołączenie do niego i %clubfoot% w namiocie, ale coś w łamaniu stopy, by ją wyleczyć, nie do końca... stoi. Zamiast tego zajmujesz się ulubionym zadaniem: liczeniem zapasów. Spokój i cisza, notowanie ile czego masz, ile będziesz potrzebował, i w jakim tempie kompania zużywa te rzeczy. To wszystko jest fascynujące.\n\nNaprawdę nie ma nic lepszego od liczenia zapasów, a jedyne, co mogłoby przerwać twoją przyjemność, to przenikliwe, okropne krzyki %clubfoot% dobiegające z namiotu, do którego tak skrupulatnie nie wchodziłeś. Teraz, gdy jego pisk wypełnia powietrze, biegniesz do namiotu i wchodzisz do środka. Zastajesz %anatomist% z boku, ocierającego pot z czoła.%SPEECH_ON%Witaj, kapitanie. Cóż, pozwól, że podsumuję. Jak widać, pojawiły się pewne nieprzewidziane komplikacje. Oczywiście wyzdrowieje, nie martw się o to, ale koślawość pozostanie. Okazała się, eee, odporna na moje zabiegi.%SPEECH_OFF%Patrzysz na %clubfoot%. Teraz jest nieprzytomny, a poniżej kolan noga jest wykręcona jak szmata. Anatomista kiwa uprzejmie głową.%SPEECH_ON%Nie martw się tym, to też naprawię. Potrzebowałem tylko, by przestał tak krzyczeć i wiercić się oraz chwili oddechu, żebym sam mógł złapać oddech. Chcesz patrzeć?%SPEECH_OFF%Anatomista chwyta mężczyznę za stopę. Ta lata w jego uścisku, jakby trzymał ciasto. Kręcisz głową i pospiesznie wychodzisz z namiotu.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -135,7 +135,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Clubfooted.getName() + " odnosi " + injury.getNameOnly()
 				});
-				_event.m.Clubfooted.worsenMood(this.Const.MoodChange.PermanentInjury, "Eksperymentowano na nim jak na szalencu");
+				_event.m.Clubfooted.worsenMood(this.Const.MoodChange.PermanentInjury, "Eksperymentowano na nim jak na szaleńcu");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Clubfooted.getImagePath());
 			}
@@ -143,7 +143,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Patrzysz na %anatomist% pytajaco.%SPEECH_ON%Czy ja tu prowadze stadnine wyscigowa? Jesli ten czlowiek chce naprawic zepsuta stope, niech odejdzie na odpoczynek z honorem i godnoscia. Nie potrzebujemy dziwacznych eksperymentow, ktore skoncza sie bogowie wiedza jakimi rezultatami.%SPEECH_OFF%Anatomista odchrzakuje i mowi, ze zabiegi sa dosc proste, ale zdradza sie, wspominajac, ze zyski naukowe z ich przeprowadzenia sa ogromne, co pokazuje, ze wcale nie mial na uwadze interesu %clubfoot%. Mowisz mu, ze rozmowa jest skonczona.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Patrzysz na %anatomist% pytająco.%SPEECH_ON%Czy ja tu prowadzę stadninę wyścigową? Jeśli ten człowiek chce naprawić zepsutą stopę, niech odejdzie na odpoczynek z honorem i godnością. Nie potrzebujemy dziwacznych eksperymentów, które skończą się bogowie wiedzą jakimi rezultatami.%SPEECH_OFF%Anatomista odchrzakuje i mówi, że zabiegi są dość proste, ale zdradza się, wspominając, że zyski naukowe z ich przeprowadzenia są ogromne, co pokazuje, że wcale nie miał na uwadze interesu %clubfoot%. Mówisz mu, że rozmowa jest skończona.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -159,7 +159,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.0, "Odmowiono mu okazji do badan");
+				_event.m.Anatomist.worsenMood(1.0, "Odmówiono mu okazji do badań");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

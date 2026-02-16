@@ -11,13 +11,13 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_01.png[/img]{Wozki z owocami w %townname% sa zaladowane wszelkimi pysznosciami, choc paskudnie drogimi. Zerkasz na jednego z wlascicieli, probujac wyczuc moment, gdy odwróci wzrok, by skorzystac z pieciopalcowej znizki. Wlasnie gdy masz zamiar cos podprowadzic, %anatomist% anatomista podbiega w pospiechu i, co wazniejsze, zwraca na siebie cala uwage. Odstawiasz drobna kradziez i pytasz, czego chce. Usmiecha sie.%SPEECH_ON%Znalezlismy czarny rynek %townname%.%SPEECH_OFF%Idziesz na miejsce i widzisz cherlawego mezczyzne opierajacego sie o krzeslo. Na stole przed nim lezy zestaw \'towarow\', o ile mozna je tak nazwac. Dla ciebie to sterta byle jakiego badziewia, ale dla anatomisty to niemal dar starych bogow. Ziewajac, chudzielec mowi, zebys wybral. %anatomist% pochyla sie, ocenia towar i wskazuje trzy rzeczy o watpliwej jakosci i niejasnym przeznaczeniu. Ostrzega, ze kompania powinna kupic tylko jeden.%SPEECH_ON%Jesli straz miejska znajdzie nas z zbyt wieloma, moga wziac nas za handlarzy, a handel takimi dobrami jest ciezkim przestepstwem.%SPEECH_OFF%Przygladasz sie opcjom.}",
+			Text = "[img]gfx/ui/events/event_01.png[/img]{Wózki z owocami w %townname% są załadowane wszelkimi pysznościami, choć paskudnie drogimi. Zerkasz na jednego z właścicieli, próbując wyczuć moment, gdy odwróci wzrok, by skorzystać z pięciopalcowej zniżki. Właśnie gdy masz zamiar coś podprowadzić, %anatomist% anatomista podbiega w pośpiechu i, co ważniejsze, zwraca na siebie całą uwagę. Odstawiasz drobną kradzież i pytasz, czego chce. Uśmiecha się.%SPEECH_ON%Znaleźliśmy czarny rynek %townname%.%SPEECH_OFF%Idziesz na miejsce i widzisz cherlawego mężczyznę opierającego się o krzesło. Na stole przed nim leży zestaw \'towarów\', o ile można je tak nazwać. Dla ciebie to sterta byle jakiego badziewia, ale dla anatomisty to niemal dar starych bogów. Ziewając, chudzielec mówi, żebyś wybrał. %anatomist% pochyla się, ocenia towar i wskazuje trzy rzeczy o wątpliwej jakości i niejasnym przeznaczeniu. Ostrzega, że kompania powinna kupić tylko jeden.%SPEECH_ON%Jeśli straż miejska znajdzie nas z zbyt wieloma, mogą wziąć nas za handlarzy, a handel takimi dobrami jest ciężkim przestępstwem.%SPEECH_OFF%Przyglądasz się opcjom.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Wezmy to cos wygladajace na mozg za 100 koron.",
+					Text = "Weźmy to coś wyglądające na mózg za 100 koron.",
 					function getResult( _event )
 					{
 						_event.m.Price = 100;
@@ -26,7 +26,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Wezme to wielkie serce za... 550 koron, tak?",
+					Text = "Wezmę to wielkie serce za... 550 koron, tak?",
 					function getResult( _event )
 					{
 						_event.m.Price = 550;
@@ -35,7 +35,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Zaplace 200 koron za to... cos w rodzaju gruczolu?",
+					Text = "Zapłacę 200 koron za to... coś w rodzaju gruczołu?",
 					function getResult( _event )
 					{
 						_event.m.Price = 200;
@@ -44,7 +44,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Nie stac nas na takie fanaberie.",
+					Text = "Nie stać nas na takie fanaberie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -60,13 +60,13 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Brain",
-			Text = "[img]gfx/ui/events/event_14.png[/img]{Kupujesz cos, co wyglada jak bryla skondensowanych makaronow, gabczaste pasma szare z czarnymi kropkami na miekkiej strukturze. Dosc obrzydliwie, %anatomist% kladzie cala dlon na tej substancji i naciska. Gdy odrywa reke, slad pozostaje, mieso pęka, gdy odkleja sie i wraca na miejsce. Usmiecha sie.%SPEECH_ON%Sądze, ze mozemy wiele z tego wykorzystac w badaniach.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_14.png[/img]{Kupujesz coś, co wygląda jak bryła skondensowanych makaronów, gąbczaste pasma szare z czarnymi kropkami na miękkiej strukturze. Dość obrzydliwie, %anatomist% kładzie całą dłoń na tej substancji i naciska. Gdy odrywa rękę, ślad pozostaje, mięso pęka, gdy odkleja się i wraca na miejsce. Uśmiecha się.%SPEECH_ON%Sądzę, że możemy wiele z tego wykorzystać w badaniach.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Obrzydliwe, ale niech bedzie.",
+					Text = "Obrzydliwe, ale niech będzie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -76,7 +76,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Zdobyl obiecujacy okaz do badan");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył obiecujący okaz do badań");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -92,7 +92,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doswiadczenia"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doświadczenia"
 				});
 				this.World.Assets.addMoney(-_event.m.Price);
 				this.List.push({
@@ -113,13 +113,13 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Heart",
-			Text = "[img]gfx/ui/events/event_14.png[/img]{Do przewiezienia ogromnego organu potrzebna jest taczka. %anatomist% twierdzi, ze to serce Unholta i ze bedzie bardzo przydatne jako okaz do badan. Taczke opuszcza sie i obaj na nie patrzycie: ty, niewyksztalcony laik, widzisz cos obrzydliwego i odpychajacego, a anatomista, wyksztalcony laik, widzi cos obrzydliwego i fascynujacego. Niepokoi cie, ze cos tak ogromnego moze byc w sercu bestii. Serce czlowieka jest male, a jednak pompuje z ogniem i determinacja, by podporzadkowac sobie swiat. A to serce...\n\nNiepokojaco, %anatomist% zaciska piesc i uderza nia w jedna z komor serca. Widzisz, jak miesien sie porusza, jakby wciaz pompowal i pulsowal. Wyciaga reke i patrzy na brud: czarne tkanki i sluzowata warstwa plesni lub krwi, albo krwawej plesni.%SPEECH_ON%Nasze badania wiele zyskaja na tym okazie.%SPEECH_OFF%Patrzy na ciebie, jakby szukal potwierdzenia. Spogladasz na obciazona taczke i mowisz mu, ze jesli to jego okaz, to jego kregoslup peknie, gdy bedzie targal to cholerstwo.}",
+			Text = "[img]gfx/ui/events/event_14.png[/img]{Do przewiezienia ogromnego organu potrzebna jest taczka. %anatomist% twierdzi, że to serce Unholta i że będzie bardzo przydatne jako okaz do badań. Taczkę opuszcza się i obaj na nie patrzycie: ty, niewykształcony laik, widzisz coś obrzydliwego i odpychającego, a anatomista, wykształcony laik, widzi coś obrzydliwego i fascynującego. Niepokoi cię, że coś tak ogromnego może być w sercu bestii. Serce człowieka jest małe, a jednak pompuje z ogniem i determinacją, by podporządkować sobie świat. A to serce...\n\nNiepokojąco, %anatomist% zaciska pięść i uderza nią w jedną z komór serca. Widzisz, jak mięsień się porusza, jakby wciąż pompował i pulsował. Wyciąga rękę i patrzy na brud: czarne tkanki i śluzowata warstwa pleśni lub krwi, albo krwawej pleśni.%SPEECH_ON%Nasze badania wiele zyskają na tym okazie.%SPEECH_OFF%Patrzy na ciebie, jakby szukał potwierdzenia. Spoglądasz na obciążoną taczkę i mówisz mu, że jeśli to jego okaz, to jego kręgosłup pęknie, gdy będzie targał to cholerstwo.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Pamietaj, zginaj nogi w kolanach.",
+					Text = "Pamiętaj, zginaj nogi w kolanach.",
 					function getResult( _event )
 					{
 						return 0;
@@ -129,7 +129,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Zdobyl obiecujacy okaz do badan");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył obiecujący okaz do badań");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -145,7 +145,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doswiadczenia"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doświadczenia"
 				});
 				this.World.Assets.addMoney(-_event.m.Price);
 				this.List.push({
@@ -166,7 +166,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Gland",
-			Text = "[img]gfx/ui/events/event_14.png[/img]{Dla ciebie ten zakup wyglada jak popiolowe straczki groszku skrecane ze soba. Szare grudy wyginaja sie i splaszczaja na organie, a jego miesnie falują i wykrecaja sie jak marynarskie liny. Fale koncza sie na tlustej bulwie tkanki. %anatomist% wyjasnia.%SPEECH_ON%Wierzy sie, ze to organ, ktory daje wilkorowi tak wiele energii. Nawet jego ksztalt ma dzika strukture, jakby organ sam chcial odtwarzac swoj cel.%SPEECH_OFF%Nacina tkanke i odgarnia ja, ukazujac siec miesnych tuneli i kanalow, ktore koncza sie dziwacznym kompleksem komor. Nie wiadomo, do czego czlowiek moglby to wykorzystac, ale gdy %anatomist% zaczyna wkladac palce w otwory, szybko odchodzisz, ostrzegajac go tylko, by nie robil tego tak publicznie, bo wzbudzi w chlopach ochote na lincz.}",
+			Text = "[img]gfx/ui/events/event_14.png[/img]{Dla ciebie ten zakup wygląda jak popiołowe strączki groszku skręcane ze sobą. Szare grudy wyginają się i spłaszczają na organie, a jego mięśnie falują i wykręcają się jak marynarskie liny. Fale kończą się na tłustej bulwie tkanki. %anatomist% wyjaśnia.%SPEECH_ON%Wierzy się, że to organ, który daje wilkorowi tak wiele energii. Nawet jego kształt ma dziką strukturę, jakby organ sam chciał odtwarzać swój cel.%SPEECH_OFF%Nacina tkankę i odgarnia ją, ukazując sieć mięsnych tuneli i kanałów, które kończą się dziwacznym kompleksem komór. Nie wiadomo, do czego człowiek mógłby to wykorzystać, ale gdy %anatomist% zaczyna wkładać palce w otwory, szybko odchodzisz, ostrzegając go tylko, by nie robił tego tak publicznie, bo wzbudzi w chłopach ochotę na lincz.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -182,7 +182,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Zdobyl obiecujacy okaz do badan");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył obiecujący okaz do badań");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -198,7 +198,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doswiadczenia"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doświadczenia"
 				});
 				this.World.Assets.addMoney(-_event.m.Price);
 				this.List.push({
@@ -219,13 +219,13 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Bunk",
-			Text = "[img]gfx/ui/events/event_14.png[/img]{Kiedy wracacie do kompanii, %anatomist% wydaje sie nieco rozczarowany zakupem. Probuje wydobyc z niego cos uzytecznego, cos, czego nikt dotad nie widzial, ale wyglada na to, ze jego przedsięwziecie konczy sie niczym. Narzeka, ze te czesci zna juz od dawna, ze juz o nich pisano i ze inni ludzie zaslyneli dzieki swoim odkryciom. Przegryzajac jedzenie, przytakujesz, gdy opowiada, i udajesz, ze cie to obchodzi, gdy patrzy na ciebie smutnymi oczami. Mowi.%SPEECH_ON%To substancja, ktora jedza orki, a czasem jest wycieta z samego orka. Wiemy o tym od lat. Myslalem, ze wyciagne z tego cos, czego jeszcze nie poznano, ale moja pewnosc siebie doprowadzila tylko do zmarnowania koron.%SPEECH_OFF%Nabierasz lyzke kaszy i wpychasz do ust. Wyjmujesz lyzke i wpatrujesz sie w swoje znieksztalcone odbicie. Kiwajac glowa, mowisz.%SPEECH_ON%To wszystko takie fascynujace. A probowales to zjesc?%SPEECH_OFF%Anatomista wpatruje sie w dziwne mieso. Przyznaje, ze nie sadzi, by ktokolwiek probowal, przynajmniej w celach naukowych. Patrzy na mieso jeszcze chwile. Mamrocze.%SPEECH_ON%To bylaby kwestia naukowa, prawda?%SPEECH_OFF%Bierzesz kolejny kęs i przytakujesz. %anatomist% wklada reke w dziwne mieso i wyciaga zebro ociekajace mokra tkanka. Zaczyna miec odruchy wymiotne, szybko wstaje i ucieka. Bierzesz dziwne zebro i rzucasz je ze stolu, a gdy tylko dotyka ziemi, z zaułka wyskakuje sfora dzikich psow i walczy miedzy soba, by je zjesc. Wskazujesz na psy i krzyczysz za anatomista.%SPEECH_ON%Hej, chyba wlasnie przeprowadzilem eksperyment!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_14.png[/img]{Kiedy wracacie do kompanii, %anatomist% wydaje się nieco rozczarowany zakupem. Próbuje wydobyć z niego coś użytecznego, coś, czego nikt dotąd nie widział, ale wygląda na to, że jego przedsięwzięcie kończy się niczym. Narzeka, że te części zna już od dawna, że już o nich pisano i że inni ludzie zasłynęli dzięki swoim odkryciom. Przegryzając jedzenie, przytakujesz, gdy opowiada, i udajesz, że cię to obchodzi, gdy patrzy na ciebie smutnymi oczami. Mówi.%SPEECH_ON%To substancja, którą jedzą orki, a czasem jest wycięta z samego orka. Wiemy o tym od lat. Myślałem, że wyciągnę z tego coś, czego jeszcze nie poznano, ale moja pewność siebie doprowadziła tylko do zmarnowania koron.%SPEECH_OFF%Nabierasz łyżkę kaszy i wpychasz do ust. Wyjmujesz łyżkę i wpatrujesz się w swoje zniekształcone odbicie. Kiwając głową, mówisz.%SPEECH_ON%To wszystko takie fascynujące. A próbowałeś to zjeść?%SPEECH_OFF%Anatomista wpatruje się w dziwne mięso. Przyznaje, że nie sądzi, by ktokolwiek próbował, przynajmniej w celach naukowych. Patrzy na mięso jeszcze chwilę. Mamrocze.%SPEECH_ON%To byłaby kwestia naukowa, prawda?%SPEECH_OFF%Bierzesz kolejny kęs i przytakujesz. %anatomist% wkłada rękę w dziwne mięso i wyciąga żebro ociekające mokrą tkanką. Zaczyna mieć odruchy wymiotne, szybko wstaje i ucieka. Bierzesz dziwne żebro i rzucasz je ze stołu, a gdy tylko dotyka ziemi, z zaułka wyskakuje sfora dzikich psów i walczy między sobą, by je zjeść. Wskazujesz na psy i krzyczysz za anatomistą.%SPEECH_ON%Hej, chyba właśnie przeprowadziłem eksperyment!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Patrz, jak sie o to bija.",
+					Text = "Patrz, jak się o to biją.",
 					function getResult( _event )
 					{
 						return 0;
@@ -235,7 +235,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(0.5, "Obiecujacy okaz do badan okazal sie bezuzyteczny");
+				_event.m.Anatomist.worsenMood(0.5, "Obiecujący okaz do badań okazał się bezużyteczny");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

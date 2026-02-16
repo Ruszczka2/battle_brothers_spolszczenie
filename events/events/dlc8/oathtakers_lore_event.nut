@@ -12,13 +12,13 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		this.m.Title = "W %townname%";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Texts.resize(4);
-		this.m.Texts[0] = "Opowiedz o Slubach.";
-		this.m.Texts[1] = "Opowiedz o Mlodym Anselmie.";
+		this.m.Texts[0] = "Opowiedz o Ślubach.";
+		this.m.Texts[1] = "Opowiedz o Młodym Anselmie.";
 		this.m.Texts[2] = "Opowiedz o tych cholernych typach.";
-		this.m.Texts[3] = "Powiedzielismy juz wszystko.";
+		this.m.Texts[3] = "Powiedzieliśmy już wszystko.";
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Ludzie z %townname% ciesza sie na widok %companyname%. To niezwykle przyjecie dla bandy najemnikow, ale wyglada na to, ze slubne aspekty waszej dzialalnosci sa wysoko cenione przez lud.%SPEECH_ON%Nareszcie ktos przywrocil honor i dume tym ziemiom.%SPEECH_OFF%Mowi jeden z chlopow. Kobiety przyozdabiaja was kwiatami i innymi przyslugami. Gdy zatrzymujesz woz, gromada dzieci podbiega, chcac dotknac czaszki Mlodego Anselma.%SPEECH_ON%Czy da nam sily? Czy mnie rozchoruje?%SPEECH_OFF%Inny dzieciak podchodzi i odpycha go lokciem.%SPEECH_ON%Niech nam juz powie, co robia i czym sa! Sluby, ta czaszka, a ostatnio slyszelismy o Slubodawcach, wiec czym sie tak roznicie?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Ludzie z %townname% cieszą się na widok %companyname%. To niezwykłe przyjęcie dla bandy najemników, ale wygląda na to, że ślubne aspekty waszej działalności są wysoko cenione przez lud.%SPEECH_ON%Nareszcie ktoś przywrócił honor i dumę tym ziemiom.%SPEECH_OFF%Mówi jeden z chłopów. Kobiety przyozdabiają was kwiatami i innymi przysługami. Gdy zatrzymujesz wóz, gromada dzieci podbiega, chcąc dotknąć czaszki Młodego Anselma.%SPEECH_ON%Czy da nam siły? Czy mnie rozchoruje?%SPEECH_OFF%Inny dzieciak podchodzi i odpycha go łokciem.%SPEECH_ON%Niech nam już powie, co robią i czym są! Śluby, ta czaszka, a ostatnio słyszeliśmy o Ślubodawcach, więc czym się tak różnicie?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -31,7 +31,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B0",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Kladac dlon na glowie Anselma, wyjasniasz Sluby.%SPEECH_ON%Kazdego dnia, gdy wstajemy i ofiarowujemy sie temu swiatu, skladamy slub. Slub wobec siebie, wobec bliskich, wobec sasiadow, nawet wobec ziemi i zwierzat, ktore ja zdobia. Skladamy slub calemu swiatu.%SPEECH_OFF%Dzieciak gryzie jablko. Mowi.%SPEECH_ON%Jesli wszyscy skladaja sluby, co czyni was Swietobiorcami? Czy wszyscy nie jestesmy Swietobiorcami?%SPEECH_OFF%Usmiechasz sie i kiwasz glowa.%SPEECH_ON%Dokladnie. Wszyscy jestesmy Swietobiorcami. Jednak jesli moge zdradzic wam mala tajemnice...%SPEECH_OFF%Dzieci zbieraja sie wokol, uciszajac sie nawzajem. Wyjasniasz.%SPEECH_ON%Kiedy sie urodziliscie, nie wiedzieliscie wszystkiego, prawda? Tak samo jest z naszymi slubami. Starzy bogowie chca, bysmy poznali ten swiat w calosci, a nie dostali jego tajemnice na tacy. Gdyby je nam podano, czy bylibysmy tu, gdzie jestesmy? Czy nasza beztroska zostawilaby nas w pierwszych siedzibach? My, Swietobiorcy, badamy, jak bardzo starzy bogowie nas wzmocnili, ale i oslabili, a szukajac wszystkich naszych granic, zblizymy sie do starych bogow i do wszystkich innych.%SPEECH_OFF%Jedno z dzieci kopie ziemie. Pyta, czy masz w wozie jakies slodkie placki.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Kładąc dłoń na głowie Anselma, wyjaśniasz Śluby.%SPEECH_ON%Każdego dnia, gdy wstajemy i ofiarowujemy się temu światu, składamy ślub. Ślub wobec siebie, wobec bliskich, wobec sąsiadów, nawet wobec ziemi i zwierząt, które ją zdobią. Składamy ślub całemu światu.%SPEECH_OFF%Dzieciak gryzie jabłko. Mówi.%SPEECH_ON%Jeśli wszyscy składają śluby, co czyni was Świętobiorcami? Czy wszyscy nie jesteśmy Świętobiorcami?%SPEECH_OFF%Uśmiechasz się i kiwasz głową.%SPEECH_ON%Dokładnie. Wszyscy jesteśmy Świętobiorcami. Jednak jeśli mogę zdradzić wam małą tajemnicę...%SPEECH_OFF%Dzieci zbierają się wokół, uciszając się nawzajem. Wyjaśniasz.%SPEECH_ON%Kiedy się urodziliście, nie wiedzieliście wszystkiego, prawda? Tak samo jest z naszymi ślubami. Starzy bogowie chcą, byśmy poznali ten świat w całości, a nie dostali jego tajemnicę na tacy. Gdyby je nam podano, czy bylibyśmy tu, gdzie jesteśmy? Czy nasza beztroska zostawiłaby nas w pierwszych siedzibach? My, Świętobiorcy, badamy, jak bardzo starzy bogowie nas wzmocnili, ale i osłabili, a szukając wszystkich naszych granic, zbliżymy się do starych bogów i do wszystkich innych.%SPEECH_OFF%Jedno z dzieci kopie ziemię. Pyta, czy masz w wozie jakieś słodkie placki.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -45,7 +45,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B1",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Stukasz w czaszke Mlodego Anselma.%SPEECH_ON%Mlody Anselm byl Pierwszym Swietobiorca, poczatkiem Swietobiorcow. Jako pierwszy zrozumial, ze prawdziwa natura czlowieka wymaga poswiecenia. Wierzyl, i slusznie, ze gdy czlowiek po raz pierwszy wedrowal po ziemi, czynil to w stanie cierpienia, i to w nim dokonywal najwiekszych postepow. To, co mamy teraz, jest bardzo dalekie od tego, jak bylo. Teraz jest po prostu za dobrze.%SPEECH_OFF%Jedno z dzieci drapie czarna strupke i strzepuje ja na twarz innego. Drugie dziecko wyciera to, wyciska kroste i rozsmarowuje rope po tamtym. Gdy sie kloca, ty kontynuujesz.%SPEECH_ON%Mlody Anselm zrozumial, ze ten swiat musi wrocic do zycia poswiecenia, zrezygnowac z czesci tego, co lubimy, zahartowac sie o kamien cierpienia. Naturalnie, to uczynilo Mlodego Anselma wrogiem wielu.%SPEECH_OFF%Jedno z dzieci podnosi wzrok i pyta, jak zmarl Mlody Anselm. Usmiechasz sie i mowisz, ze to opowiesc na inny raz.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Stukasz w czaszkę Młodego Anselma.%SPEECH_ON%Młody Anselm był Pierwszym Świętobiorcą, początkiem Świętobiorców. Jako pierwszy zrozumiał, że prawdziwa natura człowieka wymaga poświęcenia. Wierzył, i słusznie, że gdy człowiek po raz pierwszy wędrował po ziemi, czynił to w stanie cierpienia, i to w nim dokonywał największych postępów. To, co mamy teraz, jest bardzo dalekie od tego, jak było. Teraz jest po prostu za dobrze.%SPEECH_OFF%Jedno z dzieci drapie czarną strupkę i strzepuje ją na twarz innego. Drugie dziecko wyciera to, wyciska krostę i rozsmarowuje ropę po tamtym. Gdy się kłócą, ty kontynuujesz.%SPEECH_ON%Młody Anselm zrozumiał, że ten świat musi wrócić do życia poświęcenia, zrezygnować z części tego, co lubimy, zahartować się o kamień cierpienia. Naturalnie, to uczyniło Młodego Anselma wrogiem wielu.%SPEECH_OFF%Jedno z dzieci podnosi wzrok i pyta, jak zmarł Młody Anselm. Uśmiechasz się i mówisz, że to opowieść na inny raz.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -59,7 +59,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B2",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Jedno z dzieci sie odzywa.%SPEECH_ON%Mielismy w miescie grupe ludzi takich jak wy. Mowili, ze sa \'Slubodawcami.\' Sa jak wasi bracia czy co?%SPEECH_OFF%Zaczynasz odpowiadac, gdy %oathtaker% sie wtraca.%SPEECH_ON%Slubodawcy to bluzniercy! To poganie, nie straznicy slubow, lecz ich lamacze! Ukradli szczeke Mlodego Anselma i slubujemy zabic kazdego Slubodawce, by ja odzyskac.%SPEECH_OFF%Chlopiec mowi, ze Slubodawcy chcieli zabrac wam czaszke, bo to wy, Swietobiorcy, jestescie prawdziwymi poganami. Gniew %oathtaker% siega zenitu.%SPEECH_ON%Slubodawcy gadaja mnostwo bzdur! To handlarze klamstwami, bredniami i histeria zamiast towarem, a ich dobrem sa okrutne urojenia!%SPEECH_OFF%Patrzysz na Swietobiorce przez chwile, potem kladziesz mu dlon na ramieniu i mowisz, ze moze powinien pojsc policzyc zapasy, zeby troche ostygnac.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Jedno z dzieci się odzywa.%SPEECH_ON%Mieliśmy w mieście grupę ludzi takich jak wy. Mówili, że są \'Ślubodawcami.\' Są jak wasi bracia czy co?%SPEECH_OFF%Zaczynasz odpowiadać, gdy %oathtaker% się wtrąca.%SPEECH_ON%Ślubodawcy to bluźniercy! To poganie, nie strażnicy ślubów, lecz ich łamacze! Ukradli szczękę Młodego Anselma i ślubujemy zabić każdego Ślubodawcę, by ją odzyskać.%SPEECH_OFF%Chłopiec mówi, że Ślubodawcy chcieli zabrać wam czaszkę, bo to wy, Świętobiorcy, jesteście prawdziwymi poganami. Gniew %oathtaker% sięga zenitu.%SPEECH_ON%Ślubodawcy gadają mnóstwo bzdur! To handlarze kłamstwami, bredniami i histerią zamiast towarem, a ich dobrem są okrutne urojenia!%SPEECH_OFF%Patrzysz na Świętobiorcę przez chwilę, potem kładziesz mu dłoń na ramieniu i mówisz, że może powinien pójść policzyć zapasy, żeby trochę ostygnąć.}",
 			Image = "",
 			List = [],
 			Characters = [],

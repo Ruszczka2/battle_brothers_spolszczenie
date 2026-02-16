@@ -11,7 +11,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_16.png[/img]{Docieracie do odleglej wioski i widzicie kilku mieszkancow przykucnietych przed duza, wybielona czaszka, ktora dekoracyjnie spoczywa na pulpicie. Przechodzacy chlopi przystaja i oddaja jej czesc. Gdy podchodzisz blizej, widzisz, ze sama czaszka jest niezwykla: dlugie, grube czolo wystaje z gory, luk brwiowy jest wyrazny i pofalowany, a szczeka, nadal nienaruszona, nosi ogromne, ostre zeby, w wiekszosci chaotycznie ustawione, jakby w zwyklej glowie zamkniecie takiej paszczy stanowilo zagrozenie dla niej samej. To moze byc czaszka Nachzehrera. Oczywiscie, majac przed soba ten dziwny kosciotrup, chcesz odprowadzic kompanie, zanim-%SPEECH_ON%Powinnismy to zabrac do badan.%SPEECH_OFF%Wzdychasz i obracasz sie, by zobaczyc %anatomist% stojacego i gapiacego sie na czaszke. Poprawiasz go, ze tak naprawde chodzi mu o kradziez. Anatomista patrzy na ciebie.%SPEECH_ON%Slownictwo nie ma znaczenia, gdy badania beda zakonczone, w naszych rekach przyda sie bardziej niz w ich, to jasne.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_16.png[/img]{Docieracie do odległej wioski i widzicie kilku mieszkańców przykucniętych przed dużą, wybieloną czaszką, która dekoracyjnie spoczywa na pulpicie. Przechodzący chłopi przystają i oddają jej część. Gdy podchodzisz bliżej, widzisz, że sama czaszka jest niezwykła: długie, grube czoło wystaje z góry, łuk brwiowy jest wyraźny i pofalowany, a szczęka, nadal nienaruszona, nosi ogromne, ostre zęby, w większości chaotycznie ustawione, jakby w zwykłej głowie zamknięcie takiej paszczy stanowiło zagrożenie dla niej samej. To może być czaszka Nachzehrera. Oczywiście, mając przed sobą ten dziwny kościotrup, chcesz odprowadzić kompanię, zanim-%SPEECH_ON%Powinniśmy to zabrać do badań.%SPEECH_OFF%Wzdychasz i obracasz się, by zobaczyć %anatomist% stojącego i gapiącego się na czaszkę. Poprawiasz go, że tak naprawdę chodzi mu o kradzież. Anatomista patrzy na ciebie.%SPEECH_ON%Słownictwo nie ma znaczenia, gdy badania będą zakończone, w naszych rękach przyda się bardziej niż w ich, to jasne.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -38,7 +38,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Thief != null)
 				{
 					this.Options.push({
-						Text = "A co na to nasz zlodziej, %thief%?",
+						Text = "A co na to nasz złodziej, %thief%?",
 						function getResult( _event )
 						{
 							return "D";
@@ -50,7 +50,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Wildman != null)
 				{
 					this.Options.push({
-						Text = "Ta czaszka wyglada jak nasz dzikus, %wildman%.",
+						Text = "Ta czaszka wygląda jak nasz dzikus, %wildman%.",
 						function getResult( _event )
 						{
 							return "E";
@@ -65,7 +65,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_46.png[/img]{Wzdychasz i przystajesz na fanaberie anatomisty, ale mowisz mu, ze to on ma ukrasc, skoro to on chce badac. Mezczyzna nawet sie nie waha i rusza, mruzac oczy na kosciasty obiekt w centrum jego naukowej obsesji. Nie zamierzasz byc odpowiedzialny za balagan, jesli go zlapia, wiec zostawiasz go, a sam wracasz do liczenia zapasow, nasluchujac odglosow religijnego chaosu. Po chwili %anatomist% wraca z wielka czaszka pod pacha i kropelkami potu na czole.%SPEECH_ON%To czaszka Nachzehrera i powinna byc bardzo cenna dla naszych badan.%SPEECH_OFF%Z ciekawosci pytasz, jak w ogole zdolal ja zdobyc. %anatomist% unosi brew.%SPEECH_ON%Nie patrzyles? Uznalem, ze to bylo dosc imponujace, ale tak imponujace, ze opowiadanie z drugiej reki sprawi, iz uznasz, ze bajdurze. Basm, jesli wolisz. Wiedz tylko, ze powinnismy sie stad wyniesc. Moze wczesniej niz wkrotce, i szybciej niz szybko. Rozumiesz?%SPEECH_OFF%W oddali narasta krzyk. Anatomista ociera czolo i odchodzi. Tyl jego koszuli jest rozszarpany, a z plecow wystaja mu male groty lub strzaly - a odlegle krzyki robia sie coraz glosniejsze.}",
+			Text = "[img]gfx/ui/events/event_46.png[/img]{Wzdychasz i przystajesz na fanaberie anatomisty, ale mówisz mu, że to on ma ukraść, skoro to on chce badać. Mężczyzna nawet się nie waha i rusza, mrużąc oczy na kościsty obiekt w centrum jego naukowej obsesji. Nie zamierzasz być odpowiedzialny za bałagan, jeśli go złapią, więc zostawiasz go, a sam wracasz do liczenia zapasów, nasłuchując odgłosów religijnego chaosu. Po chwili %anatomist% wraca z wielką czaszką pod pachą i kropelkami potu na czole.%SPEECH_ON%To czaszka Nachzehrera i powinna być bardzo cenna dla naszych badań.%SPEECH_OFF%Z ciekawości pytasz, jak w ogóle zdołał ją zdobyć. %anatomist% unosi brew.%SPEECH_ON%Nie patrzyłeś? Uznałem, że to było dość imponujące, ale tak imponujące, że opowiadanie z drugiej ręki sprawi, iż uznasz, że bajdurzę. Baśń, jeśli wolisz. Wiedz tylko, że powinniśmy się stąd wynieść. Może wcześniej niż wkrótce, i szybciej niż szybko. Rozumiesz?%SPEECH_OFF%W oddali narasta krzyk. Anatomista ociera czoło i odchodzi. Tył jego koszuli jest rozszarpany, a z pleców wystają mu małe groty lub strzały - a odległe krzyki robią się coraz głośniejsze.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -81,7 +81,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykla czaszke do badan");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykłą czaszkę do badań");
 				_event.m.Anatomist.addLightInjury();
 				this.List.push({
 					id = 10,
@@ -109,13 +109,13 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{Mowisz %anatomist%, ze moze wziac czaszke. Przez chwile patrzy na ciebie, po czym stwierdza, ze myslal, iz to ty to zrobisz. Mowisz mu, ze nie ma mowy, zebys zabieral czaszke miejscowym chlopom, ktorzy ja czcza. Jesli chce badac, to on powinien krasc. %anatomist% kladzie dlon na piersi.%SPEECH_ON%Jestem czlowiekiem nauki, nie zwyklym skryba, nie moge sie posunac do tak niskiego zadania. Potrzeba czlowieka z doswiadczeniem, ktory zna trud i brud codziennego zycia, by ukrasc ta czaszke.%SPEECH_OFF%Anatomista zaciska piesc, tak pewny, ze jego mowa cie nie obrazala, a jego oczy wpatruja sie z zawzietoscia, ktora moze byc tylko wyuczona.%SPEECH_ON%O czym wy dwoje obcy gadacie?%SPEECH_OFF%Obaj odwracacie sie i widzicie chlopa z widlami, a gdy dolacza kolejni, wskazuje na was.%SPEECH_ON%Ci goscie chcieli ukrasc czaszke!%SPEECH_OFF%Wyciagasz rece, tlumaczac, ze- zanim skoncysz, %anatomist% odwraca sie i ucieka. Myslac szybko, nazywasz go zlodziejem i obiecujesz jego glowe, robiac wielkie przedstawienie z dobyciem miecza i wymachiwaniem nim na chlopow. Udajesz, ze przypadkiem upuszczasz sakiewke z koronami, zamieniajac zlosc chlopow w chciwosc i dajac sobie czas na ucieczke.}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{Mówisz %anatomist%, że może wziąć czaszkę. Przez chwilę patrzy na ciebie, po czym stwierdza, że myślał, iż to ty to zrobisz. Mówisz mu, że nie ma mowy, żebyś zabierał czaszkę miejscowym chłopom, którzy ją czczą. Jeśli chce badać, to on powinien kraść. %anatomist% kładzie dłoń na piersi.%SPEECH_ON%Jestem człowiekiem nauki, nie zwykłym skrybą, nie mogę się posunąć do tak niskiego zadania. Potrzeba człowieka z doświadczeniem, który zna trud i brud codziennego życia, by ukraść tę czaszkę.%SPEECH_OFF%Anatomista zaciska pięść, tak pewny, że jego mowa cię nie obrażała, a jego oczy wpatrują się z zawziętością, która może być tylko wyuczona.%SPEECH_ON%O czym wy dwoje obcy gadacie?%SPEECH_OFF%Obaj odwracacie się i widzicie chłopa z widłami, a gdy dołączają kolejni, wskazuje na was.%SPEECH_ON%Ci goście chcieli ukraść czaszkę!%SPEECH_OFF%Wyciągasz ręce, tłumacząc, że- zanim skończysz, %anatomist% odwraca się i ucieka. Myśląc szybko, nazywasz go złodziejem i obiecujesz jego głowę, robiąc wielkie przedstawienie z dobyciem miecza i wymachiwaniem nim na chłopów. Udajesz, że przypadkiem upuszczasz sakiewkę z koronami, zamieniając złość chłopów w chciwość i dając sobie czas na ucieczkę.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Wynosimy sie stad.",
+					Text = "Wynosimy się stąd.",
 					function getResult( _event )
 					{
 						return 0;
@@ -137,7 +137,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_65.png[/img]{Wzdychasz i zgadzasz sie na kradziez czaszki. Zanim zdazysz cos powiedziec, pojawia sie %thief% zlodziej. Podchodzi, przegryzajac trawe i kroczac z brawura.%SPEECH_ON%Wiec chcesz cos ukrasc, hm? Wskaz tylko, czego potrzebujesz, a ja to przyniose. Zloto? Bron?%SPEECH_OFF%%anatomist% wskazuje na czaszke. Zlodziej przez chwile sie na nia gapi, po czym odwraca sie z powrotem.%SPEECH_ON%No, eee, dobra.%SPEECH_OFF%Zlodziej i przyszly zlodziej czaszki odchodza. Idziesz liczyc zapasy, dajac mu czas na robote. Pozniej wraca z czaszka, a do tego z naręczem broni i zbroi, o ktorych wiesz, ze ich nie kupil. Gdy wpatrujesz sie w oczywiscie skradzione dobra, mezczyzna wzrusza ramionami.%SPEECH_ON%Co? Musialem sprawic, by to sie oplacalo.%SPEECH_OFF%Anatomista zabiera czaszke bez slowa, niosac ja i wpatrujac sie w puste oczodoły, jakby to byl kochanek, mamroczac, ze wiele rzeczy nauczy sie z jej pustego spojrzenia. Zlodziej robi to samo, tylko z sakiewka koron i innymi dobrami, mamroczac, ze w koncu bedzie go stac na dwie dziwki naraz, co najwyrazniej bylo jego odwiecznym marzeniem. Zabierasz bron i zbroje do ekwipunku, a w oddali slyszysz zawodzenie chlopow szukajacych relikwii.}",
+			Text = "[img]gfx/ui/events/event_65.png[/img]{Wzdychasz i zgadzasz się na kradzież czaszki. Zanim zdążysz coś powiedzieć, pojawia się %thief% złodziej. Podchodzi, przegryzając trawę i krocząc z brawurą.%SPEECH_ON%Więc chcesz coś ukraść, hm? Wskaż tylko, czego potrzebujesz, a ja to przyniosę. Złoto? Broń?%SPEECH_OFF%%anatomist% wskazuje na czaszkę. Złodziej przez chwilę się na nią gapi, po czym odwraca się z powrotem.%SPEECH_ON%No, eee, dobra.%SPEECH_OFF%Złodziej i przyszły złodziej czaszki odchodzą. Idziesz liczyć zapasy, dając mu czas na robotę. Później wraca z czaszką, a do tego z naręczem broni i zbroi, o których wiesz, że ich nie kupił. Gdy wpatrujesz się w oczywiście skradzione dobra, mężczyzna wzrusza ramionami.%SPEECH_ON%Co? Musiałem sprawić, by to się opłacało.%SPEECH_OFF%Anatomista zabiera czaszkę bez słowa, niosąc ją i wpatrując się w puste oczodoły, jakby to był kochanek, mamrocząc, że wiele rzeczy nauczy się z jej pustego spojrzenia. Złodziej robi to samo, tylko z sakiewką koron i innymi dobrami, mamrocząc, że w końcu będzie go stać na dwie dziwki naraz, co najwyraźniej było jego odwiecznym marzeniem. Zabierasz broń i zbroję do ekwipunku, a w oddali słyszysz zawodzenie chłopów szukających relikwii.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -153,8 +153,8 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykla czaszke do badan");
-				_event.m.Thief.improveMood(1.0, "Udanie okradl chlopow");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykłą czaszkę do badań");
+				_event.m.Thief.improveMood(1.0, "Udanie okradł chłopów");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -179,7 +179,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+100[/color] Doswiadczenia"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+100[/color] Doświadczenia"
 				});
 				local initiativeBoost = this.Math.rand(2, 4);
 				_event.m.Thief.getBaseProperties().Initiative += initiativeBoost;
@@ -239,7 +239,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_43.png[/img]{Decydujesz, ze skoro anatomisci moga zrobic z czaszki cos wielkiego, to dasz im szanse na badania. Pytanie brzmi: jak ukrasc paskudna czaszke od grupy tak szalonej, ze ja czci? Jak na zawolanie pojawia sie %wildman% dzikus, zajadajac garsc robakow. Jego obmyta natura twarz i okrutnie uksztaltowana czaszka wydaja sie niemal spokrewnione z potwornoscia, ktora spoczywa na pulpicie w centrum wioski. %anatomist% pstryka palcami i twierdzi, ze ma pomysl. Wciaga dzikusa do przodu, a obaj ida prosto do ukochanej czaszki wioski.\n\nAnatomista popycha dzikusa przed modlace sie tlumy i twierdzi, ze zamordowali kogos spokrewnionego z jego istota. Mowi, ze kradnac czaszke jego krewnego, skazali go na zycie w przeklenstwie. Tlum jest przerazony, nie rozumiejac swojego bledu. Dzikus zjada kolejnego robaka. Dalej patrzysz, jak anatomista podnosi czaszke, unosi ja nad glowa i mowi, ze dzieki temu wreszcie wyleczy %wildman% z jego dolegliwosci, a tym samym zdejmie przeklenstwa, ktore spadly na wioske. W tym momencie tlum juz wstaje, przyjmujac anatomiste jak kaplana pod namiotem, i bije brawo, gdy odchodzi, wiwatujac na kradziez, jakby to bylo cos dobrego, z czaszka uniesiona nad glowa. Obaj mezczyzni wracaja do ciebie. %anatomist% usmiecha sie.%SPEECH_ON%By badac cialo, nie wolno zapomniec o badaniu umyslu, a badajac umysl, nie wolno zapominac o badaniu umyslow, w liczbie mnogiej! Wiele umyslow zlozonych razem to stworzenie do badania samo w sobie.%SPEECH_OFF%Anatomista odchodzi. Podchodzi grupa chlopow niosacych rozne dobra. Rzucaja je u stop %wildman% na znak przeprosin. Dzikus zjada kolejnego robaka.}",
+			Text = "[img]gfx/ui/events/event_43.png[/img]{Decydujesz, że skoro anatomisci mogą zrobić z czaszki coś wielkiego, to dasz im szansę na badania. Pytanie brzmi: jak ukraść paskudną czaszkę od grupy tak szalonej, że ją czci? Jak na zawołanie pojawia się %wildman% dzikus, zajadając garść robaków. Jego obmyta natura twarz i okrutnie ukształtowana czaszka wydają się niemal spokrewnione z potwornością, która spoczywa na pulpicie w centrum wioski. %anatomist% pstryka palcami i twierdzi, że ma pomysł. Wciąga dzikusa do przodu, a obaj idą prosto do ukochanej czaszki wioski.\n\nAnatomista popycha dzikusa przed modlące się tłumy i twierdzi, że zamordowali kogoś spokrewnionego z jego istotą. Mówi, że kradnąc czaszkę jego krewnego, skazali go na życie w przekleństwie. Tłum jest przerażony, nie rozumiejąc swojego błędu. Dzikus zjada kolejnego robaka. Dalej patrzysz, jak anatomista podnosi czaszkę, unosi ją nad głową i mówi, że dzięki temu wreszcie wyleczy %wildman% z jego dolegliwości, a tym samym zdejmie przekleństwa, które spadły na wioskę. W tym momencie tłum już wstaje, przyjmując anatomistę jak kapłana pod namiotem, i bije brawo, gdy odchodzi, wiwatując na kradzież, jakby to było coś dobrego, z czaszką uniesioną nad głową. Obaj mężczyźni wracają do ciebie. %anatomist% uśmiecha się.%SPEECH_ON%By badać ciało, nie wolno zapomnieć o badaniu umysłu, a badając umysł, nie wolno zapominać o badaniu umysłów, w liczbie mnogiej! Wiele umysłów złożonych razem to stworzenie do badania samo w sobie.%SPEECH_OFF%Anatomista odchodzi. Podchodzi grupa chłopów niosących różne dobra. Rzucają je u stóp %wildman% na znak przeprosin. Dzikus zjada kolejnego robaka.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -255,8 +255,8 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykla czaszke do badan");
-				_event.m.Wildman.improveMood(1.0, "Pomogl " + _event.m.Anatomist.getName() + " zdobyc niezwykla czaszke");
+				_event.m.Anatomist.improveMood(1.0, "Zdobył niezwykłą czaszkę do badań");
+				_event.m.Wildman.improveMood(1.0, "Pomógł " + _event.m.Anatomist.getName() + " zdobyć niezwykłą czaszkę");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -289,7 +289,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Wildman.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+75[/color] Doswiadczenia"
+					text = _event.m.Wildman.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+75[/color] Doświadczenia"
 				});
 				local food;
 				local r = this.Math.rand(1, 3);

@@ -10,13 +10,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% anatomista podchodzi do ciebie z okropnym pomyslem: chce wziac jednego z psow kompanii i go rozciac. Dla pewnosci pytasz, czy zamierza psa zabic. Kreci glowa na boki, jakby wazyl opcje.%SPEECH_ON%Uwazam, ze z perspektywy psa najlepiej, by zdechl, zanim zaczniemy go rozcinac.%SPEECH_OFF%Anatomista wyjasnia, ze wykorzystywanie psow do badan nie jest niczym niezwyklym i ze to wymaganie pomoze lepiej zrozumiec wilkory, z ktorymi pies bez watpienia jest spokrewniony. Nie potrafisz sobie wyobrazic, by zabicie psa kompanii spodobalo sie reszcie ludzi, i każesz mu znalezc jednego z setek parszywych kundli włoczacych sie w okolicy. Kreci glowa.%SPEECH_ON%Wszystkie psy sa niemal na pewno kuzynami wilkorów, ale pies bojowy to inna rasa i z pewnoscia najblizsza temu, co nas interesuje.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% anatomista podchodzi do ciebie z okropnym pomysłem: chce wziąć jednego z psów kompanii i go rozciąć. Dla pewności pytasz, czy zamierza psa zabić. Kręci głową na boki, jakby ważył opcje.%SPEECH_ON%Uważam, że z perspektywy psa najlepiej, by zdechł, zanim zaczniemy go rozcinać.%SPEECH_OFF%Anatomista wyjaśnia, że wykorzystywanie psów do badań nie jest niczym niezwykłym i że to wymaganie pomoże lepiej zrozumieć wilkory, z którymi pies bez wątpienia jest spokrewniony. Nie potrafisz sobie wyobrazić, by zabicie psa kompanii spodobało się reszcie ludzi, i każesz mu znaleźć jednego z setek parszywych kundli włóczących się w okolicy. Kręci głową.%SPEECH_ON%Wszystkie psy są niemal na pewno kuzynami wilkorów, ale pies bojowy to inna rasa i z pewnością najbliższa temu, co nas interesuje.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Tak, zrob to.",
+					Text = "Tak, zrób to.",
 					function getResult( _event )
 					{
 						if (_event.m.Houndmaster != null)
@@ -35,7 +35,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Nie, tak nie sadze.",
+					Text = "Nie, tak nie sądzę.",
 					function getResult( _event )
 					{
 						return "D";
@@ -51,7 +51,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_37.png[/img]{Kiwasz glowa i mowisz, by zrobil, co musi. Z twojej perspektywy jestes tu, by pomagac tym anatomistom w ich pracy, a czasem oznacza to naruszenie funduszy kompanii. W tym wypadku pies bojowy akurat je reprezentuje. %anatomist% jest zadowolony i rusza, by to zrobic. Slyszysz brzek obrozy psa, a potem krotkie skomlenie. Pozostale dzwieki zagluszasz w glowie.\n\n%anatomist% w koncu wraca z zakrwawionymi dlonmi. Kiwal glowa i mowi, ze okaz byl zadowalajacy i wiele nauczyli sie z jego bojowego ducha. Kazesz mu pochowac psa. Wyglada na zniesmaczonego, ale ty gromisz go wzrokiem i ustępuje, mowiac, ze zapewni mu godny pochowek.}",
+			Text = "[img]gfx/ui/events/event_37.png[/img]{Kiwasz głową i mówisz, by zrobił, co musi. Z twojej perspektywy jesteś tu, by pomagać tym anatomistom w ich pracy, a czasem oznacza to naruszenie funduszy kompanii. W tym wypadku pies bojowy akurat je reprezentuje. %anatomist% jest zadowolony i rusza, by to zrobić. Słyszysz brzęk obroży psa, a potem krótkie skomlenie. Pozostałe dźwięki zagłuszasz w głowie.\n\n%anatomist% w końcu wraca z zakrwawionymi dłońmi. Kiwał głową i mówi, że okaz był zadowalający i wiele nauczyli się z jego bojowego ducha. Każesz mu pochować psa. Wygląda na zniesmaczonego, ale ty gromisz go wzrokiem i ustępuje, mówiąc, że zapewni mu godny pochówek.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -119,13 +119,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_19.png[/img]{Dajesz %anatomist% zgode. Usmiecha sie jak dziecko, ktore dostalo pierwszy prezent. Gdy odchodzi, zastanawiasz sie, czy nie podjales zlej decyzji. Slyszysz, jak anatomista szamocze sie z psem, brzek obrozy i warkniecie, gdy jest szarpany. Czekasz na skomlenie, ale zamiast tego slyszysz glos zdecydowanie ludzki i nawet nieco kobiecy. Gdy pędzisz na miejsce, duzy pies przemyka obok. Zastajesz %anatomist% na ziemi, trzymajacego sie za dlon. Niezrażony, albo szukajac wartości edukacyjnej, anatomista mruczy do siebie slodkie naukowe bzdury.%SPEECH_ON%Ach, to chyba dowodzi, ze jednak mial w sobie troche krwi wilkora.%SPEECH_OFF%Niezaleznie od tego, co %anatomist% mogl wywnioskowac z krwawiacej rany, psa nigdzie nie ma. Bez watpienia nawet on zrozumial, ze taka zdrada nie pojawia sie znikad. Jesli w tym psie jest wilkor, to jest w nim tez zwykly pies, a nawet pies wie, kiedy panowie go zdradzili.}",
+			Text = "[img]gfx/ui/events/event_19.png[/img]{Dajesz %anatomist% zgodę. Uśmiecha się jak dziecko, które dostało pierwszy prezent. Gdy odchodzi, zastanawiasz się, czy nie podjąłeś złej decyzji. Słyszysz, jak anatomista szamocze się z psem, brzęk obroży i warknięcie, gdy jest szarpany. Czekasz na skomlenie, ale zamiast tego słyszysz głos zdecydowanie ludzki i nawet nieco kobiecy. Gdy pędzisz na miejsce, duży pies przemyka obok. Zastajesz %anatomist% na ziemi, trzymającego się za dłoń. Niezrażony, albo szukając wartości edukacyjnej, anatomista mruczy do siebie słodkie naukowe bzdury.%SPEECH_ON%Ach, to chyba dowodzi, że jednak miał w sobie trochę krwi wilkora.%SPEECH_OFF%Niezależnie od tego, co %anatomist% mógł wywnioskować z krwawiącej rany, psa nigdzie nie ma. Bez wątpienia nawet on zrozumiał, że taka zdrada nie pojawia się znikąd. Jeśli w tym psie jest wilkor, to jest w nim też zwykły pies, a nawet pies wie, kiedy panowie go zdradzili.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Opatrz te rane.",
+					Text = "Opatrz tę ranę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -192,13 +192,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% wzdycha, ale nie protestuje zbyt mocno i ostatecznie godzi sie z twoja odmowa, odchodzac lekko zgarbiony. Zastanawiasz sie, czy gdyby mial ogon, schowalby go teraz miedzy nogi. Wtedy pojawia sie obiekt jego naukowych zapędow - sam pies, machajac ogonem i niosac patyk w pysku. Odkłada patyk u twoich stop, ale gdy sie po niego schylasz, pies warczy i porywa go. Moze te dziwne stworzenia powinny byly byc badane...}",
+			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% wzdycha, ale nie protestuje zbyt mocno i ostatecznie godzi się z twoją odmową, odchodząc lekko zgarbiony. Zastanawiasz się, czy gdyby miał ogon, schowałby go teraz między nogi. Wtedy pojawia się obiekt jego naukowych zapędów - sam pies, machając ogonem i niosąc patyk w pysku. Odkłada patyk u twoich stóp, ale gdy się po niego schylasz, pies warczy i porywa go. Może te dziwne stworzenia powinny były być badane...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Dobra, ty maly kundlu...",
+					Text = "Dobra, ty mały kundlu...",
 					function getResult( _event )
 					{
 						return 0;
@@ -209,13 +209,13 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Anatomist.getImagePath());
-				_event.m.Anatomist.worsenMood(0.5, "Odmowiono mu okazji zbadania psa bojowego.");
+				_event.m.Anatomist.worsenMood(0.5, "Odmówiono mu okazji zbadania psa bojowego.");
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{Pozwalasz, by %anatomist% robil, co chce. Jesli twoim zadaniem jest pomagac im w naukowych obowiazkach, to takie incydenty sa tego czescia. Z oddali slyszysz, jak anatomista szamocze sie z psem i probuje go unieruchomic na szybka smierc. Ale potem slyszysz meski glos z boku, a szamotanie nabiera wyraznie ludzkiego charakteru, z krzykami, przeklenstwami i glosami proszacymi o litosc. Uswiadamiasz sobie, ze calkiem zapomniales o psim przewodniku kompanii. Biegniesz i widzisz, jak %houndmaster% smaga anatomiste smycza i od czasu do czasu zadaje ciosy.%SPEECH_ON%Boli, co? A to? Powiedz mi, uczysz sie, kiedy krwawisz? Jak myslisz, jak beda smakowac twoje zeby, jesli przerobie je na przeklety proch, co?%SPEECH_OFF%Wzdychajac, podchodzisz i odciągasz przewodnika psow od anatomisty. %houndmaster% broni sie, mowiac, ze %anatomist% probowal zabic jednego z psow. Zbywasz to machnieciem reki, twierdzac, ze musialo dojsc do jakiegos nieporozumienia. Spogladasz na zakrwawionego anatomiste i kazesz mu trzymac sie z dala od psow, a zanim zdazy wybulgotac protest o tym, ze to ty dales mu zgode, po prostu odwracasz sie i odchodzisz.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Pozwalasz, by %anatomist% robił, co chce. Jeśli twoim zadaniem jest pomagać im w naukowych obowiązkach, to takie incydenty są tego częścią. Z oddali słyszysz, jak anatomista szamocze się z psem i próbuje go unieruchomić na szybką śmierć. Ale potem słyszysz męski głos z boku, a szamotanie nabiera wyraźnie ludzkiego charakteru, z krzykami, przekleństwami i głosami proszącymi o litość. Uświadamiasz sobie, że całkiem zapomniałeś o psim przewodniku kompanii. Biegniesz i widzisz, jak %houndmaster% smaga anatomistę smyczą i od czasu do czasu zadaje ciosy.%SPEECH_ON%Boli, co? A to? Powiedz mi, uczysz się, kiedy krwawisz? Jak myślisz, jak będą smakować twoje zęby, jeśli przerobię je na przeklęty proch, co?%SPEECH_OFF%Wzdychając, podchodzisz i odciągasz przewodnika psów od anatomisty. %houndmaster% broni się, mówiąc, że %anatomist% próbował zabić jednego z psów. Zbywasz to machnięciem ręki, twierdząc, że musiało dojść do jakiegoś nieporozumienia. Spoglądasz na zakrwawionego anatomistę i każesz mu trzymać się z dala od psów, a zanim zdąży wybulgotać protest o tym, że to ty dałeś mu zgodę, po prostu odwracasz się i odchodzisz.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -237,7 +237,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Anatomist.getName() + " odnosi powazne rany"
+					text = _event.m.Anatomist.getName() + " odnosi poważne rany"
 				});
 			}
 

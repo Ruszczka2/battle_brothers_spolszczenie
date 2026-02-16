@@ -11,13 +11,13 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{Mezczyzna przychodzi do kompanii, mowiac, ze w jego stodole uwieziony jest zly szczeniak wilko-wilka. %anatomist% anatomista to slyszy i podchodzi. Pyta, czy wie na pewno, ze szczeniak jest zly. Nieznajomy kiwa glowa.%SPEECH_ON%Czesc wilko-wilka, wyobrazam sobie, ze jego rodowod jest przesiakniety zlem. Cholerstwo siedzi w stodole, a wejscie jest tylko jedno, wiec cala sprawa jest cholernie klopotliwa.%SPEECH_OFF%Prosi, byscie poszli i zabili szczeniaka, zanim ucieknie. %anatomist% jest bardzo ciekaw tego zadania, bo o wilko-wilkach w mlodym wieku niewiele wiadomo. Zglasza sie na ochotnika, by pojsc z wami i zajac sie tym malym stworzeniem.}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Mężczyzna przychodzi do kompanii, mówiąc, że w jego stodole uwięziony jest zły szczeniak wilko-wilka. %anatomist% anatomista to słyszy i podchodzi. Pyta, czy wie na pewno, że szczeniak jest zły. Nieznajomy kiwa głową.%SPEECH_ON%Część wilko-wilka, wyobrażam sobie, że jego rodowód jest przesiąknięty złem. Cholerstwo siedzi w stodole, a wejście jest tylko jedno, więc cała sprawa jest cholernie kłopotliwa.%SPEECH_OFF%Prosi, byście poszli i zabili szczeniaka, zanim ucieknie. %anatomist% jest bardzo ciekaw tego zadania, bo o wilko-wilkach w młodym wieku niewiele wiadomo. Zgłasza się na ochotnika, by pójść z wami i zająć się tym małym stworzeniem.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Chodzmy to zobaczyc.",
+					Text = "Chodźmy to zobaczyć.",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 55 ? "B" : "C";
@@ -38,7 +38,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 				if (this.Const.DLC.Unhold && _event.m.BeastSlayer != null)
 				{
 					this.Options.push({
-						Text = "%beastslayer% pogromca bestii powinien sie tym zajac.",
+						Text = "%beastslayer% pogromca bestii powinien się tym zająć.",
 						function getResult( _event )
 						{
 							return "D";
@@ -50,7 +50,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Farmer != null)
 				{
 					this.Options.push({
-						Text = "Nasz gospodarz %farmer% chyba ma pomysl.",
+						Text = "Nasz gospodarz %farmer% chyba ma pomysł.",
 						function getResult( _event )
 						{
 							return "E";
@@ -65,7 +65,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_27.png[/img]{Spelnisz prosbe nieznajomego i idziecie do stodoly. Jest zupelnie niepozorna, a on wyjasnia, ze wejscie jest tylko jedno. Opiera sie o drzwi i slucha, po czym kiwa glowa.%SPEECH_ON%O tak, nadal tam jest.%SPEECH_OFF%Drzwi sie otwieraja i ty oraz %anatomist% wchodzicie do srodka, mijajac sterty gowien i boksy z wystraszonymi zwierzetami wcisnietymi w katy, unoszacymi glowy, gdy przechodzicie. Na drugim koncu stodoly widzisz niechlujne stworzenie grzebiace w stercie siana. %anatomist% wpada w panike, chwyta widly i rusza do ataku. Powstrzymujesz go, chwytajac drzewce i unoszac je w gore. Krzyczysz na niego i wskazujesz w dol. Bestia wcale nie jest wilko-wilkiem, tylko zwyklym psem, a kundel patrzy na was z zaplakanymi oczami. Mezczyzna stoi za toba, pocierajac kark.%SPEECH_ON%Oof, no tak, to moja wina. Bylem pewien, ze to wilcza potwornosc.%SPEECH_OFF%Przy odrobinie jedzenia i tresury nie ma watpliwosci, ze ten kundel moze stac sie czyms przydatnym dla %companyname%.}",
+			Text = "[img]gfx/ui/events/event_27.png[/img]{Spełnisz prośbę nieznajomego i idziecie do stodoły. Jest zupełnie niepozorna, a on wyjaśnia, że wejście jest tylko jedno. Opiera się o drzwi i słucha, po czym kiwa głową.%SPEECH_ON%O tak, nadal tam jest.%SPEECH_OFF%Drzwi się otwierają i ty oraz %anatomist% wchodzicie do środka, mijając sterty gówien i boksy z wystraszonymi zwierzętami wciśniętymi w kąty, unoszącymi głowy, gdy przechodzicie. Na drugim końcu stodoły widzisz niechlujne stworzenie grzebiące w stercie siana. %anatomist% wpada w panikę, chwyta widły i rusza do ataku. Powstrzymujesz go, chwytając drzewce i unosząc je w górę. Krzyczysz na niego i wskazujesz w dół. Bestia wcale nie jest wilko-wilkiem, tylko zwykłym psem, a kundel patrzy na was z zapłakanymi oczami. Mężczyzna stoi za tobą, pocierając kark.%SPEECH_ON%Oof, no tak, to moja wina. Byłem pewien, że to wilcza potworność.%SPEECH_OFF%Przy odrobinie jedzenia i tresury nie ma wątpliwości, że ten kundel może stać się czymś przydatnym dla %companyname%.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -94,7 +94,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{Idziesz do niepozornej stodoły z lancuchami na drzwiach. Mezczyzna opiera sie o framuge, przez chwile slucha, potem kiwa glowa i zdejmuje lancuchy. Gdy otwiera drzwi, cofa sie za ciebie i patrzy z bezpiecznego miejsca.%SPEECH_ON%Jest tam, w sianie.%SPEECH_OFF%Widzisz zarys bestii i, dobywajac miecza, skradasz sie do przodu. %anatomist% jednak podskakuje na sam widok, tracac opanowanie z niezgrabnym jekiem i kobiecym krzykiem. Chwyta widly i wbija je w siano. Bestia piszczy, gdy anatomista wbija zeby widel raz za razem, az stworzenie ginie. Kucasz i odsuwasz zakrwawiona slome. To wcale nie wilko-wilk, nawet nie mlody szczeniak. To po prostu zwykly pies, a teraz zwyczajnie martwy.\n\nWtedy slyszysz glos za soba. To nie mezczyzna, ktory cie przyprowadzil, ale ktos inny. Krzyczy, ze zabiliscie mu psa. %anatomist% rzuca widly. Wyjasnia, ze to byla pomylka. Skoro anatomista postanowil sam rozstrzygnac sprawe, pospiesznie zostawiasz mu sytuacje, slyszac tylko ciche krzyki wlasciciela psa i %anatomist% probujacego tlumaczyc, ze to byl wypadek. Masz ochote znalezc drania, ktory ci to zgotowal, ale masz wrazenie, ze zniknal bez sladu. Mozesz tylko isc policzyc zapasy, ignorujac zawodzenia wlasciciela martwego psa i zalosne zaprzeczenia %anatomist%.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{Idziesz do niepozornej stodoły z łańcuchami na drzwiach. Mężczyzna opiera się o framugę, przez chwilę słucha, potem kiwa głową i zdejmuje łańcuchy. Gdy otwiera drzwi, cofa się za ciebie i patrzy z bezpiecznego miejsca.%SPEECH_ON%Jest tam, w sianie.%SPEECH_OFF%Widzisz zarys bestii i, dobywając miecza, skradasz się do przodu. %anatomist% jednak podskakuje na sam widok, tracąc opanowanie z niezgrabnym jękiem i kobiecym krzykiem. Chwyta widły i wbija je w siano. Bestia piszczy, gdy anatomista wbija zęby wideł raz za razem, aż stworzenie ginie. Kucasz i odsuwasz zakrwawioną słomę. To wcale nie wilko-wilk, nawet nie młody szczeniak. To po prostu zwykły pies, a teraz zwyczajnie martwy.\n\nWtedy słyszysz głos za sobą. To nie mężczyzna, który cię przyprowadził, ale ktoś inny. Krzyczy, że zabiliście mu psa. %anatomist% rzuca widły. Wyjaśnia, że to była pomyłka. Skoro anatomista postanowił sam rozstrzygnąć sprawę, pospiesznie zostawiasz mu sytuację, słysząc tylko ciche krzyki właściciela psa i %anatomist% próbującego tłumaczyć, że to był wypadek. Masz ochotę znaleźć drania, który ci to zgotował, ale masz wrażenie, że zniknął bez śladu. Możesz tylko iść policzyć zapasy, ignorując zawodzenia właściciela martwego psa i żałosne zaprzeczenia %anatomist%.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -110,7 +110,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(0.75, "Przypadkowo zabil czyjegos psa");
+				_event.m.Anatomist.worsenMood(0.75, "Przypadkowo zabił czyjegoś psa");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -127,7 +127,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_131.png[/img]{Jesli to rzeczywiscie bestia, najlepiej, by poszedl z wami %beastslayer% - prawdziwy pogromca bestii. Cala trojka idziecie do stodoly. Po chwili ciszy liczysz do trzech i ty oraz pogromca bestii wywazacie drzwi. Anatomista spoznia sie i nawet nie zrozumial planu, kopie na koncu, za pozno, a jego but wymiata powietrze, noga laduje i rozjezdza sie okropnie po klepisku. Probujac odzyskac godnosc i wstac, wyglada na to, ze naciagnal miesien w pachwinie. Ty i %beastslayer% wybuchacie smiechem. Gdy pomagasz anatomiscie wstac, pogromca bestii przestaje sie zastanawiac i nagle jest szarpniecie ruchu, uderzenie powietrza i gluchy trzask w jeden z boksow. Patrzysz i widzisz, jak pogromca przygniata blade, upiorne stworzenie, a jego bron przebija mu czaszke, gdy ramieniem trzyma je za szyje.%SPEECH_ON%To szczeniak, zgadza sie, ale na pewno nie jest to wilko-wilk.%SPEECH_OFF%Mowi i upuszcza malego nachzehrera na ziemie. Spoglada.%SPEECH_ON%Troche przypomina anatomiste.%SPEECH_OFF%%anatomist% przyjmuje to na klate, niezrecznie wstajac i dreptajac w kolanawym chodzie. Zauwaza, ze bestia nadal moze byc przydatna naukowo. Mimo ze nie jest tak szorstki jak inni, nie mozesz nie docenic jego podziwu dla nauki.}",
+			Text = "[img]gfx/ui/events/event_131.png[/img]{Jeśli to rzeczywiście bestia, najlepiej, by poszedł z wami %beastslayer% - prawdziwy pogromca bestii. Cała trójka idziecie do stodoły. Po chwili ciszy liczysz do trzech i ty oraz pogromca bestii wyważacie drzwi. Anatomista spóźnia się i nawet nie zrozumiał planu, kopie na końcu, za późno, a jego but wymiata powietrze, noga ląduje i rozjeżdża się okropnie po klepisku. Próbując odzyskać godność i wstać, wygląda na to, że naciągnął mięsień w pachwinie. Ty i %beastslayer% wybuchacie śmiechem. Gdy pomagasz anatomiscie wstać, pogromca bestii przestaje się zastanawiać i nagle jest szarpnięcie ruchu, uderzenie powietrza i głuchy trzask w jeden z boksów. Patrzysz i widzisz, jak pogromca przygniata blade, upiorne stworzenie, a jego broń przebija mu czaszkę, gdy ramieniem trzyma je za szyję.%SPEECH_ON%To szczeniak, zgadza się, ale na pewno nie jest to wilko-wilk.%SPEECH_OFF%Mówi i upuszcza małego nachzehrera na ziemię. Spogląda.%SPEECH_ON%Trochę przypomina anatomistę.%SPEECH_OFF%%anatomist% przyjmuje to na klatę, niezręcznie wstając i drepcząc w kolanawym chodzie. Zauważa, że bestia nadal może być przydatna naukowo. Mimo że nie jest tak szorstki jak inni, nie możesz nie docenić jego podziwu dla nauki.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -150,7 +150,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "Zyskujesz " + item.getName()
 				});
-				_event.m.BeastSlayer.improveMood(1.0, "Wykorzystal swoje umiejetnosci zabijania potworow");
+				_event.m.BeastSlayer.improveMood(1.0, "Wykorzystał swoje umiejętności zabijania potworów");
 
 				if (_event.m.BeastSlayer.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -161,13 +161,13 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Anatomist.worsenMood(0.5, "Skonfundowany probujac zabic potwora");
+				_event.m.Anatomist.worsenMood(0.5, "Skonfundowany próbując zabić potwora");
 				_event.m.Anatomist.addXP(200, false);
 				_event.m.Anatomist.updateLevel();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/xp_received.png",
-					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doswiadczenia"
+					text = _event.m.Anatomist.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] Doświadczenia"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.BeastSlayer.getImagePath());
@@ -176,7 +176,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_131.png[/img]{%farmer% gospodarz podchodzi. Mowi do mezczyzny.%SPEECH_ON%To nie byla twoja stodola od poczatku, prawda?%SPEECH_OFF%Mezczyzna kreci glowa. %farmer% kiwa glowa.%SPEECH_ON%Tak myslalem, bo takie stodoly nie maja tylko jednego wejscia. Jest wyjscie ziemne, trzeba tylko wiedziec, gdzie szukac. Daj mi chwile, splosze bestie od tylu, a wy badzcie gotowi z przodu.%SPEECH_OFF%Zgodnie z planem czekacie z przodu. Niedlugo potem slyszysz skowyt bestii w srodku i cos pedzi w strone drzwi. Gdy tylko wychodzi, wbijasz miecz w jej czaszke, a gdy przewraca sie na ziemie, widzisz, ze to maly nachzehrer. %anatomist% klaszcze w dlonie, bo ma cos wartego zbadania. %farmer% wraca z boku stodoly, niosac dluga dwureczna bron.%SPEECH_ON%Wyglada na to, ze ktos o tym zapomnial, gdy ryli wyjscie z tylu stodoly. Mysle, ze wezniemy to jako zaplate, zgoda?%SPEECH_OFF%Kiwasz glowa, a mezczyzna, ktory prosil o pomoc, nie protestuje.}",
+			Text = "[img]gfx/ui/events/event_131.png[/img]{%farmer% gospodarz podchodzi. Mówi do mężczyzny.%SPEECH_ON%To nie była twoja stodoła od początku, prawda?%SPEECH_OFF%Mężczyzna kręci głową. %farmer% kiwa głową.%SPEECH_ON%Tak myślałem, bo takie stodoły nie mają tylko jednego wejścia. Jest wyjście ziemne, trzeba tylko wiedzieć, gdzie szukać. Daj mi chwilę, spłoszę bestię od tyłu, a wy bądźcie gotowi z przodu.%SPEECH_OFF%Zgodnie z planem czekacie z przodu. Niedługo potem słyszysz skowyt bestii w środku i coś pędzi w stronę drzwi. Gdy tylko wychodzi, wbijasz miecz w jej czaszkę, a gdy przewraca się na ziemię, widzisz, że to mały nachzehrer. %anatomist% klaszcze w dłonie, bo ma coś wartego zbadania. %farmer% wraca z boku stodoły, niosąc długą dwuręczną broń.%SPEECH_ON%Wygląda na to, że ktoś o tym zapomniał, gdy ryli wyjście z tyłu stodoły. Myślę, że weźmiemy to jako zapłatę, zgoda?%SPEECH_OFF%Kiwasz głową, a mężczyzna, który prosił o pomoc, nie protestuje.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -215,7 +215,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "Zyskujesz " + item.getName()
 				});
-				_event.m.Anatomist.improveMood(1.0, "Mogl zbadac interesujacy okaz");
+				_event.m.Anatomist.improveMood(1.0, "Mógł zbadać interesujący okaz");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Farmer.getImagePath());
 			}
@@ -223,7 +223,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_115.png[/img]{Mimo zyczen %anatomist% mowisz chlopowi, ze jesli to naprawde wilko-wilk w stodole, to powinien sam sie tym zajac. Takie klopoty nie sa twoja sprawa, a jesli maja byc, to ktos powinien ci za to cholernie dobrze zaplacic. Kto wie, moze ten szczeniak wilko-wilka da sporo okazji do kontraktow, gdy juz urosnie i przestraszy chlopow prosto w ramiona %companyname%.}",
+			Text = "[img]gfx/ui/events/event_115.png[/img]{Mimo życzeń %anatomist% mówisz chłopowi, że jeśli to naprawdę wilko-wilk w stodole, to powinien sam się tym zająć. Takie kłopoty nie są twoją sprawą, a jeśli mają być, to ktoś powinien ci za to cholernie dobrze zapłacić. Kto wie, może ten szczeniak wilko-wilka da sporo okazji do kontraktów, gdy już urośnie i przestraszy chłopów prosto w ramiona %companyname%.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -239,7 +239,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.0, "Odmowiono mu okazji do badan");
+				_event.m.Anatomist.worsenMood(1.0, "Odmówiono mu okazji do badań");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

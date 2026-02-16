@@ -10,7 +10,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{W swiecie najemnikow duza wytrzymalosc jest bardzo wazna, ale widac, ze niektorzy mezczyzni znacznie lepiej walcza ze zmeczeniem niz inni. %ironlungs% to jeden z nich, wojownik znany z tego, ze potrafi utrzymac rowny oddech daleko w trakcie wyczerpujacej bitwy. Dla ciebie to tylko ciekawostka, jak dziwna szyja, ogromne dlonie czy wielki mlot miedzy nogami. Ale dla %anatomist% to cos zupelnie innego. Chce wiedziec, jak to mozliwe, ze jeden czlowiek ma tak mocne i wydajne pluca, skoro jego codzienne zycie niewiele rozni sie od zycia innych.%SPEECH_ON%Wszyscy jestesmy tu wojownikami, wiec jak to sie stalo, ze ten czlowiek oddycha tak rowno w porownaniu do reszty? Musi miec w sobie jakis element, ktorego my nie mamy, i sadze, ze moge go znalezc.%SPEECH_OFF%Czekaj, \'wszyscy\' jestesmy tu wojownikami? Nie posunalbys sie az tak daleko, ale nie poprawiasz anatomisty. Pytasz go, jak dokladnie zamierza to zbadac.%SPEECH_ON%Prosta sekcja zwlok nie bylaby niczym nadzwyczajnym, ale sadze, ze %ironlungs% odmowilby. Zostaje mi wiec jedna opcja: badac go uwaznie i sprawdzic, czy moge odtworzyc jego zalety u siebie poprzez manipulacje kosci i ostrozne naciecia.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{W świecie najemników duża wytrzymałość jest bardzo ważna, ale widać, że niektórzy mężczyźni znacznie lepiej walczą ze zmęczeniem niż inni. %ironlungs% to jeden z nich, wojownik znany z tego, że potrafi utrzymać równy oddech daleko w trakcie wyczerpującej bitwy. Dla ciebie to tylko ciekawostka, jak dziwna szyja, ogromne dłonie czy wielki młot między nogami. Ale dla %anatomist% to coś zupełnie innego. Chce wiedzieć, jak to możliwe, że jeden człowiek ma tak mocne i wydajne płuca, skoro jego codzienne życie niewiele różni się od życia innych.%SPEECH_ON%Wszyscy jesteśmy tu wojownikami, więc jak to się stało, że ten człowiek oddycha tak równo w porównaniu do reszty? Musi mieć w sobie jakiś element, którego my nie mamy, i sądzę, że mogę go znaleźć.%SPEECH_OFF%Czekaj, \'wszyscy\' jesteśmy tu wojownikami? Nie posunąłbyś się aż tak daleko, ale nie poprawiasz anatomisty. Pytasz go, jak dokładnie zamierza to zbadać.%SPEECH_ON%Prosta sekcja zwłok nie byłaby niczym nadzwyczajnym, ale sądzę, że %ironlungs% odmówiłby. Zostaje mi więc jedna opcja: badać go uważnie i sprawdzić, czy mogę odtworzyć jego zalety u siebie poprzez manipulacje kości i ostrożne nacięcia.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -41,13 +41,13 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Mowisz anatomiscie, by robil, co chce. Wyciaga pioro i kilka ksiazek, a potem torbe pelna metalowych szczypiec, nozyc i skalpeli. Sprawdza ich czystosc, po czym podnosi je i podchodzi do %ironlungs%. Najemnik odpowiada niezrecznym spojrzeniem. W koncu anatomista namawia mezczyzne, by wszedl z nim do namiotu. Pilnujesz okolicy na wypadek, gdyby anatomista postradal zmysly i wpadl w szalony naukowy amok. W koncu %anatomist% wraca z fiolka, ktora przez chwile obraca, po czym wypija. Kiwal glowa.%SPEECH_ON%Mam nadzieje, ze to zadziala. Mocno obciazylem swoje cialo, by naprawde przecwiczyc pluca, a potem dodalem skladniki pochodzace od samego %ironlungs%. Nastepnie, rzecz jasna, dodatkowe elementy, o ktorych nie bede nikomu opowiadal, bo jesli to zadziala, moge stac sie ekspertem w tej dziedzinie, prawdziwym bohaterem nauki i zdecydowanie przescignac innych anatomistow.%SPEECH_OFF%Dobrze. %ironlungs% wychodzi teraz z namiotu. Pytasz go, co sie stalo. Mezczyzna wzrusza ramionami.%SPEECH_ON%Powiedzialem mu, ze duzo sie rozciagam i mam dobra postawe oraz ze czasem cwicze oddech. Odrzucil te odpowiedzi, przekonujac siebie, ze musi byc jakis inny sposob. Potem oszalal z tymi narzedziami i zaczal, hmm, \'pracowac\' na sobie. Cokolwiek zrobil, wygladalo na potwornie bolesne, ale zniósl to dobrze.%SPEECH_OFF%Czekaj, cwiczysz oddech?}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Mówisz anatomiscie, by robił, co chce. Wyciąga pióro i kilka książek, a potem torbę pełną metalowych szczypiec, nożyc i skalpeli. Sprawdza ich czystość, po czym podnosi je i podchodzi do %ironlungs%. Najemnik odpowiada niezręcznym spojrzeniem. W końcu anatomista namawia mężczyznę, by wszedł z nim do namiotu. Pilnujesz okolicy na wypadek, gdyby anatomista postradał zmysły i wpadł w szalony naukowy amok. W końcu %anatomist% wraca z fiolką, którą przez chwilę obraca, po czym wypija. Kiwał głową.%SPEECH_ON%Mam nadzieję, że to zadziała. Mocno obciążyłem swoje ciało, by naprawdę przećwiczyć płuca, a potem dodałem składniki pochodzące od samego %ironlungs%. Następnie, rzecz jasna, dodatkowe elementy, o których nie będę nikomu opowiadał, bo jeśli to zadziała, mogę stać się ekspertem w tej dziedzinie, prawdziwym bohaterem nauki i zdecydowanie prześcignąć innych anatomistów.%SPEECH_OFF%Dobrze. %ironlungs% wychodzi teraz z namiotu. Pytasz go, co się stało. Mężczyzna wzrusza ramionami.%SPEECH_ON%Powiedziałem mu, że dużo się rozciągam i mam dobrą postawę oraz że czasem ćwiczę oddech. Odrzucił te odpowiedzi, przekonując siebie, że musi być jakiś inny sposób. Potem oszalał z tymi narzędziami i zaczął, hmm, \'pracować\' na sobie. Cokolwiek zrobił, wyglądało na potwornie bolesne, ale zniósł to dobrze.%SPEECH_OFF%Czekaj, ćwiczysz oddech?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Teraz oddycham swiadomie.",
+					Text = "Teraz oddycham świadomie.",
 					function getResult( _event )
 					{
 						return 0;
@@ -62,7 +62,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Anatomist.getName() + " zyskuje Zelazne Pluca"
+					text = _event.m.Anatomist.getName() + " zyskuje Żelazne Płuca"
 				});
 				local injury = _event.m.Anatomist.addInjury([
 					{
@@ -83,7 +83,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%anatomist% dostaje zielone swiatlo i pospiesznie wraca do namiotu z torba narzedzi i %ironlungs% u boku. Wchodzisz do namiotu i widzisz %anatomist% siedzacego prosto z nieskazitelna postawa, po czym zgina sie jak starzec z kregoslupem zlamanym przez wiek, a potem znowu prostuje.\n\nNagle bierze jedno z narzedzi i przebija sie nim. %ironlungs% cofa sie, zaskoczony takim autodestrukcyjnym czynem. Wyciaga dlon, by pomoc anatomiscie, ale ten go odgania. Zaciskajac zeby, %anatomist% zaczyna robic notatki, gdy krew tryska z jego ust na kartki. Potem powtarza to jeszcze raz, tym razem z innego kata.\n\nNawet z daleka widzisz, jak krew wyplywa grubymi strugami ciemnej czerwieni, a co chwila pryska jasnym szkarłatem. Zaciska zeby i zadaje kolejne uderzenie. Tym razem z rany tryska wielka fala krwi. Widziales juz dosc, ale zanim zdazysz interweniowac, oczy anatomisty wywracaja sie do tylu i ten traci przytomnosc. %ironlungs% wyglada na wstrzasnietego.%SPEECH_ON%Co do cholery? Ty mu na to pozwoliles, kapitanie? Czego on chcial sie nauczyc?%SPEECH_OFF%Nie placa ci wystarczajaco, by znosic tych durniow. Patrzac na notatki anatomisty, przez zakrwawiona strone widzisz, ze po prostu napisal \'nie dziala\' w kolko.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%anatomist% dostaje zielone światło i pospiesznie wraca do namiotu z torbą narzędzi i %ironlungs% u boku. Wchodzisz do namiotu i widzisz %anatomist% siedzącego prosto z nieskazitelną postawą, po czym zgina się jak starzec z kręgosłupem złamanym przez wiek, a potem znowu prostuje.\n\nNagle bierze jedno z narzędzi i przebija się nim. %ironlungs% cofa się, zaskoczony takim autodestrukcyjnym czynem. Wyciąga dłoń, by pomóc anatomiscie, ale ten go odgania. Zaciskając zęby, %anatomist% zaczyna robić notatki, gdy krew tryska z jego ust na kartki. Potem powtarza to jeszcze raz, tym razem z innego kąta.\n\nNawet z daleka widzisz, jak krew wypływa grubymi strugami ciemnej czerwieni, a co chwilę pryska jasnym szkarłatem. Zaciska zęby i zadaje kolejne uderzenie. Tym razem z rany tryska wielka fala krwi. Widziałeś już dość, ale zanim zdążysz interweniować, oczy anatomisty wywracają się do tyłu i ten traci przytomność. %ironlungs% wygląda na wstrząśniętego.%SPEECH_ON%Co do cholery? Ty mu na to pozwoliłeś, kapitanie? Czego on chciał się nauczyć?%SPEECH_OFF%Nie płacą ci wystarczająco, by znosić tych durniów. Patrząc na notatki anatomisty, przez zakrwawioną stronę widzisz, że po prostu napisał \'nie działa\' w kółko.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -111,7 +111,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Anatomist.getName() + " odnosi " + injury.getNameOnly()
 				});
-				_event.m.Anatomist.worsenMood(0.5, "Jego eksperymentalna operacja nie zadzialala");
+				_event.m.Anatomist.worsenMood(0.5, "Jego eksperymentalna operacja nie zadziałała");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.IronLungs.getImagePath());
 			}
@@ -119,7 +119,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Mowisz anatomiscie, by pilnowal swojego nosa. Gdy zaczyna sie burzyc, co zaczyna byc niebezpiecznie bliskie twojej sprawie, tlumaczysz mu, ze %ironlungs% jest swoim wlasnym czlowiekiem i nalezy tylko do siebie, a z jego istnienia nie ma nic poza odrobina podziwu. I tyle. %anatomist% otwiera usta, by odpowiedziec, po czym je zamyka. Zamiast tego to, co myslal, zapisuje w notatkach. Masz nadzieje, ze wszelki dramat wyschnie razem z atramentem.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Mówisz anatomiscie, by pilnował swojego nosa. Gdy zaczyna się burzyć, co zaczyna być niebezpiecznie bliskie twojej sprawie, tłumaczysz mu, że %ironlungs% jest swoim własnym człowiekiem i należy tylko do siebie, a z jego istnienia nie ma nic poza odrobiną podziwu. I tyle. %anatomist% otwiera usta, by odpowiedzieć, po czym je zamyka. Zamiast tego to, co myślał, zapisuje w notatkach. Masz nadzieję, że wszelki dramat wyschnie razem z atramentem.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -135,7 +135,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.0, "Odmowiono mu okazji do badan");
+				_event.m.Anatomist.worsenMood(1.0, "Odmówiono mu okazji do badań");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

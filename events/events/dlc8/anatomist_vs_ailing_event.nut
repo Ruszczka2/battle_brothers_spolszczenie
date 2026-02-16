@@ -10,7 +10,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing%, chorowity najemnik, siedzi skulony i wpatruje sie w ognisko. Choruje od dluzszego czasu i nie wyglada na to, by bylo lepiej. Jednak %anatomist% anatomista twierdzi, ze moze sporzadzic dla niego rozwiazanie - rodzaj mikstury, ktora wzmocni jego cialo i uzdrowi go.%SPEECH_ON%Widziałem, jak to dzialalo wiele razy. Jest tylko jeden problem: potrzebne skladniki nie pochodza z tych okolic, ale czytalem o tym dosc, by z latwoscia znalezc odpowiednie zamienniki.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing%, chorowity najemnik, siedzi skulony i wpatruje się w ognisko. Choruje od dłuższego czasu i nie wygląda na to, by było lepiej. Jednak %anatomist% anatomista twierdzi, że może sporządzić dla niego rozwiązanie - rodzaj mikstury, która wzmocni jego ciało i uzdrowi go.%SPEECH_ON%Widziałem, jak to działało wiele razy. Jest tylko jeden problem: potrzebne składniki nie pochodzą z tych okolic, ale czytałem o tym dość, by z łatwością znaleźć odpowiednie zamienniki.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -54,7 +54,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Pozwalasz %anatomist% wykonywac jego prace, cokolwiek to znaczy. Anatomista i %ailing% znikaja na chwile w namiocie. Gdy kompanie trzeba ruszac w droge, %ailing% jest jak nowy. Ozywiony nowa energia, ma lekki, sprezysty krok. %anatomist% wychodzi, zapisujac cos w swoim notatniku.%SPEECH_ON%Wyniki byly calkiem dobre, bardzo dobre.%SPEECH_OFF%Z ciekawosci pytasz, co zrobil. Ten odrywa sie od skupienia i rzuca ci spojrzenie, po czym odwraca ksiege, bys nie mogl jej czytac. Dalej mruczy do siebie.%SPEECH_ON%Najlepsze wyniki? Nie, nie moge napisac najlepsze wyniki. Moga wystapic jeszcze skutki uboczne, ktore nadejda, jak to ujac, bokiem.%SPEECH_OFF%Coz. Oby %ailing% byl po prostu wyleczony i na tym koniec.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Pozwalasz %anatomist% wykonywać jego pracę, cokolwiek to znaczy. Anatomista i %ailing% znikają na chwilę w namiocie. Gdy kompanię trzeba ruszać w drogę, %ailing% jest jak nowy. Ożywiony nową energią, ma lekki, sprężysty krok. %anatomist% wychodzi, zapisując coś w swoim notatniku.%SPEECH_ON%Wyniki były całkiem dobre, bardzo dobre.%SPEECH_OFF%Z ciekawości pytasz, co zrobił. Ten odrywa się od skupienia i rzuca ci spojrzenie, po czym odwraca księgę, byś nie mógł jej czytać. Dalej mruczy do siebie.%SPEECH_ON%Najlepsze wyniki? Nie, nie mogę napisać najlepsze wyniki. Mogą wystąpić jeszcze skutki uboczne, które nadejdą, jak to ująć, bokiem.%SPEECH_OFF%Cóż. Oby %ailing% był po prostu wyleczony i na tym koniec.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -93,7 +93,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Dajesz %anatomist% zielone swiatlo. On i %ailing% odchodza na chwile do namiotu. Mijaja godziny i kompanie wkrotce trzeba ruszac w droge. Podchodzisz i wchodzisz do namiotu. %ailing% lezy na pryczy z rekami skrzyzowanymi nad glowa, a nogi ma zgięte w kolanach. Jest spocony i wciaz kreci glowa z lewej na prawa. %anatomist% stoi obok i robi notatki.%SPEECH_ON%Wyglada na to, ze procedura nie zadzialala tak, jak zamierzano, jednak nawet niezamierzone skutki moga niesc wazne informacje.%SPEECH_OFF%Wsciekly pytasz, czy przezyje. Anatomista kiwa glowa.%SPEECH_ON%Moze przez jakis czas miewac urojenia, ale ostatecznie nadal bedzie oddychajacym zwierzeciem - przepraszam, oddychajacym czlowiekiem.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Dajesz %anatomist% zielone światło. On i %ailing% odchodzą na chwilę do namiotu. Mijają godziny i kompanię wkrótce trzeba ruszać w drogę. Podchodzisz i wchodzisz do namiotu. %ailing% leży na pryczy z rękami skrzyżowanymi nad głową, a nogi ma zgięte w kolanach. Jest spocony i wciąż kręci głową z lewej na prawą. %anatomist% stoi obok i robi notatki.%SPEECH_ON%Wygląda na to, że procedura nie zadziałała tak, jak zamierzano, jednak nawet niezamierzone skutki mogą nieść ważne informacje.%SPEECH_OFF%Wściekły pytasz, czy przeżyje. Anatomista kiwa głową.%SPEECH_ON%Może przez jakiś czas miewać urojenia, ale ostatecznie nadal będzie oddychającym zwierzęciem - przepraszam, oddychającym człowiekiem.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -134,7 +134,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Decydujesz sie pozwolic anatomiscie zrobic to, co uzna za konieczne, majac nadzieje, ze %ailing% szybko wyzdrowieje. Czas mija, kompanie trzeba zbierac w droge, a %anatomist% wciaz nie wychodzi z namiotu. Podchodzisz i zagladasz do srodka.\n\nZastajesz anatomiste siedzacego na stolku z boku. Jedna reka lezy na stole, a dlon szalenie skrobie wte i wewte w notatniku. Druga reka zwisa miedzy nogami, kciuk i palec wskazujacy co chwile zaciskaja sie w dziwnym, szczypiacym ruchu, jakby odliczal sekundy. Przenosisz wzrok na %ailing%, ktory siedzi na pryczy z nogami zwisajacymi z boku i stopami na ziemi. Podnosi wzrok.%SPEECH_ON%Hej, kapitanie, chyba czuje sie juz duzo lepiej. Duuuzo lepiej. Gotowy, by... podbic swiat.%SPEECH_OFF%Mezczyzna zrywa sie na nogi i bije sie w piers, lecz jego glos nie podnosi sie.%SPEECH_ON%Czy ruszamy w droge?%SPEECH_OFF%Wychodzi z namiotu, a gdy tylko plachta opada, %anatomist% przestaje pisac i odklada pioro. Kiwa glowa.%SPEECH_ON%Procedura sie powiodla. Nie jest juz chory. Jest wyleczony i to z nadwyzka.%SPEECH_OFF%Z nadwyzka? To nie jest slownictwo, ktore chcesz teraz slyszec. Musisz miec na niego oko, by sprawdzic, co dokladnie sie w nim zmienilo.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Decydujesz się pozwolić anatomiscie zrobić to, co uzna za konieczne, mając nadzieję, że %ailing% szybko wyzdrowieje. Czas mija, kompanię trzeba zbierać w drogę, a %anatomist% wciąż nie wychodzi z namiotu. Podchodzisz i zaglądasz do środka.\n\nZastajesz anatomistę siedzącego na stołku z boku. Jedna ręka leży na stole, a dłoń szalenie skrobie wte i wewte w notatniku. Druga ręka zwisa między nogami, kciuk i palec wskazujący co chwilę zaciskają się w dziwnym, szczypiącym ruchu, jakby odliczał sekundy. Przenosisz wzrok na %ailing%, który siedzi na pryczy z nogami zwisającymi z boku i stopami na ziemi. Podnosi wzrok.%SPEECH_ON%Hej, kapitanie, chyba czuje się już dużo lepiej. Duuuzo lepiej. Gotowy, by... podbić świat.%SPEECH_OFF%Mężczyzna zrywa się na nogi i bije się w pierś, lecz jego głos nie podnosi się.%SPEECH_ON%Czy ruszamy w drogę?%SPEECH_OFF%Wychodzi z namiotu, a gdy tylko płachta opada, %anatomist% przestaje pisać i odkłada pióro. Kiwa głową.%SPEECH_ON%Procedura się powiodła. Nie jest już chory. Jest wyleczony i to z nadwyżką.%SPEECH_OFF%Z nadwyżką? To nie jest słownictwo, które chcesz teraz słyszeć. Musisz mieć na niego oko, by sprawdzić, co dokładnie się w nim zmieniło.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -194,7 +194,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Mowisz %anatomist%, ze nie. %ailing% jest dosc silny, by wyzdrowiec sam. Anatomista wzdycha. Masz wrazenie, ze nie byl zainteresowany pomaganiem najemnikowi, tylko eksperymentowaniem na nim.%SPEECH_ON%Wielkie postepy rodza sie z wielkiego ryzyka, kapitanie.%SPEECH_OFF%Mowi, po czym odchodzi, a jego pioro skrobie imie w jednej z jego ksieg.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Mówisz %anatomist%, że nie. %ailing% jest dość silny, by wyzdrowieć sam. Anatomista wzdycha. Masz wrażenie, że nie był zainteresowany pomaganiem najemnikowi, tylko eksperymentowaniem na nim.%SPEECH_ON%Wielkie postępy rodzą się z wielkiego ryzyka, kapitanie.%SPEECH_OFF%Mówi, po czym odchodzi, a jego pióro skrobie imię w jednej z jego ksiąg.}",
 			Image = "",
 			List = [],
 			Characters = [],

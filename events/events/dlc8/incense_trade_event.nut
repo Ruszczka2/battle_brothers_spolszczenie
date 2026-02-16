@@ -9,7 +9,7 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_143.png[/img]{Gdy torujesz droge przez sniezne pustkowia, na szose wychodzi dziwna postac. Widzisz sznury przywiazane do ramion, a wysoko nad nim leca czarne latawce, wirujace jakby uczynil z nich marionetki wlasnego pomyslu. Jego twarz wyglada na twarz czlowieka zdolnego do takiej rzeczy, skrzywiona obledem, wyszczerzona jak do zartu, z ktorego smieje sie od lat. Ciemna karnacja nie jest tu zwykla, a gdy mowi, zna twoj jezyk.%SPEECH_ON%Masz przy sobie dziwnosci, dziwnosci, ktore pieknie pachna. Co to jest, co? To nie mieso. To nie delikatne ludzkie mieso. To nie mieso ptakow, ani szczeniakow, co idą pod lod. To... czy to w ogole mieso? Ojej, to kadzidlo! Daj mi powachac tej slodkiej przyprawy, a dam ci cos w zamian. Tylko odrobina zapachu, tyle, nawet zaplace.%SPEECH_OFF%Kladziesz reke na mieczu.}",
+			Text = "[img]gfx/ui/events/event_143.png[/img]{Gdy torujesz drogę przez śnieżne pustkowia, na szosę wychodzi dziwna postać. Widzisz sznury przywiązane do ramion, a wysoko nad nim lecą czarne latawce, wirujące jakby uczynił z nich marionetki własnego pomysłu. Jego twarz wygląda na twarz człowieka zdolnego do takiej rzeczy, skrzywiona obłędem, wyszczerzona jak do żartu, z którego śmieje się od lat. Ciemna karnacja nie jest tu zwykła, a gdy mówi, zna twój język.%SPEECH_ON%Masz przy sobie dziwności, dziwności, które pięknie pachną. Co to jest, co? To nie mięso. To nie delikatne ludzkie mięso. To nie mięso ptaków, ani szczeniaków, co idą pod lód. To... czy to w ogóle mięso? Ojej, to kadzidło! Daj mi powąchać tej słodkiej przyprawy, a dam ci coś w zamian. Tylko odrobina zapachu, tyle, nawet zapłacę.%SPEECH_OFF%Kładziesz rękę na mieczu.",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -36,7 +36,7 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Dancer != null)
 				{
 					this.Options.push({
-						Text = "%bellydancer% tancerz brzucha, znasz tego czlowieka?",
+						Text = "%bellydancer% tancerz brzucha, znasz tego człowieka?",
 						function getResult( _event )
 						{
 							return "D";
@@ -49,13 +49,13 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_143.png[/img]{Mowisz mu, ze moze powachac to, czego pragnie, o ile potem ci za to zaplaci. Zgadza sie i podchodzi do wozu, a jego dlugie latawce podazaja nad nim jak wieczne sępy, migoczac wsrod snieznej zawiei. Pochyla sie do wozu i wciaga zapach, a jego zimny, czerwony nos chrapie z kazdym oddechem. Dociera do slojow z kadzidlem i na jego twarzy pojawia sie usmiech.%SPEECH_ON%Ach tak. Nie czulem takiej wspanialosci od wielu, wielu lat.%SPEECH_OFF%Podnosi polę kurtki i z hukiem kladzie na burcie duza sakiewke monet. Liczysz je, widzac znacznie wiecej, niz dostalbys za sprzedaz tego kadzidla gdziekolwiek. Odwraca sie do ciebie, kadzidlo tulac w ramionach.%SPEECH_ON%Uczciwa umowa?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_143.png[/img]{Mówisz mu, że może powąchać to, czego pragnie, o ile potem ci za to zapłaci. Zgadza się i podchodzi do wozu, a jego długie latawce podążają nad nim jak wieczne sępy, migocząc wśród śnieżnej zawiei. Pochyla się do wozu i wciąga zapach, a jego zimny, czerwony nos chrapie z każdym oddechem. Dociera do słojów z kadzidłem i na jego twarzy pojawia się uśmiech.%SPEECH_ON%Ach tak. Nie czułem takiej wspaniałości od wielu, wielu lat.%SPEECH_OFF%Podnosi poły kurtki i z hukiem kładzie na burcie dużą sakiewkę monet. Liczysz je, widząc znacznie więcej, niż dostałbyś za sprzedaż tego kadzidła gdziekolwiek. Odwraca się do ciebie, kadzidło tuląc w ramionach.%SPEECH_ON%Uczciwa umowa?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Czlowiek wie, co kocha.",
+					Text = "Człowiek wie, co kocha.",
 					function getResult( _event )
 					{
 						return 0;
@@ -100,7 +100,7 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_143.png[/img]{Odsuwasz dlon od miecza i zgadzasz sie na sprytna, choc pozornie nieszkodliwa prosbe. Mowisz, ze moze powachac twoj woz, jesli zaplaci z gory. Mezczyzna kiwa glowa i daje kilka koron, po czym obchodzi woz od tylu. Wklada bulwiasty nos do srodka, prycha jak swinia ryjaca w ziemi.\n\nNagle chwyta kilka slojow kadzidla i zrywa pokrywki. Pyl i proszek rozlatuja sie, sniezne pustkowia na chwile staja sie barwne, a chichoczacy mezczyzna tanczy w obłoku. Chcesz go ogluszyc, ale rzuca na ciebie linki latawcow, petajac cie w ich druciane uchwyty, sam zas robiąc brawurowa ucieczke, rechoczac, gdy kadzidlo splywa z jego ramion jak zbłąkany wloczega przechodzacy przez niebieski południk. Wsciekly, rozcinajac te przeklete latawce, sprawdzasz straty.}",
+			Text = "[img]gfx/ui/events/event_143.png[/img]{Odsuwasz dłoń od miecza i zgadzasz się na sprytną, choć pozornie nieszkodliwą prośbę. Mówisz, że może powąchać twój wóz, jeśli zapłaci z góry. Mężczyzna kiwa głową i daje kilka koron, po czym obchodzi wóz od tyłu. Wkłada bulwiasty nos do środka, prycha jak świnia ryjąca w ziemi.\n\nNagle chwyta kilka słojów kadzidła i zrywa pokrywki. Pył i proszek rozlatują się, śnieżne pustkowia na chwilę stają się barwne, a chichoczący mężczyzna tańczy w obłoku. Chcesz go ogłuszyć, ale rzuca na ciebie linki latawców, pętając cię w ich druciane uchwyty, sam zaś robiąc brawurową ucieczkę, rechocząc, gdy kadzidło spływa z jego ramion jak zbłąkany włóczęga przechodzący przez niebieski południk. Wściekły, rozcinając te przeklęte latawce, sprawdzasz straty.",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -149,13 +149,13 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_143.png[/img]{%bellydancer% tancerz brzucha wychodzi naprzod, wpatruje sie w snieg i niespodziewanie zastanawia sie na glos, czy to jego ojciec. Szalony mezczyzna podchodzi, a jego czarne latawce podazaja za nim jak sępy na ogonie skazanca. Jego twarz rozjasnia sie i obaj sie obejmuja. Mezczyzna okazuje sie dawno zaginionym ojcem %bellydancer%, kupcem kadzidla, ktory poszedl daleko na polnoc, tylko po to, by zostac napadnietym i zniewolonym przez dzikich barbarzyncow, od ktorych teraz uciekl. Usmiecha sie obłednie.%SPEECH_ON%Tak dawno nie widzialem dobrego kadzidla, ze czulem wasz woz z wielu mil. Moja zona, twoja matka, %bellydancer%, jak sie trzyma?%SPEECH_OFF%Usmiech tancerza blednie. Mowi, ze wytrwala z nadzieja tak dlugo, jak mogla. Czlowiek z latawcami kiwa glowa, ponuro, ale i z oczekiwaniem. Mowi, ze nie byloby w porzadku, gdyby byla zona widmem tego, co kiedys bylo, a on sam, bez nadziei na powrot do domu, rowniez poszedl dalej. Mezczyzna wyciaga ozdobna bron z ostrzem niepodobnym do niczego, co kiedykolwiek widziales. Mowi, ze to długo przechowywana rodzinna relikwia i ze przez cale lata na polnocy trzymal ja zakopana i bezpieczna.%SPEECH_ON%Lepiej to wez i zrob z tego uzytek, zanim jeden z tych dzikusow mnie zje i uzyje tego jako wykałaczki.%SPEECH_OFF%Mezczyzna usmiecha sie czule, a obaj obejmuja sie przez chwile. Zaciekawiony pytasz, po co te latawce. Odpowiada, ze to narzedzia strachu, majace odstraszac niebezpieczne zwierzeta i podobne, w tym bardziej przesadnych barbarzyncow. Zegnasz mezczyzne i sugerujesz %bellydancer%, ze moze odejsc, jesli musi, ale ten kreci glowa.%SPEECH_ON%Syn i ojciec nie powinni dzielic pozlacanej sciezki, bo wiemy, ze spotkamy sie na jej koncu, jak spotkalismy sie na jej poczatku.%SPEECH_OFF%Mowi kilka slow do ojca w swoim jezyku, po czym obaj odchodza i na tym koniec.}",
+			Text = "[img]gfx/ui/events/event_143.png[/img]{%bellydancer% tancerz brzucha wychodzi naprzód, wpatruje się w śnieg i niespodziewanie zastanawia się na głos, czy to jego ojciec. Szalony mężczyzna podchodzi, a jego czarne latawce podążają za nim jak sępy na ogonie skazańca. Jego twarz rozjaśnia się i obaj się obejmują. Mężczyzna okazuje się dawno zaginionym ojcem %bellydancer%, kupcem kadzidła, który poszedł daleko na północ, tylko po to, by zostać napadniętym i zniewolonym przez dzikich barbarzyńców, od których teraz uciekł. Uśmiecha się obłędnie.%SPEECH_ON%Tak dawno nie widziałem dobrego kadzidła, że czułem wasz wóz z wielu mil. Moja żona, twoja matka, %bellydancer%, jak się trzyma?%SPEECH_OFF%Uśmiech tancerza blednie. Mówi, że wytrwała z nadzieją tak długo, jak mogła. Człowiek z latawcami kiwa głową, ponuro, ale i z oczekiwaniem. Mówi, że nie byłoby w porządku, gdyby była żona widmem tego, co kiedyś było, a on sam, bez nadziei na powrót do domu, również poszedł dalej. Mężczyzna wyciąga ozdobną broń z ostrzem niepodobnym do niczego, co kiedykolwiek widziałeś. Mówi, że to długo przechowywana rodzinna relikwia i że przez całe lata na północy trzymał ją zakopaną i bezpieczną.%SPEECH_ON%Lepiej to weź i zrób z tego użytek, zanim jeden z tych dzikusów mnie zje i użyje tego jako wykałaczki.%SPEECH_OFF%Mężczyzna uśmiecha się czule, a obaj obejmują się przez chwilę. Zaciekawiony pytasz, po co te latawce. Odpowiada, że to narzędzia strachu, mające odstraszać niebezpieczne zwierzęta i podobne, w tym bardziej przesadnych barbarzyńców. Żegnasz mężczyznę i sugerujesz %bellydancer%, że może odejść, jeśli musi, ale ten kręci głową.%SPEECH_ON%Syn i ojciec nie powinni dzielić pozłacanej ścieżki, bo wiemy, że spotkamy się na jej końcu, jak spotkaliśmy się na jej początku.%SPEECH_OFF%Mówi kilka słów do ojca w swoim języku, po czym obaj odchodzą i na tym koniec.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Cholera, to kadzidlo jest swietne.",
+					Text = "Cholera, to kadzidło jest świetne.",
 					function getResult( _event )
 					{
 						return 0;
@@ -179,13 +179,13 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_143.png[/img]{Kazesz mezczyznie odejsc albo inaczej. Robi, co kazesz, choc stoi z wyciagnietymi rekami, a palce bezradnie drapia powietrze za zapachem, ktory wylapal jego nos. Kilka razy ogladzasz sie za siebie, upewniajac sie, ze nie idzie za wami. Stoi na snieznym pustkowiu i wpatruje sie w twoj woz. Potem jest juz tylko czarnym punktem. Potem znika, a jego latawce tancza nad miejscem, w ktorym wiesz, ze stoi, a potem i one znikaja.}",
+			Text = "[img]gfx/ui/events/event_143.png[/img]{Każesz mężczyźnie odejść albo inaczej. Robi, co każesz, choć stoi z wyciągniętymi rękami, a palce bezradnie drapią powietrze za zapachem, który wyłapał jego nos. Kilka razy oglądasz się za siebie, upewniając się, że nie idzie za wami. Stoi na śnieżnym pustkowiu i wpatruje się w twój wóz. Potem jest już tylko czarnym punktem. Potem znika, a jego latawce tańczą nad miejscem, w którym wiesz, że stoi, a potem i one znikają.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nie da sie uciec od tych dziwakow.",
+					Text = "Nie da się uciec od tych dziwaków.",
 					function getResult( _event )
 					{
 						return 0;

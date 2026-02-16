@@ -10,13 +10,13 @@ this.bad_reputation_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_05.png[/img]{Kilku Swietobiorcow przynosi ci kartke. Widnieje na niej nazwa %companyname%, dosc zabawny rysunek ciebie samego, zupelnie nieproporcjonalny, i kilka dosadnych okreslen twojego mizernego charakteru. Wyglada na to, ze twoja reputacja w tym swiecie nie jest tak wzniosla, jak sadziles.%SPEECH_ON%Musimy to naprawic, kapitanie! To wielka zniewaga dla Swietobiorcow, a zwlaszcza dla Mlodego Anselma!%SPEECH_OFF%Zgadzasz sie. | Gdy kompania obozuje, kilku Swietobiorcow narzeka na reputacje %companyname%.%SPEECH_ON%Mlody Anselm nie bylby zadowolony z tego, jak swiat nas postrzega. Powinnismy dawac przyklad, jak sie zachowywac!%SPEECH_OFF%Zgadzasz sie, choc naprawa honoru Swietobiorcow moze potrwac. | Mlody Anselm zalozyl Swietobiorcow z przekonaniem, ze powinni byc wzorami, przywracajacymi prymat honoru, cnoty i prawosci - elementow, ktore, jak uwazal, swiat zagubil. Niestety trudno ci bylo utrzymac te ideały, a reputacja %companyname% spadla odrobine nizej, niz powinna. Kilku ludzi slusznie narzeka, a nawet jesli nie narzekaja otwarcie, oczywiste jest, ze te wady i tak obnizaja morale. Uznajesz, ze najlepiej zaczac naprawiac reputacje %companyname% tak szybko, jak to mozliwe, by ludzie nie stracili wiary w ostateczny cel.}",
+			Text = "{[img]gfx/ui/events/event_05.png[/img]{Kilku Świętobiorców przynosi ci kartkę. Widnieje na niej nazwa %companyname%, dość zabawny rysunek ciebie samego, zupełnie nieproporcjonalny, i kilka dosadnych określeń twojego mizernego charakteru. Wygląda na to, że twoja reputacja w tym świecie nie jest tak wzniosła, jak sądziłeś.%SPEECH_ON%Musimy to naprawić, kapitanie! To wielka zniewaga dla Świętobiorców, a zwłaszcza dla Młodego Anselma!%SPEECH_OFF%Zgadzasz się. | Gdy kompania obozuje, kilku Świętobiorców narzeka na reputację %companyname%.%SPEECH_ON%Młody Anselm nie byłby zadowolony z tego, jak świat nas postrzega. Powinniśmy dawać przykład, jak się zachowywać!%SPEECH_OFF%Zgadzasz się, choć naprawa honoru Świętobiorców może potrwać. | Młody Anselm założył Świętobiorców z przekonaniem, że powinni być wzorami, przywracającymi prymat honoru, cnoty i prawości - elementów, które, jak uważał, świat zagubił. Niestety trudno ci było utrzymać te ideały, a reputacja %companyname% spadła odrobinę niżej, niż powinna. Kilku ludzi słusznie narzeka, a nawet jeśli nie narzekają otwarcie, oczywiste jest, że te wady i tak obniżają morale. Uznajesz, że najlepiej zacząć naprawiać reputację %companyname% tak szybko, jak to możliwe, by ludzie nie stracili wiary w ostateczny cel.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Bede lepszym przywodca.",
+					Text = "Będę lepszym przywódcą.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,11 +32,11 @@ this.bad_reputation_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(1.0, "Jest zmartwiony zla reputacja kompanii");
+						bro.worsenMood(1.0, "Jest zmartwiony złą reputacją kompanii");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.5, "Jest zmartwiony zla reputacja kompanii");
+						bro.worsenMood(0.5, "Jest zmartwiony złą reputacją kompanii");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

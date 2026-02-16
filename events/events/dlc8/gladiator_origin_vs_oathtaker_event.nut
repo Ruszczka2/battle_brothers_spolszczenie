@@ -10,7 +10,7 @@ this.gladiator_origin_vs_oathtaker_event <- this.inherit("scripts/events/event",
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%oathtaker% i %gladiator% rozmyslaja o wlasciwym uzyciu broni. Swietobiorca sklania sie ku przekonaniu, ze kazde machniecie mieczem jest napedzane zamiarem czynienia dobra. Gladiator odpowiada, ze utrzymanie sie przy zyciu to najwieksze dobro, wiec poczatek zamachu miecza ma juz dobre intencje, a jego final nie powinien byc dla samego siebie, lecz dla tlumu, ktory patrzy. Unoszac brew, %oathtaker% pyta,%SPEECH_ON%Uwazasz, ze bitwy to przedstawienia, gladiatorze?%SPEECH_OFF%%gladiator% usmiecha sie, pochylajac sie blizej.%SPEECH_ON%Zycie samo w sobie jest przedstawieniem, Swietobiorco, a ja jestem jego najwieksza gwiazda.%SPEECH_OFF%Zalujesz, ze w ogole sluchales tej rozmowy.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%oathtaker% i %gladiator% rozmyślają o właściwym użyciu broni. Świętobiorca skłania się ku przekonaniu, że każde machnięcie mieczem jest napędzane zamiarem czynienia dobra. Gladiator odpowiada, że utrzymanie się przy życiu to największe dobro, więc początek zamachu miecza ma już dobre intencje, a jego finał nie powinien być dla samego siebie, lecz dla tłumu, który patrzy. Unosząc brew, %oathtaker% pyta,%SPEECH_ON%Uważasz, że bitwy to przedstawienia, gladiatorze?%SPEECH_OFF%%gladiator% uśmiecha się, pochylając się bliżej.%SPEECH_ON%Życie samo w sobie jest przedstawieniem, Świętobiorco, a ja jestem jego największą gwiazdą.%SPEECH_OFF%Żałujesz, że w ogóle słuchałeś tej rozmowy.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -28,7 +28,7 @@ this.gladiator_origin_vs_oathtaker_event <- this.inherit("scripts/events/event",
 			{
 				this.Characters.push(_event.m.Gladiator.getImagePath());
 				this.Characters.push(_event.m.Oathtaker.getImagePath());
-				_event.m.Gladiator.improveMood(1.0, "Upewnil sie o swoim znaczeniu na swiecie");
+				_event.m.Gladiator.improveMood(1.0, "Upewnił się o swoim znaczeniu na świecie");
 
 				if (_event.m.Gladiator.getMoodState() > this.Const.MoodState.Neutral)
 				{

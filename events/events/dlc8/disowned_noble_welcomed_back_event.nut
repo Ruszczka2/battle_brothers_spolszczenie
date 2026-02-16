@@ -10,13 +10,13 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{Podczas pobytu w %townname% dostajesz list od poslanca. Prosi, bys go nie czytal, ale gdy tylko znika za rogiem, robisz to, lamac krolewska pieczec z wosku. Czytasz, ze %disowned%, wygnany szlachcic, nie jest juz na wygnaniu. Zamiast tego jego miejsce na rodowym tronie czeka, gdy tylko jego ciezko chory ojciec odejdzie.\n\nTrzymasz list w dloni, niepewny, co z nim zrobic. %disowned% od dawna jest czlonkiem %companyname%. Dla niektorych jest cos kuszacego w mezczyznie, ktory kiedys bywal w krolewskich komnatach, a teraz znalazl sie w nizinach kompanii najemnikow. Ale choc linia krwi moze wyschnac, rod nigdy naprawde nie umiera...}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{Podczas pobytu w %townname% dostajesz list od posłańca. Prosi, byś go nie czytał, ale gdy tylko znika za rogiem, robisz to, łamiąc królewską pieczęć z wosku. Czytasz, że %disowned%, wygnany szlachcic, nie jest już na wygnaniu. Zamiast tego jego miejsce na rodowym tronie czeka, gdy tylko jego ciężko chory ojciec odejdzie.\n\nTrzymasz list w dłoni, niepewny, co z nim zrobić. %disowned% od dawna jest członkiem %companyname%. Dla niektórych jest coś kuszącego w mężczyźnie, który kiedyś bywał w królewskich komnatach, a teraz znalazł się w nizinach kompanii najemników. Ale choć linia krwi może wyschnąć, ród nigdy naprawdę nie umiera...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Pokaze mu list.",
+					Text = "Pokażę mu list.",
 					function getResult( _event )
 					{
 						return "B";
@@ -24,7 +24,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 
 				},
 				{
-					Text = "Spale list.",
+					Text = "Spalę list.",
 					function getResult( _event )
 					{
 						return "E";
@@ -40,13 +40,13 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_82.png[/img]{Wzdychajac, swiadomy tego, co moze sie wydarzyc, decydujesz sie pokazac mu list. Czyta go przez chwile, potem podnosi wzrok.%SPEECH_ON%Wiem, ze to przeczytales.%SPEECH_OFF%Podaje ci list z powrotem.%SPEECH_ON%I wiem, ze rownie dobrze mogles go spalic. Ale tego nie zrobiles. To tylko potwierdza to, co juz wiem: %companyname% to teraz moja rodzina. Jesli chcesz, zebym zostal, zostane; jesli chcesz, zebym odszedl, odejde.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_82.png[/img]{Wzdychając, świadomy tego, co może się wydarzyć, decydujesz się pokazać mu list. Czyta go przez chwilę, potem podnosi wzrok.%SPEECH_ON%Wiem, że to przeczytałeś.%SPEECH_OFF%Podaje ci list z powrotem.%SPEECH_ON%I wiem, że równie dobrze mogłeś go spalić. Ale tego nie zrobiłeś. To tylko potwierdza to, co już wiem: %companyname% to teraz moja rodzina. Jeśli chcesz, żebym został, zostanę; jeśli chcesz, żebym odszedł, odejdę.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Mysle, ze powinienes zostac z nami.",
+					Text = "Myślę, że powinieneś zostać z nami.",
 					function getResult( _event )
 					{
 						return "C";
@@ -54,7 +54,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 
 				},
 				{
-					Text = "Powinienes wrocic do rodziny.",
+					Text = "Powinieneś wrócić do rodziny.",
 					function getResult( _event )
 					{
 						return "D";
@@ -70,13 +70,13 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_82.png[/img]{Bierzesz list z powrotem i przystawiasz do pobliskiej swiecy. Pali sie szybko, popiol strzepuje sie z palcow, gdy ogien wspina sie po papierze. %disowned% kiwa glowa.%SPEECH_ON%Ciesze sie, ze to zrobiles. Jesli moja ojczyzna mnie potrzebuje, wroce dopiero, gdy zakoncze prace z %companyname%. Do tego czasu masz moj miecz, moj pot i moja krew.%SPEECH_OFF%Usmiecha sie.%SPEECH_ON%Za odpowiednia cene, oczywiscie. Wciaz jestem najemnikiem.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_82.png[/img]{Bierzesz list z powrotem i przystawiasz do pobliskiej świecy. Pali się szybko, popiół strzepuje się z palców, gdy ogień wspina się po papierze. %disowned% kiwa głową.%SPEECH_ON%Cieszę się, że to zrobiłeś. Jeśli moja ojczyzna mnie potrzebuje, wrócę dopiero, gdy zakończę pracę z %companyname%. Do tego czasu masz mój miecz, mój pot i moją krew.%SPEECH_OFF%Uśmiecha się.%SPEECH_ON%Za odpowiednią cenę, oczywiście. Wciąż jestem najemnikiem.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Oczywiscie.",
+					Text = "Oczywiście.",
 					function getResult( _event )
 					{
 						return 0;
@@ -96,7 +96,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 					{
 						id = 13,
 						icon = background.getIcon(),
-						text = _event.m.Disowned.getName() + " jest teraz Regentem w nieobecnosci"
+						text = _event.m.Disowned.getName() + " jest teraz Regentem w nieobecności"
 					}
 				];
 				local resolve_boost = this.Math.rand(10, 15);
@@ -121,7 +121,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_defense_boost + "[/color] Obrony w Walce Wrecz"
+					text = _event.m.Disowned.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_defense_boost + "[/color] Obrony w Walce Wręcz"
 				});
 				this.List.push({
 					id = 16,
@@ -133,13 +133,13 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_74.png[/img]{Podajesz mu list z powrotem.%SPEECH_ON%Uwazam, ze czlowiek odsuniety od rodziny bardziej jej potrzebuje, gdy ta go wzywa, i na pewno potrzebuja cie bardzo. Twoj czas z %companyname% dobiegł konca.%SPEECH_OFF%Poczatkowo wygnany szlachcic wyglada na przybitego, ale potem zaczyna kiwac glowa, zgadzajac sie, ze rodzina go potrzebuje i nie powinien ich zostawiac. Zegna sie z toba i reszta kompanii, ale zanim odejdzie na dobre, przygotowal dla ciebie list.%SPEECH_ON%Dziekuje ci, kapitanie. Nie mysl, ze odszedlbym bez uznania, jak wazny byles w ocaleniu mojego zycia, bo wlasnie to zrobiles, czy zdajesz sobie z tego sprawe, czy nie.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_74.png[/img]{Podajesz mu list z powrotem.%SPEECH_ON%Uważam, że człowiek odsunięty od rodziny bardziej jej potrzebuje, gdy ta go wzywa, i na pewno potrzebują cię bardzo. Twój czas z %companyname% dobiegł końca.%SPEECH_OFF%Początkowo wygnany szlachcic wygląda na przybitego, ale potem zaczyna kiwać głową, zgadzając się, że rodzina go potrzebuje i nie powinien ich zostawiać. Żegna się z tobą i resztą kompanii, ale zanim odejdzie na dobre, przygotował dla ciebie list.%SPEECH_ON%Dziękuję ci, kapitanie. Nie myśl, że odszedłbym bez uznania, jak ważny byłeś w ocaleniu mojego życia, bo właśnie to zrobiłeś, czy zdajesz sobie z tego sprawę, czy nie.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Trzymaj sie, %disowned%.",
+					Text = "Trzymaj się, %disowned%.",
 					function getResult( _event )
 					{
 						return 0;
@@ -161,20 +161,20 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 				this.List.insert(0, {
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "Kompania zyskala slawe"
+					text = "Kompania zyskała sławę"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_98.png[/img]{Nie ma mowy, zebys pokazal to %disowned%. Natychmiast palisz list i wszystkie informacje o jego przyjeciu z powrotem do rodziny. W tym momencie pojawia sie za rogiem. Wyglada na lekko zdezorientowanego i pyta, czy cos jest nie tak. Krecisz glowa i pytasz, czy chce pomoc liczyc zapasy. %disowned% usmiecha sie.%SPEECH_ON%Oczywiscie. %companyname% nie moze robic tego, co robi, bez dobrego ekwipunku ani bez twojego dowodzenia, kapitanie.%SPEECH_OFF%Gdy masz do niego dolaczyc, widzisz poslańca z wczesniej ciagnacego cos ciezkiego. Zostawiasz %disowned% przy zadaniu i podchodzisz do mezczyzny, pytajac, co to takiego. Ciagnie ciezka skrzynie i ociera czolo, mowiac, ze to takze bylo przeznaczone dla wygnanego szlachcica. Otwierasz skrzynie kopniakiem i znajdujesz w niej bronie i zbroje, z ktorych czesc ma rodzinny herb. Dziekujesz poslancowi, odsylasz go, po czym w pospiechu odlamujesz herby i wrzucasz emblematy do rynsztoka, by szlachcic sam ich nie zobaczyl. Zaciekawiony, krzyczy z daleka, czy cos jest nie tak. Krecisz glowa.%SPEECH_ON%Nie, nic sie nie dzieje. Po prostu dostalismy nowy sprzet, to wszystko.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_98.png[/img]{Nie ma mowy, żebyś pokazał to %disowned%. Natychmiast palisz list i wszystkie informacje o jego przyjęciu z powrotem do rodziny. W tym momencie pojawia się za rogiem. Wygląda na lekko zdezorientowanego i pyta, czy coś jest nie tak. Kręcisz głową i pytasz, czy chce pomóc liczyć zapasy. %disowned% uśmiecha się.%SPEECH_ON%Oczywiście. %companyname% nie może robić tego, co robi, bez dobrego ekwipunku ani bez twojego dowodzenia, kapitanie.%SPEECH_OFF%Gdy masz do niego dołączyć, widzisz posłańca z wcześniej ciągnącego coś ciężkiego. Zostawiasz %disowned% przy zadaniu i podchodzisz do mężczyzny, pytając, co to takiego. Ciągnie ciężką skrzynię i ociera czoło, mówiąc, że to także było przeznaczone dla wygnanego szlachcica. Otwierasz skrzynię kopniakiem i znajdujesz w niej bronie i zbroje, z których część ma rodzinny herb. Dziękujesz posłańcowi, odsyłasz go, po czym w pośpiechu odłamujesz herby i wrzucasz emblematy do rynsztoka, by szlachcic sam ich nie zobaczył. Zaciekawiony, krzyczy z daleka, czy coś jest nie tak. Kręcisz głową.%SPEECH_ON%Nie, nic się nie dzieje. Po prostu dostaliśmy nowy sprzęt, to wszystko.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nie ma na co patrzec.",
+					Text = "Nie ma na co patrzeć.",
 					function getResult( _event )
 					{
 						return 0;

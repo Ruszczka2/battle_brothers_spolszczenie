@@ -8,14 +8,14 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 		this.m.Title = "Po drodze...";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
-			ID = "A",
-			Text = "[img]gfx/ui/events/event_43.png[/img]{Napotykasz mezczyzne otoczonego przez tlum wscieklych i pijanych chlopow. Otoczony mezczyzna nosi czarny kapelusz, ma kusze u boku i palec na spustie. Obok stoi stos z palem po srodku oraz liny, ktorymi kogos miano przykuc. Tlum krzyczy i wrzeszczy, a z ich piany i wrzaskow skladasz w calosc, co sie stalo: wioska wynajela lowce czarownic, a ten, jak tlumaczy jeden z awanturujacych sie chlopow, znalazl czarownice i uznal, ze wcale nie jest czarownica, po czym ja wypuscil. Chlop potyka sie, prawie placzac.%SPEECH_ON%I to nie w porzadku, to wcale nie w porzadku. Zbudowalismy ten stos i wszystko, zeby ogien ja dostal. To nie w porzadku, ale to naprawimy. Bo na pewno cos spalimy, prawda?%SPEECH_OFF%Tlum ryczy. Wyglada na to, ze ten rzekomy lowca czarownic popelnil jedna z najgorszych zbrodni: znudzil pospolstwo.}",
+			ID = "B",
+			Text = "[img]gfx/ui/events/event_43.png[/img]{Wychodzisz naprzód i wyjaśniasz zasady umowy, tłumacząc, że wioska wynajęła mężczyznę do zabicia czarownicy, a jeśli osoba, na którą go skierowali, nie była czarownicą, to nie może jej zabić. Gdyby mimo to to zrobił, działałby jedynie dla koron. Jeśli zdecydował się jej nie zabijać, a wioska zerwała umowę, to później byłby zmuszony robić to, czego chce każda wioska, by do takiej sytuacji nie doszło ponownie. Serią łagodnych wyjaśnień pokazujesz, że wioska ryzykuje opinię niewiarygodnej, a przykład, jaki daje, przyciągnie tylko szarlatanów i oszustów celujących w ich złoto, a nie w wykonanie zleconego zadania. Poza tym odmowa spalenia niewinnej osoby pokazuje siłę charakteru łowcy.\n\nGdy kończysz, tłum w większości się zgadza, ale ktoś krzyczy: \"spalić go mimo wszystko!\" i wszyscy znów wpadają w wściekłość. Kiedy się odwracają, widzą, że łowca czarownic zniknął, gdy prowadziłeś wywód. Chłopi zaczynają obwiniać się nawzajem, że go nie dopilnowali. Spory szybko przeradzają się w bijatykę, a ty odchodzisz. Gdy docierasz na skraj miasta, spotykasz mężczyznę dnia. Dziękuje ci garstką koron. Wydaje ci się to dziwne, że człowiek oddaje pieniądze, skoro mógł po prostu odejść. Podnosi czarny kapelusz i mówi, że nie zajmuje się łowieniem czarownic dla pieniędzy.",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Musimy interweniowac.",
+					Text = "Musimy interweniować.",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 50)
@@ -35,7 +35,7 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Witchhunter != null)
 				{
 					this.Options.push({
-						Text = "%witchhunter%, czy znasz tego mezczyzne?",
+						Text = "%witchhunter%, czy znasz tego mężczyznę?",
 						function getResult( _event )
 						{
 							return "D";
@@ -63,7 +63,7 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Co za dziwny czlowiek.",
+					Text = "Co za dziwny człowiek.",
 					function getResult( _event )
 					{
 						return 0;
@@ -84,13 +84,13 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_141.png[/img]{Wychodzisz naprzod, krzyczac i machajac rekami. Tlum powoli sie uspokaja i odwraca, by cie sluchac. Dobierajac ostroznie slowa, wyjasniasz, ze w uczciwych umowach jest porzadek, ze jesli ktos placi korony, by kogos wynajac, a potem odwraca sie od niego z powodu zmiany okolicznosci, to tworzy obraz wioski niewiarygodnej, z ktora nikt nie bedzie chcial robic interesow. Zanim konczysz wywod, ktos rzuca kamieniem tuz nad twoja glowa, a inny mezczyzna wpada, krzyczac, i wbija widly w piers lowcy czarownic. Wybucha totalny chaos, a ty i %companyname% odpieracie wscieklych chlopow i wynosicie sie stamtad tak szybko, jak to mozliwe.}",
+			Text = "[img]gfx/ui/events/event_141.png[/img]{Wychodzisz naprzód, krzycząc i machając rękami. Tłum powoli się uspokaja i odwraca, by cię słuchać. Dobierając ostrożnie słowa, wyjaśniasz, że w uczciwych umowach jest porządek, że jeśli ktoś płaci korony, by kogoś wynająć, a potem odwraca się od niego z powodu zmiany okoliczności, to tworzy obraz wioski niewiarygodnej, z którą nikt nie będzie chciał robić interesów. Zanim kończysz wywód, ktoś rzuca kamieniem tuż nad twoją głową, a inny mężczyzna wpada, krzycząc, i wbija widły w pierś łowcy czarownic. Wybucha totalny chaos, a ty i %companyname% odpieracie wściekłych chłopów i wynosicie się stamtąd tak szybko, jak to możliwe.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Cholerni chlopi.",
+					Text = "Cholerni chłopi.",
 					function getResult( _event )
 					{
 						return 0;
@@ -119,13 +119,13 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_141.png[/img]{%witchhunter% wychodzi naprzod. Mowi, ze mezczyzna w czarnym kapeluszu jest znanym oszustem w kregach lowcow czarownic.%SPEECH_ON%Szukamy go od dawna, bo jego klamstwa kalaja nasza profesje. Od dawna szukalem okazji, by zdobyc jego skalp.%SPEECH_OFF%Zanim zdazysz powiedziec slowo, %witchhunter% przechodzi przez tlum i po drugiej stronie chwyta widly jednego z chlopow, po czym natychmiast wbija je w noge falszywego lowcy. Mezczyzna zgina sie z krzykiem. Oszust podnosi kusze, ale %witchhunter% chwyta ja za lufe i odprowadza w gore, a strzal bezpiecznie leci w niebo. Wyrywa kusze, krzyczac, ze do niego nie nalezy, i oglasza tlumowi, ze to szarlatan. Rzuca go na ziemie, mowiac tlumowi, by zrobil, co zechce. Rzucaja sie na klamce, choc przez podekscytowane szeregi pospolstwa trudno dostrzec skale tortur. %witchhunter% wraca z kusza, obracajac ja w jedna i druga strone. To najwspanialsza bron, jaka widziales od dawna. Lowca czarownic wyjasnia.%SPEECH_ON%Nalezala do mistrza gildii w tym regionie. Wierzymy, ze ten glupiec go zamordowal, zabral mu ubrania i od tamtej pory udaje jego role. Jesli jego krzyki ci przeszkadzaja, kapitanie, pamietaj, ze spalil niezliczonych niewinnych i ukradl niezliczone korony zdesperowanym i zagubionym. Niech go diabli.%SPEECH_OFF%Patrzysz ponad mezczyzna i na tlum. Ledwo widzisz, jak wciagaja go na stos i jak unosi sie pierwszy dym.}",
+			Text = "[img]gfx/ui/events/event_141.png[/img]{%witchhunter% wychodzi naprzód. Mówi, że mężczyzna w czarnym kapeluszu jest znanym oszustem w kręgach łowców czarownic.%SPEECH_ON%Szukamy go od dawna, bo jego kłamstwa kalają naszą profesję. Od dawna szukałem okazji, by zdobyć jego skalp.%SPEECH_OFF%Zanim zdążysz powiedzieć słowo, %witchhunter% przechodzi przez tłum i po drugiej stronie chwyta widły jednego z chłopów, po czym natychmiast wbija je w nogę fałszywego łowcy. Mężczyzna zgina się z krzykiem. Oszust podnosi kuszę, ale %witchhunter% chwyta ją za lufę i odprowadza w górę, a strzał bezpiecznie leci w niebo. Wyrywa kuszę, krzycząc, że do niego nie należy, i ogłasza tłumowi, że to szarlatan. Rzuca go na ziemię, mówiąc tłumowi, by zrobił, co zechce. Rzucają się na kłamcę, choć przez podekscytowane szeregi pospólstwa trudno dostrzec skalę tortur. %witchhunter% wraca z kuszą, obracając ją w jedną i drugą stronę. To najwspanialsza broń, jaką widziałeś od dawna. Łowca czarownic wyjaśnia.%SPEECH_ON%Należała do mistrza gildii w tym regionie. Wierzymy, że ten głupiec go zamordował, zabrał mu ubrania i od tamtej pory udaje jego rolę. Jeśli jego krzyki ci przeszkadzają, kapitanie, pamiętaj, że spalił niezliczonych niewinnych i ukradł niezliczone korony zdesperowanym i zagubionym. Niech go diabli.%SPEECH_OFF%Patrzysz ponad mężczyzna i na tłum. Ledwo widzisz, jak wciągają go na stos i jak unosi się pierwszy dym.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Wrocmy na droge.",
+					Text = "Wróćmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;
@@ -149,13 +149,13 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_43.png[/img]{Chociaz pijany lincz to ulubiona rozrywka chlopow, wyczuwasz w powietrzu zagrozenie i przesuwasz %companyname% na skraj miasta. Nigdy nie wiesz, kiedy takie sprawy wymykaja sie spod kontroli i pospolstwo zaczyna atakowac wszystkich, ktorzy znajda sie w zasiegu.}",
+			Text = "[img]gfx/ui/events/event_43.png[/img]{Chociaż pijany lincz to ulubiona rozrywka chłopów, wyczuwasz w powietrzu zagrożenie i przesuwasz %companyname% na skraj miasta. Nigdy nie wiesz, kiedy takie sprawy wymykają się spod kontroli i pospólstwo zaczyna atakować wszystkich, którzy znajdą się w zasięgu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Wynosmy sie stad.",
+					Text = "Wynośmy się stąd.",
 					function getResult( _event )
 					{
 						return 0;

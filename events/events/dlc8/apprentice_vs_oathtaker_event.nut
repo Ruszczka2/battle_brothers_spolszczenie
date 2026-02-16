@@ -10,13 +10,13 @@ this.apprentice_vs_oathtaker_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{%apprentice% uczen siedzi obok ogniska, gdy %oathtaker% Swiętobiorca zaczyna go mierzyc wzrokiem. Uczen odwzajemnia spojrzenie, wyraznie zmieszany.%SPEECH_ON%O co chodzi?%SPEECH_OFF%Swiatobiorca szczerzy sie w usmiechu.%SPEECH_ON%Mlody Anselm, Pierwszy Swietobiorca, byl uczniem takim jak ty. Wedrowal po ziemiach, szukajac wiedzy i odnajdujac Ostateczna Sciezke. Nawet wygladasz jak on.%SPEECH_OFF%Uczen usmiecha sie serdecznie. Wyglada na to, ze ta wiez z niezyjacym Swietobiorca go osmielila. Ale wedlug ciebie czaszka Mlodego Anselma wcale nie wyglada jak %apprentice%. Nos jest za duzy, luk brwiowy zbyt pofalowany, a zeby Pierwszego Swietobiorcy sa nienaganne, podczas gdy %apprentice% wyglada, jakby czyscil je młotem. Ale moze %apprentice% bedzie wygladal bardziej odpowiednio, gdy sam stanie sie lśniaca czaszka otoczona opieka nieugietego kultu.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{%apprentice% uczeń siedzi obok ogniska, gdy %oathtaker% Świętobiorca zaczyna go mierzyć wzrokiem. Uczeń odwzajemnia spojrzenie, wyraźnie zmieszany.%SPEECH_ON%O co chodzi?%SPEECH_OFF%Świętobiorca szczerzy się w uśmiechu.%SPEECH_ON%Młody Anselm, Pierwszy Świętobiorca, był uczniem takim jak ty. Wędrował po ziemiach, szukając wiedzy i odnajdując Ostateczną Ścieżkę. Nawet wyglądasz jak on.%SPEECH_OFF%Uczeń uśmiecha się serdecznie. Wygląda na to, że ta więź z nieżyjącym Świętobiorcą go ośmieliła. Ale według ciebie czaszka Młodego Anselma wcale nie wygląda jak %apprentice%. Nos jest za duży, łuk brwiowy zbyt pofalowany, a zęby Pierwszego Świętobiorcy są nienaganne, podczas gdy %apprentice% wygląda, jakby czyścił je młotem. Ale może %apprentice% będzie wyglądał bardziej odpowiednio, gdy sam stanie się lśniącą czaszką otoczoną opieką nieugiętego kultu.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nie zebym chcial, zeby do tego doszlo.",
+					Text = "Nie żebym chciał, żeby do tego doszło.",
 					function getResult( _event )
 					{
 						return 0;
@@ -37,8 +37,8 @@ this.apprentice_vs_oathtaker_event <- this.inherit("scripts/events/event", {
 					text = _event.m.Apprentice.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolveBoost + "[/color] Determinacji"
 				});
 				_event.m.Apprentice.getFlags().add("learnedFromOathtaker");
-				_event.m.Apprentice.improveMood(1.0, "Uczyl sie od " + _event.m.Oathtaker.getName());
-				_event.m.Oathtaker.improveMood(0.5, "Nauczyl " + _event.m.Apprentice.getName() + " czegos");
+				_event.m.Apprentice.improveMood(1.0, "Uczył się od " + _event.m.Oathtaker.getName());
+				_event.m.Oathtaker.improveMood(0.5, "Nauczył " + _event.m.Apprentice.getName() + " czegoś");
 
 				if (_event.m.Apprentice.getMoodState() >= this.Const.MoodState.Neutral)
 				{

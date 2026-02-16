@@ -9,13 +9,13 @@ this.anatomist_white_nachzehrer_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% ostatnio niewiele pisze w swoich dziennikach. Gdy juz to robi, pioro tylko stuka w kartki, nie zapisujac niczego istotnego. Pytasz, co go tak trapi. Ponurym tonem odpowiada, ze jego glowna nadzieja na tych ziemiach to odnalezienie Bialego Nachzehrera, potwora wiekszego niz wszystkie inne. Mowisz mu, ze zabiliscie kilka nachow calkiem tepych, ale anatomista kreci glowa.%SPEECH_ON%Zgodnie z literatura, tego nachzehrera nie mozna powalic, bo urusl do takich rozmiarow, ze jego mieso zbielalo, a skore pokrywaja grube, zrogowaciale grzbiety, ktorych nie przebije zadna stal. Widziano go na tych ziemiach i liczylem, ze go znajde, ale wydaje sie, ze byc moze zostalem zwiedziony. Moze anatomisci, ktorzy opowiedzieli mi te historie, wrobili mnie w bezsensowne poszukiwania. Obawiam sie, rabusiu, ze zrobiono ze mnie glupca.%SPEECH_OFF%Mowisz mu, ze to stworzenie brzmi jak \"krol\" nachzehrerow i jesli tak, to byc moze juz nie wedruje, tylko uzywa malej armii slabszych nachzehrerow, by wykonywaly jego rozkazy. Anatomista usmiecha sie.%SPEECH_ON%To moze byc prawda! Oczywiscie potrzeba bylo przenikliwego oka pospolstwa, przywyklego do wpatrywania sie w naszych purpurowych suzerenow, by zwrocic na to moja zamglona uwage!%SPEECH_OFF%Zgadzajac sie jeszcze bardziej sam ze soba, dodajesz, ze moze \"Bialy Nachzehrer\" jest taki blady, bo rzadko widzi slonce. Anatomista smieje sie.%SPEECH_ON%Prosze, rabusiu, pierwsza uwaga w pelni wystarczyla.%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% ostatnio niewiele pisze w swoich dziennikach. Gdy już to robi, pióro tylko stuka w kartki, nie zapisując niczego istotnego. Pytasz, co go tak trapi. Ponurym tonem odpowiada, że jego główna nadzieja na tych ziemiach to odnalezienie Białego Nachzehrera, potwora większego niż wszystkie inne. Mówisz mu, że zabiliście kilka nachów całkiem tępych, ale anatomista kręci głową.%SPEECH_ON%Zgodnie z literaturą, tego nachzehrera nie można powalić, bo urósł do takich rozmiarów, że jego mięso zbielało, a skórę pokrywają grube, zrogowaciałe grzbiety, których nie przebije żadna stal. Widziano go na tych ziemiach i liczyłem, że go znajdę, ale wydaje się, że być może zostałem zwiedziony. Może anatomisci, którzy opowiedzieli mi te historie, wrobili mnie w bezsensowne poszukiwania. Obawiam się, rabusiu, że zrobiono ze mnie głupca.%SPEECH_OFF%Mówisz mu, że to stworzenie brzmi jak \"król\" nachzehrerów i jeśli tak, to być może już nie wędruje, tylko używa małej armii słabszych nachzehrerów, by wykonywały jego rozkazy. Anatomista uśmiecha się.%SPEECH_ON%To może być prawda! Oczywiście potrzeba było przenikliwego oka pospólstwa, przywykłego do wpatrywania się w naszych purpurowych suzerenów, by zwrócić na to moją zamgloną uwagę!%SPEECH_OFF%Zgadzając się jeszcze bardziej sam ze sobą, dodajesz, że może \"Biały Nachzehrer\" jest taki blady, bo rzadko widzi słońce. Anatomista śmieje się.%SPEECH_ON%Proszę, rabusiu, pierwsza uwaga w pełni wystarczyła.%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Niech twoj Bialy Nach nie skonczy sie dla ciebie siniakiem, krwawy tepak.",
+					Text = "Niech twój Biały Nach nie skończy się dla ciebie siniakiem, krwawy tępak.",
 					function getResult( _event )
 					{
 						return 0;
@@ -26,7 +26,7 @@ this.anatomist_white_nachzehrer_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Anatomist.getImagePath());
-				_event.m.Anatomist.improveMood(1.5, "Odzyskal wiare w istnienie bialego nachzehrera");
+				_event.m.Anatomist.improveMood(1.5, "Odzyskał wiarę w istnienie białego nachzehrera");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

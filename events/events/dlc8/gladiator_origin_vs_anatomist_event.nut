@@ -10,13 +10,13 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{Widzisz %anatomist% i %gladiator% siedzacych razem przy ognisku. Anatomista i gladiator zdaja sie kiepsko dobrani do rozmowy i po chwili ten drugi wstaje z wielka wsciekloscia.%SPEECH_ON%Wzmocnienia? Myslisz, ze biorę wzmocnienia? Ty glupcze, patyczaku, kwiatki zrywajacy, trupy goniacy glupcze! Moje miesnie sa z potu i krwi! Bez bolu nie ma zysku!%SPEECH_OFF%Gladiator kopie kupke popiolu na anatomiste i odchodzi. %anatomist% otrzepuje sie, po czym wyciaga plik notatek. Zauwaza, ze \"obiekt\" doswiadcza napadow goracej zlosci. Pytasz go, czy potajemnie cos robi gladiatorowi. %anatomist% zamyka notes z trzaskiem.%SPEECH_ON%Kapitanie! Nigdy!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{Widzisz %anatomist% i %gladiator% siedzących razem przy ognisku. Anatomista i gladiator zdają się kiepsko dobrani do rozmowy i po chwili ten drugi wstaje z wielką wściekłością.%SPEECH_ON%Wzmocnienia? Myślisz, że biorę wzmocnienia? Ty głupcze, patyczaku, kwiatki zrywający, trupy goniący głupcze! Moje mięśnie są z potu i krwi! Bez bólu nie ma zysku!%SPEECH_OFF%Gladiator kopie kupkę popiołu na anatomistę i odchodzi. %anatomist% otrzepuje się, po czym wyciąga plik notatek. Zauważa, że \"obiekt\" doświadcza napadów gorącej złości. Pytasz go, czy potajemnie coś robi gladiatorowi. %anatomist% zamyka notes z trzaskiem.%SPEECH_ON%Kapitanie! Nigdy!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Dziwnie krotka odpowiedz, %anatomist%...",
+					Text = "Dziwnie krótka odpowiedź, %anatomist%...",
 					function getResult( _event )
 					{
 						return 0;
@@ -42,7 +42,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Punkty Zycia"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Punkty Życia"
 				});
 				this.List.push({
 					id = 16,
@@ -52,7 +52,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Zmeczenia"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Zmęczenia"
 				});
 				this.List.push({
 					id = 16,
@@ -62,24 +62,24 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejetnosci Walki Wrecz"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejętności Walki Wręcz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_skill.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejetnosci Walki Dystansowej"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Umiejętności Walki Dystansowej"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Wrecz"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Wręcz"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/ranged_defense.png",
 					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Dystansowej"
 				});
-				_event.m.Gladiator.worsenMood(0.5, "Zostal oskarzony o sztuczne wzmocnienia");
+				_event.m.Gladiator.worsenMood(0.5, "Został oskarżony o sztuczne wzmocnienia");
 
 				if (_event.m.Gladiator.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -90,7 +90,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 					});
 				}
 
-				_event.m.Anatomist.improveMood(0.5, "Eksperymenty na " + _event.m.Gladiator.getName() + " przebiegaja pomyslnie");
+				_event.m.Anatomist.improveMood(0.5, "Eksperymenty na " + _event.m.Gladiator.getName() + " przebiegają pomyślnie");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

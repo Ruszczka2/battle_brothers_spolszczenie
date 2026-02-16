@@ -10,13 +10,13 @@ this.apprentice_vs_anatomist_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{Zastajesz %apprentice% ucznia pod skrzydlami %anatomist% anatomisty. To troche niepokojacy widok, bo przez chwile zastanawiasz sie, czy jajoglow nie planuje czegos niecnego. Ale %apprentice% jedynie sie od niego uczy, jak ma w zwyczaju robic z wiekszoscia w kompanii. Tym razem nie chodzi o kwestie bojowe, w ktorych anatomista ma przewage, a uczen nie, lecz o sposoby myslenia, zapamietywania i przypominania. Widzisz, jak %anatomist% puka sie w glowe.%SPEECH_ON%Pamietaj, nawet najslabszy atrament jest nieskonczenie silniejszy od najbardziej niezwyklego umyslu. Wszystko, co pamietasz, zapisuj, ale pamietaj tez to: twoj umysl przypomni sobie rzeczy, o ktorych myslisz, ze je zapomniales. Gdy nadejdzie chwila potrzeby, nie skupiaj sie na swoich myslach, lecz pozwol im wyplynac same, bo one same wyjda na swiatlo bez pomocy, ale gdy ich szukasz, schodza tylko glebiej i chca byc zapomniane.%SPEECH_OFF%Uczen przytakuje uwaznie i notuje. Dopoki te rozmowy nie wykraczaja poza rozcinanie zwierzat i podwazanie starych bogow, nie masz nic przeciwko.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{Zastajesz %apprentice% ucznia pod skrzydłami %anatomist% anatomisty. To trochę niepokojący widok, bo przez chwilę zastanawiasz się, czy jajogłów nie planuje czegoś niecnego. Ale %apprentice% jedynie się od niego uczy, jak ma w zwyczaju robić z większością w kompanii. Tym razem nie chodzi o kwestie bojowe, w których anatomista ma przewagę, a uczeń nie, lecz o sposoby myślenia, zapamiętywania i przypominania. Widzisz, jak %anatomist% puka się w głowę.%SPEECH_ON%Pamiętaj, nawet najsłabszy atrament jest nieskończenie silniejszy od najbardziej niezwykłego umysłu. Wszystko, co pamiętasz, zapisuj, ale pamiętaj też to: twój umysł przypomni sobie rzeczy, o których myślisz, że je zapomniałeś. Gdy nadejdzie chwila potrzeby, nie skupiaj się na swoich myślach, lecz pozwól im wypłynąć same, bo one same wyjdą na światło bez pomocy, ale gdy ich szukasz, schodzą tylko głębiej i chcą być zapomniane.%SPEECH_OFF%Uczeń przytakuje uważnie i notuje. Dopóki te rozmowy nie wykraczają poza rozcinanie zwierząt i podważanie starych bogów, nie masz nic przeciwko.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Tylko nie spedzajcie razem zbyt wiele czasu.",
+					Text = "Tylko nie spędzajcie razem zbyt wiele czasu.",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,12 +35,12 @@ this.apprentice_vs_anatomist_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.Apprentice.getName() + " zyskuje Doswiadczenie Treningowe"
+					text = _event.m.Apprentice.getName() + " zyskuje Doświadczenie Treningowe"
 				});
 				_event.m.Apprentice.getSkills().add(effect);
 				_event.m.Apprentice.getFlags().add("learnedFromAnatomist");
-				_event.m.Apprentice.improveMood(1.0, "Uczyl sie od " + _event.m.Anatomist.getName());
-				_event.m.Anatomist.improveMood(0.5, "Nauczyl " + _event.m.Apprentice.getName() + " czegos");
+				_event.m.Apprentice.improveMood(1.0, "Uczył się od " + _event.m.Anatomist.getName());
+				_event.m.Anatomist.improveMood(0.5, "Nauczył " + _event.m.Apprentice.getName() + " czegoś");
 
 				if (_event.m.Apprentice.getMoodState() >= this.Const.MoodState.Neutral)
 				{

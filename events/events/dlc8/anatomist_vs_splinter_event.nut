@@ -10,13 +10,13 @@ this.anatomist_vs_splinter_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 110.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{Zastajesz %anatomist% trzymajacego bosa stope %splinterbro%. Naturalnie pytasz, co robia. Anatomista prostuje sie z pinceta w dloni, a miedzy jej koncowkami tkwi ogromna drzazga. %splinterbro% porusza palcami, po czym wstaje. Chodzi w kolo, potem szybko staje na stopie, obraca sie i chodzi tam i z powrotem.%SPEECH_ON%Niech mnie. Myslalem, ze po prostu sobie rozwalilem stope czy cos, a tu sie okazuje, ze przez lata chodzilem z wielka drzazga w nodze! To wspaniale uczucie!%SPEECH_OFF%Zamiast wyrzucic drzazge, %anatomist% zamyka ja w drewnianym pudelku, gdzie toczy sie inne medyczne osobliwosci.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{Zastajesz %anatomist% trzymającego bosą stopę %splinterbro%. Naturalnie pytasz, co robią. Anatomista prostuje się z pęsetą w dłoni, a między jej końcówkami tkwi ogromna drzazga. %splinterbro% porusza palcami, po czym wstaje. Chodzi w koło, potem szybko staje na stopie, obraca się i chodzi tam i z powrotem.%SPEECH_ON%Niech mnie. Myślałem, że po prostu sobie rozwaliłem stopę czy coś, a tu się okazuje, że przez lata chodziłem z wielką drzazgą w nodze! To wspaniałe uczucie!%SPEECH_OFF%Zamiast wyrzucić drzazgę, %anatomist% zamyka ją w drewnianym pudełku, gdzie toczy się inne medyczne osobliwości.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Lepiej zebym nie widzial, jak uzywasz tego jako wykalaczki.",
+					Text = "Lepiej żebym nie widział, jak używasz tego jako wykałaczki.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,7 +33,7 @@ this.anatomist_vs_splinter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_defense.png",
-					text = _event.m.SplinterBro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Wrecz"
+					text = _event.m.SplinterBro.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Obrony w Walce Wręcz"
 				});
 			}
 

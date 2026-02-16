@@ -9,12 +9,12 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{Natrafiasz na mezczyzne w dziwnym stanie: z jednej strony ma na sobie ozdobna zbroje, jakby w sam raz dla czlowieka siedziacego na koniu gotowego do turniejowego starcia. Z drugiej strony lezy na ziemi, nogi tna na krzyz w pijackim oszolomieniu, rece rozlozone, jakby obejmowaly ramiona przyjaciol, lecz zamiast tego znajduja tylko blotny komfort.%SPEECH_ON%Blagam cie, wedrowcze, kup moja zbroje i moje bronie, a zostaw mi korony odpowiednie dla obu, abym mogl szukac odkupienia innym sposobem, bo sprawy wojenne nie sa juz bliskie mojej sciezce na tym swiecie, a -hic- wolalbym wykupic sobie droge do lask Mlodego Anselma niz zajmowac sie tym machaniem mieczem; niech starzy bogowie mnie poraza za przyznanie sie do tego, ale i tak sie przyznaje!%SPEECH_OFF%Wyglada na to, ze oferuje bron i zbroje za cene, jesli dobrze zrozumiales jego bekot, 9,000 koron.}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Natrafiasz na mężczyznę w dziwnym stanie: z jednej strony ma na sobie ozdobną zbroję, jakby w sam raz dla człowieka siedzącego na koniu gotowego do turniejowego starcia. Z drugiej strony leży na ziemi, nogi tną na krzyż w pijackim oszołomieniu, ręce rozłożone, jakby obejmowały ramiona przyjaciół, lecz zamiast tego znajdują tylko błotny komfort.%SPEECH_ON%Błagam cię, wędrowcze, kup moją zbroję i moje bronie, a zostaw mi korony odpowiednie dla obu, abym mógł szukać odkupienia innym sposobem, bo sprawy wojenne nie są już bliskie mojej ścieżce na tym świecie, a -hic- wolałbym wykupić sobie drogę do łask Młodego Anselma niż zajmować się tym machaniem mieczem; niech starzy bogowie mnie porażą za przyznanie się do tego, ale i tak się przyznaję!%SPEECH_OFF%Wygląda na to, że oferuje broń i zbroję za cenę, jeśli dobrze zrozumiałeś jego bełkot, 9,000 koron.}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Wezmiemy zbroje za 9,000 koron.",
+					Text = "Weźmiemy zbroję za 9,000 koron.",
 					function getResult( _event )
 					{
 						return "BuyArmor";
@@ -22,7 +22,7 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Nie jestesmy zainteresowani.",
+					Text = "Nie jesteśmy zainteresowani.",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,7 +35,7 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 				if (this.World.Assets.getOrigin().getID() == "scenario.paladins")
 				{
 					this.Options.push({
-						Text = "Mlody Anselm ma dla ciebie inne plany. Dolacz do nas!",
+						Text = "Młody Anselm ma dla ciebie inne plany. Dołącz do nas!",
 						function getResult( _event )
 						{
 							return "Oathtaker";
@@ -48,7 +48,7 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "BuyArmor",
-			Text = "[img]gfx/ui/events/event_180.png[/img]{Kucasz z sakiewka koron w dloni.%SPEECH_ON%Zdejmij to.%SPEECH_OFF%Mezczyzna kiwa glowa i zaczyna zrzucac zbroje, wije sie, od czasu do czasu pociaga nosem. Podaje wszystko, lacznie ze zbroja. Zlecasz, by wszystko zabrano i schowano do ekwipunku, po czym dajesz umowione pieniadze. Jego palce sciskaja i obmacuja sakiewke jak pajecze nogi oplatajace zdobycz, a pijane oczy biegaja z lewa na prawo. Wstaje i chwiejnie odchodzi. Masz wrazenie, ze nie znajdzie odkupienia, ktorego szuka, za te pieniadze. %randombrother% kladzie ci dlon na ramieniu.%SPEECH_ON%Nie rozpamietuj go, kapitanie. Sa na swiecie tacy ludzie, o ktorych nie chcesz byc ostatnim, kto o nich zapomnial, rozumiesz?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_180.png[/img]{Kucasz z sakiewką koron w dłoni.%SPEECH_ON%Zdejmij to.%SPEECH_OFF%Mężczyzna kiwa głową i zaczyna zrzucać zbroję, wije się, od czasu do czasu pociąga nosem. Podaje wszystko, łącznie ze zbroją. Zlecasz, by wszystko zabrano i schowano do ekwipunku, po czym dajesz umówione pieniądze. Jego palce ściskają i obmacują sakiewkę jak pajęcze nogi oplatające zdobycz, a pijane oczy biegają z lewa na prawo. Wstaje i chwiejnie odchodzi. Masz wrażenie, że nie znajdzie odkupienia, którego szuka, za te pieniądze. %randombrother% kładzie ci dłoń na ramieniu.%SPEECH_ON%Nie rozpamiętuj go, kapitanie. Są na świecie tacy ludzie, o których nie chcesz być ostatnim, kto o nich zapomniał, rozumiesz?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -108,13 +108,14 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Oathtaker",
-			Text = "[img]gfx/ui/events/event_183.png[/img]{Zamiast podac dlon, sam podajesz dlon.%SPEECH_ON%Panie, Mlody Anselm dobrze wiedzial, ze nie da sie dochowac zadnego slubu na zawsze. Zachwianie to zycie, a zycie to zachwianie. Czy myslisz, ze bycie tutaj w blocie to blad? Czy sadzisz, ze twoje porazki da sie naprawic pieniedzmi?%SPEECH_OFF%Mezczyzna podnosi wzrok. Pyta, czy ty tez znasz Mlodego Anselma. Wciaz nie wzial twojej reki, wiec chwytasz jego i stawiasz go na nogi.%SPEECH_ON%Swietobiorco, jak myslisz, kto mnie przyslal?%SPEECH_OFF%Mezczyzna chwieje sie przez chwile, patrzac na ciebie z niedowierzaniem. Potem szeroko sie usmiecha i mocno cie obejmuje, obejmujac ciebie i kompanie naraz. Gdziekolwiek na swiecie jest Swietobiorca, nie jest sam - to bylo pierwsze przeslanie Mlodego Anselma.}",
+			Text = "[img]gfx/ui/events/event_183.png[/img]{Zamiast podać dłoń, sam podajesz dłoń.%SPEECH_ON%Panie, Młody Anselm dobrze wiedział, że nie da się dochować żadnego ślubu na zawsze. Zachwianie to życie, a życie to zachwianie. Czy myślisz, że bycie tutaj w błocie to błąd? Czy sądzisz, że twoje porażki da się naprawić pieniędzmi?%SPEECH_OFF%Mężczyzna podnosi wzrok. Pyta, czy ty też znasz Młodego Anselma. Wciąż nie wziął twojej ręki, więc chwytasz jego i stawiasz go na nogi.%SPEECH_ON%Świętobiorco, jak myślisz, kto mnie przysłał?%SPEECH_OFF%Mężczyzna chwieje się przez chwilę, patrząc na ciebie z niedowierzaniem. Potem szeroko się uśmiecha i mocno cię obejmuje, obejmując ciebie i kompanię naraz. Gdziekolwiek na świecie jest Świętobiorca, nie jest sam - to było pierwsze przesłanie Młodego Anselma.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Witaj na pokladzie!",
+				{
+					Text = "Witaj na pokładzie!",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -133,8 +134,8 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"paladin_background"
 				]);
-				_event.m.Dude.setTitle("Lamacz Slubow");
-				_event.m.Dude.getBackground().m.RawDescription = "Jak wielu ludzi, %name% znaleziono w nedzy. Ale na ustach, brud w uszach, mocz i kal, przynajmniej gdzies na sobie. Lecz w sercu byl Swietobiorca, a z opatrznosci Mlodego Anselma na pewno nie byly to zwykle okolicznosci, ktore przywrocily go do wiary. Oczywiscie wciaz bedzie laczyl piwo z wiara, ale od czasu do czasu trzeba pozwolic czlowiekowi na jego wady, zwlaszcza gdy dzieli zainteresowanie zabijaniem Slubodawcow.";
+				_event.m.Dude.setTitle("Łamacz Ślubów");
+				_event.m.Dude.getBackground().m.RawDescription = "Jak wielu ludzi, %name% znaleziono w nędzy. Ale na ustach, brud w uszach, mocz i kał, przynajmniej gdzieś na sobie. Lecz w sercu był Świętobiorca, a z opatrzności Młodego Anselma na pewno nie były to zwykłe okoliczności, które przywróciły go do wiary. Oczywiście wciąż będzie łączył piwo z wiarą, ale od czasu do czasu trzeba pozwolić człowiekowi na jego wady, zwłaszcza gdy dzieli zainteresowanie zabijaniem Ślubodawców.";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.m.PerkPoints = 0;
 				_event.m.Dude.m.LevelUps = 0;

@@ -9,7 +9,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Natrafiasz na grupe dzieciakow siedzacych w domku na drzewie. Z oczodolow wygladaja spojrzenia, a wokol drewnianego bastionu widzisz przygotowane proce. Gdy oceniasz fort, podciagaja drabine linowa i kaza ci spadac. Ciekawy, zastanawiasz sie, co takiego wartosciowego moga miec, skoro tak przesadnie reaguja na grupe mezczyzn, ktora niemal na pewno by ich zniszczyla.\n\nPoniewaz dzieci latwo uginaja sie pod presja, pytasz, czy cos ukrywaja. Jeden wykonuje gest onanizowania i kaze ci spadac, a inny wali go w ramie i kaze mu sie zamknac. To nie sa odpowiedzi dzieciakow chowajacych slodycze czy ciastka. Na pewno maja tam cos cennego.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Natrafiasz na grupę dzieciaków siedzących w domku na drzewie. Z oczodołów wyglądają spojrzenia, a wokół drewnianego bastionu widzisz przygotowane proce. Gdy oceniasz fort, podciągają drabinę linową i każą ci spadać. Ciekawy, zastanawiasz się, co takiego wartościowego mogą mieć, skoro tak przesadnie reagują na grupę mężczyzn, która niemal na pewno by ich zniszczyła.\n\nPonieważ dzieci łatwo uginają się pod presją, pytasz, czy coś ukrywają. Jeden wykonuje gest onanizowania i każe ci spadać, a inny wali go w ramię i każe mu się zamknąć. To nie są odpowiedzi dzieciaków chowających słodycze czy ciastka. Na pewno mają tam coś cennego.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -43,7 +43,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				if (this.World.Assets.getOrigin().getID() == "scenario.paladins")
 				{
 					this.Options.push({
-						Text = "Swietobiorcy!",
+						Text = "Świętobiorcy!",
 						function getResult( _event )
 						{
 							return "D";
@@ -56,7 +56,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Rozkazujesz %companyname% szturmowac fort. Nie mogac wspiac sie na drzewo pod gradem kamieni i proc, kazesz ludziom zbudowac drabiny i przerzucic liny. Dzieci krzycza i zrzucaja kije i kamienie, sprawiajac bol, ktorego nie da sie zignorowac, ale nie tak wielki jak ich obelgi, okropne slowa w rodzaju ptasich obserwatorow i swinskich kutasow, te male gnojki. Kilku udaje sie przecinac liny, gdy ludzie sie wspinaja, co prowadzi do kolejnych ran. Ale w koncu najemnicy wyganiaja dzieci, zrzucajac je z drzewa z wielkim zapalem. Nie jestes zaskoczony, twoja intuicja byla calkowicie trafna: dzieci schowaly kilka sztuk uzbrojenia i gromadzily je w forcie. Zabierasz rzeczy i kazesz spalic fort oraz drzewo, na ktorym stoi.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Rozkazujesz %companyname% szturmować fort. Nie mogąc wspiąć się na drzewo pod gradem kamieni i proc, każesz ludziom zbudować drabiny i przerzucić liny. Dzieci krzyczą i zrzucają kije i kamienie, sprawiając ból, którego nie da się zignorować, ale nie tak wielki jak ich obelgi, okropne słowa w rodzaju ptasich obserwatorów i świńskich kutasów, te małe gnojki. Kilku udaje się przecinać liny, gdy ludzie się wspinają, co prowadzi do kolejnych ran. Ale w końcu najemnicy wyganiają dzieci, zrzucając je z drzewa z wielkim zapałem. Nie jesteś zaskoczony, twoja intuicja była całkowicie trafna: dzieci schowały kilka sztuk uzbrojenia i gromadziły je w forcie. Zabierasz rzeczy i każesz spalić fort oraz drzewo, na którym stoi.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -122,13 +122,13 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{Wskazujesz dwoma palcami i rozkazujesz ludziom szturmowac fort na drzewie. Dzieci odpowiadaja procami i kamieniami. Udajac, ze kamienie nie bola jak diabli, kazesz dzieciakom sie poddac. W odpowiedzi nazywaja cie nieudolnym glupcem i bezmyslnym intrygantem. Te slowa bola prawie tak bardzo jak kamienie.\n\nNagle fort dostaje posilki, bo z galezi sasiedniego drzewa do walki dolacza kolejne dzieci, te dranie wdzieraja sie jak korsarze na statek. Caly szturm idzie do piekla w wielu koszach, a kilku ludzi narzeka, ze to zbyt irytujace przedsiewziecie, by je kontynuowac. Zastanawiasz sie, czy nie chodzi im tylko o dume. Wzdychasz i rozkazujesz przerwac szturm. Dzieci smieja sie i szydza z ciebie, ale tak to jest.%SPEECH_ON%Pewnie i tak nic tam nie mieli. Nie warto zachodu.%SPEECH_OFF%Mowi jeden z ludzi. Nie zgadzasz sie, ale nie ma sensu nad tym rozpamietywac. Dzieci zbieraja sie w kurzy chor i wydaja gdaczace dzwieki, gdy odchodzicie.}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{Wskazujesz dwoma palcami i rozkazujesz ludziom szturmować fort na drzewie. Dzieci odpowiadają procami i kamieniami. Udając, że kamienie nie bolą jak diabli, każesz dzieciakom się poddać. W odpowiedzi nazywają cię nieudolnym głupcem i bezmyślnym intrygantem. Te słowa bolą prawie tak bardzo jak kamienie.\n\nNagle fort dostaje posiłki, bo z gałęzi sąsiedniego drzewa do walki dołączają kolejne dzieci, te dranie wdzierają się jak korsarze na statek. Cały szturm idzie do piekła w wielu koszach, a kilku ludzi narzeka, że to zbyt irytujące przedsięwzięcie, by je kontynuować. Zastanawiasz się, czy nie chodzi im tylko o dumę. Wzdychasz i rozkazujesz przerwać szturm. Dzieci śmieją się i szydzą z ciebie, ale tak to jest.%SPEECH_ON%Pewnie i tak nic tam nie mieli. Nie warto zachodu.%SPEECH_OFF%Mówi jeden z ludzi. Nie zgadzasz się, ale nie ma sensu nad tym rozpamiętywać. Dzieci zbierają się w kurzy chór i wydają gdaczące dźwięki, gdy odchodzicie.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Moglo pojsc lepiej.",
+					Text = "Mogło pójść lepiej.",
 					function getResult( _event )
 					{
 						return 0;
@@ -169,13 +169,13 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_183.png[/img]{Bierzesz czaszke Anselma i unosisz ja. Donosnym glosem opowiadasz o probach i triumfach Mlodego Anselma, pierwotnego Swietobiorcy. Dzieci sa zachwycone, spogladaja na siebie, gdy raczysz je opowiesciami o odwadze i honorze. W koncu dzieci wyciagaja dosc wystawna bron.%SPEECH_ON%Znalezlismy to w stawie.%SPEECH_OFF%Inne dziecko popycha drugie.%SPEECH_ON%Nie, to bylo w kamieniu! Pamietasz, to ja to wyciagnalem!%SPEECH_OFF%Dzieci sprzeczaja sie przez chwile, ale w koncu mala dziewczynka bierze bron i wyrzuca ja przez okno fortu na drzewie. Ostrze wbija sie w ziemie, a stal drzy, gdy wygina sie wte i wewte. Dziewczynka prycha.%SPEECH_ON%Moze lepiej, zeby ktos inny to wzial, bo oni tylko sie o to kloca!%SPEECH_OFF%Chwytasz rekojesc miecza, a jego stalowy spiew cichnie. Wyciagasz go z ziemi i dziekujesz dzieciom za ich wklad w misje Swietobiorcow. Dzieci spogladaja na siebie. Jedno pyta drugie.%SPEECH_ON%Czy mamy teraz jakis cel?%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_183.png[/img]{Bierzesz czaszkę Anselma i unosisz ją. Donośnym głosem opowiadasz o próbach i triumfach Młodego Anselma, pierwotnego Świętobiorcy. Dzieci są zachwycone, spoglądają na siebie, gdy raczysz je opowieściami o odwadze i honorze. W końcu dzieci wyciągają dość wystawną broń.%SPEECH_ON%Znaleźliśmy to w stawie.%SPEECH_OFF%Inne dziecko popycha drugie.%SPEECH_ON%Nie, to było w kamieniu! Pamiętasz, to ja to wyciągnąłem!%SPEECH_OFF%Dzieci sprzeczają się przez chwilę, ale w końcu mała dziewczynka bierze broń i wyrzuca ją przez okno fortu na drzewie. Ostrze wbija się w ziemię, a stal drży, gdy wygina się wte i wewte. Dziewczynka prycha.%SPEECH_ON%Może lepiej, żeby ktoś inny to wziął, bo oni tylko się o to kłócą!%SPEECH_OFF%Chwytasz rękojeść miecza, a jego stalowy śpiew cichnie. Wyciągasz go z ziemi i dziękujesz dzieciom za ich wkład w misję Świętobiorców. Dzieci spoglądają na siebie. Jedno pyta drugie.%SPEECH_ON%Czy mamy teraz jakiś cel?%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Wracajmy na droge.",
+					Text = "Wracajmy na drogę.",
 					function getResult( _event )
 					{
 						return 0;

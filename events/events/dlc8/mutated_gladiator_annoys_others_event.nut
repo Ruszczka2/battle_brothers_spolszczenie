@@ -9,7 +9,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 		this.m.Cooldown = 65.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{Odkad %gladiator% gladiator wypil jedno z dziwactw anatomistow, wojownik areny nie przestaje sie prezyc. Wielu zaczyna sie irytowac opalonym, lsniacym, przesadnie umiesnionym mezczyzna, ktory domaga sie, by inni najemnicy stawali z nim jeden na jednego w nagich zapasach. Gdy nie zabiega o takie przepychanki, robi cwiczenia, wykrzykujac miedzy kazda seria jakby byl w zacietej bitwie. Oby ta faza jego zycia szybko sie skonczyla.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{Odkąd %gladiator% gladiator wypił jedno z dziwactw anatomistów, wojownik areny nie przestaje się prężyć. Wielu zaczyna się irytować opalonym, lśniącym, przesadnie umięśnionym mężczyzną, który domaga się, by inni najemnicy stawali z nim jeden na jednego w nagich zapasach. Gdy nie zabiega o takie przepychanki, robi ćwiczenia, wykrzykując między każdą serią jakby był w zaciętej bitwie. Oby ta faza jego życia szybko się skończyła.}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -35,7 +35,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/health.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Punktow Zycia"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Punktów Życia"
 				});
 				this.List.push({
 					id = 16,
@@ -45,14 +45,14 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Zmeczenia"
+					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Zmęczenia"
 				});
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
 					text = _event.m.Gladiator.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] Inicjatywy"
 				});
-				_event.m.Gladiator.improveMood(0.5, "Czuje sie lepiej niz kiedykolwiek");
+				_event.m.Gladiator.improveMood(0.5, "Czuje się lepiej niż kiedykolwiek");
 
 				if (_event.m.Gladiator.getMoodState() > this.Const.MoodState.Neutral)
 				{

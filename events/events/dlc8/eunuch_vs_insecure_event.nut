@@ -10,13 +10,13 @@ this.eunuch_vs_insecure_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%eunuch% eunuch i %insecure%, raczej oczywiscie niepewny siebie najemnik, siedza i rozmawiaja. Eunuch kreci glowa.%SPEECH_ON%Twoja niesmialosc nie ma dla mnie sensu, %insecure%. Spójrz na mnie. Nie mam nawet jedynego powodu, by zyc jak mezczyzna. Gdy wiatr wieje w moje spodnie, czuje tylko material na wewnetrznej stronie uda. Masz pojecie, jak okropnie to dziwnie jest? A widzisz, zebym narzekal? Nie. Gdy polowa kompanii idzie do burdelu i gniecie dziwke, widzisz mnie siedzacego w kacie i placzacego? Oczywiscie, ze nie!%SPEECH_OFF%%insecure% przytakuje.%SPEECH_ON%Wiesz co, ty bezjajeczny skurczybyku, masz racje. Skoro ty mozesz uderzac w powietrze i byc z tego zadowolony, to ja moge nie byc tak przestraszony i maly.%SPEECH_OFF%Niepewny najemnik wstaje i odchodzi. %eunuch% zaciska usta.%SPEECH_ON%Uderzac w powietrze? Czy ten glupi dureń powiedzial, ze uderzam w powietrze? Hej, hej! Uderze jego matke!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%eunuch% eunuch i %insecure%, raczej oczywiście niepewny siebie najemnik, siedzą i rozmawiają. Eunuch kręci głową.%SPEECH_ON%Twoja nieśmiałość nie ma dla mnie sensu, %insecure%. Spójrz na mnie. Nie mam nawet jedynego powodu, by żyć jak mężczyzna. Gdy wiatr wieje w moje spodnie, czuję tylko materiał na wewnętrznej stronie uda. Masz pojęcie, jak okropnie to dziwnie jest? A widzisz, żebym narzekał? Nie. Gdy połowa kompanii idzie do burdelu i gniecie dziwkę, widzisz mnie siedzącego w kącie i płaczącego? Oczywiście, że nie!%SPEECH_OFF%%insecure% przytakuje.%SPEECH_ON%Wiesz co, ty bezjajeczny skurczybyku, masz rację. Skoro ty możesz uderzać w powietrze i być z tego zadowolony, to ja mogę nie być tak przestraszony i mały.%SPEECH_OFF%Niepewny najemnik wstaje i odchodzi. %eunuch% zaciska usta.%SPEECH_ON%Uderzać w powietrze? Czy ten głupi dureń powiedział, że uderzam w powietrze? Hej, hej! Uderzę jego matkę!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Nie pozwol, by jego niepewnosc na ciebie przeszla, %eunuch%.",
+					Text = "Nie pozwól, by jego niepewność na ciebie przeszła, %eunuch%.",
 					function getResult( _event )
 					{
 						return 0;
@@ -33,7 +33,7 @@ this.eunuch_vs_insecure_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/traits/trait_icon_03.png",
-						text = _event.m.Insecure.getName() + " nie jest juz Niepewny siebie"
+						text = _event.m.Insecure.getName() + " nie jest już Niepewny siebie"
 					}
 				];
 				_event.m.Eunuch.worsenMood(1.0, "Okazano mu brak szacunku");

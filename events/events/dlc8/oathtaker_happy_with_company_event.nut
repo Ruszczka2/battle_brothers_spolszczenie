@@ -9,13 +9,13 @@ this.oathtaker_happy_with_company_event <- this.inherit("scripts/events/event", 
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% Swietobiorca siada z toba przy ognisku. Kiwa glowa.%SPEECH_ON%Z szacunkiem, kapitanie, moge powiedziec, ze duzo wymagac od czlowieka, by byl naprawde dobry. Gdy cie poznalem, nie sadzilem, ze masz zadatki do takiego zadania. Myslalem, ze czolgajaca sie ciemnosc tego swiata cie wysuszy, zetrze jak piasek o kamien. A jednak jestes. Niezlomny. Trzymasz sie Slubow, jeden po drugim. Dobra robota. Mlody Anselm bylby dumny.%SPEECH_OFF%Dziekujesz Swietobiorcy za dobre slowa.}",
+			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% Świętobiorca siada z tobą przy ognisku. Kiwa głową.%SPEECH_ON%Z szacunkiem, kapitanie, mogę powiedzieć, że dużo wymagać od człowieka, by był naprawdę dobry. Gdy cię poznałem, nie sądziłem, że masz zadatki do takiego zadania. Myślałem, że czołgająca się ciemność tego świata cię wysuszy, zetrze jak piasek o kamień. A jednak jesteś. Niezłomny. Trzymasz się Ślubów, jeden po drugim. Dobra robota. Młody Anselm byłby dumny.%SPEECH_OFF%Dziękujesz Świętobiorcy za dobre słowa.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Milo, ze ktos to docenia.",
+					Text = "Miło, że ktoś to docenia.",
 					function getResult( _event )
 					{
 						return 0;
@@ -32,7 +32,7 @@ this.oathtaker_happy_with_company_event <- this.inherit("scripts/events/event", 
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Oathtaker.getName() + " zyskuje [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] Determinacji"
 				});
-				_event.m.Oathtaker.improveMood(1.0, "Cieszy sie z moralnego kompasu kompani");
+				_event.m.Oathtaker.improveMood(1.0, "Cieszy się z moralnego kompasu kompanii");
 
 				if (_event.m.Oathtaker.getMoodState() > this.Const.MoodState.Neutral)
 				{

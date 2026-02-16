@@ -17,7 +17,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstajac, %monk% mnich wznosi prosbe do starych bogow. Jedna dlon spoczywa na piersi, druga wznosi sie, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni bysmy sie obawiac, lecz ognia, ktory je stworzyl, bo to plomien bogowie nam dali, bysmy mogli przenosic dzien w noc, czynic nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzycza: \"hear hear!\"}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstając, %monk% mnich wznosi prośbę do starych bogów. Jedna dłoń spoczywa na piersi, druga wznosi się, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni byśmy się obawiać, lecz ognia, który je stworzył, bo to płomień bogowie nam dali, byśmy mogli przenosić dzień w noc, czynić nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzyczą: \"hear hear!\"}",
 			Banner = "",
 			Characters = [],
 			Options = [],
@@ -38,7 +38,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Cultist != null)
 				{
 					this.Options.push({
-						Text = "%cultist% kultysta znowu cos mamrocze.",
+						Text = "%cultist% kultysta znowu coś mamrocze.",
 						function getResult( _event )
 						{
 							return "C";
@@ -50,7 +50,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Monk != null)
 				{
 					this.Options.push({
-						Text = "Nasz mnich %monk% chce odpowiedziec.",
+						Text = "Nasz mnich %monk% chce odpowiedzieć.",
 						function getResult( _event )
 						{
 							return "D";
@@ -62,7 +62,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Mercenary != null)
 				{
 					this.Options.push({
-						Text = "Czemu wszyscy patrza na najwiekszego najemnika?",
+						Text = "Czemu wszyscy patrzą na największego najemnika?",
 						function getResult( _event )
 						{
 							return "E";
@@ -74,7 +74,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Swordmaster != null)
 				{
 					this.Options.push({
-						Text = "%swordmaster% mistrz miecza ma cos do powiedzenia.",
+						Text = "%swordmaster% mistrz miecza ma coś do powiedzenia.",
 						function getResult( _event )
 						{
 							return "F";
@@ -86,7 +86,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Minstrel != null)
 				{
 					this.Options.push({
-						Text = "Oczywiscie, %minstrel% minstrel jest gotow gadac.",
+						Text = "Oczywiście, %minstrel% minstrel jest gotów gadać.",
 						function getResult( _event )
 						{
 							return "G";
@@ -98,7 +98,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Killer != null && this.Options.len() < 6)
 				{
 					this.Options.push({
-						Text = "Co to za halas?",
+						Text = "Co to za hałas?",
 						function getResult( _event )
 						{
 							return "H";
@@ -111,12 +111,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% anatomista podnosi wzrok znad ogniska, a jego twarz faluje cieniami, gdy plomienie rosna i opadaja.%SPEECH_ON%Nasze cienie to tylko ciecia na swiecie, ktore rania i goja wszystko w jednym kroku czerni, rozcinajac ziemie nasza obecnoscia i tym samym zacienionym bytem w tak przelotny sposob, ze to nie moze byc niczym innym jak zapowiedzia naszego pobytu tutaj. Ale czy cien mysli o rozcinaniu ciebie? Czy chce uwolnic innych, podobnych do siebie? Na pewno nie jest sam. Na pewno nasze wnetrza maja swoje cienie. Czy rzucaja wlasne sztuczki na nasze wewnetrzne sciany? A kiedy spimy, czy te rzeczy sa w nas, czy uciekaja na zewnatrz i wedruja po swiecie? Czy sa straznikami naszych umyslow, opuszczajac nas nocami i zostawiajac na groze sennych krain, ktore przeciez istnieja, gdy czuwamy? Co lepiej destyluje prawde porannego swiatla niz nasz cien rzucony na ziemie i ulotne wspomnienia tego, co powrocil odstraszyc?%SPEECH_OFF%Jeden z najemnikow wpatruje sie w niego.%SPEECH_ON%Co?%SPEECH_OFF%Reszta najemnikow prycha.%SPEECH_ON%Hej stary, my tylko chcemy robic fiuty i rury i inne bzdury. Patrz na to, jestem cieniem %anatomist%. Blah blah blah blah!%SPEECH_OFF%Mezczyzna udaje usta otwierajace sie i zamykajace w kolko, a kompania wybucha smiechem.}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist% anatomista podnosi wzrok znad ogniska, a jego twarz faluje cieniami, gdy płomienie rosną i opadają.%SPEECH_ON%Nasze cienie to tylko cięcia na świecie, które ranią i goją wszystko w jednym kroku czerni, rozcinając ziemię naszą obecnością i tym samym zacienionym bytem w tak przelotny sposób, że to nie może być niczym innym jak zapowiedzią naszego pobytu tutaj. Ale czy cień myśli o rozcinaniu ciebie? Czy chce uwolnić innych, podobnych do siebie? Na pewno nie jest sam. Na pewno nasze wnętrza mają swoje cienie. Czy rzucają własne sztuczki na nasze wewnętrzne ściany? A kiedy śpimy, czy te rzeczy są w nas, czy uciekają na zewnątrz i wędrują po świecie? Czy są strażnikami naszych umysłów, opuszczając nas nocami i zostawiając na grozę sennych krain, które przecież istnieją, gdy czuwamy? Co lepiej destyluje prawdę porannego światła niż nasz cień rzucony na ziemię i ulotne wspomnienia tego, co powrócił odstraszyć?%SPEECH_OFF%Jeden z najemników wpatruje się w niego.%SPEECH_ON%Co?%SPEECH_OFF%Reszta najemników prycha.%SPEECH_ON%Hej stary, my tylko chcemy robić fiuty i rury i inne bzdury. Patrz na to, jestem cieniem %anatomist%. Blah blah blah blah!%SPEECH_OFF%Mężczyzna udaje usta otwierające się i zamykające w kółko, a kompania wybucha śmiechem.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Przynajmniej anatomista to wytrzymal.",
+					Text = "Przynajmniej anatomista to wytrzymał.",
 					function getResult( _event )
 					{
 						return 0;
@@ -133,7 +133,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() == _event.m.Anatomist.getID())
 					{
-						bro.improveMood(0.75, "Czul sie intelektualnie lepszy od innych");
+						bro.improveMood(0.75, "Czuł się intelektualnie lepszy od innych");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -146,7 +146,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "Byl rozbawiony");
+						bro.improveMood(1.0, "Był rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -163,12 +163,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_03.png[/img]{%cultist% kultysta nachyla sie ku ogniowi, jego twarz niemal dotyka plomieni. Ludzie spogladaja na niego, gdy jego oczy sie rozszerzaja, wilgoc wysycha i odchodzi, az na bieli puchna krwawe zylki. Odchyla sie.%SPEECH_ON%Cienie sa tylko ambasadorami wiekszej ciemnosci.%SPEECH_OFF%Ognisko trzaska, a cien mezczyzny rozkwita na scianie klasztoru i przez moment kompania widzi w tej czerni cos innego, cos pokreconego i pochylonego, byt zupelnie niezalezny od ksztaltu %cultist%. Gdy ogien przygasa, cien rwie sie na kawalki i oddala w wieksza noc, a zostaje tylko cien kultysty, migoczacy niepewnie na scianach klasztoru.}",
+			Text = "[img]gfx/ui/events/event_03.png[/img]{%cultist% kultysta nachyla się ku ogniowi, jego twarz niemal dotyka płomieni. Ludzie spoglądają na niego, gdy jego oczy się rozszerzają, wilgoć wysycha i odchodzi, aż na bieli puchną krwawe żyłki. Odchyla się.%SPEECH_ON%Cienie są tylko ambasadorami większej ciemności.%SPEECH_OFF%Ognisko trzaska, a cień mężczyzny rozkwita na ścianie klasztoru i przez moment kompania widzi w tej czerni coś innego, coś pokręconego i pochylonego, byt zupełnie niezależny od kształtu %cultist%. Gdy ogień przygasa, cień rwie się na kawałki i oddala w większą noc, a zostaje tylko cień kultysty, migoczący niepewnie na ścianach klasztoru.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Dziwne cienie na dziwna noc.",
+					Text = "Dziwne cienie na dziwną noc.",
 					function getResult( _event )
 					{
 						return 0;
@@ -215,12 +215,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstajac, %monk% mnich wznosi prosbe do starych bogow. Jedna dlon spoczywa na piersi, druga wznosi sie, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni bysmy sie obawiac, lecz ognia, ktory je stworzył, bo to plomien bogowie nam dali, bysmy mogli przenosic dzien w noc, czynic nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzycza: \"hear hear!\"}",
+			Text = "[img]gfx/ui/events/event_40.png[/img]{Wstając, %monk% mnich wznosi prośbę do starych bogów. Jedna dłoń spoczywa na piersi, druga wznosi się, jakby w wielkim mowie ofiarnym.%SPEECH_ON%Nie cieni winni byśmy się obawiać, lecz ognia, który je stworzył, bo to płomień bogowie nam dali, byśmy mogli przenosić dzień w noc, czynić nasze pracowite nawyki nieustannymi, a nasze oddanie temu, co dobre, nieomylne.%SPEECH_OFF%Ludzie krzyczą: \"hear hear!\"}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Niech nas strzega.",
+					Text = "Niech nas strzeże.",
 					function getResult( _event )
 					{
 						return 0;
@@ -269,12 +269,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_82.png[/img]{Jeden z najemnikow wstaje, wskazuje przez ognisko i oznajmia, ze %mercenary% ma najstraszniejszy cien ze wszystkich. Wielki najemnik spoglada, jakby zirytowalo go wypowiedzenie imienia na glos. Zaciska zeby i powoli unosi dlonie, a reszta kompani cofa sie ze strachem. %mercenary% splata palce i wystawia kciuki.%SPEECH_ON%To jest kura. Widzicie?%SPEECH_OFF%Ludzie patrza na cienie na scianie. Nie przypomina to wcale kury, ale nikt nie smie tego powiedziec. Wszyscy kiwaja glowami i sie zgadzaja.%SPEECH_ON%Szczerze, %mercenary%, to najlepszy kogut, jakiego widzialem.%SPEECH_OFF%Ludzie rycza ze smiechu, ale %mercenary% wstaje i smiech cichnie.%SPEECH_ON%Powiedzialem, ze to kura, prawda?%SPEECH_OFF%Drugi mezczyzna szybko kiwa glowa i zgadza sie, ze to faktycznie kura. Napiecie opada, ale zabawa w cienie dobiega konca.}",
+			Text = "[img]gfx/ui/events/event_82.png[/img]{Jeden z najemników wstaje, wskazuje przez ognisko i oznajmia, że %mercenary% ma najstraszniejszy cień ze wszystkich. Wielki najemnik spogląda, jakby zirytowało go wypowiedzenie imienia na głos. Zaciska zęby i powoli unosi dłonie, a reszta kompanii cofa się ze strachem. %mercenary% splata palce i wystawia kciuki.%SPEECH_ON%To jest kura. Widzicie?%SPEECH_OFF%Ludzie patrzą na cienie na ścianie. Nie przypomina to wcale kury, ale nikt nie śmie tego powiedzieć. Wszyscy kiwają głowami i się zgadzają.%SPEECH_ON%Szczerze, %mercenary%, to najlepszy kogut, jakiego widziałem.%SPEECH_OFF%Ludzie ryczą ze śmiechu, ale %mercenary% wstaje i śmiech cichnie.%SPEECH_ON%Powiedziałem, że to kura, prawda?%SPEECH_OFF%Drugi mężczyzna szybko kiwa głową i zgadza się, że to faktycznie kura. Napięcie opada, ale zabawa w cienie dobiega końca.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Troche wygladalo to na robaka.",
+					Text = "Trochę wyglądało to na robaka.",
 					function getResult( _event )
 					{
 						return 0;
@@ -296,7 +296,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.75, "Cieszy sie, ze walczy u boku " + _event.m.Mercenary.getName());
+						bro.improveMood(0.75, "Cieszy się, że walczy u boku " + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -309,7 +309,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(0.5, "Boi sie " + _event.m.Mercenary.getName());
+						bro.worsenMood(0.5, "Boi się " + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -326,12 +326,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_17.png[/img]{%swordmaster% mistrz miecza kiwa glowa i odzywa sie.%SPEECH_ON%Od dawna myslalem o cieniu. Gdy walczysz w swietle dnia, czy tocza sie dwie bitwy? Jedna z ciala i krwi, a druga z cieni u twoich stop? Gdy zabijasz czlowieka, czy zabijasz tez jego cien, czy twoj cien zabija jego? Kim w ogole jestesmy dla naszych cieni? Bo gdy walcze bez swiatla, to nie jest zadna walka, lecz bezsens, latajace konczyny, tnące miecze. Czysta slepota. Wyglada na to, ze tylko wtedy, gdy cien jest u boku, mozemy powiedziec, ze to walka ludzi i ich umiejetnosci.%SPEECH_OFF%Jeden z najemnikow unosi kubek z nalezytym szacunkiem.%SPEECH_ON%Jakkolwiek by to nie bylo, oby moj cien nigdy zle nie skrzyzowal sie z twoim, %swordmaster%.%SPEECH_OFF%Kompania unosi napoje. Na zdrowie!}",
+			Text = "[img]gfx/ui/events/event_17.png[/img]{%swordmaster% mistrz miecza kiwa głową i odzywa się.%SPEECH_ON%Od dawna myślałem o cieniu. Gdy walczysz w świetle dnia, czy toczą się dwie bitwy? Jedna z ciała i krwi, a druga z cieni u twoich stóp? Gdy zabijasz człowieka, czy zabijasz też jego cień, czy twój cień zabija jego? Kim w ogóle jesteśmy dla naszych cieni? Bo gdy walczę bez światła, to nie jest żadna walka, lecz bezsens, latające kończyny, tnące miecze. Czysta ślepota. Wygląda na to, że tylko wtedy, gdy cień jest u boku, możemy powiedzieć, że to walka ludzi i ich umiejętności.%SPEECH_OFF%Jeden z najemników unosi kubek z należytym szacunkiem.%SPEECH_ON%Jakkolwiek by to nie było, oby mój cień nigdy źle nie skrzyżował się z twoim, %swordmaster%.%SPEECH_OFF%Kompania unosi napoje. Na zdrowie!}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Jego cien niesie wielkie niebezpieczenstwo.",
+					Text = "Jego cień niesie wielkie niebezpieczeństwo.",
 					function getResult( _event )
 					{
 						return 0;
@@ -353,7 +353,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "Cieszy sie, ze walczy z " + _event.m.Swordmaster.getName());
+						bro.improveMood(1.0, "Cieszy się, że walczy z " + _event.m.Swordmaster.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -370,12 +370,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%minstrel% minstrel wstaje, przechyla glowe na bok, jego krok jest powloczysty, a oczy przyczepione do wlasnego cienia na scianie klasztoru, ktory z kazdym krokiem staje sie coraz mniejszy. Wpatruje sie w cien jak w cialo, a jego zblizanie sie do niego przypomina rozwiazywanie zagadki jego zabojstwa. Nagle prostuje sie, rece na biodrach.%SPEECH_ON%Na bogow, ludzie, juz rozgryzlem! Moj cien to rasowy kobieciarz! Lajdak i wloczega. Ma wielki mlot w spodniach, a kazda kobieta to gwozdz! To lowca przygod! I pijak, zalosny pijaczyna. I... i zlodziej! Kradnie korony brudnym, nie moze sie powstrzymac. I maly psotnik, szczur pelny diabelstw. Dopiero co moj cien nasral do buta %othersellsword%! Nie moglem w to uwierzyc!%SPEECH_OFF%%othersellsword% zrywa sie na nogi, przewracajac ognisko i rozsypujac iskry, ktore zdaja sie wirowac w smiechu ludzi. Podchodzi.%SPEECH_ON%Wiedzialem, ze to nie bylo pieprzone psie gowno, draniu! Jaki czlowiek sra do butow innego czlowieka!%SPEECH_OFF%Najemnik poslizguje sie i upada, a kompania wybucha aplauzem, a minstrel delikatnie odskakuje, a jego cien z zegnaniem posyla pocalunek i macha reka.}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%minstrel% minstrel wstaje, przechyla głowę na bok, jego krok jest powłóczysty, a oczy przyczepione do własnego cienia na ścianie klasztoru, który z każdym krokiem staje się coraz mniejszy. Wpatruje się w cień jak w ciało, a jego zbliżanie się do niego przypomina rozwiązywanie zagadki jego zabójstwa. Nagle prostuje się, ręce na biodrach.%SPEECH_ON%Na bogów, ludzie, już rozgryzłem! Mój cień to rasowy kobieciarz! Łajdak i włóczęga. Ma wielki młot w spodniach, a każda kobieta to gwóźdź! To łowca przygód! I pijak, żałosny pijaczyna. I... i złodziej! Kradnie korony brudnym, nie może się powstrzymać. I mały psotnik, szczur pełny diabelstw. Dopiero co mój cień nasrał do buta %othersellsword%! Nie mogłem w to uwierzyć!%SPEECH_OFF%%othersellsword% zrywa się na nogi, przewracając ognisko i rozsypując iskry, które zdają się wirować w śmiechu ludzi. Podchodzi.%SPEECH_ON%Wiedziałem, że to nie było pieprzone psie gówno, draniu! Jaki człowiek sra do butów innego człowieka!%SPEECH_OFF%Najemnik poślizguje się i upada, a kompania wybucha aplauzem, a minstrel delikatnie odskakuje, a jego cień z żegnaniem posyła pocałunek i macha ręką.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Cien minstrela ma wiecej akcji niz ja.",
+					Text = "Cień minstrela ma więcej akcji niż ja.",
 					function getResult( _event )
 					{
 						return 0;
@@ -397,7 +397,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(1.0, "Byl rozbawiony");
+						bro.improveMood(1.0, "Był rozbawiony");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -414,12 +414,12 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "H",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{Gdy ludzie przerzucaja sie cieniami, %killer%, rzekomy zabojca w ucieczce, podchodzi do obozu, niosac narecza bizuterii i innych dobr, a ich metal polyskuje karmazynem. Mamrocze do siebie, ale nagle sie zatrzymuje i patrzy na reszte kompanii.%SPEECH_ON%O. Wy jeszcze nie spicie? Ja tylko, eee, bylem na zewnatrz. Robilem rzeczy.%SPEECH_OFF%Na jego twarzy jest krew, a pod paznokciami zaschnieta. Czujac klopoty, upuszcza fanty.%SPEECH_ON%To dla kompanii, oczywiscie. Jestem po prostu, eee, wdzieczny, ze mnie przyjeliscie. Pomyslalem, ze sie odwdziecze, wiecie?%SPEECH_OFF%Ludzie wpatruja sie w fanty. Pytasz go, czy ktos bedzie ich szukal. Usmiecha sie.%SPEECH_ON%Nie, prosze pana, oczywiscie ze nie. Dopilnowalem tego. Och, kapitanie, dopilnowalem, heh, heh, heh.%SPEECH_OFF%Kazesz mu schowac rzeczy do ekwipunku, ale najpierw je wyczyscic. Gdy odchodzi, reszta ludzi po cichu wymienia spojrzenia. Wyglada na to, ze zabawy w cienie juz sie skonczyly.}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{Gdy ludzie przerzucają się cieniami, %killer%, rzekomy zabójca w ucieczce, podchodzi do obozu, niosąc naręcza biżuterii i innych dóbr, a ich metal połyskuje karmazynem. Mamrocze do siebie, ale nagle się zatrzymuje i patrzy na resztę kompanii.%SPEECH_ON%O. Wy jeszcze nie śpicie? Ja tylko, eee, byłem na zewnątrz. Robiłem rzeczy.%SPEECH_OFF%Na jego twarzy jest krew, a pod paznokciami zaschnięta. Czując kłopoty, upuszcza fanty.%SPEECH_ON%To dla kompanii, oczywiście. Jestem po prostu, eee, wdzięczny, że mnie przyjęliście. Pomyślałem, że się odwdzięczę, wiecie?%SPEECH_OFF%Ludzie wpatrują się w fanty. Pytasz go, czy ktoś będzie ich szukał. Uśmiecha się.%SPEECH_ON%Nie, proszę pana, oczywiście że nie. Dopilnowałem tego. Och, kapitanie, dopilnowałem, heh, heh, heh.%SPEECH_OFF%Każesz mu schować rzeczy do ekwipunku, ale najpierw je wyczyścić. Gdy odchodzi, reszta ludzi po cichu wymienia spojrzenia. Wygląda na to, że zabawy w cienie już się skończyły.}",
 			Banner = "",
 			Characters = [],
 			Options = [
 				{
-					Text = "Czy ktos moze miec na niego oko?",
+					Text = "Czy ktoś może mieć na niego oko?",
 					function getResult( _event )
 					{
 						return 0;

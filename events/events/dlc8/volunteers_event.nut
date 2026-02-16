@@ -11,13 +11,13 @@ this.volunteers_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_80.png[/img]{Siedzisz w namiocie i obracasz pioro w palcach. Jakis czas temu widziales, jak skryba to robil, ale nie potrafisz zrozumiec, jak mogl to robic tak szybko i nie upuszczac tego cholerstwa. Nawet lekki powiew wychodzi z twoich poruszajacych sie palcow. %randombrother% kreci glowa.%SPEECH_ON%Czy kiedykolwiek odbijemy finansowo po tym wszystkim?%SPEECH_OFF%Wzdychasz i podnosisz wzrok. Miales nadzieje, ze ludzie beda trzymac sie kupy i nie beda roztrzasac strat, ale po calej serii ostatnich wydarzen kompania zdaje sie byc o krok od nieodwracalnych szkod. Morale jest niskie, skarbiec jest pusty, a nawet gdybys mial pieniadze, wyglada na to, ze wielu i tak nie chcialoby dolaczyc do kompanii przez jej marne wyniki. Wtedy do obozu wchodzi najemnik prowadzac trzech ludzi. Ten na przedzie przedstawia sie i przechodzi do rzeczy.%SPEECH_ON%Znalismy %companyname% po reputacji i przeszlismy kawal drogi, by zobaczyc was na wlasne oczy. Teraz, jesli moge powiedziec szczerze, wygladacie na dojechanych i wcale nie jak z opowiesci, ale, cholera, wiemy, ze ten swiat daje ludziom w kosc i jedyne co mozna zrobic to zrobic z tego uzytek. Nie szlismy tyle, zeby sie obrazic o drobna ryske, rozumiesz?%SPEECH_OFF%Ludzie oferuja swoje uslugi bez oplaty z gory, a do tego reszta kompanii podnosi sie na duchu, bo swiat wciaz wysoko ocenia ich i ich wysilki. Cala ta praca nad renoma %companyname% w koncu sie oplacila.}",
+			Text = "[img]gfx/ui/events/event_80.png[/img]{Siedzisz w namiocie i obracasz pióro w palcach. Jakiś czas temu widziałeś, jak skryba to robił, ale nie potrafisz zrozumieć, jak mógł to robić tak szybko i nie upuszczać tego cholerstwa. Nawet lekki powiew wychodzi z twoich poruszających się palców. %randombrother% kręci głową.%SPEECH_ON%Czy kiedykolwiek odbijemy finansowo po tym wszystkim?%SPEECH_OFF%Wzdychasz i podnosisz wzrok. Miałeś nadzieję, że ludzie będą trzymać się kupy i nie będą roztrząsać strat, ale po całej serii ostatnich wydarzeń kompania zdaje się być o krok od nieodwracalnych szkód. Morale jest niskie, skarbiec jest pusty, a nawet gdybyś miał pieniądze, wygląda na to, że wielu i tak nie chciałoby dołączyć do kompanii przez jej marne wyniki. Wtedy do obozu wchodzi najemnik prowadząc trzech ludzi. Ten na przedzie przedstawia się i przechodzi do rzeczy.%SPEECH_ON%Znaleźliśmy %companyname% po reputacji i przeszliśmy kawał drogi, by zobaczyć was na własne oczy. Teraz, jeśli mogę powiedzieć szczerze, wyglądacie na dojechanych i wcale nie jak z opowieści, ale, cholera, wiemy, że ten świat daje ludziom w kość i jedyne co można zrobić to zrobić z tego użytek. Nie szliśmy tyle, żeby się obrazić o drobną ryskę, rozumiesz?%SPEECH_OFF%Ludzie oferują swoje usługi bez opłaty z góry, a do tego reszta kompanii podnosi się na duchu, bo świat wciąż wysoko ocenia ich i ich wysiłki. Cała ta praca nad renomą %companyname% w końcu się opłaciła.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Witamy na pokladzie.",
+					Text = "Witamy na pokładzie.",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude1);
@@ -32,7 +32,7 @@ this.volunteers_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Damy rade, dzieki.",
+					Text = "Damy radę, dzięki.",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();
