@@ -132,11 +132,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" && this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.5, "Dobrosc kompani zostala wykorzystana");
+						bro.worsenMood(0.5, "Dobroć kompani została wykorzystana");
 					}
 					else
 					{
-						bro.worsenMood(0.75, "Kompania dala sie oszukac na korony przez szarlatana");
+						bro.worsenMood(0.75, "Kompania dała się oszukać na korony przez szarlatana");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

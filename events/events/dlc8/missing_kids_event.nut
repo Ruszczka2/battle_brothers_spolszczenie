@@ -176,7 +176,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Wynosmy sie stad.",
+					Text = "Wynosmy się stąd.",
 					function getResult( _event )
 					{
 						return 0;
@@ -213,7 +213,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Przynajmniej ktos dobrze sie bawi.",
+					Text = "Przynajmniej ktoś dobrze się bawi.",
 					function getResult( _event )
 					{
 						return 0;

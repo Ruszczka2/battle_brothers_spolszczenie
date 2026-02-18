@@ -3,18 +3,18 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.artifact_reliquary_enter";
-		this.m.Title = "Gdy sie zblizasz...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{Posiadlosc wyrasta nad okolica z czystych cietych kamiennych blokow i kolorowych dachowek. Ma cos, na co wiekszosci krolewskich nie stac: wyczucie smaku. Przystrzyzona trawa sprawia, ze trawnik wyglada niemal jak odcisk stopy na zaniedbanej ziemi. Posagi ludzi rozsiane po okolicy uchwycily pozy wzniosle i zalosne. Wsrod rzezb sa zywoploty przyciete w ksztalty zwierzat i fontanny z przejrzysta woda. Kompania stoi przy czarnym ogrodzeniu, bezczynnie wpatrujac sie przez kraty jak zwierzeta gospodarskie. %randombrother% kreci glowa i spluwa.%SPEECH_ON%No, ladne to wszystko, ale zaden bogacz z glebokimi kiesami nie zostawi tak otwartej bramy bez powodu, wiesz? Mysle, ze albo ktos juz tu wszystko przelecial, albo w srodku jest cos paskudnego i nie przeszkadza mu przypadkowy przechodzien.%SPEECH_OFF%Zgadzasz sie. Gdy patrzysz dalej, widzisz, ze sciezka prowadzi do wyzlobionego zaglebienia, jakby bogowie uderzyli knykciami w sama ziemie, zostawiajac nawisy i skarpy otaczajace teren. Jesli masz zwiedzac takie miejsce, wiesz w sercu, ze mozesz juz nie wrocic. Wciaz mozesz odejsc i wrocic pozniej...}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Posiadłość wyrasta nad okolicę z czystych ciętych kamiennych bloków i kolorowych dachówek. Ma coś, na co większości królewskich nie stać: wyczucie smaku. Przycięta trawa sprawia, że trawnik wygląda niemal jak odcisk stopy na zaniedbanej ziemi. Posągi ludzi rozsiane po okolicy uchwycili pozy wzniosłe i żałosne. Wśród rzeźb są żywoploty przyciete w kształty zwierząt i fontanny z przejrzystą wodą. Kompania stoi przy czarnym ogrodzeniu, bezczynnie wpatrując się przez kraty jak zwierzęta gospodarskie. %randombrother% kreci główą i pluje.%SPEECH_ON%No, ładne to wszystko, ale żaden bogacz z głębokimi kiesami nie zostawi tak otwartej bramy bez powodu, wiesz? Myślę, że albo ktoś już tu wszystko przelecialem, albo w środku jest coś paskudnego i nie przeszkadza mu przypadkowy przechodzeń.%SPEECH_OFF%Zgadzasz się. Gdy patrzysz dalej, widzisz, że ścieżka prowadzi do wyżłobionego zagłębienia, jakby bogowie uderzyli knykciami w samą ziemię, zostawiając nawisy i skarpy otaczające teren. Jeśli masz zwiedzać takie miejsce, wiesz w sercu, że możesz już nie wrócić. Wciąż możesz odejść i wrócić później...}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Naprzod, ludzie.",
+					Text = "Naprzód, ludzie.",
 					function getResult( _event )
 					{
 						return "B";
@@ -22,7 +22,7 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Wrocmy tu pozniej.",
+					Text = "Wróćmy tu później.",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -39,7 +39,7 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 			{
 				if (this.World.Statistics.getFlags().get("ReliquaryFightDefeated"))
 				{
-					this.Text = "[img]gfx/ui/events/event_182.png[/img]{Wchodzisz w wyzlobione zaglebienie, a golemy z ciala, przewidywalnie, traktuja to \'miejsce\' jak arene i rozsiadaja sie na krawedzi skarp. Wielki Wrozbita stoi po srodku z niezwykla laska w dloni i usmiechem na twarzy.%SPEECH_ON%Witajcie znowu. Niech macierzenie trwa.%SPEECH_OFF%}";
+				this.Text = "[img]gfx/ui/events/event_182.png[/img]{Wchodzisz w wyżłobione zagłębienie, a golemy z ciała, przewidywalnie, traktują to 'miejsce' jak arenę i rozsiadają się na krawędzi skarp. Wielki Wróżbita stoi po środku z niezwykłą laską w dłoni i uśmiechem na twarzy.%SPEECH_ON%Witajcie znowu. Niech macierzenie trwa.%SPEECH_OFF%}";
 					this.Options = [
 						{
 							Text = "Ten matkojebca...",
@@ -64,7 +64,7 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{Wydajesz rozkaz, by kompania weszla do ksiezycowatej kotliny. Nagle mezczyzna w wysokim czarnym helmie wychyla sie zza posagu. Dzierzy niezwykla laske, a za jej szklistym wierzcholkiem snuje sie smuga zielonej mgly.%SPEECH_ON%Witajcie! Czy przyszliscie zrozumiec moje dzielo? To w cieple macierzenia odnajduje sie pierwotne instynkty, blyski rozumu, ktore wszelkie stworzenie, od najlichszych robakow po najwyzej szybujace ptaki, pojmuje, a bez ktorych czlowiek nigdy nie zapanuje nad wszystkim. Ja, mezczyzna, jestem teraz matka. Ja, mezczyzna, zlamalem porzadek, i na tym instynkcie, wlasciwym wszystkim stworzeniom, wzniose sie, bez lona, ponad architekture samej natury i stane sie opiekunem wszystkich! Ja, Wielki Wrozbita, ten, ktory nawilzy ta sucha ziemie manifestacjami...%SPEECH_OFF%Monologujacy szaleniec z dziwna laska rzadko ma dobre intencje. Dobytasz miecza i, widzac ostrze, Wielki Wrozbita milkne. Kiwa glowa i szeroko rozklada ramiona, a z jego laski strzela blysk zieleni. Stworzenia takie jak te, ktore widziales wczesniej - zelatynowe, bulwiaste zlepki niejasnych konczyn - zaczynaja wygramalac sie zza posagow. Kolejne okrazaja cala kompanie, zajmujac miejsca wysoko, siadajac na krawedziach skarp niczym widzowie w koloseum, gotowi obejrzec dobra walke. Wielki Wrozbita usmiecha sie i wskazuje na ciebie laska.%SPEECH_ON%Usmiechnij sie, najemniku, bo gdy umrzesz, odrodze cie z powrotem w tym swiecie, a ty znajdziesz opieke w lonie mojej mocy!%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Wydajesz rozkaz, by kompania weszła do księżycowatej kotliny. Nagle mężczyzna w wysokim czarnym helmie wychyla się zza posągu. Dzierży niezwykłą laską, a za jej szklistym wierzchołkiem snuje się smuga zielonej mgły.%SPEECH_ON%Witajcie! Czy przyszliście zrozumieć moje dzieło? To w cieple macierzenia odnajduje się pierwotne instynkty, błyski rozumu, które wszelkie stworzenie, od najlichszych robaków po najwyżej szybujące ptaki, pojmuje, a bez których człowiek nigdy nie zapanuje nad wszystkim. Ja, mężczyzna, jestem teraz matką. Ja, mężczyzna, złamałem porządek, i na tym instynkcie, właściwym wszystkim stworzeniom, wznioszę się, bez łona, ponad architekturę samej natury i stanę się opiekunem wszystkich! Ja, Wielki Wróżbita, ten, który nawilży tę suchą ziemię manifestacjami...%SPEECH_OFF%Monologujący szaleniec z dziwną laską rzadko ma dobre intencje. Dobywasz miecza i, widząc ostrze, Wielki Wróżbita milknie. Kiwa główą i szeroko rozkłada ramiona, a z jego laski strzela błysk zieleni. Stworzenia takie jak te, które widziałeś wcześniej - żelatynowe, bulwiaste zlepki niejasnych kończyn - zaczynają wygramalać się zza posągów. Kolejne okrążają całą kompanię, zajmując miejsca wysoko, siadając na krawędziach skarp niczym widzowie w koloseum, gotowi obejrzeć dobrą walkę. Wielki Wróżbita uśmiecha się i wskazuje na ciebie laską.%SPEECH_ON%Uśmiechnij się, najemniku, bo gdy umrzesz, odrodzę cię z powrotem w tym świecie, a ty znajdziesz opiekę w łonie mojej mocy!%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -95,13 +95,13 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Victory",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{Wrozbita lezy w grzeszawisku swoich stworzen, ranny czlowiek rozrzucony po poporodziu wlasnych manifestacji. Jego ciezki helm chroni szyje, ale po prostu kucasz i podwazasz go koncem miecza, jakby podnosil wiadro sztyletem. Zakrztusza sie i mowi.%SPEECH_ON%Nie mozesz mnie prawdziwie zabic bardziej, niz mozesz zabic matke nature.%SPEECH_OFF%Kiwacz glowa i wbijasz stal w jego podbrodek, az slyszysz, jak koniec dotyka szczytu helmu. Krew tryska po ochraniaczu szyi. Wstajesz i mowisz,%SPEECH_ON%Jestem matka natura.%SPEECH_OFF%%randombrother% smieje sie.%SPEECH_ON%Niezla kwestia, kapitanie. Troche glupia, jak sie nad tym zastanowic, ale-%SPEECH_OFF%Ucinasz najemnika i kazesz jemu oraz reszcie ludzi spladrowac miejsce. Gotycka posiadlosc z pewnoscia skrywa jakies kosztownosci, ktore sprawia, ze ta wyprawa byla warta zachodu. A co do dziwnej laski Wrozbity, wciaz wirujacej slaba zielona poswiata, kazesz zabrac ja do ekwipunku. Gdy szykujesz sie do odejscia, przychodzi meldunek, ze czesc \'golemow z ciala\' wybiegla z gotyckiej posiadlosci i uciekla w dzicz. Ich protoplasta nie zyje, ale wyglada na to, ze wciaz mozesz natrafiac na jego tworow.}",
+			Text = "[img]gfx/ui/events/event_182.png[/img]{Wróżbita leży w grzęzawisku swoich stworzeń, ranny człowiek rozrzucony po poporodziu własnych manifestacji. Jego ciężki helm chroni szyję, ale po prostu kucasz i podważasz go końcem miecza, jakby podnosił wiadro sztyletem. Zakrztuszy się i mówi.%SPEECH_ON%Nie możesz mnie prawdziwie zabić bardziej, niż możesz zabić matkę naturę.%SPEECH_OFF%Kiwasz główę i wbijasz stal w jego podbródek, aż słyszysz, jak koniec dotyka szczytu hełmu. Krew tryska po ochraniacz szyi. Wstajesz i mówisz,%SPEECH_ON%Jestem matką naturę.%SPEECH_OFF%%randombrother% śmieje się.%SPEECH_ON%Niezła kwestia, kapitanie. Trochę głupia, jak się nad tym zastanowić, ale-%SPEECH_OFF%Ucinasz najemnika i każesz jemu oraz reszcie ludzi splądrować miejsce. Gotycka posiadłość z pewnością skrywa jakieś kosztowności, które sprawiają, że ta wyprawa była warta zachodu. A co do dziwnej laski Wróżbity, wciąż wirującej słabą zieloną poświatą, każesz zabrać ją do ekwipunku. Gdy szykujesz się do odejścia, przychodzi meldunek, że część 'golemów z ciała' wybiegła z gotyckiej posiadłości i uciekła w dziczy. Ich protoplasta nie żyje, ale wygląda na to, że wciąż możesz natrafić na jego tworów.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Przynajmniej najbardziej potworny z nich nie zyje.",
+				Text = "Przynajmniej najbardziej potworny z nich nie żyje.",
 					function getResult( _event )
 					{
 						return 0;
@@ -131,13 +131,13 @@ this.artifact_reliquary_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Defeat",
-			Text = "[img]gfx/ui/events/event_182.png[/img]{Przegrywacie walke i wolisz nie tracic wiecej - wyglada na to, ze przeciwko Wielkiemu Wrozbicie smierc moze nie byc twoim koncem. Odcinajac straty, zarzadzasz odwrot i przebijasz sie z okrazenia. \'Czujne\' golemy z ciala pomrukuja szyderczo jak niezadowolona widownia w koloseum.\n\nKrztuszac sie smiechem, Wielki Wrozbita trwa na miejscu i znika w tle. Smuga zielonej mgly siega po ciebie, uklada sie w ksztalt ust, ktore sie usmiechaja, po czym wszystko znika i znowu jestes poza tym miejscem. Powrot to spore wyzwanie, ale teraz czujesz determinacje, by zobaczyc tego szalenca martwego.}",
+		Text = "[img]gfx/ui/events/event_182.png[/img]{Przegrywacie walkę i wolisz nie tracić więcej - wygląda na to, że przeciwko Wielkiemu Wróżbicie śmierć może nie być twoim końcem. Odcinając straty, zarządzasz odwrot i przebijasz się z okrążenia. 'Czujne' golemy z ciała pomrukują szyderczo jak niezadowolona widownia w koloseum.\n\nKrztuszy się śmiechem, Wielki Wróżbita trwa na miejscu i znika w tle. Smuga zielonej mgły sięga po ciebie, układa się w kształt ust, które się uśmiechają, po czym wszystko znika i znowu jesteś poza tym miejscem. Powrót to spore wyzwanie, ale teraz czujesz determinację, by zobaczyć tego szaleńca martwego.}"
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Pewnie i tak trzeba go zabic, zeby przestal nawiedzac nam sny.",
+					Text = "Pewnie i tak trzeba go zabić, żeby przestał nawiedzać nam sny.",
 					function getResult( _event )
 					{
 						return 0;

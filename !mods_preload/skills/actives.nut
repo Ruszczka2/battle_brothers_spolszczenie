@@ -305,7 +305,7 @@
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "Moze trafić aż 3 cele"
+			text = "Może trafić aż 3 cele"
 		});
 
 		if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInSwords)
@@ -687,7 +687,7 @@
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "Moze trafić aż 3 cele"
+			text = "Może trafić aż 3 cele"
 		});
 
 		if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInSwords)

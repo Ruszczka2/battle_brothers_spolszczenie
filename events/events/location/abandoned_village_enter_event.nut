@@ -3,12 +3,12 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.location.abandoned_village_enter";
-		this.m.Title = "Gdy sie zblizasz...";
+		this.m.Title = "Gdy się zbliżasz...";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{Niedawno zniszczona wioska... bez cial. Tylko wiatr wiruje, unoszac popiol i syczac nim wsrod ruin. Ale zostal jeden element: ogromny kamienny posag, mistrzowsko wyrzezony na podobizne mezczyzny. A przynajmniej tak ci sie wydaje. Jego twarz zostala usunieta z dokladnoscia, ktora sugeruje rozmysl, a nie zwykly wandalizm.\n\nNagle z kazdej strony zblizaja sie mlaskajace w blocie kroki. Bulwiaste sylwetki kuleja w swiatlo: przygarbione garbusy zlozone z najbardziej nieuczciwych szwow, torsy zszyte na chybil trafil, z organami ledwie zakratowanymi za pasmami miesa, dodatkowe ramiona z doczepionymi dlonmi, ktore machaja na wszystkie strony, a na szczycie tych zapastowanych potwornosci jecza liczne glowy niczym miesny totem, ktory zna samego siebie, pyski rozwarte i bulgoczace w obliczu ujawnionej grozy, oczu bez liku i wytrzeszczonych, patrzacych na ciebie i na ziemie, i na siebie nawzajem. Twoi ludzie sapna i siegaja po bron. Potwory warcza i zaczynaja zbierac z ziemi narzedzia oraz bron. Jeden potwor schyla sie i podnosi dwa tasaki. Czlapie naprzod, a twarze rozmazane na jego skorze kieruja swoje znieksztalcone spojrzenia na ciebie i otwieraja usta do krzyku, a wrzaski wsysaja sie i wylatuja z jednego pyska do drugiego, powietrze wyje w ich wewnetrznych komorach, gdy twarze zmieniaja sie oddechem, by kolejna mogla krzyczec.\n\nWciaz masz szanse uciec - raczej te rzeczy nie dotrzymaja kroku zadnemu czlowiekowi, ale co zostawisz za soba, poza godnoscia i duma?}",
+			Text = "[img]gfx/ui/events/event_178.png[/img]{Niedawno zniszczona wioska... bez ciał. Tylko wiatr wiruje, unosząc popioł i sycząc nim wśród ruin. Ale został jeden element: ogromny kamienny posąg, mistrzowsko wyrzeźbiony na podobieństwo mężczyzny. A przynajmniej tak ci się wydaje. Jego twarz została usunięta z dokładnością, która sugeruje rozmyśl, a nie zwykły wandalizm.\n\nNagle z każdej strony zbliżają się mlaskające w błocie kroki. Bulwiaste sylwetki kuleja w światło: przygarbione garbusy złożone z najbardziej nieuczciwych szwów, torsy zszyty na chybił trafił, z organami ledwie zakratowanymi za pasmami mięsa, dodatkowe ramiona z doczepionymi dłońmi, które machają na wszystkie strony, a na szczycie tych zapastowanych potwórności jęczą liczne głowy niczym mięsny totem, który zna samego siebie, pyski rozwarte i bulgoczące w obliczu ujawnionej grozy, oczu bez liku i wytrzeszczonych, patrzących na ciebie i na ziemię, i na siebie nawzajem. Twoi ludzie sapną i sięgają po broń. Potwory warczą i zaczynają zbierać z ziemi narzędzia oraz broń. Jeden potwór schyla się i podnosi dwa tasaki. Człapie naprzód, a twarze rozmazane na jego skórze kierują swoje zniekształcone spojrzenia na ciebie i otwierają usta do krzyku, a wrzaski wessają się i wylatują z jednego pyska do drugiego, powietrze wyje w ich wewnętrznych komorach, gdy twarze zmieniają się oddechem, by kolejna mogła krzyczeć.\n\nWciąż masz szansę uciec - raczej te rzeczy nie dotrzymają kroku żadnemu człowiekowi, ale co zostawisz za sobą, poza godnością i duma?}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -32,7 +32,7 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Wynosimy sie stad!",
+					Text = "Wynosimy się stąd!",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -49,7 +49,7 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 			{
 				if (this.World.Statistics.getFlags().get("AbandonedVillageFightDefeated"))
 				{
-					this.Text = "[img]gfx/ui/events/event_178.png[/img]{Jak mozna sie bylo spodziewac, Golemy z Ciala wciaz kreca sie wokol bezimiennego posagu wiesni. Sadzac po stopniu swiezosci i rozkladu, wyglada na to, ze przybyli nowi, a starsi zaczynaja sie rozpadac. Ale wszyscy sa jednomyslni, gdy ich lepkie oczy padaja na ciebie i kompanie. Dobytasz miecza i wydajesz rozkaz ustawienia. Jesli to miasto skrywa sekret, zamierzasz go znalezc!}";
+				this.Text = "[img]gfx/ui/events/event_178.png[/img]{Jak można się było spodziewać, Golemy z Ciała wciąż kręcą się wokół bezimiennego posągu wiosni. Sądząc po stopniu świeżości i rozkładu, wygląda na to, że przybyli nowi, a starsi zaczynają się rozkładać. Ale wszyscy są jednomyślni, gdy ich lepkie oczy padają na ciebie i kompanię. Dobywasz miecza i wydajesz rozkaz ustawienia. Jeśli to miasto skrywa sekret, zamierzasz go znaleźć!}";
 					this.Options = [
 						{
 							Text = "To battle!",
@@ -74,13 +74,13 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Victory",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{Stoisz nad jedna z...rzeczy, z ktorymi wlasnie walczyles. %randombrother% podsuwa ostrze pod gluty i unosi je. Wielka bryla miesa wydluza sie w zszytych segmentach, ramiona rozchodza sie jak galezie drzewa, a tluste kawalki zsuwaja sie po konczynach jak zywica. Reszta to same niezgodnosci: tu stopa zwisajaca z tulowia jak klamka, tam twarz rozplywajaca sie, jakby topniala w rzeke sciegien i wiazadel. Gdy twoj najemnik pozwala temu zsuwac sie z ostrza, worek miesa pluska o ziemie, a kosci grzechocza jak zawalajaca sie drabina linowa. %randombrother2% podchodzi z kolczanem strzal i mala ksiazka.%SPEECH_ON%Zdobilem ten kolczan z, eee, ciekawymi strzalami. Wyglada na to, ze na dole jest jakis zbiornik do maczania grotow. Starzy bogowie wiedza, co to za material. Znalazlem tez ta ksiazke, przytwierdzona do jednej z ich glow. Wyglada na wazna.%SPEECH_OFF%Otwierasz ksiazke i znajdujesz listy wiosek, jedna po drugiej przekreslane, a obok kazdej prosta liczba. Piecdziesiat. Szesdziesiat. Siedemdziesiat. Na koncu ksiazki jest mapa do innego miejsca, wyglada na jakas posiadlosc.}",
+			Text = "[img]gfx/ui/events/event_178.png[/img]{Stoisz nad jedno z...rzeczy, z którymi właśnie walczyłeś. %randombrother% podsuwa ostrze pod głuty i unosi je. Wielka bryła mięsa wydłuża się w zszytych segmentach, ramiona rozchodzą się jak gałęzie drzewa, a tłuste kawałki zsuwają się po kończynach jak żywica. Reszta to same niezgodności: tu stopa zwisająca z tułowia jak klamka, tam twarz rozpływająca się, jakby topniała w rzekę ścięgien i więzadeł. Gdy twój najemnik pozwala temu zsuwać się z ostrza, worek mięsa płuska o ziemię, a kości grzechoczą jak zawalająca się drabina linowa. %randombrother2% podchodzi z kolczanem strzał i małą książką.%SPEECH_ON%Zdobyłem ten kolczan z, eee, ciekawymi strzałami. Wygląda na to, że na dole jest jakiś zbiornik do maczania grotów. Starzy bogowie wiedzą, co to za materiał. Znalazłem też tą książkę, przytwierdzoną do jednej z ich głów. Wygląda na ważną.%SPEECH_OFF%Otwierasz książkę i znajdujesz listy wiosek, jedna po drugiej przekreślane, a obok każdej prosta liczba. Pięćdziesiąt. Sześćdziesiąt. Siedemdziesiąt. Na końcu książki jest mapa do innego miejsca, wygląda na jakąś posiadłość.}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Pospieszajcie sie.",
+					Text = "Pospieszajcie się.",
 					function getResult( _event )
 					{
 						return 0;
@@ -123,13 +123,13 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Defeat",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{Walke da sie przegrac. Wiesz, ze te potwornosci musza byc po czesci zrobione z tych, ktorzy polegli przed nimi. Nie chcac podzielic takiego losu, rozkazujesz odwrot. Golemy z Ciala nie sa dosc szybkie, by gonic, wiec ciezko odrywaja sie od tylnej oslonny i znikaja.\n\nWciaz mozesz wrocic do tego miejsca, bo czemu w ogole te rzeczy tu sa?}",
+		Text = "[img]gfx/ui/events/event_178.png[/img]{Walkę da się przegrać. Wiesz, że te potworności muszą być po części zrobione z tych, którzy polegli przed nimi. Nie chcąc podzielić takiego losu, rozkazujesz odwrot. Golemy z Ciała nie są dosyć szybkie, by gonić, więc ciężko odrywają się od tylnej osłony i znikają.\n\nWciąż możesz wrócić do tego miejsca, bo czemu w ogóle te rzeczy tu są?}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Wrocimy.",
+					Text = "Wrócimy.",
 					function getResult( _event )
 					{
 						return 0;
