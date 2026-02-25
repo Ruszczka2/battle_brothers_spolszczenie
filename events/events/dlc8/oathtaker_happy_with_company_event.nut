@@ -9,7 +9,7 @@ this.oathtaker_happy_with_company_event <- this.inherit("scripts/events/event", 
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker% Świętobiorca siada z tobą przy ognisku. Kiwa głową.%SPEECH_ON%Z szacunkiem, kapitanie, mogę powiedzieć, że dużo wymagać od człowieka, by był naprawdę dobry. Gdy cię poznałem, nie sądziłem, że masz zadatki do takiego zadania. Myślałem, że czołgająca się ciemność tego świata cię wysuszy, zetrze jak piasek o kamień. A jednak jesteś. Niezłomny. Trzymasz się Ślubów, jeden po drugim. Dobra robota. Młody Anselm byłby dumny.%SPEECH_OFF%Dziękujesz Świętobiorcy za dobre słowa.}",
+			Text = "[img]gfx/ui/events/event_183.png[/img]{%oathtaker% Świętobiorca siada z tobą przy ognisku. Kiwa głową.%SPEECH_ON%Z szacunkiem, kapitanie, mogę powiedzieć, że dużo wymagać od człowieka, by był naprawdę dobry. Gdy cię poznałem, nie sądziłem, że masz zadatki do takiego zadania. Myślałem, że czołgająca się ciemność tego świata cię wysuszy, zetrze jak piasek o kamień. A jednak jesteś. Niezłomny. Trzymasz się Ślubów, jeden po drugim. Dobra robota. Młody Anselm byłby dumny.%SPEECH_OFF%Dziękujesz Świętobiorcy za dobre słowa.}",
 			Image = "",
 			List = [],
 			Characters = [],

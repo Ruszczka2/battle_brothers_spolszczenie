@@ -3,7 +3,7 @@ this.oathtakers_noble_contracts_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.oathtakers_noble_contracts";
-		this.m.Title = "Along the way...";
+		this.m.Title = "Po drodze...";
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
