@@ -1,5 +1,7 @@
 this.smite_skill <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		IsPolearm = true
+	},
 	function create()
 	{
 		this.m.ID = "actives.smite";

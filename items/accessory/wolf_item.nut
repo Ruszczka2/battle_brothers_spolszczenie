@@ -3,6 +3,7 @@ this.wolf_item <- this.inherit("scripts/items/accessory/accessory", {
 		Skill = null,
 		Entity = null,
 		Script = "scripts/entity/tactical/warwolf",
+		ArmorScript = null,
 		UnleashSounds = [
 			"sounds/enemies/wolf_idle_00.wav",
 			"sounds/enemies/wolf_idle_01.wav",

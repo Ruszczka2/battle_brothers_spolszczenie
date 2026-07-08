@@ -1,5 +1,12 @@
 this.perk_quick_hands <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		IsSpent = false
+	},
+	function isSpent()
+	{
+		return this.m.IsSpent;
+	}
+
 	function create()
 	{
 		this.m.ID = "perk.quick_hands";
@@ -15,7 +22,7 @@ this.perk_quick_hands <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		if (this.getContainer().getActor().isPlayerControlled() && this.getContainer().getActor().isPlacedOnMap() && this.getContainer().getActor().getItems().m.ActionCost == 0)
+		if (this.getContainer().getActor().isPlayerControlled() && this.getContainer().getActor().isPlacedOnMap() && !this.m.IsSpent)
 		{
 			this.m.IsHidden = false;
 		}
@@ -25,9 +32,34 @@ this.perk_quick_hands <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+	function onSpend( _items )
+	{
+		local isShield = false;
+
+		foreach( i in _items )
+		{
+			if (i != null && i.isItemType(this.Const.Items.ItemType.Shield))
+			{
+				isShield = true;
+				break;
+			}
+		}
+
+		if (!isShield)
+		{
+			this.m.IsSpent = true;
+		}
+	}
+
+	function onTurnStart()
+	{
+		this.m.IsSpent = false;
+	}
+
 	function onCombatStarted()
 	{
 		this.skill.onCombatStarted();
+		this.m.IsSpent = false;
 
 		if (this.getContainer().getActor().isPlayerControlled())
 		{
@@ -38,8 +70,8 @@ this.perk_quick_hands <- this.inherit("scripts/skills/skill", {
 	function onCombatFinished()
 	{
 		this.skill.onCombatFinished();
+		this.m.IsSpent = false;
 		this.m.IsHidden = true;
 	}
 
 });
-

@@ -29,7 +29,7 @@ this.thrust <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.HitChanceBonus = 20;
+		this.m.HitChanceBonus = 0;
 		this.m.DirectDamageMult = 0.25;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 10;
@@ -63,12 +63,28 @@ this.thrust <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
+
 	{
+
 		if (_skill == this)
+
 		{
-			_properties.MeleeSkill += 20;
+
+			_properties.MeleeSkill += this.getHitChanceModifier();
+
+			this.m.HitChanceBonus += this.getHitChanceModifier();
+
 		}
+
 	}
 
+
+	function getHitChanceModifier()
+
+	{
+
+		return 20;
+
+	}
 });
 

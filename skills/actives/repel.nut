@@ -28,7 +28,7 @@ this.repel <- this.inherit("scripts/skills/skill", {
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsTooCloseShown = true;
 		this.m.IsWeaponSkill = true;
-		this.m.HitChanceBonus = 10;
+		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -223,21 +223,31 @@ this.repel <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
+
 	{
+
 		if (_skill == this)
+
 		{
-			_properties.MeleeSkill += 10;
+
+			_properties.MeleeSkill += this.getHitChanceModifier();
+
+			this.m.HitChanceBonus += this.getHitChanceModifier();
+
+
 
 			if (_targetEntity != null && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInPolearms && this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile()) == 1)
+
 			{
+
 				_properties.MeleeSkill += -15;
-				this.m.HitChanceBonus = -5;
+
+				this.m.HitChanceBonus += -15;
+
 			}
-			else
-			{
-				this.m.HitChanceBonus = 10;
-			}
+
 		}
+
 	}
 
 	function onKnockedDown( _entity, _tag )
@@ -253,5 +263,13 @@ this.repel <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+
+	function getHitChanceModifier()
+
+	{
+
+		return 10;
+
+	}
 });
 

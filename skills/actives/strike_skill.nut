@@ -10,7 +10,6 @@ this.strike_skill <- this.inherit("scripts/skills/skill", {
 	function setApplyAxeMastery( _f )
 	{
 		this.m.ApplyAxeMastery = _f;
-		this.m.HitChanceBonus = _f ? 0 : 5;
 	}
 
 	function create()
@@ -72,7 +71,7 @@ this.strike_skill <- this.inherit("scripts/skills/skill", {
 					id = 6,
 					type = "text",
 					icon = "ui/icons/hitchance.png",
-					text = "Ma [color=" + this.Const.UI.Color.NegativeValue + "]-15%[/color] szans na trafienie celów bezpośrednio sąsiadujących"
+					text = "Ma [color=" + this.Const.UI.Color.NegativeValue + "]" + this.getHitChanceModifier() + "%[/color] szans na trafienie celów bezpośrednio sąsiadujących"
 				});
 			}
 		}
@@ -119,25 +118,54 @@ this.strike_skill <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
+
 	{
+
 		if (_skill == this)
+
 		{
-			if (!this.m.ApplyAxeMastery)
-			{
-				_properties.MeleeSkill += 5;
-			}
+
+			_properties.MeleeSkill += this.getHitChanceModifier();
+
+			this.m.HitChanceBonus += this.getHitChanceModifier();
+
+
 
 			if (_targetEntity != null && (this.m.ApplyAxeMastery && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInAxes || !this.m.ApplyAxeMastery && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInPolearms) && this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile()) == 1)
+
 			{
+
 				_properties.MeleeSkill += -15;
-				this.m.HitChanceBonus = -10;
+
+				this.m.HitChanceBonus += -15;
+
 			}
-			else
-			{
-				this.m.HitChanceBonus = this.m.ApplyAxeMastery ? 0 : 5;
-			}
+
 		}
+
 	}
 
+
+	function getHitChanceModifier()
+
+	{
+
+		if (this.m.ApplyAxeMastery)
+
+		{
+
+			return 0;
+
+		}
+
+		else
+
+		{
+
+			return 5;
+
+		}
+
+	}
 });
 

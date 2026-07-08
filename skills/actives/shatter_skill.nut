@@ -33,7 +33,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.HitChanceBonus = -10;
+		this.m.HitChanceBonus = 0;
 		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 30;
@@ -54,7 +54,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/hitchance.png",
-				text = "Ma [color=" + this.Const.UI.Color.NegativeValue + "]-5%[/color] szansy na trafienie"
+				text = "Ma [color=" + this.Const.UI.Color.NegativeValue + "]" + this.getHitChanceModifier() + "%[/color] szansy na trafienie"
 			});
 		}
 		else
@@ -63,7 +63,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/hitchance.png",
-				text = "Ma [color=" + this.Const.UI.Color.NegativeValue + "]-10%[/color] szansy na trafienie"
+				text = "Ma [color=" + this.Const.UI.Color.NegativeValue + "]" + this.getHitChanceModifier() + "%[/color] szansy na trafienie"
 			});
 		}
 
@@ -321,19 +321,42 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
+
 	{
+
 		if (_skill == this)
+
 		{
-			if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers)
-			{
-				_properties.MeleeSkill -= 10;
-			}
-			else
-			{
-				_properties.MeleeSkill -= 5;
-			}
+
+			_properties.MeleeSkill += this.getHitChanceModifier();
+
+			this.m.HitChanceBonus += this.getHitChanceModifier();
+
 		}
+
 	}
 
+
+	function getHitChanceModifier()
+
+	{
+
+		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers)
+
+		{
+
+			return -5;
+
+		}
+
+		else
+
+		{
+
+			return -10;
+
+		}
+
+	}
 });
 

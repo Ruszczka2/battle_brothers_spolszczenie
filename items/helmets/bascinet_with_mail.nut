@@ -68,5 +68,13 @@ this.bascinet_with_mail <- this.inherit("scripts/items/helmets/helmet", {
 		this.updateAppearance();
 	}
 
+
+	function setPlainVariant()
+
+	{
+
+		this.setVariant(54);
+
+	}
 });
 

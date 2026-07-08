@@ -691,14 +691,14 @@ this.faction_manager <- {
 
 	function createAlliances()
 	{
-		for( local i = 0; i < this.m.Factions.len(); i = i )
+		for( local i = 0; i < this.m.Factions.len(); i = ++i )
 		{
 			if (this.m.Factions[i] == null)
 			{
 			}
 			else
 			{
-				for( local j = 0; j < this.m.Factions.len(); j = j )
+				for( local j = 0; j < this.m.Factions.len(); j = ++j )
 				{
 					if ((j == 1 || j == 2) && (this.m.Factions[i].getType() == this.Const.FactionType.Settlement || this.m.Factions[i].getType() == this.Const.FactionType.NobleHouse))
 					{
@@ -745,13 +745,11 @@ this.faction_manager <- {
 						this.m.Factions[i].addAlly(j);
 					}
 
-					j = ++j;
 				}
 
 				this.m.Factions[i].updatePlayerRelation();
 			}
 
-			i = ++i;
 		}
 	}
 

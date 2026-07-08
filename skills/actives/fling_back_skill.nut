@@ -193,5 +193,19 @@ this.fling_back_skill <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+
+	function onTriggeredMovement( _skill, _targetEntity, _hitInfo )
+
+	{
+
+		if (_skill == this)
+
+		{
+
+			_hitInfo.DamageRegular += this.Const.Combat.FallingDamage;
+
+		}
+
+	}
 });
 

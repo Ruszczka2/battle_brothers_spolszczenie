@@ -32,7 +32,7 @@ this.prong_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
 		this.m.DirectDamageMult = 0.25;
-		this.m.HitChanceBonus = 10;
+		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 15;
 		this.m.MinRange = 1;
@@ -80,22 +80,40 @@ this.prong_skill <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
+
 	{
+
 		if (_skill == this)
+
 		{
-			_properties.MeleeSkill += 10;
+
+			_properties.MeleeSkill += this.getHitChanceModifier();
+
+			this.m.HitChanceBonus += this.getHitChanceModifier();
+
+
 
 			if (_targetEntity != null && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInSpears && this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile()) == 1)
+
 			{
+
 				_properties.MeleeSkill += -15;
-				this.m.HitChanceBonus = -5;
+
+				this.m.HitChanceBonus += -15;
+
 			}
-			else
-			{
-				this.m.HitChanceBonus = 10;
-			}
+
 		}
+
 	}
 
+
+	function getHitChanceModifier()
+
+	{
+
+		return 10;
+
+	}
 });
 

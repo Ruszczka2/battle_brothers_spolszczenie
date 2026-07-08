@@ -1812,7 +1812,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		local originTile = this.m.Origin.getTile();
 		local lastTile;
 
-		for( local i = 0; i < 2; i = i )
+		for( local i = 0; i < 2; i = ++i )
 		{
 			local tile;
 
@@ -1898,7 +1898,6 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 			local wait = this.new("scripts/ai/world/orders/wait_order");
 			wait.setTime(9000.0);
 			c.addOrder(wait);
-			i = ++i;
 		}
 	}
 

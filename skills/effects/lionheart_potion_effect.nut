@@ -1,5 +1,7 @@
 this.lionheart_potion_effect <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		IsCountingBattle = false
+	},
 	function create()
 	{
 		this.m.ID = "effects.lionheart_potion";
@@ -52,5 +54,31 @@ this.lionheart_potion_effect <- this.inherit("scripts/skills/skill", {
 		_properties.Bravery += 20;
 	}
 
+
+	function onCombatStarted()
+
+	{
+
+		this.m.IsCountingBattle = true;
+
+	}
+
+	function onCombatFinished()
+
+	{
+
+		if (!this.m.IsCountingBattle)
+
+		{
+
+			return;
+
+		}
+
+
+
+		this.removeSelf();
+
+	}
 });
 

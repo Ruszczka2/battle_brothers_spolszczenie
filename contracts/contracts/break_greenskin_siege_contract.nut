@@ -614,7 +614,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			numOtherEnemies = 1;
 		}
 
-		for( local i = 0; i < numSiegeEngines; i = i )
+		for( local i = 0; i < numSiegeEngines; i = ++i )
 		{
 			local tile;
 			local tries = 0;
@@ -654,12 +654,11 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			party.setDescription("Horda zielonoskórych i ich machiny oblężnicze.");
 			local numSiegeUnits = this.Math.rand(3, 4);
 
-			for( local j = 0; j < numSiegeUnits; j = j )
+			for( local j = 0; j < numSiegeUnits; j = ++j )
 			{
 				this.Const.World.Common.addTroop(party, {
 					Type = this.Const.World.Spawn.Troops.GreenskinCatapult
 				}, false);
-				j = ++j;
 			}
 
 			party.updateStrength();
@@ -678,7 +677,6 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			local wait = this.new("scripts/ai/world/orders/wait_order");
 			wait.setTime(9000.0);
 			c.addOrder(wait);
-			i = ++i;
 		}
 
 		local targets = [];
@@ -702,7 +700,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			}
 		}
 
-		for( local i = 0; i < numOtherEnemies; i = i )
+		for( local i = 0; i < numOtherEnemies; i = ++i )
 		{
 			local tile;
 			local tries = 0;
@@ -752,7 +750,6 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			destroy.setTargetTile(originTile);
 			destroy.setTargetID(this.m.Origin.getID());
 			c.addOrder(destroy);
-			i = ++i;
 		}
 
 		if (this.m.Troops != null && !this.m.Troops.isNull())

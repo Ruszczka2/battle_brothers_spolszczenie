@@ -65,5 +65,21 @@ this.waterwheel_location <- this.inherit("scripts/entity/world/location", {
 		this.location.onDeserialize(_in);
 	}
 
+
+	function onDropLootForPlayer( _lootTable )
+
+	{
+
+		this.location.onDropLootForPlayer(_lootTable);
+
+		local treasure = [
+
+			"helmets/ghost_knight_helmet"
+
+		];
+
+		this.dropTreasure(1, treasure, _lootTable);
+
+	}
 });
 

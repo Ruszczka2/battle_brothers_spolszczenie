@@ -36,7 +36,7 @@ this.gash_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.HitChanceBonus = 10;
+		this.m.HitChanceBonus = 0;
 		this.m.DirectDamageMult = 0.2;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 20;
@@ -121,12 +121,28 @@ this.gash_skill <- this.inherit("scripts/skills/skill", {
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
+
 	{
+
 		if (_skill == this)
+
 		{
-			_properties.MeleeSkill += 10;
+
+			_properties.MeleeSkill += this.getHitChanceModifier();
+
+			this.m.HitChanceBonus += this.getHitChanceModifier();
+
 		}
+
 	}
 
+
+	function getHitChanceModifier()
+
+	{
+
+		return 10;
+
+	}
 });
 

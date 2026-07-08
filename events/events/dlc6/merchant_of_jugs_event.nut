@@ -175,5 +175,9 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 	{
 	}
 
+	function onClear()
+	{
+	}
+
 });
 

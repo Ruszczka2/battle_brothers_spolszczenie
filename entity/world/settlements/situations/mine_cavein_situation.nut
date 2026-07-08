@@ -37,17 +37,16 @@ this.mine_cavein_situation <- this.inherit("scripts/entity/world/settlements/sit
 		_modifiers.RecruitsMult *= 1.25;
 	}
 
-	function onUpdateShop( _stash )
+	function onUpdateShopList( _id, _list )
 	{
-		do
+		for( local i = 0; i < _list.len(); i++ )
 		{
+			if (_list[i].S == "trade/uncut_gems_item" || _list[i].S == "trade/copper_ingots_item")
+			{
+				_list.remove(i);
+				i--;
+			}
 		}
-		while (_stash.removeByID("misc.uncut_gems") != null);
-
-		do
-		{
-		}
-		while (_stash.removeByID("misc.copper_ingots") != null);
 	}
 
 	function onUpdateDraftList( _draftList )
