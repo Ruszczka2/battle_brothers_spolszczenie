@@ -1,5 +1,7 @@
 # Pełne Spolszczenie Battle Brothers
 
+Uwaga! Żeby upewnić się, że spolszczenie będzie działało prawidłowo należy pobrać mod **modding script hooks**. Instrukcja znajduje się w sekcji *Instalacja*
+
 Ten projekt jest dokończeniem spolszczenia przygotowanego przez Daedalusa. Udało mi się dokończyć tłumaczenie:
 - Opisy końcowe ambicji
 - Biografie postaci
@@ -10,7 +12,7 @@ Oraz przetłumaczyć wszystkie:
 
 ## Instalacja
 
-Ręcznie przekopiuj plik `data_PL.dat` z Releases do katalogu `Battle Brothers\data` gry.
+Ręcznie przekopiuj pliki `data_PL.dat` oraz `mod_hooks.zip-42-20-1-1621709174.zip` z Releases do katalogu `Battle Brothers\data` gry.
 
 ## Źródło
 
