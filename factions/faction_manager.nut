@@ -224,7 +224,7 @@ this.faction_manager <- {
 		local zombies = this.getFactionOfType(this.Const.FactionType.Zombies);
 		local beasts = this.getFactionOfType(this.Const.FactionType.Beasts);
 
-		for( local i = 0; i < this.Const.Factions.CyclesOnNewCampaign; i = i )
+		for( local i = 0; i < this.Const.Factions.CyclesOnNewCampaign; i = ++i )
 		{
 			if (barbarians != null)
 			{
@@ -243,7 +243,6 @@ this.faction_manager <- {
 			zombies.update(true, true);
 			beasts.update(true, true);
 			this.__ping();
-			i = ++i;
 		}
 	}
 
@@ -445,14 +444,12 @@ this.faction_manager <- {
 		local settlements = this.World.EntityManager.getSettlements();
 		local city = [];
 
-		for( local i = 0; i < settlements.len(); i = i )
+		for( local i = 0; i < settlements.len(); i = ++i )
 		{
 			if (this.isKindOf(settlements[i], "city_state"))
 			{
 				city.push(settlements[i]);
 			}
-
-			i = ++i;
 		}
 
 		foreach( c in _cityStates )
@@ -533,7 +530,7 @@ this.faction_manager <- {
 		local military = [];
 		local civilian = [];
 
-		for( local i = 0; i < settlements.len(); i = i )
+		for( local i = 0; i < settlements.len(); i = ++i )
 		{
 			if (this.isKindOf(settlements[i], "city_state"))
 			{
@@ -546,8 +543,6 @@ this.faction_manager <- {
 			{
 				civilian.push(settlements[i]);
 			}
-
-			i = ++i;
 		}
 
 		military.sort(this.onSizeCompare);
@@ -659,10 +654,9 @@ this.faction_manager <- {
 			return 0;
 		});
 
-		for( local i = 0; i < 2; i = i )
+		for( local i = 0; i < 2; i = ++i )
 		{
 			houses[i].Faction.getFlags().set("IsHolyWarParticipant", true);
-			i = ++i;
 		}
 	}
 
@@ -755,14 +749,14 @@ this.faction_manager <- {
 
 	function breakNobleHouseAlliances()
 	{
-		for( local i = 0; i < this.m.Factions.len(); i = i )
+		for( local i = 0; i < this.m.Factions.len(); i = ++i )
 		{
 			if (this.m.Factions[i] == null || this.m.Factions[i].getType() != this.Const.FactionType.NobleHouse)
 			{
 			}
 			else
 			{
-				for( local j = 0; j < this.m.Factions.len(); j = j )
+				for( local j = 0; j < this.m.Factions.len(); j = ++j )
 				{
 					if (i == j || this.m.Factions[j] == null || this.m.Factions[i].getSettlements().len() == 0)
 					{
@@ -775,15 +769,11 @@ this.faction_manager <- {
 					{
 						this.m.Factions[i].removeAlly(j);
 					}
-
-					j = ++j;
 				}
 			}
-
-			i = ++i;
 		}
 
-		for( local i = 0; i < this.m.Factions.len(); i = i )
+		for( local i = 0; i < this.m.Factions.len(); i = ++i )
 		{
 			if (this.m.Factions[i] == null || this.m.Factions[i].getType() != this.Const.FactionType.Settlement || this.m.Factions[i].getSettlements().len() == 0)
 			{
@@ -793,8 +783,6 @@ this.faction_manager <- {
 				local nobleOwner = this.m.Factions[i].getSettlements()[0].getOwner();
 				this.m.Factions[i].cloneAlliesFrom(nobleOwner);
 			}
-
-			i = ++i;
 		}
 	}
 
@@ -830,7 +818,7 @@ this.faction_manager <- {
 
 	function makeEveryoneFriendlyToPlayer()
 	{
-		for( local i = 0; i < this.m.Factions.len(); i = i )
+		for( local i = 0; i < this.m.Factions.len(); i = ++i )
 		{
 			if (this.m.Factions[i] == null)
 			{
@@ -842,8 +830,6 @@ this.faction_manager <- {
 					this.m.Factions[i].setPlayerRelation(30.0);
 				}
 			}
-
-			i = ++i;
 		}
 	}
 
@@ -1149,11 +1135,10 @@ this.faction_manager <- {
 		this.clear();
 		local numFactions = _in.readU8();
 
-		for( local i = 0; i != numFactions; i = i )
+		for( local i = 0; i != numFactions; i = ++i )
 		{
 			local f = this.new(this.IO.scriptFilenameByHash(_in.readI32()));
 			this.m.Factions.push(f);
-			i = ++i;
 		}
 
 		foreach( f in this.m.Factions )
